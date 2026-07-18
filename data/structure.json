@@ -570,6 +570,251 @@
   ]
  },
  {
+  "id": "impcoord",
+  "cat_th": "คำสั่งแบบเงื่อนไข & คำสั่งพิเศษ",
+  "patterns": [
+   {
+    "name_en": "Imperative + and (positive result)",
+    "name_th": "คำสั่ง + and (ทำแล้วได้ผลดี = ถ้า...)",
+    "frame": "[Imperative] and [subject] will [result]",
+    "slots": [
+     {
+      "t": "[Imperative]",
+      "r": "คำสั่ง = สิ่งที่ต้องทำ ขึ้นต้นด้วยกริยาช่องหนึ่ง (มีความหมายเท่ากับ 'ถ้าคุณ...')"
+     },
+     {
+      "t": "[subject]",
+      "r": "ประธานของผลลัพธ์ มักเป็น you/we/it"
+     },
+     {
+      "t": "[result]",
+      "r": "ผลดีที่จะตามมา (กริยารูปธรรมดาหลัง will)"
+     }
+    ],
+    "meaning_th": "ใช้คำสั่งบวกคำว่า and แทนประโยคเงื่อนไข 'ถ้า...แล้วจะ...' โดยสื่อผลลัพธ์ที่ดี โครงนี้กระชับและฟังดูหนักแน่นกว่าใช้ if จึงเจอบ่อยในคำแนะนำ คำโฆษณา และคำพูดให้กำลังใจ ใช้ได้ทั้งพูดและเขียน",
+    "examples": [
+     {
+      "en": "Study hard and you will pass the exam.",
+      "th": "ตั้งใจเรียนแล้วคุณจะสอบผ่าน (= ถ้าตั้งใจเรียน คุณก็จะผ่าน)"
+     },
+     {
+      "en": "Give me one more chance and I won't let you down.",
+      "th": "ให้โอกาสผมอีกครั้งแล้วผมจะไม่ทำให้คุณผิดหวัง"
+     },
+     {
+      "en": "Turn left at the corner and you'll see the station.",
+      "th": "เลี้ยวซ้ายตรงหัวมุมแล้วคุณจะเห็นสถานี"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "รูปเต็มด้วย if",
+      "en": "Study hard and you will pass. -> If you study hard, you will pass.",
+      "th": "โครงคำสั่ง+and ย่อมาจากประโยค if"
+     }
+    ],
+    "tip_th": "ห้ามใส่ if ซ้ำ เลือกอย่างใดอย่างหนึ่ง: 'If you study hard, you will pass.' หรือ 'Study hard and you will pass.' ใช้พร้อมกันไม่ได้",
+    "thai_err": {
+     "wrong": "If study hard and you will pass.",
+     "right": "Study hard and you will pass.",
+     "why_th": "คนไทยพูด 'ถ้า...แล้ว...' จึงเผลอใส่ if โครง and แทน if อยู่แล้ว ต้องตัด if ออก"
+    }
+   },
+   {
+    "name_en": "Imperative + or (negative result / warning)",
+    "name_th": "คำสั่ง + or (ไม่ทำแล้วเจอผลเสีย)",
+    "frame": "[Imperative] or [subject] will [bad result]",
+    "slots": [
+     {
+      "t": "[Imperative]",
+      "r": "คำสั่งที่ต้องทำ (มีความหมายเท่ากับ 'ถ้าคุณไม่ทำ...')"
+     },
+     {
+      "t": "[subject]",
+      "r": "ประธานของผลเสีย มักเป็น we/you"
+     },
+     {
+      "t": "[bad result]",
+      "r": "ผลเสียที่จะเกิดถ้าไม่ทำตาม (กริยารูปธรรมดาหลัง will)"
+     }
+    ],
+    "meaning_th": "ใช้คำสั่งบวก or เพื่อเตือนว่า 'จงทำ...ไม่งั้นจะแย่' or ในที่นี้แปลว่า 'ไม่งั้น / มิฉะนั้น' (บางทีเสริมเป็น or else ให้หนักขึ้น) เป็นการขู่หรือเตือนอย่างกระชับ ใช้บ่อยในคำพูด",
+    "examples": [
+     {
+      "en": "Hurry up or we will be late.",
+      "th": "รีบหน่อยไม่งั้นเราจะสาย"
+     },
+     {
+      "en": "Wear a jacket or you'll catch a cold.",
+      "th": "ใส่แจ็คเก็ตด้วยไม่งั้นคุณจะเป็นหวัด"
+     },
+     {
+      "en": "Leave now, or else you'll miss the train.",
+      "th": "ไปเดี๋ยวนี้เลย ไม่งั้นคุณจะพลาดรถไฟ"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "รูปเต็มด้วย if...not",
+      "en": "Hurry up or we will be late. -> If we don't hurry up, we will be late.",
+      "th": "or แทน 'if...not' (ถ้าไม่...)"
+     }
+    ],
+    "tip_th": "จำง่ายๆ: and = ผลดี, or = ผลร้าย ถ้าอยากเตือนหรือขู่ ใช้ or (หรือ or else) อย่าสลับกัน",
+    "thai_err": {
+     "wrong": "If you don't hurry up or we will be late.",
+     "right": "Hurry up or we will be late.",
+     "why_th": "โครง or ทำหน้าที่ 'ถ้าไม่...' อยู่แล้ว ใส่ if...don't ซ้ำจึงผิด ต้องตัดออก"
+    }
+   },
+   {
+    "name_en": "Subject imperative (pointing / assigning)",
+    "name_th": "คำสั่งที่ใส่ประธานเพื่อเน้น/ชี้ตัว",
+    "frame": "[Subject] [base verb] [rest]",
+    "slots": [
+     {
+      "t": "[Subject]",
+      "r": "ผู้ถูกสั่ง ระบุชัดเพื่อชี้ตัว/แบ่งหน้าที่: You / Everybody / Somebody / Nobody"
+     },
+     {
+      "t": "[base verb]",
+      "r": "กริยารูปธรรมดา (คำสั่ง) ไม่เติม s แม้ประธานเป็น everybody"
+     },
+     {
+      "t": "[rest]",
+      "r": "ส่วนที่เหลือ เช่น สถานที่ ทิศทาง"
+     }
+    ],
+    "meaning_th": "ปกติคำสั่งไม่มีประธาน แต่เราใส่ประธานได้เมื่อต้องการชี้ตัวหรือแบ่งหน้าที่ในกลุ่มคน ('เธอนั่งตรงนี้ เธอยืนตรงนั้น') เน้นเสียงหนักที่ประธาน ฟังดูเด็ดขาด ใช้ในคำพูด สั่งเด็ก จัดคิว หรือสั่งการ",
+    "examples": [
+     {
+      "en": "You sit here, and you stand over there.",
+      "th": "เธอนั่งตรงนี้ ส่วนเธอไปยืนตรงนั้น"
+     },
+     {
+      "en": "Everybody stand up, please.",
+      "th": "ทุกคนยืนขึ้นด้วยครับ"
+     },
+     {
+      "en": "Nobody move!",
+      "th": "ห้ามใครขยับ!"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "คำสั่งธรรมดาไม่มีประธาน",
+      "en": "Sit here. -> YOU sit here (, not him).",
+      "th": "เติมประธานเพื่อชี้ตัวและเน้น"
+     }
+    ],
+    "tip_th": "กริยายังเป็นรูปธรรมดาเสมอ: 'Everybody STAND up' ไม่ใช่ 'stands' เพราะเป็นคำสั่ง ไม่ใช่ประโยคบอกเล่า",
+    "thai_err": {
+     "wrong": "Everybody stands up.",
+     "right": "Everybody stand up.",
+     "why_th": "เห็น everybody เป็นเอกพจน์เลยเติม s แต่นี่เป็นคำสั่ง กริยาต้องเป็นรูปธรรมดา ไม่เติม s"
+    }
+   },
+   {
+    "name_en": "Emphatic negative imperative",
+    "name_th": "คำสั่งห้ามแบบเน้นหนัก",
+    "frame": "Don't you [base verb] / Never [base verb] [rest]",
+    "slots": [
+     {
+      "t": "Don't you",
+      "r": "สัญญาณห้ามแบบเน้นอารมณ์ (คงที่) ใส่ you เพื่อเพิ่มน้ำหนัก"
+     },
+     {
+      "t": "[base verb]",
+      "r": "กริยารูปธรรมดาที่ห้ามทำ เช่น dare, touch, lie"
+     },
+     {
+      "t": "[rest]",
+      "r": "ส่วนขยาย เช่น that / again / to me"
+     }
+    ],
+    "meaning_th": "ใช้เน้นการห้ามให้หนักและมีอารมณ์กว่าปกติ 'Don't you...' และ 'Never...' สื่อความเด็ดขาด โกรธ หรือเตือนรุนแรง 'Don't you dare!' = 'อย่าริอาจนะ!' เป็นภาษาพูด ใช้ตอนอารมณ์เข้ม",
+    "examples": [
+     {
+      "en": "Don't you dare talk to me like that!",
+      "th": "อย่าริอาจมาพูดกับฉันแบบนั้นนะ!"
+     },
+     {
+      "en": "Never do that again.",
+      "th": "อย่าทำแบบนั้นอีกเป็นอันขาด"
+     },
+     {
+      "en": "Don't you ever lie to me.",
+      "th": "อย่าได้โกหกฉันเชียวนะ"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "คำห้ามธรรมดา",
+      "en": "Don't do that. -> Don't you DARE do that! / NEVER do that again.",
+      "th": "เพิ่ม you/dare/never เพื่อเน้นอารมณ์"
+     }
+    ],
+    "tip_th": "หลัง Never ที่ขึ้นต้นคำสั่ง ใช้กริยารูปธรรมดาทันที: 'Never give up.' ไม่ใช่ 'Never to give up.' และโครงนี้ใช้ตอนอารมณ์เข้ม ระวังในที่ทางการ",
+    "thai_err": {
+     "wrong": "Never to touch this.",
+     "right": "Never touch this.",
+     "why_th": "เผลอใส่ to เพราะติดว่ากริยาต้องมี to แต่คำสั่งใช้กริยารูปธรรมดา ไม่มี to"
+    }
+   },
+   {
+    "name_en": "Suggestions: Why not / How about",
+    "name_th": "การชวน/เสนอแนะด้วย Why not / How about",
+    "frame": "Why not [base verb]? / How about [V-ing]?",
+    "slots": [
+     {
+      "t": "Why not",
+      "r": "สัญญาณชวน (คงที่) ตามด้วยกริยารูปธรรมดา"
+     },
+     {
+      "t": "[base verb]",
+      "r": "กริยารูปธรรมดา = กิจกรรมที่เสนอ (หลัง Why not)"
+     },
+     {
+      "t": "How about",
+      "r": "สัญญาณชวน (คงที่) ตามด้วยคำนามหรือ V-ing"
+     },
+     {
+      "t": "[V-ing]",
+      "r": "กริยาเติม -ing หรือคำนาม = สิ่งที่เสนอ (หลัง How about)"
+     }
+    ],
+    "meaning_th": "ใช้เสนอไอเดียหรือชวนทำอะไรแบบสุภาพเป็นกันเอง จุดสำคัญคือรูปกริยาต่างกัน: หลัง 'Why not' ใช้กริยารูปธรรมดา, หลัง 'How about' ใช้ V-ing (หรือคำนาม) เป็นภาษาพูดในชีวิตประจำวัน",
+    "examples": [
+     {
+      "en": "Why not try again tomorrow?",
+      "th": "ลองใหม่พรุ่งนี้ไหมล่ะ?"
+     },
+     {
+      "en": "How about going out for dinner?",
+      "th": "ออกไปกินข้าวเย็นข้างนอกกันไหม?"
+     },
+     {
+      "en": "How about a cup of coffee?",
+      "th": "กาแฟสักแก้วไหม?"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "รูปเต็มเป็นคำถามชวน",
+      "en": "Let's go out. -> How about going out? / Why not go out?",
+      "th": "สองสำนวนชวนที่ต่างรูปกริยากัน"
+     }
+    ],
+    "tip_th": "จำคู่กัน: Why not + กริยาเปล่า, How about + V-ing อย่าสลับ 'How about to go' ผิดเสมอ ต้องเป็น 'How about going'",
+    "thai_err": {
+     "wrong": "How about to go out tonight?",
+     "right": "How about going out tonight?",
+     "why_th": "ติดว่ากริยาต้องมี to แต่หลัง about (คำบุพบท) ต้องเป็น V-ing เสมอ ไม่ใช่ to + กริยา"
+    }
+   }
+  ]
+ },
+ {
   "id": "be",
   "cat_th": "ประโยค be + There is/are",
   "patterns": [
@@ -6477,6 +6722,270 @@
   ]
  },
  {
+  "id": "mannerclause",
+  "cat_th": "อนุประโยคบอกลักษณะ/วิธี (as / the way / as if)",
+  "patterns": [
+   {
+    "name_en": "as + subject + verb (manner / according to)",
+    "name_th": "as + ประธาน + กริยา = ตามที่/อย่างที่",
+    "frame": "[main clause] as [subject] [verb]",
+    "slots": [
+     {
+      "t": "[main clause]",
+      "r": "ประโยคหลัก = สิ่งที่ทำหรือเกิดขึ้น"
+     },
+     {
+      "t": "[subject]",
+      "r": "ประธานของอนุประโยค (คนที่บอก/แสดง/รู้)"
+     },
+     {
+      "t": "[verb]",
+      "r": "กริยาบอกวิธีหรือการอ้างอิง เช่น said, showed, know, planned"
+     }
+    ],
+    "meaning_th": "ใช้ as นำอนุประโยคเพื่อบอกว่า 'ทำตามวิธี/ตามที่' ใครคนหนึ่งบอกหรือแสดงไว้ หรืออ้างอิงสิ่งที่รู้กันอยู่ (As you know, ...) เป็นตัวเลือกที่สุภาพ เป็นทางการ เหมาะกับงานเขียนและการพูดที่เป็นทางการ วางอนุประโยค as ไว้หน้าหรือหลังประโยคหลักก็ได้",
+    "examples": [
+     {
+      "en": "Cook the rice as I showed you yesterday.",
+      "th": "หุงข้าวอย่างที่ฉันสาธิตให้ดูเมื่อวานนะ"
+     },
+     {
+      "en": "As you know, the deadline is this Friday.",
+      "th": "อย่างที่คุณทราบ กำหนดส่งคือวันศุกร์นี้"
+     },
+     {
+      "en": "The project turned out exactly as we had planned.",
+      "th": "โปรเจกต์ออกมาตรงตามที่เราวางแผนไว้เป๊ะ"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "รูปธรรมดา",
+      "en": "Do it the same way I showed you.",
+      "th": "= Do it as I showed you. (as สั้นและเป็นทางการกว่า)"
+     },
+     {
+      "label_th": "อ้างสิ่งที่รู้กัน",
+      "en": "You already know this: the deadline is Friday.",
+      "th": "= As you know, the deadline is Friday. (กระชับกว่า)"
+     }
+    ],
+    "tip_th": "จำว่า as นำ 'ประโยค' (มีประธาน+กริยา) ส่วน like ในภาษาทางการมักตามด้วยแค่คำนาม ในเรียงความ/อีเมลงาน ให้ใช้ as เสมอเมื่อขึ้นต้นด้วย 'อย่างที่/ตามที่'",
+    "thai_err": {
+     "wrong": "Like I said before, the report is late.",
+     "right": "As I said before, the report is late.",
+     "why_th": "คนไทยชอบใช้ like เพราะได้ยินบ่อยในหนัง แต่ในงานเขียน/พูดทางการต้องใช้ as นำประโยค; like แบบนี้ถือว่าไม่เป็นทางการ"
+    }
+   },
+   {
+    "name_en": "like + subject + verb (informal manner)",
+    "name_th": "like + ประธาน + กริยา = แบบที่/อย่างที่ (ไม่เป็นทางการ)",
+    "frame": "[main clause] like [subject] [verb]",
+    "slots": [
+     {
+      "t": "[main clause]",
+      "r": "ประโยคหลัก = สิ่งที่ทำ"
+     },
+     {
+      "t": "[subject]",
+      "r": "ประธานของอนุประโยค"
+     },
+     {
+      "t": "[verb]",
+      "r": "กริยาบอกวิธี เช่น said, told, predicted"
+     }
+    ],
+    "meaning_th": "like + ประโยค มีความหมายเหมือน as ('อย่างที่') แต่เป็นภาษาพูดแบบลำลอง ใช้กับเพื่อนหรือบทสนทนาทั่วไป ในภาษาพูดอเมริกันได้ยินบ่อยมาก แต่ในงานเขียนทางการควรเลี่ยงแล้วใช้ as แทน",
+    "examples": [
+     {
+      "en": "Just do it like I told you, okay?",
+      "th": "ก็ทำแบบที่ฉันบอกก็พอ โอเคไหม"
+     },
+     {
+      "en": "It all happened just like she predicted.",
+      "th": "ทุกอย่างเกิดขึ้นเป๊ะแบบที่เธอทำนายไว้เลย"
+     },
+     {
+      "en": "Nobody makes curry like my grandma does.",
+      "th": "ไม่มีใครทำแกงได้อร่อยแบบที่ยายฉันทำ"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "เปลี่ยนเป็นทางการ",
+      "en": "Do it as I told you.",
+      "th": "= Do it like I told you. (as = เป็นทางการ, like = ลำลอง)"
+     }
+    ],
+    "tip_th": "กฎง่าย ๆ: พูดกับเพื่อนใช้ like ได้; เขียนงาน/สอบ IELTS Writing ให้เปลี่ยนเป็น as ทันที ถ้าไม่แน่ใจ ใช้ as ปลอดภัยเสมอ",
+    "thai_err": {
+     "wrong": "The results improved like we expected.",
+     "right": "The results improved as we expected.",
+     "why_th": "ในเรียงความต้องใช้ as; like นำประโยคถือว่าภาษาพูด กรรมการสอบมองว่าไม่เป็นทางการ"
+    }
+   },
+   {
+    "name_en": "the way + subject + verb",
+    "name_th": "the way + ประธาน + กริยา = วิธีที่/ท่าทางที่",
+    "frame": "[main clause] the way [subject] [verb]",
+    "slots": [
+     {
+      "t": "[main clause]",
+      "r": "ประโยคหลัก"
+     },
+     {
+      "t": "[subject]",
+      "r": "ประธานของอนุประโยค (คนที่ทำ)"
+     },
+     {
+      "t": "[verb]",
+      "r": "กริยาที่บอกลักษณะการทำ เช่น sings, smiles, fixed"
+     }
+    ],
+    "meaning_th": "the way + ประโยค เน้น 'วิธีการ/ลักษณะท่าทาง' ที่ใครทำสิ่งหนึ่ง เหมือน 'how' หรือ 'in the way that' ใช้ได้ทั้งพูดและเขียน เป็นกลาง ๆ ไม่ลำลองเกินไป มักตามหลังกริยาแสดงความรู้สึกหรือคำสั่ง (I love / I like / Do it)",
+    "examples": [
+     {
+      "en": "I love the way she sings that song.",
+      "th": "ฉันชอบวิธีที่เธอร้องเพลงนั้นจัง"
+     },
+     {
+      "en": "He fixed the engine the way the manual described.",
+      "th": "เขาซ่อมเครื่องยนต์ตามวิธีที่คู่มืออธิบายไว้"
+     },
+     {
+      "en": "Do the exercise the way you were taught.",
+      "th": "ทำแบบฝึกหัดด้วยวิธีที่คุณถูกสอนมา"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "ใช้ how แทน",
+      "en": "I love how she sings that song.",
+      "th": "= I love the way she sings... (how = ลำลองกว่าเล็กน้อย)"
+     },
+     {
+      "label_th": "เทียบกับ as",
+      "en": "Do it as you were taught.",
+      "th": "= Do it the way you were taught. (the way เน้น 'วิธี' ชัดกว่า)"
+     }
+    ],
+    "tip_th": "อย่าใส่ how ต่อท้าย the way: พูด 'the way she sings' ไม่ใช่ 'the way how she sings' เลือกใช้ the way หรือ how อย่างใดอย่างหนึ่ง",
+    "thai_err": {
+     "wrong": "I like the way how she talks.",
+     "right": "I like the way she talks.",
+     "why_th": "the way กับ how มีความหมายซ้ำกัน ใช้พร้อมกันไม่ได้; คนไทยเผลอแปลตรงตัวจาก 'วิธีที่...ยังไง'"
+    }
+   },
+   {
+    "name_en": "as if / as though + present clause (real impression)",
+    "name_th": "as if / as though + ปัจจุบัน = ราวกับว่า (ความรู้สึก/ท่าทีที่อาจจริง)",
+    "frame": "[subject] [verb] as if [subject2] [verb2]",
+    "slots": [
+     {
+      "t": "[subject]",
+      "r": "ประธานหลัก"
+     },
+     {
+      "t": "[verb]",
+      "r": "กริยาแสดงการรับรู้/ท่าทาง เช่น looks, sounds, acts, talks"
+     },
+     {
+      "t": "[subject2]",
+      "r": "ประธานของอนุประโยค as if"
+     },
+     {
+      "t": "[verb2]",
+      "r": "กริยาในอนุประโยค (ปัจจุบัน เมื่อผู้พูดคิดว่าอาจเป็นจริง)"
+     }
+    ],
+    "meaning_th": "as if / as though ใช้บอก 'ราวกับว่า / ดูเหมือนว่า' เพื่อพูดถึงความรู้สึกหรือท่าทีที่เห็น เมื่อผู้พูดมองว่าเรื่องนั้น 'อาจเป็นจริง' ใช้กริยาปัจจุบันตามปกติ as though มีความหมายเดียวกับ as if แต่ฟังดูเป็นทางการกว่านิดหน่อย ใช้ได้ทั้งพูดและเขียน",
+    "examples": [
+     {
+      "en": "It looks as if it's going to rain soon.",
+      "th": "ดูเหมือนว่าฝนกำลังจะตกเร็ว ๆ นี้"
+     },
+     {
+      "en": "He talks as if he knows everything about it.",
+      "th": "เขาพูดราวกับว่าเขารู้ทุกอย่างเกี่ยวกับเรื่องนี้"
+     },
+     {
+      "en": "She sounds as though she has a cold.",
+      "th": "เสียงเธอเหมือนกับว่าเธอเป็นหวัด"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "รูปธรรมดา",
+      "en": "It looks like it's going to rain.",
+      "th": "= It looks as if it's going to rain. (like ลำลองกว่า, as if เป็นทางการกว่า)"
+     }
+    ],
+    "tip_th": "ในภาษาพูด คนมักใช้ 'like' แทน as if (It looks like it's raining) แต่ในงานเขียนให้ใช้ as if / as though และอย่าลืมเติม s ท้ายกริยาตามประธานเอกพจน์",
+    "thai_err": {
+     "wrong": "He talks as if he know everything.",
+     "right": "He talks as if he knows everything.",
+     "why_th": "ลืมเติม s ท้ายกริยาตามประธานเอกพจน์ he; คนไทยไม่มีการผันกริยาในภาษาแม่จึงหลุดบ่อย"
+    }
+   },
+   {
+    "name_en": "as if / as though + past (unreal / imaginary manner)",
+    "name_th": "as if / as though + อดีต = ราวกับว่า (สิ่งที่ไม่จริง)",
+    "frame": "[subject] [verb] as if [subject2] [past verb / were]",
+    "slots": [
+     {
+      "t": "[subject]",
+      "r": "ประธานหลัก"
+     },
+     {
+      "t": "[verb]",
+      "r": "กริยาแสดงท่าทาง/การกระทำ เช่น spoke, spends, acts"
+     },
+     {
+      "t": "[subject2]",
+      "r": "ประธานของอนุประโยค as if"
+     },
+     {
+      "t": "[past verb / were]",
+      "r": "กริยาช่องที่ 2 หรือ were (ใช้ were กับทุกประธานในสมมติที่ไม่จริง)"
+     }
+    ],
+    "meaning_th": "เมื่อสิ่งที่พูดใน as if / as though 'ไม่เป็นความจริง' หรือเป็นการจินตนาการ ให้ถอยกริยาไปเป็นอดีต (past subjunctive) และใช้ were กับทุกประธาน บอกว่า 'ทำราวกับว่า...ทั้งที่จริงไม่ใช่' เป็นสัญญาณของภาษาระดับสูง เหมาะกับ IELTS band 7+",
+    "examples": [
+     {
+      "en": "She spoke to me as if I were a child.",
+      "th": "เธอพูดกับฉันราวกับว่าฉันเป็นเด็ก (ทั้งที่ไม่ใช่)"
+     },
+     {
+      "en": "He spends money as though he were a millionaire.",
+      "th": "เขาใช้เงินราวกับว่าเขาเป็นเศรษฐี (ทั้งที่ไม่ได้เป็น)"
+     },
+     {
+      "en": "You look as if you had seen a ghost.",
+      "th": "หน้าคุณเหมือนเพิ่งเจอผีมา (แต่จริง ๆ ไม่ได้เจอ)"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "จริง vs ไม่จริง",
+      "en": "as if he IS the boss vs. as if he WERE the boss",
+      "th": "ปัจจุบัน (is) = อาจจริง; อดีต (were) = สมมติที่ไม่จริง"
+     },
+     {
+      "label_th": "รูปเทียบเคียง",
+      "en": "She treated me like a child.",
+      "th": "= She spoke to me as if I were a child. (as if + were เน้นการเปรียบว่าไม่จริง)"
+     }
+    ],
+    "tip_th": "จุดสอบยอดฮิต: เมื่อสิ่งนั้น 'ไม่จริง' ใช้ were กับทุกประธาน (I were, he were) ไม่ใช่ was การใช้ were ตรงนี้เป็นสัญญาณของ band สูง",
+    "thai_err": {
+     "wrong": "He acts as if he is the boss, but he is just an intern.",
+     "right": "He acts as if he were the boss, but he is just an intern.",
+     "why_th": "เมื่อรู้ชัดว่าไม่จริง (เขาเป็นแค่เด็กฝึกงาน) ต้องถอยเป็น were; คนไทยใช้ is เพราะแปลตรงจาก 'เขาเป็น' ในปัจจุบัน"
+    }
+   }
+  ]
+ },
+ {
   "id": "linkers",
   "cat_th": "คำเชื่อมระดับประโยค (however / therefore)",
   "patterns": [
@@ -10633,6 +11142,251 @@
   ]
  },
  {
+  "id": "compinv",
+  "cat_th": "เปรียบเทียบทวีคูณ & As...as / Though (inversion)",
+  "patterns": [
+   {
+    "name_en": "Progressive comparative (more and more / -er and -er)",
+    "name_th": "เปรียบเทียบทวีคูณ: ยิ่งขึ้นเรื่อยๆ",
+    "frame": "[Subject] + [be/get/grow] + [comparative] and [comparative]",
+    "slots": [
+     {
+      "t": "[Subject]",
+      "r": "ประธาน เช่น สิ่งของ/สถานการณ์ที่กำลังเปลี่ยน"
+     },
+     {
+      "t": "[be/get/grow]",
+      "r": "กริยาแสดงการเปลี่ยนแปลง (is/gets/grows/becomes)"
+     },
+     {
+      "t": "[comparative] and [comparative]",
+      "r": "คำเปรียบเทียบตัวเดิมพูดซ้ำ 2 ครั้ง เชื่อมด้วย and (สั้น: -er and -er / ยาว: more and more + adj)"
+     }
+    ],
+    "meaning_th": "ใช้บอกว่าสิ่งหนึ่งเพิ่มขึ้น/มากขึ้นเรื่อยๆ อย่างต่อเนื่อง (แนวโน้มขาขึ้น) ตรงกับภาษาไทยว่า \"ยิ่ง...ยิ่ง\" หรือ \"...ขึ้นเรื่อยๆ\" หลักการ: คำสั้นเติม -er แล้วพูดซ้ำ (bigger and bigger) ส่วนคำยาวใช้ more and more + คำคุณศัพท์ (more and more expensive) ใช้ได้ทั้งพูดและเขียน เป็นกลาง",
+    "examples": [
+     {
+      "en": "It is getting more and more difficult to find a parking space.",
+      "th": "มันยิ่งยากขึ้นเรื่อยๆ ที่จะหาที่จอดรถ"
+     },
+     {
+      "en": "The city is becoming more and more crowded every year.",
+      "th": "เมืองนี้แออัดขึ้นเรื่อยๆ ทุกปี"
+     },
+     {
+      "en": "Her English is getting better and better.",
+      "th": "ภาษาอังกฤษของเธอดีขึ้นเรื่อยๆ"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "จากรูปธรรมดา",
+      "en": "It is difficult. -> It is getting more and more difficult.",
+      "th": "\"มันยาก\" -> \"มันยิ่งยากขึ้นเรื่อยๆ\""
+     }
+    ],
+    "tip_th": "จำง่ายๆ: คำ 1 พยางค์สั้นๆ ใช้ -er ซ้ำ (colder and colder); คำยาว 2 พยางค์ขึ้นไปใช้ more and more + คำเดิม ห้ามเติม -er",
+    "thai_err": {
+     "wrong": "The exam is becoming difficulter and difficulter.",
+     "right": "The exam is becoming more and more difficult.",
+     "why_th": "คำยาวอย่าง difficult เติม -er ไม่ได้ ต้องใช้ more and more + คำคุณศัพท์ตัวเดิม"
+    }
+   },
+   {
+    "name_en": "Verb + direction repeated (going up and up / on and on)",
+    "name_th": "กริยา + ทิศทางซ้ำ: ...ขึ้นๆ / ...ไปเรื่อยๆ",
+    "frame": "[Subject] + keep(s) + [verb-ing] + [up/down/on] and [up/down/on]",
+    "slots": [
+     {
+      "t": "[Subject]",
+      "r": "ประธานที่มีการเคลื่อนไหวต่อเนื่อง"
+     },
+     {
+      "t": "[verb-ing]",
+      "r": "กริยารูป -ing แสดงการกระทำที่ดำเนินอยู่ (going/rising/climbing/talking)"
+     },
+     {
+      "t": "[up/down/on] and [up/down/on]",
+      "r": "คำบอกทิศทาง/ต่อเนื่อง พูดซ้ำ 2 ครั้ง เน้นว่าไม่หยุด (up and up / on and on)"
+     }
+    ],
+    "meaning_th": "ใช้เน้นว่าการกระทำหนึ่งดำเนินไปเรื่อยๆ ไม่หยุด โดยพูดคำบอกทิศทาง (up, down, on) ซ้ำสองครั้ง มักมาคู่กับ keep/keeps เพื่อเน้นความต่อเนื่อง ให้อารมณ์เน้นย้ำ เหมาะกับภาษาพูดและงานเขียนกึ่งทางการ",
+    "examples": [
+     {
+      "en": "Prices keep going up and up.",
+      "th": "ราคาเอาแต่พุ่งขึ้นๆ ไม่หยุด"
+     },
+     {
+      "en": "He kept talking on and on about his new car.",
+      "th": "เขาพูดเรื่องรถคันใหม่ไปเรื่อยๆ ไม่จบไม่สิ้น"
+     },
+     {
+      "en": "The queue keeps moving on and on with no end in sight.",
+      "th": "แถวเคลื่อนไปเรื่อยๆ ไม่มีทีท่าจะจบ"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "จากรูปธรรมดา",
+      "en": "Prices keep rising. -> Prices keep going up and up.",
+      "th": "\"ราคาขึ้นต่อเนื่อง\" -> \"ราคาพุ่งขึ้นๆ ไม่หยุด\" (เน้นมากกว่า)"
+     }
+    ],
+    "tip_th": "\"on and on\" หมายถึงพูด/ทำนานจนน่าเบื่อ มีนัยลบเล็กน้อย; \"up and up\" เน้นเพิ่มไม่หยุด ใช้ตอนอยากบ่นหรือเน้นอารมณ์",
+    "thai_err": {
+     "wrong": "Prices keep going up up up.",
+     "right": "Prices keep going up and up.",
+     "why_th": "ต้องมี and เชื่อมระหว่างคำที่ซ้ำ พูดซ้ำเฉยๆ โดยไม่มี and ผิดไวยากรณ์"
+    }
+   },
+   {
+    "name_en": "Concessive inversion: Adjective + as + subject",
+    "name_th": "ยกความจริงมาแย้ง: Hard as it was (แม้จะ...)",
+    "frame": "[Adjective] as [subject] + [be/verb], [main clause]",
+    "slots": [
+     {
+      "t": "[Adjective]",
+      "r": "คำคุณศัพท์ที่ดึงออกมาไว้หน้าสุด (คำที่จะยอมรับว่าจริง)"
+     },
+     {
+      "t": "[subject]",
+      "r": "ประธานของอนุประโยค"
+     },
+     {
+      "t": "[be/verb]",
+      "r": "กริยา be หรือกริยาอื่นของอนุประโยค"
+     },
+     {
+      "t": "[main clause]",
+      "r": "ประโยคหลัก บอกผลที่ขัดแย้งกับส่วนแรก"
+     }
+    ],
+    "meaning_th": "ใช้แทน \"although\" แบบเน้นและดูมีชั้นเชิง แปลว่า \"แม้จะ...ก็ตาม\" โครงสร้างคือ ดึงคำคุณศัพท์มาไว้หน้าสุด ตามด้วย as แล้วจึงประธานและกริยา เป็นสำนวนทางการ/วรรณกรรม พบมากในงานเขียนระดับสูงและสุนทรพจน์",
+    "examples": [
+     {
+      "en": "Hard as it was, we finished the project on time.",
+      "th": "แม้มันจะยาก เราก็ทำโปรเจกต์เสร็จตรงเวลา"
+     },
+     {
+      "en": "Tired as she was, she kept on studying.",
+      "th": "แม้เธอจะเหนื่อย เธอก็ยังเรียนต่อไป"
+     },
+     {
+      "en": "Strange as it may seem, he enjoys exams.",
+      "th": "แม้จะฟังดูแปลก แต่เขาชอบการสอบ"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "เทียบกับ although",
+      "en": "Although it was hard, we finished. -> Hard as it was, we finished.",
+      "th": "\"แม้มันจะยาก...\" รูปธรรมดา -> รูป inversion ที่ดูเป็นทางการและเน้นกว่า"
+     }
+    ],
+    "tip_th": "รูปนี้เป็นทางการ/วรรณกรรม ใช้ในเรียงความ IELTS หรือการพูดที่เป็นทางการได้ แต่ในภาษาพูดทั่วไปให้ใช้ although จะปลอดภัยกว่า",
+    "thai_err": {
+     "wrong": "As hard it was, we finished on time.",
+     "right": "Hard as it was, we finished on time.",
+     "why_th": "ต้องเอาคำคุณศัพท์ (hard) ขึ้นก่อน as ไม่ใช่เอา As ขึ้นก่อน คนไทยมักเรียงตามลำดับที่คุ้นผิด"
+    }
+   },
+   {
+    "name_en": "Though-inversion: Adjective + though + subject",
+    "name_th": "รูป though วางกลาง: Cold though it was",
+    "frame": "[Adjective] though [subject] + [be], [main clause]",
+    "slots": [
+     {
+      "t": "[Adjective]",
+      "r": "คำคุณศัพท์ที่ดึงมาไว้หน้าสุด"
+     },
+     {
+      "t": "[subject]",
+      "r": "ประธานของอนุประโยค"
+     },
+     {
+      "t": "[be]",
+      "r": "กริยา be (was/were/is) หรือกริยาอื่น"
+     },
+     {
+      "t": "[main clause]",
+      "r": "ประโยคหลัก บอกผลที่ขัดแย้ง"
+     }
+    ],
+    "meaning_th": "ความหมายเหมือน \"Hard as it was\" ทุกอย่าง แค่ใช้ though แทน as โดยวาง though ไว้หลังคำคุณศัพท์ (ไม่ใช่ต้นประโยค) แปลว่า \"แม้จะ...ก็ตาม\" เป็นสำนวนทางการ/วรรณกรรม ให้ความรู้สึกคลาสสิกกว่า as เล็กน้อย",
+    "examples": [
+     {
+      "en": "Cold though it was, we went out for a walk.",
+      "th": "แม้อากาศจะหนาว เราก็ออกไปเดินเล่น"
+     },
+     {
+      "en": "Expensive though it is, the course is worth every baht.",
+      "th": "แม้จะแพง แต่คอร์สนี้ก็คุ้มทุกบาท"
+     },
+     {
+      "en": "Young though he was, he handled the crisis calmly.",
+      "th": "แม้เขาจะอายุน้อย เขาก็รับมือวิกฤตได้อย่างใจเย็น"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "เทียบกับ though ธรรมดา",
+      "en": "Though it was cold, we went out. -> Cold though it was, we went out.",
+      "th": "รูปธรรมดา -> รูป inversion ที่ย้ายคำคุณศัพท์ขึ้นหน้าเพื่อเน้น"
+     }
+    ],
+    "tip_th": "จุดต่างสำคัญ: ในรูปนี้ though วาง 'หลัง' คำคุณศัพท์ ไม่ใช่ต้นประโยค ถ้าจะขึ้นต้นด้วย Though ให้ใช้รูปธรรมดา (Though it was cold,...) แทน",
+    "thai_err": {
+     "wrong": "Though cold it was, we went out.",
+     "right": "Cold though it was, we went out.",
+     "why_th": "เมื่อใช้รูป inversion ต้องเอาคำคุณศัพท์ (cold) ขึ้นก่อน แล้วตามด้วย though จะเอา though ขึ้นก่อนไม่ได้"
+    }
+   },
+   {
+    "name_en": "Try as + subject + might",
+    "name_th": "สำนวน Try as he might: พยายามเท่าไรก็...",
+    "frame": "Try as [subject] might, [subject] + could not + [verb]",
+    "slots": [
+     {
+      "t": "[subject]",
+      "r": "ประธานคนที่พยายาม (ตัวแรกและตัวที่สองมักเป็นคนเดียวกัน)"
+     },
+     {
+      "t": "[verb]",
+      "r": "กริยาหลักที่ทำไม่สำเร็จ (รูป base form)"
+     }
+    ],
+    "meaning_th": "สำนวนตายตัวแปลว่า \"ไม่ว่าจะพยายามแค่ไหนก็...(ไม่สำเร็จ)\" ใช้เน้นว่าความพยายามล้มเหลว โครงคือ Try as + ประธาน + might ตามด้วยประโยคที่บอกผลลบ เป็นสำนวนทางการ/วรรณกรรม ให้อารมณ์ดราม่าเล็กน้อย",
+    "examples": [
+     {
+      "en": "Try as he might, he could not open the jar.",
+      "th": "ไม่ว่าเขาจะพยายามแค่ไหน เขาก็เปิดขวดไม่ได้"
+     },
+     {
+      "en": "Try as I might, I could not remember her name.",
+      "th": "พยายามเท่าไร ฉันก็นึกชื่อเธอไม่ออก"
+     },
+     {
+      "en": "Try as they might, they could not convince the board.",
+      "th": "ไม่ว่าจะพยายามเพียงใด พวกเขาก็โน้มน้าวคณะกรรมการไม่สำเร็จ"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "เทียบกับรูปธรรมดา",
+      "en": "However hard he tried, he could not open it. -> Try as he might, he could not open it.",
+      "th": "\"ไม่ว่าจะพยายามแค่ไหน...\" รูปธรรมดา -> สำนวน inversion ที่กระชับและดูมีชั้นเชิง"
+     }
+    ],
+    "tip_th": "เป็นสำนวนตายตัว ต้องใช้ 'might' เสมอ (ไม่ใช่ can/will) และประโยคหลังต้องเป็นผลลบเสมอ (ทำไม่สำเร็จ) เป็นภาษาทางการ/เขียน",
+    "thai_err": {
+     "wrong": "Try as he can, he could not open the jar.",
+     "right": "Try as he might, he could not open the jar.",
+     "why_th": "สำนวนนี้ตายตัวต้องใช้ might เท่านั้น จะเปลี่ยนเป็น can/could ไม่ได้"
+    }
+   }
+  ]
+ },
+ {
   "id": "verbpat",
   "cat_th": "โครงสร้างหลังกริยา",
   "patterns": [
@@ -11298,6 +12052,301 @@
      "wrong": "He got fire from his job last week.",
      "right": "He got fired from his job last week.",
      "why_th": "หลัง get ในโครงสร้าง passive ต้องเป็นกริยาช่อง 3 (fired) ไม่ใช่รูปธรรมดา (fire) คนไทยมักลืมเติม -ed เพราะภาษาไทยไม่ผันกริยา"
+    }
+   }
+  ]
+ },
+ {
+  "id": "toughraise",
+  "cat_th": "ประโยค easy to... & กริยา seem/appear (raising)",
+  "patterns": [
+   {
+    "name_en": "Tough-movement: subject + BE + easy/hard + to + V",
+    "name_th": "โครงสร้าง easy/hard to (ยกกรรมขึ้นมาเป็นประธาน)",
+    "frame": "[Subject] + is + easy to + [V1]",
+    "slots": [
+     {
+      "t": "[Subject]",
+      "r": "สิ่งของ/คนที่จริง ๆ แล้วเป็น 'กรรม' ของกริยา แต่ถูกยกมาวางเป็นประธาน"
+     },
+     {
+      "t": "[V1]",
+      "r": "กริยารูปธรรมดา (base form) และห้ามมีกรรมตามหลัง เพราะกรรมคือประธานไปแล้ว"
+     }
+    ],
+    "meaning_th": "ใช้กับคำคุณศัพท์กลุ่ม easy, hard, difficult, impossible, tough, fun, safe, dangerous เพื่อบอกว่าสิ่งนั้น 'ถูกกระทำ' ได้ง่ายหรือยากแค่ไหน จุดสำคัญคือประธานหน้าประโยคคือกรรมของกริยาท้ายประโยค ดังนั้นหลังกริยาต้อง 'ว่าง' ไม่มีกรรมซ้ำ ใช้ได้ทั้งพูดและเขียน",
+    "examples": [
+     {
+      "en": "This book is easy to read.",
+      "th": "หนังสือเล่มนี้อ่านง่าย (หนังสือคือสิ่งที่ถูกอ่าน)"
+     },
+     {
+      "en": "Her handwriting is hard to read.",
+      "th": "ลายมือของเธออ่านยาก"
+     },
+     {
+      "en": "That mistake was impossible to avoid.",
+      "th": "ความผิดพลาดนั้นเลี่ยงไม่ได้เลย"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "รูปเต็มที่ตรงไปตรงมา (ขึ้นด้วย It ปลอม)",
+      "en": "It is easy to read this book.",
+      "th": "= 'This book is easy to read.' ความหมายเดียวกัน แค่ย้ายกรรม 'this book' ขึ้นมาเป็นประธาน แล้วท้ายประโยคต้องว่าง"
+     }
+    ],
+    "tip_th": "กฎเหล็ก: หลังกริยาตัวท้ายต้อง 'ว่าง' เสมอ เพราะกรรมถูกยกไปเป็นประธานแล้ว ถ้าเผลอเติมกรรมซ้ำ (read it) จะผิดทันที",
+    "thai_err": {
+     "wrong": "This book is easy to read it.",
+     "right": "This book is easy to read.",
+     "why_th": "คนไทยแปลจาก 'อ่านมันง่าย' เลยเติม it ซ้ำ แต่ 'book' คือกรรมของ read อยู่แล้ว จึงห้ามมี it อีก"
+    }
+   },
+   {
+    "name_en": "Extraposed IT vs tough-subject (two structures, one meaning)",
+    "name_th": "It is easy to... เทียบกับ ...is easy to (สองโครงสร้าง ความหมายเดียว)",
+    "frame": "It is easy to + [V1] + [object]",
+    "slots": [
+     {
+      "t": "[V1]",
+      "r": "กริยารูปธรรมดา"
+     },
+     {
+      "t": "[object]",
+      "r": "กรรมที่วางไว้หลังกริยาตามปกติ (เพราะขึ้นต้นด้วย It ปลอม จึงยังมีกรรมท้ายได้)"
+     }
+    ],
+    "meaning_th": "ประโยคเดียวกันเขียนได้สองแบบ: (1) 'It is easy to read this book' (ขึ้นด้วย It ปลอม แล้ววางกรรมไว้ท้ายตามปกติ) และ (2) 'This book is easy to read' (ยกกรรมมาเป็นประธาน ท้ายประโยคว่าง) ความหมายเท่ากัน แบบ It เป็นกลาง ๆ ส่วนแบบยกประธานเน้นตัวประธานนั้นมากขึ้น",
+    "examples": [
+     {
+      "en": "It is easy to please everyone.",
+      "th": "การทำให้ทุกคนพอใจนั้นง่าย (มีกรรม everyone ท้ายประโยค)"
+     },
+     {
+      "en": "It is impossible to solve this problem.",
+      "th": "โจทย์ข้อนี้แก้ไม่ได้เลย (= This problem is impossible to solve.)"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "สลับเป็นแบบยกประธาน",
+      "en": "This problem is impossible to solve.",
+      "th": "= 'It is impossible to solve this problem.' เมื่อยก 'this problem' มาเป็นประธาน กรรมท้ายประโยคต้องหายไป"
+     }
+    ],
+    "tip_th": "ตัดสินง่าย ๆ: ขึ้นด้วย 'It' ให้วางกรรมไว้ท้าย; ขึ้นด้วยตัวกรรมเอง ท้ายประโยคต้องว่าง อย่าผสมสองแบบเข้าด้วยกัน",
+    "thai_err": {
+     "wrong": "This problem is impossible to solve it.",
+     "right": "This problem is impossible to solve. / It is impossible to solve this problem.",
+     "why_th": "ผสมสองโครงสร้างเข้าด้วยกัน จึงมีกรรมโผล่ทั้งหน้า (problem) และท้าย (it) ต้องเลือกใช้แบบใดแบบหนึ่ง"
+    }
+   },
+   {
+    "name_en": "'easy/hard to please' — the subject is the one acted ON",
+    "name_th": "He is easy to please (ประธานคือผู้ถูกกระทำ ไม่ใช่ผู้กระทำ)",
+    "frame": "[Person] + is + hard to + [V1]",
+    "slots": [
+     {
+      "t": "[Person]",
+      "r": "คน ซึ่งจริง ๆ คือ 'กรรม' ของกริยา (คนอื่นเป็นผู้ทำกริยานั้นต่อเขา)"
+     },
+     {
+      "t": "[V1]",
+      "r": "กริยาที่ปกติต้องมีกรรม เช่น please, understand, beat, find"
+     }
+    ],
+    "meaning_th": "โครงสร้าง tough แบบที่ประธานเป็น 'คน' มักทำให้เข้าใจผิด 'He is easy to please' หมายถึง 'ทำให้เขาพอใจได้ง่าย' (มีคนอื่นเป็นผู้ทำให้เขาพอใจ) ไม่ได้แปลว่า 'เขาเอาใจคนอื่นเก่ง' ประธานคือผู้ถูกกระทำเสมอ",
+    "examples": [
+     {
+      "en": "She is hard to please.",
+      "th": "เอาใจเธอยาก (คนอื่นทำให้เธอพอใจได้ยาก ไม่ใช่เธอเอาใจคนอื่นยาก)"
+     },
+     {
+      "en": "He is easy to talk to.",
+      "th": "เขาคุยด้วยง่าย (เราเข้าไปคุยกับเขาได้สบาย ๆ)"
+     },
+     {
+      "en": "This teacher is hard to understand.",
+      "th": "ครูคนนี้ฟังเข้าใจยาก (เราเข้าใจสิ่งที่ครูพูดได้ยาก)"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "แปลกลับเป็นรูป It",
+      "en": "It is hard to please her.",
+      "th": "= 'She is hard to please.' ช่วยยืนยันว่า 'her' เป็นกรรม เธอคือผู้ถูกทำให้พอใจ"
+     }
+    ],
+    "tip_th": "เช็กความหมายด้วยการแปลงเป็น 'It is hard to please her' ถ้าแปลงแล้วประธานกลายเป็นกรรม (her) แสดงว่าประธานคือผู้ถูกกระทำ",
+    "thai_err": {
+     "wrong": "He is easy to please others.",
+     "right": "He is easy to please. / He pleases others easily.",
+     "why_th": "เข้าใจผิดว่า please มีกรรม others ได้ แต่ในโครงสร้างนี้ 'he' คือกรรมของ please อยู่แล้ว ถ้าจะสื่อว่าเขาเอาใจคนอื่นเก่งต้องใช้อีกประโยค"
+    }
+   },
+   {
+    "name_en": "Raising: subject + seem/appear + to + V",
+    "name_th": "กริยา seem/appear + to + V (ยกประธาน)",
+    "frame": "[Subject] + seems to + [V1]",
+    "slots": [
+     {
+      "t": "[Subject]",
+      "r": "ประธานที่จริง ๆ เป็นประธานของอนุประโยคย่อย แต่ถูกยกมาไว้หน้า seem"
+     },
+     {
+      "t": "[V1]",
+      "r": "กริยารูปธรรมดาตามหลัง to เสมอ (ห้ามผัน)"
+     }
+    ],
+    "meaning_th": "seem และ appear แปลว่า 'ดูเหมือน/ดูท่าจะ' ใช้บอกการคาดเดาอย่างสุภาพ ต้องตามด้วย 'to + กริยาช่อง 1' เสมอ 'appear' เป็นทางการกว่า 'seem' ความหมายเท่ากับ 'It seems that + ประโยค'",
+    "examples": [
+     {
+      "en": "She seems to know the answer.",
+      "th": "เธอดูเหมือนจะรู้คำตอบ"
+     },
+     {
+      "en": "They appear to be lost.",
+      "th": "พวกเขาดูท่าจะหลงทาง"
+     },
+     {
+      "en": "He seems to enjoy his new job.",
+      "th": "เขาดูเหมือนจะชอบงานใหม่ของเขา"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "แปลงเป็นรูป It seems that",
+      "en": "It seems that she knows the answer.",
+      "th": "= 'She seems to know the answer.' สองแบบความหมายเดียวกัน แต่แบบ to กระชับและพบบ่อยกว่าในการพูด"
+     }
+    ],
+    "tip_th": "หลัง seem/appear ต้องมี 'to' เสมอ แล้วตามด้วยกริยารูปธรรมดา ห้ามผันกริยาเหมือน 'seems knows' เด็ดขาด",
+    "thai_err": {
+     "wrong": "She seems knows the answer.",
+     "right": "She seems to know the answer.",
+     "why_th": "ภาษาไทยไม่มีการผันกริยา คนไทยเลยเรียง seem + กริยาช่องปกติต่อกันเลย แต่อังกฤษต้องมี 'to' คั่นและใช้กริยารูปธรรมดา"
+    }
+   },
+   {
+    "name_en": "seem/appear + to have + V3 (earlier action)",
+    "name_th": "seem/appear + to have + V3 (เหตุการณ์ที่เกิดก่อน)",
+    "frame": "[Subject] + seems to have + [V3]",
+    "slots": [
+     {
+      "t": "[Subject]",
+      "r": "ประธานของเหตุการณ์ที่เกิดขึ้นก่อนหน้าเวลาที่เราพูด"
+     },
+     {
+      "t": "[V3]",
+      "r": "กริยาช่อง 3 (past participle) เพื่อชี้ว่าการกระทำเกิดและจบไปแล้ว"
+     }
+    ],
+    "meaning_th": "ใช้ 'seem/appear + to have + กริยาช่อง 3' เมื่อสิ่งที่ 'ดูเหมือนว่า' เกิดขึ้นนั้นเป็นเหตุการณ์ในอดีต (เกิดก่อนตอนที่เราสังเกต) เทียบกับ 'seem to + V1' ที่หมายถึงตอนนี้",
+    "examples": [
+     {
+      "en": "He seems to have left already.",
+      "th": "เขาดูเหมือนจะไปแล้ว (การไปเกิดขึ้นก่อนหน้านี้)"
+     },
+     {
+      "en": "She appears to have forgotten our meeting.",
+      "th": "เธอดูท่าจะลืมนัดของเราไปแล้ว"
+     },
+     {
+      "en": "They seem to have finished the project.",
+      "th": "พวกเขาดูเหมือนจะทำโปรเจกต์เสร็จแล้ว"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "แปลงเป็นรูป It seems that (อดีต)",
+      "en": "It seems that he has left already.",
+      "th": "= 'He seems to have left already.' โครงสร้าง to have + V3 ทำหน้าที่แทน present perfect ในอนุประโยค"
+     }
+    ],
+    "tip_th": "จำง่าย ๆ: 'to + V1' = ตอนนี้/ทั่วไป, 'to have + V3' = เกิดไปแล้วก่อนหน้า ใช้ผิดช่องเวลาจะเพี้ยน",
+    "thai_err": {
+     "wrong": "He seems to left already.",
+     "right": "He seems to have left already.",
+     "why_th": "จะสื่ออดีตต้องใช้ 'to have + V3' ไม่ใช่เอากริยาช่อง 2 (left) มาต่อ to ตรง ๆ เพราะหลัง to ต้องเป็นรูปธรรมดา หรือ have + V3 เท่านั้น"
+    }
+   },
+   {
+    "name_en": "There seems/appears to be + noun",
+    "name_th": "There seems to be + คำนาม (ดูเหมือนจะมี)",
+    "frame": "There + seems to be + [noun]",
+    "slots": [
+     {
+      "t": "[noun]",
+      "r": "สิ่งที่ 'ดูเหมือนว่ามีอยู่' (ถ้าเป็นพหูพจน์เปลี่ยนเป็น There seem to be)"
+     }
+    ],
+    "meaning_th": "รวมโครงสร้าง 'There is/are' (มี) เข้ากับ seem/appear เพื่อบอกว่า 'ดูเหมือนจะมี...' seem ผันตามจำนวนของคำนามที่ตามมา: เอกพจน์ใช้ 'There seems to be', พหูพจน์ใช้ 'There seem to be' ใช้ได้ทั้งพูดและเขียนทางการ",
+    "examples": [
+     {
+      "en": "There seems to be a mistake in the bill.",
+      "th": "ดูเหมือนจะมีข้อผิดพลาดในบิล"
+     },
+     {
+      "en": "There appear to be several options.",
+      "th": "ดูท่าจะมีตัวเลือกอยู่หลายทาง (พหูพจน์ จึงใช้ appear ไม่เติม s)"
+     },
+     {
+      "en": "There seems to be no easy answer.",
+      "th": "ดูเหมือนจะไม่มีคำตอบที่ง่ายเลย"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "แปลงเป็นรูป It seems that there",
+      "en": "It seems that there is a mistake in the bill.",
+      "th": "= 'There seems to be a mistake in the bill.' แบบ There seems to be กระชับกว่าและฟังเป็นธรรมชาติกว่า"
+     }
+    ],
+    "tip_th": "อย่าลืม 'to be' ตรงกลาง: There seems TO BE... ไม่ใช่ 'There seems a mistake' และผัน seem/seems ตามจำนวนของคำนามที่ตามมา",
+    "thai_err": {
+     "wrong": "There seems have a mistake.",
+     "right": "There seems to be a mistake.",
+     "why_th": "คนไทยแปล 'มี' เป็น have ตรง ๆ แต่โครงสร้างนี้ต้องใช้ 'to be' คู่กับ There เสมอ ไม่ใช้ have"
+    }
+   },
+   {
+    "name_en": "turn out / happen + to",
+    "name_th": "turn out to / happen to (ปรากฏว่า / บังเอิญ)",
+    "frame": "It + turned out to be + [complement]",
+    "slots": [
+     {
+      "t": "[complement]",
+      "r": "สิ่งที่ผลลัพธ์กลายเป็น เช่น คำคุณศัพท์/คำนาม (true, a lie, a good idea)"
+     }
+    ],
+    "meaning_th": "'turn out to' = สุดท้ายกลายเป็น/ปรากฏว่า (เน้นผลลัพธ์ที่รู้ภายหลัง) ส่วน 'happen to + V1' = บังเอิญทำ/บังเอิญเป็น (เหตุการณ์ที่เกิดโดยไม่ได้ตั้งใจ) ทั้งคู่เป็นกริยากลุ่ม raising ตามด้วย to เหมือน seem ใช้บ่อยในการพูด",
+    "examples": [
+     {
+      "en": "The rumor turned out to be true.",
+      "th": "ข่าวลือนั้นปรากฏว่าเป็นเรื่องจริง"
+     },
+     {
+      "en": "I happened to see her at the mall.",
+      "th": "ฉันบังเอิญเจอเธอที่ห้าง"
+     },
+     {
+      "en": "Do you happen to know his number?",
+      "th": "คุณบังเอิญรู้เบอร์เขาไหม (ถามอย่างสุภาพ)"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "happen to เทียบกับรูปธรรมดา",
+      "en": "I happened to see her at the mall.",
+      "th": "= 'I saw her at the mall by chance.' โครงสร้าง 'happen to' เพิ่มความหมาย 'บังเอิญ' เข้าไปในประโยคธรรมดา"
+     }
+    ],
+    "tip_th": "'Do you happen to...?' เป็นวิธีถามที่สุภาพและนุ่มนวลมากในการพูด ส่วน 'turn out' มักใช้เล่าผลลัพธ์ที่เพิ่งรู้ทีหลัง",
+    "thai_err": {
+     "wrong": "The rumor turned out true.",
+     "right": "The rumor turned out to be true.",
+     "why_th": "ต้องมี 'to be' เมื่อตามด้วยคำคุณศัพท์/คำนาม คนไทยมักตัด 'to be' ทิ้งเพราะภาษาไทยไม่มี verb to be"
     }
    }
   ]
@@ -12447,6 +13496,489 @@
      "wrong": "Down the rain came.",
      "right": "Down came the rain.",
      "why_th": "คนไทยวางประธานก่อนกริยาตามความเคยชิน แต่เมื่อดันคำบอกทิศทาง (Down) ขึ้นหน้ากับกริยาการเคลื่อนที่และประธานเป็นคำนาม ต้องสลับที่เอากริยา came มาก่อน the rain"
+    }
+   }
+  ]
+ },
+ {
+  "id": "emphdo",
+  "cat_th": "เน้นย้ำด้วย do & การย้ายส่วนเน้น (dislocation)",
+  "patterns": [
+   {
+    "name_en": "Emphatic DO (affirmative)",
+    "name_th": "do/does/did เน้นย้ำในประโยคบอกเล่า",
+    "frame": "[Subject] do/does/did [base verb] [rest]",
+    "slots": [
+     {
+      "t": "[Subject]",
+      "r": "ประธาน (I, she, he, they...)"
+     },
+     {
+      "t": "do/does/did",
+      "r": "ตัวเน้น เลือกตามประธาน/กาล และออกเสียงหนัก (stress)"
+     },
+     {
+      "t": "[base verb]",
+      "r": "กริยาแท้ รูป base เสมอ (ไม่เติม -s/-ed)"
+     },
+     {
+      "t": "[rest]",
+      "r": "ส่วนที่เหลือของประโยค (กรรม/ส่วนขยาย)"
+     }
+    ],
+    "meaning_th": "ใช้ do/does/did วางหน้ากริยาปกติเพื่อเน้นว่า 'ทำจริง' หรือแย้งกับสิ่งที่อีกฝ่ายเชื่อ พูดโดยลงเสียงหนักที่ do เอง กริยาหลักคงรูป base เป็นได้ทั้งพูดและเขียน แต่ในการพูดจะเด่นมากเพราะการเน้นเสียง",
+    "examples": [
+     {
+      "en": "I do like it, I'm just tired today.",
+      "th": "ฉันชอบมันจริง ๆ นะ แค่วันนี้เหนื่อยเฉย ๆ"
+     },
+     {
+      "en": "She does try hard, even if it doesn't show.",
+      "th": "เธอพยายามหนักจริง ๆ ถึงจะไม่เห็นผลก็ตาม"
+     },
+     {
+      "en": "He did call me, I promise.",
+      "th": "เขาโทรหาฉันจริง ๆ นะ สาบานได้"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "รูปธรรมดา → รูปเน้น (ปัจจุบัน)",
+      "en": "I like it. -> I DO like it.",
+      "th": "ประโยคเฉย ๆ กลายเป็นการยืนยันหนักแน่น"
+     },
+     {
+      "label_th": "รูปธรรมดา → รูปเน้น (อดีต)",
+      "en": "He called. -> He DID call.",
+      "th": "did ดึงกาลอดีตมาไว้ที่ตัวเน้น กริยาจึงกลับเป็น base"
+     }
+    ],
+    "tip_th": "พลังของโครงสร้างนี้อยู่ที่การ 'ลงเสียงหนัก' ที่ do/does/did ถ้าพูดเรียบ ๆ จะไม่มีน้ำหนักเน้น มักตามด้วยการแก้ต่างหรือแย้ง",
+    "thai_err": {
+     "wrong": "He did called me yesterday.",
+     "right": "He did call me yesterday.",
+     "why_th": "หลัง do/does/did กริยาต้องเป็นรูป base เสมอ เพราะ did แบกกาลอดีตไว้แล้ว จึงห้ามเติม -ed ซ้ำ"
+    }
+   },
+   {
+    "name_en": "Emphatic DO (warm imperative)",
+    "name_th": "do นำหน้าคำสั่ง/คำเชิญให้ฟังอบอุ่น",
+    "frame": "Do [base verb] [rest]",
+    "slots": [
+     {
+      "t": "Do",
+      "r": "ตัวเน้นหน้าคำสั่ง ทำให้ฟังนุ่มนวล/เชื้อเชิญ (ไม่ผันตามใคร)"
+     },
+     {
+      "t": "[base verb]",
+      "r": "กริยา base เริ่มคำสั่ง (sit, come, help...)"
+     },
+     {
+      "t": "[rest]",
+      "r": "ส่วนที่เหลือ (down, in...)"
+     }
+    ],
+    "meaning_th": "วาง Do หน้าคำสั่ง (imperative) เพื่อเปลี่ยนคำสั่งห้วน ๆ ให้เป็นคำเชิญที่อบอุ่นและสุภาพขึ้น หรือเน้นความจริงใจ เป็นสำนวนพูดที่สุภาพ พบบ่อยในการต้อนรับแขก",
+    "examples": [
+     {
+      "en": "Do sit down, you must be tired.",
+      "th": "เชิญนั่งเถอะค่ะ คุณคงเหนื่อยแล้ว"
+     },
+     {
+      "en": "Do come in, we've been waiting for you.",
+      "th": "เชิญเข้ามาเลยค่ะ พวกเรารอคุณอยู่"
+     },
+     {
+      "en": "Do let me know if you need anything.",
+      "th": "บอกฉันได้เลยนะถ้าต้องการอะไร"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "คำสั่งเฉย ๆ → คำเชิญอบอุ่น",
+      "en": "Sit down. -> DO sit down.",
+      "th": "เติม Do แล้วน้ำเสียงเปลี่ยนจากออกคำสั่งเป็นเชื้อเชิญ"
+     }
+    ],
+    "tip_th": "โครงนี้ให้ความรู้สึกสุภาพแบบอังกฤษ เหมาะกับการต้อนรับหรือกระตุ้นเบา ๆ อย่าใช้กับคำสั่งที่ต้องการความเด็ดขาด เพราะจะดูอ่อนเกินไป",
+    "thai_err": {
+     "wrong": "Do sitting down, please.",
+     "right": "Do sit down, please.",
+     "why_th": "หลัง Do ต้องเป็นกริยา base ไม่ใช่ -ing คนไทยมักติดเติม -ing เพราะคิดว่าเป็นการกำลังทำ"
+    }
+   },
+   {
+    "name_en": "Emphatic DO (contradicting a doubt)",
+    "name_th": "do โต้กลับเมื่อถูกกล่าวหา/สงสัย",
+    "frame": "[Subject] do/does/did [base verb]!",
+    "slots": [
+     {
+      "t": "[Subject]",
+      "r": "ประธานที่กำลังโต้กลับ (I, we...)"
+     },
+     {
+      "t": "do/does/did",
+      "r": "ตัวเน้น ออกเสียงหนักมากเพื่อยืนยันสวนกลับ"
+     },
+     {
+      "t": "[base verb]",
+      "r": "กริยา base ที่อีกฝ่ายปฏิเสธว่าไม่ได้ทำ"
+     }
+    ],
+    "meaning_th": "ใช้ตอบโต้ทันทีเมื่อมีคนพูดปฏิเสธหรือกล่าวหาว่าเราไม่ได้ทำ เป็นการยืนยันสวนกลับว่า 'ทำสิ/ทำจริง' เป็นสำนวนพูด น้ำเสียงจริงจังหรือน้อยใจ ลงเสียงหนักที่ do",
+    "examples": [
+     {
+      "en": "\"You never help.\" \"I do help!\"",
+      "th": "\"เธอไม่เคยช่วยเลย\" \"ฉันช่วยนะ!\""
+     },
+     {
+      "en": "\"You don't listen to me.\" \"I do listen!\"",
+      "th": "\"เธอไม่ฟังฉันเลย\" \"ฉันฟังอยู่นะ!\""
+     },
+     {
+      "en": "\"He forgot again.\" \"He did remember, actually.\"",
+      "th": "\"เขาลืมอีกแล้ว\" \"เขาจำได้นะ จริง ๆ\""
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "ปฏิเสธ → ยืนยันสวนกลับ",
+      "en": "\"You don't help.\" -> \"I DO help!\"",
+      "th": "ตอบโต้ประโยคปฏิเสธด้วย do เน้น ๆ เพื่อยืนยัน"
+     }
+    ],
+    "tip_th": "โครงนี้ต้องคู่กับ 'บริบทที่มีการปฏิเสธมาก่อน' เสมอ ถ้าไม่มีใครแย้ง การพูด 'I do help' จะฟังดูแปลก ๆ เพราะไม่รู้ว่าเน้นสู้กับอะไร",
+    "thai_err": {
+     "wrong": "I am help!",
+     "right": "I do help!",
+     "why_th": "help เป็นกริยาแท้ ต้องใช้ do ช่วยเน้น ไม่ใช่ am คนไทยมักเผลอใช้ verb to be เพราะแปลว่า 'ฉันช่วยอยู่'"
+    }
+   },
+   {
+    "name_en": "Left dislocation",
+    "name_th": "ยกหัวเรื่องขึ้นก่อน แล้วใช้สรรพนามแทน",
+    "frame": "[Topic noun], [pronoun] [verb phrase]",
+    "slots": [
+     {
+      "t": "[Topic noun]",
+      "r": "หัวเรื่องที่ยกมาพูดก่อน (คำนาม/วลี)"
+     },
+     {
+      "t": "[pronoun]",
+      "r": "สรรพนามที่อ้างถึงหัวเรื่องนั้น (he, she, it, they)"
+     },
+     {
+      "t": "[verb phrase]",
+      "r": "ส่วนภาคแสดงที่เหลือ"
+     }
+    ],
+    "meaning_th": "เอ่ยชื่อ/หัวเรื่องขึ้นมาก่อนเพื่อ 'โฟกัส' แล้วค่อยพูดประโยคเต็มโดยใช้สรรพนามแทน มีเครื่องหมายจุลภาค (,) คั่นหัวเรื่องเสมอ เป็นสำนวนพูดล้วน ๆ ใช้ตอนเล่าเรื่องหรือเปรียบเทียบหลายคน อย่าใช้ในเขียนทางการ",
+    "examples": [
+     {
+      "en": "My brother, he's a doctor now.",
+      "th": "พี่ชายฉันน่ะ ตอนนี้เป็นหมอแล้ว"
+     },
+     {
+      "en": "That new cafe, it's really overpriced.",
+      "th": "คาเฟ่ใหม่ร้านนั้นน่ะ ราคาแพงเกินไปจริง ๆ"
+     },
+     {
+      "en": "My old teacher, she never gave up on me.",
+      "th": "ครูเก่าของฉันน่ะ เธอไม่เคยเลิกหวังในตัวฉันเลย"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "รูปธรรมดา → ยกหัวเรื่อง",
+      "en": "My brother is a doctor. -> My brother, he's a doctor.",
+      "th": "แยกหัวเรื่องออกมาข้างหน้าเพื่อเน้น แล้วใช้ he แทนในประโยค"
+     }
+    ],
+    "tip_th": "เป็นภาษาพูด ใช้เล่าเรื่องหรือเทียบ 'ส่วนคนนี้... ส่วนคนนั้น...' ห้ามใช้ในเรียงความ IELTS Writing เพราะถือว่าไม่เป็นทางการและซ้ำซ้อน",
+    "thai_err": {
+     "wrong": "My brother he is a doctor.",
+     "right": "My brother is a doctor.",
+     "why_th": "ในภาษาเขียนห้ามใส่ทั้งคำนามและสรรพนามเป็นประธานซ้อนกัน (My brother + he) คนไทยติดโครงหัวเรื่อง–ขยาย (topic–comment) เลยเผลอใส่ he ซ้ำ ถ้าจะยกหัวเรื่องแบบพูดต้องมีจุลภาคคั่น: My brother, he is a doctor."
+    }
+   },
+   {
+    "name_en": "Right dislocation",
+    "name_th": "พูดสรรพนามก่อน แล้วต่อท้ายด้วยคำนามขยายความ",
+    "frame": "[Pronoun] [verb phrase], [noun tag]",
+    "slots": [
+     {
+      "t": "[Pronoun]",
+      "r": "สรรพนามที่พูดขึ้นก่อน (he, she, it, they)"
+     },
+     {
+      "t": "[verb phrase]",
+      "r": "ภาคแสดงของประโยค"
+     },
+     {
+      "t": "[noun tag]",
+      "r": "คำนามต่อท้ายเพื่อบอกว่าสรรพนามหมายถึงใคร/อะไร"
+     }
+    ],
+    "meaning_th": "พูดประโยคด้วยสรรพนามก่อน แล้วเติมคำนามท้ายประโยคเพื่อขยายความว่าหมายถึงใคร เหมือนเสริมทีหลังเพื่อความชัดหรือแสดงอารมณ์ เป็นสำนวนพูด มักมีน้ำเสียงบ่น/หยอกล้อ/เอ็นดู",
+    "examples": [
+     {
+      "en": "He's always late, my brother.",
+      "th": "เขามาสายตลอดเลย เจ้าพี่ชายฉันน่ะ"
+     },
+     {
+      "en": "It's delicious, this soup.",
+      "th": "อร่อยจังเลยนะ ซุปถ้วยนี้"
+     },
+     {
+      "en": "They're so noisy, those kids next door.",
+      "th": "พวกเขาเสียงดังจริง ๆ เจ้าเด็ก ๆ ข้างบ้านน่ะ"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "รูปธรรมดา → เสริมคำนามท้าย",
+      "en": "My brother is always late. -> He's always late, my brother.",
+      "th": "พูดสรรพนามก่อนแล้วค่อยเฉลยคำนามท้ายเพื่อเสริมอารมณ์"
+     }
+    ],
+    "tip_th": "โครงนี้ให้ความรู้สึกเป็นกันเองและมีอารมณ์ร่วม (บ่น เอ็นดู ประชด) ใช้ในบทสนทนาเท่านั้น เขียนทางการห้ามใช้เด็ดขาด",
+    "thai_err": {
+     "wrong": "Is always late, my brother.",
+     "right": "He's always late, my brother.",
+     "why_th": "ประโยคอังกฤษต้องมีประธาน (สรรพนาม) เสมอ จะละไว้ไม่ได้แบบภาษาไทย ต้องมี He นำหน้าก่อน"
+    }
+   },
+   {
+    "name_en": "Presentational 'There's this…'",
+    "name_th": "เปิดเรื่องด้วย There's this… เพื่อแนะนำคน/สิ่งใหม่",
+    "frame": "There's this [noun] who/that [verb phrase]",
+    "slots": [
+     {
+      "t": "There's this",
+      "r": "วลีเปิดเรื่องแบบพูด แนะนำคน/สิ่งที่ผู้ฟังยังไม่รู้จัก"
+     },
+     {
+      "t": "[noun]",
+      "r": "คน/สิ่งที่กำลังจะเล่าถึง (guy, place, app...)"
+     },
+     {
+      "t": "who/that",
+      "r": "คำเชื่อมขยายว่าคน/สิ่งนั้นทำอะไร"
+     },
+     {
+      "t": "[verb phrase]",
+      "r": "รายละเอียดที่ขยายคำนามนั้น"
+     }
+    ],
+    "meaning_th": "ใช้ There's this... เปิดเรื่องแนะนำคนหรือสิ่งที่ผู้ฟังยังไม่รู้จัก ทำให้เรื่องน่าติดตามเหมือนเริ่มเล่านิทาน คำว่า 'this' ที่นี่ไม่ได้ชี้เจาะจง แต่ทำหน้าที่ดึงความสนใจเข้าสู่สิ่งที่จะเล่า เป็นสำนวนพูดล้วน ๆ",
+    "examples": [
+     {
+      "en": "There's this guy who fixes phones near my house.",
+      "th": "มีผู้ชายคนหนึ่งรับซ่อมมือถืออยู่แถวบ้านฉัน"
+     },
+     {
+      "en": "There's this app that tracks your sleep.",
+      "th": "มีแอปตัวหนึ่งที่คอยจับเวลาการนอนของเรา"
+     },
+     {
+      "en": "There's this little cafe that everyone loves.",
+      "th": "มีคาเฟ่เล็ก ๆ ร้านหนึ่งที่ใคร ๆ ก็ชอบ"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "รูปธรรมดา → เปิดเรื่องแบบเล่า",
+      "en": "A guy near my house fixes phones. -> There's this guy who fixes phones.",
+      "th": "เปลี่ยนประโยคบอกข้อมูลเฉย ๆ ให้กลายเป็นการเปิดเรื่องน่าฟัง"
+     }
+    ],
+    "tip_th": "'this' ในโครงนี้ไม่ต้องแปลว่า 'นี้' แต่แปลว่า 'คนหนึ่ง/สิ่งหนึ่ง' ที่กำลังจะเล่า ใช้ในการพูดเท่านั้น เขียนทางการให้ใช้ There is a... แทน",
+    "thai_err": {
+     "wrong": "There's this guy fix phones.",
+     "right": "There's this guy who fixes phones.",
+     "why_th": "ต้องมี who/that เชื่อม และกริยาต้องผัน (fixes) คนไทยมักตัดคำเชื่อมและใช้กริยา base เพราะภาษาไทยไม่มีทั้งสองอย่าง"
+    }
+   }
+  ]
+ },
+ {
+  "id": "locinv",
+  "cat_th": "การสลับประโยคบอกสถานที่/ทิศทาง (Here comes...)",
+  "patterns": [
+   {
+    "name_en": "Here/There + verb + noun subject",
+    "name_th": "Here/There + กริยา + ประธานที่เป็นคำนาม",
+    "frame": "Here comes [noun subject] / There goes [noun subject]",
+    "slots": [
+     {
+      "t": "[noun subject]",
+      "r": "ประธานที่เป็น 'คำนาม' (ไม่ใช่สรรพนาม) เช่น the bus, my last chance — วางไว้ 'หลัง' กริยา"
+     }
+    ],
+    "meaning_th": "ใช้ประกาศว่าสิ่งหนึ่งกำลังมาถึงหรือกำลังจากไปตรงหน้าเรา พูดตอนเห็นเหตุการณ์เกิดสดๆ โครงคือ Here/There + กริยา (comes/goes) + คำนาม สลับที่กับประโยคปกติ เป็นภาษาพูดที่เจ้าของภาษาใช้บ่อยมาก ใช้ present simple เสมอ ('comes' ไม่ใช่ 'is coming')",
+    "examples": [
+     {
+      "en": "Here comes the bus!",
+      "th": "รถเมล์มาแล้ว!"
+     },
+     {
+      "en": "There goes my last chance.",
+      "th": "นั่นแหละ โอกาสสุดท้ายของฉันหลุดลอยไปแล้ว"
+     },
+     {
+      "en": "Here comes the bride.",
+      "th": "เจ้าสาวเดินเข้ามาแล้ว"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "ประโยคปกติ -> แบบสลับ",
+      "en": "The bus is coming -> Here comes the bus",
+      "th": "รถเมล์กำลังมา -> Here comes the bus (เน้น ณ วินาทีที่เห็น)"
+     }
+    ],
+    "tip_th": "จำว่ากริยาต้องเป็น present simple เสมอ: 'Here comes' / 'There goes' อย่าใช้ 'Here is coming' และใช้ตอนเห็นของจริงต่อหน้าเท่านั้น",
+    "thai_err": {
+     "wrong": "Here the bus comes.",
+     "right": "Here comes the bus.",
+     "why_th": "คนไทยเรียงตามภาษาไทย (ที่นี่ + รถเมล์ + มา) แต่พอขึ้นต้นด้วย Here/There กับประธานคำนาม ต้องเอากริยามาก่อนคำนาม"
+    }
+   },
+   {
+    "name_en": "Locative inversion (place phrase + verb + subject)",
+    "name_th": "การสลับเมื่อขึ้นต้นด้วยวลีบอกสถานที่",
+    "frame": "[place phrase] [verb] [subject]",
+    "slots": [
+     {
+      "t": "[place phrase]",
+      "r": "วลีบอกสถานที่ ขึ้นต้นด้วยบุพบท เช่น On the hill, In the box, Beyond the river"
+     },
+     {
+      "t": "[verb]",
+      "r": "กริยาบอกสภาพ/การมีอยู่ วางก่อนประธาน เช่น stood, were, lay, sat"
+     },
+     {
+      "t": "[subject]",
+      "r": "ประธานที่เป็นคำนาม (มักยาว/เป็นข้อมูลใหม่) วางไว้ท้ายสุด"
+     }
+    ],
+    "meaning_th": "ใช้เมื่อขึ้นต้นประโยคด้วยวลีบอกสถานที่ แล้วสลับให้กริยามาก่อนประธาน เพื่อวาดภาพฉากหรือเน้นสิ่งที่อยู่ตรงนั้น เป็นสไตล์เขียนเชิงวรรณกรรม/บรรยาย ทำให้ประโยคดูมีชั้นเชิง (เหมาะกับ writing แบนด์สูง) มักใช้กับกริยาที่ไม่มีกรรม เช่น stand, lie, sit, be",
+    "examples": [
+     {
+      "en": "On the hill stood an old castle.",
+      "th": "บนเนินเขามีปราสาทเก่าตั้งตระหง่านอยู่"
+     },
+     {
+      "en": "In the box were three tiny kittens.",
+      "th": "ในกล่องมีลูกแมวตัวจิ๋วสามตัว"
+     },
+     {
+      "en": "Beyond the river lay a vast forest.",
+      "th": "เลยแม่น้ำออกไปคือผืนป่ากว้างใหญ่"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "ปกติ -> สลับเชิงบรรยาย",
+      "en": "An old castle stood on the hill -> On the hill stood an old castle",
+      "th": "ปราสาทเก่าตั้งอยู่บนเนิน -> On the hill stood an old castle (เน้นฉาก/สถานที่)"
+     }
+    ],
+    "tip_th": "กริยาต้องผันตามประธานที่อยู่ 'ท้ายประโยค' ไม่ใช่ตามวลีสถานที่: In the box WERE three kittens (three kittens เป็นพหูพจน์ จึงใช้ were)",
+    "thai_err": {
+     "wrong": "On the hill an old castle stood.",
+     "right": "On the hill stood an old castle.",
+     "why_th": "ถ้าจะเอาวลีสถานที่ขึ้นต้นเพื่อเน้น ต้องสลับกริยามาก่อนประธานด้วย ไม่งั้นจะไม่ได้อารมณ์บรรยายและฟังไม่เป็นธรรมชาติ"
+    }
+   },
+   {
+    "name_en": "Directional inversion for dramatic effect",
+    "name_th": "การสลับด้วยคำบอกทิศทางเพื่อความดราม่า",
+    "frame": "[direction adverb] [verb] [noun subject]",
+    "slots": [
+     {
+      "t": "[direction adverb]",
+      "r": "คำวิเศษณ์บอกทิศทาง เช่น Down, Up, Away, Off, In, Out"
+     },
+     {
+      "t": "[verb]",
+      "r": "กริยาการเคลื่อนที่ วางก่อนประธาน เช่น came, flew, went, rolled"
+     },
+     {
+      "t": "[noun subject]",
+      "r": "ประธานคำนาม (ไม่ใช่สรรพนาม) วางท้าย"
+     }
+    ],
+    "meaning_th": "ขึ้นต้นด้วยคำบอกทิศทาง (Down, Away, Up...) แล้วสลับกริยามาก่อนประธาน เพื่อสร้างความตื่นเต้น/ฉับพลัน เหมือนกล้องพุ่งไปที่การเคลื่อนไหว ใช้ในเรื่องเล่า นิยาย หรือคำบรรยายที่ต้องการอารมณ์ ใช้กับประธานคำนามเท่านั้น (ถ้าเป็นสรรพนามห้ามสลับ)",
+    "examples": [
+     {
+      "en": "Down came the rain in sheets.",
+      "th": "ฝนกระหน่ำลงมาเป็นสาย"
+     },
+     {
+      "en": "Away flew the birds at the sound.",
+      "th": "ฝูงนกโผบินหนีไปทันทีที่ได้ยินเสียง"
+     },
+     {
+      "en": "Off went the alarm at midnight.",
+      "th": "สัญญาณเตือนดังลั่นขึ้นตอนเที่ยงคืน"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "ปกติ -> สลับดราม่า",
+      "en": "The rain came down -> Down came the rain",
+      "th": "ฝนตกลงมา -> Down came the rain (เน้นจังหวะฉับพลัน)"
+     }
+    ],
+    "tip_th": "ใช้ตอนอยากได้อารมณ์เล่าเรื่องแบบพุ่งแรง อย่าใช้ในงานเขียนทางการหรือวิชาการ เพราะฟังดูเป็นวรรณกรรม",
+    "thai_err": {
+     "wrong": "Down the rain came.",
+     "right": "Down came the rain.",
+     "why_th": "เมื่อขึ้นต้นด้วยคำบอกทิศทางเพื่อเน้น ต้องเอากริยามาก่อนประธานคำนาม ไม่ใช่วางประธานไว้กลางแบบภาษาไทย"
+    }
+   },
+   {
+    "name_en": "Pronoun exception (no inversion)",
+    "name_th": "ข้อยกเว้น: ประธานเป็นสรรพนาม ห้ามสลับ",
+    "frame": "Here [pronoun] [verb] / There [pronoun] [verb]",
+    "slots": [
+     {
+      "t": "[pronoun]",
+      "r": "สรรพนาม เช่น it, he, she, you, they — วางไว้ 'ก่อน' กริยาตามปกติ"
+     },
+     {
+      "t": "[verb]",
+      "r": "กริยา เช่น comes, goes, are — วางไว้หลังสรรพนาม"
+     }
+    ],
+    "meaning_th": "เมื่อประธานเป็นสรรพนาม (it, she, you...) ห้ามสลับ ต้องเรียงปกติ คือสรรพนามมาก่อนกริยา นี่คือข้อยกเว้นสำคัญของ Here/There inversion เป็นภาษาพูดที่ใช้บ่อยมาก เช่นตอนส่งของให้ใคร หรือชี้ให้ดูคน",
+    "examples": [
+     {
+      "en": "Here it comes!",
+      "th": "มันมาแล้ว! (เช่น รถ/คลื่น ที่พูดถึงอยู่)"
+     },
+     {
+      "en": "Here you are — that's your coffee.",
+      "th": "นี่ครับ กาแฟของคุณ"
+     },
+     {
+      "en": "There she goes again, complaining.",
+      "th": "นั่นไง เธอเริ่มบ่นอีกแล้ว"
+     }
+    ],
+    "transform": [
+     {
+      "label_th": "คำนาม (สลับ) -> สรรพนาม (ไม่สลับ)",
+      "en": "Here comes the bus -> Here it comes",
+      "th": "Here comes the bus (คำนาม สลับ) -> Here it comes (สรรพนาม ไม่สลับ)"
+     }
+    ],
+    "tip_th": "กฎง่ายๆ: คำนาม = สลับ (Here comes the bus), สรรพนาม = ไม่สลับ (Here it comes) และ 'Here you are' เป็นวลีติดปากตอนยื่นของให้คน",
+    "thai_err": {
+     "wrong": "Here comes it.",
+     "right": "Here it comes.",
+     "why_th": "คนไทยเผลอสลับทุกกรณี แต่ถ้าประธานเป็นสรรพนาม (it, she, he) ต้องเรียงปกติเสมอ ห้ามเอากริยาขึ้นก่อน"
     }
    }
   ]
