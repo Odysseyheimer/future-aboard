@@ -1236,6 +1236,11 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 .st2-mean { font-size: 13.5px; color: var(--text); line-height: 1.6; background: var(--accent-soft); color: var(--accent-ink);
   border-radius: 12px; padding: 12px 14px; margin-top: 12px; }
 
+/* "ใช้ตอนไหน" real-life usage box */
+.st2-use { border: 1.5px solid var(--accent); border-radius: 12px; padding: 12px 14px; margin-top: 12px; background: var(--surface); box-shadow: var(--shadow); }
+.st2-use-h { font-size: 12.5px; font-weight: 900; color: var(--accent); margin-bottom: 6px; }
+.st2-use-b { font-size: 13.5px; color: var(--text); line-height: 1.65; }
+
 .st2-sec { font-size: 13px; font-weight: 900; color: var(--accent); margin: 18px 2px 9px; }
 .st2-ex { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 11px 13px; margin-bottom: 8px; box-shadow: var(--shadow); }
 .st2-ex-en { font-size: 15px; font-weight: 700; line-height: 1.5; }
@@ -7408,6 +7413,7 @@ PT.structure = (function () {
       h.push('</div>');
     }
     if (p.meaning_th) h.push('<div class="st2-mean">' + esc(p.meaning_th) + '</div>');
+    if (p.use_th) h.push('<div class="st2-use"><div class="st2-use-h">💬 ใช้ตอนไหน · เอาไปใช้ยังไง</div><div class="st2-use-b">' + esc(p.use_th) + '</div></div>');
     if (p.examples && p.examples.length) {
       h.push('<div class="st2-sec">ตัวอย่าง</div>');
       for (var e = 0; e < p.examples.length; e++) {
