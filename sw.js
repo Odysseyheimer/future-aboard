@@ -1,122 +1,115 @@
 /* Pocket Tutor v2 - service worker (module "pwa")
-   ES5-safe. Precaches the app shell + deck data, then serves:
-     - cache-first for same-origin data/*.json, icons, and the manifest
-     - stale-while-revalidate for HTML / navigation requests
-   Bump CACHE below whenever precached assets change to invalidate old caches.
+   ES5-safe.
+   Strategy:
+     - PRECACHE only the tiny app shell (never the big JSON decks) so install
+       cannot be wedged by a 10MB atomic cache.addAll on a slow connection.
+     - Warm the data decks best-effort AFTER activate (each file individually,
+       failures ignored) so offline still works without blocking updates.
+     - NETWORK-FIRST for navigation/HTML so an online user always gets the newest
+       app.html on the first open (fixes the "reopen twice to see updates" bug).
+     - CACHE-FIRST for data/*.json + icons + manifest (they are versioned by the
+       CACHE name; a deploy bumps CACHE and activate() drops the old cache).
+   Bump CACHE below on every deploy so phones refetch.
 */
 
 /* eslint-disable no-var */
-var CACHE = "pocket-tutor-v82";
+var CACHE = "pocket-tutor-v83";
 
-var PRECACHE_URLS = [
+// tiny, must-always-work shell — safe to precache atomically
+var SHELL_URLS = [
   "./",
   "./index.html",
   "./app.html",
   "./manifest.webmanifest",
   "./icon-192.png",
-  "./icon-512.png",
-  "./data/oxford.json",
-  "./data/awl.json",
-  "./data/colloc.json",
-  "./data/syn.json",
-  "./data/sentences.json",
-  "./data/pv.json",
-  "./data/idiom.json",
-  "./data/topic.json",
-  "./data/knowledge.json",
-  "./data/conversations.json",
-  "./data/wordchoice.json",
-  "./data/exam.json",
-  "./data/reading.json",
-  "./data/bank.json",
-  "./data/fix.json",
-  "./data/stories.json"
+  "./icon-512.png"
 ];
 
-// ---- install: precache the app shell + data ----
+// bigger assets: cached lazily on first use, and warmed best-effort after activate
+var DATA_URLS = [
+  "./data/oxford.json", "./data/awl.json", "./data/colloc.json", "./data/syn.json",
+  "./data/pv.json", "./data/idiom.json", "./data/topic.json", "./data/knowledge.json",
+  "./data/sentences.json", "./data/conversations.json", "./data/wordchoice.json",
+  "./data/exam.json", "./data/reading.json", "./data/bank.json", "./data/fix.json",
+  "./data/stories.json", "./data/structure.json"
+];
+
+// ---- install: precache ONLY the shell (small + reliable). Do NOT skipWaiting
+// automatically — wait until the page tells us to (so we never swap assets
+// under a running quiz). ----
 self.addEventListener("install", function (event) {
-  event.waitUntil(
-    caches.open(CACHE).then(function (cache) {
-      return cache.addAll(PRECACHE_URLS);
-    }).then(function () {
-      return self.skipWaiting();
-    })
-  );
+  event.waitUntil(caches.open(CACHE).then(function (cache) { return cache.addAll(SHELL_URLS); }));
 });
 
-// ---- activate: drop any caches from older versions ----
+// ---- activate: drop old caches, take control, then warm data decks off the
+// critical path (individually; a failure of one must not break the others). ----
 self.addEventListener("activate", function (event) {
   event.waitUntil(
     caches.keys().then(function (names) {
-      return Promise.all(
-        names.map(function (name) {
-          if (name !== CACHE) {
-            return caches.delete(name);
-          }
-          return undefined;
-        })
-      );
+      return Promise.all(names.map(function (name) { return name !== CACHE ? caches.delete(name) : undefined; }));
     }).then(function () {
       return self.clients.claim();
+    }).then(function () {
+      warmData(); // fire-and-forget; not awaited so activation stays fast
     })
   );
 });
 
-// ---- helpers ----
+function warmData() {
+  caches.open(CACHE).then(function (cache) {
+    for (var i = 0; i < DATA_URLS.length; i++) {
+      // best-effort: ignore per-file failures (offline, slow, missing)
+      cache.add(DATA_URLS[i]).catch(function () {});
+    }
+  }).catch(function () {});
+}
 
+// ---- let the page trigger an immediate takeover (the "tap to update" banner) ----
+self.addEventListener("message", function (event) {
+  if (event.data && event.data.type === "SKIP_WAITING") { self.skipWaiting(); }
+  if (event.data && event.data.type === "GET_VERSION" && event.source) {
+    event.source.postMessage({ type: "VERSION", version: CACHE });
+  }
+});
+
+// ---- helpers ----
 function isNavigationRequest(request) {
   return request.mode === "navigate" ||
-    (request.method === "GET" &&
-      request.headers.get("accept") &&
+    (request.method === "GET" && request.headers.get("accept") &&
       request.headers.get("accept").indexOf("text/html") !== -1);
 }
 
 function isCacheFirstAsset(url) {
-  // same-origin data/*.json, icons, manifest
-  if (url.pathname.indexOf("/data/") !== -1 && url.pathname.indexOf(".json") !== -1) {
-    return true;
-  }
-  if (url.pathname.indexOf("icon-192.png") !== -1 || url.pathname.indexOf("icon-512.png") !== -1) {
-    return true;
-  }
-  if (url.pathname.indexOf("manifest.webmanifest") !== -1) {
-    return true;
-  }
+  if (url.pathname.indexOf("/data/") !== -1 && url.pathname.indexOf(".json") !== -1) return true;
+  if (url.pathname.indexOf("icon-192.png") !== -1 || url.pathname.indexOf("icon-512.png") !== -1) return true;
+  if (url.pathname.indexOf("manifest.webmanifest") !== -1) return true;
   return false;
 }
 
-// cache-first: serve from cache immediately if present, else fetch + store
-function cacheFirst(request) {
-  return caches.open(CACHE).then(function (cache) {
-    return cache.match(request).then(function (cached) {
-      if (cached) {
-        return cached;
-      }
-      return fetch(request).then(function (resp) {
-        if (resp && resp.ok) {
-          cache.put(request, resp.clone());
-        }
-        return resp;
-      }).catch(function () {
-        return cached; // undefined - nothing we can do offline
-      });
+// network-first: fresh from network, fall back to cache offline
+function networkFirst(request) {
+  return fetch(request).then(function (resp) {
+    if (resp && resp.ok) {
+      var clone = resp.clone();
+      caches.open(CACHE).then(function (cache) { cache.put(request, clone); }).catch(function () {});
+    }
+    return resp;
+  }).catch(function () {
+    return caches.match(request).then(function (cached) {
+      return cached || caches.match("./app.html") || caches.match("./");
     });
   });
 }
 
-// stale-while-revalidate: serve cache immediately, refresh in background
-function staleWhileRevalidate(request) {
+// cache-first: serve from cache immediately, else fetch + store
+function cacheFirst(request) {
   return caches.open(CACHE).then(function (cache) {
     return cache.match(request).then(function (cached) {
-      var fetchPromise = fetch(request).then(function (resp) {
-        if (resp && resp.ok) {
-          cache.put(request, resp.clone());
-        }
+      if (cached) return cached;
+      return fetch(request).then(function (resp) {
+        if (resp && resp.ok) cache.put(request, resp.clone());
         return resp;
-      }).catch(function () {
-        return cached;
-      });
-      return cached || fetchPromise;
+      }).catch(function () { return cached; });
     });
   });
 }
@@ -124,28 +117,13 @@ function staleWhileRevalidate(request) {
 // ---- fetch ----
 self.addEventListener("fetch", function (event) {
   var request = event.request;
-
-  if (request.method !== "GET") {
-    return; // let non-GET pass through to the network untouched
-  }
-
+  if (request.method !== "GET") return;
   var url = new URL(request.url);
+  if (url.origin !== self.location.origin) return;
 
-  if (url.origin !== self.location.origin) {
-    return; // don't intercept cross-origin requests
-  }
+  if (isNavigationRequest(request)) { event.respondWith(networkFirst(request)); return; }
+  if (isCacheFirstAsset(url)) { event.respondWith(cacheFirst(request)); return; }
 
-  if (isNavigationRequest(request)) {
-    event.respondWith(staleWhileRevalidate(request));
-    return;
-  }
-
-  if (isCacheFirstAsset(url)) {
-    event.respondWith(cacheFirst(request));
-    return;
-  }
-
-  // default: try cache, fall back to network (also covers app.html script/css assets)
   event.respondWith(
     caches.match(request).then(function (cached) {
       return cached || fetch(request).catch(function () { return cached; });

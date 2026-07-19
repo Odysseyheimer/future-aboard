@@ -1584,6 +1584,14 @@ details.pl-day[open] .pl-cv{transform:rotate(90deg)}
 .hb-struct-b em { display: block; font-style: normal; font-size: 11.5px; opacity: .85; margin-top: 2px; }
 .hb-struct-go { flex: 0 0 auto; font-size: 13px; font-weight: 800; }
 
+/* backup reminder nudge */
+.hb-bknudge { display: block; width: 100%; text-align: left; margin: 12px 2px 0; font-family: var(--font);
+  font-size: 13px; font-weight: 700; color: #b06a12; background: #fbebd3; border: 1px solid #e0942f;
+  border-radius: 12px; padding: 11px 13px; cursor: pointer; }
+.hb-bknudge:active { transform: scale(.99); }
+@media (prefers-color-scheme: dark) { .hb-bknudge { color: #f0a94a; background: #3a2c17; border-color: #f0a94a; } }
+:root[data-theme="dark"] .hb-bknudge { color: #f0a94a; background: #3a2c17; border-color: #f0a94a; }
+
 /* a11y.css */
 /* PT.a11y — accessibility CSS: focus rings, touch targets, reduced motion.
    Prefixed with ".a-" per module convention. Uses only the frozen
@@ -3134,8 +3142,18 @@ PT.bus=(function(){var m={};return{on:function(e,f){(m[e]=m[e]||[]).push(f);},em
 /* --- frozen helpers --- */
 function esc(s){return (s==null?"":""+s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
 function hasK(o,k){return o&&Object.prototype.hasOwnProperty.call(o,k);}
-var store={m:{},get:function(k){try{return localStorage.getItem(k);}catch(e){return hasK(this.m,k)?this.m[k]:null;}},
- set:function(k,v){this.m[k]=v;try{localStorage.setItem(k,v);}catch(e){}}};
+/* store: localStorage with an in-memory shadow. If a write FAILS (quota full /
+   iOS locked), we must NOT stay silent — that means progress isn't persisting.
+   Flag it once and show a sticky warning so the user can back up before losing data. */
+var store={m:{},writeErr:false,
+ get:function(k){try{return localStorage.getItem(k);}catch(e){return hasK(this.m,k)?this.m[k]:null;}},
+ set:function(k,v){this.m[k]=v;try{localStorage.setItem(k,v);}catch(e){if(!this.writeErr){this.writeErr=true;try{saveWarn();}catch(_){}}}}};
+function saveWarn(){if(document.getElementById("pt-save-warn"))return;var b=document.createElement("div");b.id="pt-save-warn";
+ b.setAttribute("style","position:fixed;left:12px;right:12px;top:10px;z-index:9999;background:#d9534f;color:#fff;border-radius:12px;padding:11px 14px;font:700 13px/1.4 -apple-system,sans-serif;box-shadow:0 6px 20px rgba(0,0,0,.3)");
+ b.innerHTML='⚠️ เซฟข้อมูลไม่ได้ (พื้นที่เต็ม) — รีบสำรองข้อมูลด่วน แล้วเคลียร์พื้นที่เครื่อง <button id="pt-save-x" style="float:right;background:transparent;border:none;color:#fff;font-size:16px;cursor:pointer">×</button>';
+ document.body.appendChild(b);var x=document.getElementById("pt-save-x");if(x)x.onclick=function(){var e=document.getElementById("pt-save-warn");if(e&&e.parentNode)e.parentNode.removeChild(e);};}
+/* ask the browser to keep our data (reduces iOS eviction of an installed PWA) */
+try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist();}catch(e){}
 /* TTS: iOS ignores utterance.lang and uses the phone's DEFAULT voice (often Thai),
    which reads English with a Thai accent. Fix: explicitly pick an English voice. */
 var _enVoice=null;
@@ -3202,7 +3220,10 @@ PT.backup=(function(){
  function dump(){var o={},i,k;for(i=0;i<localStorage.length;i++){k=localStorage.key(i);o[k]=localStorage.getItem(k);}return o;}
  return {
   exportStr:function(){var d;try{d=dump();}catch(e){d={};}return JSON.stringify({app:"pocket-tutor",v:1,ts:new Date().toISOString(),data:d});},
-  restore:function(str){var obj;try{obj=JSON.parse(str);}catch(e){return null;}var d=obj&&obj.data;if(!d||typeof d!=="object")return null;var k,n=0;for(k in d){if(Object.prototype.hasOwnProperty.call(d,k)){try{localStorage.setItem(k,""+d[k]);n++;}catch(e){}}}return n;}
+  restore:function(str){var obj;try{obj=JSON.parse(str);}catch(e){return null;}var d=obj&&obj.data;if(!d||typeof d!=="object")return null;var k,n=0;for(k in d){if(Object.prototype.hasOwnProperty.call(d,k)){try{localStorage.setItem(k,""+d[k]);n++;}catch(e){}}}return n;},
+  markSaved:function(){try{store.set("pt_last_backup",""+Date.now());}catch(e){}},
+  lastTs:function(){var t=store.get("pt_last_backup");return t?parseInt(t,10):0;},
+  daysSince:function(){var t=this.lastTs();return t?Math.floor((Date.now()-t)/86400000):-1;}
  };
 })();
 var DECKS={oxford:{name:"Oxford 3000 / 5000",groups:["A1","A2","B1","B2","C1"],xlab:""},
@@ -3251,12 +3272,24 @@ PT.stats={render:function(v){var now=Date.now(),know=0,learn=0,k;
   '<textarea class="s-bk-ta" id="s-bk-ta" spellcheck="false" style="display:none" placeholder="วางข้อความสำรองที่นี่..."></textarea>'+
   '<div class="s-bk-row2" id="s-bk-improw" style="display:none"><input type="file" id="s-bk-file" accept="application/json,.json,.txt">'+
   '<button class="s-bk-btn s-bk-go" id="s-bk-do">กู้คืนเลย</button></div>'+
-  '<div class="s-bk-msg" id="s-bk-msg"></div></div>';
+  '<div class="s-bk-msg" id="s-bk-msg"></div>'+
+  '<div class="s-bk-stat" id="s-bk-stat"></div></div>';
  v.innerHTML=h;if(window.PT&&PT.miss&&PT.miss.wire)try{PT.miss.wire(v);}catch(e){}
+ (function(){var el=document.getElementById("s-bk-stat");if(!el)return;var ds=-1;try{ds=PT.backup.daysSince();}catch(e){}
+  var bk=(ds<0)?"⚠️ ยังไม่เคยสำรองข้อมูล":(ds===0?"✓ สำรองล่าสุดวันนี้":(ds+" วันก่อนสำรองล่าสุด"+(ds>=14?" — ควรสำรองใหม่":"")));
+  el.textContent=bk;el.style.color=(ds<0||ds>=14)?"#d9534f":"var(--muted)";
+  try{if(PT.pwa&&PT.pwa.version)PT.pwa.version(function(vv){if(vv)el.textContent=bk+" · เวอร์ชัน "+vv.replace("pocket-tutor-","");});}catch(e){}})();
  if(window.PT&&PT.plan&&PT.plan.wire)try{PT.plan.wire(v);}catch(e){}
  document.getElementById("s-rst").onclick=function(){if(confirm("ล้างความคืบหน้าของคลังนี้?")){S.rec={};PT.srs.save(S.deck,S.rec);S.workingDirty=true;render();}};
  (function(){var exp=document.getElementById("s-bk-exp"),imp=document.getElementById("s-bk-imp"),ta=document.getElementById("s-bk-ta"),msg=document.getElementById("s-bk-msg"),improw=document.getElementById("s-bk-improw"),file=document.getElementById("s-bk-file"),doimp=document.getElementById("s-bk-do");
-  if(exp)exp.onclick=function(){var s=PT.backup.exportStr();ta.style.display="block";ta.value=s;improw.style.display="none";try{ta.focus();ta.select();}catch(e){}var cp=false;try{if(document.execCommand)cp=document.execCommand("copy");}catch(e){}try{var bl=new Blob([s],{type:"application/json"}),u=URL.createObjectURL(bl),a=document.createElement("a");a.href=u;a.download="pocket-tutor-backup.json";document.body.appendChild(a);a.click();setTimeout(function(){document.body.removeChild(a);URL.revokeObjectURL(u);},200);}catch(e){}msg.textContent=(cp?"คัดลอกแล้ว + ":"")+"บันทึกไฟล์ pocket-tutor-backup.json — เก็บไว้ที่ปลอดภัย (เช่น ส่งเข้าแชตตัวเอง)";};
+  if(exp)exp.onclick=function(){var s=PT.backup.exportStr();try{PT.backup.markSaved();}catch(e){}
+   var fn="pocket-tutor-backup-"+new Date().toISOString().slice(0,10)+".json";
+   ta.style.display="block";ta.value=s;improw.style.display="none";try{ta.focus();ta.select();}catch(e){}
+   var cp=false;try{if(document.execCommand)cp=document.execCommand("copy");}catch(e){}
+   /* iOS: prefer the Share Sheet so the file leaves the device (iCloud/email/chat) */
+   var shared=false;try{if(navigator.share&&window.File){var f=new File([s],fn,{type:"application/json"});if(!navigator.canShare||navigator.canShare({files:[f]})){navigator.share({files:[f],title:"Pocket Tutor backup"}).catch(function(){});shared=true;}}}catch(e){}
+   if(!shared){try{var bl=new Blob([s],{type:"application/json"}),u=URL.createObjectURL(bl),a=document.createElement("a");a.href=u;a.download=fn;document.body.appendChild(a);a.click();setTimeout(function(){document.body.removeChild(a);URL.revokeObjectURL(u);},200);}catch(e){}}
+   msg.textContent=(shared?"เลือกที่เก็บ (เช่น iCloud/อีเมลตัวเอง) — ":(cp?"คัดลอกแล้ว + ":""))+"เก็บไฟล์ "+fn+" ไว้ที่ปลอดภัยนอกเครื่อง";};
   if(imp)imp.onclick=function(){ta.style.display="block";ta.value="";improw.style.display="flex";msg.textContent="วางข้อความสำรอง หรือเลือกไฟล์ แล้วกด กู้คืนเลย";try{ta.focus();}catch(e){}};
   if(file)file.onchange=function(e){var f=e.target.files&&e.target.files[0];if(!f)return;var rd=new FileReader();rd.onload=function(){ta.value=rd.result;};rd.readAsText(f);};
   if(doimp)doimp.onclick=function(){var s=ta.value;if(!s){msg.textContent="ยังไม่มีข้อมูลให้กู้คืน";return;}if(!confirm("กู้คืนข้อมูลจากไฟล์สำรอง? ข้อมูลปัจจุบันจะถูกทับ"))return;var n=PT.backup.restore(s);if(n===null){msg.textContent="ไฟล์สำรองไม่ถูกต้อง ลองตรวจข้อความอีกครั้ง";return;}msg.textContent="กู้คืน "+n+" รายการแล้ว กำลังโหลดใหม่...";setTimeout(function(){location.reload();},700);};
@@ -8150,6 +8183,9 @@ PT.hub = (function () {
       var wf = Math.min(stk.current || 0, 7), wd = '', wi;
       for (wi = 0; wi < 7; wi++) wd += '<span class="hb2-dot' + (wi < wf ? ' on' : '') + '"></span>';
       h.push('<div class="hb2-wk"><span>สัปดาห์นี้</span><div class="hb2-dots">' + wd + '</div><span class="hb2-wkn">' + (stk.current || 0) + ' วันติด</span></div>');
+      var _bkd = -1; try { if (window.PT && PT.backup && PT.backup.daysSince) _bkd = PT.backup.daysSince(); } catch (e) {}
+      if (_bkd < 0 || _bkd >= 14) h.push('<button class="hb-bknudge" data-hb-backup="1">💾 ' +
+        (_bkd < 0 ? 'ยังไม่เคยสำรองข้อมูล — แตะเพื่อสำรอง (กันข้อมูลหาย)' : ('สำรองข้อมูลล่าสุด ' + _bkd + ' วันก่อน — แตะเพื่อสำรองใหม่')) + '</button>');
       if (plan && plan.banner) h.push('<div class="hb-banner hb-' + plan.banner.c + '">' + esc(plan.banner.t) + '</div>');
       if (allMust) {
         if (!st.celebrated) { st.celebrated = 1; saveState(st); try { if (PT.plan && PT.plan.setDone) PT.plan.setDone(st.day); } catch (e) {} }
@@ -8224,6 +8260,9 @@ PT.hub = (function () {
         if (window.PT && PT.structure && PT.structure.openDay) PT.structure.openDay(st.day || 1);
         try { syncPill(); } catch (e) {}
       };
+    });
+    [].forEach.call(v.querySelectorAll("[data-hb-backup]"), function (b) {
+      b.onclick = function () { _hubBack = false; goMode("stats"); };
     });
     [].forEach.call(v.querySelectorAll("[data-hb-bonus]"), function (b) {
       b.onclick = function () {
@@ -8544,42 +8583,81 @@ PT.hub = (function () {
 
 /* ===== module: pwa ===== */
 /* Pocket Tutor v2 - module "pwa" (pwa-offline)
-   Owns registration of the offline service worker. ES5-safe, no external libs.
-   Exposes: PT.pwa.register()
+   Registers the offline service worker AND surfaces updates to the user with a
+   one-tap "new version available" banner, so they never have to close/reopen the
+   app twice to get new content. ES5-safe, no external libs.
+   Exposes: PT.pwa.register(), PT.pwa.version(cb)
 */
 (function () {
   "use strict";
   window.PT = window.PT || {};
+  var _reg = null, _reloading = false;
+
+  function showUpdateBanner(waitingWorker) {
+    if (document.getElementById("pt-update-bar")) return;
+    var bar = document.createElement("div");
+    bar.id = "pt-update-bar";
+    bar.setAttribute("style",
+      "position:fixed;left:12px;right:12px;bottom:74px;z-index:9999;" +
+      "display:flex;align-items:center;gap:10px;" +
+      "background:#e0942f;color:#fff;border-radius:14px;padding:12px 14px;" +
+      "font:600 14px/1.35 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;" +
+      "box-shadow:0 6px 20px rgba(0,0,0,.28);");
+    bar.innerHTML =
+      '<span style="flex:1">✨ มีเนื้อหาใหม่พร้อมแล้ว</span>' +
+      '<button id="pt-update-go" style="flex:0 0 auto;background:#fff;color:#b06a12;border:none;' +
+      'border-radius:999px;padding:8px 14px;font:800 13px sans-serif;cursor:pointer">อัปเดต</button>' +
+      '<button id="pt-update-x" aria-label="ปิด" style="flex:0 0 auto;background:transparent;color:#fff;' +
+      'border:none;font-size:18px;line-height:1;cursor:pointer;padding:4px">×</button>';
+    document.body.appendChild(bar);
+    document.getElementById("pt-update-go").onclick = function () {
+      try { if (waitingWorker) waitingWorker.postMessage({ type: "SKIP_WAITING" }); } catch (e) {}
+      // fallback: navigation is network-first now, so a plain reload gets fresh HTML too
+      setTimeout(function () { if (!_reloading) { _reloading = true; window.location.reload(); } }, 400);
+    };
+    document.getElementById("pt-update-x").onclick = function () {
+      var el = document.getElementById("pt-update-bar"); if (el && el.parentNode) el.parentNode.removeChild(el);
+    };
+  }
+
+  function watch(reg) {
+    _reg = reg;
+    if (reg.waiting && navigator.serviceWorker.controller) showUpdateBanner(reg.waiting);
+    reg.addEventListener("updatefound", function () {
+      var nw = reg.installing;
+      if (!nw) return;
+      nw.addEventListener("statechange", function () {
+        if (nw.state === "installed" && navigator.serviceWorker.controller) showUpdateBanner(nw);
+      });
+    });
+  }
 
   PT.pwa = {
-    // Registers ./sw.js when the browser supports Service Workers.
-    // Safe to call multiple times; no-ops silently on unsupported browsers
-    // (older iOS Safari, privacy modes, file:// origins, etc).
     register: function () {
-      if (!("serviceWorker" in navigator)) {
-        return;
-      }
-      // Service workers require http/https (or localhost); guard file:// too.
-      if (window.location && window.location.protocol === "file:") {
-        return;
-      }
+      if (!("serviceWorker" in navigator)) return;
+      if (window.location && window.location.protocol === "file:") return;
+      navigator.serviceWorker.addEventListener("controllerchange", function () {
+        if (_reloading) return; _reloading = true; window.location.reload();
+      });
       window.addEventListener("load", function () {
         try {
-          navigator.serviceWorker.register("./sw.js").then(
-            function (reg) {
-              // Optional: poke for updates once per load.
-              if (reg && typeof reg.update === "function") {
-                try { reg.update(); } catch (eUpd) { /* ignore */ }
-              }
-            },
-            function () {
-              /* registration rejected - offline support just unavailable */
-            }
-          );
-        } catch (e) {
-          /* never let PWA setup break the app */
-        }
+          navigator.serviceWorker.register("./sw.js").then(function (reg) {
+            watch(reg);
+            try { reg.update(); } catch (e) {}
+            document.addEventListener("visibilitychange", function () {
+              if (!document.hidden && _reg) { try { _reg.update(); } catch (e) {} }
+            });
+          }, function () { /* registration rejected - offline just unavailable */ });
+        } catch (e) { /* never let PWA setup break the app */ }
       });
+    },
+    version: function (cb) {
+      try {
+        if (!navigator.serviceWorker || !navigator.serviceWorker.controller) { cb(""); return; }
+        var ch = new MessageChannel();
+        ch.port1.onmessage = function (e) { cb((e.data && e.data.version) || ""); };
+        navigator.serviceWorker.controller.postMessage({ type: "GET_VERSION" }, [ch.port2]);
+      } catch (e) { cb(""); }
     }
   };
 })();
