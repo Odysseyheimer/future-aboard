@@ -1268,6 +1268,24 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 .st2-o { color: var(--know); font-weight: 900; }
 .st2-err-w { font-size: 12.5px; color: var(--muted); margin-top: 7px; line-height: 1.55; border-top: 1px solid var(--border); padding-top: 7px; }
 
+/* collapsible conjugation table (forms) */
+.st2-forms-tog { display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%;
+  text-align: left; font-family: var(--font); font-size: 13.5px; font-weight: 800; color: var(--accent);
+  background: var(--surface); border: 1px solid var(--accent); border-radius: 12px; padding: 12px 14px;
+  margin-top: 12px; cursor: pointer; box-shadow: var(--shadow); }
+.st2-forms-tog:active { transform: scale(.99); }
+.st2-ft-ar { flex: 0 0 auto; font-size: 12px; }
+.st2-forms { background: var(--surface); border: 1px solid var(--border); border-top: none;
+  border-radius: 0 0 12px 12px; margin: -4px 2px 0; padding: 12px 14px 14px; box-shadow: var(--shadow); }
+.st2-fnote { font-size: 12.5px; color: var(--text); background: var(--accent-soft); color: var(--accent-ink);
+  border-radius: 10px; padding: 9px 11px; line-height: 1.55; }
+.st2-fsec { font-size: 12px; font-weight: 900; color: var(--accent); margin: 13px 0 7px; }
+.st2-frow { display: flex; gap: 10px; align-items: baseline; padding: 6px 2px; border-top: 1px solid var(--border); }
+.st2-frow:first-of-type { border-top: none; }
+.st2-fl { flex: 0 0 auto; min-width: 52px; font-size: 13px; font-weight: 800; color: var(--accent); }
+.st2-fx { flex: 1; font-size: 14px; color: var(--text); line-height: 1.5; }
+.st2-fnoun { font-size: 12px; color: var(--muted); background: var(--surface2); border-radius: 9px; padding: 9px 11px; margin-top: 11px; line-height: 1.55; }
+
 /* practice entry button */
 .st2-practice-btn { display: block; width: 100%; font-family: var(--font); font-size: 15px; font-weight: 800;
   color: var(--accent-ink); background: var(--accent); border: none; border-radius: 14px; padding: 14px;
@@ -7502,6 +7520,12 @@ PT.structure = (function () {
     });
   }
 
+  // one row of the conjugation table: label (pronoun/tense) -> sentence + 🔊
+  function formRow(label, ex) {
+    return '<div class="st2-frow"><span class="st2-fl">' + esc(label) + '</span>' +
+      '<span class="st2-fx">' + esc(ex) + ' <button type="button" class="st2-spk" data-say="' + esc(ex) + '">🔊</button></span></div>';
+  }
+
   function frameHtml(fr) {
     var parts = String(fr).split(/(\[[^\]]*\])/), h = "", i;
     for (i = 0; i < parts.length; i++) {
@@ -7525,6 +7549,22 @@ PT.structure = (function () {
     }
     if (p.meaning_th) h.push('<div class="st2-mean">' + esc(p.meaning_th) + '</div>');
     if (p.use_th) h.push('<div class="st2-use"><div class="st2-use-h">💬 ใช้ตอนไหน · เอาไปใช้ยังไง</div><div class="st2-use-b">' + esc(p.use_th) + '</div></div>');
+    if (p.forms) {
+      var f = p.forms;
+      h.push('<button type="button" class="st2-forms-tog" data-forms-tog="1">🔄 ดูรูปแบบประโยค (ผัน I/you/he… · อดีต/ปัจจุบัน/อนาคต) <span class="st2-ft-ar">▾</span></button>');
+      h.push('<div class="st2-forms" style="display:none">');
+      if (f.note_th) h.push('<div class="st2-fnote">' + esc(f.note_th) + '</div>');
+      if (f.pron && f.pron.length) {
+        h.push('<div class="st2-fsec">ผันตามประธาน</div>');
+        for (var pi = 0; pi < f.pron.length; pi++) h.push(formRow(f.pron[pi].p, f.pron[pi].ex));
+      }
+      if (f.noun_th) h.push('<div class="st2-fnoun">📝 ' + esc(f.noun_th) + '</div>');
+      if (f.tense && f.tense.length) {
+        h.push('<div class="st2-fsec">ผันตามกาล (เวลา)</div>');
+        for (var ti = 0; ti < f.tense.length; ti++) h.push(formRow(f.tense[ti].t, f.tense[ti].ex));
+      }
+      h.push('</div>');
+    }
     if (p.examples && p.examples.length) {
       h.push('<div class="st2-sec">ตัวอย่าง</div>');
       for (var e = 0; e < p.examples.length; e++) {
@@ -7555,6 +7595,15 @@ PT.structure = (function () {
     h.push('</div>');
     v.innerHTML = h.join("");
     document.getElementById("st-pback").onclick = function () { pat = -1; render(v); };
+    var ftog = v.querySelector("[data-forms-tog]");
+    if (ftog) ftog.onclick = function () {
+      var panel = v.querySelector(".st2-forms");
+      if (!panel) return;
+      var open = panel.style.display !== "none";
+      panel.style.display = open ? "none" : "block";
+      var ar = ftog.querySelector(".st2-ft-ar");
+      if (ar) ar.textContent = open ? "▾" : "▴";
+    };
     wireSpeak(v);
   }
 
