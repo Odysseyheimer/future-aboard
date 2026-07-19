@@ -3154,6 +3154,33 @@ function saveWarn(){if(document.getElementById("pt-save-warn"))return;var b=docu
  document.body.appendChild(b);var x=document.getElementById("pt-save-x");if(x)x.onclick=function(){var e=document.getElementById("pt-save-warn");if(e&&e.parentNode)e.parentNode.removeChild(e);};}
 /* ask the browser to keep our data (reduces iOS eviction of an installed PWA) */
 try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist();}catch(e){}
+/* one-time first-run guide: the key message is "just follow the วันนี้ tab" */
+function onboard(){
+ if(store.get("pt_onboarded"))return;
+ var STEPS=[
+  {i:"👋",t:"ยินดีต้อนรับสู่ Pocket Tutor",d:"แอปติว IELTS ส่วนตัวของคุณ — คำศัพท์ · ไวยากรณ์ · อ่าน · เขียน · พูด ครบในที่เดียว"},
+  {i:"🎯",t:"ทุกวันเริ่มที่แท็บ “วันนี้”",d:"มันจะบอกทุกอย่างที่ต้องทำของวันนั้น ทำตามขั้นตอนไปเรื่อยๆ แค่นั้นพอ ไม่ต้องกดครบทุกอย่างในแอป"},
+  {i:"📚",t:"แท็บอื่นไว้เสริม",d:"คลัง · ฝึก · สอบ — เปิดตอนมีเวลาว่างอยากฝึกเพิ่ม ไม่ใช่สิ่งที่ต้องทำทุกวัน"},
+  {i:"💾",t:"อย่าลืมสำรองข้อมูล",d:"ความคืบหน้าเก็บในเครื่องนี้เท่านั้น สำรองข้อมูลเป็นระยะ (แอปจะเตือนให้) กันหายเวลาเปลี่ยนเครื่อง"}
+ ];
+ var idx=0,ov=document.createElement("div");ov.id="pt-onboard";
+ ov.setAttribute("style","position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;padding:24px");
+ ov.innerHTML='<div id="pt-ob-card" style="background:var(--surface,#fff);color:var(--text,#111);max-width:340px;width:100%;border-radius:20px;padding:26px 22px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.4);font-family:var(--font,-apple-system,sans-serif)"></div>';
+ document.body.appendChild(ov);
+ function dots(){var h="",i;for(i=0;i<STEPS.length;i++)h+='<span style="width:8px;height:8px;border-radius:50%;background:'+(i===idx?"var(--accent,#e0942f)":"var(--border,#ccc)")+'"></span>';return h;}
+ function fin(){store.set("pt_onboarded","1");if(ov.parentNode)ov.parentNode.removeChild(ov);}
+ function draw(){var s=STEPS[idx],last=idx===STEPS.length-1;
+  document.getElementById("pt-ob-card").innerHTML=
+   '<div style="font-size:46px">'+s.i+'</div>'+
+   '<div style="font-size:19px;font-weight:900;margin:10px 0 8px;line-height:1.35">'+esc(s.t)+'</div>'+
+   '<div style="font-size:13.5px;color:var(--muted,#888);line-height:1.65">'+esc(s.d)+'</div>'+
+   '<div style="display:flex;gap:5px;justify-content:center;margin:16px 0 14px">'+dots()+'</div>'+
+   '<button id="pt-ob-next" style="width:100%;font-family:inherit;font-size:15px;font-weight:800;color:var(--accent-ink,#fff);background:var(--accent,#e0942f);border:none;border-radius:14px;padding:13px;cursor:pointer">'+(last?"เริ่มเลย ✓":"ถัดไป ›")+'</button>'+
+   (last?"":'<button id="pt-ob-skip" style="background:none;border:none;color:var(--muted,#999);font-family:inherit;font-size:13px;margin-top:8px;cursor:pointer">ข้าม</button>');
+  document.getElementById("pt-ob-next").onclick=function(){if(last)fin();else{idx++;draw();}};
+  var sk=document.getElementById("pt-ob-skip");if(sk)sk.onclick=fin;}
+ draw();
+}
 /* TTS: iOS ignores utterance.lang and uses the phone's DEFAULT voice (often Thai),
    which reads English with a Thai accent. Fix: explicitly pick an English voice. */
 var _enVoice=null;
@@ -3738,22 +3765,52 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
     return log;
   }
 
-  /* ---- Global study streak (any grade counts, across all decks) ---- */
+  /* ---- Global study streak (any grade counts, across all decks) ----
+     Streak insurance: earn 1 "freeze" per 7 study-days (max held = 2). When the
+     learner comes back after missing exactly ONE day, a freeze auto-fills that
+     day so a long streak survives a single sick/busy day. Freezes are stored
+     separately (pt_frozen days + pt_freeze token count) so real study data stays
+     pure. */
   function actLog() { return readJSON("pt_act") || {}; }
+  function frozenLog() { return readJSON("pt_frozen") || {}; }
+  function readFreeze() { return readJSON("pt_freeze") || { tok: 0, granted: 0 }; }
+  function on(a, fr, d) { return a["" + d] || fr["" + d]; }
+
+  function grantFreeze(a) {
+    var active = 0, k;
+    for (k in a) { if (Object.prototype.hasOwnProperty.call(a, k)) active++; }
+    var f = readFreeze(), should = Math.floor(active / 7);
+    if (should > (f.granted || 0)) {
+      f.tok = Math.min(2, (f.tok || 0) + (should - f.granted));
+      f.granted = should;
+      writeJSON("pt_freeze", f);
+    }
+  }
+  function repairGap() {
+    var today = dayNum(), a = actLog(), fr = frozenLog();
+    var d1 = "" + (today - 1), d2 = "" + (today - 2);
+    // a single missed day just before today, with an active/frozen day before it
+    if (!a[d1] && !fr[d1] && (a[d2] || fr[d2])) {
+      var f = readFreeze();
+      if ((f.tok || 0) > 0) { fr[d1] = 1; writeJSON("pt_frozen", fr); f.tok -= 1; writeJSON("pt_freeze", f); }
+    }
+  }
   function bumpAct() {
     var a = actLog(), d = "" + dayNum();
     a[d] = (a[d] || 0) + 1;
     writeJSON("pt_act", a);
+    try { grantFreeze(a); repairGap(); } catch (e) {}
     return a;
   }
-  // { current, longest, today } — current = consecutive days ending today (grace: yesterday still counts).
+  // { current, longest, today, freezes } — current = consecutive days ending today (grace: yesterday still counts; frozen days bridge gaps).
   function streak() {
-    var a = actLog(), today = dayNum();
+    var a = actLog(), fr = frozenLog(), today = dayNum();
     var cur = 0, d = today;
-    if (!a["" + d]) { d = today - 1; }        // nothing yet today -> streak still alive from yesterday
-    while (a["" + d]) { cur++; d--; }
-    var days = [], k;
-    for (k in a) { if (Object.prototype.hasOwnProperty.call(a, k)) { days.push(parseInt(k, 10)); } }
+    if (!on(a, fr, d)) { d = today - 1; }     // nothing yet today -> streak still alive from yesterday
+    while (on(a, fr, d)) { cur++; d--; }
+    var days = [], seen = {}, k;
+    for (k in a) { if (Object.prototype.hasOwnProperty.call(a, k) && !seen[k]) { seen[k] = 1; days.push(parseInt(k, 10)); } }
+    for (k in fr) { if (Object.prototype.hasOwnProperty.call(fr, k) && !seen[k]) { seen[k] = 1; days.push(parseInt(k, 10)); } }
     days.sort(function (x, y) { return x - y; });
     var lg = 0, run = 0, prev = null, i;
     for (i = 0; i < days.length; i++) {
@@ -3761,7 +3818,7 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
       if (run > lg) { lg = run; }
       prev = days[i];
     }
-    return { current: cur, longest: lg, today: a["" + today] || 0 };
+    return { current: cur, longest: lg, today: a["" + today] || 0, freezes: (readFreeze().tok || 0) };
   }
 
   PT.srs = {
@@ -8179,7 +8236,7 @@ PT.hub = (function () {
       var allMust = mustTotal > 0 && mustDone >= mustTotal;
       h.push('<div class="hb2-head"><div><div class="hb2-greet">' + gg + ' 👋</div>' +
         '<div class="hb2-date">' + esc(dstr) + ' · Day ' + st.day + (plan ? ' · เฟส ' + plan.phase : '') + '</div></div>' +
-        '<div class="hb2-streak">🔥 ' + (stk.current || 0) + '</div></div>');
+        '<div class="hb2-streak">🔥 ' + (stk.current || 0) + (stk.freezes ? ' <span class="hb2-frz" title="ฟรีซกันสตรีคหลุด 1 วัน">❄️' + stk.freezes + '</span>' : '') + '</div></div>');
       var wf = Math.min(stk.current || 0, 7), wd = '', wi;
       for (wi = 0; wi < 7; wi++) wd += '<span class="hb2-dot' + (wi < wf ? ' on' : '') + '"></span>';
       h.push('<div class="hb2-wk"><span>สัปดาห์นี้</span><div class="hb2-dots">' + wd + '</div><span class="hb2-wkn">' + (stk.current || 0) + ' วันติด</span></div>');
@@ -8677,6 +8734,7 @@ var dseg=document.querySelectorAll("#dirseg button");[].forEach.call(dseg,functi
 var sz=store.get("pt_sz");if(sz==="l")S.size="l";
 var zseg=document.querySelectorAll("#szseg button");[].forEach.call(zseg,function(b){b.classList.toggle("on",b.getAttribute("data-sz")===S.size);b.onclick=function(){S.size=b.getAttribute("data-sz");store.set("pt_sz",S.size);[].forEach.call(zseg,function(x){x.classList.toggle("on",x===b);});applySize();};});
 if(PT.pwa&&PT.pwa.register)try{PT.pwa.register();}catch(e){}
+try{onboard();}catch(e){}
 loadDeck("oxford");
 
 </script>
