@@ -1285,8 +1285,35 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 .st2-fl { flex: 0 0 auto; min-width: 52px; font-size: 13px; font-weight: 800; color: var(--accent); }
 .st2-fx { flex: 1; font-size: 14px; color: var(--text); line-height: 1.5; }
 .st2-fnoun { font-size: 12px; color: var(--muted); background: var(--surface2); border-radius: 9px; padding: 9px 11px; margin-top: 11px; line-height: 1.55; }
-.st2-flegend { font-size: 11.5px; color: var(--muted); margin-bottom: 10px; }
-.st2-hl { background: var(--accent); color: var(--accent-ink); border-radius: 5px; padding: 0 4px; font-weight: 800; }
+.st2-flegend { font-size: 11.5px; color: var(--muted); margin-bottom: 11px; line-height: 1.6; }
+.st2-lgrow { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.st2-lg { font-size: 11px; font-weight: 800; border-radius: 6px; padding: 2px 8px; }
+
+/* colour-coded change highlights: 🟠 main verb · 🔵 to be · 🟣 aux/modal · 🟢 future.
+   Underline is a second (non-colour) channel for colourblind/grayscale readers. */
+.st2-hl { border-radius: 5px; padding: 0 4px; font-weight: 800; color: #fff;
+  text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+.st2-hl-v { background: #e8730a; }
+.st2-hl-b { background: #0e7490; }
+.st2-hl-a { background: #7c3aed; }
+.st2-hl-f { background: #15803d; }
+@media (prefers-color-scheme: dark) {
+  .st2-hl { color: #1a1206; }
+  .st2-hl-v { background: #f59e3c; }
+  .st2-hl-b { background: #22d3ee; }
+  .st2-hl-a { background: #c084fc; }
+  .st2-hl-f { background: #4ade80; }
+}
+:root[data-theme="dark"] .st2-hl { color: #1a1206; }
+:root[data-theme="dark"] .st2-hl-v { background: #f59e3c; }
+:root[data-theme="dark"] .st2-hl-b { background: #22d3ee; }
+:root[data-theme="dark"] .st2-hl-a { background: #c084fc; }
+:root[data-theme="dark"] .st2-hl-f { background: #4ade80; }
+:root[data-theme="light"] .st2-hl { color: #fff; }
+:root[data-theme="light"] .st2-hl-v { background: #e8730a; }
+:root[data-theme="light"] .st2-hl-b { background: #0e7490; }
+:root[data-theme="light"] .st2-hl-a { background: #7c3aed; }
+:root[data-theme="light"] .st2-hl-f { background: #15803d; }
 
 /* practice entry button */
 .st2-practice-btn { display: block; width: 100%; font-family: var(--font); font-size: 15px; font-weight: 800;
@@ -7522,20 +7549,21 @@ PT.structure = (function () {
     });
   }
 
-  // render *marked* tokens as highlights; everything else escaped plain
+  // render *cat:token* markers as colour-coded highlights (cat: v/b/a/f); rest plain
   function hlHtml(s) {
-    var parts = String(s).split(/(\*[^*]+\*)/), h = "", i;
+    var parts = String(s).split(/(\*[a-z]:[^*]+\*)/), h = "", i;
     for (i = 0; i < parts.length; i++) {
       var g = parts[i];
       if (!g) continue;
-      if (g.length > 2 && g.charAt(0) === "*" && g.charAt(g.length - 1) === "*") h += '<mark class="st2-hl">' + esc(g.slice(1, -1)) + '</mark>';
+      var m = /^\*([a-z]):([^*]+)\*$/.exec(g);
+      if (m) h += '<mark class="st2-hl st2-hl-' + m[1] + '">' + esc(m[2]) + '</mark>';
       else h += esc(g);
     }
     return h;
   }
   // one row of the conjugation table: label -> sentence (with highlights) + 🔊
   function formRow(label, ex) {
-    var clean = String(ex).replace(/\*/g, "");
+    var clean = String(ex).replace(/\*[a-z]:([^*]+)\*/g, "$1");
     return '<div class="st2-frow"><span class="st2-fl">' + esc(label) + '</span>' +
       '<span class="st2-fx">' + hlHtml(ex) + ' <button type="button" class="st2-spk" data-say="' + esc(clean) + '">🔊</button></span></div>';
   }
@@ -7567,7 +7595,11 @@ PT.structure = (function () {
       var f = p.forms;
       h.push('<button type="button" class="st2-forms-tog" data-forms-tog="1">🔄 ดูรูปแบบประโยค (ผัน I/you/he… · อดีต/ปัจจุบัน/อนาคต) <span class="st2-ft-ar">▾</span></button>');
       h.push('<div class="st2-forms" style="display:none">');
-      h.push('<div class="st2-flegend"><mark class="st2-hl">ไฮไลต์</mark> = จุดที่รูปเปลี่ยนไปจากรูปตั้งต้น (ประธาน I/You/We/They · กาลปัจจุบัน)</div>');
+      h.push('<div class="st2-flegend">สีบอกว่า<b>ทำไมคำถึงเปลี่ยน</b> (เทียบรูปตั้งต้น I/You/We/They · ปัจจุบัน):<div class="st2-lgrow">' +
+        '<span class="st2-lg st2-hl-v">กริยาหลัก</span>' +
+        '<span class="st2-lg st2-hl-b">to be</span>' +
+        '<span class="st2-lg st2-hl-a">กริยาช่วย/modal</span>' +
+        '<span class="st2-lg st2-hl-f">อนาคต (will)</span></div></div>');
       if (f.note_th) h.push('<div class="st2-fnote">' + esc(f.note_th) + '</div>');
       if (f.pron && f.pron.length) {
         h.push('<div class="st2-fsec">ผันตามประธาน</div>');

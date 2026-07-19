@@ -13,7 +13,7 @@
 */
 
 /* eslint-disable no-var */
-var CACHE = "pocket-tutor-v87";
+var CACHE = "pocket-tutor-v88";
 
 // tiny, must-always-work shell — safe to precache atomically
 var SHELL_URLS = [
