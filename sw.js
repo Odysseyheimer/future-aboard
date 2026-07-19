@@ -6,7 +6,7 @@
 */
 
 /* eslint-disable no-var */
-var CACHE = "pocket-tutor-v77";
+var CACHE = "pocket-tutor-v78";
 
 var PRECACHE_URLS = [
   "./",
