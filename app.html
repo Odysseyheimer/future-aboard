@@ -7847,8 +7847,14 @@ PT.plan=(function(){
     isDone:isDone,
     setDone:function(d){if(!isDone(d))toggleDone(d);},
     setStart:function(iso){startISO=iso||"";try{store.set(LSS,startISO);}catch(e){}},
+    // jump to a given plan-day: back-date the start so today == day n
+    setStartByDay:function(n){n=parseInt(n,10);if(!(n>=1&&n<=TOTAL))return false;
+      var d=new Date();d.setDate(d.getDate()-(n-1));
+      startISO=d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2);
+      try{store.set(LSS,startISO);}catch(e){}return true;},
     startIso:function(){return startISO||"";},
-    doneCount:doneCount
+    doneCount:doneCount,
+    TOTAL:TOTAL
   };
 })();
 
@@ -8118,7 +8124,10 @@ PT.hub = (function () {
         h.push('<div class="hb-setup"><div class="hb-setup-t">🗓️ ยังไม่ได้ตั้งวันเริ่มแผน 540 วัน</div>' +
           '<div class="hb-setup-d">ตั้งวันเริ่ม แล้วหน้านี้จะบอกทุกอย่างที่ต้องทำของแต่ละวันให้อัตโนมัติ</div>' +
           '<div class="hb-setup-row"><input type="date" id="hb-start" value="' + todayISO() + '">' +
-          '<button type="button" class="hb-setup-go" data-hb-setstart="1">เริ่มแผนวันนี้ ▶</button></div></div>');
+          '<button type="button" class="hb-setup-go" data-hb-setstart="1">เริ่มแผนวันนี้ ▶</button></div>' +
+          '<div class="hb-setup-d" style="margin-top:12px">เคยเรียนมาก่อนแล้ว? พิมพ์เลขวันที่คุณอยู่ แล้วข้ามมาต่อได้เลย</div>' +
+          '<div class="hb-setup-row"><input type="number" id="hb-startday" min="1" max="540" placeholder="เช่น 240" inputmode="numeric">' +
+          '<button type="button" class="hb-setup-go" data-hb-setday="1">ต่อที่วันนี้ ▶</button></div></div>');
         h.push('<div class="hb-sec">ระหว่างนี้ทำได้เลย:</div>');
       }
     } else {
@@ -8223,6 +8232,15 @@ PT.hub = (function () {
     if (sg) sg.onclick = function () {
       var val = ss ? ss.value : todayISO();
       try { if (PT.plan && PT.plan.setStart) PT.plan.setStart(val); } catch (e) {}
+      try { store.set(HKEY, "null"); } catch (e) {}
+      draw();
+    };
+    var sdInput = document.getElementById("hb-startday");
+    var sdBtn = v.querySelector("[data-hb-setday]");
+    if (sdBtn) sdBtn.onclick = function () {
+      var n = sdInput ? parseInt(sdInput.value, 10) : 0;
+      if (!(n >= 1 && n <= 540)) { if (sdInput) { sdInput.focus(); } return; }
+      try { if (PT.plan && PT.plan.setStartByDay) PT.plan.setStartByDay(n); } catch (e) {}
       try { store.set(HKEY, "null"); } catch (e) {}
       draw();
     };
