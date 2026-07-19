@@ -1285,6 +1285,8 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 .st2-fl { flex: 0 0 auto; min-width: 52px; font-size: 13px; font-weight: 800; color: var(--accent); }
 .st2-fx { flex: 1; font-size: 14px; color: var(--text); line-height: 1.5; }
 .st2-fnoun { font-size: 12px; color: var(--muted); background: var(--surface2); border-radius: 9px; padding: 9px 11px; margin-top: 11px; line-height: 1.55; }
+.st2-flegend { font-size: 11.5px; color: var(--muted); margin-bottom: 10px; }
+.st2-hl { background: var(--accent); color: var(--accent-ink); border-radius: 5px; padding: 0 4px; font-weight: 800; }
 
 /* practice entry button */
 .st2-practice-btn { display: block; width: 100%; font-family: var(--font); font-size: 15px; font-weight: 800;
@@ -7520,10 +7522,22 @@ PT.structure = (function () {
     });
   }
 
-  // one row of the conjugation table: label (pronoun/tense) -> sentence + 🔊
+  // render *marked* tokens as highlights; everything else escaped plain
+  function hlHtml(s) {
+    var parts = String(s).split(/(\*[^*]+\*)/), h = "", i;
+    for (i = 0; i < parts.length; i++) {
+      var g = parts[i];
+      if (!g) continue;
+      if (g.length > 2 && g.charAt(0) === "*" && g.charAt(g.length - 1) === "*") h += '<mark class="st2-hl">' + esc(g.slice(1, -1)) + '</mark>';
+      else h += esc(g);
+    }
+    return h;
+  }
+  // one row of the conjugation table: label -> sentence (with highlights) + 🔊
   function formRow(label, ex) {
+    var clean = String(ex).replace(/\*/g, "");
     return '<div class="st2-frow"><span class="st2-fl">' + esc(label) + '</span>' +
-      '<span class="st2-fx">' + esc(ex) + ' <button type="button" class="st2-spk" data-say="' + esc(ex) + '">🔊</button></span></div>';
+      '<span class="st2-fx">' + hlHtml(ex) + ' <button type="button" class="st2-spk" data-say="' + esc(clean) + '">🔊</button></span></div>';
   }
 
   function frameHtml(fr) {
@@ -7553,6 +7567,7 @@ PT.structure = (function () {
       var f = p.forms;
       h.push('<button type="button" class="st2-forms-tog" data-forms-tog="1">🔄 ดูรูปแบบประโยค (ผัน I/you/he… · อดีต/ปัจจุบัน/อนาคต) <span class="st2-ft-ar">▾</span></button>');
       h.push('<div class="st2-forms" style="display:none">');
+      h.push('<div class="st2-flegend"><mark class="st2-hl">ไฮไลต์</mark> = จุดที่รูปเปลี่ยนไปจากรูปตั้งต้น (ประธาน I/You/We/They · กาลปัจจุบัน)</div>');
       if (f.note_th) h.push('<div class="st2-fnote">' + esc(f.note_th) + '</div>');
       if (f.pron && f.pron.length) {
         h.push('<div class="st2-fsec">ผันตามประธาน</div>');
