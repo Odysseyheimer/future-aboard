@@ -3181,6 +3181,27 @@ function onboard(){
   var sk=document.getElementById("pt-ob-skip");if(sk)sk.onclick=fin;}
  draw();
 }
+/* passcode gate — shown on EVERY app open before anything loads. Client-side only
+   (obscurity, not strong security). The code is stored as a hash so it never
+   appears verbatim in the page source. */
+var PASS_HASH=240938922;
+function hashPass(s){var h=5381,i;for(i=0;i<s.length;i++){h=((h<<5)+h+s.charCodeAt(i))>>>0;}return h;}
+function showLock(onOk){
+ var ov=document.createElement("div");ov.id="pt-lock";
+ ov.setAttribute("style","position:fixed;inset:0;z-index:100000;background:var(--bg,#14120f);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px;font-family:var(--font,-apple-system,sans-serif)");
+ ov.innerHTML='<div style="font-size:44px">🔒</div>'+
+  '<div style="font-size:20px;font-weight:900;color:var(--text,#f4efe8);margin:10px 0 4px">Pocket Tutor</div>'+
+  '<div style="font-size:13px;color:var(--muted,#a69c8e);margin-bottom:18px">ใส่รหัสเพื่อเข้าใช้งาน</div>'+
+  '<input id="pt-lock-in" type="password" inputmode="numeric" autocomplete="off" placeholder="รหัส" style="width:210px;text-align:center;font-size:20px;letter-spacing:4px;padding:12px;border-radius:12px;border:1.5px solid var(--border,#332e27);background:var(--surface,#1e1b16);color:var(--text,#f4efe8);box-sizing:border-box">'+
+  '<button id="pt-lock-go" style="width:210px;margin-top:12px;font-family:inherit;font-size:15px;font-weight:800;color:var(--accent-ink,#20160a);background:var(--accent,#f0a94a);border:none;border-radius:12px;padding:12px;cursor:pointer">เข้าสู่ระบบ</button>'+
+  '<div id="pt-lock-msg" style="font-size:12.5px;color:#d9534f;margin-top:10px;min-height:16px"></div>';
+ document.body.appendChild(ov);
+ var inp=document.getElementById("pt-lock-in"),msg=document.getElementById("pt-lock-msg");
+ function attempt(){var v=(inp.value||"").replace(/\s/g,"");if(hashPass(v)===PASS_HASH){if(ov.parentNode)ov.parentNode.removeChild(ov);if(onOk)onOk();}else{msg.textContent="รหัสไม่ถูกต้อง ลองใหม่";inp.value="";try{inp.focus();}catch(e){}}}
+ document.getElementById("pt-lock-go").onclick=attempt;
+ inp.addEventListener("keydown",function(e){if(e.key==="Enter"||e.keyCode===13)attempt();});
+ setTimeout(function(){try{inp.focus();}catch(e){}},50);
+}
 /* TTS: iOS ignores utterance.lang and uses the phone's DEFAULT voice (often Thai),
    which reads English with a Thai accent. Fix: explicitly pick an English voice. */
 var _enVoice=null;
@@ -8734,8 +8755,9 @@ var dseg=document.querySelectorAll("#dirseg button");[].forEach.call(dseg,functi
 var sz=store.get("pt_sz");if(sz==="l")S.size="l";
 var zseg=document.querySelectorAll("#szseg button");[].forEach.call(zseg,function(b){b.classList.toggle("on",b.getAttribute("data-sz")===S.size);b.onclick=function(){S.size=b.getAttribute("data-sz");store.set("pt_sz",S.size);[].forEach.call(zseg,function(x){x.classList.toggle("on",x===b);});applySize();};});
 if(PT.pwa&&PT.pwa.register)try{PT.pwa.register();}catch(e){}
-try{onboard();}catch(e){}
-loadDeck("oxford");
+/* gate the app behind the passcode on every load */
+function startApp(){try{onboard();}catch(e){}loadDeck("oxford");}
+try{showLock(startApp);}catch(e){startApp();}
 
 </script>
 </body></html>
