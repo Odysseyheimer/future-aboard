@@ -30,6 +30,22 @@
      {
       "en": "Birds fly.",
       "th": "นกบิน"
+     },
+     {
+      "en": "The train arrived.",
+      "th": "รถไฟมาถึงแล้ว"
+     },
+     {
+      "en": "My phone rang during the meeting.",
+      "th": "โทรศัพท์ของฉันดังขึ้นระหว่างประชุม"
+     },
+     {
+      "en": "The students laughed.",
+      "th": "นักเรียนพากันหัวเราะ"
+     },
+     {
+      "en": "Prices are rising quickly.",
+      "th": "ราคาสินค้ากำลังสูงขึ้นอย่างรวดเร็ว"
      }
     ],
     "transform": [
@@ -83,6 +99,22 @@
      {
       "en": "We bought a car.",
       "th": "เราซื้อรถ (คันหนึ่ง)"
+     },
+     {
+      "en": "She wrote a report.",
+      "th": "เธอเขียนรายงานหนึ่งฉบับ"
+     },
+     {
+      "en": "We booked a hotel.",
+      "th": "เราจองโรงแรมไว้แล้ว"
+     },
+     {
+      "en": "He answered the question.",
+      "th": "เขาตอบคำถามนั้น"
+     },
+     {
+      "en": "The company hired ten workers.",
+      "th": "บริษัทจ้างพนักงานสิบคน"
      }
     ],
     "transform": [
@@ -136,6 +168,22 @@
      {
       "en": "They are happy.",
       "th": "พวกเขามีความสุข"
+     },
+     {
+      "en": "My brother is an engineer.",
+      "th": "พี่ชายของฉันเป็นวิศวกร"
+     },
+     {
+      "en": "The weather is cold today.",
+      "th": "วันนี้อากาศหนาว"
+     },
+     {
+      "en": "These results are important.",
+      "th": "ผลลัพธ์เหล่านี้สำคัญ"
+     },
+     {
+      "en": "I am tired after work.",
+      "th": "ฉันเหนื่อยหลังเลิกงาน"
      }
     ],
     "transform": [
@@ -193,6 +241,22 @@
      {
       "en": "I told her the truth.",
       "th": "ฉันบอกความจริงกับเธอ"
+     },
+     {
+      "en": "The teacher gave us homework.",
+      "th": "ครูให้การบ้านพวกเรา"
+     },
+     {
+      "en": "My mother made me lunch.",
+      "th": "แม่ทำอาหารกลางวันให้ฉัน"
+     },
+     {
+      "en": "They offered him a job.",
+      "th": "พวกเขาเสนองานให้เขา"
+     },
+     {
+      "en": "I showed the officer my passport.",
+      "th": "ฉันแสดงหนังสือเดินทางให้เจ้าหน้าที่ดู"
      }
     ],
     "transform": [
@@ -250,6 +314,22 @@
      {
       "en": "The news made me sad.",
       "th": "ข่าวนั้นทำให้ฉันเศร้า"
+     },
+     {
+      "en": "The coach made the team stronger.",
+      "th": "โค้ชทำให้ทีมแข็งแกร่งขึ้น"
+     },
+     {
+      "en": "They named their son Peter.",
+      "th": "พวกเขาตั้งชื่อลูกชายว่าปีเตอร์"
+     },
+     {
+      "en": "The long trip left us exhausted.",
+      "th": "การเดินทางที่ยาวนานทำให้เราเหนื่อยล้า"
+     },
+     {
+      "en": "We painted the wall white.",
+      "th": "เราทาผนังเป็นสีขาว"
      }
     ],
     "transform": [
@@ -305,6 +385,22 @@
      {
       "en": "Take this medicine twice a day.",
       "th": "กินยานี้วันละสองครั้ง"
+     },
+     {
+      "en": "Wash your hands before you eat.",
+      "th": "ล้างมือก่อนกินข้าวนะ"
+     },
+     {
+      "en": "Send me the report by Friday.",
+      "th": "ส่งรายงานให้ฉันภายในวันศุกร์"
+     },
+     {
+      "en": "Book your ticket early to save money.",
+      "th": "จองตั๋วเนิ่นๆ เพื่อประหยัดเงิน"
+     },
+     {
+      "en": "Read the question carefully before you answer.",
+      "th": "อ่านคำถามให้ละเอียดก่อนตอบ"
      }
     ],
     "transform": [
@@ -353,6 +449,22 @@
      {
       "en": "Let's meet at the station at seven.",
       "th": "เจอกันที่สถานีตอนเจ็ดโมงนะ"
+     },
+     {
+      "en": "Let's order some coffee before the meeting.",
+      "th": "เราไปสั่งกาแฟกันก่อนประชุมเถอะ"
+     },
+     {
+      "en": "Let's try that new restaurant tonight.",
+      "th": "คืนนี้เราไปลองร้านอาหารใหม่กันเถอะ"
+     },
+     {
+      "en": "Let's review our notes before the exam.",
+      "th": "เรามาทบทวนโน้ตกันก่อนสอบเถอะ"
+     },
+     {
+      "en": "Let's book the hotel while it's still cheap.",
+      "th": "เราจองโรงแรมกันตอนที่ยังราคาถูกอยู่เถอะ"
      }
     ],
     "transform": [
@@ -405,6 +517,22 @@
      {
       "en": "Pass me the salt, please.",
       "th": "ช่วยส่งเกลือให้หน่อยนะ"
+     },
+     {
+      "en": "Please turn off your phone during the test.",
+      "th": "กรุณาปิดโทรศัพท์ระหว่างการสอบด้วยนะคะ"
+     },
+     {
+      "en": "Please send me the address before you leave.",
+      "th": "กรุณาส่งที่อยู่ให้ฉันก่อนคุณออกไปนะ"
+     },
+     {
+      "en": "Lock the door when you go out, will you?",
+      "th": "ล็อกประตูตอนออกไปด้วยนะ ได้ไหม"
+     },
+     {
+      "en": "Call me when you arrive, will you?",
+      "th": "โทรหาฉันตอนถึงแล้วนะ ได้ไหม"
      }
     ],
     "transform": [
@@ -461,6 +589,22 @@
      {
       "en": "What delicious food they served!",
       "th": "อาหารที่เขาเสิร์ฟอร่อยมากเลย"
+     },
+     {
+      "en": "What a long queue there is today!",
+      "th": "วันนี้คิวยาวอะไรอย่างนี้"
+     },
+     {
+      "en": "What an exciting match that was!",
+      "th": "เป็นการแข่งที่ตื่นเต้นอะไรอย่างนี้"
+     },
+     {
+      "en": "What a helpful colleague you have!",
+      "th": "คุณมีเพื่อนร่วมงานที่ชอบช่วยเหลือดีจังเลย"
+     },
+     {
+      "en": "What lovely weather we're having!",
+      "th": "อากาศดีอะไรอย่างนี้"
      }
     ],
     "transform": [
@@ -509,6 +653,22 @@
      {
       "en": "How kind of you to help!",
       "th": "คุณใจดีจังที่มาช่วย"
+     },
+     {
+      "en": "How tired I am after work!",
+      "th": "เหนื่อยจังเลยหลังเลิกงาน"
+     },
+     {
+      "en": "How smoothly the meeting went!",
+      "th": "ประชุมราบรื่นจังเลย"
+     },
+     {
+      "en": "How well she speaks English!",
+      "th": "เธอพูดภาษาอังกฤษเก่งจังเลย"
+     },
+     {
+      "en": "How fast this year has passed!",
+      "th": "ปีนี้ผ่านไปเร็วจังเลย"
      }
     ],
     "transform": [
@@ -561,6 +721,22 @@
      {
       "en": "The children stayed at home all day.",
       "th": "เด็ก ๆ อยู่บ้านทั้งวัน"
+     },
+     {
+      "en": "My office is near the river.",
+      "th": "ออฟฟิศของฉันอยู่ใกล้แม่น้ำ"
+     },
+     {
+      "en": "She placed the documents in the drawer.",
+      "th": "เธอวางเอกสารไว้ในลิ้นชัก"
+     },
+     {
+      "en": "We waited at the airport for two hours.",
+      "th": "เรารอที่สนามบินสองชั่วโมง"
+     },
+     {
+      "en": "The conference takes place in Singapore.",
+      "th": "งานประชุมจัดขึ้นที่สิงคโปร์"
      }
     ],
     "transform": [
@@ -615,6 +791,18 @@
      {
       "en": "Turn left at the corner and you'll see the station.",
       "th": "เลี้ยวซ้ายตรงหัวมุมแล้วคุณจะเห็นสถานี"
+     },
+     {
+      "en": "Save a little each month and you will have enough for the trip.",
+      "th": "เก็บเงินทีละนิดทุกเดือน แล้วคุณจะมีเงินพอไปเที่ยว"
+     },
+     {
+      "en": "Send the report by noon and the manager will be pleased.",
+      "th": "ส่งรายงานให้เสร็จก่อนเที่ยง แล้วหัวหน้าจะพอใจ"
+     },
+     {
+      "en": "Practise speaking every day and your confidence will grow.",
+      "th": "ฝึกพูดทุกวัน แล้วความมั่นใจของคุณจะเพิ่มขึ้น"
      }
     ],
     "transform": [
@@ -663,6 +851,22 @@
      {
       "en": "Leave now, or else you'll miss the train.",
       "th": "ไปเดี๋ยวนี้เลย ไม่งั้นคุณจะพลาดรถไฟ"
+     },
+     {
+      "en": "Back up your files or you'll lose all your work.",
+      "th": "สำรองไฟล์ไว้ ไม่งั้นคุณจะเสียงานทั้งหมด"
+     },
+     {
+      "en": "Book the hotel early or the rooms will be full.",
+      "th": "จองโรงแรมแต่เนิ่น ๆ ไม่งั้นห้องจะเต็ม"
+     },
+     {
+      "en": "Leave now or you'll miss the last bus.",
+      "th": "ออกเดี๋ยวนี้ ไม่งั้นคุณจะตกรถเมล์คันสุดท้าย"
+     },
+     {
+      "en": "Study your notes tonight or you'll struggle in the test.",
+      "th": "อ่านโน้ตของคุณคืนนี้ ไม่งั้นคุณจะทำข้อสอบลำบาก"
      }
     ],
     "transform": [
@@ -711,6 +915,22 @@
      {
       "en": "Nobody move!",
       "th": "ห้ามใครขยับ!"
+     },
+     {
+      "en": "You take the front seat, and he takes the back.",
+      "th": "คุณนั่งเบาะหน้า ส่วนเขานั่งเบาะหลัง"
+     },
+     {
+      "en": "Somebody call an ambulance, quickly!",
+      "th": "ใครก็ได้เรียกรถพยาบาลที เร็วเข้า!"
+     },
+     {
+      "en": "You two wait here while I park the car.",
+      "th": "คุณสองคนรอตรงนี้ ระหว่างที่ผมไปจอดรถ"
+     },
+     {
+      "en": "Everyone please hold your questions until the end.",
+      "th": "ทุกคนช่วยเก็บคำถามไว้ตอนท้ายนะครับ"
      }
     ],
     "transform": [
@@ -759,6 +979,22 @@
      {
       "en": "Don't you ever lie to me.",
       "th": "อย่าได้โกหกฉันเชียวนะ"
+     },
+     {
+      "en": "Don't you touch my phone without asking.",
+      "th": "อย่ามาแตะโทรศัพท์ของฉันโดยไม่ขอเชียวนะ"
+     },
+     {
+      "en": "Never give up on your dream.",
+      "th": "อย่ายอมแพ้ต่อความฝันของคุณเด็ดขาด"
+     },
+     {
+      "en": "Don't you dare cancel on me at the last minute.",
+      "th": "อย่าริมายกเลิกกับฉันนาทีสุดท้ายเชียวนะ"
+     },
+     {
+      "en": "Never leave the stove on when you go out.",
+      "th": "อย่าเปิดเตาทิ้งไว้ตอนออกจากบ้านเป็นอันขาด"
      }
     ],
     "transform": [
@@ -811,6 +1047,22 @@
      {
       "en": "How about a cup of coffee?",
       "th": "กาแฟสักแก้วไหม?"
+     },
+     {
+      "en": "Why not ask your teacher for feedback?",
+      "th": "ทำไมไม่ลองขอคำแนะนำจากครูของคุณล่ะ"
+     },
+     {
+      "en": "How about taking the train instead of driving?",
+      "th": "ลองนั่งรถไฟแทนการขับรถดีไหม"
+     },
+     {
+      "en": "Why not join a study group this term?",
+      "th": "ทำไมไม่ลองเข้ากลุ่มติวเทอมนี้ล่ะ"
+     },
+     {
+      "en": "How about a short walk after lunch?",
+      "th": "เดินเล่นสั้น ๆ หลังมื้อกลางวันดีไหม"
      }
     ],
     "transform": [
@@ -865,6 +1117,22 @@
      {
       "en": "They are students.",
       "th": "พวกเขาเป็นนักเรียน"
+     },
+     {
+      "en": "My brother is an engineer.",
+      "th": "พี่ชายของฉันเป็นวิศวกร"
+     },
+     {
+      "en": "We are colleagues at the same company.",
+      "th": "เราเป็นเพื่อนร่วมงานที่บริษัทเดียวกัน"
+     },
+     {
+      "en": "You are a very talented singer.",
+      "th": "คุณเป็นนักร้องที่มีพรสวรรค์มาก"
+     },
+     {
+      "en": "It is a popular tourist destination.",
+      "th": "ที่นี่เป็นสถานที่ท่องเที่ยวยอดนิยม"
      }
     ],
     "transform": [
@@ -913,6 +1181,22 @@
      {
       "en": "They are happy.",
       "th": "พวกเขามีความสุข"
+     },
+     {
+      "en": "The weather is cold this morning.",
+      "th": "อากาศหนาวในเช้านี้"
+     },
+     {
+      "en": "This exam is quite difficult.",
+      "th": "ข้อสอบนี้ค่อนข้างยาก"
+     },
+     {
+      "en": "My new colleagues are very friendly.",
+      "th": "เพื่อนร่วมงานใหม่ของฉันเป็นมิตรมาก"
+     },
+     {
+      "en": "The hotel room was clean and quiet.",
+      "th": "ห้องพักในโรงแรมสะอาดและเงียบสงบ"
      }
     ],
     "transform": [
@@ -961,6 +1245,22 @@
      {
       "en": "She is in the office.",
       "th": "เธออยู่ในออฟฟิศ"
+     },
+     {
+      "en": "The children are at the park.",
+      "th": "เด็ก ๆ อยู่ที่สวนสาธารณะ"
+     },
+     {
+      "en": "My flight is at gate twelve.",
+      "th": "เที่ยวบินของฉันอยู่ที่ประตูขึ้นเครื่องหมายเลขสิบสอง"
+     },
+     {
+      "en": "The meeting is in the conference room.",
+      "th": "การประชุมอยู่ในห้องประชุม"
+     },
+     {
+      "en": "We are on the train to Chiang Mai.",
+      "th": "เราอยู่บนรถไฟไปเชียงใหม่"
      }
     ],
     "transform": [
@@ -1009,6 +1309,22 @@
      {
       "en": "Are they ready?",
       "th": "พวกเขาพร้อมไหม"
+     },
+     {
+      "en": "Is this seat free?",
+      "th": "ที่นั่งนี้ว่างไหม"
+     },
+     {
+      "en": "Are the shops open on Sunday?",
+      "th": "ร้านค้าเปิดในวันอาทิตย์ไหม"
+     },
+     {
+      "en": "Is your English test tomorrow?",
+      "th": "การสอบภาษาอังกฤษของคุณคือวันพรุ่งนี้ใช่ไหม"
+     },
+     {
+      "en": "Am I late for class?",
+      "th": "ฉันมาสายสำหรับคลาสเรียนไหม"
      }
     ],
     "transform": [
@@ -1057,6 +1373,22 @@
      {
       "en": "How is your mother?",
       "th": "คุณแม่ของคุณเป็นอย่างไรบ้าง"
+     },
+     {
+      "en": "When is the next bus?",
+      "th": "รถบัสคันต่อไปมาเมื่อไหร่"
+     },
+     {
+      "en": "Why are you so busy today?",
+      "th": "ทำไมวันนี้คุณถึงยุ่งจัง"
+     },
+     {
+      "en": "Who is that man near the door?",
+      "th": "ผู้ชายที่อยู่ใกล้ประตูคือใคร"
+     },
+     {
+      "en": "How much is this ticket?",
+      "th": "ตั๋วใบนี้ราคาเท่าไหร่"
      }
     ],
     "transform": [
@@ -1109,6 +1441,22 @@
      {
       "en": "There is a problem.",
       "th": "มีปัญหาอยู่อย่างหนึ่ง"
+     },
+     {
+      "en": "There is a pharmacy near the station.",
+      "th": "มีร้านขายยาอยู่ใกล้สถานี"
+     },
+     {
+      "en": "There are many tourists at the beach.",
+      "th": "มีนักท่องเที่ยวจำนวนมากที่ชายหาด"
+     },
+     {
+      "en": "There is free Wi-Fi in this cafe.",
+      "th": "มีไวไฟฟรีในร้านกาแฟนี้"
+     },
+     {
+      "en": "There are two supermarkets in my neighborhood.",
+      "th": "มีซูเปอร์มาร์เก็ตสองแห่งในย่านบ้านของฉัน"
      }
     ],
     "transform": [
@@ -1172,6 +1520,22 @@
      {
       "en": "The food was not spicy.",
       "th": "อาหารไม่เผ็ด"
+     },
+     {
+      "en": "My brother is not ready for the exam.",
+      "th": "น้องชายของฉันยังไม่พร้อมสำหรับการสอบ"
+     },
+     {
+      "en": "We were not late for the meeting.",
+      "th": "พวกเราไม่ได้มาสายในการประชุม"
+     },
+     {
+      "en": "The hotel room is not very clean.",
+      "th": "ห้องพักในโรงแรมไม่ค่อยสะอาดเท่าไหร่"
+     },
+     {
+      "en": "I am not sure about the answer.",
+      "th": "ฉันไม่แน่ใจเกี่ยวกับคำตอบ"
      }
     ],
     "transform": [
@@ -1233,6 +1597,22 @@
      {
       "en": "We don't work on Sundays.",
       "th": "เราไม่ทำงานวันอาทิตย์"
+     },
+     {
+      "en": "He does not understand the instructions.",
+      "th": "เขาไม่เข้าใจคำสั่ง"
+     },
+     {
+      "en": "They do not live near the office.",
+      "th": "พวกเขาไม่ได้อาศัยอยู่ใกล้ที่ทำงาน"
+     },
+     {
+      "en": "My phone does not work properly.",
+      "th": "โทรศัพท์ของฉันทำงานได้ไม่ปกติ"
+     },
+     {
+      "en": "I do not agree with that plan.",
+      "th": "ฉันไม่เห็นด้วยกับแผนนั้น"
      }
     ],
     "transform": [
@@ -1294,6 +1674,22 @@
      {
       "en": "We didn't go to the party.",
       "th": "เราไม่ได้ไปงานปาร์ตี้"
+     },
+     {
+      "en": "They did not finish the project on time.",
+      "th": "พวกเขาทำโครงการไม่เสร็จตามเวลา"
+     },
+     {
+      "en": "He did not bring his passport.",
+      "th": "เขาไม่ได้เอาหนังสือเดินทางมาด้วย"
+     },
+     {
+      "en": "I did not sleep well last night.",
+      "th": "เมื่อคืนฉันนอนหลับไม่สนิท"
+     },
+     {
+      "en": "The bus did not arrive on time.",
+      "th": "รถบัสมาไม่ตรงเวลา"
      }
     ],
     "transform": [
@@ -1355,6 +1751,22 @@
      {
       "en": "You should not worry.",
       "th": "คุณไม่ควรกังวล"
+     },
+     {
+      "en": "She cannot come to work today.",
+      "th": "วันนี้เธอมาทำงานไม่ได้"
+     },
+     {
+      "en": "We must not forget the deadline.",
+      "th": "เราต้องไม่ลืมกำหนดส่งงาน"
+     },
+     {
+      "en": "He would not accept the offer.",
+      "th": "เขาคงจะไม่รับข้อเสนอนี้"
+     },
+     {
+      "en": "You should not skip breakfast.",
+      "th": "คุณไม่ควรงดอาหารเช้า"
      }
     ],
     "transform": [
@@ -1416,6 +1828,22 @@
      {
       "en": "They haven't arrived.",
       "th": "พวกเขายังมาไม่ถึง"
+     },
+     {
+      "en": "I have not visited London before.",
+      "th": "ฉันยังไม่เคยไปลอนดอนมาก่อน"
+     },
+     {
+      "en": "He has not replied to my email.",
+      "th": "เขายังไม่ได้ตอบอีเมลของฉัน"
+     },
+     {
+      "en": "We have not booked the tickets yet.",
+      "th": "พวกเรายังไม่ได้จองตั๋ว"
+     },
+     {
+      "en": "She has not met her new manager.",
+      "th": "เธอยังไม่ได้เจอผู้จัดการคนใหม่"
      }
     ],
     "transform": [
@@ -1473,6 +1901,22 @@
      {
       "en": "Don't be late.",
       "th": "อย่ามาสาย"
+     },
+     {
+      "en": "Don't worry about the results.",
+      "th": "อย่ากังวลเรื่องผลลัพธ์"
+     },
+     {
+      "en": "Do not forget to lock the door.",
+      "th": "อย่าลืมล็อกประตู"
+     },
+     {
+      "en": "Don't speak so loudly in the library.",
+      "th": "อย่าพูดเสียงดังในห้องสมุด"
+     },
+     {
+      "en": "Do not waste your time on this.",
+      "th": "อย่าเสียเวลากับเรื่องนี้"
      }
     ],
     "transform": [
@@ -1531,6 +1975,22 @@
      {
       "en": "Is the shop open?",
       "th": "ร้านเปิดอยู่ไหม"
+     },
+     {
+      "en": "Is your brother a doctor?",
+      "th": "พี่ชายของคุณเป็นหมอใช่ไหม"
+     },
+     {
+      "en": "Are the children hungry?",
+      "th": "เด็กๆ หิวหรือเปล่า"
+     },
+     {
+      "en": "Is this seat free?",
+      "th": "ที่นั่งตรงนี้ว่างไหม"
+     },
+     {
+      "en": "Are you sure about the answer?",
+      "th": "คุณแน่ใจเรื่องคำตอบไหม"
      }
     ],
     "transform": [
@@ -1583,6 +2043,22 @@
      {
       "en": "Were they late?",
       "th": "พวกเขามาสายไหม"
+     },
+     {
+      "en": "Was the meeting long?",
+      "th": "การประชุมนานไหม"
+     },
+     {
+      "en": "Were the tickets expensive?",
+      "th": "ตั๋วแพงไหม"
+     },
+     {
+      "en": "Was she at the office yesterday?",
+      "th": "เมื่อวานเธออยู่ที่ออฟฟิศไหม"
+     },
+     {
+      "en": "Were you nervous during the exam?",
+      "th": "ตอนสอบคุณตื่นเต้นไหม"
      }
     ],
     "transform": [
@@ -1635,6 +2111,22 @@
      {
       "en": "Do they speak Thai?",
       "th": "พวกเขาพูดภาษาไทยไหม"
+     },
+     {
+      "en": "Do you take the bus to work?",
+      "th": "คุณนั่งรถเมล์ไปทำงานไหม"
+     },
+     {
+      "en": "Does your sister study English?",
+      "th": "น้องสาวคุณเรียนภาษาอังกฤษไหม"
+     },
+     {
+      "en": "Do they open on Sundays?",
+      "th": "พวกเขาเปิดวันอาทิตย์ไหม"
+     },
+     {
+      "en": "Does this train stop at the airport?",
+      "th": "รถไฟขบวนนี้จอดที่สนามบินไหม"
      }
     ],
     "transform": [
@@ -1687,6 +2179,22 @@
      {
       "en": "Did they win?",
       "th": "พวกเขาชนะไหม"
+     },
+     {
+      "en": "Did you sleep well last night?",
+      "th": "เมื่อคืนคุณนอนหลับสบายดีไหม"
+     },
+     {
+      "en": "Did the manager approve your leave?",
+      "th": "ผู้จัดการอนุมัติวันลาของคุณไหม"
+     },
+     {
+      "en": "Did they enjoy the trip?",
+      "th": "พวกเขาสนุกกับทริปนี้ไหม"
+     },
+     {
+      "en": "Did you finish the report on time?",
+      "th": "คุณทำรายงานเสร็จทันเวลาไหม"
      }
     ],
     "transform": [
@@ -1739,6 +2247,22 @@
      {
       "en": "Should I wait here?",
       "th": "ฉันควรรอตรงนี้ไหม"
+     },
+     {
+      "en": "Can you speak a little slower?",
+      "th": "คุณพูดช้าลงหน่อยได้ไหม"
+     },
+     {
+      "en": "Will she join the workshop next week?",
+      "th": "สัปดาห์หน้าเธอจะเข้าร่วมเวิร์กช็อปไหม"
+     },
+     {
+      "en": "Should we book the tickets now?",
+      "th": "เราควรจองตั๋วตอนนี้เลยไหม"
+     },
+     {
+      "en": "Can I pay by card here?",
+      "th": "ที่นี่จ่ายด้วยบัตรได้ไหม"
      }
     ],
     "transform": [
@@ -1791,6 +2315,22 @@
      {
       "en": "Have they ever been to Japan?",
       "th": "พวกเขาเคยไปญี่ปุ่นไหม"
+     },
+     {
+      "en": "Have you sent the email yet?",
+      "th": "คุณส่งอีเมลไปหรือยัง"
+     },
+     {
+      "en": "Has the bus arrived?",
+      "th": "รถเมล์มาถึงแล้วหรือยัง"
+     },
+     {
+      "en": "Have they signed the contract?",
+      "th": "พวกเขาเซ็นสัญญาแล้วหรือยัง"
+     },
+     {
+      "en": "Has she read your message?",
+      "th": "เธออ่านข้อความของคุณแล้วหรือยัง"
      }
     ],
     "transform": [
@@ -1847,6 +2387,22 @@
      {
       "en": "Is there milk in the fridge?",
       "th": "ในตู้เย็นมีนมไหม"
+     },
+     {
+      "en": "Is there a pharmacy in this mall?",
+      "th": "ในห้างนี้มีร้านขายยาไหม"
+     },
+     {
+      "en": "Are there any seats left?",
+      "th": "ยังเหลือที่นั่งไหม"
+     },
+     {
+      "en": "Is there time for one more question?",
+      "th": "ยังมีเวลาถามอีกสักคำถามไหม"
+     },
+     {
+      "en": "Are there buses after midnight?",
+      "th": "หลังเที่ยงคืนยังมีรถเมล์ไหม"
      }
     ],
     "transform": [
@@ -1905,6 +2461,22 @@
      {
       "en": "Why was she late?",
       "th": "ทำไมเธอถึงมาสาย"
+     },
+     {
+      "en": "Who is your favourite teacher?",
+      "th": "ครูคนโปรดของคุณคือใคร"
+     },
+     {
+      "en": "How is the weather in London today?",
+      "th": "วันนี้อากาศที่ลอนดอนเป็นอย่างไร"
+     },
+     {
+      "en": "Whose books are these on the desk?",
+      "th": "หนังสือบนโต๊ะพวกนี้ของใคร"
+     },
+     {
+      "en": "Where were you yesterday afternoon?",
+      "th": "เมื่อวานตอนบ่ายคุณอยู่ที่ไหน"
      }
     ],
     "transform": [
@@ -1961,6 +2533,22 @@
      {
       "en": "When did they arrive?",
       "th": "พวกเขามาถึงเมื่อไร"
+     },
+     {
+      "en": "How do you get to work every day?",
+      "th": "คุณเดินทางไปทำงานทุกวันอย่างไร"
+     },
+     {
+      "en": "Why does the printer keep breaking down?",
+      "th": "ทำไมเครื่องพิมพ์ถึงเสียบ่อย"
+     },
+     {
+      "en": "What did you study at university?",
+      "th": "คุณเรียนอะไรตอนอยู่มหาวิทยาลัย"
+     },
+     {
+      "en": "How often do they visit their grandparents?",
+      "th": "พวกเขาไปเยี่ยมปู่ย่าตายายบ่อยแค่ไหน"
      }
     ],
     "transform": [
@@ -2013,6 +2601,22 @@
      {
       "en": "Which team won?",
       "th": "ทีมไหนชนะ"
+     },
+     {
+      "en": "Who booked the meeting room?",
+      "th": "ใครจองห้องประชุมไว้"
+     },
+     {
+      "en": "What caused the delay this morning?",
+      "th": "อะไรทำให้เกิดความล่าช้าเมื่อเช้านี้"
+     },
+     {
+      "en": "Which flight arrives first?",
+      "th": "เที่ยวบินไหนมาถึงก่อน"
+     },
+     {
+      "en": "Who lives next door to you?",
+      "th": "ใครอาศัยอยู่บ้านข้าง ๆ คุณ"
      }
     ],
     "transform": [
@@ -2069,6 +2673,22 @@
      {
       "en": "What time does the movie start?",
       "th": "หนังเริ่มกี่โมง"
+     },
+     {
+      "en": "Whose idea was the new plan?",
+      "th": "แผนใหม่นี้เป็นความคิดของใคร"
+     },
+     {
+      "en": "Which bus goes to the airport?",
+      "th": "รถเมล์คันไหนไปสนามบิน"
+     },
+     {
+      "en": "What subject do you teach?",
+      "th": "คุณสอนวิชาอะไร"
+     },
+     {
+      "en": "Which hotel did they recommend?",
+      "th": "พวกเขาแนะนำโรงแรมไหน"
      }
     ],
     "transform": [
@@ -2125,6 +2745,22 @@
      {
       "en": "How old are you?",
       "th": "คุณอายุเท่าไร"
+     },
+     {
+      "en": "How long does the flight take?",
+      "th": "เที่ยวบินใช้เวลานานแค่ไหน"
+     },
+     {
+      "en": "How far is the station from here?",
+      "th": "สถานีอยู่ไกลจากที่นี่แค่ไหน"
+     },
+     {
+      "en": "How many languages do you speak?",
+      "th": "คุณพูดได้กี่ภาษา"
+     },
+     {
+      "en": "How much sleep do you get each night?",
+      "th": "แต่ละคืนคุณนอนกี่ชั่วโมง"
      }
     ],
     "transform": [
@@ -2181,6 +2817,22 @@
      {
       "en": "What should we do?",
       "th": "เราควรทำอย่างไรดี"
+     },
+     {
+      "en": "Where should I put my luggage?",
+      "th": "ฉันควรวางกระเป๋าเดินทางไว้ตรงไหน"
+     },
+     {
+      "en": "When can we start the project?",
+      "th": "เราจะเริ่มโปรเจกต์ได้เมื่อไหร่"
+     },
+     {
+      "en": "What would you do in my situation?",
+      "th": "ถ้าเป็นสถานการณ์ของฉัน คุณจะทำอย่างไร"
+     },
+     {
+      "en": "How should I prepare for the interview?",
+      "th": "ฉันควรเตรียมตัวสำหรับการสัมภาษณ์อย่างไร"
      }
     ],
     "transform": [
@@ -2243,6 +2895,22 @@
      {
       "en": "Do you know why she left early?",
       "th": "คุณรู้ไหมว่าทำไมเธอกลับก่อน"
+     },
+     {
+      "en": "Do you know how much the tickets cost?",
+      "th": "คุณรู้ไหมว่าตั๋วราคาเท่าไหร่"
+     },
+     {
+      "en": "Do you know which platform the train leaves from?",
+      "th": "คุณรู้ไหมว่ารถไฟออกจากชานชาลาไหน"
+     },
+     {
+      "en": "Do you know who booked the meeting room?",
+      "th": "คุณรู้ไหมว่าใครเป็นคนจองห้องประชุมไว้"
+     },
+     {
+      "en": "Do you know when the results will be released?",
+      "th": "คุณรู้ไหมว่าผลจะประกาศเมื่อไหร่"
      }
     ],
     "transform": [
@@ -2295,6 +2963,22 @@
      {
       "en": "Could you tell me whether the shop is open on Sundays?",
       "th": "ช่วยบอกหน่อยได้ไหมว่าร้านเปิดวันอาทิตย์หรือไม่"
+     },
+     {
+      "en": "Could you tell me if the deadline has been extended?",
+      "th": "คุณช่วยบอกฉันได้ไหมว่ากำหนดส่งถูกเลื่อนออกไปหรือเปล่า"
+     },
+     {
+      "en": "Could you tell me whether breakfast is included in the price?",
+      "th": "คุณช่วยบอกฉันได้ไหมว่าราคานี้รวมอาหารเช้าด้วยหรือไม่"
+     },
+     {
+      "en": "Could you tell me if I need to bring my passport?",
+      "th": "คุณช่วยบอกฉันได้ไหมว่าฉันต้องเอาพาสปอร์ตมาด้วยไหม"
+     },
+     {
+      "en": "Could you tell me whether this seat is taken?",
+      "th": "คุณช่วยบอกฉันได้ไหมว่าที่นั่งนี้มีคนนั่งแล้วหรือยัง"
      }
     ],
     "transform": [
@@ -2351,6 +3035,22 @@
      {
       "en": "I wonder how she finished so quickly.",
       "th": "ฉันสงสัยว่าเธอทำเสร็จเร็วขนาดนั้นได้ยังไง"
+     },
+     {
+      "en": "I wonder where they went for the holidays.",
+      "th": "ฉันสงสัยว่าพวกเขาไปเที่ยวที่ไหนกันช่วงวันหยุด"
+     },
+     {
+      "en": "I'm not sure how this machine works.",
+      "th": "ฉันไม่แน่ใจว่าเครื่องนี้ทำงานยังไง"
+     },
+     {
+      "en": "I wonder what the examiner will ask me.",
+      "th": "ฉันสงสัยว่าผู้คุมสอบจะถามอะไรฉันบ้าง"
+     },
+     {
+      "en": "I'm not sure which option is cheaper.",
+      "th": "ฉันไม่แน่ใจว่าตัวเลือกไหนถูกกว่ากัน"
      }
     ],
     "transform": [
@@ -2403,6 +3103,22 @@
      {
       "en": "When did the movie start? -> Do you know when the movie started?",
       "th": "หนังเริ่มตอนไหน -> คุณรู้ไหมว่าหนังเริ่มตอนไหน"
+     },
+     {
+      "en": "How old is she? -> Do you know how old she is?",
+      "th": "เธออายุเท่าไหร่ -> คุณรู้ไหมว่าเธออายุเท่าไหร่"
+     },
+     {
+      "en": "Where does he work? -> Do you know where he works?",
+      "th": "เขาทำงานที่ไหน -> คุณรู้ไหมว่าเขาทำงานที่ไหน"
+     },
+     {
+      "en": "Why is the flight delayed? -> Do you know why the flight is delayed?",
+      "th": "ทำไมเที่ยวบินถึงล่าช้า -> คุณรู้ไหมว่าทำไมเที่ยวบินถึงล่าช้า"
+     },
+     {
+      "en": "How much did the repair cost? -> Do you know how much the repair cost?",
+      "th": "ค่าซ่อมเท่าไหร่ -> คุณรู้ไหมว่าค่าซ่อมเท่าไหร่"
      }
     ],
     "transform": [
@@ -2451,6 +3167,22 @@
      {
       "en": "I was wondering if you could help me with this form.",
       "th": "ไม่ทราบว่าคุณพอจะช่วยเรื่องแบบฟอร์มนี้ได้ไหม"
+     },
+     {
+      "en": "Would you mind telling me where I can find the manager?",
+      "th": "คุณจะรังเกียจไหมถ้าจะบอกฉันว่าฉันจะหาผู้จัดการได้ที่ไหน"
+     },
+     {
+      "en": "I was wondering if you had time to review my essay.",
+      "th": "ฉันอยากทราบว่าคุณพอจะมีเวลาช่วยตรวจเรียงความของฉันไหม"
+     },
+     {
+      "en": "Would you mind telling me how long the tour takes?",
+      "th": "คุณจะรังเกียจไหมถ้าจะบอกฉันว่าทัวร์นี้ใช้เวลานานแค่ไหน"
+     },
+     {
+      "en": "I was wondering whether the position is still available.",
+      "th": "ฉันอยากทราบว่าตำแหน่งงานนี้ยังว่างอยู่หรือไม่"
      }
     ],
     "transform": [
@@ -2505,6 +3237,22 @@
      {
       "en": "Haven't we met somewhere before?",
       "th": "เราเคยเจอกันที่ไหนมาก่อนหรือเปล่านะ"
+     },
+     {
+      "en": "Isn't it too expensive to buy a new laptop right now?",
+      "th": "มันแพงเกินไปไหมที่จะซื้อโน้ตบุ๊กเครื่องใหม่ตอนนี้"
+     },
+     {
+      "en": "Wasn't the meeting supposed to start at nine?",
+      "th": "การประชุมมันควรจะเริ่มตอนเก้าโมงไม่ใช่เหรอ"
+     },
+     {
+      "en": "Doesn't she work in the marketing team?",
+      "th": "เธอทำงานอยู่ทีมการตลาดไม่ใช่เหรอ"
+     },
+     {
+      "en": "Aren't you coming with us to the airport?",
+      "th": "คุณจะไม่ไปสนามบินกับพวกเราเหรอ"
      }
     ],
     "transform": [
@@ -2557,6 +3305,22 @@
      {
       "en": "Why hasn't he replied to my email yet?",
       "th": "ทำไมเขายังไม่ตอบอีเมลฉันเลยนะ"
+     },
+     {
+      "en": "Why didn't we book the tickets earlier?",
+      "th": "ทำไมเราไม่จองตั๋วให้เร็วกว่านี้นะ"
+     },
+     {
+      "en": "Where can't tourists take photos in the museum?",
+      "th": "ในพิพิธภัณฑ์นักท่องเที่ยวห้ามถ่ายรูปตรงไหนบ้าง"
+     },
+     {
+      "en": "Why haven't they fixed the air conditioner yet?",
+      "th": "ทำไมพวกเขายังไม่ซ่อมแอร์เลย"
+     },
+     {
+      "en": "Why didn't you mention this problem sooner?",
+      "th": "ทำไมคุณไม่บอกเรื่องปัญหานี้ให้เร็วกว่านี้"
      }
     ],
     "transform": [
@@ -2617,6 +3381,22 @@
      {
       "en": "Do you want to walk or take a taxi?",
       "th": "เธออยากเดินหรือนั่งแท็กซี่"
+     },
+     {
+      "en": "Are you going to study abroad or work first?",
+      "th": "คุณจะไปเรียนต่อต่างประเทศหรือทำงานก่อนดี"
+     },
+     {
+      "en": "Did she call you or send a message?",
+      "th": "เธอโทรหาคุณหรือส่งข้อความมา"
+     },
+     {
+      "en": "Can we pay by card or only in cash?",
+      "th": "เราจ่ายด้วยบัตรได้หรือจ่ายเงินสดได้อย่างเดียว"
+     },
+     {
+      "en": "Will you take the exam in June or in July?",
+      "th": "คุณจะสอบเดือนมิถุนายนหรือเดือนกรกฎาคม"
      }
     ],
     "transform": [
@@ -2665,6 +3445,22 @@
      {
       "en": "How come the shop is closed today?",
       "th": "ทำไมวันนี้ร้านปิดล่ะ"
+     },
+     {
+      "en": "How come the train is running so late today?",
+      "th": "ทำไมวันนี้รถไฟถึงมาช้าขนาดนี้"
+     },
+     {
+      "en": "How come you already finished the whole project?",
+      "th": "ทำไมคุณทำโปรเจกต์เสร็จหมดแล้วล่ะ"
+     },
+     {
+      "en": "How come we never heard about this discount?",
+      "th": "ทำไมพวกเราไม่เคยได้ยินเรื่องส่วนลดนี้เลย"
+     },
+     {
+      "en": "How come they moved to another city so suddenly?",
+      "th": "ทำไมพวกเขาถึงย้ายไปอยู่อีกเมืองกะทันหันขนาดนี้"
      }
     ],
     "transform": [
@@ -2717,6 +3513,22 @@
      {
       "en": "What was the weather like in London?",
       "th": "อากาศที่ลอนดอนเป็นยังไงบ้าง"
+     },
+     {
+      "en": "What are you saving all this money for?",
+      "th": "คุณเก็บเงินทั้งหมดนี้ไว้ทำอะไร"
+     },
+     {
+      "en": "What is the new apartment like?",
+      "th": "อพาร์ตเมนต์ใหม่เป็นยังไงบ้าง"
+     },
+     {
+      "en": "What did they cancel the trip for?",
+      "th": "พวกเขายกเลิกทริปไปทำไม"
+     },
+     {
+      "en": "What was your first day at work like?",
+      "th": "วันแรกที่ทำงานของคุณเป็นยังไงบ้าง"
      }
     ],
     "transform": [
@@ -2775,6 +3587,22 @@
      {
       "en": "The sun rises in the east.",
       "th": "ดวงอาทิตย์ขึ้นทางทิศตะวันออก"
+     },
+     {
+      "en": "We recycle plastic bottles at home.",
+      "th": "เราแยกขวดพลาสติกไปรีไซเคิลที่บ้าน"
+     },
+     {
+      "en": "My manager checks his emails before lunch.",
+      "th": "ผู้จัดการของฉันเช็กอีเมลก่อนพักเที่ยง"
+     },
+     {
+      "en": "Trains in Japan usually arrive on time.",
+      "th": "รถไฟในญี่ปุ่นมักจะมาตรงเวลา"
+     },
+     {
+      "en": "Water boils at 100 degrees Celsius.",
+      "th": "น้ำเดือดที่อุณหภูมิ 100 องศาเซลเซียส"
      }
     ],
     "transform": [
@@ -2832,6 +3660,22 @@
      {
       "en": "They are playing football.",
       "th": "พวกเขากำลังเล่นฟุตบอล"
+     },
+     {
+      "en": "The students are taking an exam right now.",
+      "th": "ตอนนี้นักเรียนกำลังสอบอยู่"
+     },
+     {
+      "en": "My brother is studying for his IELTS test this week.",
+      "th": "สัปดาห์นี้พี่ชายของฉันกำลังเตรียมสอบไอเอลส์"
+     },
+     {
+      "en": "It is getting dark outside.",
+      "th": "ข้างนอกกำลังเริ่มมืดแล้ว"
+     },
+     {
+      "en": "We are waiting for the bus to the airport.",
+      "th": "เรากำลังรอรถบัสไปสนามบิน"
      }
     ],
     "transform": [
@@ -2889,6 +3733,22 @@
      {
       "en": "Have you ever eaten sushi?",
       "th": "คุณเคยกินซูชิไหม?"
+     },
+     {
+      "en": "My flight has just landed in Singapore.",
+      "th": "เที่ยวบินของฉันเพิ่งลงจอดที่สิงคโปร์"
+     },
+     {
+      "en": "They have already booked the hotel.",
+      "th": "พวกเขาจองโรงแรมไว้เรียบร้อยแล้ว"
+     },
+     {
+      "en": "I have never driven a motorbike before.",
+      "th": "ฉันไม่เคยขับมอเตอร์ไซค์มาก่อนเลย"
+     },
+     {
+      "en": "She has improved her English a lot this year.",
+      "th": "ปีนี้เธอพัฒนาภาษาอังกฤษขึ้นมาก"
      }
     ],
     "transform": [
@@ -2942,6 +3802,22 @@
      {
       "en": "We ate noodles for lunch.",
       "th": "เรากินก๋วยเตี๋ยวเป็นมื้อกลางวัน"
+     },
+     {
+      "en": "We visited the temple during our trip to Chiang Mai.",
+      "th": "เราไปเที่ยวชมวัดตอนที่ไปเชียงใหม่"
+     },
+     {
+      "en": "He passed his driving test two weeks ago.",
+      "th": "เขาสอบใบขับขี่ผ่านเมื่อสองสัปดาห์ก่อน"
+     },
+     {
+      "en": "I forgot my umbrella at the office yesterday.",
+      "th": "เมื่อวานฉันลืมร่มไว้ที่ออฟฟิศ"
+     },
+     {
+      "en": "They built this bridge in 1995.",
+      "th": "พวกเขาสร้างสะพานนี้เมื่อปี 1995"
      }
     ],
     "transform": [
@@ -2999,6 +3875,22 @@
      {
       "en": "She was cooking while he was cleaning.",
       "th": "เธอกำลังทำอาหารขณะที่เขากำลังทำความสะอาด"
+     },
+     {
+      "en": "I was working late when the power went out.",
+      "th": "ฉันกำลังทำงานดึกอยู่ตอนที่ไฟดับ"
+     },
+     {
+      "en": "She was studying in the library all afternoon.",
+      "th": "เธอนั่งอ่านหนังสือในห้องสมุดตลอดบ่าย"
+     },
+     {
+      "en": "We were driving to Hua Hin when the storm hit.",
+      "th": "เรากำลังขับรถไปหัวหินตอนที่พายุเข้า"
+     },
+     {
+      "en": "He was talking on the phone when I arrived.",
+      "th": "เขากำลังคุยโทรศัพท์อยู่ตอนที่ฉันมาถึง"
      }
     ],
     "transform": [
@@ -3056,6 +3948,22 @@
      {
       "en": "It will rain tonight.",
       "th": "คืนนี้ฝนจะตก"
+     },
+     {
+      "en": "I will send you the report by tonight.",
+      "th": "ฉันจะส่งรายงานให้คุณภายในคืนนี้"
+     },
+     {
+      "en": "We will meet at the station at seven.",
+      "th": "เราจะเจอกันที่สถานีตอนเจ็ดโมง"
+     },
+     {
+      "en": "Don't worry, I will explain everything later.",
+      "th": "ไม่ต้องกังวล เดี๋ยวฉันจะอธิบายทุกอย่างทีหลัง"
+     },
+     {
+      "en": "The doctor will see you in a few minutes.",
+      "th": "อีกสักครู่หมอจะมาตรวจให้คุณ"
      }
     ],
     "transform": [
@@ -3117,6 +4025,22 @@
      {
       "en": "Look at the clouds! It is going to rain.",
       "th": "ดูเมฆนั่นสิ! ฝนกำลังจะตก"
+     },
+     {
+      "en": "We are going to move to a new apartment next year.",
+      "th": "ปีหน้าเราจะย้ายไปอยู่อพาร์ตเมนต์ใหม่"
+     },
+     {
+      "en": "I am going to start a business after graduation.",
+      "th": "ฉันตั้งใจจะเปิดธุรกิจหลังจากเรียนจบ"
+     },
+     {
+      "en": "They are going to renovate the office next month.",
+      "th": "เดือนหน้าพวกเขาจะปรับปรุงออฟฟิศใหม่"
+     },
+     {
+      "en": "He is going to take the IELTS exam in September.",
+      "th": "เขาจะสอบไอเอลส์ในเดือนกันยายน"
      }
     ],
     "transform": [
@@ -3184,6 +4108,22 @@
      {
       "en": "He had finished his homework before dinner started.",
       "th": "เขาทำการบ้านเสร็จก่อนที่มื้อเย็นจะเริ่ม"
+     },
+     {
+      "en": "She had left the office before the meeting was cancelled.",
+      "th": "เธอออกจากออฟฟิศไปแล้วก่อนที่การประชุมจะถูกยกเลิก"
+     },
+     {
+      "en": "We had booked the hotel before the prices went up.",
+      "th": "เราจองโรงแรมไว้แล้วก่อนที่ราคาจะขึ้น"
+     },
+     {
+      "en": "By the time I called, he had already gone to bed.",
+      "th": "ตอนที่ฉันโทรไป เขาเข้านอนไปแล้ว"
+     },
+     {
+      "en": "They had studied the topic before the exam began.",
+      "th": "พวกเขาอ่านหัวข้อนั้นมาแล้วก่อนที่ข้อสอบจะเริ่ม"
      }
     ],
     "transform": [
@@ -3244,6 +4184,22 @@
      {
       "en": "They have been waiting for the results for two weeks.",
       "th": "พวกเขารอผลมาสองสัปดาห์แล้ว"
+     },
+     {
+      "en": "He has been working at this company for three months.",
+      "th": "เขาทำงานที่บริษัทนี้มาได้สามเดือนแล้ว"
+     },
+     {
+      "en": "We have been saving money since we got married.",
+      "th": "เราเก็บเงินกันมาตั้งแต่แต่งงาน"
+     },
+     {
+      "en": "It has been raining since early this morning.",
+      "th": "ฝนตกมาตั้งแต่เช้ามืดแล้ว"
+     },
+     {
+      "en": "My sister has been learning to drive for a month.",
+      "th": "น้องสาวฉันหัดขับรถมาได้หนึ่งเดือนแล้ว"
      }
     ],
     "transform": [
@@ -3304,6 +4260,22 @@
      {
       "en": "She had been working there for a decade before she resigned.",
       "th": "เธอทำงานที่นั่นมาสิบปีก่อนจะลาออก"
+     },
+     {
+      "en": "He had been driving for hours before he stopped to rest.",
+      "th": "เขาขับรถมาหลายชั่วโมงก่อนที่จะจอดพัก"
+     },
+     {
+      "en": "We had been saving up before the trip got cancelled.",
+      "th": "เราเก็บเงินกันมาเรื่อยๆ ก่อนที่ทริปจะถูกยกเลิก"
+     },
+     {
+      "en": "She had been feeling ill before she finally saw a doctor.",
+      "th": "เธอรู้สึกไม่สบายมาสักพักก่อนที่จะไปหาหมอในที่สุด"
+     },
+     {
+      "en": "They had been arguing for a while before we walked in.",
+      "th": "พวกเขาเถียงกันมาพักหนึ่งแล้วก่อนที่เราจะเดินเข้าไป"
      }
     ],
     "transform": [
@@ -3360,6 +4332,22 @@
      {
       "en": "She will be working late tonight.",
       "th": "เธอจะทำงานดึกคืนนี้ (กำลังทำงานอยู่ช่วงดึก)"
+     },
+     {
+      "en": "At noon tomorrow, I will be sitting the IELTS exam.",
+      "th": "เที่ยงพรุ่งนี้ ฉันจะกำลังสอบไอเอลส์อยู่"
+     },
+     {
+      "en": "Next week, we will be moving into our new apartment.",
+      "th": "สัปดาห์หน้า เราจะกำลังย้ายเข้าอพาร์ตเมนต์ใหม่"
+     },
+     {
+      "en": "He will be presenting the report during the meeting.",
+      "th": "เขาจะกำลังนำเสนอรายงานระหว่างการประชุม"
+     },
+     {
+      "en": "This weekend, they will be traveling around the north.",
+      "th": "สุดสัปดาห์นี้ พวกเขาจะกำลังเที่ยวทางภาคเหนือ"
      }
     ],
     "transform": [
@@ -3416,6 +4404,22 @@
      {
       "en": "By next year, she will have saved enough money.",
       "th": "ภายในปีหน้า เธอจะเก็บเงินได้พอแล้ว"
+     },
+     {
+      "en": "By the end of the month, I will have paid off my loan.",
+      "th": "ภายในสิ้นเดือน ฉันจะจ่ายหนี้หมดแล้ว"
+     },
+     {
+      "en": "By Friday, the team will have completed the project.",
+      "th": "ภายในวันศุกร์ ทีมจะทำโปรเจกต์เสร็จแล้ว"
+     },
+     {
+      "en": "By the time you wake up, I will have left for work.",
+      "th": "ตอนที่คุณตื่น ฉันจะออกไปทำงานแล้ว"
+     },
+     {
+      "en": "By age forty, she will have visited thirty countries.",
+      "th": "พออายุสี่สิบ เธอจะไปเที่ยวมาแล้วสามสิบประเทศ"
      }
     ],
     "transform": [
@@ -3464,6 +4468,22 @@
      {
       "en": "She used to be very shy.",
       "th": "เธอเคยเป็นคนขี้อายมาก"
+     },
+     {
+      "en": "We used to live in a small village near the sea.",
+      "th": "เมื่อก่อนเราเคยอยู่หมู่บ้านเล็กๆ ใกล้ทะเล"
+     },
+     {
+      "en": "He used to play football every weekend.",
+      "th": "เขาเคยเล่นฟุตบอลทุกสุดสัปดาห์"
+     },
+     {
+      "en": "I used to hate coffee, but now I love it.",
+      "th": "เมื่อก่อนฉันเกลียดกาแฟ แต่ตอนนี้ฉันชอบมาก"
+     },
+     {
+      "en": "This street used to be much quieter.",
+      "th": "ถนนสายนี้เมื่อก่อนเงียบกว่านี้มาก"
      }
     ],
     "transform": [
@@ -3516,6 +4536,22 @@
      {
       "en": "On weekends, she would go hiking with her friends.",
       "th": "ทุกวันหยุดสุดสัปดาห์ เธอจะไปเดินเขากับเพื่อน"
+     },
+     {
+      "en": "After school, we would stop by the market for snacks.",
+      "th": "หลังเลิกเรียน เรามักแวะตลาดซื้อขนม"
+     },
+     {
+      "en": "During the holidays, my mother would bake cakes for us.",
+      "th": "ช่วงวันหยุด แม่ฉันมักอบเค้กให้เรากิน"
+     },
+     {
+      "en": "Back in college, I would study late in the library.",
+      "th": "สมัยเรียนมหาวิทยาลัย ฉันมักอ่านหนังสือดึกๆ ที่ห้องสมุด"
+     },
+     {
+      "en": "Every New Year, my grandparents would gather the whole family.",
+      "th": "ทุกปีใหม่ ปู่ย่าฉันมักรวมญาติทั้งครอบครัว"
      }
     ],
     "transform": [
@@ -3570,6 +4606,22 @@
      {
       "en": "When I was young, I could run fast.",
       "th": "ตอนฉันเด็ก ฉันวิ่งได้เร็ว"
+     },
+     {
+      "en": "He can play the guitar very well.",
+      "th": "เขาเล่นกีตาร์ได้เก่งมาก"
+     },
+     {
+      "en": "Could you swim when you were five?",
+      "th": "ตอนคุณอายุห้าขวบ คุณว่ายน้ำเป็นไหม"
+     },
+     {
+      "en": "We can meet at the coffee shop after work.",
+      "th": "เรานัดเจอกันที่ร้านกาแฟหลังเลิกงานได้"
+     },
+     {
+      "en": "My grandmother can still read without glasses.",
+      "th": "คุณยายของฉันยังอ่านหนังสือได้โดยไม่ต้องใส่แว่น"
      }
     ],
     "transform": [
@@ -3623,6 +4675,22 @@
      {
       "en": "He should see a doctor.",
       "th": "เขาควรไปหาหมอ"
+     },
+     {
+      "en": "You should book your flight early.",
+      "th": "คุณควรจองตั๋วเครื่องบินแต่เนิ่นๆ"
+     },
+     {
+      "en": "She should drink more water every day.",
+      "th": "เธอควรดื่มน้ำให้มากขึ้นทุกวัน"
+     },
+     {
+      "en": "They should apologize for being late.",
+      "th": "พวกเขาควรขอโทษที่มาสาย"
+     },
+     {
+      "en": "We should save some money each month.",
+      "th": "เราควรเก็บเงินไว้บ้างในแต่ละเดือน"
      }
     ],
     "transform": [
@@ -3671,6 +4739,22 @@
      {
       "en": "Students must be quiet in the library.",
       "th": "นักเรียนต้องเงียบในห้องสมุด"
+     },
+     {
+      "en": "You must show your passport at the airport.",
+      "th": "คุณต้องแสดงหนังสือเดินทางที่สนามบิน"
+     },
+     {
+      "en": "Drivers must stop at a red light.",
+      "th": "ผู้ขับขี่ต้องหยุดเมื่อไฟแดง"
+     },
+     {
+      "en": "We must protect the environment.",
+      "th": "เราต้องปกป้องสิ่งแวดล้อม"
+     },
+     {
+      "en": "You must turn off your phone during the exam.",
+      "th": "คุณต้องปิดโทรศัพท์ระหว่างการสอบ"
      }
     ],
     "transform": [
@@ -3719,6 +4803,22 @@
      {
       "en": "We had to wait an hour.",
       "th": "เราต้องรอหนึ่งชั่วโมง"
+     },
+     {
+      "en": "He has to wear a uniform at school.",
+      "th": "เขาต้องใส่ชุดนักเรียนที่โรงเรียน"
+     },
+     {
+      "en": "I have to renew my visa next month.",
+      "th": "ฉันต้องต่อวีซ่าเดือนหน้า"
+     },
+     {
+      "en": "She has to look after her little brother.",
+      "th": "เธอต้องดูแลน้องชายตัวเล็กของเธอ"
+     },
+     {
+      "en": "They had to change their plans because of the rain.",
+      "th": "พวกเขาต้องเปลี่ยนแผนเพราะฝนตก"
      }
     ],
     "transform": [
@@ -3772,6 +4872,22 @@
      {
       "en": "Can I use your phone?",
       "th": "ฉันขอใช้โทรศัพท์ของคุณได้ไหม?"
+     },
+     {
+      "en": "May I ask you a question?",
+      "th": "ขออนุญาตถามคำถามคุณได้ไหม"
+     },
+     {
+      "en": "Could you pass me the salt, please?",
+      "th": "ช่วยส่งเกลือให้ฉันหน่อยได้ไหม"
+     },
+     {
+      "en": "Can I sit here?",
+      "th": "ฉันนั่งตรงนี้ได้ไหม"
+     },
+     {
+      "en": "Could I leave early today?",
+      "th": "วันนี้ฉันขอกลับก่อนได้ไหม"
      }
     ],
     "transform": [
@@ -3820,6 +4936,22 @@
      {
       "en": "I might be late.",
       "th": "ฉันอาจจะมาสาย"
+     },
+     {
+      "en": "He may join us for dinner later.",
+      "th": "เขาอาจจะมาทานอาหารเย็นกับเราทีหลัง"
+     },
+     {
+      "en": "The meeting might be cancelled tomorrow.",
+      "th": "การประชุมพรุ่งนี้อาจจะถูกยกเลิก"
+     },
+     {
+      "en": "I may travel to Japan next year.",
+      "th": "ปีหน้าฉันอาจจะไปเที่ยวญี่ปุ่น"
+     },
+     {
+      "en": "She might not agree with the plan.",
+      "th": "เธออาจจะไม่เห็นด้วยกับแผนนี้"
      }
     ],
     "transform": [
@@ -3868,6 +5000,22 @@
      {
       "en": "She will help us.",
       "th": "เธอจะช่วยเรา"
+     },
+     {
+      "en": "I will send you the report by email.",
+      "th": "ฉันจะส่งรายงานให้คุณทางอีเมล"
+     },
+     {
+      "en": "Would you like some tea?",
+      "th": "คุณรับชาสักหน่อยไหม"
+     },
+     {
+      "en": "They will arrive at noon.",
+      "th": "พวกเขาจะมาถึงตอนเที่ยง"
+     },
+     {
+      "en": "I would love to visit London someday.",
+      "th": "ฉันอยากไปเที่ยวลอนดอนสักวันหนึ่ง"
      }
     ],
     "transform": [
@@ -3931,6 +5079,22 @@
      {
       "en": "They might be at home right now, but I'm not sure.",
       "th": "ตอนนี้พวกเขาอาจจะอยู่บ้านก็ได้ แต่ฉันไม่แน่ใจ"
+     },
+     {
+      "en": "That must be the new manager; everyone keeps looking at him.",
+      "th": "คนนั้นต้องเป็นผู้จัดการคนใหม่แน่ ๆ ใคร ๆ ก็เอาแต่มองเขากันใหญ่"
+     },
+     {
+      "en": "This can't be the right address; the street name is different.",
+      "th": "ที่นี่เป็นที่อยู่ที่ถูกไม่ได้หรอก ชื่อถนนคนละชื่อกันเลย"
+     },
+     {
+      "en": "The exam might be easier than we expect this year.",
+      "th": "ข้อสอบปีนี้อาจจะง่ายกว่าที่เราคิดก็ได้"
+     },
+     {
+      "en": "She must be very talented to win that scholarship.",
+      "th": "เธอต้องเก่งมากแน่ ๆ ถึงได้คว้าทุนการศึกษานั้นมา"
      }
     ],
     "transform": [
@@ -3983,6 +5147,22 @@
      {
       "en": "They might have taken the wrong turn somewhere.",
       "th": "พวกเขาอาจจะเลี้ยวผิดตรงไหนสักแห่งก็ได้"
+     },
+     {
+      "en": "The flight must have been delayed; nobody has arrived yet.",
+      "th": "เที่ยวบินคงถูกดีเลย์แน่ ๆ เพราะยังไม่มีใครมาถึงเลย"
+     },
+     {
+      "en": "He can't have read the whole report in five minutes.",
+      "th": "เขาจะอ่านรายงานทั้งฉบับจบในห้านาทีไม่ได้หรอก"
+     },
+     {
+      "en": "You might have left your phone in the taxi.",
+      "th": "คุณอาจจะลืมโทรศัพท์ไว้ในแท็กซี่ก็ได้นะ"
+     },
+     {
+      "en": "The candidate must have prepared a lot for this interview.",
+      "th": "ผู้สมัครคนนี้ต้องเตรียมตัวมาเยอะมากแน่ ๆ สำหรับการสัมภาษณ์ครั้งนี้"
      }
     ],
     "transform": [
@@ -4035,6 +5215,22 @@
      {
       "en": "We should have booked the tickets earlier.",
       "th": "เราน่าจะจองตั๋วให้เร็วกว่านี้ (แต่ไม่ได้จอง)"
+     },
+     {
+      "en": "I should have saved more money before I quit my job.",
+      "th": "ฉันน่าจะเก็บเงินให้มากกว่านี้ก่อนลาออกจากงาน"
+     },
+     {
+      "en": "You shouldn't have replied to that email so quickly.",
+      "th": "คุณไม่น่ารีบตอบอีเมลฉบับนั้นเร็วขนาดนั้นเลย"
+     },
+     {
+      "en": "We should have checked the weather before the trip.",
+      "th": "เราน่าจะเช็กสภาพอากาศก่อนออกเดินทาง"
+     },
+     {
+      "en": "He shouldn't have lent his car to a stranger.",
+      "th": "เขาไม่น่าให้คนแปลกหน้ายืมรถเลย"
      }
     ],
     "transform": [
@@ -4083,6 +5279,22 @@
      {
       "en": "She needn't have brought an umbrella; it didn't rain.",
       "th": "เธอเอาร่มมาเปล่า ๆ เลย ฝนไม่ตกสักหน่อย"
+     },
+     {
+      "en": "You needn't have paid for a taxi; the hotel offers a free shuttle.",
+      "th": "คุณไม่จำเป็นต้องเสียเงินค่าแท็กซี่เลย โรงแรมมีรถรับส่งฟรี"
+     },
+     {
+      "en": "We needn't have rushed; the meeting started an hour late.",
+      "th": "เราไม่จำเป็นต้องรีบเลย ประชุมเริ่มช้าไปตั้งชั่วโมง"
+     },
+     {
+      "en": "He needn't have apologized; it really wasn't his fault.",
+      "th": "เขาไม่จำเป็นต้องขอโทษเลย มันไม่ใช่ความผิดเขาจริง ๆ"
+     },
+     {
+      "en": "They needn't have printed so many copies; most people used the app.",
+      "th": "พวกเขาไม่จำเป็นต้องพิมพ์เอกสารมากขนาดนั้น คนส่วนใหญ่ใช้แอปกัน"
      }
     ],
     "transform": [
@@ -4131,6 +5343,22 @@
      {
       "en": "You'd better see a doctor if the pain continues.",
       "th": "ถ้ายังปวดอยู่ เธอควรไปหาหมอนะ"
+     },
+     {
+      "en": "You'd better back up your files before updating the system.",
+      "th": "คุณควรสำรองไฟล์ไว้ก่อนอัปเดตระบบนะ ไม่งั้นเดี๋ยวมีปัญหา"
+     },
+     {
+      "en": "We'd better book a table now; the restaurant gets busy on Fridays.",
+      "th": "เราจองโต๊ะตอนนี้เลยดีกว่า ร้านนี้คนเยอะมากวันศุกร์"
+     },
+     {
+      "en": "You'd better not skip breakfast before the long exam.",
+      "th": "คุณอย่าอดอาหารเช้าก่อนสอบยาว ๆ นะ ไม่งั้นแย่แน่"
+     },
+     {
+      "en": "He'd better apologize soon, or he'll lose the client.",
+      "th": "เขาควรรีบขอโทษนะ ไม่งั้นจะเสียลูกค้าไป"
      }
     ],
     "transform": [
@@ -4183,6 +5411,22 @@
      {
       "en": "I'd rather not talk about it right now.",
       "th": "ตอนนี้ฉันไม่อยากพูดเรื่องนั้นเท่าไหร่"
+     },
+     {
+      "en": "I'd rather read the book than watch the movie.",
+      "th": "ฉันขออ่านหนังสือดีกว่าดูหนัง"
+     },
+     {
+      "en": "She'd rather work from home than commute every day.",
+      "th": "เธออยากทำงานที่บ้านมากกว่าเดินทางไปทำงานทุกวัน"
+     },
+     {
+      "en": "They'd rather save for a house than travel abroad this year.",
+      "th": "พวกเขาอยากเก็บเงินซื้อบ้านมากกว่าไปเที่ยวต่างประเทศปีนี้"
+     },
+     {
+      "en": "I'd rather not commit to anything until I see the details.",
+      "th": "ฉันขอยังไม่รับปากอะไรจนกว่าจะได้เห็นรายละเอียดก่อน"
      }
     ],
     "transform": [
@@ -4233,6 +5477,22 @@
      {
       "en": "You are not to leave the room until the exam ends.",
       "th": "ห้ามออกจากห้องจนกว่าการสอบจะจบ (คำสั่งเชิงห้าม)"
+     },
+     {
+      "en": "Visitors are to sign in at the front desk on arrival.",
+      "th": "ผู้มาติดต่อต้องลงชื่อที่โต๊ะประชาสัมพันธ์เมื่อมาถึง"
+     },
+     {
+      "en": "The new manager is to start work on the first of March.",
+      "th": "ผู้จัดการคนใหม่จะเริ่มงานในวันที่หนึ่งมีนาคม"
+     },
+     {
+      "en": "Students are not to use their phones during the test.",
+      "th": "นักเรียนห้ามใช้โทรศัพท์ระหว่างการสอบ"
+     },
+     {
+      "en": "The two leaders are to sign the agreement this evening.",
+      "th": "ผู้นำทั้งสองจะลงนามในข้อตกลงเย็นนี้"
      }
     ],
     "transform": [
@@ -4282,6 +5542,22 @@
      {
       "en": "She looked as if she was about to cry.",
       "th": "เธอดูเหมือนกำลังจะร้องไห้"
+     },
+     {
+      "en": "We were about to order dinner when the power went out.",
+      "th": "เรากำลังจะสั่งอาหารเย็นตอนที่ไฟดับพอดี"
+     },
+     {
+      "en": "The meeting is about to begin, so please turn off your phones.",
+      "th": "การประชุมกำลังจะเริ่มแล้ว กรุณาปิดโทรศัพท์ด้วย"
+     },
+     {
+      "en": "He was about to say something, but he changed his mind.",
+      "th": "เขากำลังจะพูดอะไรบางอย่าง แต่แล้วก็เปลี่ยนใจ"
+     },
+     {
+      "en": "I'm about to board the plane, so I'll call you later.",
+      "th": "ฉันกำลังจะขึ้นเครื่องแล้ว เดี๋ยวโทรหาทีหลังนะ"
      }
     ],
     "transform": [
@@ -4326,6 +5602,22 @@
      {
       "en": "She is due to give birth in April.",
       "th": "เธอมีกำหนดคลอดในเดือนเมษายน"
+     },
+     {
+      "en": "The results are due to come out at the end of the month.",
+      "th": "ผลจะออกในช่วงปลายเดือนนี้"
+     },
+     {
+      "en": "Our flight was due to depart at nine, but it was delayed.",
+      "th": "เที่ยวบินของเรามีกำหนดออกเดินทางเก้าโมง แต่ล่าช้าออกไป"
+     },
+     {
+      "en": "The library books are due back next Tuesday.",
+      "th": "หนังสือห้องสมุดครบกำหนดคืนวันอังคารหน้า"
+     },
+     {
+      "en": "A new shopping mall is due to open downtown this year.",
+      "th": "ห้างสรรพสินค้าแห่งใหม่มีกำหนดเปิดใจกลางเมืองปีนี้"
      }
     ],
     "transform": [
@@ -4370,6 +5662,22 @@
      {
       "en": "This medicine is supposed to reduce the pain.",
       "th": "ยานี้ว่ากันว่าช่วยลดอาการปวด (ตามที่เขาว่ากัน)"
+     },
+     {
+      "en": "You're supposed to check in two hours before the flight.",
+      "th": "คุณควรจะเช็กอินก่อนขึ้นเครื่องสองชั่วโมง"
+     },
+     {
+      "en": "I was supposed to finish this report yesterday.",
+      "th": "ฉันควรจะทำรายงานนี้เสร็จตั้งแต่เมื่อวานแล้ว"
+     },
+     {
+      "en": "Children are supposed to be in bed by nine on school nights.",
+      "th": "เด็ก ๆ ควรจะเข้านอนก่อนสามทุ่มในคืนก่อนวันเรียน"
+     },
+     {
+      "en": "This app is supposed to help you learn new words faster.",
+      "th": "แอปนี้ควรจะช่วยให้คุณเรียนศัพท์ใหม่ได้เร็วขึ้น"
      }
     ],
     "transform": [
@@ -4418,6 +5726,22 @@
      {
       "en": "If you study this hard, you are bound to pass.",
       "th": "ถ้าตั้งใจเรียนขนาดนี้ คุณสอบผ่านแน่นอน"
+     },
+     {
+      "en": "If you keep skipping class, you're bound to fall behind.",
+      "th": "ถ้าคุณโดดเรียนเรื่อย ๆ คุณจะต้องตามเพื่อนไม่ทันแน่นอน"
+     },
+     {
+      "en": "The traffic is likely to be heavy during the holiday.",
+      "th": "การจราจรมีแนวโน้มจะติดหนักในช่วงวันหยุด"
+     },
+     {
+      "en": "Such a talented team is bound to win the contract.",
+      "th": "ทีมที่เก่งขนาดนี้ต้องได้สัญญานี้แน่นอน"
+     },
+     {
+      "en": "Online shopping is likely to grow even more in the future.",
+      "th": "การช้อปปิ้งออนไลน์มีแนวโน้มจะเติบโตมากขึ้นอีกในอนาคต"
      }
     ],
     "transform": [
@@ -4472,6 +5796,22 @@
      {
       "en": "English is spoken here.",
       "th": "ที่นี่พูดภาษาอังกฤษ (ภาษาอังกฤษถูกใช้พูดที่นี่)"
+     },
+     {
+      "en": "Coffee is served in the morning.",
+      "th": "กาแฟเสิร์ฟในตอนเช้า"
+     },
+     {
+      "en": "The reports are printed every Friday.",
+      "th": "รายงานถูกพิมพ์ออกมาทุกวันศุกร์"
+     },
+     {
+      "en": "This bridge is used by thousands of people daily.",
+      "th": "สะพานนี้มีคนใช้หลายพันคนในแต่ละวัน"
+     },
+     {
+      "en": "Fresh vegetables are sold at the market.",
+      "th": "ผักสดวางขายอยู่ที่ตลาด"
      }
     ],
     "transform": [
@@ -4528,6 +5868,22 @@
      {
       "en": "The house is cleaned by my mother.",
       "th": "บ้านถูกทำความสะอาดโดยแม่ของฉัน"
+     },
+     {
+      "en": "The project is managed by our new team leader.",
+      "th": "โปรเจกต์นี้ดูแลโดยหัวหน้าทีมคนใหม่ของเรา"
+     },
+     {
+      "en": "These photos are taken by a professional photographer.",
+      "th": "รูปเหล่านี้ถ่ายโดยช่างภาพมืออาชีพ"
+     },
+     {
+      "en": "The meals are cooked by a famous chef.",
+      "th": "อาหารพวกนี้ปรุงโดยเชฟชื่อดัง"
+     },
+     {
+      "en": "The garden is watered by my grandfather every evening.",
+      "th": "สวนได้รับการรดน้ำโดยคุณตาทุกเย็น"
      }
     ],
     "transform": [
@@ -4576,6 +5932,22 @@
      {
       "en": "The cake was eaten by the children.",
       "th": "เค้กถูกกินโดยพวกเด็กๆ"
+     },
+     {
+      "en": "The email was sent an hour ago.",
+      "th": "อีเมลถูกส่งไปเมื่อชั่วโมงที่แล้ว"
+     },
+     {
+      "en": "The results were published last week.",
+      "th": "ผลลัพธ์ถูกประกาศเมื่อสัปดาห์ที่แล้ว"
+     },
+     {
+      "en": "Our flight was delayed because of the storm.",
+      "th": "เที่ยวบินของเราถูกเลื่อนเพราะพายุ"
+     },
+     {
+      "en": "The old photos were kept in a wooden box.",
+      "th": "รูปเก่าๆ ถูกเก็บไว้ในกล่องไม้"
      }
     ],
     "transform": [
@@ -4628,6 +6000,22 @@
      {
       "en": "The rules must be followed.",
       "th": "กฎต้องถูกปฏิบัติตาม"
+     },
+     {
+      "en": "Your order will be delivered tomorrow.",
+      "th": "คำสั่งซื้อของคุณจะถูกจัดส่งพรุ่งนี้"
+     },
+     {
+      "en": "The application must be submitted before Friday.",
+      "th": "ใบสมัครต้องส่งก่อนวันศุกร์"
+     },
+     {
+      "en": "This problem can be solved easily.",
+      "th": "ปัญหานี้แก้ไขได้ง่ายๆ"
+     },
+     {
+      "en": "The documents should be checked carefully.",
+      "th": "เอกสารพวกนี้ควรตรวจสอบอย่างรอบคอบ"
      }
     ],
     "transform": [
@@ -4680,6 +6068,22 @@
      {
       "en": "Was the letter sent yesterday?",
       "th": "จดหมายถูกส่งเมื่อวานหรือเปล่า"
+     },
+     {
+      "en": "Is breakfast included in the price?",
+      "th": "อาหารเช้ารวมอยู่ในราคาไหม"
+     },
+     {
+      "en": "Are the forms filled out correctly?",
+      "th": "แบบฟอร์มกรอกอย่างถูกต้องหรือเปล่า"
+     },
+     {
+      "en": "Was the meeting cancelled?",
+      "th": "การประชุมถูกยกเลิกหรือเปล่า"
+     },
+     {
+      "en": "Were the guests invited to the party?",
+      "th": "แขกได้รับเชิญมางานเลี้ยงไหม"
      }
     ],
     "transform": [
@@ -4732,6 +6136,22 @@
      {
       "en": "These books are not sold here.",
       "th": "หนังสือเหล่านี้ไม่ได้ถูกขายที่นี่"
+     },
+     {
+      "en": "The shop is not cleaned on Sundays.",
+      "th": "ร้านนี้ไม่ได้ทำความสะอาดในวันอาทิตย์"
+     },
+     {
+      "en": "The package was not delivered on time.",
+      "th": "พัสดุไม่ได้ถูกจัดส่งตรงเวลา"
+     },
+     {
+      "en": "These files are not saved automatically.",
+      "th": "ไฟล์พวกนี้ไม่ได้ถูกบันทึกโดยอัตโนมัติ"
+     },
+     {
+      "en": "The problem was not explained clearly.",
+      "th": "ปัญหานี้ไม่ได้ถูกอธิบายอย่างชัดเจน"
      }
     ],
     "transform": [
@@ -4784,6 +6204,22 @@
      {
       "en": "My car has been repaired.",
       "th": "รถของฉันถูกซ่อมเรียบร้อยแล้ว"
+     },
+     {
+      "en": "The road has been closed for repairs.",
+      "th": "ถนนถูกปิดเพื่อซ่อมแซม"
+     },
+     {
+      "en": "The decision has been made by the committee.",
+      "th": "การตัดสินใจถูกตัดสินโดยคณะกรรมการแล้ว"
+     },
+     {
+      "en": "All the seats have been booked already.",
+      "th": "ที่นั่งทั้งหมดถูกจองไปหมดแล้ว"
+     },
+     {
+      "en": "The new policy has been introduced this year.",
+      "th": "นโยบายใหม่ถูกนำมาใช้ในปีนี้"
      }
     ],
     "transform": [
@@ -4834,6 +6270,22 @@
      {
       "en": "It is widely known that the company underpays its workers.",
       "th": "เป็นที่รู้กันทั่วไปว่าบริษัทนี้จ่ายค่าแรงพนักงานต่ำกว่าที่ควร"
+     },
+     {
+      "en": "It is said that the recipe has been kept secret for a hundred years.",
+      "th": "ว่ากันว่าสูตรอาหารนี้ถูกเก็บเป็นความลับมานานร้อยปีแล้ว"
+     },
+     {
+      "en": "It was announced that the flight would be delayed by three hours.",
+      "th": "มีการประกาศว่าเที่ยวบินจะล่าช้าออกไปสามชั่วโมง"
+     },
+     {
+      "en": "It is expected that prices will rise again next year.",
+      "th": "คาดกันว่าราคาจะปรับขึ้นอีกในปีหน้า"
+     },
+     {
+      "en": "It was claimed that the product could cure many diseases.",
+      "th": "มีการอ้างว่าผลิตภัณฑ์นี้สามารถรักษาโรคได้หลายชนิด"
      }
     ],
     "transform": [
@@ -4882,6 +6334,22 @@
      {
       "en": "The two companies are thought to be in merger talks.",
       "th": "คาดกันว่าบริษัททั้งสองกำลังเจรจาควบรวมกิจการ"
+     },
+     {
+      "en": "The old bridge is known to be unsafe for heavy trucks.",
+      "th": "เป็นที่รู้กันว่าสะพานเก่านั้นไม่ปลอดภัยสำหรับรถบรรทุกหนัก"
+     },
+     {
+      "en": "The professor is expected to publish her research next month.",
+      "th": "คาดว่าอาจารย์จะตีพิมพ์งานวิจัยของเธอในเดือนหน้า"
+     },
+     {
+      "en": "Regular exercise is known to improve sleep quality.",
+      "th": "เป็นที่ทราบกันว่าการออกกำลังกายสม่ำเสมอช่วยให้คุณภาพการนอนดีขึ้น"
+     },
+     {
+      "en": "The suspect is reported to be hiding in a nearby village.",
+      "th": "มีรายงานว่าผู้ต้องสงสัยกำลังหลบซ่อนอยู่ในหมู่บ้านใกล้เคียง"
      }
     ],
     "transform": [
@@ -4930,6 +6398,22 @@
      {
       "en": "The minister is said to have known about the deal for months.",
       "th": "ว่ากันว่ารัฐมนตรีรับรู้เรื่องข้อตกลงนี้มาหลายเดือนแล้ว"
+     },
+     {
+      "en": "The author is believed to have written the novel in just one year.",
+      "th": "เชื่อกันว่าผู้เขียนแต่งนิยายเรื่องนี้เสร็จภายในเวลาเพียงปีเดียว"
+     },
+     {
+      "en": "The company is reported to have lost millions in the scandal.",
+      "th": "มีรายงานว่าบริษัทสูญเสียเงินหลายล้านจากเรื่องอื้อฉาวครั้งนี้"
+     },
+     {
+      "en": "The ancient city is thought to have been abandoned after a drought.",
+      "th": "เชื่อกันว่าเมืองโบราณแห่งนี้ถูกทิ้งร้างหลังจากเกิดภัยแล้ง"
+     },
+     {
+      "en": "The athlete is said to have trained for over ten years.",
+      "th": "ว่ากันว่านักกีฬาคนนี้ฝึกซ้อมมานานกว่าสิบปี"
      }
     ],
     "transform": [
@@ -4974,6 +6458,22 @@
      {
       "en": "There are believed to be thousands of undiscovered species in the region.",
       "th": "เชื่อกันว่ามีสิ่งมีชีวิตที่ยังไม่ถูกค้นพบอยู่หลายพันชนิดในภูมิภาคนี้"
+     },
+     {
+      "en": "There are believed to be errors in the original translation.",
+      "th": "เชื่อกันว่ามีข้อผิดพลาดอยู่ในคำแปลต้นฉบับ"
+     },
+     {
+      "en": "There is said to be a hidden tunnel beneath the temple.",
+      "th": "ว่ากันว่ามีอุโมงค์ลับอยู่ใต้วัดแห่งนี้"
+     },
+     {
+      "en": "There are thought to be more than fifty applicants for the job.",
+      "th": "คาดว่ามีผู้สมัครงานนี้มากกว่าห้าสิบคน"
+     },
+     {
+      "en": "There is reported to be a shortage of nurses in the region.",
+      "th": "มีรายงานว่าเกิดภาวะขาดแคลนพยาบาลในภูมิภาคนี้"
      }
     ],
     "transform": [
@@ -5022,6 +6522,22 @@
      {
       "en": "The document was said to have been destroyed during the war.",
       "th": "ว่ากันว่าเอกสารฉบับนั้นถูกทำลายไปในช่วงสงคราม"
+     },
+     {
+      "en": "The explorer was believed to have reached the summit alone.",
+      "th": "เชื่อกันว่านักสำรวจคนนั้นพิชิตยอดเขาได้เพียงลำพัง"
+     },
+     {
+      "en": "The witnesses were said to have seen the accident clearly.",
+      "th": "ว่ากันว่าพยานเหล่านั้นเห็นอุบัติเหตุอย่างชัดเจน"
+     },
+     {
+      "en": "The manager was reported to have resigned before the audit began.",
+      "th": "มีรายงานว่าผู้จัดการลาออกก่อนที่การตรวจสอบบัญชีจะเริ่มขึ้น"
+     },
+     {
+      "en": "The villagers were thought to have fled before the flood arrived.",
+      "th": "เชื่อกันว่าชาวบ้านหนีออกไปก่อนที่น้ำท่วมจะมาถึง"
      }
     ],
     "transform": [
@@ -5076,6 +6592,22 @@
      {
       "en": "The teacher who helped me was very kind.",
       "th": "ครูที่ช่วยฉันใจดีมาก"
+     },
+     {
+      "en": "The doctor who treated my mother is retiring next month.",
+      "th": "หมอที่รักษาแม่ของผมกำลังจะเกษียณเดือนหน้า"
+     },
+     {
+      "en": "The candidate who impressed the panel got the job.",
+      "th": "ผู้สมัครที่สร้างความประทับใจให้คณะกรรมการได้งานไป"
+     },
+     {
+      "en": "People who exercise regularly tend to sleep better.",
+      "th": "คนที่ออกกำลังกายสม่ำเสมอมักจะนอนหลับได้ดีกว่า"
+     },
+     {
+      "en": "The tourist who lost his passport went to the police station.",
+      "th": "นักท่องเที่ยวที่ทำพาสปอร์ตหายไปที่สถานีตำรวจ"
      }
     ],
     "transform": [
@@ -5124,6 +6656,22 @@
      {
       "en": "I like the song that is playing now.",
       "th": "ฉันชอบเพลงที่กำลังเปิดอยู่ตอนนี้"
+     },
+     {
+      "en": "The phone which fell in the water still works.",
+      "th": "โทรศัพท์ที่ตกลงไปในน้ำยังใช้งานได้อยู่"
+     },
+     {
+      "en": "I found the keys that were missing all week.",
+      "th": "ฉันเจอกุญแจที่หายไปทั้งอาทิตย์แล้ว"
+     },
+     {
+      "en": "The bridge which connects the two cities is very old.",
+      "th": "สะพานที่เชื่อมสองเมืองเข้าด้วยกันนั้นเก่ามาก"
+     },
+     {
+      "en": "She adopted a dog that had been abandoned.",
+      "th": "เธอรับเลี้ยงหมาที่ถูกทิ้งมาตัวหนึ่ง"
      }
     ],
     "transform": [
@@ -5176,6 +6724,22 @@
      {
       "en": "The movie (that) we watched was boring.",
       "th": "หนังที่เราดูน่าเบื่อ"
+     },
+     {
+      "en": "The email (that) I sent yesterday got no reply.",
+      "th": "อีเมลที่ฉันส่งไปเมื่อวานยังไม่มีใครตอบเลย"
+     },
+     {
+      "en": "The restaurant (which) we tried was fully booked.",
+      "th": "ร้านอาหารที่เราไปลองมานั้นคนจองเต็มหมดแล้ว"
+     },
+     {
+      "en": "The colleague (who) I trained is now my manager.",
+      "th": "เพื่อนร่วมงานที่ฉันเคยสอนงานตอนนี้เป็นหัวหน้าฉันแล้ว"
+     },
+     {
+      "en": "The topic (that) the examiner asked was quite difficult.",
+      "th": "หัวข้อที่กรรมการถามค่อนข้างยาก"
      }
     ],
     "transform": [
@@ -5228,6 +6792,22 @@
      {
       "en": "I visited the town where my grandmother lives.",
       "th": "ฉันไปเยี่ยมเมืองที่คุณยายฉันอยู่"
+     },
+     {
+      "en": "This is the cafe where we first met.",
+      "th": "นี่คือร้านกาแฟที่เราเจอกันครั้งแรก"
+     },
+     {
+      "en": "That is the office where I had my interview.",
+      "th": "นั่นคือออฟฟิศที่ฉันไปสัมภาษณ์งาน"
+     },
+     {
+      "en": "We stayed in a hotel where the staff spoke Thai.",
+      "th": "เราพักในโรงแรมที่พนักงานพูดภาษาไทยได้"
+     },
+     {
+      "en": "He showed me the library where he studies every day.",
+      "th": "เขาพาฉันไปดูห้องสมุดที่เขาไปอ่านหนังสือทุกวัน"
      }
     ],
     "transform": [
@@ -5280,6 +6860,22 @@
      {
       "en": "She lives in a house whose roof is blue.",
       "th": "เธออยู่ในบ้านที่หลังคาของมันเป็นสีฟ้า"
+     },
+     {
+      "en": "I met a student whose essay won first prize.",
+      "th": "ฉันได้เจอนักเรียนที่เรียงความของเขาได้รางวัลที่หนึ่ง"
+     },
+     {
+      "en": "The company whose products we use just went bankrupt.",
+      "th": "บริษัทที่เราใช้สินค้าของเขาเพิ่งล้มละลายไป"
+     },
+     {
+      "en": "She is the author whose books I read as a child.",
+      "th": "เธอคือนักเขียนที่ฉันอ่านหนังสือของเธอมาตั้งแต่เด็ก"
+     },
+     {
+      "en": "They helped a family whose home was damaged by the flood.",
+      "th": "พวกเขาช่วยครอบครัวที่บ้านเสียหายจากน้ำท่วม"
      }
     ],
     "transform": [
@@ -5328,6 +6924,22 @@
      {
       "en": "Where do you work? / The office where I work is far.",
       "th": "คุณทำงานที่ไหน? / ออฟฟิศที่ฉันทำงานอยู่ไกล"
+     },
+     {
+      "en": "Where did you buy that? / The shop where I bought it is closed today.",
+      "th": "คุณซื้อของนั้นที่ไหน / ร้านที่ฉันซื้อมันมาปิดวันนี้"
+     },
+     {
+      "en": "Who won the game? / The team that won the game celebrated all night.",
+      "th": "ทีมไหนชนะเกม / ทีมที่ชนะเกมฉลองกันทั้งคืน"
+     },
+     {
+      "en": "Which train goes to Chiang Mai? / The train which goes to Chiang Mai leaves at nine.",
+      "th": "รถไฟขบวนไหนไปเชียงใหม่ / รถไฟที่ไปเชียงใหม่ออกตอนเก้าโมง"
+     },
+     {
+      "en": "Where is the meeting? / The room where the meeting is held is on the third floor.",
+      "th": "ประชุมที่ไหน / ห้องที่จัดประชุมอยู่ชั้นสาม"
      }
     ],
     "transform": [
@@ -5386,6 +6998,22 @@
      {
       "en": "Dr. Chen, who wrote the report, will present the findings.",
       "th": "ดร.เฉิน ผู้ซึ่งเขียนรายงานฉบับนี้ จะเป็นผู้นำเสนอผลการศึกษา"
+     },
+     {
+      "en": "Our new manager, who used to work in Singapore, speaks four languages.",
+      "th": "ผู้จัดการคนใหม่ของเรา ซึ่งเคยทำงานที่สิงคโปร์ พูดได้สี่ภาษา"
+     },
+     {
+      "en": "The Amazon River, which flows through several countries, is the largest by volume.",
+      "th": "แม่น้ำแอมะซอน ซึ่งไหลผ่านหลายประเทศ เป็นแม่น้ำที่มีปริมาณน้ำมากที่สุด"
+     },
+     {
+      "en": "My grandmother, who turns ninety next month, still cooks every day.",
+      "th": "คุณยายของฉัน ซึ่งจะอายุครบเก้าสิบปีในเดือนหน้า ยังทำอาหารเองทุกวัน"
+     },
+     {
+      "en": "The vaccine, which was developed in under a year, saved countless lives.",
+      "th": "วัคซีนตัวนี้ ซึ่งพัฒนาขึ้นภายในเวลาไม่ถึงหนึ่งปี ช่วยชีวิตคนไว้นับไม่ถ้วน"
      }
     ],
     "transform": [
@@ -5443,6 +7071,22 @@
      {
       "en": "The train was cancelled, which meant we had to wait two hours.",
       "th": "รถไฟถูกยกเลิก ซึ่งหมายความว่าเราต้องรอสองชั่วโมง"
+     },
+     {
+      "en": "He forgot to save the file, which cost him a whole day of work.",
+      "th": "เขาลืมเซฟไฟล์ ซึ่งทำให้เสียงานไปทั้งวัน"
+     },
+     {
+      "en": "Prices went up again this month, which worried a lot of shoppers.",
+      "th": "ราคาสินค้าขึ้นอีกในเดือนนี้ ซึ่งทำให้นักช้อปหลายคนกังวล"
+     },
+     {
+      "en": "She agreed to lead the project, which pleased the whole team.",
+      "th": "เธอตกลงเป็นหัวหน้าโครงการ ซึ่งทำให้ทั้งทีมพอใจ"
+     },
+     {
+      "en": "The hotel upgraded our room for free, which made the trip even better.",
+      "th": "โรงแรมอัปเกรดห้องให้เราฟรี ซึ่งทำให้ทริปดียิ่งขึ้นไปอีก"
      }
     ],
     "transform": [
@@ -5500,6 +7144,22 @@
      {
       "en": "This is the theory on which the study is based.",
       "th": "นี่คือทฤษฎีที่งานวิจัยชิ้นนี้ยึดเป็นพื้นฐาน"
+     },
+     {
+      "en": "The company for which she works is based in Berlin.",
+      "th": "บริษัทที่เธอทำงานอยู่ตั้งอยู่ที่กรุงเบอร์ลิน"
+     },
+     {
+      "en": "The colleague with whom I share an office is retiring soon.",
+      "th": "เพื่อนร่วมงานที่ฉันใช้ห้องทำงานร่วมกันกำลังจะเกษียณเร็ว ๆ นี้"
+     },
+     {
+      "en": "This is the bridge under which the old market used to stand.",
+      "th": "นี่คือสะพานที่ตลาดเก่าเคยตั้งอยู่ข้างใต้"
+     },
+     {
+      "en": "The professor from whom I learned the most has moved abroad.",
+      "th": "อาจารย์ที่ฉันได้เรียนรู้มากที่สุดย้ายไปอยู่ต่างประเทศแล้ว"
      }
     ],
     "transform": [
@@ -5553,6 +7213,22 @@
      {
       "en": "Students taking the exam must arrive early.",
       "th": "นักเรียนที่กำลังจะเข้าสอบต้องมาถึงแต่เช้า"
+     },
+     {
+      "en": "The people waiting outside have been there since dawn.",
+      "th": "ผู้คนที่รออยู่ข้างนอกยืนรอตรงนั้นมาตั้งแต่รุ่งสาง"
+     },
+     {
+      "en": "The report submitted last week contained several errors.",
+      "th": "รายงานที่ส่งไปเมื่อสัปดาห์ที่แล้วมีข้อผิดพลาดหลายจุด"
+     },
+     {
+      "en": "The road connecting the two towns is closed for repairs.",
+      "th": "ถนนที่เชื่อมสองเมืองปิดเพื่อซ่อมแซม"
+     },
+     {
+      "en": "Any application received after Friday will not be considered.",
+      "th": "ใบสมัครที่ได้รับหลังวันศุกร์จะไม่ถูกพิจารณา"
      }
     ],
     "transform": [
@@ -5614,6 +7290,22 @@
      {
       "en": "He made several claims, none of which were true.",
       "th": "เขากล่าวอ้างหลายอย่าง ซึ่งไม่มีข้อไหนเป็นความจริงเลย"
+     },
+     {
+      "en": "He owns two restaurants, both of which are fully booked tonight.",
+      "th": "เขาเป็นเจ้าของร้านอาหารสองร้าน ซึ่งทั้งสองร้านจองเต็มหมดในคืนนี้"
+     },
+     {
+      "en": "The survey received 500 responses, half of which came from students.",
+      "th": "แบบสำรวจได้รับคำตอบ 500 ชุด ซึ่งครึ่งหนึ่งมาจากนักเรียน"
+     },
+     {
+      "en": "She speaks five languages, two of which she learned as an adult.",
+      "th": "เธอพูดได้ห้าภาษา ซึ่งสองภาษาในนั้นเธอเรียนตอนโตแล้ว"
+     },
+     {
+      "en": "The museum displays many paintings, some of which are priceless.",
+      "th": "พิพิธภัณฑ์จัดแสดงภาพวาดจำนวนมาก ซึ่งบางภาพมีค่าประเมินไม่ได้"
      }
     ],
     "transform": [
@@ -5671,6 +7363,22 @@
      {
       "en": "The students who failed must retake the test. (only those who failed)",
       "th": "นักเรียนที่สอบตกต้องสอบใหม่ (เฉพาะคนที่ตก ไม่ใช่ทุกคน)"
+     },
+     {
+      "en": "The employees who arrived late were asked to explain. (only the late ones)",
+      "th": "พนักงานที่มาสายถูกขอให้ชี้แจง (เฉพาะคนที่มาสายเท่านั้น)"
+     },
+     {
+      "en": "My laptop, which cost a fortune, broke after a year. (I have one laptop)",
+      "th": "แล็ปท็อปของฉัน ซึ่งราคาแพงมาก พังหลังจากใช้ได้แค่ปีเดียว (ฉันมีแล็ปท็อปเครื่องเดียว)"
+     },
+     {
+      "en": "The candidates who passed the interview will start on Monday. (only those who passed)",
+      "th": "ผู้สมัครที่ผ่านการสัมภาษณ์จะเริ่มงานวันจันทร์ (เฉพาะคนที่ผ่านเท่านั้น)"
+     },
+     {
+      "en": "Our office, which was renovated last year, has a rooftop garden. (we have one office)",
+      "th": "ออฟฟิศของเรา ซึ่งปรับปรุงใหม่เมื่อปีที่แล้ว มีสวนบนดาดฟ้า (เรามีออฟฟิศเดียว)"
      }
     ],
     "transform": [
@@ -5730,6 +7438,22 @@
      {
       "en": "Holding an umbrella, he waited for the bus.",
       "th": "เขาถือร่มยืนรอรถเมล์"
+     },
+     {
+      "en": "Sitting by the window, she watched the rain fall.",
+      "th": "เธอนั่งอยู่ริมหน้าต่างและมองสายฝนที่ตกลงมา"
+     },
+     {
+      "en": "Checking his phone, he almost missed the train.",
+      "th": "เขามัวแต่ดูโทรศัพท์จนเกือบตกรถไฟ"
+     },
+     {
+      "en": "Taking notes, the students listened to the lecture.",
+      "th": "นักเรียนจดโน้ตไปพลางฟังการบรรยายไปพลาง"
+     },
+     {
+      "en": "Waving goodbye, the children ran into the school.",
+      "th": "เด็กๆ โบกมือลาแล้ววิ่งเข้าไปในโรงเรียน"
      }
     ],
     "transform": [
@@ -5778,6 +7502,22 @@
      {
       "en": "Shocked by the news, she sat down slowly.",
       "th": "เพราะตกใจกับข่าว เธอจึงค่อย ๆ นั่งลง"
+     },
+     {
+      "en": "Painted last year, the house still looks new.",
+      "th": "บ้านหลังนี้เพิ่งทาสีเมื่อปีที่แล้ว จึงยังดูใหม่อยู่"
+     },
+     {
+      "en": "Made in Italy, these shoes are very comfortable.",
+      "th": "รองเท้าคู่นี้ผลิตในอิตาลี ใส่สบายมาก"
+     },
+     {
+      "en": "Surrounded by mountains, the village feels peaceful.",
+      "th": "หมู่บ้านนี้ถูกล้อมรอบด้วยภูเขา จึงให้ความรู้สึกสงบ"
+     },
+     {
+      "en": "Praised by the manager, she felt more confident.",
+      "th": "เมื่อได้รับคำชมจากผู้จัดการ เธอก็รู้สึกมั่นใจขึ้น"
      }
     ],
     "transform": [
@@ -5830,6 +7570,22 @@
      {
       "en": "Having read the report, I understood the problem.",
       "th": "พออ่านรายงานจบ ฉันก็เข้าใจปัญหา"
+     },
+     {
+      "en": "Having missed the bus, we decided to walk.",
+      "th": "เมื่อพลาดรถเมล์ไปแล้ว เราจึงตัดสินใจเดินแทน"
+     },
+     {
+      "en": "Having saved enough money, they bought a car.",
+      "th": "เมื่อเก็บเงินได้พอแล้ว พวกเขาก็ซื้อรถ"
+     },
+     {
+      "en": "Having passed the exam, she applied for the course.",
+      "th": "หลังจากสอบผ่านแล้ว เธอก็สมัครเรียนคอร์สนั้น"
+     },
+     {
+      "en": "Having checked in, we went straight to the gate.",
+      "th": "หลังจากเช็คอินเสร็จ เราก็ตรงไปที่ประตูขึ้นเครื่องเลย"
      }
     ],
     "transform": [
@@ -5878,6 +7634,22 @@
      {
       "en": "Being a doctor, he knew exactly what to do.",
       "th": "เพราะเป็นหมอ เขาจึงรู้ว่าต้องทำอะไร"
+     },
+     {
+      "en": "Living far from the office, she leaves home early.",
+      "th": "เพราะบ้านอยู่ไกลจากที่ทำงาน เธอจึงออกจากบ้านแต่เช้า"
+     },
+     {
+      "en": "Wanting to improve, he practises English every day.",
+      "th": "เพราะอยากพัฒนาขึ้น เขาจึงฝึกภาษาอังกฤษทุกวัน"
+     },
+     {
+      "en": "Being new to the city, I often got lost.",
+      "th": "เพราะเพิ่งมาอยู่เมืองนี้ ฉันจึงหลงทางบ่อยๆ"
+     },
+     {
+      "en": "Having little time, we skipped lunch.",
+      "th": "เพราะมีเวลาน้อย เราจึงงดมื้อกลางวัน"
      }
     ],
     "transform": [
@@ -5927,6 +7699,22 @@
      {
       "en": "Opening the door, she found a parcel on the step.",
       "th": "พอเปิดประตู เธอก็พบพัสดุวางอยู่ที่บันได (เธอเป็นคนเปิด ถูกต้อง)"
+     },
+     {
+      "en": "Entering the room, she turned on the lights.",
+      "th": "พอเธอเดินเข้าห้อง เธอก็เปิดไฟ"
+     },
+     {
+      "en": "Hearing the alarm, the workers left the building.",
+      "th": "พอได้ยินเสียงสัญญาณเตือน พนักงานก็ออกจากอาคาร"
+     },
+     {
+      "en": "Reaching the summit, the hikers took photos.",
+      "th": "พอขึ้นถึงยอดเขา นักเดินป่าก็ถ่ายรูปกัน"
+     },
+     {
+      "en": "Opening the letter, she smiled with relief.",
+      "th": "พอเปิดจดหมายออกอ่าน เธอก็ยิ้มด้วยความโล่งใจ"
      }
     ],
     "transform": [
@@ -5981,6 +7769,22 @@
      {
       "en": "The report, a 200-page document, took months to complete.",
       "th": "รายงานฉบับนั้น ซึ่งเป็นเอกสารหนา 200 หน้า ใช้เวลาหลายเดือนกว่าจะเสร็จ"
+     },
+     {
+      "en": "Our new manager, a former engineer, understands the technical side of the project.",
+      "th": "ผู้จัดการคนใหม่ของเรา อดีตวิศวกร เข้าใจด้านเทคนิคของโปรเจกต์เป็นอย่างดี"
+     },
+     {
+      "en": "The Amazon, the world's largest rainforest, produces a huge amount of oxygen.",
+      "th": "ป่าแอมะซอน ป่าฝนที่ใหญ่ที่สุดในโลก ผลิตออกซิเจนในปริมาณมหาศาล"
+     },
+     {
+      "en": "My grandmother, a retired teacher, still reads two newspapers every morning.",
+      "th": "คุณยายของฉัน อดีตครูที่เกษียณแล้ว ยังคงอ่านหนังสือพิมพ์สองฉบับทุกเช้า"
+     },
+     {
+      "en": "IELTS, an international English test, is required by many universities abroad.",
+      "th": "IELTS ข้อสอบภาษาอังกฤษระดับนานาชาติ เป็นสิ่งที่มหาวิทยาลัยหลายแห่งในต่างประเทศกำหนดให้ต้องมี"
      }
     ],
     "transform": [
@@ -6029,6 +7833,22 @@
      {
       "en": "Green technologies, such as solar panels and electric cars, are becoming cheaper.",
       "th": "เทคโนโลยีสีเขียว เช่น แผงโซลาร์และรถยนต์ไฟฟ้า กำลังมีราคาถูกลง"
+     },
+     {
+      "en": "The company plans to cut costs, that is, to reduce staff and close two branches.",
+      "th": "บริษัทวางแผนลดต้นทุน กล่าวคือ ลดพนักงานและปิดสาขาสองแห่ง"
+     },
+     {
+      "en": "I enjoy outdoor activities, such as hiking, cycling, and kayaking.",
+      "th": "ฉันชอบกิจกรรมกลางแจ้ง เช่น เดินป่า ปั่นจักรยาน และพายเรือคายัค"
+     },
+     {
+      "en": "Only one thing can save this plan, namely more time.",
+      "th": "มีเพียงสิ่งเดียวเท่านั้นที่จะช่วยแผนนี้ได้ นั่นคือเวลาที่มากขึ้น"
+     },
+     {
+      "en": "We should focus on the essentials, namely quality, price, and delivery time.",
+      "th": "เราควรโฟกัสที่สิ่งสำคัญ นั่นคือ คุณภาพ ราคา และเวลาในการจัดส่ง"
      }
     ],
     "transform": [
@@ -6082,6 +7902,22 @@
      {
       "en": "An experienced negotiator, she quickly settled the dispute.",
       "th": "ในฐานะนักเจรจาที่มีประสบการณ์ เธอยุติข้อพิพาทได้อย่างรวดเร็ว"
+     },
+     {
+      "en": "A patient and organized leader, Maria guided the team through the crisis.",
+      "th": "ในฐานะผู้นำที่ใจเย็นและเป็นระบบ มาเรียนำทีมผ่านวิกฤตไปได้"
+     },
+     {
+      "en": "A popular destination for backpackers, Chiang Mai offers cheap food and stunning views.",
+      "th": "ในฐานะจุดหมายยอดนิยมของนักท่องเที่ยวแบ็กแพ็ก เชียงใหม่มีทั้งอาหารราคาถูกและวิวสวยงาม"
+     },
+     {
+      "en": "A fluent speaker of three languages, Ken easily found work overseas.",
+      "th": "ในฐานะคนที่พูดได้คล่องถึงสามภาษา เคนหางานในต่างประเทศได้อย่างง่ายดาย"
+     },
+     {
+      "en": "A promising but risky investment, the startup attracted several major investors.",
+      "th": "ในฐานะการลงทุนที่น่าสนใจแต่ก็เสี่ยง สตาร์ทอัพนี้ดึงดูดนักลงทุนรายใหญ่หลายราย"
      }
     ],
     "transform": [
@@ -6130,6 +7966,22 @@
      {
       "en": "The last guest having left, she finally locked the door.",
       "th": "เมื่อแขกคนสุดท้ายกลับไปแล้ว เธอจึงล็อกประตูเสียที"
+     },
+     {
+      "en": "The meeting finished, everyone hurried home to beat the traffic.",
+      "th": "เมื่อการประชุมจบลง ทุกคนรีบกลับบ้านเพื่อหนีรถติด"
+     },
+     {
+      "en": "The tickets booked, we started packing for the trip.",
+      "th": "เมื่อจองตั๋วเรียบร้อยแล้ว เราก็เริ่มเก็บกระเป๋าเตรียมออกเดินทาง"
+     },
+     {
+      "en": "Her exams over, Nina finally relaxed for the whole weekend.",
+      "th": "เมื่อสอบเสร็จหมดแล้ว นีน่าก็ได้พักผ่อนเต็มที่ตลอดสุดสัปดาห์"
+     },
+     {
+      "en": "The rain having stopped, the players returned to the field.",
+      "th": "เมื่อฝนหยุดตกแล้ว นักกีฬาก็กลับลงสู่สนามอีกครั้ง"
      }
     ],
     "transform": [
@@ -6179,6 +8031,22 @@
      {
       "en": "The plan has flaws. That said, it is still better than nothing.",
       "th": "แผนนี้มีข้อบกพร่อง ถึงอย่างนั้น มันก็ยังดีกว่าไม่มีอะไรเลย"
+     },
+     {
+      "en": "All things considered, staying home this weekend was the wiser choice.",
+      "th": "เมื่อพิจารณาทุกอย่างแล้ว การอยู่บ้านในสุดสัปดาห์นี้เป็นทางเลือกที่ฉลาดกว่า"
+     },
+     {
+      "en": "We'll hold the outdoor event on Saturday, weather permitting.",
+      "th": "เราจะจัดงานกลางแจ้งในวันเสาร์ ถ้าอากาศเอื้ออำนวย"
+     },
+     {
+      "en": "The hotel was a bit expensive. That said, the service was excellent.",
+      "th": "โรงแรมค่อนข้างแพงอยู่สักหน่อย ถึงอย่างนั้น บริการก็ยอดเยี่ยมมาก"
+     },
+     {
+      "en": "Broadly speaking, prices have risen across the whole country this year.",
+      "th": "พูดกว้างๆ ราคาสินค้าปรับสูงขึ้นทั่วทั้งประเทศในปีนี้"
      }
     ],
     "transform": [
@@ -6238,6 +8106,22 @@
      {
       "en": "We can walk, or we can take a taxi.",
       "th": "เราจะเดินก็ได้ หรือจะนั่งแท็กซี่ก็ได้"
+     },
+     {
+      "en": "The train was late, so we missed our connection.",
+      "th": "รถไฟมาช้า เราเลยพลาดต่อรถไฟอีกขบวน"
+     },
+     {
+      "en": "I finished the report, and I sent it to my manager.",
+      "th": "ฉันทำรายงานเสร็จ แล้วก็ส่งให้หัวหน้า"
+     },
+     {
+      "en": "You can pay now, or you can pay when you collect it.",
+      "th": "คุณจะจ่ายตอนนี้ หรือจะจ่ายตอนมารับก็ได้"
+     },
+     {
+      "en": "He studied for months, but he still felt nervous before the test.",
+      "th": "เขาอ่านหนังสือมาหลายเดือน แต่ก็ยังรู้สึกกังวลก่อนสอบ"
      }
     ],
     "transform": [
@@ -6286,6 +8170,22 @@
      {
       "en": "She was happy because she passed the exam.",
       "th": "เธอมีความสุขเพราะเธอสอบผ่าน"
+     },
+     {
+      "en": "We canceled the picnic because the weather was terrible.",
+      "th": "เรายกเลิกปิกนิกเพราะอากาศแย่มาก"
+     },
+     {
+      "en": "I chose this course because it fits my schedule.",
+      "th": "ฉันเลือกคอร์สนี้เพราะมันเข้ากับตารางเวลาของฉัน"
+     },
+     {
+      "en": "The flight was delayed because of the heavy fog.",
+      "th": "เที่ยวบินล่าช้าเพราะหมอกลงหนา"
+     },
+     {
+      "en": "He got the job because he prepared well for the interview.",
+      "th": "เขาได้งานเพราะเขาเตรียมตัวสัมภาษณ์มาอย่างดี"
      }
     ],
     "transform": [
@@ -6338,6 +8238,22 @@
      {
       "en": "She didn't call, as she was very busy.",
       "th": "เธอไม่ได้โทรมา เพราะเธอยุ่งมาก"
+     },
+     {
+      "en": "Since the shop was closed, we bought groceries online.",
+      "th": "เนื่องจากร้านปิด เราเลยสั่งของกินออนไลน์แทน"
+     },
+     {
+      "en": "As I had already eaten, I only ordered a coffee.",
+      "th": "เพราะฉันกินมาแล้ว ฉันเลยสั่งแค่กาแฟ"
+     },
+     {
+      "en": "Since you speak Thai, you can help translate the menu.",
+      "th": "ในเมื่อคุณพูดไทยได้ คุณช่วยแปลเมนูได้นะ"
+     },
+     {
+      "en": "As the deadline is close, we should start today.",
+      "th": "เพราะใกล้ถึงกำหนดส่งแล้ว เราควรเริ่มวันนี้เลย"
      }
     ],
     "transform": [
@@ -6390,6 +8306,22 @@
      {
       "en": "We enjoyed the trip, although it was expensive.",
       "th": "เราสนุกกับการเดินทาง ถึงแม้ว่ามันจะแพง"
+     },
+     {
+      "en": "Although she was exhausted, she finished the marathon.",
+      "th": "ถึงแม้เธอจะเหนื่อยมาก เธอก็วิ่งมาราธอนจนจบ"
+     },
+     {
+      "en": "Though the hotel was small, it was very comfortable.",
+      "th": "แม้โรงแรมจะเล็ก แต่ก็สบายมาก"
+     },
+     {
+      "en": "Although I practiced a lot, I made a few mistakes in the exam.",
+      "th": "ถึงฉันจะฝึกมาเยอะ ฉันก็ยังพลาดไปสองสามข้อในการสอบ"
+     },
+     {
+      "en": "Though prices went up, the restaurant is still popular.",
+      "th": "แม้ราคาจะขึ้น แต่ร้านอาหารก็ยังได้รับความนิยม"
      }
     ],
     "transform": [
@@ -6442,6 +8374,22 @@
      {
       "en": "Call me when you get home.",
       "th": "โทรหาฉันตอนที่คุณถึงบ้าน"
+     },
+     {
+      "en": "When the alarm rang, everyone left the building calmly.",
+      "th": "ตอนที่สัญญาณเตือนภัยดัง ทุกคนก็ออกจากตึกอย่างเป็นระเบียบ"
+     },
+     {
+      "en": "While she was studying abroad, she learned to cook.",
+      "th": "ระหว่างที่เธอเรียนอยู่ต่างประเทศ เธอก็หัดทำอาหาร"
+     },
+     {
+      "en": "I will text you when the meeting finishes.",
+      "th": "ฉันจะส่งข้อความหาคุณตอนประชุมเสร็จ"
+     },
+     {
+      "en": "While I waited for the bus, I read the news on my phone.",
+      "th": "ระหว่างที่รอรถเมล์ ฉันอ่านข่าวในโทรศัพท์"
      }
     ],
     "transform": [
@@ -6494,6 +8442,22 @@
      {
       "en": "I will call you if I have time.",
       "th": "ฉันจะโทรหาคุณถ้าฉันมีเวลา"
+     },
+     {
+      "en": "If you book early, you will get a cheaper ticket.",
+      "th": "ถ้าคุณจองแต่เนิ่นๆ คุณจะได้ตั๋วที่ถูกกว่า"
+     },
+     {
+      "en": "If the traffic is bad, take the train instead.",
+      "th": "ถ้ารถติดมาก ให้นั่งรถไฟไปแทน"
+     },
+     {
+      "en": "If she practices every day, her English will improve fast.",
+      "th": "ถ้าเธอฝึกทุกวัน ภาษาอังกฤษของเธอจะดีขึ้นเร็ว"
+     },
+     {
+      "en": "If we leave now, we can avoid the rush hour.",
+      "th": "ถ้าเราออกตอนนี้ เราจะเลี่ยงชั่วโมงเร่งด่วนได้"
      }
     ],
     "transform": [
@@ -6542,6 +8506,22 @@
      {
       "en": "Wait here until I come back.",
       "th": "รอที่นี่จนกว่าฉันจะกลับมา"
+     },
+     {
+      "en": "Please review your answers before you submit the test.",
+      "th": "กรุณาตรวจคำตอบก่อนที่คุณจะส่งข้อสอบ"
+     },
+     {
+      "en": "After we landed, we went straight to the hotel.",
+      "th": "หลังจากเครื่องลงจอด เราก็ตรงไปที่โรงแรมเลย"
+     },
+     {
+      "en": "Keep stirring the sauce until it becomes thick.",
+      "th": "คนซอสไปเรื่อยๆ จนกว่ามันจะข้น"
+     },
+     {
+      "en": "I always check my email before I start work.",
+      "th": "ฉันเช็กอีเมลก่อนเริ่มทำงานเสมอ"
      }
     ],
     "transform": [
@@ -6596,6 +8576,22 @@
      {
       "en": "She stayed calm despite the enormous pressure.",
       "th": "เธอยังใจเย็นทั้งๆ ที่มีแรงกดดันมหาศาล"
+     },
+     {
+      "en": "Despite the traffic, she arrived at the office on time.",
+      "th": "ถึงจะรถติด เธอก็ยังมาถึงออฟฟิศตรงเวลา"
+     },
+     {
+      "en": "In spite of the language barrier, the tourists enjoyed their trip.",
+      "th": "แม้จะมีอุปสรรคด้านภาษา นักท่องเที่ยวก็ยังสนุกกับทริปนี้"
+     },
+     {
+      "en": "Despite his busy schedule, my boss always replies to emails.",
+      "th": "ถึงจะยุ่งมาก เจ้านายของฉันก็ตอบอีเมลเสมอ"
+     },
+     {
+      "en": "In spite of the poor weather, the flight departed as planned.",
+      "th": "แม้อากาศจะแย่ เที่ยวบินก็ยังออกเดินทางตามกำหนด"
      }
     ],
     "transform": [
@@ -6644,6 +8640,22 @@
      {
       "en": "Despite having little money, they travelled the world.",
       "th": "ทั้งๆ ที่มีเงินน้อย พวกเขาก็เที่ยวรอบโลก"
+     },
+     {
+      "en": "Despite living abroad for years, he still speaks Thai fluently.",
+      "th": "ถึงจะอยู่ต่างประเทศมาหลายปี เขาก็ยังพูดไทยได้คล่อง"
+     },
+     {
+      "en": "In spite of arriving late, she caught up with the lesson quickly.",
+      "th": "แม้จะมาสาย เธอก็ตามบทเรียนได้ทันอย่างรวดเร็ว"
+     },
+     {
+      "en": "Despite earning a good salary, they rarely spend money on luxuries.",
+      "th": "ถึงจะได้เงินเดือนดี พวกเขาก็แทบไม่ใช้เงินกับของฟุ่มเฟือย"
+     },
+     {
+      "en": "In spite of practising every day, I still find pronunciation difficult.",
+      "th": "แม้จะฝึกทุกวัน ฉันก็ยังรู้สึกว่าการออกเสียงเป็นเรื่องยาก"
      }
     ],
     "transform": [
@@ -6692,6 +8704,22 @@
      {
       "en": "Despite the fact that prices rose sharply, demand stayed high.",
       "th": "ทั้งๆ ที่ราคาพุ่งขึ้นแรง ความต้องการก็ยังสูง"
+     },
+     {
+      "en": "Despite the fact that the hotel was cheap, the rooms were spotless.",
+      "th": "ถึงแม้ว่าโรงแรมจะราคาถูก แต่ห้องพักก็สะอาดเอี่ยม"
+     },
+     {
+      "en": "He kept smiling despite the fact that he was clearly exhausted.",
+      "th": "เขายังยิ้มอยู่ ทั้งที่เห็นได้ชัดว่าเขาเหนื่อยมาก"
+     },
+     {
+      "en": "Despite the fact that the project was delayed, the client stayed patient.",
+      "th": "ถึงแม้ว่าโปรเจกต์จะล่าช้า ลูกค้าก็ยังใจเย็น"
+     },
+     {
+      "en": "She speaks confidently despite the fact that English is her second language.",
+      "th": "เธอพูดได้อย่างมั่นใจ ทั้งที่ภาษาอังกฤษเป็นภาษาที่สองของเธอ"
      }
     ],
     "transform": [
@@ -6740,6 +8768,22 @@
      {
       "en": "He passed the exam, though he hadn't studied much.",
       "th": "เขาสอบผ่าน ถึงแม้จะไม่ค่อยได้อ่านหนังสือ"
+     },
+     {
+      "en": "Although the recipe looked complicated, it was actually easy to follow.",
+      "th": "แม้สูตรอาหารจะดูซับซ้อน แต่จริงๆ แล้วทำตามได้ง่าย"
+     },
+     {
+      "en": "Even though I set three alarms, I still overslept this morning.",
+      "th": "ถึงจะตั้งนาฬิกาปลุกไว้สามอัน เช้านี้ฉันก็ยังตื่นสาย"
+     },
+     {
+      "en": "The city is fascinating, though it can feel crowded at times.",
+      "th": "เมืองนี้น่าสนใจมาก แม้บางครั้งจะรู้สึกแออัดก็ตาม"
+     },
+     {
+      "en": "Even though the deadline was tight, the team submitted the report early.",
+      "th": "ถึงเส้นตายจะกระชั้น ทีมงานก็ส่งรายงานได้ก่อนกำหนด"
      }
     ],
     "transform": [
@@ -6788,6 +8832,22 @@
      {
       "en": "I wouldn't marry him even if he were rich.",
       "th": "ต่อให้เขารวย ฉันก็จะไม่แต่งกับเขา (สมมติ เขาไม่ได้รวยจริง)"
+     },
+     {
+      "en": "Even if the price drops, I won't buy that phone.",
+      "th": "ต่อให้ราคาลดลง ฉันก็จะไม่ซื้อโทรศัพท์เครื่องนั้น"
+     },
+     {
+      "en": "Even if you left now, you would still miss the train.",
+      "th": "ต่อให้ออกเดินทางตอนนี้ คุณก็จะพลาดรถไฟอยู่ดี"
+     },
+     {
+      "en": "Even if the exam is difficult, she will stay calm.",
+      "th": "ต่อให้ข้อสอบจะยาก เธอก็จะยังใจเย็นไว้"
+     },
+     {
+      "en": "Even if they offered me the job, I wouldn't move overseas.",
+      "th": "ต่อให้พวกเขาเสนองานให้ ฉันก็จะไม่ย้ายไปอยู่ต่างประเทศ"
      }
     ],
     "transform": [
@@ -6832,6 +8892,22 @@
      {
       "en": "Some students prefer exams, while others prefer coursework.",
       "th": "นักเรียนบางคนชอบสอบ ในขณะที่บางคนชอบงานที่ทำส่ง"
+     },
+     {
+      "en": "My brother loves spicy food, whereas I can barely handle it.",
+      "th": "พี่ชายของฉันชอบอาหารเผ็ด ในขณะที่ฉันแทบทานเผ็ดไม่ได้เลย"
+     },
+     {
+      "en": "Online courses are flexible, whereas classroom lessons follow a fixed schedule.",
+      "th": "คอร์สออนไลน์ยืดหยุ่น ในขณะที่เรียนในห้องเรียนต้องตามตารางที่กำหนด"
+     },
+     {
+      "en": "City life is fast and noisy, while rural life is slow and quiet.",
+      "th": "ชีวิตในเมืองรวดเร็วและวุ่นวาย ขณะที่ชีวิตในชนบทเรียบง่ายและเงียบสงบ"
+     },
+     {
+      "en": "Some people save most of their income, whereas others spend it all.",
+      "th": "บางคนเก็บออมรายได้เกือบทั้งหมด ในขณะที่บางคนใช้จนหมด"
      }
     ],
     "transform": [
@@ -6886,6 +8962,22 @@
      {
       "en": "The project turned out exactly as we had planned.",
       "th": "โปรเจกต์ออกมาตรงตามที่เราวางแผนไว้เป๊ะ"
+     },
+     {
+      "en": "Please fill in the form as the instructions explain.",
+      "th": "กรุณากรอกแบบฟอร์มตามที่คำแนะนำอธิบายไว้"
+     },
+     {
+      "en": "As the results show, our sales grew last quarter.",
+      "th": "อย่างที่ผลลัพธ์แสดงให้เห็น ยอดขายของเราเติบโตขึ้นในไตรมาสที่แล้ว"
+     },
+     {
+      "en": "He arranged the chairs as the manager had asked.",
+      "th": "เขาจัดเก้าอี้ตามที่ผู้จัดการได้ขอไว้"
+     },
+     {
+      "en": "As we discussed in the meeting, the launch is delayed.",
+      "th": "อย่างที่เราคุยกันในที่ประชุม การเปิดตัวถูกเลื่อนออกไป"
      }
     ],
     "transform": [
@@ -6939,6 +9031,22 @@
      {
       "en": "Nobody makes curry like my grandma does.",
       "th": "ไม่มีใครทำแกงได้อร่อยแบบที่ยายฉันทำ"
+     },
+     {
+      "en": "Save your file often, like the teacher suggested.",
+      "th": "เซฟไฟล์บ่อยๆ นะ อย่างที่ครูแนะนำไว้"
+     },
+     {
+      "en": "The trip went smoothly, just like we hoped.",
+      "th": "ทริปนี้ราบรื่นดี ตรงอย่างที่เราหวังไว้เลย"
+     },
+     {
+      "en": "Pack light, like your friends always tell you.",
+      "th": "เก็บของให้เบา อย่างที่เพื่อนๆ คอยบอกเธอตลอด"
+     },
+     {
+      "en": "He answered every question, like a real expert would.",
+      "th": "เขาตอบได้ทุกคำถาม อย่างกับผู้เชี่ยวชาญตัวจริงเลย"
      }
     ],
     "transform": [
@@ -6987,6 +9095,22 @@
      {
       "en": "Do the exercise the way you were taught.",
       "th": "ทำแบบฝึกหัดด้วยวิธีที่คุณถูกสอนมา"
+     },
+     {
+      "en": "I remember the way the city looked at night.",
+      "th": "ฉันจำภาพเมืองนี้ตอนกลางคืนได้ว่าดูเป็นยังไง"
+     },
+     {
+      "en": "She organizes her notes the way our tutor recommends.",
+      "th": "เธอจัดโน้ตของเธอแบบที่ติวเตอร์ของเราแนะนำ"
+     },
+     {
+      "en": "I don't like the way he talks to the staff.",
+      "th": "ฉันไม่ชอบวิธีที่เขาพูดกับพนักงานเลย"
+     },
+     {
+      "en": "Please pour the coffee the way I like it.",
+      "th": "ช่วยรินกาแฟแบบที่ฉันชอบให้หน่อยนะ"
      }
     ],
     "transform": [
@@ -7044,6 +9168,22 @@
      {
       "en": "She sounds as though she has a cold.",
       "th": "เสียงเธอเหมือนกับว่าเธอเป็นหวัด"
+     },
+     {
+      "en": "The sky looks as if the storm is coming.",
+      "th": "ท้องฟ้าดูเหมือนว่าพายุกำลังจะมา"
+     },
+     {
+      "en": "She smiles as if she has some good news.",
+      "th": "เธอยิ้มเหมือนว่ามีข่าวดีอะไรสักอย่าง"
+     },
+     {
+      "en": "The engine sounds as though something is loose.",
+      "th": "เสียงเครื่องยนต์เหมือนว่ามีอะไรหลวมอยู่"
+     },
+     {
+      "en": "He acts as if he owns the whole office.",
+      "th": "เขาทำตัวเหมือนว่าเป็นเจ้าของออฟฟิศทั้งหมด"
      }
     ],
     "transform": [
@@ -7096,6 +9236,22 @@
      {
       "en": "You look as if you had seen a ghost.",
       "th": "หน้าคุณเหมือนเพิ่งเจอผีมา (แต่จริง ๆ ไม่ได้เจอ)"
+     },
+     {
+      "en": "She described the city as if she had lived there.",
+      "th": "เธอเล่าเรื่องเมืองนั้นราวกับว่าเธอเคยอาศัยอยู่ที่นั่น"
+     },
+     {
+      "en": "He orders food as if he owned the restaurant.",
+      "th": "เขาสั่งอาหารราวกับว่าเขาเป็นเจ้าของร้าน"
+     },
+     {
+      "en": "They treat the intern as if he were the boss.",
+      "th": "พวกเขาปฏิบัติต่อเด็กฝึกงานราวกับว่าเขาเป็นเจ้านาย"
+     },
+     {
+      "en": "You look as if you hadn't slept for days.",
+      "th": "เธอดูราวกับว่าไม่ได้นอนมาหลายวันแล้ว"
      }
     ],
     "transform": [
@@ -7155,6 +9311,22 @@
      {
       "en": "Public transport is cheap; however, it is often unreliable.",
       "th": "ขนส่งสาธารณะราคาถูก แต่กระนั้นก็มักไม่น่าเชื่อถือ"
+     },
+     {
+      "en": "I studied hard for the exam. However, I still failed the writing section.",
+      "th": "ผมตั้งใจอ่านหนังสือสอบมาก อย่างไรก็ตาม ผมก็ยังสอบตกในส่วนการเขียน"
+     },
+     {
+      "en": "The flight was delayed by three hours. Nevertheless, we arrived in time for the meeting.",
+      "th": "เที่ยวบินล่าช้าไปสามชั่วโมง ถึงกระนั้น เราก็ยังไปถึงทันการประชุม"
+     },
+     {
+      "en": "Working from home saves time. However, it can feel lonely after a while.",
+      "th": "การทำงานที่บ้านช่วยประหยัดเวลา อย่างไรก็ตาม มันอาจทำให้รู้สึกเหงาเมื่อทำไปนานๆ"
+     },
+     {
+      "en": "The new phone has a great camera; however, the battery drains quickly.",
+      "th": "โทรศัพท์รุ่นใหม่มีกล้องที่ยอดเยี่ยม อย่างไรก็ตาม แบตเตอรี่หมดเร็วมาก"
      }
     ],
     "transform": [
@@ -7208,6 +9380,22 @@
      {
       "en": "He missed the deadline. As a result, his application was rejected.",
       "th": "เขาส่งงานไม่ทันกำหนด ผลก็คือใบสมัครของเขาถูกปฏิเสธ"
+     },
+     {
+      "en": "The factory reduced its costs. Therefore, it could lower its prices.",
+      "th": "โรงงานลดต้นทุนลงได้ ดังนั้น จึงสามารถลดราคาสินค้าลงได้"
+     },
+     {
+      "en": "He did not renew his passport in time; thus, he had to cancel the trip.",
+      "th": "เขาไม่ได้ต่ออายุพาสปอร์ตทันเวลา ด้วยเหตุนี้ เขาจึงต้องยกเลิกการเดินทาง"
+     },
+     {
+      "en": "The team practised every day. As a result, they won the competition.",
+      "th": "ทีมงานฝึกซ้อมทุกวัน ผลก็คือ พวกเขาชนะการแข่งขัน"
+     },
+     {
+      "en": "Traffic in the city has become worse. Therefore, more people are cycling to work.",
+      "th": "การจราจรในเมืองแย่ลง ดังนั้น ผู้คนจำนวนมากขึ้นจึงหันมาปั่นจักรยานไปทำงาน"
      }
     ],
     "transform": [
@@ -7256,6 +9444,22 @@
      {
       "en": "The policy is costly. Furthermore, it may not solve the problem.",
       "th": "นโยบายนี้มีค่าใช้จ่ายสูง ยิ่งไปกว่านั้นอาจไม่ได้แก้ปัญหาด้วยซ้ำ"
+     },
+     {
+      "en": "Reading widely improves your vocabulary. Moreover, it sharpens your critical thinking.",
+      "th": "การอ่านหลากหลายช่วยพัฒนาคลังคำศัพท์ของคุณ ยิ่งไปกว่านั้น ยังฝึกการคิดวิเคราะห์ให้เฉียบคมขึ้น"
+     },
+     {
+      "en": "The apartment is close to my office. In addition, the rent is very reasonable.",
+      "th": "อพาร์ตเมนต์อยู่ใกล้ที่ทำงานของผม นอกจากนี้ ค่าเช่ายังสมเหตุสมผลมาก"
+     },
+     {
+      "en": "Remote meetings save travel time. Furthermore, they reduce office costs.",
+      "th": "การประชุมทางไกลช่วยประหยัดเวลาเดินทาง ยิ่งไปกว่านั้น ยังช่วยลดค่าใช้จ่ายในสำนักงานด้วย"
+     },
+     {
+      "en": "Regular exercise strengthens the heart. Moreover, it improves your mood.",
+      "th": "การออกกำลังกายสม่ำเสมอช่วยให้หัวใจแข็งแรง ยิ่งไปกว่านั้น ยังช่วยให้อารมณ์ดีขึ้นด้วย"
      }
     ],
     "transform": [
@@ -7300,6 +9504,22 @@
      {
       "en": "Some skills are hard to learn as an adult. For instance, few people master a new accent.",
       "th": "ทักษะบางอย่างเรียนได้ยากเมื่อโตเป็นผู้ใหญ่ ยกตัวอย่างเช่น มีคนน้อยมากที่ออกสำเนียงใหม่ได้ชำนาญ"
+     },
+     {
+      "en": "Technology has changed how we work. For example, many meetings now happen online.",
+      "th": "เทคโนโลยีได้เปลี่ยนวิธีการทำงานของเรา ตัวอย่างเช่น การประชุมหลายครั้งตอนนี้จัดขึ้นทางออนไลน์"
+     },
+     {
+      "en": "Some cities are very expensive to live in. For instance, rent in Tokyo is extremely high.",
+      "th": "บางเมืองมีค่าครองชีพสูงมาก ตัวอย่างเช่น ค่าเช่าในโตเกียวแพงมาก"
+     },
+     {
+      "en": "Small changes can save energy at home. For example, switching off unused lights helps a lot.",
+      "th": "การเปลี่ยนแปลงเล็กๆ น้อยๆ ช่วยประหยัดพลังงานในบ้านได้ ตัวอย่างเช่น การปิดไฟที่ไม่ใช้ช่วยได้มาก"
+     },
+     {
+      "en": "Learning a language takes daily effort. For instance, reviewing ten words each morning builds skills fast.",
+      "th": "การเรียนภาษาต้องอาศัยความพยายามทุกวัน ตัวอย่างเช่น การทบทวนคำศัพท์สิบคำทุกเช้าช่วยให้เก่งเร็ว"
      }
     ],
     "transform": [
@@ -7344,6 +9564,22 @@
      {
       "en": "Studying abroad is expensive. On the other hand, it opens many career doors.",
       "th": "การเรียนต่างประเทศมีค่าใช้จ่ายสูง ในทางกลับกัน มันเปิดโอกาสในอาชีพมากมาย"
+     },
+     {
+      "en": "On the one hand, working overtime earns more money. On the other hand, it harms your health.",
+      "th": "ในด้านหนึ่ง การทำงานล่วงเวลาทำให้ได้เงินมากขึ้น แต่ในอีกด้านหนึ่ง มันทำร้ายสุขภาพของคุณ"
+     },
+     {
+      "en": "On the one hand, online courses are flexible. On the other hand, they require strong self-discipline.",
+      "th": "ในด้านหนึ่ง คอร์สออนไลน์มีความยืดหยุ่น แต่ในอีกด้านหนึ่ง มันต้องอาศัยวินัยในตนเองอย่างมาก"
+     },
+     {
+      "en": "On the one hand, big cities offer many jobs. On the other hand, they are crowded and stressful.",
+      "th": "ในด้านหนึ่ง เมืองใหญ่มีงานให้เลือกมากมาย แต่ในอีกด้านหนึ่ง มันแออัดและทำให้เครียด"
+     },
+     {
+      "en": "On the one hand, owning a car is convenient. On the other hand, it is costly to maintain.",
+      "th": "ในด้านหนึ่ง การมีรถยนต์เป็นของตัวเองสะดวกสบาย แต่ในอีกด้านหนึ่ง มันมีค่าบำรุงรักษาที่แพง"
      }
     ],
     "transform": [
@@ -7400,6 +9636,22 @@
      {
       "en": "Sales dropped; therefore, the store closed.",
       "th": "ยอดขายตก ดังนั้นร้านจึงปิดตัวลง"
+     },
+     {
+      "en": "The road was icy; therefore, the school closed for the day.",
+      "th": "ถนนมีน้ำแข็งเกาะ ดังนั้น โรงเรียนจึงปิดในวันนั้น"
+     },
+     {
+      "en": "She spoke very quietly. Therefore, few people heard her question.",
+      "th": "เธอพูดเบามาก ดังนั้น จึงมีคนได้ยินคำถามของเธอน้อยมาก"
+     },
+     {
+      "en": "The report was well written; however, it missed the deadline.",
+      "th": "รายงานเขียนได้ดี อย่างไรก็ตาม มันส่งไม่ทันกำหนด"
+     },
+     {
+      "en": "Our budget was tight; nevertheless, we finished the project on time.",
+      "th": "งบประมาณของเรามีจำกัด ถึงกระนั้น เราก็ทำโครงการเสร็จตรงเวลา"
      }
     ],
     "transform": [
@@ -7471,6 +9723,22 @@
      {
       "en": "He speaks not only English but also French and Japanese.",
       "th": "เขาพูดได้ไม่เพียงภาษาอังกฤษ แต่ยังพูดฝรั่งเศสและญี่ปุ่นได้ด้วย"
+     },
+     {
+      "en": "The new phone is not only lightweight but also waterproof.",
+      "th": "โทรศัพท์รุ่นใหม่ไม่เพียงแต่เบาเท่านั้น แต่ยังกันน้ำได้อีกด้วย"
+     },
+     {
+      "en": "Our manager is not only strict but also very fair.",
+      "th": "หัวหน้าของเราไม่เพียงแต่เข้มงวดเท่านั้น แต่ยังยุติธรรมมากอีกด้วย"
+     },
+     {
+      "en": "Reading every day not only builds vocabulary but also improves your writing.",
+      "th": "การอ่านทุกวันไม่เพียงแต่ช่วยเพิ่มคำศัพท์เท่านั้น แต่ยังช่วยพัฒนาการเขียนอีกด้วย"
+     },
+     {
+      "en": "The hotel offers not only free breakfast but also a swimming pool.",
+      "th": "โรงแรมนี้ไม่เพียงแต่มีอาหารเช้าฟรีเท่านั้น แต่ยังมีสระว่ายน้ำอีกด้วย"
      }
     ],
     "transform": [
@@ -7531,6 +9799,22 @@
      {
       "en": "Not only does he work full-time, but he also studies at night.",
       "th": "เขาไม่เพียงทำงานเต็มเวลา แต่ยังเรียนตอนกลางคืนอีกด้วย"
+     },
+     {
+      "en": "Not only was the trip cheap, but it was also unforgettable.",
+      "th": "ทริปนี้ไม่เพียงแต่ราคาถูกเท่านั้น แต่ยังน่าจดจำอีกด้วย"
+     },
+     {
+      "en": "Not only does she manage the team, but she also trains new staff.",
+      "th": "เธอไม่เพียงแต่ดูแลทีมเท่านั้น แต่ยังฝึกอบรมพนักงานใหม่อีกด้วย"
+     },
+     {
+      "en": "Not only did the flight arrive late, but the airline also lost my bag.",
+      "th": "ไม่เพียงแต่เที่ยวบินมาถึงช้าเท่านั้น สายการบินยังทำกระเป๋าของฉันหายอีกด้วย"
+     },
+     {
+      "en": "Not only is this laptop fast, but it is also very quiet.",
+      "th": "แล็ปท็อปเครื่องนี้ไม่เพียงแต่เร็วเท่านั้น แต่ยังเงียบมากอีกด้วย"
      }
     ],
     "transform": [
@@ -7587,6 +9871,22 @@
      {
       "en": "Both hard work and luck are needed to succeed.",
       "th": "ทั้งความพยายามและโชคล้วนจำเป็นต่อความสำเร็จ"
+     },
+     {
+      "en": "Both the report and the presentation are due on Friday.",
+      "th": "ทั้งรายงานและงานนำเสนอต้องส่งภายในวันศุกร์"
+     },
+     {
+      "en": "Both London and Paris were crowded with tourists in summer.",
+      "th": "ทั้งลอนดอนและปารีสเต็มไปด้วยนักท่องเที่ยวในหน้าร้อน"
+     },
+     {
+      "en": "Both listening and speaking take a lot of practice.",
+      "th": "ทั้งการฟังและการพูดต้องอาศัยการฝึกฝนมาก"
+     },
+     {
+      "en": "Both my colleagues and my boss agree with the plan.",
+      "th": "ทั้งเพื่อนร่วมงานและเจ้านายของฉันเห็นด้วยกับแผนนี้"
      }
     ],
     "transform": [
@@ -7643,6 +9943,22 @@
      {
       "en": "Either Monday or Tuesday works for me.",
       "th": "วันจันทร์หรือวันอังคารก็ได้สำหรับฉัน"
+     },
+     {
+      "en": "Either the bus or the train can take you to the airport.",
+      "th": "ไม่รถเมล์ก็รถไฟ สามารถพาคุณไปสนามบินได้"
+     },
+     {
+      "en": "Either the parents or the child has to be present.",
+      "th": "ไม่พ่อแม่ก็ลูก ต้องมาอยู่ด้วยสักฝ่าย"
+     },
+     {
+      "en": "For breakfast, either coffee or tea is fine for me.",
+      "th": "มื้อเช้าไม่กาแฟก็ชา ก็ได้สำหรับฉัน"
+     },
+     {
+      "en": "Either the students or the tutor has the answer key.",
+      "th": "ไม่นักเรียนก็ติวเตอร์ คนใดคนหนึ่งมีเฉลยอยู่"
      }
     ],
     "transform": [
@@ -7699,6 +10015,22 @@
      {
       "en": "Neither the students nor their teacher was ready for the test.",
       "th": "ทั้งนักเรียนและครูของพวกเขาต่างไม่พร้อมสำหรับการสอบ"
+     },
+     {
+      "en": "Neither the phone nor the tablet was charged.",
+      "th": "ทั้งโทรศัพท์และแท็บเล็ตต่างก็ไม่ได้ชาร์จไฟไว้เลย"
+     },
+     {
+      "en": "Neither my friends nor my sister likes spicy food.",
+      "th": "ทั้งเพื่อนของฉันและน้องสาวต่างก็ไม่ชอบอาหารเผ็ด"
+     },
+     {
+      "en": "Neither the hotels nor the guesthouse had any rooms left.",
+      "th": "ทั้งโรงแรมและเกสต์เฮาส์ต่างก็ไม่มีห้องว่างเหลือเลย"
+     },
+     {
+      "en": "Neither the emails nor the phone call was answered.",
+      "th": "ทั้งอีเมลและการโทรต่างก็ไม่มีใครตอบกลับ"
      }
     ],
     "transform": [
@@ -7755,6 +10087,22 @@
      {
       "en": "The sooner we start, the sooner we finish.",
       "th": "ยิ่งเราเริ่มเร็วเท่าไร เราก็ยิ่งเสร็จเร็วเท่านั้น"
+     },
+     {
+      "en": "The longer you wait, the harder it becomes.",
+      "th": "ยิ่งคุณรอนานเท่าไร มันก็ยิ่งยากขึ้นเท่านั้น"
+     },
+     {
+      "en": "The more customers we get, the busier the shop becomes.",
+      "th": "ยิ่งเรามีลูกค้ามากเท่าไร ร้านก็ยิ่งยุ่งขึ้นเท่านั้น"
+     },
+     {
+      "en": "The earlier you book, the cheaper the tickets are.",
+      "th": "ยิ่งจองเร็วเท่าไร ตั๋วก็ยิ่งถูกเท่านั้น"
+     },
+     {
+      "en": "The more I travel, the more open-minded I become.",
+      "th": "ยิ่งฉันเดินทางมากเท่าไร ฉันก็ยิ่งเปิดใจกว้างมากขึ้นเท่านั้น"
      }
     ],
     "transform": [
@@ -7813,6 +10161,22 @@
      {
       "en": "If I drink coffee at night, I don't sleep.",
       "th": "ถ้าฉันดื่มกาแฟตอนกลางคืน ฉันก็นอนไม่หลับ"
+     },
+     {
+      "en": "If you mix blue and yellow, you get green.",
+      "th": "ถ้าคุณผสมสีน้ำเงินกับสีเหลือง คุณจะได้สีเขียว"
+     },
+     {
+      "en": "If water reaches 100 degrees, it boils.",
+      "th": "ถ้าน้ำมีอุณหภูมิถึง 100 องศา มันจะเดือด"
+     },
+     {
+      "en": "If my phone battery dies, it turns off.",
+      "th": "ถ้าแบตโทรศัพท์ของฉันหมด มันก็จะดับ"
+     },
+     {
+      "en": "If people don't eat, they get hungry.",
+      "th": "ถ้าคนเราไม่กินอาหาร ก็จะรู้สึกหิว"
      }
     ],
     "transform": [
@@ -7873,6 +10237,22 @@
      {
       "en": "If she calls, I will tell her the news.",
       "th": "ถ้าเธอโทรมา ฉันจะบอกข่าวกับเธอ"
+     },
+     {
+      "en": "If I finish work early, I will meet you for dinner.",
+      "th": "ถ้าฉันเลิกงานเร็ว ฉันจะไปกินข้าวเย็นกับคุณ"
+     },
+     {
+      "en": "If the flight is delayed, we will wait at the gate.",
+      "th": "ถ้าเที่ยวบินล่าช้า เราจะรอที่ประตูขึ้นเครื่อง"
+     },
+     {
+      "en": "If you send the report today, the manager will review it tomorrow.",
+      "th": "ถ้าคุณส่งรายงานวันนี้ ผู้จัดการจะตรวจรายงานให้พรุ่งนี้"
+     },
+     {
+      "en": "If I get a good IELTS score, I will apply to that university.",
+      "th": "ถ้าฉันได้คะแนน IELTS ดี ฉันจะสมัครเข้ามหาวิทยาลัยนั้น"
      }
     ],
     "transform": [
@@ -7937,6 +10317,22 @@
      {
       "en": "If she spoke French, she would live in Paris.",
       "th": "ถ้าเธอพูดฝรั่งเศสได้ เธอคงจะไปอยู่ปารีส (แต่เธอพูดไม่ได้)"
+     },
+     {
+      "en": "If I lived near the beach, I would swim every morning.",
+      "th": "ถ้าฉันอยู่ใกล้ทะเล ฉันคงจะว่ายน้ำทุกเช้า"
+     },
+     {
+      "en": "If my boss trusted me more, I would take on bigger projects.",
+      "th": "ถ้าเจ้านายไว้ใจฉันมากกว่านี้ ฉันคงจะรับงานโครงการที่ใหญ่ขึ้น"
+     },
+     {
+      "en": "If I had more free time, I would learn to play the guitar.",
+      "th": "ถ้าฉันมีเวลาว่างมากกว่านี้ ฉันคงจะหัดเล่นกีตาร์"
+     },
+     {
+      "en": "If we won the contract, we would open a new office.",
+      "th": "ถ้าเราได้สัญญานั้น เราคงจะเปิดออฟฟิศแห่งใหม่"
      }
     ],
     "transform": [
@@ -8005,6 +10401,22 @@
      {
       "en": "If she had known, she would have helped you.",
       "th": "ถ้าเธอรู้ตอนนั้น เธอคงช่วยคุณไปแล้ว (แต่เธอไม่รู้)"
+     },
+     {
+      "en": "If I had booked earlier, I would have gotten a cheaper ticket.",
+      "th": "ถ้าฉันจองเร็วกว่านี้ ฉันคงจะได้ตั๋วที่ถูกกว่านี้"
+     },
+     {
+      "en": "If he had listened to the advice, he would have avoided the mistake.",
+      "th": "ถ้าเขาฟังคำแนะนำ เขาคงจะเลี่ยงความผิดพลาดนั้นได้"
+     },
+     {
+      "en": "If it hadn't rained, we would have finished the hike.",
+      "th": "ถ้าฝนไม่ตก เราคงจะเดินป่าจนจบเส้นทางแล้ว"
+     },
+     {
+      "en": "If I had saved more money, I would have traveled to Japan last year.",
+      "th": "ถ้าฉันเก็บเงินมากกว่านี้ ฉันคงจะได้ไปเที่ยวญี่ปุ่นเมื่อปีที่แล้ว"
      }
     ],
     "transform": [
@@ -8065,6 +10477,22 @@
      {
       "en": "Unless it rains, we will play football.",
       "th": "ถ้าฝนไม่ตก เราจะเล่นฟุตบอล"
+     },
+     {
+      "en": "Unless you back up your files, you will lose your work.",
+      "th": "ถ้าคุณไม่สำรองไฟล์ไว้ คุณจะเสียงานของคุณไป"
+     },
+     {
+      "en": "Unless the weather improves, they will cancel the flight.",
+      "th": "ถ้าอากาศไม่ดีขึ้น พวกเขาจะยกเลิกเที่ยวบิน"
+     },
+     {
+      "en": "Unless we leave now, we will be late for the meeting.",
+      "th": "ถ้าเราไม่ออกไปเดี๋ยวนี้ เราจะไปประชุมสาย"
+     },
+     {
+      "en": "Unless you practice speaking, you will not improve quickly.",
+      "th": "ถ้าคุณไม่ฝึกพูด คุณจะพัฒนาได้ไม่เร็ว"
      }
     ],
     "transform": [
@@ -8110,6 +10538,22 @@
      {
       "en": "Had she not helped me, I would have missed the deadline.",
       "th": "ถ้าเธอไม่ได้ช่วยฉัน ฉันคงส่งงานไม่ทันกำหนด"
+     },
+     {
+      "en": "Had we booked the flights earlier, we would have paid much less.",
+      "th": "ถ้าเราจองตั๋วเครื่องบินเร็วกว่านี้ เราคงจ่ายถูกกว่านี้มาก"
+     },
+     {
+      "en": "Had the students revised the grammar, they would have passed the test.",
+      "th": "ถ้านักเรียนทบทวนไวยากรณ์มาก่อน พวกเขาก็คงสอบผ่านไปแล้ว"
+     },
+     {
+      "en": "Had I read the contract carefully, I would have noticed the hidden fee.",
+      "th": "ถ้าฉันอ่านสัญญาอย่างละเอียด ฉันคงสังเกตเห็นค่าธรรมเนียมแฝงนั้น"
+     },
+     {
+      "en": "Had the manager warned us in time, we would have changed the plan.",
+      "th": "ถ้าผู้จัดการเตือนเราทันเวลา เราก็คงเปลี่ยนแผนไปแล้ว"
      }
     ],
     "transform": [
@@ -8158,6 +10602,22 @@
      {
       "en": "Were it not for the rain, the match would continue.",
       "th": "ถ้าไม่ใช่เพราะฝน การแข่งก็คงดำเนินต่อไปได้"
+     },
+     {
+      "en": "Were I in charge, I would give the team more flexible hours.",
+      "th": "ถ้าฉันเป็นคนดูแล ฉันคงให้ทีมทำงานเวลายืดหยุ่นกว่านี้"
+     },
+     {
+      "en": "Were the flight delayed, we would miss our connection in Dubai.",
+      "th": "ถ้าเที่ยวบินล่าช้า เราก็คงพลาดเที่ยวบินต่อที่ดูไบ"
+     },
+     {
+      "en": "Were she more confident, she would speak up in every meeting.",
+      "th": "ถ้าเธอมั่นใจกว่านี้ เธอคงกล้าพูดในทุกการประชุม"
+     },
+     {
+      "en": "Were the results to disappoint us, we would review the whole method.",
+      "th": "ถ้าผลลัพธ์ออกมาน่าผิดหวัง เราก็คงทบทวนวิธีการทั้งหมด"
      }
     ],
     "transform": [
@@ -8202,6 +10662,22 @@
      {
       "en": "Should anything change, I will let you know immediately.",
       "th": "หากมีอะไรเปลี่ยนแปลง ผมจะแจ้งให้ทราบทันที"
+     },
+     {
+      "en": "Should the flight be cancelled, we will arrange a hotel for you.",
+      "th": "หากเที่ยวบินถูกยกเลิก เราจะจัดโรงแรมให้คุณ"
+     },
+     {
+      "en": "Should you have any questions, feel free to email me directly.",
+      "th": "หากคุณมีคำถามใดๆ อีเมลหาฉันได้โดยตรงเลย"
+     },
+     {
+      "en": "Should the payment fail, please try a different card.",
+      "th": "หากการชำระเงินไม่สำเร็จ กรุณาลองใช้บัตรใบอื่น"
+     },
+     {
+      "en": "Should it rain tomorrow, the outdoor event will move indoors.",
+      "th": "หากพรุ่งนี้ฝนตก งานกลางแจ้งจะย้ายเข้ามาจัดในร่ม"
      }
     ],
     "transform": [
@@ -8242,6 +10718,22 @@
      {
       "en": "As long as you return it by Monday, you can borrow my laptop.",
       "th": "ตราบใดที่คุณคืนภายในวันจันทร์ คุณยืมโน้ตบุ๊กของฉันได้"
+     },
+     {
+      "en": "You can take the day off, provided that you finish the report first.",
+      "th": "คุณลาหยุดได้ ตราบใดที่คุณทำรายงานเสร็จก่อน"
+     },
+     {
+      "en": "Children may enter free, provided that an adult accompanies them.",
+      "th": "เด็กเข้าฟรีได้ ตราบใดที่มีผู้ใหญ่มาด้วย"
+     },
+     {
+      "en": "As long as you cite your sources, you can quote the article.",
+      "th": "ตราบใดที่คุณอ้างอิงแหล่งที่มา คุณก็ยกคำพูดจากบทความได้"
+     },
+     {
+      "en": "We can start the project now, provided that the budget is approved.",
+      "th": "เราเริ่มโครงการได้เลย ตราบใดที่งบประมาณได้รับอนุมัติ"
      }
     ],
     "transform": [
@@ -8286,6 +10778,22 @@
      {
       "en": "Save your work often in case the computer crashes.",
       "th": "เซฟงานบ่อยๆ เผื่อคอมพิวเตอร์ค้าง"
+     },
+     {
+      "en": "Keep the receipt in case you want to return the shoes.",
+      "th": "เก็บใบเสร็จไว้ เผื่อคุณอยากคืนรองเท้า"
+     },
+     {
+      "en": "I'll bring some cash in case the card machine is broken.",
+      "th": "ฉันจะพกเงินสดไปด้วย เผื่อเครื่องรูดบัตรเสีย"
+     },
+     {
+      "en": "Write down the address in case your phone runs out of battery.",
+      "th": "จดที่อยู่ไว้ เผื่อโทรศัพท์คุณแบตหมด"
+     },
+     {
+      "en": "Leave early in case the traffic is heavy this morning.",
+      "th": "ออกเดินทางแต่เช้า เผื่อเช้านี้รถติดหนัก"
      }
     ],
     "transform": [
@@ -8330,6 +10838,22 @@
      {
       "en": "But for the delay, we would have arrived on time.",
       "th": "ถ้าไม่ติดที่ความล่าช้า เราคงมาถึงตรงเวลา"
+     },
+     {
+      "en": "But for the scholarship, I would have dropped out of university.",
+      "th": "ถ้าไม่ได้ทุนการศึกษา ฉันคงลาออกจากมหาวิทยาลัยไปแล้ว"
+     },
+     {
+      "en": "But for her advice, we would have made a costly mistake.",
+      "th": "ถ้าไม่ได้คำแนะนำของเธอ เราคงทำผิดพลาดที่แพงมาก"
+     },
+     {
+      "en": "But for the backup file, I would have lost all my work.",
+      "th": "ถ้าไม่มีไฟล์สำรอง ฉันคงเสียงานทั้งหมดไป"
+     },
+     {
+      "en": "But for the doctor's quick action, he would have died.",
+      "th": "ถ้าไม่ใช่เพราะหมอลงมือเร็ว เขาคงเสียชีวิตไปแล้ว"
      }
     ],
     "transform": [
@@ -8397,6 +10921,22 @@
      {
       "en": "I wish I knew the answer, but I have no idea.",
       "th": "ฉันอยากรู้คำตอบจัง แต่ฉันไม่รู้เลย"
+     },
+     {
+      "en": "I wish I lived closer to the office.",
+      "th": "ฉันอยากอยู่ใกล้ที่ทำงานมากกว่านี้จัง"
+     },
+     {
+      "en": "He wishes he spoke better English for the interview.",
+      "th": "เขาอยากพูดภาษาอังกฤษได้ดีกว่านี้สำหรับการสัมภาษณ์"
+     },
+     {
+      "en": "We wish we had a bigger kitchen.",
+      "th": "เราอยากมีครัวที่ใหญ่กว่านี้"
+     },
+     {
+      "en": "I wish my job wasn't so stressful.",
+      "th": "ฉันอยากให้งานไม่เครียดขนาดนี้จัง"
      }
     ],
     "transform": [
@@ -8457,6 +10997,22 @@
      {
       "en": "I wish I hadn't said that to her.",
       "th": "ฉันเสียใจที่พูดแบบนั้นกับเธอ (แต่พูดไปแล้ว)"
+     },
+     {
+      "en": "I wish I had booked the tickets earlier.",
+      "th": "ฉันน่าจะจองตั๋วให้เร็วกว่านี้"
+     },
+     {
+      "en": "She wishes she had accepted the job offer.",
+      "th": "เธอน่าจะตอบรับข้อเสนองานนั้น"
+     },
+     {
+      "en": "They wish they had backed up the files.",
+      "th": "พวกเขาน่าจะสำรองไฟล์เอาไว้"
+     },
+     {
+      "en": "I wish I hadn't spent so much on that trip.",
+      "th": "ฉันไม่น่าใช้เงินไปกับทริปนั้นเยอะขนาดนั้นเลย"
      }
     ],
     "transform": [
@@ -8517,6 +11073,22 @@
      {
       "en": "She wishes her neighbours would be quieter at night.",
       "th": "เธออยากให้เพื่อนบ้านเงียบกว่านี้ตอนกลางคืน"
+     },
+     {
+      "en": "I wish my phone would stop crashing.",
+      "th": "อยากให้โทรศัพท์ของฉันเลิกค้างเสียที"
+     },
+     {
+      "en": "She wishes her colleague would reply to emails faster.",
+      "th": "เธออยากให้เพื่อนร่วมงานตอบอีเมลให้เร็วกว่านี้"
+     },
+     {
+      "en": "I wish the bus would come on time.",
+      "th": "อยากให้รถเมล์มาตรงเวลาเสียที"
+     },
+     {
+      "en": "We wish the government would fix the roads.",
+      "th": "เราอยากให้รัฐบาลซ่อมถนนเสียที"
      }
     ],
     "transform": [
@@ -8565,6 +11137,22 @@
      {
       "en": "If only she were here right now.",
       "th": "ถ้าเพียงแต่เธออยู่ตรงนี้ตอนนี้"
+     },
+     {
+      "en": "If only I could speak three languages.",
+      "th": "ถ้าฉันพูดได้สามภาษาก็ดีสิ"
+     },
+     {
+      "en": "If only we had booked a hotel near the beach.",
+      "th": "ถ้าเราจองโรงแรมใกล้ชายหาดก็ดีสิ"
+     },
+     {
+      "en": "If only I hadn't lost my passport.",
+      "th": "ถ้าฉันไม่ทำพาสปอร์ตหายก็ดีสิ"
+     },
+     {
+      "en": "If only the exam were next month instead.",
+      "th": "ถ้าสอบเลื่อนไปเป็นเดือนหน้าแทนก็ดีสิ"
      }
     ],
     "transform": [
@@ -8617,6 +11205,22 @@
      {
       "en": "She'd rather we didn't arrive late.",
       "th": "เธออยากให้พวกเราไม่มาสาย"
+     },
+     {
+      "en": "I'd rather you asked before borrowing my laptop.",
+      "th": "ฉันอยากให้คุณถามก่อนยืมแล็ปท็อปของฉัน"
+     },
+     {
+      "en": "She'd rather you didn't mention it to the boss.",
+      "th": "เธออยากให้คุณอย่าพูดเรื่องนี้กับเจ้านาย"
+     },
+     {
+      "en": "I would rather he made the decision himself.",
+      "th": "ฉันอยากให้เขาตัดสินใจด้วยตัวเอง"
+     },
+     {
+      "en": "We'd rather you paid by card, not cash.",
+      "th": "เราอยากให้คุณจ่ายด้วยบัตร ไม่ใช่เงินสด"
      }
     ],
     "transform": [
@@ -8685,6 +11289,22 @@
      {
       "en": "If we had saved more money, we wouldn't be in debt now.",
       "th": "ถ้าตอนนั้นเราเก็บเงินมากกว่านี้ ตอนนี้เราก็คงไม่เป็นหนี้"
+     },
+     {
+      "en": "If I had taken that job, I would live abroad now.",
+      "th": "ถ้าฉันรับงานนั้น ตอนนี้ฉันคงอยู่ต่างประเทศแล้ว"
+     },
+     {
+      "en": "If he had gone to bed earlier, he wouldn't be so tired now.",
+      "th": "ถ้าเขาเข้านอนเร็วกว่านี้ ตอนนี้เขาคงไม่เหนื่อยขนาดนี้"
+     },
+     {
+      "en": "If they had booked in advance, they would have seats together now.",
+      "th": "ถ้าพวกเขาจองล่วงหน้า ตอนนี้ก็คงได้นั่งด้วยกันแล้ว"
+     },
+     {
+      "en": "If I had learned to drive, I wouldn't need taxis every day.",
+      "th": "ถ้าฉันหัดขับรถเอาไว้ ตอนนี้ก็คงไม่ต้องนั่งแท็กซี่ทุกวัน"
      }
     ],
     "transform": [
@@ -8751,6 +11371,22 @@
      {
       "en": "They demanded that the report be submitted by Friday.",
       "th": "พวกเขาเรียกร้องให้ส่งรายงานภายในวันศุกร์"
+     },
+     {
+      "en": "The doctor recommended that she take a week off work.",
+      "th": "หมอแนะนำว่าเธอควรหยุดงานสักหนึ่งสัปดาห์"
+     },
+     {
+      "en": "My manager insisted that I attend the training session.",
+      "th": "หัวหน้ายืนกรานว่าฉันต้องเข้าร่วมการอบรม"
+     },
+     {
+      "en": "The teacher suggested that each student keep a daily journal.",
+      "th": "ครูแนะนำว่านักเรียนแต่ละคนควรเขียนบันทึกประจำวัน"
+     },
+     {
+      "en": "The tenants demanded that the landlord fix the heating.",
+      "th": "ผู้เช่าเรียกร้องให้เจ้าของบ้านซ่อมเครื่องทำความร้อน"
      }
     ],
     "transform": [
@@ -8811,6 +11447,22 @@
      {
       "en": "It was necessary that the document be signed at once.",
       "th": "จำเป็นที่เอกสารต้องถูกเซ็นทันที"
+     },
+     {
+      "en": "It is important that everyone arrive on time for the exam.",
+      "th": "สำคัญมากที่ทุกคนต้องมาถึงตรงเวลาสำหรับการสอบ"
+     },
+     {
+      "en": "It was vital that the medicine be kept cold during transport.",
+      "th": "เป็นเรื่องจำเป็นอย่างยิ่งที่ยาต้องถูกเก็บให้เย็นระหว่างการขนส่ง"
+     },
+     {
+      "en": "It is necessary that he provide two forms of identification.",
+      "th": "จำเป็นที่เขาต้องแสดงบัตรประจำตัวสองอย่าง"
+     },
+     {
+      "en": "It is essential that the team finish the project before the deadline.",
+      "th": "สำคัญอย่างยิ่งที่ทีมต้องทำโครงการให้เสร็จก่อนกำหนดส่ง"
      }
     ],
     "transform": [
@@ -8871,6 +11523,22 @@
      {
       "en": "We ask that visitors not touch the exhibits.",
       "th": "เราขอให้ผู้เข้าชมไม่แตะต้องสิ่งจัดแสดง"
+     },
+     {
+      "en": "The manual states that users not open the device while charging.",
+      "th": "คู่มือระบุว่าผู้ใช้ต้องไม่เปิดเครื่องขณะกำลังชาร์จ"
+     },
+     {
+      "en": "It is crucial that the patient not eat before the surgery.",
+      "th": "สำคัญมากที่คนไข้ต้องไม่รับประทานอาหารก่อนการผ่าตัด"
+     },
+     {
+      "en": "The examiner requested that candidates not use their phones.",
+      "th": "ผู้คุมสอบขอให้ผู้เข้าสอบไม่ใช้โทรศัพท์"
+     },
+     {
+      "en": "I recommend that she not sign the contract without a lawyer.",
+      "th": "ฉันแนะนำว่าเธอไม่ควรเซ็นสัญญาโดยไม่มีทนายความ"
      }
     ],
     "transform": [
@@ -8923,6 +11591,22 @@
      {
       "en": "He talks as if he were the boss.",
       "th": "เขาพูดราวกับว่าตัวเองเป็นเจ้านาย"
+     },
+     {
+      "en": "If she were here, she would know what to do.",
+      "th": "ถ้าเธออยู่ที่นี่ เธอคงรู้ว่าต้องทำอย่างไร"
+     },
+     {
+      "en": "I wish it were the weekend already.",
+      "th": "ฉันอยากให้ตอนนี้เป็นวันหยุดสุดสัปดาห์แล้ว"
+     },
+     {
+      "en": "He spends money as if he were a millionaire.",
+      "th": "เขาใช้เงินราวกับว่าเขาเป็นเศรษฐี"
+     },
+     {
+      "en": "If the weather were better, we could go hiking.",
+      "th": "ถ้าอากาศดีกว่านี้ เราคงได้ไปเดินป่ากัน"
      }
     ],
     "transform": [
@@ -8967,6 +11651,22 @@
      {
       "en": "Long live the Queen!",
       "th": "ขอให้พระราชินีทรงพระเจริญ"
+     },
+     {
+      "en": "Come what may, I will support your decision.",
+      "th": "ไม่ว่าจะเกิดอะไรขึ้น ฉันจะสนับสนุนการตัดสินใจของคุณ"
+     },
+     {
+      "en": "Suffice it to say, the interview did not go well.",
+      "th": "พูดสั้นๆ ก็คือการสัมภาษณ์ผลออกมาไม่ค่อยดีนัก"
+     },
+     {
+      "en": "Be that as it may, we cannot change the past.",
+      "th": "ถึงจะเป็นเช่นนั้น เราก็เปลี่ยนแปลงอดีตไม่ได้"
+     },
+     {
+      "en": "Heaven forbid anything should happen to the children.",
+      "th": "ขออย่าให้มีอะไรเกิดขึ้นกับเด็กๆ เลย"
      }
     ],
     "transform": [
@@ -9025,6 +11725,22 @@
      {
       "en": "She said (that) she would come later.",
       "th": "เธอบอกว่าเธอจะมาทีหลัง"
+     },
+     {
+      "en": "I hope that the weather will be nice this weekend.",
+      "th": "ฉันหวังว่าอากาศจะดีในช่วงสุดสัปดาห์นี้"
+     },
+     {
+      "en": "My manager knows that I finished the report early.",
+      "th": "หัวหน้าของฉันรู้ว่าฉันทำรายงานเสร็จก่อนกำหนด"
+     },
+     {
+      "en": "Many people believe that technology makes life easier.",
+      "th": "หลายคนเชื่อว่าเทคโนโลยีทำให้ชีวิตง่ายขึ้น"
+     },
+     {
+      "en": "The guide said that the museum closes at five.",
+      "th": "ไกด์บอกว่าพิพิธภัณฑ์ปิดตอนห้าโมงเย็น"
      }
     ],
     "transform": [
@@ -9086,6 +11802,22 @@
      {
       "en": "I'm afraid (that) we can't help you.",
       "th": "ฉันเกรงว่าเราคงช่วยคุณไม่ได้"
+     },
+     {
+      "en": "I'm glad that you got the new job.",
+      "th": "ฉันดีใจที่คุณได้งานใหม่"
+     },
+     {
+      "en": "We were surprised that the flight was so cheap.",
+      "th": "เราแปลกใจที่ตั๋วเครื่องบินราคาถูกมาก"
+     },
+     {
+      "en": "She is worried that she might miss the deadline.",
+      "th": "เธอกังวลว่าเธออาจจะทำไม่ทันกำหนดส่ง"
+     },
+     {
+      "en": "I'm confident that our team will win the contract.",
+      "th": "ฉันมั่นใจว่าทีมของเราจะได้สัญญานี้"
      }
     ],
     "transform": [
@@ -9138,6 +11870,22 @@
      {
       "en": "The fact that prices keep rising worries many people.",
       "th": "การที่ราคาสินค้าสูงขึ้นเรื่อยๆ ทำให้หลายคนกังวล"
+     },
+     {
+      "en": "The fact that he apologized changed my opinion of him.",
+      "th": "การที่เขาขอโทษทำให้ฉันเปลี่ยนความคิดที่มีต่อเขา"
+     },
+     {
+      "en": "The fact that the results are so clear supports our argument.",
+      "th": "การที่ผลลัพธ์ชัดเจนมากช่วยสนับสนุนข้อโต้แย้งของเรา"
+     },
+     {
+      "en": "The fact that she speaks three languages impressed the interviewer.",
+      "th": "การที่เธอพูดได้สามภาษาสร้างความประทับใจให้ผู้สัมภาษณ์"
+     },
+     {
+      "en": "The fact that nobody complained means the service was good.",
+      "th": "การที่ไม่มีใครบ่นแสดงว่าบริการนั้นดี"
      }
     ],
     "transform": [
@@ -9190,6 +11938,22 @@
      {
       "en": "Reading every day improves your vocabulary.",
       "th": "การอ่านทุกวันช่วยพัฒนาคลังคำศัพท์"
+     },
+     {
+      "en": "Traveling alone builds confidence and independence.",
+      "th": "การเดินทางคนเดียวช่วยสร้างความมั่นใจและความเป็นตัวของตัวเอง"
+     },
+     {
+      "en": "Cooking at home saves a lot of money.",
+      "th": "การทำอาหารกินเองช่วยประหยัดเงินได้มาก"
+     },
+     {
+      "en": "Exercising regularly reduces stress and improves sleep.",
+      "th": "การออกกำลังกายสม่ำเสมอช่วยลดความเครียดและทำให้นอนหลับดีขึ้น"
+     },
+     {
+      "en": "Making mistakes is a normal part of learning.",
+      "th": "การทำผิดพลาดเป็นเรื่องปกติของการเรียนรู้"
      }
     ],
     "transform": [
@@ -9246,6 +12010,22 @@
      {
       "en": "It is difficult to change old habits.",
       "th": "การเปลี่ยนนิสัยเก่าเป็นเรื่องยาก"
+     },
+     {
+      "en": "It is expensive to live in the city center.",
+      "th": "การอยู่ใจกลางเมืองมีค่าใช้จ่ายสูง"
+     },
+     {
+      "en": "It is helpful to plan your day the night before.",
+      "th": "การวางแผนวันของคุณตั้งแต่คืนก่อนเป็นเรื่องที่มีประโยชน์"
+     },
+     {
+      "en": "It is dangerous to use your phone while driving.",
+      "th": "การใช้โทรศัพท์ขณะขับรถเป็นเรื่องอันตราย"
+     },
+     {
+      "en": "It is possible to learn a new skill at any age.",
+      "th": "การเรียนรู้ทักษะใหม่สามารถทำได้ในทุกช่วงวัย"
      }
     ],
     "transform": [
@@ -9306,6 +12086,22 @@
      {
       "en": "I understand why they left early.",
       "th": "ฉันเข้าใจว่าทำไมพวกเขาถึงกลับก่อน"
+     },
+     {
+      "en": "She asked me how the machine works.",
+      "th": "เธอถามฉันว่าเครื่องนี้ทำงานอย่างไร"
+     },
+     {
+      "en": "I'm not sure when the next train arrives.",
+      "th": "ฉันไม่แน่ใจว่ารถไฟขบวนต่อไปมาถึงเมื่อไร"
+     },
+     {
+      "en": "Nobody knows who broke the window.",
+      "th": "ไม่มีใครรู้ว่าใครทำกระจกแตก"
+     },
+     {
+      "en": "Please explain which option is cheaper.",
+      "th": "ช่วยอธิบายหน่อยว่าตัวเลือกไหนถูกกว่ากัน"
      }
     ],
     "transform": [
@@ -9360,6 +12156,22 @@
      {
       "en": "You can order whatever you like.",
       "th": "คุณจะสั่งอะไรก็ได้ที่คุณชอบ"
+     },
+     {
+      "en": "Whatever the doctor recommends, I'm ready to follow it.",
+      "th": "หมอแนะนำอะไรมา ฉันก็พร้อมทำตาม"
+     },
+     {
+      "en": "Whichever route we take will get us there by noon.",
+      "th": "เราจะไปเส้นทางไหนก็ถึงก่อนเที่ยงอยู่ดี"
+     },
+     {
+      "en": "The teacher will grade whatever you submit tonight.",
+      "th": "ครูจะตรวจงานอะไรก็ตามที่คุณส่งคืนนี้"
+     },
+     {
+      "en": "Whatever the company decides about remote work matters to us.",
+      "th": "บริษัทจะตัดสินใจเรื่องทำงานทางไกลอย่างไร ก็สำคัญกับเรา"
      }
     ],
     "transform": [
@@ -9404,6 +12216,22 @@
      {
       "en": "Whichever team scores more goals advances to the final.",
       "th": "ทีมไหนก็ตามที่ทำประตูได้มากกว่า ได้ผ่านเข้ารอบชิง"
+     },
+     {
+      "en": "Whoever arrives last has to clean the kitchen.",
+      "th": "ใครมาถึงคนสุดท้ายต้องล้างครัว"
+     },
+     {
+      "en": "Whichever candidate impresses the panel will get the job.",
+      "th": "ผู้สมัครคนไหนที่ทำให้กรรมการประทับใจก็จะได้งาน"
+     },
+     {
+      "en": "Whoever booked the tickets should keep the receipt.",
+      "th": "ใครก็ตามที่จองตั๋วควรเก็บใบเสร็จไว้"
+     },
+     {
+      "en": "Whichever essay scores highest wins the scholarship.",
+      "th": "เรียงความเรื่องไหนที่ได้คะแนนสูงสุดจะได้ทุน"
      }
     ],
     "transform": [
@@ -9456,6 +12284,22 @@
      {
       "en": "She keeps a journal wherever she travels.",
       "th": "เธอเขียนไดอารีเสมอ ไม่ว่าจะไปเที่ยวที่ไหน"
+     },
+     {
+      "en": "I take my laptop wherever I work.",
+      "th": "ฉันเอาแล็ปท็อปไปด้วยไม่ว่าจะทำงานที่ไหน"
+     },
+     {
+      "en": "You can message me whenever you have a question.",
+      "th": "คุณส่งข้อความหาฉันได้ทุกเมื่อที่มีคำถาม"
+     },
+     {
+      "en": "The kids feel at home wherever their grandmother is.",
+      "th": "เด็กๆ รู้สึกอบอุ่นเหมือนอยู่บ้านไม่ว่าคุณยายจะอยู่ที่ไหน"
+     },
+     {
+      "en": "We review the budget whenever a new quarter begins.",
+      "th": "เราจะทบทวนงบประมาณทุกครั้งที่ไตรมาสใหม่เริ่มต้น"
      }
     ],
     "transform": [
@@ -9508,6 +12352,22 @@
      {
       "en": "However carefully you plan, something can still go wrong.",
       "th": "ไม่ว่าคุณจะวางแผนรอบคอบแค่ไหน ก็ยังมีบางอย่างผิดพลาดได้เสมอ"
+     },
+     {
+      "en": "However busy she is, she still calls her parents daily.",
+      "th": "ไม่ว่าจะยุ่งแค่ไหน เธอก็ยังโทรหาพ่อแม่ทุกวัน"
+     },
+     {
+      "en": "However quickly you type, accuracy still matters more.",
+      "th": "ไม่ว่าคุณจะพิมพ์เร็วแค่ไหน ความถูกต้องก็ยังสำคัญกว่า"
+     },
+     {
+      "en": "However cold it gets, he runs every morning.",
+      "th": "ไม่ว่าอากาศจะหนาวแค่ไหน เขาก็วิ่งทุกเช้า"
+     },
+     {
+      "en": "However convincing the ad is, I won't buy it.",
+      "th": "ไม่ว่าโฆษณาจะน่าเชื่อแค่ไหน ฉันก็จะไม่ซื้อ"
      }
     ],
     "transform": [
@@ -9560,6 +12420,22 @@
      {
       "en": "No matter who calls, tell them I'm busy.",
       "th": "ไม่ว่าใครจะโทรมา บอกเขาไปว่าฉันไม่ว่าง"
+     },
+     {
+      "en": "No matter where you live, you can join the online course.",
+      "th": "ไม่ว่าคุณจะอยู่ที่ไหน คุณก็เข้าเรียนออนไลน์ได้"
+     },
+     {
+      "en": "No matter how much it rains, the festival will go on.",
+      "th": "ไม่ว่าฝนจะตกหนักแค่ไหน งานเทศกาลก็จะดำเนินต่อไป"
+     },
+     {
+      "en": "No matter what the critics say, the film sold out.",
+      "th": "ไม่ว่านักวิจารณ์จะพูดอย่างไร หนังก็ขายตั๋วหมดเกลี้ยง"
+     },
+     {
+      "en": "No matter who leads the team, we must meet the deadline.",
+      "th": "ไม่ว่าใครจะเป็นหัวหน้าทีม เราก็ต้องส่งงานให้ทันกำหนด"
      }
     ],
     "transform": [
@@ -9608,6 +12484,22 @@
      {
       "en": "Whoever you are, you can't park here.",
       "th": "ไม่ว่าคุณจะเป็นใคร คุณก็จอดตรงนี้ไม่ได้"
+     },
+     {
+      "en": "Whatever the reviews claim, I trust my own experience.",
+      "th": "ไม่ว่ารีวิวจะบอกอย่างไร ฉันก็เชื่อประสบการณ์ของตัวเอง"
+     },
+     {
+      "en": "Whoever you ask, the answer will be the same.",
+      "th": "ไม่ว่าคุณจะถามใคร คำตอบก็จะเหมือนกัน"
+     },
+     {
+      "en": "Whatever the results show, we'll keep improving the product.",
+      "th": "ไม่ว่าผลลัพธ์จะออกมาอย่างไร เราจะพัฒนาสินค้าต่อไป"
+     },
+     {
+      "en": "Whoever they blame, the mistake was a team effort.",
+      "th": "ไม่ว่าพวกเขาจะโทษใคร ความผิดพลาดนี้เกิดจากทั้งทีม"
      }
     ],
     "transform": [
@@ -9666,6 +12558,22 @@
      {
       "en": "They said (that) they had already finished the report.",
       "th": "พวกเขาบอกว่าพวกเขาทำรายงานเสร็จไปแล้ว (คำพูดเดิม: \"We have already finished the report.\")"
+     },
+     {
+      "en": "My manager said the deadline had been moved to Friday.",
+      "th": "หัวหน้าของฉันบอกว่ากำหนดส่งงานถูกเลื่อนไปเป็นวันศุกร์"
+     },
+     {
+      "en": "The doctor said I needed to rest for a week.",
+      "th": "หมอบอกว่าฉันต้องพักผ่อนหนึ่งสัปดาห์"
+     },
+     {
+      "en": "She said she was learning Japanese in her free time.",
+      "th": "เธอบอกว่าเธอกำลังเรียนภาษาญี่ปุ่นในเวลาว่าง"
+     },
+     {
+      "en": "He said the hotel had raised its prices during the holidays.",
+      "th": "เขาบอกว่าโรงแรมขึ้นราคาในช่วงวันหยุด"
      }
     ],
     "transform": [
@@ -9726,6 +12634,22 @@
      {
       "en": "The teacher told the students to be quiet.",
       "th": "ครูบอกให้นักเรียนเงียบ"
+     },
+     {
+      "en": "My friend told me the new cafe was worth trying.",
+      "th": "เพื่อนบอกฉันว่าร้านกาแฟใหม่น่าลองไปชิม"
+     },
+     {
+      "en": "The guide told us the museum closed at five.",
+      "th": "ไกด์บอกพวกเราว่าพิพิธภัณฑ์ปิดตอนห้าโมง"
+     },
+     {
+      "en": "She told her sister that she had passed the exam.",
+      "th": "เธอบอกน้องสาวว่าเธอสอบผ่านแล้ว"
+     },
+     {
+      "en": "The examiner told me the results would come out next month.",
+      "th": "กรรมการสอบบอกฉันว่าผลสอบจะออกเดือนหน้า"
      }
     ],
     "transform": [
@@ -9782,6 +12706,22 @@
      {
       "en": "They asked if we wanted to join them.",
       "th": "พวกเขาถามว่าเราอยากไปร่วมกับพวกเขาไหม (คำพูดเดิม: \"Do you want to join us?\")"
+     },
+     {
+      "en": "The waiter asked whether we wanted anything to drink.",
+      "th": "พนักงานเสิร์ฟถามว่าเราอยากดื่มอะไรไหม"
+     },
+     {
+      "en": "My boss asked if I had finished the presentation.",
+      "th": "เจ้านายถามว่าฉันทำพรีเซนต์เสร็จหรือยัง"
+     },
+     {
+      "en": "She asked whether the train had already left.",
+      "th": "เธอถามว่ารถไฟออกไปแล้วหรือยัง"
+     },
+     {
+      "en": "The interviewer asked if I could start next week.",
+      "th": "ผู้สัมภาษณ์ถามว่าฉันเริ่มงานสัปดาห์หน้าได้ไหม"
      }
     ],
     "transform": [
@@ -9838,6 +12778,22 @@
      {
       "en": "They asked why the flight had been delayed.",
       "th": "พวกเขาถามว่าทำไมเที่ยวบินถึงล่าช้า (คำพูดเดิม: \"Why has the flight been delayed?\")"
+     },
+     {
+      "en": "The receptionist asked what time I would arrive.",
+      "th": "พนักงานต้อนรับถามว่าฉันจะมาถึงกี่โมง"
+     },
+     {
+      "en": "My teacher asked how I had prepared for the test.",
+      "th": "ครูถามว่าฉันเตรียมตัวสอบมาอย่างไร"
+     },
+     {
+      "en": "He asked me which hotel I was staying at.",
+      "th": "เขาถามว่าฉันพักอยู่โรงแรมไหน"
+     },
+     {
+      "en": "She asked who had written the report.",
+      "th": "เธอถามว่าใครเป็นคนเขียนรายงานฉบับนี้"
      }
     ],
     "transform": [
@@ -9898,6 +12854,22 @@
      {
       "en": "The officer told us to show our passports.",
       "th": "เจ้าหน้าที่บอกให้เราแสดงหนังสือเดินทาง (คำพูดเดิม: \"Show your passports.\")"
+     },
+     {
+      "en": "The coach told us to arrive early for practice.",
+      "th": "โค้ชบอกให้พวกเรามาถึงก่อนเวลาซ้อม"
+     },
+     {
+      "en": "My mother asked me to buy some milk on the way home.",
+      "th": "แม่ขอให้ฉันซื้อนมระหว่างทางกลับบ้าน"
+     },
+     {
+      "en": "The manager told the staff not to use their phones during meetings.",
+      "th": "ผู้จัดการบอกพนักงานไม่ให้ใช้โทรศัพท์ระหว่างประชุม"
+     },
+     {
+      "en": "The flight attendant asked us to fasten our seatbelts.",
+      "th": "พนักงานต้อนรับบนเครื่องบินขอให้เราคาดเข็มขัดนิรภัย"
      }
     ],
     "transform": [
@@ -9946,6 +12918,22 @@
      {
       "en": "They said they had met him the day before.",
       "th": "พวกเขาบอกว่าพวกเขาเจอเขาเมื่อวันก่อน (คำพูดเดิม: \"We met him yesterday.\")"
+     },
+     {
+      "en": "She said she would send the documents the following week.",
+      "th": "เธอบอกว่าจะส่งเอกสารในสัปดาห์ถัดไป"
+     },
+     {
+      "en": "He told me he had visited that temple the year before.",
+      "th": "เขาบอกฉันว่าเขาเคยไปวัดนั้นเมื่อปีก่อน"
+     },
+     {
+      "en": "They said they were moving to a new office there.",
+      "th": "พวกเขาบอกว่ากำลังย้ายไปออฟฟิศใหม่ที่นั่น"
+     },
+     {
+      "en": "My colleague said she had finished her part that morning.",
+      "th": "เพื่อนร่วมงานบอกว่าเธอทำส่วนของเธอเสร็จเมื่อเช้าวันนั้น"
      }
     ],
     "transform": [
@@ -9996,6 +12984,22 @@
      {
       "en": "\"Did we lose the file?\" \"I'm afraid so.\"",
       "th": "\"เราทำไฟล์หายเหรอ\" \"เกรงว่าจะใช่\""
+     },
+     {
+      "en": "\"Do you think we'll pass the exam?\" \"I believe so.\"",
+      "th": "\"คิดว่าเราจะสอบผ่านไหม\" \"ฉันเชื่อว่าผ่านนะ\""
+     },
+     {
+      "en": "\"Has the train already left?\" \"I suppose so.\"",
+      "th": "\"รถไฟออกไปแล้วเหรอ\" \"ก็คงงั้นแหละ\""
+     },
+     {
+      "en": "\"Will the shop be open on Sunday?\" \"I don't think so.\"",
+      "th": "\"ร้านจะเปิดวันอาทิตย์ไหม\" \"ฉันว่าคงไม่นะ\""
+     },
+     {
+      "en": "\"Is she coming to the party?\" \"I hope so.\"",
+      "th": "\"เธอจะมางานปาร์ตี้ไหม\" \"หวังว่าจะมานะ\""
      }
     ],
     "transform": [
@@ -10045,6 +13049,22 @@
      {
       "en": "He promised to call back, but he never did.",
       "th": "เขาสัญญาว่าจะโทรกลับ แต่เขาไม่เคยทำเลย"
+     },
+     {
+      "en": "The teacher told us to raise our hands, so we did so.",
+      "th": "ครูบอกให้เรายกมือ เราก็ทำตามนั้น"
+     },
+     {
+      "en": "You should back up your files, and do it every week.",
+      "th": "คุณควรสำรองไฟล์ไว้ และทำแบบนั้นทุกสัปดาห์"
+     },
+     {
+      "en": "I asked him to be quiet, but he wouldn't do that.",
+      "th": "ฉันขอให้เขาเงียบ แต่เขาไม่ยอมทำ"
+     },
+     {
+      "en": "She said she would email me the report, and she did.",
+      "th": "เธอบอกว่าจะส่งรายงานมาทางอีเมล และเธอก็ส่งจริง"
      }
     ],
     "transform": [
@@ -10090,6 +13110,22 @@
      {
       "en": "My old phone broke, so I bought a new one.",
       "th": "โทรศัพท์เครื่องเก่าฉันพัง เลยซื้อเครื่องใหม่"
+     },
+     {
+      "en": "These questions are too hard; let's try the easier ones.",
+      "th": "คำถามพวกนี้ยากเกินไป ลองทำข้อที่ง่ายกว่ากันดีกว่า"
+     },
+     {
+      "en": "\"Which seat would you like?\" \"The one by the window.\"",
+      "th": "\"คุณอยากได้ที่นั่งไหน\" \"ที่ริมหน้าต่างครับ\""
+     },
+     {
+      "en": "I lost my umbrella, so I had to buy a cheap one.",
+      "th": "ฉันทำร่มหาย เลยต้องซื้ออันถูกๆ มาแทน"
+     },
+     {
+      "en": "The red apples look fresher than the green ones.",
+      "th": "แอปเปิลสีแดงดูสดกว่าลูกสีเขียว"
      }
     ],
     "transform": [
@@ -10139,6 +13175,22 @@
      {
       "en": "\"Who wants coffee?\" \"I do!\"",
       "th": "\"ใครอยากได้กาแฟบ้าง\" \"ฉันเอา!\""
+     },
+     {
+      "en": "My sister likes horror films, but I don't.",
+      "th": "พี่สาวฉันชอบหนังผี แต่ฉันไม่ชอบ"
+     },
+     {
+      "en": "He didn't book a hotel, but we did.",
+      "th": "เขาไม่ได้จองโรงแรม แต่พวกเราจองไว้"
+     },
+     {
+      "en": "\"Who has finished the assignment?\" \"She has.\"",
+      "th": "\"ใครทำงานที่มอบหมายเสร็จแล้วบ้าง\" \"เธอเสร็จแล้ว\""
+     },
+     {
+      "en": "I thought I would be late, but I wasn't.",
+      "th": "ฉันนึกว่าจะมาสาย แต่ก็ไม่สาย"
      }
     ],
     "transform": [
@@ -10188,6 +13240,22 @@
      {
       "en": "\"I have never been to Japan.\" \"Neither have I.\"",
       "th": "\"ฉันไม่เคยไปญี่ปุ่นเลย\" \"ฉันก็ไม่เคยเหมือนกัน\""
+     },
+     {
+      "en": "\"I work from home on Fridays.\" \"So do I.\"",
+      "th": "\"ฉันทำงานที่บ้านทุกวันศุกร์\" \"ฉันก็เหมือนกัน\""
+     },
+     {
+      "en": "\"I didn't sleep well last night.\" \"Neither did I.\"",
+      "th": "\"เมื่อคืนฉันนอนไม่ค่อยหลับเลย\" \"ฉันก็เหมือนกัน\""
+     },
+     {
+      "en": "\"I would love to travel more.\" \"So would I.\"",
+      "th": "\"ฉันอยากไปเที่ยวให้มากกว่านี้จัง\" \"ฉันก็อยากเหมือนกัน\""
+     },
+     {
+      "en": "\"I won't be at the meeting tomorrow.\" \"Neither will I.\"",
+      "th": "\"พรุ่งนี้ฉันจะไม่ได้เข้าประชุม\" \"ฉันก็ไม่ได้เข้าเหมือนกัน\""
      }
     ],
     "transform": [
@@ -10237,6 +13305,22 @@
      {
       "en": "He can read but can't write in Japanese.",
       "th": "เขาอ่านภาษาญี่ปุ่นได้ แต่เขียนไม่ได้"
+     },
+     {
+      "en": "We visited the museum and then walked along the river.",
+      "th": "เราไปเที่ยวพิพิธภัณฑ์แล้วก็เดินเล่นริมแม่น้ำ"
+     },
+     {
+      "en": "She speaks Thai fluently but writes it slowly.",
+      "th": "เธอพูดภาษาไทยได้คล่อง แต่เขียนช้า"
+     },
+     {
+      "en": "He ordered soup and a salad for lunch.",
+      "th": "เขาสั่งซุปกับสลัดเป็นมื้อเที่ยง"
+     },
+     {
+      "en": "I called the office but got no answer.",
+      "th": "ฉันโทรไปที่ออฟฟิศแต่ไม่มีคนรับ"
      }
     ],
     "transform": [
@@ -10308,6 +13392,22 @@
      {
       "en": "The test was so difficult that half the class failed.",
       "th": "ข้อสอบยากมากจนครึ่งห้องสอบตก"
+     },
+     {
+      "en": "The room was so cold that we couldn't sleep.",
+      "th": "ห้องหนาวมากจนพวกเรานอนไม่หลับ"
+     },
+     {
+      "en": "He drove so carelessly that he almost hit a cyclist.",
+      "th": "เขาขับรถประมาทมากจนเกือบชนคนขี่จักรยาน"
+     },
+     {
+      "en": "The instructions were so clear that everyone finished on time.",
+      "th": "คำแนะนำชัดเจนมากจนทุกคนทำเสร็จตรงเวลา"
+     },
+     {
+      "en": "My phone battery drains so fast that I charge it twice a day.",
+      "th": "แบตมือถือของฉันหมดเร็วมากจนต้องชาร์จวันละสองครั้ง"
      }
     ],
     "transform": [
@@ -10376,6 +13476,22 @@
      {
       "en": "She has such a busy schedule that she rarely sleeps.",
       "th": "เธอมีตารางงานยุ่งมากจนแทบไม่ได้นอน"
+     },
+     {
+      "en": "It was such a long meeting that I missed my train.",
+      "th": "มันเป็นการประชุมที่ยาวมากจนฉันตกรถไฟ"
+     },
+     {
+      "en": "He is such a patient teacher that his students never feel afraid to ask.",
+      "th": "เขาเป็นครูที่ใจเย็นมากจนนักเรียนไม่เคยกลัวที่จะถาม"
+     },
+     {
+      "en": "Bangkok has such heavy traffic that I leave home an hour early.",
+      "th": "กรุงเทพฯ รถติดหนักมากจนฉันต้องออกจากบ้านก่อนเวลาหนึ่งชั่วโมง"
+     },
+     {
+      "en": "It was such an interesting lecture that nobody left early.",
+      "th": "มันเป็นการบรรยายที่น่าสนใจมากจนไม่มีใครกลับก่อน"
      }
     ],
     "transform": [
@@ -10437,6 +13553,22 @@
      {
       "en": "He turned on the light to read the letter.",
       "th": "เขาเปิดไฟเพื่ออ่านจดหมาย"
+     },
+     {
+      "en": "She went to the library to borrow some books.",
+      "th": "เธอไปห้องสมุดเพื่อยืมหนังสือ"
+     },
+     {
+      "en": "We stopped at the station to buy tickets.",
+      "th": "เราแวะที่สถานีเพื่อซื้อตั๋ว"
+     },
+     {
+      "en": "He is studying hard to pass the IELTS exam.",
+      "th": "เขากำลังตั้งใจเรียนเพื่อสอบ IELTS ให้ผ่าน"
+     },
+     {
+      "en": "I called the hotel to confirm my booking.",
+      "th": "ฉันโทรหาโรงแรมเพื่อยืนยันการจอง"
      }
     ],
     "transform": [
@@ -10493,6 +13625,22 @@
      {
       "en": "We left early in order to avoid the traffic.",
       "th": "เราออกแต่เช้าเพื่อเลี่ยงรถติด"
+     },
+     {
+      "en": "She woke up early in order to finish the report before the meeting.",
+      "th": "เธอตื่นแต่เช้าเพื่อทำรายงานให้เสร็จก่อนการประชุม"
+     },
+     {
+      "en": "He wrote everything down in order to remember the details.",
+      "th": "เขาจดทุกอย่างไว้เพื่อจดจำรายละเอียด"
+     },
+     {
+      "en": "They booked in advance so as to get a lower price.",
+      "th": "พวกเขาจองล่วงหน้าเพื่อให้ได้ราคาที่ถูกกว่า"
+     },
+     {
+      "en": "I turned off my phone so as not to be disturbed while studying.",
+      "th": "ฉันปิดโทรศัพท์เพื่อไม่ให้ถูกรบกวนขณะเรียน"
      }
     ],
     "transform": [
@@ -10553,6 +13701,22 @@
      {
       "en": "Please speak clearly so that everyone can understand you.",
       "th": "โปรดพูดให้ชัดเพื่อให้ทุกคนเข้าใจคุณ"
+     },
+     {
+      "en": "I wrote down her number so that I could call her later.",
+      "th": "ฉันจดเบอร์ของเธอไว้เพื่อที่จะโทรหาเธอทีหลัง"
+     },
+     {
+      "en": "The teacher repeated the question so that everyone could answer.",
+      "th": "ครูพูดคำถามซ้ำเพื่อที่ทุกคนจะได้ตอบได้"
+     },
+     {
+      "en": "He saved his files online so that he would not lose them.",
+      "th": "เขาเก็บไฟล์ไว้ออนไลน์เพื่อที่จะได้ไม่ทำหาย"
+     },
+     {
+      "en": "We took a taxi so that we could arrive on time.",
+      "th": "เรานั่งแท็กซี่เพื่อที่จะได้ไปถึงตรงเวลา"
      }
     ],
     "transform": [
@@ -10609,6 +13773,22 @@
      {
       "en": "They were so friendly. / They were such friendly hosts.",
       "th": "พวกเขาเป็นมิตรมาก / พวกเขาเป็นเจ้าภาพที่เป็นมิตรมาก"
+     },
+     {
+      "en": "The exam was so hard. / It was such a hard exam.",
+      "th": "ข้อสอบยากมาก / มันเป็นข้อสอบที่ยากมาก"
+     },
+     {
+      "en": "The weather is so nice today. / It's such a nice day today.",
+      "th": "วันนี้อากาศดีมาก / วันนี้เป็นวันที่อากาศดีมาก"
+     },
+     {
+      "en": "The service was so slow. / It was such slow service.",
+      "th": "บริการช้ามาก / มันเป็นบริการที่ช้ามาก"
+     },
+     {
+      "en": "My neighbours are so noisy. / They are such noisy neighbours.",
+      "th": "เพื่อนบ้านของฉันเสียงดังมาก / พวกเขาเป็นเพื่อนบ้านที่เสียงดังมาก"
      }
     ],
     "transform": [
@@ -10675,6 +13855,22 @@
      {
       "en": "My bag is not as heavy as yours.",
       "th": "กระเป๋าของฉันไม่หนักเท่าของคุณ"
+     },
+     {
+      "en": "This room is as quiet as a library.",
+      "th": "ห้องนี้เงียบพอ ๆ กับห้องสมุด"
+     },
+     {
+      "en": "My salary is as high as my colleague's.",
+      "th": "เงินเดือนของฉันสูงเท่ากับของเพื่อนร่วมงาน"
+     },
+     {
+      "en": "The film was not as boring as I expected.",
+      "th": "หนังเรื่องนี้ไม่ได้น่าเบื่ออย่างที่ฉันคิดไว้"
+     },
+     {
+      "en": "Learning to drive is as important as learning to swim.",
+      "th": "การหัดขับรถสำคัญพอ ๆ กับการหัดว่ายน้ำ"
      }
     ],
     "transform": [
@@ -10731,6 +13927,22 @@
      {
       "en": "This test is easier than the last one.",
       "th": "ข้อสอบนี้ง่ายกว่าครั้งที่แล้ว"
+     },
+     {
+      "en": "The new office is bigger than the old one.",
+      "th": "ออฟฟิศใหม่ใหญ่กว่าที่เก่า"
+     },
+     {
+      "en": "My grandmother is older than my grandfather.",
+      "th": "คุณยายอายุมากกว่าคุณตา"
+     },
+     {
+      "en": "This route to the airport is shorter than that one.",
+      "th": "เส้นทางไปสนามบินเส้นนี้สั้นกว่าเส้นนั้น"
+     },
+     {
+      "en": "The coffee here is cheaper than at the hotel.",
+      "th": "กาแฟที่นี่ถูกกว่าที่โรงแรม"
      }
     ],
     "transform": [
@@ -10791,6 +14003,22 @@
      {
       "en": "She is more careful than her friend.",
       "th": "เธอรอบคอบกว่าเพื่อนของเธอ"
+     },
+     {
+      "en": "Learning a language is more useful than memorizing facts.",
+      "th": "การเรียนภาษามีประโยชน์มากกว่าการท่องจำข้อมูล"
+     },
+     {
+      "en": "Online meetings are more convenient than travelling to the office.",
+      "th": "การประชุมออนไลน์สะดวกกว่าการเดินทางไปออฟฟิศ"
+     },
+     {
+      "en": "The city centre is more crowded than the suburbs.",
+      "th": "ใจกลางเมืองมีคนพลุกพล่านกว่าย่านชานเมือง"
+     },
+     {
+      "en": "This essay is more organized than his last one.",
+      "th": "เรียงความชิ้นนี้เป็นระเบียบกว่าชิ้นที่แล้วของเขา"
      }
     ],
     "transform": [
@@ -10847,6 +14075,22 @@
      {
       "en": "The station is farther than I thought.",
       "th": "สถานีอยู่ไกลกว่าที่ฉันคิด"
+     },
+     {
+      "en": "My English is better than it was last year.",
+      "th": "ภาษาอังกฤษของฉันดีกว่าเมื่อปีที่แล้ว"
+     },
+     {
+      "en": "The traffic today is worse than usual.",
+      "th": "รถวันนี้ติดหนักกว่าปกติ"
+     },
+     {
+      "en": "The beach is farther from here than the market.",
+      "th": "ชายหาดอยู่ไกลจากที่นี่มากกว่าตลาด"
+     },
+     {
+      "en": "His handwriting is worse than mine.",
+      "th": "ลายมือของเขาแย่กว่าของฉัน"
      }
     ],
     "transform": [
@@ -10903,6 +14147,22 @@
      {
       "en": "This is the easiest question of all.",
       "th": "นี่เป็นคำถามที่ง่ายที่สุดในบรรดาทั้งหมด"
+     },
+     {
+      "en": "February is the shortest month of the year.",
+      "th": "เดือนกุมภาพันธ์เป็นเดือนที่สั้นที่สุดของปี"
+     },
+     {
+      "en": "This is the fastest train in the country.",
+      "th": "นี่คือรถไฟที่เร็วที่สุดในประเทศ"
+     },
+     {
+      "en": "She is the youngest employee on our team.",
+      "th": "เธอเป็นพนักงานที่อายุน้อยที่สุดในทีมของเรา"
+     },
+     {
+      "en": "That was the largest crowd of the festival.",
+      "th": "นั่นเป็นฝูงชนที่มากที่สุดของงานเทศกาล"
      }
     ],
     "transform": [
@@ -10959,6 +14219,22 @@
      {
       "en": "It was the most interesting book of the year.",
       "th": "มันเป็นหนังสือที่น่าสนใจที่สุดแห่งปี"
+     },
+     {
+      "en": "This is the most popular dish on the menu.",
+      "th": "นี่คือเมนูที่ได้รับความนิยมมากที่สุดในรายการอาหาร"
+     },
+     {
+      "en": "He gave the most impressive presentation in the meeting.",
+      "th": "เขานำเสนอได้น่าประทับใจที่สุดในการประชุม"
+     },
+     {
+      "en": "Reading is the most enjoyable part of my day.",
+      "th": "การอ่านหนังสือเป็นช่วงที่สนุกที่สุดในแต่ละวันของฉัน"
+     },
+     {
+      "en": "Traffic is the most serious problem in this city.",
+      "th": "การจราจรเป็นปัญหาที่ร้ายแรงที่สุดในเมืองนี้"
      }
     ],
     "transform": [
@@ -11025,6 +14301,22 @@
      {
       "en": "My new job is not as stressful as my previous one.",
       "th": "งานใหม่ของฉันไม่เครียดเท่างานเก่า"
+     },
+     {
+      "en": "This restaurant is not as busy as it usually is on weekends.",
+      "th": "ร้านอาหารนี้ไม่ได้คนแน่นเท่าที่เคยเป็นในวันหยุดสุดสัปดาห์"
+     },
+     {
+      "en": "My spoken English is not as fluent as my writing.",
+      "th": "ภาษาอังกฤษที่ฉันพูดยังไม่คล่องเท่ากับที่ฉันเขียน"
+     },
+     {
+      "en": "The traffic this morning was not as bad as I had feared.",
+      "th": "รถติดเมื่อเช้านี้ไม่ได้แย่อย่างที่ฉันกลัวไว้"
+     },
+     {
+      "en": "Winter here is not as cold as it is in the north.",
+      "th": "ฤดูหนาวที่นี่ไม่ได้หนาวเท่ากับทางภาคเหนือ"
      }
     ],
     "transform": [
@@ -11085,6 +14377,22 @@
      {
       "en": "That was the least useful advice I received all week.",
       "th": "นั่นเป็นคำแนะนำที่มีประโยชน์น้อยที่สุดที่ฉันได้รับมาทั้งสัปดาห์"
+     },
+     {
+      "en": "Reading academic articles is less enjoyable than reading novels.",
+      "th": "การอ่านบทความวิชาการสนุกน้อยกว่าการอ่านนิยาย"
+     },
+     {
+      "en": "The second hotel we stayed at was less comfortable than the first.",
+      "th": "โรงแรมแห่งที่สองที่เราพักสบายน้อยกว่าแห่งแรก"
+     },
+     {
+      "en": "Working from home is less tiring than commuting every day.",
+      "th": "การทำงานที่บ้านเหนื่อยน้อยกว่าการเดินทางไปทำงานทุกวัน"
+     },
+     {
+      "en": "That was the least crowded beach we visited on the whole trip.",
+      "th": "นั่นเป็นชายหาดที่คนน้อยที่สุดที่เราไปตลอดทั้งทริป"
      }
     ],
     "transform": [
@@ -11145,6 +14453,22 @@
      {
       "en": "Getting there by train is far more convenient than driving.",
       "th": "การไปที่นั่นด้วยรถไฟสะดวกกว่าการขับรถมาก"
+     },
+     {
+      "en": "The second interview was far harder than the first one.",
+      "th": "การสัมภาษณ์รอบที่สองยากกว่ารอบแรกมาก"
+     },
+     {
+      "en": "Speaking practice is much more helpful than just memorising rules.",
+      "th": "การฝึกพูดมีประโยชน์มากกว่าการท่องจำกฎเยอะ"
+     },
+     {
+      "en": "This route to the office is a bit shorter than the usual one.",
+      "th": "เส้นทางไปออฟฟิศเส้นนี้สั้นกว่าเส้นปกติเล็กน้อย"
+     },
+     {
+      "en": "The final report was slightly longer than we had planned.",
+      "th": "รายงานฉบับสุดท้ายยาวกว่าที่เราวางแผนไว้นิดหน่อย"
      }
     ],
     "transform": [
@@ -11209,6 +14533,22 @@
      {
       "en": "Their house is twice as big as ours.",
       "th": "บ้านของพวกเขาใหญ่เป็นสองเท่าของบ้านเรา"
+     },
+     {
+      "en": "This year's sales are twice as high as last year's.",
+      "th": "ยอดขายปีนี้สูงเป็นสองเท่าของปีที่แล้ว"
+     },
+     {
+      "en": "The flight to London is three times as long as the flight to Tokyo.",
+      "th": "เที่ยวบินไปลอนดอนใช้เวลานานเป็นสามเท่าของเที่ยวบินไปโตเกียว"
+     },
+     {
+      "en": "Living downtown is almost twice as expensive as living in the suburbs.",
+      "th": "การอยู่ใจกลางเมืองแพงเกือบสองเท่าของการอยู่ชานเมือง"
+     },
+     {
+      "en": "The new library is three times as big as the old reading room.",
+      "th": "ห้องสมุดใหม่ใหญ่เป็นสามเท่าของห้องอ่านหนังสือเดิม"
      }
     ],
     "transform": [
@@ -11261,6 +14601,22 @@
      {
       "en": "Life in the city is very different from life in the countryside.",
       "th": "ชีวิตในเมืองต่างจากชีวิตในชนบทมาก"
+     },
+     {
+      "en": "My daily routine is very similar to my sister's.",
+      "th": "กิจวัตรประจำวันของฉันคล้ายกับของน้องสาวมาก"
+     },
+     {
+      "en": "The final price was the same as the one they quoted online.",
+      "th": "ราคาสุดท้ายเท่ากับที่พวกเขาแจ้งไว้ทางออนไลน์"
+     },
+     {
+      "en": "His teaching style is quite different from what I was used to.",
+      "th": "สไตล์การสอนของเขาต่างจากที่ฉันเคยชินอยู่พอสมควร"
+     },
+     {
+      "en": "This year's schedule is almost the same as last term's.",
+      "th": "ตารางเรียนปีนี้เกือบจะเหมือนกับของเทอมที่แล้ว"
      }
     ],
     "transform": [
@@ -11333,6 +14689,22 @@
      {
       "en": "She is the kindest person I have ever met.",
       "th": "เธอเป็นคนที่ใจดีที่สุดเท่าที่ฉันเคยเจอมา"
+     },
+     {
+      "en": "This is the most challenging project I have ever worked on.",
+      "th": "นี่เป็นโปรเจกต์ที่ท้าทายที่สุดเท่าที่ฉันเคยทำมา"
+     },
+     {
+      "en": "That was the longest flight I have ever taken.",
+      "th": "นั่นเป็นเที่ยวบินที่ยาวนานที่สุดเท่าที่ฉันเคยนั่งมา"
+     },
+     {
+      "en": "She is the most patient teacher I have ever studied with.",
+      "th": "เธอเป็นครูที่ใจเย็นที่สุดเท่าที่ฉันเคยเรียนด้วย"
+     },
+     {
+      "en": "This is the most useful book I have ever read for the exam.",
+      "th": "นี่เป็นหนังสือที่มีประโยชน์ที่สุดเท่าที่ฉันเคยอ่านเพื่อเตรียมสอบ"
      }
     ],
     "transform": [
@@ -11387,6 +14759,22 @@
      {
       "en": "Her English is getting better and better.",
       "th": "ภาษาอังกฤษของเธอดีขึ้นเรื่อยๆ"
+     },
+     {
+      "en": "The days are getting shorter and shorter as winter approaches.",
+      "th": "วันเวลาสั้นลงเรื่อย ๆ เมื่อฤดูหนาวใกล้เข้ามา"
+     },
+     {
+      "en": "My grandmother is growing weaker and weaker each month.",
+      "th": "คุณยายของฉันอ่อนแอลงเรื่อย ๆ ในแต่ละเดือน"
+     },
+     {
+      "en": "The team is becoming more and more confident before the final.",
+      "th": "ทีมมีความมั่นใจมากขึ้นเรื่อย ๆ ก่อนรอบชิงชนะเลิศ"
+     },
+     {
+      "en": "Traffic in Bangkok is getting worse and worse every morning.",
+      "th": "การจราจรในกรุงเทพฯ แย่ลงเรื่อย ๆ ในทุกเช้า"
      }
     ],
     "transform": [
@@ -11435,6 +14823,22 @@
      {
       "en": "The queue keeps moving on and on with no end in sight.",
       "th": "แถวเคลื่อนไปเรื่อยๆ ไม่มีทีท่าจะจบ"
+     },
+     {
+      "en": "The interest rates keep going up and up this year.",
+      "th": "อัตราดอกเบี้ยยังคงพุ่งขึ้นเรื่อย ๆ ในปีนี้"
+     },
+     {
+      "en": "The meeting kept dragging on and on until midnight.",
+      "th": "การประชุมยืดเยื้อไปเรื่อย ๆ จนถึงเที่ยงคืน"
+     },
+     {
+      "en": "Her fever keeps going lower and lower, which is a relief.",
+      "th": "ไข้ของเธอลดลงเรื่อย ๆ ซึ่งน่าโล่งใจ"
+     },
+     {
+      "en": "The children kept chattering on and on during the whole trip.",
+      "th": "เด็ก ๆ พูดคุยกันไม่หยุดตลอดการเดินทาง"
      }
     ],
     "transform": [
@@ -11487,6 +14891,22 @@
      {
       "en": "Strange as it may seem, he enjoys exams.",
       "th": "แม้จะฟังดูแปลก แต่เขาชอบการสอบ"
+     },
+     {
+      "en": "Nervous as I was, I still gave the presentation confidently.",
+      "th": "แม้จะประหม่า ฉันก็ยังนำเสนออย่างมั่นใจ"
+     },
+     {
+      "en": "Busy as they are, they always make time for their family.",
+      "th": "แม้จะยุ่งแค่ไหน พวกเขาก็มีเวลาให้ครอบครัวเสมอ"
+     },
+     {
+      "en": "Difficult as the exam was, most students passed it.",
+      "th": "แม้ข้อสอบจะยาก แต่นักเรียนส่วนใหญ่ก็สอบผ่าน"
+     },
+     {
+      "en": "Small as the flat is, it feels like a real home.",
+      "th": "แม้ห้องพักจะเล็ก แต่ก็รู้สึกเหมือนบ้านจริง ๆ"
      }
     ],
     "transform": [
@@ -11539,6 +14959,22 @@
      {
       "en": "Young though he was, he handled the crisis calmly.",
       "th": "แม้เขาจะอายุน้อย เขาก็รับมือวิกฤตได้อย่างใจเย็น"
+     },
+     {
+      "en": "Rich though he is, he lives a very simple life.",
+      "th": "แม้เขาจะร่ำรวย แต่เขาใช้ชีวิตเรียบง่ายมาก"
+     },
+     {
+      "en": "Tired though we were, we finished packing before dawn.",
+      "th": "แม้เราจะเหนื่อย แต่เราก็เก็บของเสร็จก่อนรุ่งสาง"
+     },
+     {
+      "en": "Simple though the recipe is, it takes real patience.",
+      "th": "แม้สูตรอาหารจะเรียบง่าย แต่ก็ต้องใช้ความอดทนจริง ๆ"
+     },
+     {
+      "en": "Risky though the plan was, the manager approved it.",
+      "th": "แม้แผนจะเสี่ยง แต่ผู้จัดการก็อนุมัติแผนนั้น"
      }
     ],
     "transform": [
@@ -11583,6 +15019,22 @@
      {
       "en": "Try as they might, they could not convince the board.",
       "th": "ไม่ว่าจะพยายามเพียงใด พวกเขาก็โน้มน้าวคณะกรรมการไม่สำเร็จ"
+     },
+     {
+      "en": "Try as she might, she could not finish the essay in time.",
+      "th": "ไม่ว่าเธอจะพยายามแค่ไหน เธอก็เขียนเรียงความไม่เสร็จทันเวลา"
+     },
+     {
+      "en": "Try as we might, we could not book a table at that restaurant.",
+      "th": "ไม่ว่าเราจะพยายามแค่ไหน เราก็จองโต๊ะร้านนั้นไม่ได้"
+     },
+     {
+      "en": "Try as he might, he could not fix the printer.",
+      "th": "ไม่ว่าเขาจะพยายามแค่ไหน เขาก็ซ่อมเครื่องพิมพ์ไม่ได้"
+     },
+     {
+      "en": "Try as the tourists might, they could not find the hidden temple.",
+      "th": "ไม่ว่านักท่องเที่ยวจะพยายามแค่ไหน พวกเขาก็หาวัดที่ซ่อนอยู่ไม่เจอ"
      }
     ],
     "transform": [
@@ -11641,6 +15093,22 @@
      {
       "en": "We hope to see you soon.",
       "th": "เราหวังว่าจะได้เจอคุณเร็ว ๆ นี้"
+     },
+     {
+      "en": "They need to book the flight before Friday.",
+      "th": "พวกเขาต้องจองตั๋วเครื่องบินก่อนวันศุกร์"
+     },
+     {
+      "en": "I hope to pass the IELTS exam next month.",
+      "th": "ฉันหวังว่าจะสอบ IELTS ผ่านในเดือนหน้า"
+     },
+     {
+      "en": "He wants to open his own coffee shop someday.",
+      "th": "เขาอยากเปิดร้านกาแฟของตัวเองสักวันหนึ่ง"
+     },
+     {
+      "en": "We decided to take the earlier train.",
+      "th": "เราตัดสินใจนั่งรถไฟเที่ยวที่ออกเช้ากว่า"
      }
     ],
     "transform": [
@@ -11689,6 +15157,22 @@
      {
       "en": "You should avoid eating late.",
       "th": "คุณควรเลี่ยงการกินดึก"
+     },
+     {
+      "en": "She enjoys jogging in the park every morning.",
+      "th": "เธอชอบวิ่งจ๊อกกิงในสวนทุกเช้า"
+     },
+     {
+      "en": "I finished writing my report last night.",
+      "th": "ฉันเขียนรายงานเสร็จเมื่อคืนนี้"
+     },
+     {
+      "en": "You should avoid checking your phone before bed.",
+      "th": "คุณควรเลี่ยงการเช็กมือถือก่อนนอน"
+     },
+     {
+      "en": "He enjoys chatting with tourists to practice English.",
+      "th": "เขาชอบคุยกับนักท่องเที่ยวเพื่อฝึกภาษาอังกฤษ"
      }
     ],
     "transform": [
@@ -11741,6 +15225,22 @@
      {
       "en": "I had the mechanic fix my car.",
       "th": "ฉันให้ช่างซ่อมรถให้"
+     },
+     {
+      "en": "The manager made the team work overtime.",
+      "th": "ผู้จัดการสั่งให้ทีมทำงานล่วงเวลา"
+     },
+     {
+      "en": "Please let me explain what happened.",
+      "th": "ขอให้ฉันได้อธิบายว่าเกิดอะไรขึ้น"
+     },
+     {
+      "en": "I had the hotel deliver breakfast to my room.",
+      "th": "ฉันให้ทางโรงแรมส่งอาหารเช้ามาที่ห้อง"
+     },
+     {
+      "en": "The noise made the baby cry.",
+      "th": "เสียงดังทำให้เด็กทารกร้องไห้"
      }
     ],
     "transform": [
@@ -11797,6 +15297,22 @@
      {
       "en": "She helped me to write the letter.",
       "th": "เธอช่วยฉันเขียนจดหมาย"
+     },
+     {
+      "en": "My colleague helped me prepare the presentation.",
+      "th": "เพื่อนร่วมงานช่วยฉันเตรียมงานนำเสนอ"
+     },
+     {
+      "en": "Reading every day helps you build vocabulary.",
+      "th": "การอ่านทุกวันช่วยให้คุณสะสมคำศัพท์"
+     },
+     {
+      "en": "Could you help me find the train station?",
+      "th": "คุณช่วยหาสถานีรถไฟให้ฉันหน่อยได้ไหม"
+     },
+     {
+      "en": "The guide helped us to understand the local customs.",
+      "th": "ไกด์ช่วยให้เราเข้าใจธรรมเนียมท้องถิ่น"
      }
     ],
     "transform": [
@@ -11857,6 +15373,22 @@
      {
       "en": "I was too tired to cook.",
       "th": "ฉันเหนื่อยเกินไปจนทำอาหารไม่ไหว"
+     },
+     {
+      "en": "This suitcase is too heavy to carry alone.",
+      "th": "กระเป๋าเดินทางใบนี้หนักเกินกว่าจะยกคนเดียว"
+     },
+     {
+      "en": "The music was too loud to have a conversation.",
+      "th": "เสียงเพลงดังเกินกว่าจะคุยกันได้"
+     },
+     {
+      "en": "She was too nervous to speak in the meeting.",
+      "th": "เธอตื่นเต้นเกินกว่าจะพูดในที่ประชุม"
+     },
+     {
+      "en": "It's too late to change our booking now.",
+      "th": "ตอนนี้สายเกินกว่าจะเปลี่ยนการจองแล้ว"
      }
     ],
     "transform": [
@@ -11917,6 +15449,22 @@
      {
       "en": "He is strong enough to lift it.",
       "th": "เขาแข็งแรงพอที่จะยกมันได้"
+     },
+     {
+      "en": "My English is good enough to travel abroad alone.",
+      "th": "ภาษาอังกฤษของฉันดีพอที่จะเดินทางไปต่างประเทศคนเดียว"
+     },
+     {
+      "en": "The room is quiet enough to study in.",
+      "th": "ห้องนี้เงียบพอที่จะใช้อ่านหนังสือ"
+     },
+     {
+      "en": "He is experienced enough to lead the project.",
+      "th": "เขามีประสบการณ์มากพอที่จะนำโครงการนี้"
+     },
+     {
+      "en": "The weather was warm enough to swim.",
+      "th": "อากาศอุ่นพอที่จะลงว่ายน้ำได้"
      }
     ],
     "transform": [
@@ -11979,6 +15527,22 @@
      {
       "en": "They didn't allow us to take photos inside the temple.",
       "th": "พวกเขาไม่อนุญาตให้เราถ่ายรูปข้างในวัด"
+     },
+     {
+      "en": "My manager expects me to reply to emails within an hour.",
+      "th": "หัวหน้าคาดหวังให้ฉันตอบอีเมลภายในหนึ่งชั่วโมง"
+     },
+     {
+      "en": "The teacher encouraged us to ask more questions in class.",
+      "th": "ครูสนับสนุนให้พวกเราถามคำถามในห้องเรียนมากขึ้น"
+     },
+     {
+      "en": "I'd like the hotel to arrange a taxi to the airport.",
+      "th": "ฉันอยากให้โรงแรมจัดแท็กซี่ไปสนามบินให้"
+     },
+     {
+      "en": "The new rules require passengers to wear seatbelts at all times.",
+      "th": "กฎใหม่กำหนดให้ผู้โดยสารคาดเข็มขัดนิรภัยตลอดเวลา"
      }
     ],
     "transform": [
@@ -12040,6 +15604,22 @@
      {
       "en": "We weren't sure where to park.",
       "th": "เราไม่แน่ใจว่าจะจอดรถตรงไหน"
+     },
+     {
+      "en": "I still haven't figured out how to fix this printer.",
+      "th": "ฉันยังคิดไม่ออกเลยว่าจะซ่อมเครื่องพิมพ์นี้ยังไง"
+     },
+     {
+      "en": "Can you show me which button to press first?",
+      "th": "ช่วยบอกหน่อยได้ไหมว่าต้องกดปุ่มไหนก่อน"
+     },
+     {
+      "en": "We need to plan when to leave for the airport.",
+      "th": "เราต้องวางแผนว่าจะออกไปสนามบินตอนไหน"
+     },
+     {
+      "en": "He hasn't decided whether to accept the job offer.",
+      "th": "เขายังตัดสินใจไม่ได้ว่าจะรับข้อเสนองานนี้ดีไหม"
      }
     ],
     "transform": [
@@ -12089,6 +15669,22 @@
      {
       "en": "Let's take the stairs instead of waiting for the lift.",
       "th": "ไปขึ้นบันไดกันเถอะ แทนที่จะรอลิฟต์"
+     },
+     {
+      "en": "Thank you for helping me with the report.",
+      "th": "ขอบคุณที่ช่วยฉันทำรายงานนะ"
+     },
+     {
+      "en": "I'm thinking about studying abroad next year.",
+      "th": "ฉันกำลังคิดจะไปเรียนต่อต่างประเทศปีหน้า"
+     },
+     {
+      "en": "She apologised for arriving late to the meeting.",
+      "th": "เธอขอโทษที่มาประชุมสาย"
+     },
+     {
+      "en": "You can improve your score by practising every day.",
+      "th": "คุณพัฒนาคะแนนได้ด้วยการฝึกฝนทุกวัน"
      }
     ],
     "transform": [
@@ -12150,6 +15746,22 @@
      {
       "en": "Please remember to lock the door when you leave.",
       "th": "อย่าลืมล็อกประตูตอนออกไปนะ (ยังไม่ได้ทำ ต้องไปทำ)"
+     },
+     {
+      "en": "I forgot to send the invoice, so the client is still waiting.",
+      "th": "ฉันลืมส่งใบแจ้งหนี้ ลูกค้าเลยยังรออยู่"
+     },
+     {
+      "en": "I'll never forget visiting Kyoto in the autumn.",
+      "th": "ฉันจะไม่มีวันลืมตอนที่ไปเที่ยวเกียวโตในฤดูใบไม้ร่วง"
+     },
+     {
+      "en": "Please remember to lock the door before you leave.",
+      "th": "อย่าลืมล็อกประตูก่อนออกไปนะ"
+     },
+     {
+      "en": "She tried adding more salt, but the soup still tasted bland.",
+      "th": "เธอลองใส่เกลือเพิ่ม แต่ซุปก็ยังจืดอยู่ดี"
      }
     ],
     "transform": [
@@ -12207,6 +15819,22 @@
      {
       "en": "We're having the kitchen painted next week.",
       "th": "สัปดาห์หน้าเราจะให้คนมาทาสีห้องครัว"
+     },
+     {
+      "en": "We're getting the roof fixed before the rainy season.",
+      "th": "เรากำลังจะจ้างคนซ่อมหลังคาก่อนหน้าฝน"
+     },
+     {
+      "en": "She had her passport photos taken at the mall.",
+      "th": "เธอไปถ่ายรูปติดพาสปอร์ตที่ห้าง"
+     },
+     {
+      "en": "I need to get this document translated into English.",
+      "th": "ฉันต้องเอาเอกสารนี้ไปแปลเป็นภาษาอังกฤษ"
+     },
+     {
+      "en": "They had the old carpet removed last weekend.",
+      "th": "พวกเขาจ้างคนมารื้อพรมเก่าออกเมื่อสุดสัปดาห์ที่แล้ว"
      }
     ],
     "transform": [
@@ -12260,6 +15888,22 @@
      {
       "en": "She got promoted to manager last month.",
       "th": "เธอได้เลื่อนตำแหน่งเป็นผู้จัดการเมื่อเดือนที่แล้ว"
+     },
+     {
+      "en": "My phone got stolen on the train yesterday.",
+      "th": "โทรศัพท์ฉันโดนขโมยบนรถไฟเมื่อวานนี้"
+     },
+     {
+      "en": "They got married in a small ceremony by the beach.",
+      "th": "พวกเขาแต่งงานกันในพิธีเล็กๆ ริมชายหาด"
+     },
+     {
+      "en": "The email got deleted before I could read it.",
+      "th": "อีเมลถูกลบไปก่อนที่ฉันจะได้อ่าน"
+     },
+     {
+      "en": "He got caught cheating in the final exam.",
+      "th": "เขาโดนจับได้ว่าโกงข้อสอบปลายภาค"
      }
     ],
     "transform": [
@@ -12315,6 +15959,22 @@
      {
       "en": "That mistake was impossible to avoid.",
       "th": "ความผิดพลาดนั้นเลี่ยงไม่ได้เลย"
+     },
+     {
+      "en": "This new phone is easy to use.",
+      "th": "โทรศัพท์เครื่องใหม่นี้ใช้งานง่าย"
+     },
+     {
+      "en": "His accent was difficult to understand at first.",
+      "th": "ตอนแรกสำเนียงของเขาฟังเข้าใจยาก"
+     },
+     {
+      "en": "These instructions are simple to follow.",
+      "th": "คำแนะนำพวกนี้ทำตามได้ง่าย"
+     },
+     {
+      "en": "That question was tricky to answer in the exam.",
+      "th": "คำถามข้อนั้นตอบยากในการสอบ"
      }
     ],
     "transform": [
@@ -12355,6 +16015,22 @@
      {
       "en": "It is impossible to solve this problem.",
       "th": "โจทย์ข้อนี้แก้ไม่ได้เลย (= This problem is impossible to solve.)"
+     },
+     {
+      "en": "It is easy to make friends at university.",
+      "th": "การหาเพื่อนที่มหาวิทยาลัยเป็นเรื่องง่าย"
+     },
+     {
+      "en": "It is hard to book a hotel during high season.",
+      "th": "การจองโรงแรมช่วงไฮซีซั่นเป็นเรื่องยาก"
+     },
+     {
+      "en": "It is difficult to change old habits.",
+      "th": "การเปลี่ยนนิสัยเก่าๆ เป็นเรื่องยาก"
+     },
+     {
+      "en": "It is easy to lose track of time online.",
+      "th": "เวลาอยู่ในโลกออนไลน์ เผลอแป๊บเดียวก็หมดเวลา"
      }
     ],
     "transform": [
@@ -12399,6 +16075,22 @@
      {
       "en": "This teacher is hard to understand.",
       "th": "ครูคนนี้ฟังเข้าใจยาก (เราเข้าใจสิ่งที่ครูพูดได้ยาก)"
+     },
+     {
+      "en": "My new manager is easy to work with.",
+      "th": "หัวหน้าคนใหม่ของฉันทำงานด้วยง่าย"
+     },
+     {
+      "en": "That customer is hard to please.",
+      "th": "ลูกค้าคนนั้นเอาใจยาก"
+     },
+     {
+      "en": "The professor is easy to approach with questions.",
+      "th": "อาจารย์ท่านนี้เข้าไปถามคำถามได้ง่าย"
+     },
+     {
+      "en": "Some tourists are difficult to deal with.",
+      "th": "นักท่องเที่ยวบางคนรับมือยาก"
      }
     ],
     "transform": [
@@ -12443,6 +16135,22 @@
      {
       "en": "He seems to enjoy his new job.",
       "th": "เขาดูเหมือนจะชอบงานใหม่ของเขา"
+     },
+     {
+      "en": "The weather seems to be improving today.",
+      "th": "อากาศวันนี้ดูเหมือนจะดีขึ้น"
+     },
+     {
+      "en": "My colleague appears to be under a lot of stress.",
+      "th": "เพื่อนร่วมงานของฉันดูเหมือนจะเครียดมาก"
+     },
+     {
+      "en": "This restaurant seems to be very popular.",
+      "th": "ร้านอาหารร้านนี้ดูเหมือนจะได้รับความนิยมมาก"
+     },
+     {
+      "en": "The children appear to be enjoying the trip.",
+      "th": "เด็กๆ ดูเหมือนจะกำลังสนุกกับการเดินทาง"
      }
     ],
     "transform": [
@@ -12487,6 +16195,22 @@
      {
       "en": "They seem to have finished the project.",
       "th": "พวกเขาดูเหมือนจะทำโปรเจกต์เสร็จแล้ว"
+     },
+     {
+      "en": "The train seems to have been delayed again.",
+      "th": "รถไฟดูเหมือนจะล่าช้าอีกแล้ว"
+     },
+     {
+      "en": "She seems to have improved her English a lot.",
+      "th": "เธอดูเหมือนจะพัฒนาภาษาอังกฤษขึ้นมาก"
+     },
+     {
+      "en": "They appear to have moved to a new office.",
+      "th": "พวกเขาดูเหมือนจะย้ายไปออฟฟิศใหม่แล้ว"
+     },
+     {
+      "en": "He seems to have lost his passport.",
+      "th": "เขาดูเหมือนจะทำหนังสือเดินทางหาย"
      }
     ],
     "transform": [
@@ -12527,6 +16251,22 @@
      {
       "en": "There seems to be no easy answer.",
       "th": "ดูเหมือนจะไม่มีคำตอบที่ง่ายเลย"
+     },
+     {
+      "en": "There seems to be a problem with the wifi.",
+      "th": "ดูเหมือนจะมีปัญหากับสัญญาณไวไฟ"
+     },
+     {
+      "en": "There appear to be many applicants for this job.",
+      "th": "ดูเหมือนจะมีผู้สมัครงานตำแหน่งนี้จำนวนมาก"
+     },
+     {
+      "en": "There seems to be some confusion about the schedule.",
+      "th": "ดูเหมือนจะมีความสับสนเรื่องตารางเวลาอยู่บ้าง"
+     },
+     {
+      "en": "There appears to be a delay in the delivery.",
+      "th": "ดูเหมือนว่าการจัดส่งจะล่าช้า"
      }
     ],
     "transform": [
@@ -12567,6 +16307,22 @@
      {
       "en": "Do you happen to know his number?",
       "th": "คุณบังเอิญรู้เบอร์เขาไหม (ถามอย่างสุภาพ)"
+     },
+     {
+      "en": "The interview turned out to be easier than expected.",
+      "th": "การสัมภาษณ์กลับกลายเป็นง่ายกว่าที่คิด"
+     },
+     {
+      "en": "The new employee turned out to be very talented.",
+      "th": "พนักงานใหม่กลับกลายเป็นคนที่มีความสามารถมาก"
+     },
+     {
+      "en": "I happened to meet an old friend on the plane.",
+      "th": "ฉันบังเอิญได้เจอเพื่อนเก่าบนเครื่องบิน"
+     },
+     {
+      "en": "Do you happen to know where the station is?",
+      "th": "คุณพอจะทราบไหมว่าสถานีอยู่ที่ไหน"
      }
     ],
     "transform": [
@@ -12629,6 +16385,22 @@
      {
       "en": "I can't find my keys anywhere; I'll have to throw them away.",
       "th": "ฉันหากุญแจไม่เจอเลย คงต้องทิ้งมันไป"
+     },
+     {
+      "en": "Could you fill in this form before the interview starts?",
+      "th": "ช่วยกรอกแบบฟอร์มนี้ให้เสร็จก่อนเริ่มสัมภาษณ์ได้ไหม"
+     },
+     {
+      "en": "The teacher handed the test papers back after the break.",
+      "th": "ครูแจกกระดาษข้อสอบคืนหลังจากพักเบรก"
+     },
+     {
+      "en": "I've written the instructions down, so you won't forget them.",
+      "th": "ฉันจดวิธีทำเอาไว้แล้ว คุณจะได้ไม่ลืม"
+     },
+     {
+      "en": "He picked me up from the airport late last night.",
+      "th": "เขามารับฉันที่สนามบินเมื่อคืนตอนดึก"
      }
     ],
     "transform": [
@@ -12686,6 +16458,22 @@
      {
       "en": "We need to deal with this problem immediately.",
       "th": "เราต้องจัดการปัญหานี้ทันที"
+     },
+     {
+      "en": "The whole team is counting on you to finish the report.",
+      "th": "ทั้งทีมกำลังหวังพึ่งคุณให้ทำรายงานให้เสร็จ"
+     },
+     {
+      "en": "We came across an old friend while shopping downtown.",
+      "th": "เราบังเอิญเจอเพื่อนเก่าตอนไปเดินซื้อของในเมือง"
+     },
+     {
+      "en": "She's looking into cheaper flights for our trip to Japan.",
+      "th": "เธอกำลังหาข้อมูลเที่ยวบินที่ถูกกว่าสำหรับทริปไปญี่ปุ่นของเรา"
+     },
+     {
+      "en": "Everyone laughed at his joke during the meeting.",
+      "th": "ทุกคนหัวเราะกับมุกตลกของเขาระหว่างประชุม"
      }
     ],
     "transform": [
@@ -12734,6 +16522,22 @@
      {
       "en": "It took years, but her hard work finally paid off.",
       "th": "ใช้เวลาหลายปี แต่ในที่สุดความพยายามของเธอก็คุ้มค่า"
+     },
+     {
+      "en": "The meeting dragged on for almost three hours.",
+      "th": "การประชุมยืดเยื้อไปเกือบสามชั่วโมง"
+     },
+     {
+      "en": "Please sit down; the show is about to start.",
+      "th": "เชิญนั่งลงครับ การแสดงกำลังจะเริ่มแล้ว"
+     },
+     {
+      "en": "My laptop suddenly shut down during the exam.",
+      "th": "โน้ตบุ๊กของฉันดับไปเฉยๆ ระหว่างสอบ"
+     },
+     {
+      "en": "After a stressful week, I just want to slow down.",
+      "th": "หลังจากสัปดาห์ที่เครียด ฉันแค่อยากใช้ชีวิตให้ช้าลง"
      }
     ],
     "transform": [
@@ -12790,6 +16594,22 @@
      {
       "en": "You'll have to catch up on the work you missed.",
       "th": "คุณจะต้องตามงานที่ขาดไปให้ทัน"
+     },
+     {
+      "en": "I'm slowly getting used to living in a big city.",
+      "th": "ฉันกำลังค่อยๆ ชินกับการใช้ชีวิตในเมืองใหญ่"
+     },
+     {
+      "en": "We've run out of milk, so I'll buy some later.",
+      "th": "นมเราหมดแล้ว เดี๋ยวฉันจะไปซื้อมาทีหลัง"
+     },
+     {
+      "en": "She came up with a brilliant idea for the campaign.",
+      "th": "เธอคิดไอเดียเจ๋งๆ ขึ้นมาสำหรับแคมเปญนี้"
+     },
+     {
+      "en": "I won't put up with such rude behaviour at work.",
+      "th": "ฉันจะไม่ทนกับพฤติกรรมหยาบคายแบบนี้ในที่ทำงาน"
      }
     ],
     "transform": [
@@ -12847,6 +16667,22 @@
      {
       "en": "You can always rely on him in a crisis.",
       "th": "คุณพึ่งพาเขาได้เสมอในยามวิกฤต"
+     },
+     {
+      "en": "The final result depends on how hard you prepare.",
+      "th": "ผลลัพธ์สุดท้ายขึ้นอยู่กับว่าคุณเตรียมตัวหนักแค่ไหน"
+     },
+     {
+      "en": "She always insists on paying for dinner herself.",
+      "th": "เธอยืนกรานที่จะจ่ายค่าอาหารเย็นเองเสมอ"
+     },
+     {
+      "en": "This report refers to the data we collected last year.",
+      "th": "รายงานฉบับนี้อ้างอิงถึงข้อมูลที่เราเก็บมาเมื่อปีที่แล้ว"
+     },
+     {
+      "en": "I don't agree with his opinion on climate change.",
+      "th": "ฉันไม่เห็นด้วยกับความคิดเห็นของเขาเรื่องการเปลี่ยนแปลงสภาพภูมิอากาศ"
      }
     ],
     "transform": [
@@ -12908,6 +16744,22 @@
      {
       "en": "There's no obvious reason for the sudden increase in prices.",
       "th": "ไม่มีเหตุผลชัดเจนสำหรับการขึ้นราคาอย่างกะทันหัน"
+     },
+     {
+      "en": "He's very keen on learning new languages.",
+      "th": "เขาสนใจอยากเรียนภาษาใหม่ๆ มาก"
+     },
+     {
+      "en": "Our city is famous for its beautiful old temples.",
+      "th": "เมืองของเราขึ้นชื่อเรื่องวัดเก่าแก่ที่สวยงาม"
+     },
+     {
+      "en": "There's a growing demand for skilled workers in this field.",
+      "th": "ความต้องการแรงงานที่มีทักษะในสายงานนี้กำลังเพิ่มขึ้น"
+     },
+     {
+      "en": "She was quite disappointed with her exam results.",
+      "th": "เธอค่อนข้างผิดหวังกับผลสอบของตัวเอง"
      }
     ],
     "transform": [
@@ -12967,6 +16819,22 @@
      {
       "en": "They've met before, haven't they?",
       "th": "พวกเขาเคยเจอกันมาก่อนใช่ไหม"
+     },
+     {
+      "en": "This restaurant is open on Sundays, isn't it?",
+      "th": "ร้านอาหารนี้เปิดวันอาทิตย์ใช่ไหม"
+     },
+     {
+      "en": "You booked the tickets last night, didn't you?",
+      "th": "คุณจองตั๋วไปเมื่อคืนแล้วใช่ไหม"
+     },
+     {
+      "en": "We should leave before eight, shouldn't we?",
+      "th": "เราควรออกก่อนแปดโมงใช่ไหม"
+     },
+     {
+      "en": "He'll pass the exam, won't he?",
+      "th": "เขาน่าจะสอบผ่านใช่ไหม"
      }
     ],
     "transform": [
@@ -13020,6 +16888,22 @@
      {
       "en": "He's never late, is he?",
       "th": "เขาไม่เคยมาสายเลยใช่ไหม"
+     },
+     {
+      "en": "You haven't sent the email yet, have you?",
+      "th": "คุณยังไม่ได้ส่งอีเมลใช่ไหม"
+     },
+     {
+      "en": "This bus doesn't go downtown, does it?",
+      "th": "รถเมล์คันนี้ไม่ได้ไปตัวเมืองใช่ไหม"
+     },
+     {
+      "en": "We won't be late for the meeting, will we?",
+      "th": "เราคงไม่ไปประชุมสายใช่ไหม"
+     },
+     {
+      "en": "She wasn't at the office today, was she?",
+      "th": "วันนี้เธอไม่ได้อยู่ที่ออฟฟิศใช่ไหม"
      }
     ],
     "transform": [
@@ -13068,6 +16952,22 @@
      {
       "en": "Have you finished? — Yes, I have.",
       "th": "คุณทำเสร็จหรือยัง — เสร็จแล้ว"
+     },
+     {
+      "en": "Does he speak Thai? — Yes, he does.",
+      "th": "เขาพูดภาษาไทยได้ไหม — ได้สิ"
+     },
+     {
+      "en": "Can you help me later? — No, I can't.",
+      "th": "เดี๋ยวช่วยฉันได้ไหม — ไม่ได้นะ"
+     },
+     {
+      "en": "Did they win the match? — Yes, they did.",
+      "th": "พวกเขาชนะการแข่งขันไหม — ชนะครับ"
+     },
+     {
+      "en": "Will she join us tonight? — No, she won't.",
+      "th": "คืนนี้เธอจะมาร่วมด้วยไหม — ไม่มาหรอก"
      }
     ],
     "transform": [
@@ -13116,6 +17016,22 @@
      {
       "en": "She can drive. — So can I.",
       "th": "เธอขับรถได้ — ฉันก็ได้"
+     },
+     {
+      "en": "I've finished my homework. — So have I.",
+      "th": "ฉันทำการบ้านเสร็จแล้ว — ฉันก็เหมือนกัน"
+     },
+     {
+      "en": "I was born in Bangkok. — So was I.",
+      "th": "ฉันเกิดที่กรุงเทพฯ — ฉันก็เกิดที่นั่นเหมือนกัน"
+     },
+     {
+      "en": "I'll take the early flight. — So will I.",
+      "th": "ฉันจะไปเที่ยวบินเช้า — ฉันก็จะไปเหมือนกัน"
+     },
+     {
+      "en": "I should study harder. — So should I.",
+      "th": "ฉันควรตั้งใจเรียนให้มากขึ้น — ฉันก็ควรเหมือนกัน"
      }
     ],
     "transform": [
@@ -13164,6 +17080,22 @@
      {
       "en": "I've never been to Japan. — Neither have I.",
       "th": "ฉันไม่เคยไปญี่ปุ่น — ฉันก็ไม่เคย"
+     },
+     {
+      "en": "I won't be at the party. — Neither will I.",
+      "th": "ฉันจะไม่ไปงานปาร์ตี้ — ฉันก็จะไม่ไปเหมือนกัน"
+     },
+     {
+      "en": "I didn't understand the lecture. — Neither did I.",
+      "th": "ฉันไม่เข้าใจการบรรยาย — ฉันก็ไม่เข้าใจเหมือนกัน"
+     },
+     {
+      "en": "I'm not ready yet. — Nor am I.",
+      "th": "ฉันยังไม่พร้อม — ฉันก็ยังไม่พร้อมเหมือนกัน"
+     },
+     {
+      "en": "I wouldn't do that. — Neither would I.",
+      "th": "ฉันคงไม่ทำแบบนั้น — ฉันก็คงไม่ทำเหมือนกัน"
      }
     ],
     "transform": [
@@ -13226,6 +17158,22 @@
      {
       "en": "It was in 2019 that the company first went global.",
       "th": "ปีที่บริษัทขยายไปทั่วโลกเป็นครั้งแรกคือปี 2019"
+     },
+     {
+      "en": "It was my grandmother who taught me how to cook.",
+      "th": "คนที่สอนฉันทำอาหารคือคุณยายของฉัน ไม่ใช่ใครอื่น"
+     },
+     {
+      "en": "It is the customer's feedback that shapes our next product.",
+      "th": "สิ่งที่กำหนดสินค้าตัวต่อไปของเราคือความคิดเห็นของลูกค้า"
+     },
+     {
+      "en": "It was at the airport that I lost my passport.",
+      "th": "ที่ที่ฉันทำพาสปอร์ตหายก็คือที่สนามบินนั่นเอง"
+     },
+     {
+      "en": "It is my younger brother who handles all the finances.",
+      "th": "คนที่ดูแลเรื่องการเงินทั้งหมดคือน้องชายของฉัน"
      }
     ],
     "transform": [
@@ -13278,6 +17226,22 @@
      {
       "en": "What we should do is talk to the manager directly.",
       "th": "สิ่งที่เราควรทำคือคุยกับผู้จัดการโดยตรง"
+     },
+     {
+      "en": "What matters most in a job interview is confidence.",
+      "th": "สิ่งที่สำคัญที่สุดในการสัมภาษณ์งานคือความมั่นใจ"
+     },
+     {
+      "en": "What the team really wants is clearer instructions.",
+      "th": "สิ่งที่ทีมต้องการจริงๆ คือคำสั่งที่ชัดเจนกว่านี้"
+     },
+     {
+      "en": "What worries me about the trip is the tight schedule.",
+      "th": "สิ่งที่ทำให้ฉันกังวลเรื่องทริปนี้คือตารางเวลาที่แน่นเกินไป"
+     },
+     {
+      "en": "What helped me pass the exam was daily practice.",
+      "th": "สิ่งที่ช่วยให้ฉันสอบผ่านคือการฝึกฝนทุกวัน"
      }
     ],
     "transform": [
@@ -13330,6 +17294,22 @@
      {
       "en": "Hardly had I arrived when the phone rang.",
       "th": "ฉันเพิ่งมาถึงได้ไม่ทันไร โทรศัพท์ก็ดังขึ้น"
+     },
+     {
+      "en": "Seldom do we get a chance to travel abroad together.",
+      "th": "เราแทบไม่ค่อยมีโอกาสได้ไปเที่ยวต่างประเทศด้วยกันเลย"
+     },
+     {
+      "en": "Not until midnight did the guests finally leave.",
+      "th": "กว่าแขกจะกลับกันหมดก็ปาเข้าไปเที่ยงคืนแล้ว"
+     },
+     {
+      "en": "No sooner had the meeting started than the power went out.",
+      "th": "ประชุมเพิ่งจะเริ่มได้ไม่ทันไร ไฟก็ดับเสียแล้ว"
+     },
+     {
+      "en": "Little did he know that the interview would change his life.",
+      "th": "เขาไม่รู้เลยว่าการสัมภาษณ์ครั้งนั้นจะเปลี่ยนชีวิตของเขา"
      }
     ],
     "transform": [
@@ -13386,6 +17366,22 @@
      {
       "en": "Not only has he finished the report, but he has also emailed it to the client.",
       "th": "เขาไม่เพียงทำรายงานเสร็จ แต่ยังส่งอีเมลให้ลูกค้าแล้วอีกด้วย"
+     },
+     {
+      "en": "Not only did the restaurant serve great food, but it also had lovely service.",
+      "th": "ร้านอาหารร้านนี้ไม่เพียงแต่อาหารอร่อย แต่บริการยังดีเยี่ยมอีกด้วย"
+     },
+     {
+      "en": "Not only was the lecture informative, but it was also very entertaining.",
+      "th": "การบรรยายไม่เพียงแต่ให้ความรู้ แต่ยังสนุกสนานอีกด้วย"
+     },
+     {
+      "en": "Not only does she speak three languages, but she also plays the piano beautifully.",
+      "th": "เธอไม่เพียงแต่พูดได้สามภาษา แต่ยังเล่นเปียโนได้ไพเราะอีกด้วย"
+     },
+     {
+      "en": "Not only did they miss the flight, but they also lost their luggage.",
+      "th": "พวกเขาไม่เพียงแต่ตกเครื่องบิน แต่ยังทำกระเป๋าเดินทางหายอีกด้วย"
      }
     ],
     "transform": [
@@ -13438,6 +17434,22 @@
      {
       "en": "The reason she left early is that she had another appointment.",
       "th": "เหตุผลที่เธอออกไปก่อนคือเธอมีนัดอีกที่หนึ่ง"
+     },
+     {
+      "en": "The reason I study every morning is that my mind is fresher then.",
+      "th": "เหตุผลที่ฉันอ่านหนังสือทุกเช้าก็เพราะสมองของฉันแจ่มใสกว่าในช่วงนั้น"
+     },
+     {
+      "en": "The reason why prices went up is that the raw materials became scarce.",
+      "th": "เหตุผลที่ราคาสินค้าสูงขึ้นก็เพราะวัตถุดิบขาดแคลน"
+     },
+     {
+      "en": "The reason we chose this hotel is that it is near the train station.",
+      "th": "เหตุผลที่เราเลือกโรงแรมนี้ก็เพราะมันอยู่ใกล้สถานีรถไฟ"
+     },
+     {
+      "en": "The reason he didn't reply is that his phone was switched off.",
+      "th": "เหตุผลที่เขาไม่ตอบกลับก็เพราะโทรศัพท์ของเขาปิดอยู่"
      }
     ],
     "transform": [
@@ -13492,6 +17504,22 @@
      {
       "en": "All you have to do is sign here.",
       "th": "สิ่งเดียวที่คุณต้องทำคือเซ็นตรงนี้"
+     },
+     {
+      "en": "All he wanted was a chance to explain himself.",
+      "th": "สิ่งเดียวที่เขาต้องการคือโอกาสได้อธิบายตัวเอง"
+     },
+     {
+      "en": "All we did was follow the instructions on the screen.",
+      "th": "สิ่งเดียวที่เราทำก็แค่ทำตามคำสั่งบนหน้าจอ"
+     },
+     {
+      "en": "All the report needs is a stronger conclusion.",
+      "th": "สิ่งเดียวที่รายงานยังขาดคือบทสรุปที่หนักแน่นกว่านี้"
+     },
+     {
+      "en": "All you need is a valid passport and a return ticket.",
+      "th": "สิ่งเดียวที่คุณต้องมีคือพาสปอร์ตที่ยังไม่หมดอายุกับตั๋วขากลับ"
      }
     ],
     "transform": [
@@ -13536,6 +17564,22 @@
      {
       "en": "It wasn't until years later that she realised her mistake.",
       "th": "กว่าเธอจะรู้ว่าตัวเองผิดก็หลายปีต่อมา"
+     },
+     {
+      "en": "It wasn't until I moved abroad that I appreciated my hometown.",
+      "th": "กว่าฉันจะรู้ค่าบ้านเกิดก็ตอนที่ย้ายไปอยู่ต่างประเทศแล้ว"
+     },
+     {
+      "en": "It wasn't until the meeting ended that we noticed the mistake.",
+      "th": "กว่าเราจะสังเกตเห็นข้อผิดพลาดก็ตอนที่ประชุมจบไปแล้ว"
+     },
+     {
+      "en": "It wasn't until she apologised that he felt better.",
+      "th": "กว่าเขาจะรู้สึกดีขึ้นก็ตอนที่เธอเอ่ยขอโทษ"
+     },
+     {
+      "en": "It wasn't until the results came out that I could relax.",
+      "th": "กว่าฉันจะผ่อนคลายได้ก็ตอนที่ผลสอบออกมาแล้ว"
      }
     ],
     "transform": [
@@ -13593,6 +17637,22 @@
      {
       "en": "So convincing was her argument that no one objected.",
       "th": "ข้อโต้แย้งของเธอน่าเชื่อมากจนไม่มีใครคัดค้าน"
+     },
+     {
+      "en": "So loud was the music that we couldn't hear each other.",
+      "th": "เสียงเพลงดังมากจนเราคุยกันไม่ได้ยิน"
+     },
+     {
+      "en": "So difficult was the exam that half the class failed.",
+      "th": "ข้อสอบยากมากจนครึ่งห้องสอบตก"
+     },
+     {
+      "en": "So beautiful was the view that we stayed until sunset.",
+      "th": "วิวสวยมากจนเราอยู่กันจนพระอาทิตย์ตก"
+     },
+     {
+      "en": "So tired was he that he fell asleep at his desk.",
+      "th": "เขาเหนื่อยมากจนหลับคาโต๊ะทำงาน"
      }
     ],
     "transform": [
@@ -13641,6 +17701,22 @@
      {
       "en": "Such was her influence that everyone followed her lead.",
       "th": "อิทธิพลของเธอมากถึงขนาดทุกคนเดินตามเธอ"
+     },
+     {
+      "en": "Such was the demand that the tickets sold out in minutes.",
+      "th": "ความต้องการมีมากจนตั๋วขายหมดภายในไม่กี่นาที"
+     },
+     {
+      "en": "Such was her talent that the judges were speechless.",
+      "th": "เธอมีพรสวรรค์มากจนกรรมการถึงกับพูดไม่ออก"
+     },
+     {
+      "en": "Such was the heat that the roads began to melt.",
+      "th": "อากาศร้อนมากจนถนนเริ่มละลาย"
+     },
+     {
+      "en": "Such was the confusion that no one knew where to go.",
+      "th": "ความสับสนมีมากจนไม่มีใครรู้ว่าต้องไปทางไหน"
      }
     ],
     "transform": [
@@ -13689,6 +17765,22 @@
      {
       "en": "Hardly had the game begun when it was cancelled.",
       "th": "เกมเพิ่งเริ่มได้ไม่ทันไรก็ถูกยกเลิก"
+     },
+     {
+      "en": "No sooner had we boarded than the train pulled away.",
+      "th": "พอเราขึ้นรถไฟได้ปุ๊บ รถก็ออกทันที"
+     },
+     {
+      "en": "No sooner had the manager spoken than everyone fell silent.",
+      "th": "พอผู้จัดการเอ่ยปาก ทุกคนก็เงียบกริบทันที"
+     },
+     {
+      "en": "Hardly had I opened my umbrella when the rain stopped.",
+      "th": "ฉันเพิ่งกางร่มได้ไม่ทันไร ฝนก็หยุดตกซะงั้น"
+     },
+     {
+      "en": "No sooner had she finished her coffee than her flight was called.",
+      "th": "พอเธอดื่มกาแฟหมดแก้ว เสียงเรียกขึ้นเครื่องก็ดังขึ้นพอดี"
      }
     ],
     "transform": [
@@ -13733,6 +17825,22 @@
      {
       "en": "His courage I admire; his methods I question.",
       "th": "ความกล้าของเขาฉันชื่นชม แต่วิธีการของเขาฉันสงสัย"
+     },
+     {
+      "en": "This mistake I will never make again.",
+      "th": "ความผิดพลาดแบบนี้ ฉันจะไม่ทำอีกเด็ดขาด"
+     },
+     {
+      "en": "Never before had I seen such kindness.",
+      "th": "ไม่เคยเลยที่ฉันจะได้พบความเมตตาแบบนี้มาก่อน"
+     },
+     {
+      "en": "Into the room walked the man we had been waiting for.",
+      "th": "ชายที่เรารอคอยก็เดินเข้ามาในห้อง"
+     },
+     {
+      "en": "Grammar I can teach; motivation you must find yourself.",
+      "th": "ไวยากรณ์ฉันสอนให้ได้ แต่แรงจูงใจคุณต้องหาเอง"
      }
     ],
     "transform": [
@@ -13796,6 +17904,22 @@
      {
       "en": "He did call me, I promise.",
       "th": "เขาโทรหาฉันจริง ๆ นะ สาบานได้"
+     },
+     {
+      "en": "I do understand your point, but I still disagree.",
+      "th": "ผมเข้าใจสิ่งที่คุณพูดจริงๆ นะ แต่ผมก็ยังไม่เห็นด้วยอยู่ดี"
+     },
+     {
+      "en": "We do appreciate all your hard work this year.",
+      "th": "พวกเรารู้สึกซาบซึ้งในความทุ่มเทของคุณตลอดปีนี้จริงๆ"
+     },
+     {
+      "en": "She did pass the exam on her first try.",
+      "th": "เธอสอบผ่านตั้งแต่ครั้งแรกจริงๆ นะ"
+     },
+     {
+      "en": "The company does care about the environment.",
+      "th": "บริษัทนั้นใส่ใจเรื่องสิ่งแวดล้อมจริงๆ นะ"
      }
     ],
     "transform": [
@@ -13849,6 +17973,22 @@
      {
       "en": "Do let me know if you need anything.",
       "th": "บอกฉันได้เลยนะถ้าต้องการอะไร"
+     },
+     {
+      "en": "Do try the soup, it's the best dish here.",
+      "th": "ลองซุปดูสิ มันเป็นเมนูที่อร่อยที่สุดที่นี่เลย"
+     },
+     {
+      "en": "Do take a break, you've been working all day.",
+      "th": "พักบ้างนะ คุณทำงานมาทั้งวันแล้ว"
+     },
+     {
+      "en": "Do write to us if you have any questions.",
+      "th": "ถ้ามีคำถามอะไรก็เขียนมาหาเราได้เลยนะ"
+     },
+     {
+      "en": "Do enjoy your holiday, you've earned it.",
+      "th": "ขอให้เที่ยวให้สนุกนะ คุณสมควรได้พักผ่อนแล้ว"
      }
     ],
     "transform": [
@@ -13897,6 +18037,22 @@
      {
       "en": "\"He forgot again.\" \"He did remember, actually.\"",
       "th": "\"เขาลืมอีกแล้ว\" \"เขาจำได้นะ จริง ๆ\""
+     },
+     {
+      "en": "\"You never finish anything.\" \"I do finish things!\"",
+      "th": "\"เธอไม่เคยทำอะไรให้เสร็จเลย\" \"ฉันทำเสร็จนะ!\""
+     },
+     {
+      "en": "\"You didn't read the email.\" \"I did read it!\"",
+      "th": "\"เธอไม่ได้อ่านอีเมลเลย\" \"ฉันอ่านแล้วนะ!\""
+     },
+     {
+      "en": "\"She doesn't exercise at all.\" \"She does exercise!\"",
+      "th": "\"เธอไม่ออกกำลังกายเลย\" \"เธอออกกำลังกายนะ!\""
+     },
+     {
+      "en": "\"You forgot to book the room.\" \"I did book it!\"",
+      "th": "\"เธอลืมจองห้องแล้วนะ\" \"ฉันจองแล้วนะ!\""
      }
     ],
     "transform": [
@@ -13945,6 +18101,22 @@
      {
       "en": "My old teacher, she never gave up on me.",
       "th": "ครูเก่าของฉันน่ะ เธอไม่เคยเลิกหวังในตัวฉันเลย"
+     },
+     {
+      "en": "My new manager, she really listens to the team.",
+      "th": "หัวหน้าคนใหม่ของฉันเนี่ย เธอรับฟังทีมจริงๆ"
+     },
+     {
+      "en": "This laptop, it keeps freezing every morning.",
+      "th": "โน้ตบุ๊กเครื่องนี้เนี่ย มันค้างทุกเช้าเลย"
+     },
+     {
+      "en": "That grammar test, it was harder than I expected.",
+      "th": "ข้อสอบไวยากรณ์อันนั้นเนี่ย มันยากกว่าที่คิดไว้เยอะ"
+     },
+     {
+      "en": "The hotel in Chiang Mai, it had an amazing view.",
+      "th": "โรงแรมที่เชียงใหม่ที่ไปพักเนี่ย วิวสวยมากเลย"
      }
     ],
     "transform": [
@@ -13993,6 +18165,22 @@
      {
       "en": "They're so noisy, those kids next door.",
       "th": "พวกเขาเสียงดังจริง ๆ เจ้าเด็ก ๆ ข้างบ้านน่ะ"
+     },
+     {
+      "en": "She's incredibly talented, my little sister.",
+      "th": "เธอเก่งมากเลยนะ น้องสาวคนเล็กของฉันน่ะ"
+     },
+     {
+      "en": "It's really confusing, this new software.",
+      "th": "มันชวนงงมากเลย ซอฟต์แวร์ตัวใหม่นี่"
+     },
+     {
+      "en": "He's such a good cook, my husband.",
+      "th": "เขาทำอาหารเก่งมากเลย สามีฉันน่ะ"
+     },
+     {
+      "en": "They were absolutely stunning, those mountains.",
+      "th": "มันสวยตะลึงเลย ภูเขาพวกนั้นน่ะ"
      }
     ],
     "transform": [
@@ -14045,6 +18233,22 @@
      {
       "en": "There's this little cafe that everyone loves.",
       "th": "มีคาเฟ่เล็ก ๆ ร้านหนึ่งที่ใคร ๆ ก็ชอบ"
+     },
+     {
+      "en": "There's this teacher who explains everything so clearly.",
+      "th": "มีครูคนหนึ่งที่อธิบายทุกอย่างได้ชัดเจนมากเลย"
+     },
+     {
+      "en": "There's this app that helps you practise IELTS speaking.",
+      "th": "มีแอปหนึ่งที่ช่วยให้คุณฝึกพูด IELTS ได้"
+     },
+     {
+      "en": "There's this market that only opens on weekends.",
+      "th": "มีตลาดแห่งหนึ่งที่เปิดเฉพาะวันหยุดสุดสัปดาห์"
+     },
+     {
+      "en": "There's this colleague who always brings snacks to work.",
+      "th": "มีเพื่อนร่วมงานคนหนึ่งที่เอาขนมมาที่ทำงานตลอดเลย"
      }
     ],
     "transform": [
@@ -14091,6 +18295,22 @@
      {
       "en": "Here comes the bride.",
       "th": "เจ้าสาวเดินเข้ามาแล้ว"
+     },
+     {
+      "en": "Here comes the train — let's find a seat.",
+      "th": "รถไฟมาแล้ว ไปหาที่นั่งกันเถอะ"
+     },
+     {
+      "en": "There goes the last flight to Tokyo.",
+      "th": "นั่นไง เที่ยวบินสุดท้ายไปโตเกียวออกไปแล้ว"
+     },
+     {
+      "en": "Here comes the waiter with our order.",
+      "th": "บริกรถืออาหารของเรามาแล้ว"
+     },
+     {
+      "en": "There goes our manager, always in a hurry.",
+      "th": "นั่นไง ผู้จัดการของเรา รีบตลอดเลย"
      }
     ],
     "transform": [
@@ -14139,6 +18359,22 @@
      {
       "en": "Beyond the river lay a vast forest.",
       "th": "เลยแม่น้ำออกไปคือผืนป่ากว้างใหญ่"
+     },
+     {
+      "en": "Under the old bridge flowed a quiet stream.",
+      "th": "ใต้สะพานเก่ามีลำธารเงียบสงบไหลผ่าน"
+     },
+     {
+      "en": "Across the desert stretched an endless road.",
+      "th": "มีถนนยาวสุดลูกหูลูกตาทอดข้ามทะเลทราย"
+     },
+     {
+      "en": "Behind the counter sat a friendly cashier.",
+      "th": "หลังเคาน์เตอร์มีพนักงานเก็บเงินใจดีนั่งอยู่"
+     },
+     {
+      "en": "At the top of the stairs waited the interviewer.",
+      "th": "ที่หัวบันไดมีผู้สัมภาษณ์รออยู่"
      }
     ],
     "transform": [
@@ -14187,6 +18423,22 @@
      {
       "en": "Off went the alarm at midnight.",
       "th": "สัญญาณเตือนดังลั่นขึ้นตอนเที่ยงคืน"
+     },
+     {
+      "en": "Up rose the sun over the mountains.",
+      "th": "ดวงอาทิตย์ค่อย ๆ ขึ้นเหนือเทือกเขา"
+     },
+     {
+      "en": "In rushed the students as the bell rang.",
+      "th": "นักเรียนกรูกันวิ่งเข้ามาทันทีที่กระดิ่งดัง"
+     },
+     {
+      "en": "Out ran the dog through the open gate.",
+      "th": "เจ้าหมาวิ่งพรวดออกไปทางประตูที่เปิดอยู่"
+     },
+     {
+      "en": "Back came the ball, straight over the net.",
+      "th": "ลูกบอลถูกตีกลับมา ข้ามตาข่ายมาตรง ๆ"
      }
     ],
     "transform": [
@@ -14231,6 +18483,22 @@
      {
       "en": "There she goes again, complaining.",
       "th": "นั่นไง เธอเริ่มบ่นอีกแล้ว"
+     },
+     {
+      "en": "Here I am — sorry I'm late.",
+      "th": "ฉันมาแล้ว ขอโทษที่มาสาย"
+     },
+     {
+      "en": "There they go, off on their honeymoon.",
+      "th": "นั่นไง พวกเขาออกเดินทางไปฮันนีมูนแล้ว"
+     },
+     {
+      "en": "Here we go — the exam is about to start.",
+      "th": "เอาล่ะ เริ่มกันแล้ว การสอบกำลังจะเริ่มขึ้น"
+     },
+     {
+      "en": "There he goes, running for the bus again.",
+      "th": "นั่นไง เขาวิ่งไล่ตามรถเมล์อีกแล้ว"
      }
     ],
     "transform": [
@@ -14289,6 +18557,22 @@
      {
       "en": "He waited for an hour before the bus came.",
       "th": "เขารอเป็นชั่วโมงกว่ารถเมล์จะมา"
+     },
+     {
+      "en": "We adopted a puppy from the shelter last weekend.",
+      "th": "เรารับลูกสุนัขมาเลี้ยงจากศูนย์พักพิงเมื่อสุดสัปดาห์ที่แล้ว"
+     },
+     {
+      "en": "My brother is studying to be an architect.",
+      "th": "พี่ชายของฉันกำลังเรียนเพื่อเป็นสถาปนิก"
+     },
+     {
+      "en": "They are looking for an apartment near the office.",
+      "th": "พวกเขากำลังมองหาอพาร์ตเมนต์ใกล้ที่ทำงาน"
+     },
+     {
+      "en": "I need to book a flight to Tokyo next month.",
+      "th": "ฉันต้องจองตั๋วเครื่องบินไปโตเกียวเดือนหน้า"
      }
     ],
     "transform": [
@@ -14346,6 +18630,22 @@
      {
       "en": "The book you lent me was excellent.",
       "th": "หนังสือที่คุณให้ฉันยืมเยี่ยมมาก"
+     },
+     {
+      "en": "Can you turn off the air conditioner, please?",
+      "th": "ช่วยปิดเครื่องปรับอากาศหน่อยได้ไหม"
+     },
+     {
+      "en": "The manager wants to see the report by Friday.",
+      "th": "ผู้จัดการอยากเห็นรายงานภายในวันศุกร์"
+     },
+     {
+      "en": "The restaurant we visited yesterday was fully booked.",
+      "th": "ร้านอาหารที่เราไปเมื่อวานถูกจองเต็มหมดแล้ว"
+     },
+     {
+      "en": "Please pass me the salt on the table.",
+      "th": "ช่วยส่งเกลือที่อยู่บนโต๊ะให้ฉันหน่อย"
      }
     ],
     "transform": [
@@ -14390,6 +18690,22 @@
      {
       "en": "Thai people love spicy food.",
       "th": "คนไทยชอบอาหารรสจัด"
+     },
+     {
+      "en": "Doctors recommend drinking plenty of water every day.",
+      "th": "หมอแนะนำให้ดื่มน้ำมากๆ ทุกวัน"
+     },
+     {
+      "en": "Smartphones have changed the way we communicate.",
+      "th": "สมาร์ตโฟนได้เปลี่ยนวิธีที่เราสื่อสารกัน"
+     },
+     {
+      "en": "Children learn languages faster than adults.",
+      "th": "เด็กเรียนรู้ภาษาได้เร็วกว่าผู้ใหญ่"
+     },
+     {
+      "en": "Elephants live in large family groups.",
+      "th": "ช้างอาศัยอยู่รวมกันเป็นฝูงครอบครัวขนาดใหญ่"
      }
     ],
     "transform": [
@@ -14434,6 +18750,22 @@
      {
       "en": "Information travels fast these days.",
       "th": "ข้อมูลข่าวสารเดินทางเร็วมากในสมัยนี้"
+     },
+     {
+      "en": "Knowledge is more valuable than money.",
+      "th": "ความรู้มีค่ามากกว่าเงินทอง"
+     },
+     {
+      "en": "Traffic is always heavy during rush hour.",
+      "th": "การจราจรติดขัดเสมอในช่วงชั่วโมงเร่งด่วน"
+     },
+     {
+      "en": "Music helps me relax after a long day.",
+      "th": "ดนตรีช่วยให้ฉันผ่อนคลายหลังจากวันที่เหนื่อยล้า"
+     },
+     {
+      "en": "Pollution is a serious problem in big cities.",
+      "th": "มลพิษเป็นปัญหาที่ร้ายแรงในเมืองใหญ่"
      }
     ],
     "transform": [
@@ -14478,6 +18810,22 @@
      {
       "en": "She was the first woman to lead the company.",
       "th": "เธอเป็นผู้หญิงคนแรกที่ได้เป็นผู้นำบริษัท"
+     },
+     {
+      "en": "The moon looks especially bright tonight.",
+      "th": "คืนนี้พระจันทร์ดูสว่างเป็นพิเศษ"
+     },
+     {
+      "en": "That was the worst movie I have seen this year.",
+      "th": "นั่นเป็นหนังที่แย่ที่สุดที่ฉันดูในปีนี้"
+     },
+     {
+      "en": "She was the first person to arrive at the meeting.",
+      "th": "เธอเป็นคนแรกที่มาถึงที่ประชุม"
+     },
+     {
+      "en": "Mount Everest is the highest mountain on Earth.",
+      "th": "ยอดเขาเอเวอเรสต์เป็นภูเขาที่สูงที่สุดในโลก"
      }
     ],
     "transform": [
@@ -14530,6 +18878,22 @@
      {
       "en": "Do you have any questions about the plan?",
       "th": "คุณมีคำถามเกี่ยวกับแผนนี้ไหม"
+     },
+     {
+      "en": "I bought some fruit at the market this morning.",
+      "th": "เมื่อเช้านี้ฉันซื้อผลไม้มาจากตลาด"
+     },
+     {
+      "en": "There isn't any milk left in the fridge.",
+      "th": "ไม่มีนมเหลืออยู่ในตู้เย็นเลย"
+     },
+     {
+      "en": "Would you like some tea before the meeting?",
+      "th": "คุณอยากดื่มชาสักหน่อยก่อนประชุมไหม"
+     },
+     {
+      "en": "I didn't receive any emails from the client today.",
+      "th": "วันนี้ฉันไม่ได้รับอีเมลจากลูกค้าเลย"
      }
     ],
     "transform": [
