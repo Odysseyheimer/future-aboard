@@ -336,6 +336,16 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
   color: var(--text);
 }
 
+/* verb forms V1 -> V2 -> V3 */
+.pg-sh-vf { display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  background: var(--surface2); border-radius: 12px; padding: 11px 12px; margin: 4px 0 14px; }
+.pg-vf-cell { display: flex; flex-direction: column; gap: 2px; }
+.pg-vf-l { font: 700 10.5px/1.2 var(--font); text-transform: uppercase; letter-spacing: .03em; color: var(--accent); }
+.pg-vf-w { font: 700 15px/1.3 var(--font); color: var(--text); }
+.pg-vf-ar { color: var(--muted); font-size: 14px; }
+.pg-vf-ir { flex: 0 0 100%; font-size: 12px; color: var(--text); background: var(--accent-soft);
+  border-radius: 8px; padding: 6px 9px; margin-top: 2px; line-height: 1.5; }
+
 /* item running numbers (#N, match the daily plan) */
 .pg-no { font-size: 11px; font-weight: 800; color: var(--muted); background: var(--surface2);
   border-radius: 6px; padding: 1px 5px; vertical-align: 1px; font-variant-numeric: tabular-nums; }
@@ -4362,6 +4372,20 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
 
     // IPA pronunciation (enrichment).
     if (item.ip) h.push('<div class="pg-sh-ipa">' + esc(item.ip) + "</div>");
+
+    // Verb forms V1 → V2 (past simple) → V3 (past participle), when this item is a verb.
+    if (item.vf && item.vf.v2 && item.vf.v3) {
+      h.push('<div class="pg-sh-vf">' +
+        '<div class="pg-vf-cell"><span class="pg-vf-l">V1</span><span class="pg-vf-w">' + esc(item.w || "") + '</span></div>' +
+        '<span class="pg-vf-ar">→</span>' +
+        '<div class="pg-vf-cell"><span class="pg-vf-l">V2 · อดีต</span><span class="pg-vf-w">' + esc(item.vf.v2) +
+        ' <button class="pg-spk" type="button" data-say="' + esc(item.vf.v2) + '" aria-label="ฟัง V2">🔊</button></span></div>' +
+        '<span class="pg-vf-ar">→</span>' +
+        '<div class="pg-vf-cell"><span class="pg-vf-l">V3 · Past Participle</span><span class="pg-vf-w">' + esc(item.vf.v3) +
+        ' <button class="pg-spk" type="button" data-say="' + esc(item.vf.v3) + '" aria-label="ฟัง V3">🔊</button></span></div>' +
+        (item.vf.ir ? '<div class="pg-vf-ir">⚠️ กริยาไม่ปกติ (irregular verb) — ต้องท่องจำรูปนี้ ไม่ได้เติม -ed</div>' : "") +
+        "</div>");
+    }
 
     // Meanings.
     if (item.me) h.push('<div class="pg-sh-me">' + esc(item.me) + "</div>");
