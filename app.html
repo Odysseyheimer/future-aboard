@@ -595,6 +595,16 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 }
 .c-empty-emoji { font-size: 52px; }
 .c-empty-msg { font-size: 18px; font-weight: 600; color: var(--text); }
+.c-empty-sub { font-size: 13.5px; color: var(--muted); margin-top: -6px; }
+.c-unl-cta { font-family: var(--font); font-size: 14.5px; font-weight: 800; color: var(--accent-ink);
+  background: var(--accent); border: none; border-radius: 999px; padding: 11px 20px; cursor: pointer; margin-top: 4px; }
+.c-unl-cta:active { transform: scale(.97); }
+
+/* unlimited-mode toggle, top bar */
+.c-unl { background: transparent; border: 1px solid var(--border); color: var(--muted); border-radius: 999px;
+  padding: 4px 10px; font: inherit; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.c-unl.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.c-unl:active { transform: scale(.95); }
 
 /* quiz.css */
 /* PT.quiz styles — prefix .qz- ; light + dark via CSS vars */
@@ -4694,14 +4704,29 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
     store.set("pt.cards.day", JSON.stringify(o));
   }
 
+  /* ---------- unlimited ("เล่นได้เรื่อยๆ ไม่มีจำกัด") mode ----------
+     Off by default (respects the daily new/review caps, like real Anki).
+     On: ignores newPerDay/revPerDay entirely, AND once due+learning+new run
+     dry it recycles not-yet-due "known" cards for extra practice — so the
+     session never has to end. Grading a recycled card still updates its real
+     SM-2 schedule (reviewing early just pushes the interval further out),
+     exactly like Anki's "Custom Study -> review ahead". Persisted so the
+     learner's chosen mode sticks across visits. */
+  var UNL_KEY = "pt_cards_unl";
+  function isUnlimited() { return store.get(UNL_KEY) === "1"; }
+  function setUnlimited(on) { store.set(UNL_KEY, on ? "1" : "0"); }
+
   /* ---------- queue construction ---------- */
 
   // buildQueue(list,S,now): due reviews (capped by revPerDay) sorted by due,
-  // then learning-due cards, then new cards (capped by newPerDay).
-  // Returns a live array of {item,dueAt} and stores the session on S.session.
+  // then learning-due cards, then new cards (capped by newPerDay). In
+  // unlimited mode, caps are skipped and not-yet-due cards fill in once the
+  // normal queue is empty. Returns a live array of {item,dueAt} and stores
+  // the session on S.session.
   PT.cards.buildQueue = function (list, S, n) {
     n = n || now();
-    var reviews = [], learning = [], news = [];
+    var unlimited = isUnlimited();
+    var reviews = [], learning = [], news = [], extra = [];
     var i, item, rec, st;
     for (i = 0; i < list.length; i++) {
       item = list[i];
@@ -4714,22 +4739,27 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
         if ((rec.due || 0) <= n) learning.push({ item: item, dueAt: rec.due || 0 });
       } else if (st === "new") {
         news.push({ item: item, dueAt: n });
+      } else if (unlimited) {
+        // "known", not due yet — held back for recycling below
+        extra.push({ item: item, dueAt: rec.due || 0 });
       }
-      // "known" cards are excluded from the queue
     }
 
     // sort reviews by due ascending
     reviews.sort(function (a, b) { return a.dueAt - b.dueAt; });
     learning.sort(function (a, b) { return a.dueAt - b.dueAt; });
 
-    // apply daily caps (subtract what has already been done today)
-    var counts = dayCounts(S.deck);
-    var st2 = S.settings || {};
-    var revCap = typeof st2.revPerDay === "number" ? st2.revPerDay : 120;
-    var newCap = typeof st2.newPerDay === "number" ? st2.newPerDay : 20;
-    var revRoom = Math.max(0, revCap - counts.r);
-    var newRoom = Math.max(0, newCap - counts.n);
-    if (reviews.length > revRoom) reviews = reviews.slice(0, revRoom);
+    if (!unlimited) {
+      // apply daily caps (subtract what has already been done today)
+      var counts = dayCounts(S.deck);
+      var st2 = S.settings || {};
+      var revCap = typeof st2.revPerDay === "number" ? st2.revPerDay : 120;
+      var newCap = typeof st2.newPerDay === "number" ? st2.newPerDay : 20;
+      var revRoom = Math.max(0, revCap - counts.r);
+      var newRoom = Math.max(0, newCap - counts.n);
+      if (reviews.length > revRoom) reviews = reviews.slice(0, revRoom);
+      if (news.length > newRoom) news = news.slice(0, newRoom);
+    }
 
     // order new cards: random or alphabetical
     if (S.filter && S.filter.sort === "random") {
@@ -4740,9 +4770,12 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
         return wa < wb ? -1 : (wa > wb ? 1 : 0);
       });
     }
-    if (news.length > newRoom) news = news.slice(0, newRoom);
 
     var q = reviews.concat(learning, news);
+    if (unlimited && q.length === 0 && extra.length) {
+      shuffle(extra);
+      q = extra.slice(0, 60); // one recycling batch; render() refills again once this drains
+    }
 
     // mark which entries are "new" so we can bump the new counter on intro
     for (i = 0; i < q.length; i++) {
@@ -4755,6 +4788,7 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
       done: 0,
       flipped: false,
       undo: null,
+      unlimited: unlimited,
       introduced: {} // keyOf -> true once a new card has been counted
     };
     return q;
@@ -4780,20 +4814,29 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
   PT.cards.render = function (viewEl) {
     var S = window.S;
     var n = now();
+    var unlimited = isUnlimited();
+    var list = null;
 
-    // (re)build the session if there is none or it drained
+    // (re)build the session if there is none or it drained. In unlimited mode,
+    // a drained queue means "recycle" — buildQueue already refills from
+    // not-yet-due cards, so this loop naturally keeps the session alive.
     if (!S.session || !S.session.q || S.session.q.length === 0) {
-      var list = PT.filters.apply(S);
+      list = PT.filters.apply(S);
       PT.cards.buildQueue(list, S, n);
     }
 
     var sess = S.session;
     if (!sess || sess.q.length === 0) {
-      viewEl.innerHTML =
-        '<div class="c-empty">' +
-        '<div class="c-empty-emoji">🎉</div>' +
-        '<div class="c-empty-msg">เก่งมาก! หมดการ์ดที่ต้องทบทวนแล้ว</div>' +
-        '</div>';
+      var empty = list || PT.filters.apply(S);
+      var unlBtn = '<button class="c-unl-cta" data-c-unl="1">🔁 เล่นต่อแบบไม่จำกัด</button>';
+      viewEl.innerHTML = empty.length === 0
+        ? '<div class="c-empty"><div class="c-empty-emoji">🗂️</div>' +
+          '<div class="c-empty-msg">ไม่มีคำในตัวกรองนี้</div></div>'
+        : '<div class="c-empty"><div class="c-empty-emoji">🎉</div>' +
+          '<div class="c-empty-msg">เก่งมาก! หมดการ์ดที่ต้องทบทวนของวันนี้แล้ว</div>' +
+          '<div class="c-empty-sub">อยากฝึกต่อ ไม่ติดโควตารายวัน?</div>' + unlBtn + '</div>';
+      var unlCta = viewEl.querySelector("[data-c-unl]");
+      if (unlCta) unlCta.onclick = function () { setUnlimited(true); S.session = null; PT.cards.render(viewEl); };
       bindKeyboard(viewEl);
       return;
     }
@@ -4827,6 +4870,9 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
 
     var undoBtn = sess.undo
       ? '<button class="c-undo" title="เลิกทำ">↩ เลิกทำ</button>' : '';
+    var unlToggle = '<button class="c-unl' + (unlimited ? ' on' : '') + '" data-c-unl-t="1" ' +
+      'title="' + (unlimited ? "โหมดไม่จำกัด: เปิดอยู่ — ไม่ติดโควตารายวัน" : "เปิดโหมดไม่จำกัด — เล่นได้เรื่อยๆ ไม่ติดโควตารายวัน") + '">' +
+      (unlimited ? "🔁 ไม่จำกัด" : "🔁") + '</button>';
 
     viewEl.innerHTML =
       '<div class="c-wrap' + (sess.flipped ? ' c-flipped' : '') + '">' +
@@ -4834,6 +4880,7 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
           '<span class="c-prog">' + pos + ' / ' + sess.total + '</span>' +
           '<span class="c-dot">·</span>' +
           '<span class="c-grp">' + esc(grp) + '</span>' +
+          unlToggle +
           undoBtn +
         '</div>' +
         '<div class="c-card" id="c-card" tabindex="0">' +
@@ -4930,6 +4977,14 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
         favBtn.className = "c-fav" + (on ? " on" : "");
         favBtn.textContent = on ? "★" : "☆";
       }
+    };
+
+    var unlBtn = viewEl.querySelector("[data-c-unl-t]");
+    if (unlBtn) unlBtn.onclick = function (e) {
+      e.stopPropagation();
+      setUnlimited(!isUnlimited());
+      S.session = null; // force a fresh queue under the new mode
+      PT.cards.render(viewEl);
     };
 
     var i;
