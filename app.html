@@ -483,6 +483,16 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 }
 .c-speak:active { transform: scale(.92); }
 .c-b-pos { font-size: 14px; color: var(--muted); font-style: italic; margin-bottom: 2px; }
+
+/* verb forms V1 -> V2 -> V3 on the flashcard back */
+.c-b-vf { display: flex; flex-wrap: wrap; align-items: center; gap: 7px;
+  background: var(--surface2); border-radius: 10px; padding: 8px 10px; margin: 2px 0 6px; }
+.c-vf-cell { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; }
+.c-vf-l { font-size: 10px; font-weight: 700; letter-spacing: .03em; color: var(--accent); }
+.c-vf-w { font-size: 14.5px; font-weight: 700; color: var(--text); }
+.c-vf-ar { color: var(--muted); font-size: 13px; }
+.c-vf-ir { font-size: 11px; font-weight: 700; color: var(--accent-ink); background: var(--accent-soft);
+  border-radius: 999px; padding: 2px 8px; margin-left: 2px; }
 .c-b-row {
   font-size: 15px;
   color: var(--text);
@@ -625,6 +635,9 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 .qz-fb-no { color: var(--review); }
 .qz-reveal { text-align: center; color: var(--text); font-size: 16px; margin-bottom: 8px; }
 .qz-reveal b { color: var(--accent); }
+.qz-vf { display: inline-block; font-size: 12px; font-weight: 700; color: var(--text);
+  background: var(--surface2); border-radius: 999px; padding: 3px 10px; margin-left: 6px;
+  vertical-align: middle; }
 
 .qz-next { display: block; width: 100%; margin-top: 12px; border: 0; background: var(--accent);
   color: var(--accent-ink); font: inherit; font-family: var(--font); font-weight: 700; font-size: 16px;
@@ -4863,6 +4876,16 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
     if (item.p) meta.push(esc(item.p));
     if (item.ip) meta.push('<span class="c-b-ipa">' + esc(item.ip) + '</span>');
     if (meta.length) h += '<div class="c-b-pos">' + meta.join(" · ") + '</div>';
+    if (item.vf && item.vf.v2 && item.vf.v3) {
+      h += '<div class="c-b-vf">' +
+        '<div class="c-vf-cell"><span class="c-vf-l">V1</span><span class="c-vf-w">' + esc(item.w || "") + '</span></div>' +
+        '<span class="c-vf-ar">→</span>' +
+        '<div class="c-vf-cell"><span class="c-vf-l">V2</span><span class="c-vf-w">' + esc(item.vf.v2) + '</span></div>' +
+        '<span class="c-vf-ar">→</span>' +
+        '<div class="c-vf-cell"><span class="c-vf-l">V3</span><span class="c-vf-w">' + esc(item.vf.v3) + '</span></div>' +
+        (item.vf.ir ? '<span class="c-vf-ir">ไม่ปกติ</span>' : '') +
+        '</div>';
+    }
     if (item.me) h += '<div class="c-b-row"><span class="c-b-lab">EN</span>' + esc(item.me) + '</div>';
     if (item.mt) h += '<div class="c-b-row"><span class="c-b-lab">TH</span>' + esc(item.mt) + '</div>';
     if (item.ee) h += '<div class="c-b-ex">' + esc(item.ee) + '</div>';
@@ -5444,6 +5467,7 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
         ? ' <button type="button" class="qz-say" data-slow="' + esc(q.item.w || "") + '">🐢</button>'
         : ' <button type="button" class="qz-say" data-spell="' + esc(q.item.w || "") + '">🔤</button>');
       if (q.item.mt) h += ' <span class="qz-reveal-th">' + esc(q.item.mt) + '</span>';
+      h += vfBadge(q.item);
       h += '</div>';
       h += nextBtn();
     }
@@ -5508,6 +5532,7 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
       h += feedback(S);
       h += '<div class="qz-reveal"><b>' + esc(q.item.w || "") + '</b>';
       if (q.item.p) h += ' <span class="qz-reveal-th">(' + esc(q.item.p) + ')</span>';
+      h += vfBadge(q.item);
       h += '<div class="qz-clfull">' + esc(q.item.ee || "") + ' <button type="button" class="qz-say" data-qz-say="full" aria-label="ฟังประโยค">🔊</button>' +
         '<button type="button" class="qz-say" data-slow="' + esc(q.item.ee || "") + '" aria-label="อ่านช้า">🐢</button></div></div>';
       h += nextBtn();
@@ -5568,10 +5593,16 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
 
     if (Q.answered) {
       h += feedback(S);
-      h += '<div class="qz-reveal">คำตอบ: <b>' + esc(q.answer || answerText(q.item, S)) + '</b></div>';
+      h += '<div class="qz-reveal">คำตอบ: <b>' + esc(q.answer || answerText(q.item, S)) + '</b>' + vfBadge(q.item) + '</div>';
       h += nextBtn();
     }
     return h;
+  }
+
+  // compact "went · gone" badge shown next to a reveal when the word is a verb
+  function vfBadge(item) {
+    if (!item || !item.vf || !item.vf.v2 || !item.vf.v3) return "";
+    return ' <span class="qz-vf">V2 ' + esc(item.vf.v2) + ' · V3 ' + esc(item.vf.v3) + '</span>';
   }
 
   function feedback(S) {
