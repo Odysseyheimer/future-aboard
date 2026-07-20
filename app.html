@@ -455,6 +455,19 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
   opacity: .8;
 }
 
+/* recall-angle badge (multi-angle rotation on review-stage cards) */
+.c-angle { font-size: 11.5px; font-weight: 800; color: var(--accent); background: var(--accent-soft);
+  border-radius: 999px; padding: 4px 12px; margin-bottom: 2px; }
+
+/* listening-only front */
+.c-listen-btn { width: 84px; height: 84px; border-radius: 50%; border: none; background: var(--accent);
+  color: var(--accent-ink); font-size: 34px; cursor: pointer; box-shadow: var(--shadow); }
+.c-listen-btn:active { transform: scale(.95); }
+
+/* leech badge on the back */
+.c-b-leech { font-size: 12px; font-weight: 700; color: var(--text); background: var(--accent-soft);
+  border-radius: 9px; padding: 7px 10px; margin-bottom: 2px; }
+
 /* back: detail, rotated so it faces us when flipped */
 .c-back {
   transform: rotateY(180deg);
@@ -1519,11 +1532,13 @@ details.pl-day[open] .pl-cv{transform:rotate(90deg)}
 .ms-empty { font-size: 12.5px; color: var(--muted); background: var(--surface); border: 1px dashed var(--border);
   border-radius: 12px; padding: 12px 14px; line-height: 1.55; }
 
-.ms-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+.ms-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
 .ms-top span { font-size: 13px; font-weight: 700; color: var(--text); }
+.ms-btnrow { display: flex; gap: 8px; flex-wrap: wrap; }
 .ms-btn { font-family: var(--font); font-weight: 800; border: none; border-radius: 999px; cursor: pointer; }
 .ms-rev { font-size: 13px; background: var(--accent); color: var(--accent-ink); padding: 8px 15px; }
-.ms-rev:active { transform: scale(.97); }
+.ms-rev:active, .ms-revc:active { transform: scale(.97); }
+.ms-revc { font-size: 13px; background: var(--surface2); color: var(--text); border: 1px solid var(--border); padding: 8px 15px; }
 .ms-clear { display: block; width: 100%; margin-top: 12px; font-size: 12.5px; background: var(--surface2);
   color: var(--muted); border: 1px solid var(--border); border-radius: 11px; padding: 9px; }
 
@@ -1544,6 +1559,55 @@ details.pl-day[open] .pl-cv{transform:rotate(90deg)}
   font-size: 13.5px; border: 1px solid var(--accent); background: var(--accent-soft); color: var(--accent-ink);
   border-radius: 12px; padding: 10px; cursor: pointer; }
 .td-miss-btn:active { transform: scale(.99); }
+
+/* stats2.css */
+/* stats2.css — สถิติ dashboard: heatmap / forecast / maturity / retention. Prefix .st2d- */
+.st2d-sec { margin: 4px 0 18px; }
+.st2d-h { font-size: 14px; font-weight: 900; color: var(--text); margin-bottom: 10px; }
+.st2d-sub { font-size: 11.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em;
+  color: var(--muted); margin: 16px 2px 8px; }
+.st2d-sub:first-of-type { margin-top: 0; }
+
+/* activity heatmap */
+.st2d-hm { display: grid; grid-auto-flow: column; grid-template-rows: repeat(7, 11px); grid-auto-columns: 11px;
+  gap: 3px; overflow-x: auto; padding: 2px; }
+.st2d-hm-c { width: 11px; height: 11px; border-radius: 3px; background: var(--surface2); display: block; }
+.st2d-hm-l0 { background: var(--surface2); }
+.st2d-hm-l1 { background: color-mix(in srgb, var(--accent) 25%, var(--surface2)); }
+.st2d-hm-l2 { background: color-mix(in srgb, var(--accent) 50%, var(--surface2)); }
+.st2d-hm-l3 { background: color-mix(in srgb, var(--accent) 75%, var(--surface2)); }
+.st2d-hm-l4 { background: var(--accent); }
+.st2d-hm-leg { display: flex; align-items: center; gap: 4px; font-size: 10.5px; color: var(--muted); margin-top: 6px; }
+
+/* retention */
+.st2d-ret { display: flex; align-items: baseline; gap: 8px; background: var(--surface2); border-radius: 12px;
+  padding: 11px 13px; margin-top: 8px; }
+.st2d-ret-n { font-size: 22px; font-weight: 900; color: var(--know); }
+.st2d-ret-l { font-size: 12px; color: var(--muted); }
+
+/* maturity bars */
+.st2d-bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.st2d-bar-l { flex: 0 0 auto; width: 108px; font-size: 11.5px; color: var(--text); }
+.st2d-bar-track { flex: 1; height: 8px; background: var(--surface2); border-radius: 999px; overflow: hidden; }
+.st2d-bar-track i { display: block; height: 100%; border-radius: 999px; }
+.st2d-bar-v { flex: 0 0 auto; width: 34px; text-align: right; font-size: 11.5px; font-weight: 700; color: var(--text); font-variant-numeric: tabular-nums; }
+
+/* forecast */
+.st2d-overdue { color: #d9534f; font-weight: 700; text-transform: none; letter-spacing: 0; }
+.st2d-fc { display: flex; align-items: flex-end; gap: 4px; height: 70px; padding: 2px; }
+.st2d-fc-col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; gap: 3px; }
+.st2d-fc-bar { width: 100%; max-width: 14px; background: var(--accent); border-radius: 3px 3px 0 0; min-height: 3px; }
+.st2d-fc-col span { font-size: 9px; color: var(--muted); }
+
+/* leech notice */
+.st2d-leech { font-size: 12px; color: var(--text); background: var(--accent-soft); border-radius: 10px;
+  padding: 9px 11px; margin-top: 14px; line-height: 1.55; }
+
+/* advanced settings */
+.st2d-adv { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); }
+.st2d-adv-h { font-size: 11.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin-bottom: 8px; }
+.st2d-adv-row { display: flex; align-items: flex-start; gap: 9px; font-size: 12.5px; color: var(--text); line-height: 1.5; cursor: pointer; }
+.st2d-adv-row input { margin-top: 3px; flex: 0 0 auto; }
 
 /* todayhub.css */
 /* todayhub.css — "วันนี้" Today Hub */
@@ -3367,7 +3431,9 @@ var DORDER=["oxford","awl","colloc","syn","pv","idiom","topic","knowledge","sent
 function gcolor(i){return "var(--g"+Math.min(4,i)+")";}
 var S={deck:"oxford",data:[],rec:{},filter:{groups:{},status:{},pos:{},q:"",sort:"az",fav:false,miss:false},
  working:null,workingDirty:true,page:1,mode:"todayhub",dir:"en",size:"n",
- settings:{newPerDay:20,revPerDay:120,learnSteps:[1,10],graduate:1,easyIv:4,dailyGoal:30},session:null};
+ settings:{newPerDay:20,revPerDay:120,learnSteps:[1,10],graduate:1,easyIv:4,dailyGoal:30,dirSplit:false},session:null};
+/* a few settings (currently just dirSplit) are user-toggleable and persisted; merge any saved overrides onto the defaults above */
+try{var _sv=JSON.parse(store.get("pt_settings")||"{}");for(var _sk in _sv)if(hasK(_sv,_sk))S.settings[_sk]=_sv[_sk];}catch(e){}
 window.S=S;window.esc=esc;window.store=store;window.speak=speak;window.keyOf=keyOf;window.gcolor=gcolor;window.hasK=hasK;window.DECKS=DECKS;window.DORDER=DORDER;
 /* --- theme + size --- */
 var root=document.documentElement,tset=store.get("pt_theme");if(tset)root.setAttribute("data-theme",tset);
@@ -3382,6 +3448,7 @@ PT.stats={render:function(v){var now=Date.now(),know=0,learn=0,k;
   '<div class="s-goal"><div class="s-goal-h"><span>วันนี้ '+stk.today+' / '+goal+' ครั้ง</span><span>สูงสุด '+stk.longest+' วัน</span></div>'+
   '<div class="s-gbar"><i style="width:'+gpct+'%"></i></div></div></div>'+
   ((window.PT&&PT.miss&&PT.miss.section)?PT.miss.section():'')+
+  ((window.PT&&PT.stats2&&PT.stats2.section)?PT.stats2.section():'')+
   ((window.PT&&PT.plan&&PT.plan.section)?PT.plan.section():'')+
   '<div class="s-grid"><div class="s-stat"><b style="color:var(--know)">'+know+'</b><span>รู้แล้ว</span></div>'+
   '<div class="s-stat"><b style="color:var(--review)">'+learn+'</b><span>กำลังเรียน</span></div>'+
@@ -3403,6 +3470,7 @@ PT.stats={render:function(v){var now=Date.now(),know=0,learn=0,k;
   '<div class="s-bk-msg" id="s-bk-msg"></div>'+
   '<div class="s-bk-stat" id="s-bk-stat"></div></div>';
  v.innerHTML=h;if(window.PT&&PT.miss&&PT.miss.wire)try{PT.miss.wire(v);}catch(e){}
+ if(window.PT&&PT.stats2&&PT.stats2.wire)try{PT.stats2.wire(v);}catch(e){}
  (function(){var el=document.getElementById("s-bk-stat");if(!el)return;var ds=-1;try{ds=PT.backup.daysSince();}catch(e){}
   var bk=(ds<0)?"⚠️ ยังไม่เคยสำรองข้อมูล":(ds===0?"✓ สำรองล่าสุดวันนี้":(ds+" วันก่อนสำรองล่าสุด"+(ds>=14?" — ควรสำรองใหม่":"")));
   el.textContent=bk;el.style.color=(ds<0||ds>=14)?"#d9534f":"var(--muted)";
@@ -3933,7 +4001,12 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
     dayLog: dayLog,
     bumpNew: bumpNew,
     bumpRev: bumpRev,
-    streak: streak
+    streak: streak,
+    // exposed for the stats dashboard (heatmap uses the same day-bucketing as the streak)
+    dayNum: dayNum,
+    activityLog: actLog,
+    DAY: DAY,
+    ROLL: ROLL
   };
 })();
 
@@ -4655,10 +4728,23 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
 
   function now() { return Date.now(); }
 
+  // The SRS record key for an item. Normally the same as keyOf(item) — but
+  // when S.settings.dirSplit is on, EN->TH and TH->EN recall are scheduled as
+  // two independent skills (real Anki-style reverse cards), so the TH-facing
+  // direction gets its own suffixed key. Only the SM-2 record is split this
+  // way; favorites/mistake-notebook/word-map stay keyed by the base word
+  // identity (keyOf), since "I got this word wrong" or "I starred this word"
+  // isn't direction-specific.
+  function srsKey(S, item) {
+    var k = keyOf(item);
+    if (S.settings && S.settings.dirSplit && S.dir === "th") return k + "__th";
+    return k;
+  }
+
   // Ensure a record exists for an item; returns it (does NOT mutate maps
   // unless it has to create one — creation is harmless/idempotent).
   function recFor(S, item) {
-    var k = keyOf(item);
+    var k = srsKey(S, item);
     var r = S.rec[k];
     if (!r) { r = PT.srs.newRecord(); }  // transient — do NOT store; only grading persists
     return r;
@@ -4715,6 +4801,31 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
   var UNL_KEY = "pt_cards_unl";
   function isUnlimited() { return store.get(UNL_KEY) === "1"; }
   function setUnlimited(on) { store.set(UNL_KEY, on ? "1" : "0"); }
+
+  /* ---------- listening-only mode ----------
+     Hides the front text; shows a big 🔊 button (auto-plays once per new
+     card) so the learner recalls the word from audio alone before flipping —
+     direct IELTS-listening practice reusing the TTS plumbing already used
+     elsewhere on the card. */
+  var LISTEN_KEY = "pt_cards_listen";
+  function isListening() { return store.get(LISTEN_KEY) === "1"; }
+  function setListening(on) { store.set(LISTEN_KEY, on ? "1" : "0"); }
+
+  /* ---------- retention log (review-stage grades only) ----------
+     A capped rolling log of ratings, one array per deck, appended only when
+     the card being graded was ALREADY a review-stage card (prevRec.s===2) —
+     i.e. "did I actually remember this on its scheduled day", the same
+     definition Anki's retention % uses. Feeds the stats dashboard. */
+  function glogKey(deck) { return "pt_glog_" + deck; }
+  function logGrade(deck, wasReview, rating) {
+    if (!wasReview) return;
+    var key = glogKey(deck), arr = [];
+    try { arr = JSON.parse(store.get(key) || "[]"); } catch (e) { arr = []; }
+    if (!(arr instanceof Array)) arr = [];
+    arr.push(rating);
+    if (arr.length > 300) arr = arr.slice(arr.length - 300);
+    store.set(key, JSON.stringify(arr));
+  }
 
   /* ---------- queue construction ---------- */
 
@@ -4811,10 +4922,22 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
     { r: 3, th: "ง่าย", cls: "c-easy" }
   ];
 
+  // Recall-angle rotation for review-stage (rec.s===2) cards that have an
+  // example sentence: rotate meaning -> example -> produce by rep count, so
+  // the SAME item asks a different question instead of an identical reveal
+  // every time. New/learning cards always get the plain 'meaning' angle
+  // (keeps first-exposure simple, per the standard SRS-onboarding practice).
+  var ANGLES = ["meaning", "example", "produce"];
+  function angleFor(item, rec) {
+    if (!item || !item.ee || !rec || rec.s !== 2) return "meaning";
+    return ANGLES[(rec.reps || 0) % ANGLES.length];
+  }
+
   PT.cards.render = function (viewEl) {
     var S = window.S;
     var n = now();
     var unlimited = isUnlimited();
+    var listening = isListening();
     var list = null;
 
     // (re)build the session if there is none or it drained. In unlimited mode,
@@ -4846,15 +4969,18 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
     var rec = recFor(S, item);
     var pos = sess.done + 1;
     var grp = item.g || (window.DECKS && DECKS[S.deck] ? DECKS[S.deck].name : "");
+    var angle = angleFor(item, rec);
+    var isNewCardShown = entry._new;
 
     var front, back;
-    if (S.dir === "th") {
-      front = frontHtml(item.mt || item.w, item.p, "th");
-      back = backHtml(item, "th");
+    if (listening) {
+      front = frontHtmlListen();
+    } else if (S.dir === "th") {
+      front = frontHtml(item.mt || item.w, item.p, "th", angle, isNewCardShown);
     } else {
-      front = frontHtml(item.w, item.p, "en");
-      back = backHtml(item, "en");
+      front = frontHtml(item.w, item.p, "en", angle, isNewCardShown);
     }
+    back = backHtml(item, S.dir === "th" ? "th" : "en", rec);
 
     // interval preview labels for the four ratings
     var rateBtns = "";
@@ -4873,6 +4999,9 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
     var unlToggle = '<button class="c-unl' + (unlimited ? ' on' : '') + '" data-c-unl-t="1" ' +
       'title="' + (unlimited ? "โหมดไม่จำกัด: เปิดอยู่ — ไม่ติดโควตารายวัน" : "เปิดโหมดไม่จำกัด — เล่นได้เรื่อยๆ ไม่ติดโควตารายวัน") + '">' +
       (unlimited ? "🔁 ไม่จำกัด" : "🔁") + '</button>';
+    var listenToggle = '<button class="c-unl' + (listening ? ' on' : '') + '" data-c-listen-t="1" ' +
+      'title="' + (listening ? "โหมดฟังอย่างเดียว: เปิดอยู่" : "เปิดโหมดฟังอย่างเดียว — ฟังก่อนพลิกดู") + '">' +
+      (listening ? "🎧 ฟัง" : "🎧") + '</button>';
 
     viewEl.innerHTML =
       '<div class="c-wrap' + (sess.flipped ? ' c-flipped' : '') + '">' +
@@ -4880,6 +5009,7 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
           '<span class="c-prog">' + pos + ' / ' + sess.total + '</span>' +
           '<span class="c-dot">·</span>' +
           '<span class="c-grp">' + esc(grp) + '</span>' +
+          listenToggle +
           unlToggle +
           undoBtn +
         '</div>' +
@@ -4898,19 +5028,42 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
     wire(viewEl, item);
     bindKeyboard(viewEl);
     if (PT.a11y && typeof PT.a11y.enhance === "function") PT.a11y.enhance(viewEl);
+
+    // listening mode: auto-play the word once when a NEW card appears (not on
+    // every re-render of the same card — flipping doesn't re-render, so this
+    // naturally fires once per card).
+    if (listening && !sess.flipped) {
+      try { speak(item.w || ""); } catch (e) {}
+    }
   };
 
-  function frontHtml(main, p, dir) {
+  function frontHtml(main, p, dir, angle, isNewCardShown) {
     var lc = (main || "").length > 22 ? " c-word-long" : "";  // shrink long text (sentences)
-    return '<div class="c-word' + lc + '">' + esc(main || "") + '</div>' +
+    var hint, badge = "";
+    if (angle === "example") {
+      hint = "🧩 นึกตัวอย่างประโยคที่ใช้คำนี้ในใจ แล้วแตะเพื่อดูเฉลย";
+      badge = '<div class="c-angle">🧩 ตัวอย่างประโยค</div>';
+    } else if (angle === "produce") {
+      hint = "✍️ ลองแต่งประโยคของตัวเองที่ใช้คำนี้ในใจ แล้วแตะเพื่อเทียบ";
+      badge = '<div class="c-angle">✍️ แต่งประโยค</div>';
+    } else {
+      hint = dir === "th" ? "แตะเพื่อดูคำศัพท์" : "แตะเพื่อดูความหมาย";
+    }
+    return badge + '<div class="c-word' + lc + '">' + esc(main || "") + '</div>' +
            (p ? '<div class="c-pos">' + esc(p) + '</div>' : '') +
-           '<div class="c-hint">' + (dir === "th" ? "แตะเพื่อดูคำศัพท์" : "แตะเพื่อดูความหมาย") + '</div>';
+           '<div class="c-hint">' + hint + '</div>';
   }
 
-  function backHtml(item, dir) {
+  function frontHtmlListen() {
+    return '<button type="button" class="c-listen-btn" data-c-listen-play="1" aria-label="ฟังเสียง">🔊</button>' +
+      '<div class="c-hint">แตะฟัง แล้วนึกคำ/ความหมายในใจ ก่อนพลิกดู</div>';
+  }
+
+  function backHtml(item, dir, rec) {
     var h = '';
     var lcw = (item.w || "").length > 22 ? " c-b-word-long" : "";
     var isFav = !!(window.PT && PT.fav && PT.fav.isFav(item));
+    var isLeech = !!(rec && (rec.lap || 0) >= 4);
     h += '<div class="c-b-head">' +
            '<span class="c-b-word' + lcw + '">' + esc(item.w || "") + '</span>' +
            '<button class="c-fav' + (isFav ? ' on' : '') + '" title="ติดดาว" aria-label="ติดดาว">' + (isFav ? '★' : '☆') + '</button>' +
@@ -4919,6 +5072,7 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
              ? '<button class="c-speak" title="อ่านช้า" data-slow="' + esc(item.w || "") + '">🐢</button>'
              : '<button class="c-speak" title="สะกดคำ" data-spell="' + esc(item.w || "") + '">🔤</button>') +
          '</div>';
+    if (isLeech) h += '<div class="c-b-leech">🐛 ตอบผิดซ้ำหลายครั้ง — ถูกเก็บเข้าสมุดคำผิดให้แล้ว</div>';
     var meta = [];
     if (item.p) meta.push(esc(item.p));
     if (item.ip) meta.push('<span class="c-b-ipa">' + esc(item.ip) + '</span>');
@@ -4987,6 +5141,19 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
       PT.cards.render(viewEl);
     };
 
+    var listenBtn = viewEl.querySelector("[data-c-listen-t]");
+    if (listenBtn) listenBtn.onclick = function (e) {
+      e.stopPropagation();
+      setListening(!isListening());
+      PT.cards.render(viewEl); // same card/position — just changes how the front looks
+    };
+
+    var listenPlay = viewEl.querySelector("[data-c-listen-play]");
+    if (listenPlay) listenPlay.onclick = function (e) {
+      e.stopPropagation();
+      speak(item.w || "");
+    };
+
     var i;
     for (i = 0; i < rates.length; i++) {
       rates[i].onclick = (function (btn) {
@@ -5010,15 +5177,20 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
 
     var entry = sess.q[0];
     var item = entry.item;
-    var key = keyOf(item);
-    var prevRec = S.rec[key]; // preserved by reference (grade returns a new object)
+    var key = keyOf(item);          // base identity — favorites/mistake-notebook/introduced tracking
+    var sKey = srsKey(S, item);     // SRS record key — direction-suffixed only when dirSplit is on
+    var prevRec = S.rec[sKey]; // preserved by reference (grade returns a new object)
 
     // mistake notebook: "อีกครั้ง" (Again=0) = a lapse -> collect; Good/Easy (>=2) -> credit toward retiring
     try { if (PT.miss) { if (rating === 0) PT.miss.add(S.deck, key); else if (rating >= 2) PT.miss.right(S.deck, key); } } catch (e) {}
 
+    // retention log: only counts when this was already a review-stage card
+    try { logGrade(S.deck, !!(prevRec && prevRec.s === 2), rating); } catch (e) {}
+
     // undo snapshot BEFORE mutating
     sess.undo = {
       key: key,
+      sKey: sKey,
       prevRec: prevRec,
       queue: sess.q.slice(),
       done: sess.done,
@@ -5034,8 +5206,14 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
     }
 
     var res = PT.srs.grade(prevRec, rating, n);
-    S.rec[key] = res.rec;
+    S.rec[sKey] = res.rec;
     srsSave(S);
+
+    // leech: repeated lapses on the same card -> auto-collect into the
+    // Mistake Notebook (reuses the existing bridge instead of a separate list)
+    try {
+      if (PT.miss && (res.rec.lap || 0) >= 4 && !PT.miss.has(S.deck, key)) PT.miss.add(S.deck, key);
+    } catch (e) {}
 
     if (res.requeue) {
       entry.dueAt = res.rec.due;
@@ -5059,7 +5237,8 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
     var sess = S.session;
     if (!sess || !sess.undo) return;
     var u = sess.undo;
-    if (u.prevRec) { S.rec[u.key] = u.prevRec; } else { delete S.rec[u.key]; }  // don't leave a phantom key for undone new cards
+    var sKey = u.sKey || u.key;
+    if (u.prevRec) { S.rec[sKey] = u.prevRec; } else { delete S.rec[sKey]; }  // don't leave a phantom key for undone new cards
     sess.q = u.queue;
     sess.done = u.done;
     sess.introduced = u.introduced;
@@ -8223,6 +8402,15 @@ PT.miss = (function () {
     S.filter.miss = true; S.workingDirty = true;
     if (window.goMode) goMode("quiz");
   }
+  // same filter, but into Cards (real SM-2 flashcard review) instead of Quiz —
+  // PT.filters already honors F.miss and PT.cards.buildQueue already consumes
+  // PT.filters.apply(), so this is just routing, no new plumbing.
+  function startReviewCards() {
+    if (count(S.deck) < 1) return;
+    S.filter.groups = {}; S.filter.status = {}; S.filter.pos = {}; S.filter.fav = false;
+    S.filter.miss = true; S.workingDirty = true; S.session = null;
+    if (window.goMode) goMode("cards");
+  }
 
   function draw() {
     var r = document.getElementById("miss-root"); if (!r) return;
@@ -8234,8 +8422,9 @@ PT.miss = (function () {
     var o = load(d), map = {}, i, data = S.data || [];
     for (i = 0; i < data.length; i++) map[keyOf(data[i])] = data[i];
     ks.sort(function (a, b) { return (o[b].n || 0) - (o[a].n || 0); });
-    var h = '<div class="ms-top"><span>' + ks.length + ' คำที่ต้องเก็บ</span>' +
-      '<button class="ms-btn ms-rev" data-msrev="1">▶ ทบทวนจุดอ่อน</button></div><div class="ms-list">';
+    var h = '<div class="ms-top"><span>' + ks.length + ' คำที่ต้องเก็บ</span><div class="ms-btnrow">' +
+      '<button class="ms-btn ms-rev" data-msrev="1">▶ ทบทวนจุดอ่อน</button>' +
+      '<button class="ms-btn ms-revc" data-msrevc="1">🗂 การ์ด</button></div></div><div class="ms-list">';
     for (i = 0; i < ks.length; i++) {
       var it = map[ks[i]]; if (!it) continue;
       h += '<div class="ms-item"><div class="ms-w"><b>' + esc(it.w || "") + '</b>' +
@@ -8256,6 +8445,7 @@ PT.miss = (function () {
     r.addEventListener("click", function (e) {
       var t = e.target, el;
       if ((el = up(t, "data-msrev", r))) { startReview(); return; }
+      if ((el = up(t, "data-msrevc", r))) { startReviewCards(); return; }
       if ((el = up(t, "data-msclear", r))) {
         if (confirm("ล้างสมุดคำผิดของคลังนี้?")) { clear(S.deck); var c = document.getElementById("miss-count"); if (c) c.textContent = ""; draw(); }
         return;
@@ -8263,7 +8453,136 @@ PT.miss = (function () {
     });
   }
 
-  return { add: add, right: right, has: has, keys: keys, count: count, clear: clear, section: section, wire: wire, startReview: startReview };
+  return { add: add, right: right, has: has, keys: keys, count: count, clear: clear, section: section, wire: wire, startReview: startReview, startReviewCards: startReviewCards };
+})();
+
+/* ===== module: stats2 ===== */
+/* stats2.js — "แดชบอร์ดสถิติ": activity heatmap, due-forecast, card-maturity
+   breakdown, retention rate, and an advanced Cards setting (dirSplit).
+   Pure read of existing srs/store data — no data model added except a small
+   capped per-deck grade-log (written by cards.js) and a settings flag.
+   ES5. Rendered inside PT.stats via a `.st2d-*`-prefixed section. */
+PT.stats2 = (function () {
+  "use strict";
+
+  /* ---------- heatmap: reuses the same day-bucketing as the streak ---------- */
+  function heatmapHtml() {
+    if (!window.PT || !PT.srs || typeof PT.srs.dayNum !== "function") return "";
+    var today = PT.srs.dayNum(), act = PT.srs.activityLog() || {};
+    var WEEKS = 12, days = WEEKS * 7;
+    var maxN = 1, i, d;
+    for (i = 0; i < days; i++) { var v = act["" + (today - i)] || 0; if (v > maxN) maxN = v; }
+    // build columns oldest->newest, 7 rows each (Sun..Sat by day-of-week of the approximate date)
+    var cells = [];
+    for (i = days - 1; i >= 0; i--) {
+      d = today - i;
+      var n = act["" + d] || 0;
+      var lvl = n <= 0 ? 0 : Math.min(4, Math.ceil((n / maxN) * 4));
+      var dt = new Date(d * (PT.srs.DAY || 86400000) + (PT.srs.ROLL || 0));
+      var lbl = "";
+      try { lbl = dt.toLocaleDateString("th-TH", { day: "numeric", month: "short" }); } catch (e) {}
+      cells.push('<span class="st2d-hm-c st2d-hm-l' + lvl + '" title="' + esc(lbl) + ' · ' + n + ' ครั้ง"></span>');
+    }
+    return '<div class="st2d-hm">' + cells.join("") + '</div>' +
+      '<div class="st2d-hm-leg"><span>น้อย</span><span class="st2d-hm-c st2d-hm-l0"></span>' +
+      '<span class="st2d-hm-c st2d-hm-l1"></span><span class="st2d-hm-c st2d-hm-l2"></span>' +
+      '<span class="st2d-hm-c st2d-hm-l3"></span><span class="st2d-hm-c st2d-hm-l4"></span><span>มาก</span></div>';
+  }
+
+  /* ---------- maturity + forecast, current deck, base (direction-agnostic) key ---------- */
+  function deckStats() {
+    var data = (window.S && S.data) || [], rec = (window.S && S.rec) || {};
+    var now = Date.now(), DAY = (PT.srs && PT.srs.DAY) || 86400000;
+    var mat = { neu: 0, learning: 0, young: 0, mature: 0 };
+    var forecast = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; // next 14 days, index0=today
+    var overdue = 0, leechCount = 0, i, r;
+    for (i = 0; i < data.length; i++) {
+      r = rec[keyOf(data[i])];
+      if (!r || r.s === 0) { mat.neu++; continue; }
+      if (r.s === 1 || r.s === 3) { mat.learning++; }
+      else if (r.s === 2) {
+        if ((r.iv || 0) >= 21) mat.mature++; else mat.young++;
+        var diffDays = Math.floor((r.due - now) / DAY);
+        if (diffDays < 0) overdue++;
+        else if (diffDays < forecast.length) forecast[diffDays]++;
+      }
+      if ((r.lap || 0) >= 4) leechCount++;
+    }
+    return { mat: mat, forecast: forecast, overdue: overdue, leechCount: leechCount, total: data.length };
+  }
+
+  function retentionStats(deck) {
+    var arr = [];
+    try { arr = JSON.parse(store.get("pt_glog_" + deck) || "[]"); } catch (e) { arr = []; }
+    if (!(arr instanceof Array) || !arr.length) return null;
+    var ok = 0, i;
+    for (i = 0; i < arr.length; i++) if (arr[i] >= 1) ok++;
+    return { pct: Math.round((ok / arr.length) * 100), n: arr.length };
+  }
+
+  function bar(label, val, max, color) {
+    var pct = max ? Math.round((val / max) * 100) : 0;
+    return '<div class="st2d-bar-row"><span class="st2d-bar-l">' + esc(label) + '</span>' +
+      '<div class="st2d-bar-track"><i style="width:' + pct + '%;background:' + color + '"></i></div>' +
+      '<span class="st2d-bar-v">' + val + '</span></div>';
+  }
+
+  function section() {
+    var ds = deckStats();
+    var ret = retentionStats((window.S && S.deck) || "");
+    var mat = ds.mat, maxMat = Math.max(1, mat.neu, mat.learning, mat.young, mat.mature);
+    var maxFc = Math.max(1, ds.overdue);
+    var i;
+    for (i = 0; i < ds.forecast.length; i++) if (ds.forecast[i] > maxFc) maxFc = ds.forecast[i];
+
+    var h = '<div class="st2d-sec"><div class="st2d-h">📊 แดชบอร์ดสถิติ</div>';
+
+    h += '<div class="st2d-sub">กิจกรรมการเรียน (12 สัปดาห์ล่าสุด)</div>' + heatmapHtml();
+
+    if (ret) {
+      h += '<div class="st2d-ret"><div class="st2d-ret-n">' + ret.pct + '%</div>' +
+        '<div class="st2d-ret-l">อัตราจำได้ (จากทบทวน ' + ret.n + ' ครั้งล่าสุด)</div></div>';
+    }
+
+    h += '<div class="st2d-sub">ความอยู่ตัวของคำ (คลังนี้)</div>';
+    h += bar("ใหม่", mat.neu, maxMat, "var(--muted)");
+    h += bar("กำลังเรียน", mat.learning, maxMat, "var(--review)");
+    h += bar("รู้แล้ว (ไม่ถึง 21 วัน)", mat.young, maxMat, "var(--accent)");
+    h += bar("แม่นแล้ว (≥21 วัน)", mat.mature, maxMat, "var(--know)");
+
+    h += '<div class="st2d-sub">คำที่จะครบกำหนดใน 14 วันข้างหน้า' + (ds.overdue ? ' <span class="st2d-overdue">(' + ds.overdue + ' คำเลยกำหนดแล้ว)</span>' : '') + '</div>';
+    h += '<div class="st2d-fc">';
+    for (i = 0; i < ds.forecast.length; i++) {
+      var hpct = maxFc ? Math.max(4, Math.round((ds.forecast[i] / maxFc) * 100)) : 4;
+      h += '<div class="st2d-fc-col" title="' + (i === 0 ? "วันนี้" : "อีก " + i + " วัน") + ' · ' + ds.forecast[i] + ' คำ">' +
+        '<div class="st2d-fc-bar" style="height:' + hpct + '%"></div><span>' + (i === 0 ? "วันนี้" : i) + '</span></div>';
+    }
+    h += '</div>';
+
+    if (ds.leechCount > 0) {
+      h += '<div class="st2d-leech">🐛 คำที่ตกม้าตายซ้ำๆ ' + ds.leechCount + ' คำ — เก็บเข้าสมุดคำผิดให้อัตโนมัติแล้ว ดูได้ที่ 📓 สมุดคำผิดด้านบน</div>';
+    }
+
+    h += '<div class="st2d-adv"><div class="st2d-adv-h">การ์ดขั้นสูง</div>' +
+      '<label class="st2d-adv-row"><input type="checkbox" id="st2d-dirsplit"> ' +
+      '<span>แยกคะแนนความจำสองทิศทาง (EN→TH กับ TH→EN นับคนละสกอร์) — เปิดแล้วจะมีการ์ดใหม่เพิ่มขึ้นตอนสลับทิศทางครั้งแรก</span></label></div>';
+
+    h += '</div>';
+    return h;
+  }
+
+  function wire(v) {
+    var cb = document.getElementById("st2d-dirsplit");
+    if (!cb || !window.S) return;
+    cb.checked = !!(S.settings && S.settings.dirSplit);
+    cb.onchange = function () {
+      S.settings = S.settings || {};
+      S.settings.dirSplit = cb.checked;
+      try { store.set("pt_settings", JSON.stringify(S.settings)); } catch (e) {}
+    };
+  }
+
+  return { section: section, wire: wire };
 })();
 
 /* ===== module: todayhub ===== */
