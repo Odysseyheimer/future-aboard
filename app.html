@@ -1240,6 +1240,8 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 .ph-wic { flex: 0 0 auto; width: 44px; height: 44px; border-radius: 13px; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; font-size: 22px; }
 .ph-wide b { font-size: 15px; font-weight: 800; }
 .ph-wide em { display: block; font-style: normal; font-size: 12px; color: var(--muted); margin-top: 3px; line-height: 1.45; }
+.ph-game { background: var(--accent-soft); border-color: var(--accent); }
+.ph-game em { color: var(--accent-ink); opacity: .85; }
 
 /* structure.css */
 /* structure.css — โครงสร้างประโยค (sentence-structure resource) */
@@ -1418,6 +1420,101 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 .lib-feat .lf-i { flex: 0 0 auto; font-size: 26px; }
 .lib-feat b { font-size: 15px; font-weight: 900; }
 .lib-feat em { display: block; font-style: normal; font-size: 12px; opacity: .85; margin-top: 2px; }
+
+/* game.css */
+/* game.css — เกมคำศัพท์ (PT.game). Prefix .g- */
+
+/* ---- hub ---- */
+.g-hub { padding: 6px 2px 16px; }
+.g-hub-hero { font-size: 22px; font-weight: 900; margin: 6px 2px 4px; }
+.g-hub-sub { font-size: 13px; color: var(--text); margin: 0 2px 16px; line-height: 1.6; }
+.g-hub-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
+.g-card { text-align: left; background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--gc, var(--accent));
+  border-radius: 16px; padding: 14px; cursor: pointer; color: var(--text); font-family: var(--font); box-shadow: var(--shadow); }
+.g-card:active { transform: scale(.98); }
+.g-card-i { font-size: 30px; line-height: 1; }
+.g-card-t { font-size: 15px; font-weight: 900; margin-top: 8px; }
+.g-card-d { font-size: 11.5px; color: var(--text); margin-top: 3px; line-height: 1.4; }
+.g-card-b { font-size: 11px; font-weight: 800; color: var(--gc, var(--accent)); margin-top: 7px; }
+
+/* ---- shared game shell ---- */
+.g-wrap { padding: 4px 2px 14px; position: relative; }
+.g-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.g-back { background: none; border: none; color: var(--accent); font-family: var(--font); font-size: 14px; font-weight: 800; cursor: pointer; padding: 4px 2px; }
+.g-hud { display: flex; align-items: center; gap: 10px; }
+.g-combo { font-size: 14px; font-weight: 900; color: #e8730a; }
+.g-score { font-size: 20px; font-weight: 900; color: var(--text); font-variant-numeric: tabular-nums; min-width: 26px; text-align: right; }
+.g-barwrap { height: 10px; background: var(--surface2); border-radius: 999px; overflow: hidden; margin-bottom: 18px; }
+.g-bar { height: 100%; background: var(--accent); border-radius: 999px; transition: width .12s linear, background .3s; }
+.g-stage { min-height: 240px; }
+.g-load { text-align: center; color: var(--text); padding: 40px 16px; font-size: 14px; line-height: 1.8; }
+
+/* floating +1 / ✗ feedback */
+.g-pop { position: absolute; left: 50%; top: 40%; transform: translateX(-50%); font-size: 26px; font-weight: 900;
+  pointer-events: none; z-index: 20; animation: g-pop .65s ease-out forwards; }
+.g-pop-g { color: var(--know); }
+.g-pop-b { color: #d9534f; }
+@keyframes g-pop { 0% { opacity: 0; transform: translate(-50%, 8px) scale(.7); } 20% { opacity: 1; transform: translate(-50%, -4px) scale(1.1); } 100% { opacity: 0; transform: translate(-50%, -40px) scale(1); } }
+
+/* ---- end screen ---- */
+.g-end { text-align: center; padding: 24px 16px; }
+.g-end-i { font-size: 46px; }
+.g-end-s { font-size: 46px; font-weight: 900; color: var(--accent); margin-top: 2px; }
+.g-end-l { font-size: 13px; color: var(--text); margin-top: 4px; }
+.g-btn { display: block; width: 100%; font-family: var(--font); font-size: 15px; font-weight: 800; color: var(--accent-ink);
+  background: var(--accent); border: none; border-radius: 14px; padding: 13px; margin: 16px 0 8px; cursor: pointer; box-shadow: var(--shadow); }
+.g-btn:active { transform: scale(.98); }
+.g-back2 { display: block; width: 100%; background: none; border: none; color: var(--muted); font-family: var(--font); font-size: 13.5px; font-weight: 700; padding: 10px; cursor: pointer; }
+
+/* ---- sprint ---- */
+.g-sp-word { font-size: 34px; font-weight: 900; text-align: center; color: var(--text); margin: 20px 0 6px; word-break: break-word; }
+.g-sp-hint { text-align: center; font-size: 12.5px; color: var(--muted); margin-bottom: 18px; }
+.g-sp-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.g-sp-opt { font-family: var(--font); font-size: 15px; font-weight: 700; color: var(--text); background: var(--surface);
+  border: 1.5px solid var(--border); border-radius: 16px; padding: 22px 12px; cursor: pointer; box-shadow: var(--shadow); line-height: 1.4; }
+.g-sp-opt:active { transform: scale(.97); border-color: var(--accent); }
+
+/* ---- chef ---- */
+.g-chef-order { text-align: center; font-size: 22px; font-weight: 800; color: var(--text); margin: 14px 0 4px; }
+.g-chef-order b { color: var(--accent); }
+.g-chef-order span { display: block; font-size: 13px; font-weight: 500; color: var(--muted); margin-top: 4px; }
+.g-chef-tiles { display: flex; flex-direction: column; gap: 11px; margin-top: 16px; }
+.g-chef-tile { font-family: var(--font); font-size: 17px; font-weight: 800; color: var(--text); background: var(--surface);
+  border: 1.5px solid var(--border); border-radius: 14px; padding: 16px; cursor: pointer; box-shadow: var(--shadow); }
+.g-chef-tile:active { transform: scale(.98); }
+.g-tile-bad { border-color: #d9534f !important; background: rgba(217,83,79,.12) !important; opacity: .6; }
+
+/* ---- echo ---- */
+.g-echo-play { display: block; margin: 8px auto 6px; width: 88px; height: 88px; border-radius: 50%; border: none;
+  background: var(--accent); color: var(--accent-ink); font-size: 36px; cursor: pointer; box-shadow: var(--shadow); }
+.g-echo-play:active { transform: scale(.94); }
+.g-echo-slots { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; margin: 14px 0; min-height: 40px; }
+.g-echo-slot { width: 30px; height: 38px; border-bottom: 2.5px solid var(--border); display: grid; place-items: center;
+  font-size: 21px; font-weight: 800; color: var(--accent); text-transform: lowercase; }
+.g-echo-tiles { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.g-echo-tile { width: 42px; height: 46px; border-radius: 11px; border: 1.5px solid var(--border); background: var(--surface);
+  font-family: var(--font); font-size: 20px; font-weight: 800; color: var(--text); cursor: pointer; text-transform: lowercase; box-shadow: var(--shadow); }
+.g-echo-tile:active { transform: scale(.92); }
+.g-tile-used { opacity: .28; }
+.g-echo-ctl { display: flex; justify-content: center; gap: 10px; margin-top: 16px; }
+.g-echo-mini { font-family: var(--font); font-size: 13px; font-weight: 700; color: var(--muted); background: var(--surface2);
+  border: none; border-radius: 999px; padding: 8px 14px; cursor: pointer; }
+.g-shake { animation: g-shake .4s; }
+@keyframes g-shake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+
+/* ---- ladder ---- */
+.g-lad-rung { font-size: 20px; color: var(--text); background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; box-shadow: var(--shadow); }
+.g-lad-rung b { color: var(--accent); font-weight: 900; }
+.g-lad-rung.done { opacity: .7; }
+.g-lad-ir { font-size: 11px; font-weight: 800; color: var(--accent-ink); background: var(--accent-soft); border-radius: 999px; padding: 2px 9px; margin-left: 6px; }
+.g-lad-ask { font-size: 13px; font-weight: 700; color: var(--muted); margin: 14px 2px 8px; }
+.g-lad-row { display: flex; gap: 8px; }
+.g-lad-in { flex: 1; font-family: var(--font); font-size: 18px; padding: 12px 14px; border-radius: 12px;
+  border: 1.5px solid var(--border); background: var(--surface); color: var(--text); }
+.g-lad-go { flex: 0 0 auto; font-family: var(--font); font-size: 15px; font-weight: 800; color: var(--accent-ink);
+  background: var(--accent); border: none; border-radius: 12px; padding: 0 18px; cursor: pointer; }
+.g-goword { margin-top: 14px; }
 
 /* plan.css */
 /* plan.css — "แผนเรียน 540 วัน" section inside Stats */
@@ -3496,7 +3593,8 @@ function render(){applySize();
  if(S.mode!=="talk"&&PT.talk&&PT.talk.leave)PT.talk.leave();
  if(S.mode!=="wordchoice"&&PT.wordchoice&&PT.wordchoice.leave)PT.wordchoice.leave();
  if(S.mode!=="examprep"&&PT.examprep&&PT.examprep.leave)PT.examprep.leave();
- var noFilter=(S.mode==="talk"||S.mode==="wordchoice"||S.mode==="examprep"||S.mode==="daily"||S.mode==="todayhub"||S.mode==="prachub"||S.mode==="stats"||S.mode==="structure");
+ if(S.mode!=="game"&&PT.game&&PT.game.leave)PT.game.leave();
+ var noFilter=(S.mode==="talk"||S.mode==="wordchoice"||S.mode==="examprep"||S.mode==="daily"||S.mode==="todayhub"||S.mode==="prachub"||S.mode==="stats"||S.mode==="structure"||S.mode==="game");
  var fh=document.getElementById("filters");if(fh&&PT.filtersUI&&!noFilter)PT.filtersUI.render(fh);
  if(window.PT&&PT.hub&&PT.hub.syncPill)try{PT.hub.syncPill();}catch(e){}
  var v=document.getElementById("view");if(!v)return;
@@ -3509,12 +3607,13 @@ function render(){applySize();
  else if(S.mode==="wordchoice"&&PT.wordchoice)PT.wordchoice.render(v);
  else if(S.mode==="examprep"&&PT.examprep)PT.examprep.render(v);
  else if(S.mode==="prachub"&&PT.prachub)PT.prachub.render(v);
+ else if(S.mode==="game"&&PT.game)PT.game.render(v);
  else if(S.mode==="structure"&&PT.structure)PT.structure.render(v);
  else if(S.mode==="stats")PT.stats.render(v);
  if(PT.a11y&&PT.a11y.enhance)try{PT.a11y.enhance(document.getElementById("app"));}catch(e){}}
 window.render=render;
 /* --- switch tab programmatically (keeps tabbar highlight in sync) --- */
-function goMode(m){S.mode=m;var par={browse:"browse",cards:"browse",structure:"browse",quiz:"prachub",wordchoice:"prachub",prachub:"prachub",talk:"examprep",examprep:"examprep",todayhub:"todayhub",daily:"todayhub"}[m]||"";var tb=document.querySelectorAll(".tabbar button");[].forEach.call(tb,function(x){x.className=(x.getAttribute("data-mode")===par?"on":"");});if(m==="cards")S.session=null;render();}
+function goMode(m){S.mode=m;var par={browse:"browse",cards:"browse",structure:"browse",quiz:"prachub",wordchoice:"prachub",prachub:"prachub",game:"prachub",talk:"examprep",examprep:"examprep",todayhub:"todayhub",daily:"todayhub"}[m]||"";var tb=document.querySelectorAll(".tabbar button");[].forEach.call(tb,function(x){x.className=(x.getAttribute("data-mode")===par?"on":"");});if(m==="cards")S.session=null;render();}
 window.goMode=goMode;
 /* --- "วันนี้" (Today) summary panel, shown atop Browse --- */
 PT.today={
@@ -7735,11 +7834,15 @@ PT.prachub = (function () {
       '<em>668 กลุ่มคำใกล้เคียง + 4 เกม — รู้ว่าคำไหนใช้ตอนไหน</em></span></button>');
     h.push('<button class="ph-wide" data-ph-struct="1"><span class="ph-wic">📐</span><span><b>โครงสร้างประโยค</b>' +
       '<em>โครงประโยคอังกฤษ · WH · คำเชื่อม · การแปลงประโยค</em></span></button>');
+    h.push('<div class="ph-sec">เล่นสนุก</div>');
+    h.push('<button class="ph-wide ph-game" data-ph-game="1"><span class="ph-wic">🎮</span><span><b>เกมคำศัพท์</b>' +
+      '<em>4 เกมเร็วๆ — สายฟ้าความหมาย · คู่หูคำ · เสียงลึกลับ · บันไดกริยา</em></span></button>');
     h.push('</div>');
     v.innerHTML = h.join("");
     [].forEach.call(v.querySelectorAll("[data-ph-sub]"), function (b) { b.onclick = function () { go("quiz", b.getAttribute("data-ph-sub")); }; });
     var wc = v.querySelector("[data-ph-wc]"); if (wc) wc.onclick = function () { goMode("wordchoice"); };
     var stb = v.querySelector("[data-ph-struct]"); if (stb) stb.onclick = function () { if (PT.structure) PT.structure.open(); };
+    var gm = v.querySelector("[data-ph-game]"); if (gm) gm.onclick = function () { if (PT.game) PT.game.open(); };
     var wk = v.querySelector("[data-ph-weak]"); if (wk) wk.onclick = weak;
   }
   return { render: render };
@@ -8088,6 +8191,368 @@ PT.structure = (function () {
     openDay: openDay,
     dayNo: function (day) { return count() ? (((Math.max(1, day | 0) - 1) % count()) + 1) : 0; },
     reset: function () { pmode = null; cat = -1; pat = -1; }
+  };
+})();
+
+/* ===== module: game ===== */
+/* game.js — "เกมคำศัพท์" (PT.game): a hub + 4 fast, juicy learning games sharing
+   one time-attack engine (RUN). Hidden mode "game", launched from the ฝึก hub.
+   Games: sprint (speed meaning-recall), chef (collocations), echo (listen+spell),
+   ladder (verb-forms V1->V2->V3). ES5, no canvas, no images — CSS/emoji/TTS only.
+   Uses S, esc, store, speak/speakSlow/spellOut, keyOf, goMode. */
+PT.game = (function () {
+  "use strict";
+  var active = null;      // null=hub, else game id
+  var started = false;    // whether the active game's shell is built/running
+  var timer = null;       // the single shared tick timer
+  var collocPool = null;  // lazy: chef entries
+  var ladderPool = null;  // lazy: verb-form items
+
+  function V() { return document.getElementById("view"); }
+  function randn(n) { return Math.floor(Math.random() * n); }
+  function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = randn(i + 1); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function best(id) { var n = parseInt(store.get("pt_gbest_" + id) || "0", 10); return isNaN(n) ? 0 : n; }
+  function setBest(id, v) { if (v > best(id)) store.set("pt_gbest_" + id, "" + v); }
+  function say(t, mode) { try { if (mode === "slow" && window.speakSlow) speakSlow(t); else if (mode === "spell" && window.spellOut) spellOut(t); else speak(t); } catch (e) {} }
+  function norm(s) { return String(s || "").toLowerCase().replace(/[^a-z]/g, ""); }
+  function popFx(txt, good) {
+    var v = V(); if (!v) return;
+    var el = document.createElement("div");
+    el.className = "g-pop " + (good ? "g-pop-g" : "g-pop-b");
+    el.textContent = txt; v.appendChild(el);
+    setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 650);
+  }
+
+  /* ---------- shared time-attack engine ---------- */
+  var RUN = {};
+  RUN.begin = function (gid, tmax, onEnd) {
+    this.gid = gid; this.tmax = tmax; this.t = tmax; this.score = 0; this.combo = 0; this.maxcombo = 0;
+    this.running = true; this.onEnd = onEnd;
+    if (timer) clearInterval(timer);
+    timer = setInterval(function () { RUN.tick(); }, 100);
+  };
+  RUN.tick = function () { if (!this.running) return; this.t -= 100; this.bar(); if (this.t <= 0) { this.t = 0; this.finish(); } };
+  RUN.bar = function () { var b = document.getElementById("g-bar"); if (b) { b.style.width = Math.max(0, Math.round(this.t / this.tmax * 100)) + "%"; b.style.background = this.t < this.tmax * 0.25 ? "#d9534f" : "var(--accent)"; } };
+  RUN.hud = function () { var s = document.getElementById("g-score"); if (s) s.textContent = this.score; var c = document.getElementById("g-combo"); if (c) c.textContent = this.combo > 1 ? ("🔥x" + this.combo) : ""; };
+  RUN.good = function (add) { this.score++; this.combo++; if (this.combo > this.maxcombo) this.maxcombo = this.combo; this.t = Math.min(this.tmax, this.t + (add || 2000)); this.hud(); };
+  RUN.bad = function (pen) { this.combo = 0; this.t = Math.max(0, this.t - (pen || 3000)); this.hud(); };
+  RUN.stop = function () { this.running = false; if (timer) { clearInterval(timer); timer = null; } };
+  RUN.finish = function () { this.stop(); setBest(this.gid, this.score); if (this.onEnd) this.onEnd(); };
+
+  function shell(stageId) {
+    return '<div class="g-wrap"><div class="g-top">' +
+      '<button class="g-back" data-g-back="1">‹ เมนู</button>' +
+      '<div class="g-hud"><span class="g-combo" id="g-combo"></span><span class="g-score" id="g-score">0</span></div></div>' +
+      '<div class="g-barwrap"><div class="g-bar" id="g-bar" style="width:100%"></div></div>' +
+      '<div class="g-stage" id="' + stageId + '"></div></div>';
+  }
+  function endHtml(gid, label) {
+    return '<div class="g-end"><div class="g-end-i">🏁</div>' +
+      '<div class="g-end-s">' + RUN.score + '</div>' +
+      '<div class="g-end-l">' + esc(label || "คะแนน") + ' · สถิติสูงสุด ' + best(gid) + (RUN.maxcombo > 2 ? (" · คอมโบสูงสุด x" + RUN.maxcombo) : "") + '</div>' +
+      '<button class="g-btn g-again" data-g-again="1">🔁 เล่นอีกรอบ</button>' +
+      '<button class="g-back2" data-g-back="1">‹ กลับเมนูเกม</button></div>';
+  }
+  // wire the persistent back/again buttons within a rendered game
+  function wireChrome(v) {
+    var b = v.querySelector("[data-g-back]"); if (b) b.onclick = function () { RUN.stop(); active = null; started = false; render(v); };
+    var a = v.querySelector("[data-g-again]"); if (a) a.onclick = function () { started = false; startActive(v); };
+  }
+
+  /* ---------- word pool from the current deck ---------- */
+  function wordPool() {
+    var d = (window.S && S.data) || [], out = [], i;
+    for (i = 0; i < d.length; i++) {
+      var w = d[i].w;
+      if (w && d[i].mt && String(w).indexOf(" ") < 0 && String(w).length >= 3 && String(w).length <= 12) out.push(d[i]);
+    }
+    return out;
+  }
+
+  /* ==================== 1) MEANING SPRINT ==================== */
+  var sprint = {};
+  sprint.render = function (v) {
+    var pool = wordPool();
+    if (pool.length < 6) { v.innerHTML = poolWarn(); wirePoolWarn(v); return; }
+    sprint.pool = pool;
+    v.innerHTML = shell("g-stage");
+    RUN.begin("sprint", 20000, function () { document.getElementById("g-stage").innerHTML = endHtml("sprint", "ตอบถูก (คำ)"); wireChrome(v); });
+    wireChrome(v);
+    sprint.next();
+  };
+  sprint.next = function () {
+    var st = document.getElementById("g-stage"); if (!st) return;
+    var p = sprint.pool, it = p[randn(p.length)];
+    var wrong = p[randn(p.length)]; var guard = 0;
+    while ((wrong === it || norm(wrong.mt) === norm(it.mt)) && guard++ < 8) wrong = p[randn(p.length)];
+    var opts = shuffle([{ th: it.mt, ok: true }, { th: wrong.mt, ok: false }]);
+    st.innerHTML = '<div class="g-sp-word">' + esc(it.w) + '</div>' +
+      '<div class="g-sp-hint">แตะความหมายที่ถูก</div>' +
+      '<div class="g-sp-opts">' +
+      '<button class="g-sp-opt" data-ok="' + (opts[0].ok ? 1 : 0) + '">' + esc(opts[0].th) + '</button>' +
+      '<button class="g-sp-opt" data-ok="' + (opts[1].ok ? 1 : 0) + '">' + esc(opts[1].th) + '</button></div>';
+    [].forEach.call(st.querySelectorAll(".g-sp-opt"), function (b) {
+      b.onclick = function () {
+        if (!RUN.running) return;
+        if (b.getAttribute("data-ok") === "1") { RUN.good(2000); popFx("+1", true); }
+        else { RUN.bad(3000); popFx("✗", false); try { say(it.w); } catch (e) {} }
+        sprint.next();
+      };
+    });
+  };
+
+  /* ==================== 2) COMBO CHEF (collocations) ==================== */
+  var chef = {};
+  // the first element's part-of-speech, so distractors are same-POS heads.
+  // (colloc tags are inconsistent: clean "verb + noun" AND per-item "economic
+  // (adj) + integration (n)" both appear — bucket by the FIRST part only.)
+  function firstPos(tag) {
+    var first = String(tag || "").toLowerCase().split("+")[0];
+    if (/verb|\(v\)/.test(first)) return "v";
+    if (/adverb|\(adv\)/.test(first)) return "adv";
+    if (/adj|\(adj\)/.test(first)) return "adj";
+    if (/noun|\(n\)/.test(first)) return "n";
+    return "x";
+  }
+  function loadColloc(cb) {
+    if (collocPool) { cb(); return; }
+    fetch("data/colloc.json").then(function (r) { return r.json(); }).then(function (rows) {
+      var byPos = {}, i, entries = [];
+      for (i = 0; i < rows.length; i++) {
+        var w = String(rows[i].w || "").trim();
+        var sp = w.split(" ");
+        if (sp.length < 2) continue;
+        var head = sp[0], rest = sp.slice(1).join(" ");
+        if (!head || !rest) continue;
+        var pos = firstPos(rows[i].p || "");
+        var e = { head: head, rest: rest, full: w, pos: pos, mt: rows[i].mt || "" };
+        entries.push(e);
+        (byPos[pos] = byPos[pos] || []).push(head);
+      }
+      collocPool = { entries: entries, byPos: byPos };
+      cb();
+    }).catch(function () { cb(); });
+  }
+  chef.render = function (v) {
+    v.innerHTML = '<div class="g-load">กำลังโหลดคำที่ใช้คู่กัน…</div>';
+    loadColloc(function () {
+      if (!collocPool || collocPool.entries.length < 8) { v.innerHTML = '<div class="g-load">โหลดข้อมูลไม่สำเร็จ ลองใหม่</div>'; return; }
+      v.innerHTML = shell("g-stage");
+      RUN.begin("chef", 22000, function () { document.getElementById("g-stage").innerHTML = endHtml("chef", "เสิร์ฟสำเร็จ (จาน)"); wireChrome(v); });
+      wireChrome(v);
+      chef.next();
+    });
+  };
+  chef.next = function () {
+    var st = document.getElementById("g-stage"); if (!st) return;
+    var E = collocPool.entries, e = E[randn(E.length)];
+    var samePos = collocPool.byPos[e.pos] || [];
+    var opts = [{ w: e.head, ok: true }], seen = {}; seen[norm(e.head)] = 1;
+    var guard = 0;
+    while (opts.length < 3 && guard++ < 60) {
+      var cand = (samePos.length > 3) ? samePos[randn(samePos.length)] : E[randn(E.length)].head;
+      if (cand && !seen[norm(cand)]) { seen[norm(cand)] = 1; opts.push({ w: cand, ok: false }); }
+    }
+    shuffle(opts);
+    var tiles = "";
+    for (var i = 0; i < opts.length; i++) tiles += '<button class="g-chef-tile" data-ok="' + (opts[i].ok ? 1 : 0) + '">' + esc(opts[i].w) + '</button>';
+    st.innerHTML = '<div class="g-chef-order">🍽️ <b>___ ' + esc(e.rest) + '</b>' + (e.mt ? '<span>' + esc(e.mt) + '</span>' : '') + '</div>' +
+      '<div class="g-sp-hint">เลือกคำที่ใช้คู่กับ “' + esc(e.rest) + '” ให้ถูก</div>' +
+      '<div class="g-chef-tiles">' + tiles + '</div>';
+    [].forEach.call(st.querySelectorAll(".g-chef-tile"), function (b) {
+      b.onclick = function () {
+        if (!RUN.running) return;
+        if (b.getAttribute("data-ok") === "1") { RUN.good(2200); popFx("เสิร์ฟ! +1", true); try { say(e.full); } catch (er) {} chef.next(); }
+        else { RUN.bad(3000); b.className += " g-tile-bad"; popFx("ไหม้! ✗", false); }
+      };
+    });
+  };
+
+  /* ==================== 3) ECHO (listen + spell) ==================== */
+  var echo = {};
+  echo.render = function (v) {
+    var pool = wordPool().filter(function (x) { return String(x.w).length >= 3 && String(x.w).length <= 9 && /^[a-zA-Z]+$/.test(x.w); });
+    if (pool.length < 6) { v.innerHTML = poolWarn(); wirePoolWarn(v); return; }
+    echo.pool = pool;
+    v.innerHTML = shell("g-stage");
+    RUN.begin("echo", 30000, function () { document.getElementById("g-stage").innerHTML = endHtml("echo", "สะกดถูก (คำ)"); wireChrome(v); });
+    wireChrome(v);
+    echo.next();
+  };
+  echo.next = function () {
+    var st = document.getElementById("g-stage"); if (!st) return;
+    var it = echo.pool[randn(echo.pool.length)];
+    echo.word = String(it.w).toLowerCase(); echo.item = it; echo.built = [];
+    var letters = shuffle(echo.word.split(""));
+    var tiles = "";
+    for (var i = 0; i < letters.length; i++) tiles += '<button class="g-echo-tile" data-i="' + i + '" data-ch="' + letters[i] + '">' + esc(letters[i]) + '</button>';
+    st.innerHTML = '<button class="g-echo-play" data-echo-play="1">🔊</button>' +
+      '<div class="g-sp-hint">ฟังเสียง แล้วแตะตัวอักษรเรียงให้ถูก</div>' +
+      '<div class="g-echo-slots" id="g-echo-slots"></div>' +
+      '<div class="g-echo-tiles">' + tiles + '</div>' +
+      '<div class="g-echo-ctl"><button class="g-echo-mini" data-echo-slow="1">🐢 ช้า</button>' +
+      '<button class="g-echo-mini" data-echo-del="1">⌫ ลบ</button></div>';
+    echo.drawSlots();
+    try { say(echo.word); } catch (e) {}
+    st.querySelector("[data-echo-play]").onclick = function () { say(echo.word); };
+    st.querySelector("[data-echo-slow]").onclick = function () { say(echo.word, "slow"); };
+    st.querySelector("[data-echo-del]").onclick = function () { echo.del(); };
+    [].forEach.call(st.querySelectorAll(".g-echo-tile"), function (b) {
+      b.onclick = function () {
+        if (!RUN.running || b.disabled) return;
+        b.disabled = true; b.className += " g-tile-used";
+        echo.built.push({ ch: b.getAttribute("data-ch"), el: b });
+        echo.drawSlots();
+        if (echo.built.length === echo.word.length) echo.check();
+      };
+    });
+  };
+  echo.drawSlots = function () {
+    var box = document.getElementById("g-echo-slots"); if (!box) return;
+    var h = "";
+    for (var i = 0; i < echo.word.length; i++) h += '<span class="g-echo-slot">' + (echo.built[i] ? esc(echo.built[i].ch) : "") + '</span>';
+    box.innerHTML = h;
+  };
+  echo.del = function () {
+    var last = echo.built.pop();
+    if (last && last.el) { last.el.disabled = false; last.el.className = "g-echo-tile"; }
+    echo.drawSlots();
+  };
+  echo.check = function () {
+    var guess = ""; for (var i = 0; i < echo.built.length; i++) guess += echo.built[i].ch;
+    if (guess === echo.word) { RUN.good(2500); popFx("✓ +1", true); echo.next(); }
+    else {
+      RUN.bad(2500);
+      var box = document.getElementById("g-echo-slots"); if (box) { box.className = "g-echo-slots g-shake"; setTimeout(function () { if (box) box.className = "g-echo-slots"; }, 400); }
+      popFx("✗ " + echo.word, false);
+      // reset tiles for another try at the SAME word
+      var st = document.getElementById("g-stage");
+      [].forEach.call(st.querySelectorAll(".g-echo-tile"), function (b) { b.disabled = false; b.className = "g-echo-tile"; });
+      echo.built = []; echo.drawSlots();
+    }
+  };
+
+  /* ==================== 4) VERB LADDER (V1->V2->V3) ==================== */
+  var ladder = {};
+  // a good ladder item: single-word verb whose V2 or V3 actually changes from V1
+  // (skips invariants like put/cut and mis-tagged modals like could/would — a boring rung).
+  function ladderOk(x) {
+    if (!x || !x.vf || !x.vf.v2 || !x.vf.v3) return false;
+    var w = String(x.w || "");
+    if (w.indexOf(" ") >= 0 || w.indexOf("-") >= 0) return false;
+    var lw = norm(w);
+    return norm(x.vf.v2) !== lw || norm(x.vf.v3) !== lw;
+  }
+  function loadLadder(cb) {
+    if (ladderPool) { cb(); return; }
+    var d = (window.S && S.data) || [], out = [], i;
+    for (i = 0; i < d.length; i++) if (ladderOk(d[i])) out.push(d[i]);
+    if (out.length >= 20) { ladderPool = out; cb(); return; }
+    // fallback: a small deck that always has verb forms
+    fetch("data/awl.json").then(function (r) { return r.json(); }).then(function (rows) {
+      var o = [], j; for (j = 0; j < rows.length; j++) if (ladderOk(rows[j])) o.push(rows[j]);
+      ladderPool = o.length ? o : out; cb();
+    }).catch(function () { ladderPool = out; cb(); });
+  }
+  ladder.render = function (v) {
+    v.innerHTML = '<div class="g-load">กำลังเตรียมกริยา…</div>';
+    loadLadder(function () {
+      if (!ladderPool || ladderPool.length < 6) { v.innerHTML = poolWarn(); wirePoolWarn(v); return; }
+      v.innerHTML = shell("g-stage");
+      RUN.begin("ladder", 30000, function () { document.getElementById("g-stage").innerHTML = endHtml("ladder", "ปีนถูก (ขั้น)"); wireChrome(v); });
+      wireChrome(v);
+      ladder.next();
+    });
+  };
+  ladder.next = function () {
+    var st = document.getElementById("g-stage"); if (!st) return;
+    var it = ladderPool[randn(ladderPool.length)];
+    ladder.item = it; ladder.stage = 2; // asking for V2 first, then V3
+    ladder.paint();
+  };
+  ladder.paint = function () {
+    var st = document.getElementById("g-stage"); if (!st) return;
+    var it = ladder.item, want = ladder.stage === 2 ? "V2 (อดีต)" : "V3 (Past Participle)";
+    var ir = it.vf.ir ? '<span class="g-lad-ir">กริยาไม่ปกติ ×2</span>' : "";
+    st.innerHTML = '<div class="g-lad-rung">V1 &nbsp;<b>' + esc(it.w) + '</b> ' + ir + '</div>' +
+      (ladder.stage === 3 ? '<div class="g-lad-rung done">V2 &nbsp;<b>' + esc(it.vf.v2) + '</b> ✓</div>' : '') +
+      '<div class="g-lad-ask">พิมพ์ ' + want + '</div>' +
+      '<div class="g-lad-row"><input id="g-lad-in" class="g-lad-in" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="' + esc(want) + '">' +
+      '<button class="g-lad-go" id="g-lad-go" data-lad-go="1">ปีน ▲</button></div>';
+    var inp = document.getElementById("g-lad-in"); try { inp.focus(); } catch (e) {}
+    function submit() {
+      if (!RUN.running) return;
+      var val = norm(inp.value), target = ladder.stage === 2 ? it.vf.v2 : it.vf.v3;
+      var ok = false, parts = String(target).toLowerCase().split(/[\/,]/);
+      for (var i = 0; i < parts.length; i++) if (norm(parts[i]) === val && val) ok = true;
+      if (ok) {
+        var bonus = it.vf.ir ? 2 : 1;
+        RUN.good(1800 + bonus * 400); if (bonus === 2) { RUN.score++; RUN.hud(); }
+        popFx("▲ +" + bonus, true); try { say(target); } catch (e) {}
+        if (ladder.stage === 2) { ladder.stage = 3; ladder.paint(); } else ladder.next();
+      } else {
+        RUN.bad(2500); popFx("✗ " + target, false); try { say(target); } catch (e) {}
+        if (ladder.stage === 2) { ladder.stage = 3; ladder.paint(); } else ladder.next();
+      }
+    }
+    document.getElementById("g-lad-go").onclick = submit;
+    inp.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.keyCode === 13) submit(); });
+  };
+
+  /* ---------- pool-not-available helper (for deck-dependent games) ---------- */
+  function poolWarn() {
+    return '<div class="g-load">เกมนี้ต้องใช้คลัง<b>คำศัพท์</b> — เปิดจากคลังคำ (เช่น Oxford)<br>' +
+      '<button class="g-btn g-goword" data-g-goword="1">ไปคลัง Oxford</button>' +
+      '<button class="g-back2" data-g-back="1">‹ กลับเมนูเกม</button></div>';
+  }
+  function wirePoolWarn(v) {
+    var g = v.querySelector("[data-g-goword]"); if (g) g.onclick = function () { if (window.loadDeck) loadDeck("oxford"); active = null; started = false; goMode("game"); };
+    var b = v.querySelector("[data-g-back]"); if (b) b.onclick = function () { active = null; started = false; render(v); };
+  }
+
+  /* ---------- hub ---------- */
+  var GAMES = {
+    sprint: { icon: "⚡", th: "สายฟ้าความหมาย", d: "ปัดเลือกความหมายให้ไว 20 วิ", r: sprint.render, color: "var(--accent)" },
+    chef: { icon: "👨‍🍳", th: "คู่หูคำ", d: "จับคำที่ใช้คู่กัน (collocation)", r: chef.render, color: "#e8730a" },
+    echo: { icon: "🔊", th: "เสียงลึกลับ", d: "ฟังเสียงแล้วสะกดคำ", r: echo.render, color: "#0e7490" },
+    ladder: { icon: "🏗️", th: "บันไดกริยา", d: "ปีนโดยพิมพ์ V2 → V3", r: ladder.render, color: "#15803d" }
+  };
+  var GORDER = ["sprint", "chef", "echo", "ladder"];
+
+  function renderHub(v) {
+    var h = ['<div class="g-hub">'];
+    h.push('<div class="g-hub-hero">🎮 เกมคำศัพท์</div>');
+    h.push('<div class="g-hub-sub">เล่นสั้นๆ สนุกๆ ทำสถิติของตัวเองให้ดีขึ้นเรื่อยๆ</div>');
+    h.push('<div class="g-hub-grid">');
+    for (var i = 0; i < GORDER.length; i++) {
+      var id = GORDER[i], g = GAMES[id], b = best(id);
+      h.push('<button class="g-card" data-g="' + id + '" style="--gc:' + g.color + '">' +
+        '<div class="g-card-i">' + g.icon + '</div><div class="g-card-t">' + esc(g.th) + '</div>' +
+        '<div class="g-card-d">' + esc(g.d) + '</div>' +
+        (b ? '<div class="g-card-b">🏆 สถิติ ' + b + '</div>' : '') + '</button>');
+    }
+    h.push('</div></div>');
+    v.innerHTML = h.join("");
+    [].forEach.call(v.querySelectorAll("[data-g]"), function (b) {
+      b.onclick = function () { active = b.getAttribute("data-g"); started = false; startActive(v); };
+    });
+  }
+
+  function startActive(v) {
+    if (!active || !GAMES[active]) { renderHub(v); return; }
+    started = true;
+    GAMES[active].r(v);
+  }
+
+  function render(v) {
+    if (active && GAMES[active]) { if (!started) startActive(v); /* else: game owns its DOM */ }
+    else renderHub(v);
+  }
+
+  return {
+    render: render,
+    open: function () { active = null; started = false; goMode("game"); },
+    leave: function () { RUN.stop(); }
   };
 })();
 

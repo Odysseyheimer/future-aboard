@@ -3584,12 +3584,7 @@
   "et": "แผนนี้ราคาถูก นอกจากนี้ยังประหยัดเวลาได้มาก",
   "tn": "Formal linker for writing; put a comma after \"Furthermore,\" at sentence start.",
   "rq": "Tell me one benefit of your job, and furthermore, another?",
-  "x": "furthermore (adv.)",
-  "vf": {
-   "v2": "furthermore",
-   "v3": "furthermore",
-   "ir": false
-  }
+  "x": "furthermore (adv.)"
  },
  {
   "g": "S6",
@@ -3729,12 +3724,7 @@
   "et": "ข้อมูลไม่ชัดเจน ดังนั้นเราจึงทำการทดสอบซ้ำ",
   "tn": "Formal, like \"therefore\"; use in writing, not casual speech.",
   "rq": "Tell me a work decision and hence what happened next?",
-  "x": "hence (adv.)",
-  "vf": {
-   "v2": "hence",
-   "v3": "hence",
-   "ir": false
-  }
+  "x": "hence (adv.)"
  },
  {
   "g": "S7",
@@ -4775,12 +4765,7 @@
   "et": "ยอดขายในเอเชียเพิ่มขึ้น เช่นกันกำไรในยุโรปก็โตขึ้น",
   "tn": "\"Likewise\" links similar ideas. Not \"likewise as\"; use it alone.",
   "rq": "Tell me two tasks your team does likewise every week?",
-  "x": "likewise (adv.)",
-  "vf": {
-   "v2": "likewise",
-   "v3": "likewise",
-   "ir": false
-  }
+  "x": "likewise (adv.)"
  },
  {
   "g": "S3",
@@ -5241,12 +5226,7 @@
   "et": "งานวิจัยนี้ขนาดเล็ก แม้กระนั้นผลลัพธ์ก็ยังมีประโยชน์",
   "tn": "Formal linker like \"however\"; usually starts a sentence with a comma after.",
   "rq": "Tell me a difficult task you finished nevertheless.",
-  "x": "nevertheless (adv.)",
-  "vf": {
-   "v2": "nevertheless",
-   "v3": "nevertheless",
-   "ir": false
-  }
+  "x": "nevertheless (adv.)"
  },
  {
   "g": "S10",
@@ -5258,12 +5238,7 @@
   "et": "ผลลัพธ์ยังไม่ดี แม้กระนั้นทีมก็ยังพยายามต่อไป",
   "tn": "\"Nonetheless\" = \"nevertheless.\" One word, not \"none the less\" here.",
   "rq": "When did a project fail but nonetheless teach you something?",
-  "x": "nonetheless (adv.)",
-  "vf": {
-   "v2": "nonetheless",
-   "v3": "nonetheless",
-   "ir": false
-  }
+  "x": "nonetheless (adv.)"
  },
  {
   "g": "S9",
@@ -5311,12 +5286,7 @@
   "et": "แม้จะมีความล่าช้า รายงานก็เสร็จตรงเวลา",
   "tn": "Very formal, mostly written. Similar meaning to \"despite.\"",
   "rq": "Tell me a goal you reached notwithstanding many problems?",
-  "x": "notwithstanding (prep., adv.)",
-  "vf": {
-   "v2": "notwithstanding",
-   "v3": "notwithstanding",
-   "ir": false
-  }
+  "x": "notwithstanding (prep., adv.)"
  },
  {
   "g": "S8",
@@ -5509,12 +5479,7 @@
   "et": "โดยรวมแล้ว โครงการบรรลุเป้าหมายส่วนใหญ่",
   "tn": "Use \"overall\" to summarize; often starts a concluding sentence.",
   "rq": "Overall, how was your work performance this year?",
-  "x": "overall (adj., adv.)",
-  "vf": {
-   "v2": "overall",
-   "v3": "overall",
-   "ir": false
-  }
+  "x": "overall (adj., adv.)"
  },
  {
   "g": "S9",
@@ -5543,12 +5508,7 @@
   "et": "นักเรียนหลายคนไปเรียนต่อต่างประเทศเพื่อรับปริญญา",
   "tn": "No preposition: \"go overseas\", not \"go to overseas.\" Already includes the idea of \"to.\"",
   "rq": "Would you like to work overseas one day? Why?",
-  "x": "overseas (adj.) · overseas (adv.)",
-  "vf": {
-   "v2": "overseas",
-   "v3": "overseas",
-   "ir": false
-  }
+  "x": "overseas (adj.) · overseas (adv.)"
  },
  {
   "g": "S10",
@@ -7095,12 +7055,7 @@
   "et": "ผลลัพธ์ค่อนข้างแตกต่างจากการศึกษาครั้งแรกของเรา",
   "tn": "One word, not \"some what.\" Softer than \"very\"; means \"a bit.\"",
   "rq": "What part of your job feels somewhat difficult now?",
-  "x": "somewhat (adv.)",
-  "vf": {
-   "v2": "somewhat",
-   "v3": "somewhat",
-   "ir": false
-  }
+  "x": "somewhat (adv.)"
  },
  {
   "g": "S1",
@@ -7657,12 +7612,7 @@
   "et": "พวกเขาลดต้นทุน ด้วยเหตุนี้จึงเพิ่มกำไรรายปีของบริษัท",
   "tn": "Formal linker, often before an -ing form: \"thereby increasing.\" Common in reports.",
   "rq": "Tell me one change that thereby improved your team's results.",
-  "x": "thereby (adv.)",
-  "vf": {
-   "v2": "thereby",
-   "v3": "thereby",
-   "ir": false
-  }
+  "x": "thereby (adv.)"
  },
  {
   "g": "S7",
@@ -8130,12 +8080,7 @@
   "et": "พวกเขาสร้างระบบที่พนักงานแบ่งปันความคิดกันทางออนไลน์",
   "tn": "Formal. \"Whereby\" = \"by which,\" often after \"system\" or \"process.\"",
   "rq": "Describe a process whereby your team makes decisions?",
-  "x": "whereby (adv.)",
-  "vf": {
-   "v2": "whereby",
-   "v3": "whereby",
-   "ir": false
-  }
+  "x": "whereby (adv.)"
  },
  {
   "g": "S8",
