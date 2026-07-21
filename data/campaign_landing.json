@@ -1,0 +1,127 @@
+{
+  "books": [
+    { "id": "landing", "icon": "🛬", "title_th": "เมืองปลายทาง", "sub_th": "เรื่องราวไปเรียนต่อเมืองนอก — เอาตัวรอดด้วยภาษาอังกฤษ", "locked": false },
+    { "id": "detective", "icon": "🔍", "title_th": "คดีเมืองเล็ก", "sub_th": "นักสืบมือใหม่ ไขปริศนาในเมืองเงียบสงบ", "locked": true },
+    { "id": "fantasy", "icon": "🐉", "title_th": "เควสต์แฟนตาซี", "sub_th": "ผจญภัยล่าปีศาจ เก็บคำเวทมนตร์", "locked": true }
+  ],
+  "landing": {
+    "title_th": "เมืองปลายทาง",
+    "intro_th": "คุณเพิ่งลงจากเครื่องบินในเมืองที่พูดภาษาอังกฤษ กระเป๋าใบเดียว ความฝันเต็มหัวใจ ทุกวันจะมีสถานการณ์จริงรอให้คุณ 'พูดผ่าน' ไปให้ได้ — ตั้งแต่ด่านตรวจคนเข้าเมือง จนถึงวันสัมภาษณ์เข้ามหาวิทยาลัย",
+    "chapters": [
+      {
+        "id": "ch1", "icon": "✈️", "title_th": "สนามบิน",
+        "intro_th": "ล้อแตะรันเวย์ ประตูเครื่องเปิดออก... เมืองใหม่รออยู่ข้างนอก",
+        "stages": [
+          {
+            "id": "ch1_s1", "title_th": "ประกาศต้อนรับ",
+            "beat": { "narrator_th": "เสียงประกาศดังจากลำโพงบนเครื่อง คุณต้องฟังคำศัพท์ให้ทันก่อนเดินออกไป", "npc": { "en": "Welcome. Please have your documents ready.", "th": "ยินดีต้อนรับ กรุณาเตรียมเอกสารให้พร้อม" } },
+            "encounters": [ { "game": "sprint", "label_th": "ฟังศัพท์ให้ทัน", "pass": { "minScore": 5 } } ],
+            "reward": { "xp": 30, "card": { "w": "arrival", "mt": "การมาถึง" }, "story_after_th": "คุณเก็บกระเป๋าถือ เดินตามป้ายไปยังด่านตรวจคนเข้าเมือง" }
+          },
+          {
+            "id": "ch1_s2", "title_th": "ด่านตรวจคนเข้าเมือง",
+            "beat": { "narrator_th": "เจ้าหน้าที่กวักมือเรียกคุณเข้าไป หายใจลึกๆ แล้วตอบให้ถูก", "npc": { "en": "Next, please. What's the purpose of your visit?", "th": "คนต่อไปครับ มาด้วยจุดประสงค์อะไร?" } },
+            "encounters": [ { "game": "dialogue", "label_th": "คุยกับเจ้าหน้าที่", "filter": { "g": "At the Airport" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 45, "card": { "w": "passport", "mt": "หนังสือเดินทาง" }, "story_after_th": "ตราประทับดังปั๊ก! \"Welcome to the country.\" คุณผ่านแล้ว" }
+          },
+          {
+            "id": "ch1_s3", "title_th": "รับกระเป๋า",
+            "beat": { "narrator_th": "สายพานหมุนวน กระเป๋าของคุณอยู่ไหนนะ? ป้ายบอกทางสับสนไปหมด", "npc": { "en": "Baggage claim is on your left.", "th": "จุดรับกระเป๋าอยู่ทางซ้ายของคุณ" } },
+            "encounters": [ { "game": "lineup", "label_th": "เรียงประโยคบอกทาง", "pass": { "minScore": 2 } } ],
+            "reward": { "xp": 30, "card": { "w": "luggage", "mt": "กระเป๋าเดินทาง" }, "story_after_th": "เจอกระเป๋าแล้ว! คุณลากมันมุ่งหน้าสู่ทางออก" }
+          },
+          {
+            "id": "ch1_s4", "title_th": "ฟังประกาศหาทางออก",
+            "beat": { "narrator_th": "เสียงประกาศบอกประตูทางออก แต่มีคำที่หายไป ฟังให้ดีแล้วเติมให้ถูก", "npc": { "en": "Passengers may exit through Gate B.", "th": "ผู้โดยสารออกได้ทางประตู B" } },
+            "encounters": [ { "game": "fillear", "label_th": "ฟังแล้วเติมคำ", "pass": { "minScore": 3 } } ],
+            "reward": { "xp": 30, "card": { "w": "gate", "mt": "ประตูทางออก" }, "story_after_th": "คุณเดินออกมาเจอแดดอุ่นๆ และแถวแท็กซี่ยาวเหยียด" }
+          },
+          {
+            "id": "ch1_s5", "title_th": "เรียกแท็กซี่ออกจากสนามบิน", "boss": true,
+            "beat": { "narrator_th": "ด่านสุดท้ายของบทนี้ — คุยกับคนขับให้รู้เรื่อง แล้วไปให้ถึงที่พัก", "npc": { "en": "Where to, my friend?", "th": "ไปไหนดีเพื่อน?" } },
+            "encounters": [ { "game": "dialogue", "label_th": "คุยกับคนขับแท็กซี่", "filter": { "g": "Taxi & Ride-hailing" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 70, "card": { "w": "terminal", "mt": "อาคารผู้โดยสาร" }, "story_after_th": "รถเคลื่อนออกจากสนามบิน เมืองใหม่ค่อยๆ ปรากฏขึ้นตรงหน้า บทที่ 1 จบแล้ว!" }
+          }
+        ]
+      },
+      {
+        "id": "ch2", "icon": "🚕", "title_th": "หาทางในเมือง",
+        "intro_th": "เมืองนี้ใหญ่กว่าที่คิด ถนนเต็มไปด้วยป้ายที่อ่านไม่ทัน คุณต้องหาทางไปให้เป็น",
+        "stages": [
+          {
+            "id": "ch2_s1", "title_th": "บนแท็กซี่",
+            "beat": { "narrator_th": "คนขับชวนคุยระหว่างทาง ตอบให้ลื่นไหลเข้าไว้", "npc": { "en": "First time in the city?", "th": "มาเมืองนี้ครั้งแรกเหรอ?" } },
+            "encounters": [ { "game": "dialogue", "label_th": "คุยเล่นกับคนขับ", "filter": { "g": "Taxi & Ride-hailing" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 35, "card": { "w": "fare", "mt": "ค่าโดยสาร" }, "story_after_th": "คุณจ่ายค่าโดยสาร ลงรถหน้าย่านที่จะไปเรียน" }
+          },
+          {
+            "id": "ch2_s2", "title_th": "อ่านแผนที่",
+            "beat": { "narrator_th": "คุณกางแผนที่ พยายามต่อประโยคบอกทางในหัวให้ถูกโครง", "npc": { "en": "Go straight, then turn right.", "th": "ตรงไป แล้วเลี้ยวขวา" } },
+            "encounters": [ { "game": "frame", "label_th": "ต่อประโยคตามโครง", "pass": { "minScore": 2 } } ],
+            "reward": { "xp": 35, "card": { "w": "map", "mt": "แผนที่" }, "story_after_th": "พอเข้าใจทางแล้ว คุณเดินต่ออย่างมั่นใจขึ้น" }
+          },
+          {
+            "id": "ch2_s3", "title_th": "ถามทางคนแถวนั้น",
+            "beat": { "narrator_th": "หลงนิดหน่อย ลองถามคนเดินถนนดู อย่ากลัวที่จะพูด", "npc": { "en": "Excuse me, how do I get to the station?", "th": "ขอโทษนะ ไปสถานีรถไฟยังไงเหรอ?" } },
+            "encounters": [ { "game": "dialogue", "label_th": "ถามทาง", "filter": { "g": "Directions" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 40, "card": { "w": "corner", "mt": "มุมถนน / หัวมุม" }, "story_after_th": "\"It's just around the corner.\" คุณขอบคุณแล้วเดินต่อ" }
+          },
+          {
+            "id": "ch2_s4", "title_th": "ขึ้นรถสาธารณะ",
+            "beat": { "narrator_th": "ประกาศบนชานชาลาพูดเร็วมาก ฟังให้ทันแล้วเติมคำที่ขาด", "npc": { "en": "The train to downtown departs from Platform 2.", "th": "รถไฟเข้าเมืองออกจากชานชาลาที่ 2" } },
+            "encounters": [ { "game": "fillear", "label_th": "ฟังประกาศชานชาลา", "pass": { "minScore": 3 } } ],
+            "reward": { "xp": 35, "card": { "w": "platform", "mt": "ชานชาลา" }, "story_after_th": "คุณขึ้นรถทันเวลาพอดี ประตูปิดสนิทข้างหลัง" }
+          },
+          {
+            "id": "ch2_s5", "title_th": "หลงทาง! ถามให้ถึงที่พัก", "boss": true,
+            "beat": { "narrator_th": "ด่านท้ายบท — ลงผิดป้าย! ต้องถามทางให้เป๊ะ และเลือกคำให้ตรงความหมาย", "npc": { "en": "You look lost. Need a hand?", "th": "ดูเหมือนหลงทางนะ ให้ช่วยไหม?" } },
+            "encounters": [
+              { "game": "dialogue", "label_th": "ถามทางกลับ", "filter": { "g": "Directions" }, "pass": { "minScore": 1, "oneScene": true } },
+              { "game": "sameopp", "label_th": "เข้าใจคำใกล้/ตรงข้าม", "pass": { "minScore": 5 } }
+            ],
+            "reward": { "xp": 75, "card": { "w": "route", "mt": "เส้นทาง" }, "story_after_th": "ในที่สุดก็ถึงที่พักชั่วคราว! คุณโล่งอกจนแทบทรุด บทที่ 2 จบแล้ว" }
+          }
+        ]
+      },
+      {
+        "id": "ch3", "icon": "🏨", "title_th": "ที่พักแรก",
+        "intro_th": "มีหลังคาคุ้มหัวแล้ว แต่ยังต้องเช็คอิน จัดการปัญหา และหาที่อยู่ระยะยาว",
+        "stages": [
+          {
+            "id": "ch3_s1", "title_th": "เช็คอินโรงแรม",
+            "beat": { "narrator_th": "พนักงานต้อนรับยิ้มให้ ตอบเรื่องการจองให้ถูก", "npc": { "en": "Do you have a reservation?", "th": "มีการจองไว้ไหมคะ?" } },
+            "encounters": [ { "game": "dialogue", "label_th": "เช็คอิน", "filter": { "g": "At the Hotel" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 40, "card": { "w": "reception", "mt": "แผนกต้อนรับ" }, "story_after_th": "\"Here's your key, room 502.\" คุณรับกุญแจมาแน่นมือ" }
+          },
+          {
+            "id": "ch3_s2", "title_th": "จำรหัส/สิ่งของในห้อง",
+            "beat": { "narrator_th": "จำให้แม่น! จับคู่คำอังกฤษกับความหมายให้ครบก่อนลืม", "npc": { "en": "Try to remember these before you unpack.", "th": "จำสิ่งเหล่านี้ให้ได้ก่อนเก็บของนะ" } },
+            "encounters": [ { "game": "memory", "label_th": "จับคู่ความจำ", "pass": { "minScore": 60 } } ],
+            "reward": { "xp": 40, "card": { "w": "key", "mt": "กุญแจ" }, "story_after_th": "จำได้หมด! คุณล้มตัวลงนอนอย่างมีความสุข" }
+          },
+          {
+            "id": "ch3_s3", "title_th": "ของในห้องมีปัญหา",
+            "beat": { "narrator_th": "เครื่องทำน้ำอุ่นเสีย! ต้องโทรแจ้งแผนกต้อนรับให้เข้าใจ", "npc": { "en": "Front desk, how can I help?", "th": "แผนกต้อนรับค่ะ ให้ช่วยอะไรดีคะ?" } },
+            "encounters": [ { "game": "dialogue", "label_th": "แจ้งปัญหา", "filter": { "g": "Complaints & Returns" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 40, "card": { "w": "broken", "mt": "พัง / เสีย" }, "story_after_th": "\"We'll send someone right away.\" ปัญหาคลี่คลาย" }
+          },
+          {
+            "id": "ch3_s4", "title_th": "หาห้องเช่าระยะยาว",
+            "beat": { "narrator_th": "โรงแรมแพงเกินไป ถึงเวลาหาห้องเช่าจริงจัง คุยกับเจ้าของห้องให้รู้เรื่อง", "npc": { "en": "The rent is 600 a month, deposit included.", "th": "ค่าเช่าเดือนละ 600 รวมเงินมัดจำแล้ว" } },
+            "encounters": [ { "game": "dialogue", "label_th": "คุยเรื่องเช่าห้อง", "filter": { "g": "Renting & Housing" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 45, "card": { "w": "deposit", "mt": "เงินมัดจำ" }, "story_after_th": "ห้องดูดีทีเดียว เหลือแค่ต่อรองราคาให้ลงตัว" }
+          },
+          {
+            "id": "ch3_s5", "title_th": "ต่อรองค่าเช่า", "boss": true,
+            "beat": { "narrator_th": "ด่านจบเล่มแรก — ต่อราคาให้ได้ดีที่สุด กล้าเสี่ยงก็ได้กำไร แต่พลาดเสียหมด!", "npc": { "en": "Make me an offer. But don't push your luck.", "th": "ลองเสนอราคามาสิ แต่อย่าโลภมากล่ะ" } },
+            "encounters": [
+              { "game": "gamble", "label_th": "ต่อราคา (เสี่ยงดวง)", "pass": { "minScore": 3 } },
+              { "game": "dialogue", "label_th": "ปิดดีลเช่าห้อง", "filter": { "g": "Renting & Housing" }, "pass": { "minScore": 1, "oneScene": true } }
+            ],
+            "reward": { "xp": 90, "card": { "w": "lease", "mt": "สัญญาเช่า" }, "story_after_th": "เซ็นสัญญาเรียบร้อย! คุณมีบ้านในเมืองใหม่แล้ว — จบเล่ม 'เมืองปลายทาง' บทเปิดตัว ตอนต่อไป: หางาน 💼 (เร็วๆ นี้)" }
+          }
+        ]
+      }
+    ]
+  }
+}

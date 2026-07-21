@@ -1242,6 +1242,8 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 .ph-wide em { display: block; font-style: normal; font-size: 12px; color: var(--muted); margin-top: 3px; line-height: 1.45; }
 .ph-game { background: var(--accent-soft); border-color: var(--accent); }
 .ph-game em { color: var(--accent-ink); opacity: .85; }
+.ph-camp { background: linear-gradient(135deg, var(--accent-soft), var(--surface)); border-color: var(--accent); }
+.ph-camp .ph-wic { background: var(--accent); color: var(--accent-ink); }
 
 /* structure.css */
 /* structure.css — โครงสร้างประโยค (sentence-structure resource) */
@@ -1619,6 +1621,91 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 .g-lad-go { flex: 0 0 auto; font-family: var(--font); font-size: 15px; font-weight: 800; color: var(--accent-ink);
   background: var(--accent); border: none; border-radius: 12px; padding: 0 18px; cursor: pointer; }
 .g-goword { margin-top: 14px; }
+
+/* campaign.css */
+/* campaign.css — โหมดผจญภัย (PT.campaign). Prefix .cm- */
+.cm-wrap { padding: 6px 2px 20px; }
+.cm-center { text-align: center; padding-top: 20px; }
+.cm-load { text-align: center; color: var(--muted); padding: 48px 16px; font-size: 14px; }
+.cm-hero { font-size: 23px; font-weight: 900; margin: 6px 2px 4px; }
+.cm-hero-sub { font-size: 13px; color: var(--text); margin: 0 2px 18px; line-height: 1.6; }
+
+/* book select */
+.cm-book { display: flex; align-items: center; gap: 14px; width: 100%; text-align: left; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 18px; padding: 16px; margin-bottom: 12px; cursor: pointer;
+  color: var(--text); font-family: var(--font); box-shadow: var(--shadow); }
+.cm-book:active { transform: scale(.99); }
+.cm-book-lock { opacity: .6; }
+.cm-book-ic { flex: 0 0 auto; width: 54px; height: 54px; border-radius: 15px; background: var(--accent-soft); display: grid; place-items: center; font-size: 28px; }
+.cm-book-txt { display: flex; flex-direction: column; gap: 2px; }
+.cm-book-txt b { font-size: 16px; font-weight: 800; }
+.cm-book-txt em { font-style: normal; font-size: 12px; color: var(--muted); line-height: 1.45; }
+.cm-go { font-size: 12px; font-weight: 800; color: var(--accent); margin-top: 4px; }
+.cm-soon { font-size: 11px; font-weight: 800; color: var(--muted); margin-top: 4px; }
+
+/* map header */
+.cm-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.cm-back, .cm-back2 { background: none; border: none; color: var(--accent); font-family: var(--font); font-size: 14px; font-weight: 800; cursor: pointer; padding: 6px 2px; }
+.cm-back2 { display: block; width: 100%; color: var(--muted); font-weight: 700; font-size: 13.5px; padding: 12px; margin-top: 6px; }
+.cm-stats { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 800; }
+.cm-hp { letter-spacing: 1px; color: #e0942f; }
+.cm-xp { color: var(--accent); }
+.cm-title { font-size: 20px; font-weight: 900; margin: 2px 2px 8px; }
+.cm-xpbar { height: 8px; background: var(--surface2); border-radius: 999px; overflow: hidden; margin: 0 2px; }
+.cm-xpfill { height: 100%; background: var(--accent); border-radius: 999px; }
+.cm-xpnote { font-size: 12px; color: var(--muted); margin: 5px 2px 14px; }
+.cm-albtn { font-family: var(--font); font-size: 11px; font-weight: 800; color: var(--accent); background: var(--accent-soft); border: none; border-radius: 999px; padding: 3px 10px; cursor: pointer; margin-left: 4px; }
+
+/* chapters + path of nodes */
+.cm-chap { font-size: 13.5px; font-weight: 800; color: var(--text); margin: 18px 2px 8px; }
+.cm-chap-ic { font-size: 16px; }
+.cm-path { display: flex; flex-direction: column; gap: 8px; padding-left: 8px; border-left: 3px dashed var(--border); margin-left: 8px; }
+.cm-node { display: flex; align-items: center; gap: 11px; text-align: left; width: 100%; background: var(--surface);
+  border: 1.5px solid var(--border); border-radius: 14px; padding: 12px 14px; cursor: pointer; color: var(--text); font-family: var(--font); box-shadow: var(--shadow); }
+.cm-node:active { transform: scale(.98); }
+.cm-node-b { flex: 0 0 auto; min-width: 44px; font-size: 14px; letter-spacing: -1px; }
+.cm-node-t { font-size: 14px; font-weight: 700; line-height: 1.35; }
+.cm-lock { opacity: .5; cursor: default; }
+.cm-lock:active { transform: none; }
+.cm-cur { border-color: var(--accent); border-width: 2px; }
+.cm-cur .cm-node-b { color: var(--accent); font-weight: 900; font-size: 18px; }
+.cm-cur .cm-node-t { font-weight: 900; }
+.cm-done { background: var(--surface2); }
+.cm-boss .cm-node-t { color: var(--accent-ink); }
+.cm-boss.cm-cur { background: var(--accent-soft); }
+.cm-fin { text-align: center; font-size: 13px; font-weight: 800; color: var(--accent); margin: 18px 2px 4px; }
+
+/* stage intro */
+.cm-stage-hd { font-size: 19px; font-weight: 900; margin: 6px 2px 12px; line-height: 1.3; }
+.cm-narr { font-size: 15px; color: var(--text); line-height: 1.7; background: var(--surface2); border-radius: 14px; padding: 14px; margin-bottom: 12px; }
+.cm-npc { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 12px; padding: 12px 14px; margin-bottom: 16px; box-shadow: var(--shadow); }
+.cm-npc-en { font-size: 15px; font-weight: 700; color: var(--text); }
+.cm-npc-th { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+.cm-enc-list { display: flex; flex-direction: column; gap: 7px; margin-bottom: 18px; }
+.cm-enc { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; color: var(--text); }
+.cm-enc-n { flex: 0 0 auto; width: 24px; height: 24px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; font-size: 12px; font-weight: 900; }
+.cm-start { display: block; width: 100%; font-family: var(--font); font-size: 16px; font-weight: 800; color: var(--accent-ink);
+  background: var(--accent); border: none; border-radius: 15px; padding: 15px; cursor: pointer; box-shadow: var(--shadow); }
+.cm-start:active { transform: scale(.98); }
+.cm-nohp { text-align: center; font-size: 13.5px; font-weight: 700; color: #d9534f; background: rgba(217,83,79,.1); border-radius: 12px; padding: 14px; line-height: 1.6; }
+
+/* result / fail / epilogue */
+.cm-res-star { font-size: 34px; letter-spacing: 2px; margin-bottom: 6px; }
+.cm-res-hd { font-size: 22px; font-weight: 900; }
+.cm-res-xp { font-size: 17px; font-weight: 800; color: var(--accent); margin-top: 4px; }
+.cm-res-card { font-size: 14px; color: var(--text); background: var(--surface2); border-radius: 12px; padding: 12px; margin: 14px 0; line-height: 1.6; }
+.cm-res-card b { color: var(--accent); }
+.cm-say { font-family: var(--font); font-size: 13px; background: var(--accent-soft); border: none; border-radius: 999px; padding: 3px 9px; cursor: pointer; }
+.cm-res-story { font-size: 14.5px; color: var(--text); line-height: 1.7; margin: 14px 4px 20px; font-style: italic; }
+.cm-fail-ic, .cm-epi-ic { font-size: 44px; }
+.cm-fail-sub { font-size: 14px; color: var(--muted); margin: 6px 0 18px; letter-spacing: 1px; }
+.cm-epi-note { font-size: 13px; color: var(--muted); margin: 14px 4px 20px; line-height: 1.6; }
+
+/* album */
+.cm-alb { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 12px; }
+.cm-alb-card { text-align: left; background: var(--surface); border: 1px solid var(--border); border-radius: 13px; padding: 13px; cursor: pointer; color: var(--text); font-family: var(--font); box-shadow: var(--shadow); }
+.cm-alb-card b { display: block; font-size: 15px; font-weight: 800; color: var(--accent); }
+.cm-alb-card em { font-style: normal; font-size: 12px; color: var(--muted); }
 
 /* plan.css */
 /* plan.css — "แผนเรียน 540 วัน" section inside Stats */
@@ -3698,7 +3785,8 @@ function render(){applySize();
  if(S.mode!=="wordchoice"&&PT.wordchoice&&PT.wordchoice.leave)PT.wordchoice.leave();
  if(S.mode!=="examprep"&&PT.examprep&&PT.examprep.leave)PT.examprep.leave();
  if(S.mode!=="game"&&PT.game&&PT.game.leave)PT.game.leave();
- var noFilter=(S.mode==="talk"||S.mode==="wordchoice"||S.mode==="examprep"||S.mode==="daily"||S.mode==="todayhub"||S.mode==="prachub"||S.mode==="stats"||S.mode==="structure"||S.mode==="game");
+ if(S.mode!=="campaign"&&PT.campaign&&PT.campaign.leave)PT.campaign.leave();
+ var noFilter=(S.mode==="talk"||S.mode==="wordchoice"||S.mode==="examprep"||S.mode==="daily"||S.mode==="todayhub"||S.mode==="prachub"||S.mode==="stats"||S.mode==="structure"||S.mode==="game"||S.mode==="campaign");
  var fh=document.getElementById("filters");if(fh&&PT.filtersUI&&!noFilter)PT.filtersUI.render(fh);
  if(window.PT&&PT.hub&&PT.hub.syncPill)try{PT.hub.syncPill();}catch(e){}
  var v=document.getElementById("view");if(!v)return;
@@ -3712,12 +3800,13 @@ function render(){applySize();
  else if(S.mode==="examprep"&&PT.examprep)PT.examprep.render(v);
  else if(S.mode==="prachub"&&PT.prachub)PT.prachub.render(v);
  else if(S.mode==="game"&&PT.game)PT.game.render(v);
+ else if(S.mode==="campaign"&&PT.campaign)PT.campaign.render(v);
  else if(S.mode==="structure"&&PT.structure)PT.structure.render(v);
  else if(S.mode==="stats")PT.stats.render(v);
  if(PT.a11y&&PT.a11y.enhance)try{PT.a11y.enhance(document.getElementById("app"));}catch(e){}}
 window.render=render;
 /* --- switch tab programmatically (keeps tabbar highlight in sync) --- */
-function goMode(m){S.mode=m;var par={browse:"browse",cards:"browse",structure:"browse",quiz:"prachub",wordchoice:"prachub",prachub:"prachub",game:"prachub",talk:"examprep",examprep:"examprep",todayhub:"todayhub",daily:"todayhub"}[m]||"";var tb=document.querySelectorAll(".tabbar button");[].forEach.call(tb,function(x){x.className=(x.getAttribute("data-mode")===par?"on":"");});if(m==="cards")S.session=null;render();}
+function goMode(m){S.mode=m;var par={browse:"browse",cards:"browse",structure:"browse",quiz:"prachub",wordchoice:"prachub",prachub:"prachub",game:"prachub",campaign:"prachub",talk:"examprep",examprep:"examprep",todayhub:"todayhub",daily:"todayhub"}[m]||"";var tb=document.querySelectorAll(".tabbar button");[].forEach.call(tb,function(x){x.className=(x.getAttribute("data-mode")===par?"on":"");});if(m==="cards")S.session=null;render();}
 window.goMode=goMode;
 /* --- "วันนี้" (Today) summary panel, shown atop Browse --- */
 PT.today={
@@ -7940,13 +8029,16 @@ PT.prachub = (function () {
       '<em>โครงประโยคอังกฤษ · WH · คำเชื่อม · การแปลงประโยค</em></span></button>');
     h.push('<div class="ph-sec">เล่นสนุก</div>');
     h.push('<button class="ph-wide ph-game" data-ph-game="1"><span class="ph-wic">🎮</span><span><b>เกมคำศัพท์</b>' +
-      '<em>4 เกมเร็วๆ — สายฟ้าความหมาย · คู่หูคำ · เสียงลึกลับ · บันไดกริยา</em></span></button>');
+      '<em>16 เกมเร็วๆ — สายฟ้าความหมาย · จับกลุ่มลับ · เดิมพันคำ · บทสนทนา ฯลฯ</em></span></button>');
+    h.push('<button class="ph-wide ph-camp" data-ph-camp="1"><span class="ph-wic">🗺️</span><span><b>โหมดผจญภัย</b>' +
+      '<em>เกมมีเนื้อเรื่อง เล่นข้ามวัน — เดินทางเป็นด่านๆ เก็บดาว เก็บคำศัพท์</em></span></button>');
     h.push('</div>');
     v.innerHTML = h.join("");
     [].forEach.call(v.querySelectorAll("[data-ph-sub]"), function (b) { b.onclick = function () { go("quiz", b.getAttribute("data-ph-sub")); }; });
     var wc = v.querySelector("[data-ph-wc]"); if (wc) wc.onclick = function () { goMode("wordchoice"); };
     var stb = v.querySelector("[data-ph-struct]"); if (stb) stb.onclick = function () { if (PT.structure) PT.structure.open(); };
     var gm = v.querySelector("[data-ph-game]"); if (gm) gm.onclick = function () { if (PT.game) PT.game.open(); };
+    var cm = v.querySelector("[data-ph-camp]"); if (cm) cm.onclick = function () { if (PT.campaign) PT.campaign.open(); };
     var wk = v.querySelector("[data-ph-weak]"); if (wk) wk.onclick = weak;
   }
   return { render: render };
@@ -8311,6 +8403,8 @@ PT.game = (function () {
   var timer = null;       // the single shared tick timer
   var collocPool = null;  // lazy: chef entries
   var ladderPool = null;  // lazy: verb-form items
+  var CAMP = null;        // campaign sink: when set, a game reports pass/fail instead of drawing its own end
+                          // { threshold, oneScene, filter, onDone(res) } ; set by PT.game.play()
 
   function V() { return document.getElementById("view"); }
   function randn(n) { return Math.floor(Math.random() * n); }
@@ -8350,7 +8444,15 @@ PT.game = (function () {
       '<div class="g-barwrap"><div class="g-bar" id="g-bar" style="width:100%"></div></div>' +
       '<div class="g-stage" id="' + stageId + '"></div></div>';
   }
+  // campaign hook: a game finished — report score/pass back to the campaign instead of the arcade end screen
+  function campReport(gid, score, label) {
+    var c = CAMP; CAMP = null;
+    var passed = score >= (c.threshold || 1);
+    setTimeout(function () { active = null; started = false; if (c.onDone) c.onDone({ gid: gid, score: score, passed: passed }); }, 0);
+    return '<div class="g-load">…</div>';  // instantly replaced when the campaign re-renders #view
+  }
   function endHtml(gid, label) {
+    if (CAMP) return campReport(gid, RUN.score, label);
     return '<div class="g-end"><div class="g-end-i">🏁</div>' +
       '<div class="g-end-s">' + RUN.score + '</div>' +
       '<div class="g-end-l">' + esc(label || "คะแนน") + ' · สถิติสูงสุด ' + best(gid) + (RUN.maxcombo > 2 ? (" · คอมโบสูงสุด x" + RUN.maxcombo) : "") + '</div>' +
@@ -8367,6 +8469,7 @@ PT.game = (function () {
   // end card for games that don't run the RUN timer (score passed in explicitly)
   function endCard(gid, scoreVal, label) {
     setBest(gid, scoreVal);
+    if (CAMP) return campReport(gid, scoreVal, label);
     return '<div class="g-end"><div class="g-end-i">🏁</div>' +
       '<div class="g-end-s">' + scoreVal + '</div>' +
       '<div class="g-end-l">' + esc(label || "คะแนน") + ' · สถิติสูงสุด ' + best(gid) + '</div>' +
@@ -8375,6 +8478,11 @@ PT.game = (function () {
   }
   // wire the persistent back/again buttons within a rendered game
   function wireChrome(v) {
+    if (CAMP) {  // campaign owns the post-encounter UI; ‹ back aborts the encounter
+      var bb = v.querySelector("[data-g-back]");
+      if (bb) bb.onclick = function () { RUN.stop(); var c = CAMP; CAMP = null; active = null; started = false; if (c && c.onDone) c.onDone({ aborted: true }); };
+      return;
+    }
     var b = v.querySelector("[data-g-back]"); if (b) b.onclick = function () { RUN.stop(); active = null; started = false; render(v); };
     var a = v.querySelector("[data-g-again]"); if (a) a.onclick = function () { started = false; startActive(v); };
   }
@@ -9069,8 +9177,19 @@ PT.game = (function () {
   };
   dialogue.hud = function () { var hh = ""; for (var i = 0; i < 3; i++) hh += (i < dialogue.hearts ? "❤️" : "🤍"); return '<span class="g-dd-hearts">' + hh + '</span><span class="g-score">' + dialogue.score + '</span>'; };
   dialogue.load = function () {
-    var c = convPool.all[randn(convPool.all.length)];
-    dialogue.conv = c; dialogue.idx = 0; dialogue.player = "A"; dialogue.log = [];
+    var pool = convPool.all;
+    if (CAMP && CAMP.filter) {  // campaign restricts to on-theme dialogues (best-effort)
+      var f = CAMP.filter, sub = [], i;
+      for (i = 0; i < pool.length; i++) {
+        var c = pool[i];
+        var okG = !f.g || (c.g && String(c.g).toLowerCase().indexOf(String(f.g).toLowerCase()) >= 0);
+        var okL = !f.level || c.level === f.level;
+        if (okG && okL) sub.push(c);
+      }
+      if (sub.length) pool = sub;
+    }
+    var pick = pool[randn(pool.length)];
+    dialogue.conv = pick; dialogue.idx = 0; dialogue.player = "A"; dialogue.log = [];
     dialogue.step();
   };
   dialogue.step = function () {
@@ -9085,6 +9204,7 @@ PT.game = (function () {
     if (dialogue.idx >= t.length) { // scene cleared
       dialogue.score++; popFx("✓ จบฉาก! +1", true);
       var hud = document.getElementById("g-hud"); if (hud) hud.innerHTML = dialogue.hud();
+      if (CAMP) { st.innerHTML = endCard("dialogue", dialogue.score, "จบฉาก"); if (V()) wireChrome(V()); return; }  // campaign: one scene = done
       setTimeout(function () { if (V()) dialogue.load(); }, 500); return;
     }
     var correct = t[dialogue.idx];
@@ -9354,7 +9474,271 @@ PT.game = (function () {
   return {
     render: render,
     open: function () { active = null; started = false; goMode("game"); },
-    leave: function () { RUN.stop(); }
+    leave: function () { RUN.stop(); },
+    // campaign entry: run one existing game as an encounter, report {gid,score,passed} (or {aborted:true}) to cb.
+    // opts = { minScore, oneScene, filter:{g,level} }. Renders into #view (the campaign owns S.mode).
+    play: function (gid, opts, cb) {
+      opts = opts || {};
+      if (!GAMES[gid]) { if (cb) cb({ gid: gid, score: 0, passed: false, missing: true }); return; }
+      CAMP = { threshold: opts.minScore || 1, oneScene: !!opts.oneScene, filter: opts.filter || null, onDone: cb };
+      active = gid; started = false;
+      var v = V(); if (v) startActive(v);
+    }
+  };
+})();
+
+/* ===== module: campaign ===== */
+/* campaign.js — "โหมดผจญภัย" (PT.campaign): a story-driven, multi-session campaign.
+   Book-select → journey map → story beat → encounters (reuse the 16 PT.game games via
+   PT.game.play) → rewards → save. Stamina (⚡) refills per real day so it can't be
+   finished in one sitting. Hidden mode "campaign" (like PT.structure). ES5.
+   Uses S, esc, store, goMode, PT.game.play, PT.srs.dayNum, PT.hub.notify, say. */
+PT.campaign = (function () {
+  "use strict";
+  var DATA = null;        // loaded campaign_landing.json
+  var view = "books";     // books | map | stage | result | fail | epilogue
+  var camp = null;        // persisted state (pt_camp)
+  var stages = [];        // flattened Landing stages (with chapter refs)
+  var curStage = -1;      // index into stages being viewed/played
+  var lastStars = 0;      // stars from the most recent win
+  var HP_MAX = 5;
+
+  function V() { return document.getElementById("view"); }
+  function lvlOf(xp) { return Math.floor(Math.sqrt((xp || 0) / 40)) + 1; }
+
+  /* ---------- state ---------- */
+  function defState() { return { v: 1, book: "landing", cleared: 0, stars: {}, xp: 0, cards: [], hp: HP_MAX, hpDay: 0, finished: false }; }
+  function load() {
+    try { var raw = store.get("pt_camp"); if (raw) { var o = JSON.parse(raw); if (o && o.v) return o; } } catch (e) {}
+    return defState();
+  }
+  function save() { try { store.set("pt_camp", JSON.stringify(camp)); } catch (e) {} }
+  function refillIfNewDay() {
+    var dn = 0; try { dn = PT.srs.dayNum(); } catch (e) {}
+    if (camp.hpDay !== dn) { camp.hp = HP_MAX; camp.hpDay = dn; save(); }
+  }
+  function addCard(card) {
+    if (!card || !card.w) return;
+    for (var i = 0; i < camp.cards.length; i++) if (camp.cards[i].w === card.w) return;
+    camp.cards.push({ w: card.w, mt: card.mt || "" });
+  }
+
+  /* ---------- data ---------- */
+  function fetchData(cb) {
+    if (DATA) { cb(); return; }
+    fetch("data/campaign_landing.json").then(function (r) { return r.json(); }).then(function (j) { DATA = j; flatten(); cb(); }).catch(function () { DATA = null; cb(); });
+  }
+  function flatten() {
+    stages = [];
+    var chs = (DATA && DATA.landing && DATA.landing.chapters) || [], ci, si;
+    for (ci = 0; ci < chs.length; ci++) {
+      var ch = chs[ci];
+      for (si = 0; si < ch.stages.length; si++) {
+        var st = ch.stages[si];
+        stages.push({ st: st, chId: ch.id, chIcon: ch.icon, chTitle: ch.title_th, chIntro: ch.intro_th, first: si === 0 });
+      }
+    }
+  }
+
+  /* ---------- render dispatch ---------- */
+  function render(v) {
+    if (!camp) camp = load();
+    if (!DATA) { v.innerHTML = '<div class="cm-load">กำลังโหลดการเดินทาง…</div>'; fetchData(function () { if (!DATA) { v.innerHTML = '<div class="cm-load">โหลดข้อมูลไม่สำเร็จ ลองใหม่</div>'; return; } refillIfNewDay(); paint(v); }); return; }
+    refillIfNewDay();
+    paint(v);
+  }
+  function paint(v) {
+    if (view === "map") return renderMap(v);
+    if (view === "stage") return renderStage(v);
+    if (view === "result") return renderResult(v);
+    if (view === "fail") return renderFail(v);
+    if (view === "epilogue") return renderEpilogue(v);
+    return renderBooks(v);
+  }
+
+  /* ---------- book select ---------- */
+  function renderBooks(v) {
+    var books = (DATA && DATA.books) || [], h = ['<div class="cm-wrap">'];
+    h.push('<div class="cm-hero">🗺️ โหมดผจญภัย</div>');
+    h.push('<div class="cm-hero-sub">เลือกเรื่องราวที่จะออกเดินทาง — เล่นข้ามวันได้ เก็บดาว เก็บคำศัพท์ ไปให้ถึงตอนจบ</div>');
+    for (var i = 0; i < books.length; i++) {
+      var b = books[i], lock = b.locked;
+      h.push('<button class="cm-book' + (lock ? ' cm-book-lock' : '') + '" data-book="' + esc(b.id) + '" data-lock="' + (lock ? 1 : 0) + '">' +
+        '<span class="cm-book-ic">' + b.icon + '</span>' +
+        '<span class="cm-book-txt"><b>' + esc(b.title_th) + (lock ? ' 🔒' : '') + '</b><em>' + esc(b.sub_th) + '</em>' +
+        (lock ? '<span class="cm-soon">เร็วๆ นี้</span>' : '<span class="cm-go">ออกเดินทาง ›</span>') + '</span></button>');
+    }
+    h.push('</div>');
+    v.innerHTML = h.join("");
+    [].forEach.call(v.querySelectorAll("[data-book]"), function (b) {
+      b.onclick = function () {
+        if (b.getAttribute("data-lock") === "1") { return; }
+        view = "map"; paint(V());
+      };
+    });
+  }
+
+  /* ---------- journey map ---------- */
+  function renderMap(v) {
+    var lvl = lvlOf(camp.xp);
+    var h = ['<div class="cm-wrap">'];
+    h.push('<div class="cm-top"><button class="cm-back" data-cm-books="1">‹ เปลี่ยนเล่ม</button>' +
+      '<div class="cm-stats"><span class="cm-hp">' + hpStr() + '</span><span class="cm-xp">⭐ Lv.' + lvl + '</span></div></div>');
+    h.push('<div class="cm-title">🛬 ' + esc(DATA.landing.title_th) + '</div>');
+    h.push('<div class="cm-xpbar"><div class="cm-xpfill" style="width:' + xpPct(camp.xp) + '%"></div></div>');
+    h.push('<div class="cm-xpnote">XP ' + camp.xp + ' · 📇 การ์ดคำ ' + camp.cards.length + (camp.cards.length ? ' <button class="cm-albtn" data-cm-alb="1">ดู</button>' : '') + '</div>');
+
+    var chs = DATA.landing.chapters, gi = 0;
+    for (var ci = 0; ci < chs.length; ci++) {
+      var ch = chs[ci];
+      h.push('<div class="cm-chap"><span class="cm-chap-ic">' + ch.icon + '</span> บทที่ ' + (ci + 1) + ' · ' + esc(ch.title_th) + '</div>');
+      h.push('<div class="cm-path">');
+      for (var si = 0; si < ch.stages.length; si++) {
+        var st = ch.stages[si], state = gi < camp.cleared ? "done" : (gi === camp.cleared ? "cur" : "lock");
+        var stars = camp.stars[st.id] || 0, boss = st.boss;
+        var badge = state === "done" ? starStr(stars) : (state === "cur" ? "▶" : "🔒");
+        h.push('<button class="cm-node cm-' + state + (boss ? ' cm-boss' : '') + '" data-node="' + gi + '" data-state="' + state + '">' +
+          '<span class="cm-node-b">' + badge + '</span>' +
+          '<span class="cm-node-t">' + (boss ? '👑 ' : '') + esc(st.title_th) + '</span></button>');
+        gi++;
+      }
+      h.push('</div>');
+    }
+    if (camp.finished) h.push('<div class="cm-fin">🎉 จบเล่มเปิดตัวแล้ว! บทต่อไปกำลังมา</div>');
+    h.push('</div>');
+    v.innerHTML = h.join("");
+    v.querySelector("[data-cm-books]").onclick = function () { view = "books"; paint(V()); };
+    var alb = v.querySelector("[data-cm-alb]"); if (alb) alb.onclick = function () { showAlbum(); };
+    [].forEach.call(v.querySelectorAll("[data-node]"), function (b) {
+      b.onclick = function () {
+        var idx = parseInt(b.getAttribute("data-node"), 10), stt = b.getAttribute("data-state");
+        if (stt === "lock") return;
+        curStage = idx; camp._tries = 0; view = "stage"; paint(V());
+      };
+    });
+  }
+  function hpStr() { var s = ""; for (var i = 0; i < HP_MAX; i++) s += (i < camp.hp ? "⚡" : "·"); return s; }
+  function starStr(n) { var s = ""; for (var i = 0; i < 3; i++) s += (i < n ? "⭐" : "☆"); return s; }
+  function xpPct(xp) { var l = lvlOf(xp), base = (l - 1) * (l - 1) * 40, next = l * l * 40; return Math.round((xp - base) / (next - base) * 100); }
+
+  /* ---------- stage intro (story beat) ---------- */
+  function renderStage(v) {
+    var S0 = stages[curStage], st = S0.st, beat = st.beat || {};
+    var h = ['<div class="cm-wrap">'];
+    h.push('<div class="cm-top"><button class="cm-back" data-cm-map="1">‹ แผนที่</button><div class="cm-stats"><span class="cm-hp">' + hpStr() + '</span></div></div>');
+    h.push('<div class="cm-stage-hd">' + (st.boss ? '👑 ' : '') + esc(S0.chIcon) + ' ' + esc(st.title_th) + '</div>');
+    if (beat.narrator_th) h.push('<div class="cm-narr">' + esc(beat.narrator_th) + '</div>');
+    if (beat.npc) h.push('<div class="cm-npc"><div class="cm-npc-en">“' + esc(beat.npc.en) + '”</div><div class="cm-npc-th">' + esc(beat.npc.th) + '</div></div>');
+    // list encounters
+    h.push('<div class="cm-enc-list">');
+    for (var i = 0; i < st.encounters.length; i++) h.push('<div class="cm-enc"><span class="cm-enc-n">' + (i + 1) + '</span>' + esc(st.encounters[i].label_th || st.encounters[i].game) + '</div>');
+    h.push('</div>');
+    if (camp.hp < 1) h.push('<div class="cm-nohp">⚡ พลังงานหมดแล้ว — กลับมาเล่นต่อพรุ่งนี้ พลังงานจะเต็มใหม่</div>');
+    else h.push('<button class="cm-start" data-cm-start="1">▶ เริ่มด่าน (ใช้ 1 ⚡ · ผ่านได้คืน)</button>');
+    h.push('<button class="cm-back2" data-cm-map="1">‹ กลับแผนที่</button>');
+    h.push('</div>');
+    v.innerHTML = h.join("");
+    [].forEach.call(v.querySelectorAll("[data-cm-map]"), function (b) { b.onclick = function () { view = "map"; paint(V()); }; });
+    var sb = v.querySelector("[data-cm-start]"); if (sb) sb.onclick = beginPlay;
+    if (beat.npc) { try { say(beat.npc.en); } catch (e) {} }
+  }
+
+  /* ---------- play the encounters ---------- */
+  function beginPlay() {
+    refillIfNewDay();
+    if (camp.hp < 1) { view = "stage"; paint(V()); return; }
+    camp.hp -= 1; camp._tries = (camp._tries || 0) + 1; save();
+    runEnc(0);
+  }
+  function runEnc(i) {
+    var st = stages[curStage].st;
+    if (i >= st.encounters.length) { stageWin(); return; }
+    var e = st.encounters[i], p = e.pass || {};
+    PT.game.play(e.game, { minScore: p.minScore || 1, oneScene: !!p.oneScene, filter: e.filter || null }, function (res) {
+      if (!res || res.aborted) { view = "stage"; paint(V()); return; }
+      if (res.missing) { runEnc(i + 1); return; }   // unknown game id — skip gracefully
+      if (res.passed) { runEnc(i + 1); }
+      else { stageFail(); }
+    });
+  }
+  function stageWin() {
+    var S0 = stages[curStage], st = S0.st;
+    camp.hp = Math.min(HP_MAX, camp.hp + 1);   // success refunds the stamina
+    var stars = Math.max(1, Math.min(3, 4 - (camp._tries || 1)));
+    lastStars = stars;
+    if (!camp.stars[st.id] || camp.stars[st.id] < stars) camp.stars[st.id] = stars;
+    var firstClear = (curStage === camp.cleared);
+    if (firstClear) {
+      camp.cleared++;
+      camp.xp += (st.reward && st.reward.xp) || 30;
+      if (st.reward) addCard(st.reward.card);
+      if (camp.cleared >= stages.length) camp.finished = true;
+    }
+    save();
+    try { if (PT.hub && PT.hub.notify) PT.hub.notify("game"); } catch (e) {}
+    view = (firstClear && camp.finished) ? "epilogue" : "result";
+    paint(V());
+  }
+  function stageFail() { save(); view = "fail"; paint(V()); }
+
+  /* ---------- result / fail / epilogue ---------- */
+  function renderResult(v) {
+    var st = stages[curStage].st, r = st.reward || {};
+    var h = ['<div class="cm-wrap cm-center">'];
+    h.push('<div class="cm-res-star">' + starStr(lastStars) + '</div>');
+    h.push('<div class="cm-res-hd">ผ่านด่าน!</div>');
+    h.push('<div class="cm-res-xp">+' + ((r.xp) || 0) + ' XP</div>');
+    if (r.card) h.push('<div class="cm-res-card">📇 ได้การ์ดคำใหม่: <b>' + esc(r.card.w) + '</b> — ' + esc(r.card.mt || '') + ' <button class="cm-say" data-say="' + esc(r.card.w) + '">🔊</button></div>');
+    if (r.story_after_th) h.push('<div class="cm-res-story">' + esc(r.story_after_th) + '</div>');
+    h.push('<button class="cm-start" data-cm-next="1">▶ เดินทางต่อ</button>');
+    h.push('</div>');
+    v.innerHTML = h.join("");
+    v.querySelector("[data-cm-next]").onclick = function () { view = "map"; paint(V()); };
+    var sy = v.querySelector("[data-say]"); if (sy) sy.onclick = function () { try { say(sy.getAttribute("data-say")); } catch (e) {} };
+  }
+  function renderFail(v) {
+    var h = ['<div class="cm-wrap cm-center">'];
+    h.push('<div class="cm-fail-ic">💦</div><div class="cm-res-hd">ยังไม่ผ่าน</div>');
+    h.push('<div class="cm-fail-sub">เสียไป 1 ⚡ · เหลือ ' + hpStr() + '</div>');
+    if (camp.hp >= 1) h.push('<button class="cm-start" data-cm-retry="1">🔁 ลองอีกครั้ง (1 ⚡)</button>');
+    else h.push('<div class="cm-nohp">⚡ หมดแล้ว — พักก่อน พรุ่งนี้พลังงานเต็มใหม่</div>');
+    h.push('<button class="cm-back2" data-cm-map="1">‹ กลับแผนที่</button>');
+    h.push('</div>');
+    v.innerHTML = h.join("");
+    var rt = v.querySelector("[data-cm-retry]"); if (rt) rt.onclick = beginPlay;
+    v.querySelector("[data-cm-map]").onclick = function () { view = "map"; paint(V()); };
+  }
+  function renderEpilogue(v) {
+    var st = stages[curStage].st, r = st.reward || {};
+    var h = ['<div class="cm-wrap cm-center">'];
+    h.push('<div class="cm-epi-ic">🎉</div><div class="cm-res-hd">จบเล่มเปิดตัว!</div>');
+    if (r.story_after_th) h.push('<div class="cm-res-story">' + esc(r.story_after_th) + '</div>');
+    h.push('<div class="cm-epi-note">คุณเก็บได้ 📇 ' + camp.cards.length + ' การ์ดคำ · ⭐ Lv.' + lvlOf(camp.xp) + ' · ตอนต่อไปกำลังมา</div>');
+    h.push('<button class="cm-start" data-cm-map="1">▶ กลับแผนที่</button>');
+    h.push('</div>');
+    v.innerHTML = h.join("");
+    v.querySelector("[data-cm-map]").onclick = function () { view = "map"; paint(V()); };
+  }
+
+  /* ---------- word-card album ---------- */
+  function showAlbum() {
+    var v = V(); if (!v) return;
+    var h = ['<div class="cm-wrap">'];
+    h.push('<div class="cm-top"><button class="cm-back" data-cm-map="1">‹ แผนที่</button></div>');
+    h.push('<div class="cm-title">📇 การ์ดคำที่สะสม (' + camp.cards.length + ')</div>');
+    h.push('<div class="cm-alb">');
+    for (var i = 0; i < camp.cards.length; i++) h.push('<button class="cm-alb-card" data-say="' + esc(camp.cards[i].w) + '"><b>' + esc(camp.cards[i].w) + '</b><em>' + esc(camp.cards[i].mt) + '</em></button>');
+    if (!camp.cards.length) h.push('<div class="cm-narr">ยังไม่มีการ์ด — ผ่านด่านเพื่อเก็บสะสม</div>');
+    h.push('</div></div>');
+    v.innerHTML = h.join("");
+    v.querySelector("[data-cm-map]").onclick = function () { view = "map"; paint(V()); };
+    [].forEach.call(v.querySelectorAll("[data-say]"), function (b) { b.onclick = function () { try { say(b.getAttribute("data-say")); } catch (e) {} }; });
+  }
+
+  return {
+    render: render,
+    open: function () { if (!camp) camp = load(); view = (camp && camp.cleared > 0) ? "map" : "books"; goMode("campaign"); },
+    leave: function () { try { PT.game.leave(); } catch (e) {} }
   };
 })();
 

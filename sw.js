@@ -13,7 +13,7 @@
 */
 
 /* eslint-disable no-var */
-var CACHE = "pocket-tutor-v97";
+var CACHE = "pocket-tutor-v98";
 
 // tiny, must-always-work shell — safe to precache atomically
 var SHELL_URLS = [
@@ -31,7 +31,7 @@ var DATA_URLS = [
   "./data/pv.json", "./data/idiom.json", "./data/topic.json", "./data/knowledge.json",
   "./data/sentences.json", "./data/conversations.json", "./data/wordchoice.json",
   "./data/exam.json", "./data/reading.json", "./data/bank.json", "./data/fix.json",
-  "./data/stories.json", "./data/structure.json"
+  "./data/stories.json", "./data/structure.json", "./data/campaign_landing.json"
 ];
 
 // ---- install: precache ONLY the shell (small + reliable). Do NOT skipWaiting
