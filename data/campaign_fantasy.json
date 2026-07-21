@@ -1,0 +1,242 @@
+{
+  "fantasy": {
+    "title_th": "เควสต์แฟนตาซี",
+    "intro_th": "ดินแดนแห่งนี้กำลังจมสู่ค่ำคืนนิรันดร์ จอมมารเงา (Shadow Sorcerer) ขโมยผลึกสุริยะไป แสงอาทิตย์ดับมืด คุณคือ 'จอมเวทแห่งถ้อยคำ' ผู้ฝึกหัด — เวทมนตร์ของคุณคือภาษาอังกฤษ ยิ่งรู้คำมาก พลังยิ่งแกร่ง ออกเดินทางรวบรวมคำเวทเพื่อทวงผลึกสุริยะคืนมา",
+    "chapters": [
+      {
+        "id": "f1", "icon": "🌲", "title_th": "ป่ากระซิบ",
+        "intro_th": "การเดินทางเริ่มต้นในป่าลึกที่ต้นไม้กระซิบเป็นภาษาอังกฤษ — คาถาแรกของคุณรออยู่",
+        "stages": [
+          {
+            "id": "f1_s1", "title_th": "ตื่นในป่า",
+            "beat": { "narrator_th": "คุณตื่นขึ้นใต้ต้นไม้ยักษ์ นกฮูกพูดได้ตัวหนึ่งบินมาเกาะ ทักทายมันสิ", "npc": { "en": "Ah, a new Word Mage! Nice to meet you.", "th": "อ้า จอมเวทแห่งถ้อยคำคนใหม่! ยินดีที่ได้พบ" } },
+            "encounters": [ { "game": "dialogue", "label_th": "ทักทายเพื่อนร่วมทาง", "filter": { "g": "Greetings & Introductions" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 40, "card": { "w": "quest", "mt": "ภารกิจ / การผจญภัย" }, "story_after_th": "นกฮูกยินดีร่วมทางไปกับคุณ การผจญภัยเริ่มขึ้นแล้ว!" }
+          },
+          {
+            "id": "f1_s2", "title_th": "ร่ายมนตร์แรก",
+            "beat": { "narrator_th": "จะร่ายคาถาต้องสะกดคำเวทให้ถูก ฟังเสียงมนตร์แล้วเรียงตัวอักษร", "npc": { "en": "To cast a spell, spell it right!", "th": "จะร่ายคาถา ต้องสะกดให้ถูก!" } },
+            "encounters": [ { "game": "echo", "label_th": "ร่ายคาถา (ฟัง+สะกด)", "pass": { "minScore": 3 } } ],
+            "reward": { "xp": 40, "card": { "w": "spell", "mt": "คาถา / เวทมนตร์" }, "story_after_th": "แสงสีฟ้าพวยพุ่งจากปลายนิ้ว! คุณร่ายคาถาแรกได้สำเร็จ" }
+          },
+          {
+            "id": "f1_s3", "title_th": "จับคู่รูนโบราณ",
+            "beat": { "narrator_th": "หินสลักอักษรรูนกระจายอยู่ทั่วป่า จับคู่รูนกับความหมายให้ครบ", "npc": { "en": "Match the runes to unlock their power.", "th": "จับคู่อักษรรูนเพื่อปลดปล่อยพลัง" } },
+            "encounters": [ { "game": "memory", "label_th": "จับคู่รูน", "pass": { "minScore": 60 } } ],
+            "reward": { "xp": 40, "card": { "w": "rune", "mt": "อักษรรูน" }, "story_after_th": "อักษรรูนเรืองแสง เผยทางเดินที่ซ่อนอยู่" }
+          },
+          {
+            "id": "f1_s4", "title_th": "ฟังคำพยากรณ์",
+            "beat": { "narrator_th": "เสียงพยากรณ์ดังจากสายลม ฟังให้ดีแล้วเติมคำที่หายไป", "npc": { "en": "The prophecy speaks of a hero of words.", "th": "คำพยากรณ์กล่าวถึงวีรบุรุษแห่งถ้อยคำ" } },
+            "encounters": [ { "game": "fillear", "label_th": "ฟังคำพยากรณ์", "pass": { "minScore": 3 } } ],
+            "reward": { "xp": 40, "card": { "w": "prophecy", "mt": "คำพยากรณ์" }, "story_after_th": "คำพยากรณ์ชี้ทาง: ผลึกสุริยะถูกซ่อนเลยภูเขาเสียงสะท้อน" }
+          },
+          {
+            "id": "f1_s5", "title_th": "ปีศาจเฝ้าป่า", "boss": true,
+            "beat": { "narrator_th": "ด่านจบบท — ปีศาจเฝ้าป่าขวางทาง! คิดเวทให้ไวและร่ายคาถาให้แม่น", "npc": { "en": "None shall pass without a spell!", "th": "ไม่มีใครผ่านไปได้หากไร้คาถา!" } },
+            "encounters": [
+              { "game": "tower", "label_th": "สู้ปีศาจ (คิดเร็ว)", "pass": { "minScore": 4 } },
+              { "game": "echo", "label_th": "ร่ายคาถาปิดท้าย", "pass": { "minScore": 3 } }
+            ],
+            "reward": { "xp": 75, "card": { "w": "guardian", "mt": "ผู้พิทักษ์" }, "story_after_th": "ปีศาจสลายเป็นแสง! คุณผ่านป่ากระซิบไปได้ บทที่ 1 จบ" }
+          }
+        ]
+      },
+      {
+        "id": "f2", "icon": "🏔️", "title_th": "ภูเขาเสียงสะท้อน",
+        "intro_th": "ภูเขาสูงเสียดฟ้าที่ทุกเสียงสะท้อนกลับเป็นคาถา ระวังยักษ์หินที่หลับใหลอยู่",
+        "stages": [
+          {
+            "id": "f2_s1", "title_th": "ไต่เขา",
+            "beat": { "narrator_th": "ไกด์ภูเขาบอกทางเป็นภาษาอังกฤษ ฟังและตอบให้ถูกทาง", "npc": { "en": "Take the left path, then climb north.", "th": "ไปทางซ้าย แล้วปีนขึ้นเหนือ" } },
+            "encounters": [ { "game": "dialogue", "label_th": "ถามทางไกด์ภูเขา", "filter": { "g": "Directions" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 45, "card": { "w": "path", "mt": "เส้นทาง" }, "story_after_th": "คุณไต่ขึ้นสูงเรื่อยๆ จนเมฆอยู่ใต้เท้า" }
+          },
+          {
+            "id": "f2_s2", "title_th": "เรียงคาถา",
+            "beat": { "narrator_th": "คาถาพลังสูงต้องเรียงคำให้ถูกลำดับ ไม่งั้นเวทจะแตก", "npc": { "en": "The words must be in the right order.", "th": "ถ้อยคำต้องเรียงให้ถูกลำดับ" } },
+            "encounters": [ { "game": "lineup", "label_th": "เรียงบทคาถา", "pass": { "minScore": 2 } } ],
+            "reward": { "xp": 45, "card": { "w": "chant", "mt": "บทร่ายมนตร์" }, "story_after_th": "เสียงคาถาก้องสะท้อนทั่วหุบเขา พลังไหลเวียนในกาย" }
+          },
+          {
+            "id": "f2_s3", "title_th": "เลือกคำเวทให้แม่น",
+            "beat": { "narrator_th": "คำเวทที่ใกล้เคียงกันให้ผลต่างกันมาก เลือกคำที่ตรงและทรงพลังที่สุด", "npc": { "en": "Choose the exact word, or the spell fails.", "th": "เลือกคำที่ตรงเป๊ะ ไม่งั้นคาถาล้มเหลว" } },
+            "encounters": [ { "game": "sharper", "label_th": "เลือกคำเวทที่คมกว่า", "pass": { "minScore": 3 } } ],
+            "reward": { "xp": 45, "card": { "w": "precise", "mt": "แม่นยำ / เที่ยงตรง" }, "story_after_th": "เวทของคุณแม่นยำขึ้น พลังไม่รั่วไหลอีกต่อไป" }
+          },
+          {
+            "id": "f2_s4", "title_th": "ผสมยาวิเศษ",
+            "beat": { "narrator_th": "ปรุงยาต้องจับคู่ส่วนผสมให้เข้ากัน จับคู่คำให้ถูก", "npc": { "en": "A good potion needs the right pairing.", "th": "ยาดีต้องจับคู่ส่วนผสมให้ถูก" } },
+            "encounters": [ { "game": "chef", "label_th": "ผสมยา (จับคู่คำ)", "pass": { "minScore": 4 } } ],
+            "reward": { "xp": 45, "card": { "w": "potion", "mt": "ยาวิเศษ / น้ำยา" }, "story_after_th": "ยาวิเศษเดือดปุดๆ เป็นสีรุ้ง ดื่มแล้วพลังฟื้นเต็ม" }
+          },
+          {
+            "id": "f2_s5", "title_th": "ยักษ์หินตื่น", "boss": true,
+            "beat": { "narrator_th": "ด่านจบบท — ยักษ์หินตื่นขึ้น! คิดเวทให้ไวและแยกคาถาแสง/เงาให้ถูก", "npc": { "en": "WHO DARES WAKE ME?", "th": "ใครกล้าปลุกข้า?" } },
+            "encounters": [
+              { "game": "tower", "label_th": "สู้ยักษ์หิน", "pass": { "minScore": 4 } },
+              { "game": "sameopp", "label_th": "แยกแสง/เงา", "pass": { "minScore": 5 } }
+            ],
+            "reward": { "xp": 80, "card": { "w": "giant", "mt": "ยักษ์" }, "story_after_th": "ยักษ์หินพังทลายเป็นกรวด! เลยภูเขาไปคือปราสาทร้าง บทที่ 2 จบ" }
+          }
+        ]
+      },
+      {
+        "id": "f3", "icon": "🏰", "title_th": "ปราสาทร้าง",
+        "intro_th": "ปราสาทเก่าที่เต็มไปด้วยปริศนาและวิญญาณอัศวิน คำเวทป้องกันซ่อนอยู่ที่นี่",
+        "stages": [
+          {
+            "id": "f3_s1", "title_th": "เข้าปราสาท",
+            "beat": { "narrator_th": "วิญญาณผู้ดูแลปราสาทเสนอตัวช่วย แต่คุณต้องขอความช่วยเหลือให้ถูก", "npc": { "en": "Lost, traveler? I might help you.", "th": "หลงทางหรือ นักเดินทาง? ข้าอาจช่วยได้" } },
+            "encounters": [ { "game": "dialogue", "label_th": "ขอความช่วยเหลือ", "filter": { "g": "Asking for Help" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 45, "card": { "w": "gate", "mt": "ประตู / ด่าน" }, "story_after_th": "ประตูปราสาทเปิดออกเอง เสียงเอี๊ยดอ๊าดดังก้อง" }
+          },
+          {
+            "id": "f3_s2", "title_th": "ไขปริศนาประตู",
+            "beat": { "narrator_th": "ประตูวิเศษมีปริศนา จัดกลุ่มสัญลักษณ์ให้ถูกเพื่อไข", "npc": { "en": "Sort the symbols to break the seal.", "th": "จัดกลุ่มสัญลักษณ์เพื่อทำลายผนึก" } },
+            "encounters": [ { "game": "groups", "label_th": "จัดกลุ่มสัญลักษณ์", "pass": { "minScore": 20 } } ],
+            "reward": { "xp": 45, "card": { "w": "puzzle", "mt": "ปริศนา" }, "story_after_th": "ผนึกแตกออก! ทางลับสู่ห้องสมบัติเผยตัว" }
+          },
+          {
+            "id": "f3_s3", "title_th": "สร้างคาถาป้องกัน",
+            "beat": { "narrator_th": "คาถาโล่ต้องสร้างตามโครงที่ถูกต้อง ต่อคำให้เป็นคาถาสมบูรณ์", "npc": { "en": "Build the shield spell, structure first.", "th": "สร้างคาถาโล่ เริ่มจากโครงสร้าง" } },
+            "encounters": [ { "game": "frame", "label_th": "สร้างคาถาโล่", "pass": { "minScore": 2 } } ],
+            "reward": { "xp": 45, "card": { "w": "shield", "mt": "โล่ / เกราะป้องกัน" }, "story_after_th": "โล่แสงห่อหุ้มตัวคุณ ป้องกันเวทมืดได้แล้ว" }
+          },
+          {
+            "id": "f3_s4", "title_th": "เรียงพลังเวท",
+            "beat": { "narrator_th": "คาถาแต่ละบทมีพลังต่างกัน เรียงจากอ่อนไปแรงให้ถูก", "npc": { "en": "Rank the spells from weakest to strongest.", "th": "เรียงคาถาจากอ่อนสุดไปแรงสุด" } },
+            "encounters": [ { "game": "worddial", "label_th": "เรียงพลังเวท", "pass": { "minScore": 2 } } ],
+            "reward": { "xp": 45, "card": { "w": "power", "mt": "พลัง / อำนาจ" }, "story_after_th": "คุณเข้าใจลำดับพลังของคาถาอย่างถ่องแท้" }
+          },
+          {
+            "id": "f3_s5", "title_th": "อัศวินผี", "boss": true,
+            "beat": { "narrator_th": "ด่านจบบท — อัศวินผีปรากฏตัว! สู้ให้ไวและตอบให้ทันดาบเงา", "npc": { "en": "Prove your worth, Word Mage!", "th": "พิสูจน์ค่าตัวเจ้าสิ จอมเวทแห่งถ้อยคำ!" } },
+            "encounters": [
+              { "game": "tower", "label_th": "ประดาบกับอัศวินผี", "pass": { "minScore": 4 } },
+              { "game": "sprint", "label_th": "ตอบให้ไว", "pass": { "minScore": 6 } }
+            ],
+            "reward": { "xp": 85, "card": { "w": "knight", "mt": "อัศวิน" }, "story_after_th": "อัศวินผีคำนับแล้วสลายไป มอบดาบวิเศษให้คุณ บทที่ 3 จบ" }
+          }
+        ]
+      },
+      {
+        "id": "f4", "icon": "🐉", "title_th": "ถ้ำมังกร",
+        "intro_th": "ถ้ำลึกที่มังกรโบราณเฝ้าสมบัติและความลับ — ระวัง เปลวไฟของมันร้อนแรงนัก",
+        "stages": [
+          {
+            "id": "f4_s1", "title_th": "พบมังกร",
+            "beat": { "narrator_th": "มังกรไม่ได้อยากสู้เสมอไป ลองพูดคุยดีๆ ก่อน", "npc": { "en": "A visitor? It's been ages. Let's chat.", "th": "แขกหรือ? นานแล้วนะ มาคุยกันหน่อย" } },
+            "encounters": [ { "game": "dialogue", "label_th": "เจรจากับมังกร", "filter": { "g": "Small Talk" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 50, "card": { "w": "dragon", "mt": "มังกร" }, "story_after_th": "มังกรพอใจในมารยาทของคุณ ยอมให้เข้าถ้ำ" }
+          },
+          {
+            "id": "f4_s2", "title_th": "เสี่ยงหีบสมบัติ",
+            "beat": { "narrator_th": "หีบสมบัติเรียงราย บางหีบมีกับดัก เดิมพันให้คุ้ม เก็บหรือเสี่ยงต่อ", "npc": { "en": "Some chests are traps. Choose wisely.", "th": "บางหีบเป็นกับดัก เลือกให้ดี" } },
+            "encounters": [ { "game": "gamble", "label_th": "เสี่ยงเปิดหีบ", "pass": { "minScore": 3 } } ],
+            "reward": { "xp": 50, "card": { "w": "treasure", "mt": "สมบัติ / ขุมทรัพย์" }, "story_after_th": "คุณได้ทองและคาถาโบราณเต็มถุง!" }
+          },
+          {
+            "id": "f4_s3", "title_th": "เติมคำโบราณ",
+            "beat": { "narrator_th": "ผนังถ้ำสลักสำนวนโบราณ เติมคำที่หายไปให้ถูก", "npc": { "en": "Ancient sayings hold ancient power.", "th": "สำนวนโบราณซ่อนพลังโบราณ" } },
+            "encounters": [ { "game": "idiomfill", "label_th": "เติมสำนวนโบราณ", "pass": { "minScore": 3 } } ],
+            "reward": { "xp": 50, "card": { "w": "ancient", "mt": "โบราณ / เก่าแก่" }, "story_after_th": "สำนวนโบราณเรืองแสง มอบพลังลึกลับให้คุณ" }
+          },
+          {
+            "id": "f4_s4", "title_th": "ฟันฟาดให้ไว",
+            "beat": { "narrator_th": "ค้างคาวยักษ์รุมล้อม! ใช้ดาบวิเศษ ตอบให้ไวเพื่อฟันฝ่า", "npc": { "en": "Swing fast, hero! They're coming!", "th": "ฟันให้ไว วีรบุรุษ! พวกมันมาแล้ว!" } },
+            "encounters": [ { "game": "sprint", "label_th": "ฟันฟาดให้ไว", "pass": { "minScore": 6 } } ],
+            "reward": { "xp": 50, "card": { "w": "sword", "mt": "ดาบ" }, "story_after_th": "คุณฟันฝ่าฝูงค้างคาวไปได้อย่างเฉียบขาด" }
+          },
+          {
+            "id": "f4_s5", "title_th": "มังกรไฟตื่นโกรธ", "boss": true,
+            "beat": { "narrator_th": "ด่านจบบท — จอมมารสั่งให้มังกรไฟโจมตี! เอาชีวิตรอดและร่ายคาถาให้แม่น", "npc": { "en": "The Shadow Sorcerer commands me. Burn!", "th": "จอมมารเงาสั่งข้า มอดไหม้ซะ!" } },
+            "encounters": [
+              { "game": "tower", "label_th": "รอดจากเปลวไฟ", "pass": { "minScore": 5 } },
+              { "game": "echo", "label_th": "ร่ายคาถาน้ำ", "pass": { "minScore": 4 } }
+            ],
+            "reward": { "xp": 90, "card": { "w": "flame", "mt": "เปลวไฟ" }, "story_after_th": "คาถาน้ำดับเปลวไฟ! มังกรสงบลงและชี้ทางสู่ดินแดนไฟ บทที่ 4 จบ" }
+          }
+        ]
+      },
+      {
+        "id": "f5", "icon": "🌋", "title_th": "ดินแดนไฟ",
+        "intro_th": "ดินแดนสุดท้ายก่อนถึงจอมมาร ลาวาเดือดพล่านและทหารเงาเฝ้าอยู่ทุกหนแห่ง",
+        "stages": [
+          {
+            "id": "f5_s1", "title_th": "ข้ามสะพานลาวา",
+            "beat": { "narrator_th": "สะพานหินพังเป็นท่อนๆ เรียงคำให้เป็นคาถาสร้างสะพาน", "npc": { "en": "Speak the words to form the bridge.", "th": "เอ่ยถ้อยคำเพื่อสร้างสะพาน" } },
+            "encounters": [ { "game": "lineup", "label_th": "เรียงคาถาสร้างสะพาน", "pass": { "minScore": 2 } } ],
+            "reward": { "xp": 55, "card": { "w": "bridge", "mt": "สะพาน" }, "story_after_th": "สะพานแสงทอดข้ามลาวา คุณก้าวข้ามไปอย่างระมัดระวัง" }
+          },
+          {
+            "id": "f5_s2", "title_th": "ร่ายมนตร์ระดับสูง",
+            "beat": { "narrator_th": "คาถาระดับปรมาจารย์ยาวและยาก ฟังให้ดีแล้วสะกดให้ครบ", "npc": { "en": "Master-level magic. Spell every letter.", "th": "เวทระดับปรมาจารย์ สะกดให้ครบทุกตัว" } },
+            "encounters": [ { "game": "echo", "label_th": "ร่ายมนตร์ชั้นสูง", "pass": { "minScore": 4 } } ],
+            "reward": { "xp": 55, "card": { "w": "master", "mt": "ปรมาจารย์ / ระดับเซียน" }, "story_after_th": "คุณร่ายคาถาชั้นสูงได้! พลังของคุณแกร่งขึ้นมาก" }
+          },
+          {
+            "id": "f5_s3", "title_th": "จับคู่คาถาไฟ",
+            "beat": { "narrator_th": "คาถาไฟต้องจับคู่ให้ครบก่อนพลังจะสลาย จำให้แม่น", "npc": { "en": "Pair the fire runes before they fade.", "th": "จับคู่รูนไฟก่อนมันจางหาย" } },
+            "encounters": [ { "game": "memory", "label_th": "จับคู่คาถาไฟ", "pass": { "minScore": 70 } } ],
+            "reward": { "xp": 55, "card": { "w": "fire", "mt": "ไฟ / อัคคี" }, "story_after_th": "คาถาไฟรวมพลังเป็นลูกไฟมหึมาในมือคุณ" }
+          },
+          {
+            "id": "f5_s4", "title_th": "แยกแสงกับเงา",
+            "beat": { "narrator_th": "เวทมืดปะปนกับเวทแสง แยกคำที่ตรงข้ามให้ออกก่อนถูกกลืน", "npc": { "en": "Separate light from shadow — quickly!", "th": "แยกแสงออกจากเงา — เร็ว!" } },
+            "encounters": [ { "game": "sameopp", "label_th": "แยกแสง/เงา", "pass": { "minScore": 6 } } ],
+            "reward": { "xp": 55, "card": { "w": "shadow", "mt": "เงา / ความมืด" }, "story_after_th": "คุณแยกเวทมืดออกได้หมด พลังเงาอ่อนลง" }
+          },
+          {
+            "id": "f5_s5", "title_th": "ทัพทหารเงา", "boss": true,
+            "beat": { "narrator_th": "ด่านจบบท — กองทัพเงาบุกเข้ามา! เอาชีวิตรอดและเลือกคำเวทให้เฉียบคม", "npc": { "en": "The shadow army marches! Hold the line!", "th": "กองทัพเงาบุกแล้ว! ตั้งรับไว้!" } },
+            "encounters": [
+              { "game": "tower", "label_th": "ต้านทัพเงา", "pass": { "minScore": 5 } },
+              { "game": "sharper", "label_th": "เลือกคำเวทที่คม", "pass": { "minScore": 4 } }
+            ],
+            "reward": { "xp": 95, "card": { "w": "army", "mt": "กองทัพ" }, "story_after_th": "ทัพเงาแตกพ่าย! ประตูปราสาทจอมมารเปิดออกตรงหน้า บทที่ 5 จบ" }
+          }
+        ]
+      },
+      {
+        "id": "f6", "icon": "⚔️", "title_th": "ศึกครั้งสุดท้าย",
+        "intro_th": "จอมมารเงายืนรอบนบัลลังก์มืด ผลึกสุริยะเรืองแสงอยู่เบื้องหลัง — ศึกตัดสินชะตาดินแดนเริ่มขึ้นแล้ว",
+        "stages": [
+          {
+            "id": "f6_s1", "title_th": "รวบรวมพลัง",
+            "beat": { "narrator_th": "ก่อนศึกใหญ่ ต้องรวบรวมคาถาทั้งหมดที่เก็บมา จำให้ขึ้นใจ", "npc": { "en": "Gather all you've learned. This is it.", "th": "รวบรวมทุกสิ่งที่เจ้าเรียนมา ถึงเวลาแล้ว" } },
+            "encounters": [ { "game": "memory", "label_th": "รวบรวมคาถา", "pass": { "minScore": 70 } } ],
+            "reward": { "xp": 55, "card": { "w": "courage", "mt": "ความกล้าหาญ" }, "story_after_th": "คาถาทุกบทพร้อมสรรพในใจ ความกล้าเต็มเปี่ยม" }
+          },
+          {
+            "id": "f6_s2", "title_th": "เรียงคาถาสุดยอด",
+            "beat": { "narrator_th": "คาถาสูงสุดต้องต่อโครงให้เป๊ะทุกคำ ผิดคำเดียวพลังสลาย", "npc": { "en": "The ultimate spell — build it perfectly.", "th": "คาถาสูงสุด — สร้างให้สมบูรณ์แบบ" } },
+            "encounters": [ { "game": "frame", "label_th": "สร้างคาถาสูงสุด", "pass": { "minScore": 2 } } ],
+            "reward": { "xp": 55, "card": { "w": "ultimate", "mt": "ขั้นสูงสุด / ที่สุด" }, "story_after_th": "คาถาสูงสุดก่อตัวเป็นแสงทองเจิดจ้าในมือคุณ" }
+          },
+          {
+            "id": "f6_s3", "title_th": "เลือกคำเวทให้เฉียบ",
+            "beat": { "narrator_th": "ในศึกตัดสิน ทุกคำต้องเฉียบคม เลือกคำที่ทรงพลังและตรงที่สุด", "npc": { "en": "Focus. Every word must strike true.", "th": "มีสมาธิ ทุกคำต้องแม่นยำ" } },
+            "encounters": [ { "game": "sharper", "label_th": "เลือกคำเวทที่คมกว่า", "pass": { "minScore": 4 } } ],
+            "reward": { "xp": 55, "card": { "w": "focus", "mt": "สมาธิ / จดจ่อ" }, "story_after_th": "จิตใจคุณนิ่งสงบ ทุกคาถาพุ่งตรงเป้า" }
+          },
+          {
+            "id": "f6_s4", "title_th": "หักคาถาศัตรู",
+            "beat": { "narrator_th": "จอมมารร่ายเวทมืดใส่! หาคำที่ตรงข้ามเพื่อหักล้างทุกคาถา", "npc": { "en": "Your magic is nothing! — We'll see about that.", "th": "เวทของเจ้าไร้ค่า! — เดี๋ยวก็รู้" } },
+            "encounters": [ { "game": "sameopp", "label_th": "หักคาถามืด", "pass": { "minScore": 6 } } ],
+            "reward": { "xp": 60, "card": { "w": "counter", "mt": "ตอบโต้ / สวนกลับ" }, "story_after_th": "ทุกคาถามืดถูกหักล้าง! จอมมารเริ่มเสียหลัก" }
+          },
+          {
+            "id": "f6_s5", "title_th": "ปะทะจอมมารเงา", "boss": true,
+            "beat": { "narrator_th": "ด่านสุดท้าย! ปล่อยคาถาสูงสุดใส่จอมมาร — รวมทุกทักษะที่ฝึกมา ร่ายให้แม่นและเอาชีวิตรอดให้ได้!", "npc": { "en": "This ends now, Word Mage!", "th": "จบกันเดี๋ยวนี้ จอมเวทแห่งถ้อยคำ!" } },
+            "encounters": [
+              { "game": "echo", "label_th": "ร่ายคาถาสูงสุด", "pass": { "minScore": 4 } },
+              { "game": "tower", "label_th": "ปะทะครั้งสุดท้าย", "pass": { "minScore": 5 } }
+            ],
+            "reward": { "xp": 160, "card": { "w": "victory", "mt": "ชัยชนะ" }, "story_after_th": "แสงทองพุ่งชนเวทมืด — จอมมารเงากรีดร้องแล้วสลายเป็นผงธุลี! ผลึกสุริยะลอยกลับสู่ท้องฟ้า อรุณรุ่งสาดส่องดินแดนอีกครั้ง ☀️ จากจอมเวทฝึกหัด สู่วีรบุรุษผู้กอบกู้แสงสว่าง — จบเควสต์ 'แฟนตาซี'! คุณพิสูจน์แล้วว่า ยิ่งรู้คำมาก พลังยิ่งไร้ขีดจำกัด 🌟" }
+          }
+        ]
+      }
+    ]
+  }
+}

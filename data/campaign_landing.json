@@ -2,7 +2,7 @@
   "books": [
     { "id": "landing", "icon": "🛬", "title_th": "เมืองปลายทาง", "sub_th": "เรื่องราวไปเรียนต่อเมืองนอก — เอาตัวรอดด้วยภาษาอังกฤษ", "locked": false },
     { "id": "detective", "icon": "🔍", "title_th": "คดีเมืองเล็ก", "sub_th": "นักสืบมือใหม่ ไขคดีนาฬิกาโบราณหาย", "locked": false },
-    { "id": "fantasy", "icon": "🐉", "title_th": "เควสต์แฟนตาซี", "sub_th": "ผจญภัยล่าปีศาจ เก็บคำเวทมนตร์", "locked": true }
+    { "id": "fantasy", "icon": "🐉", "title_th": "เควสต์แฟนตาซี", "sub_th": "จอมเวทแห่งถ้อยคำ กอบกู้ดินแดนจากจอมมารเงา", "locked": false }
   ],
   "landing": {
     "title_th": "เมืองปลายทาง",
