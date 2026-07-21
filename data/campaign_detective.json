@@ -1,0 +1,242 @@
+{
+  "detective": {
+    "title_th": "คดีเมืองเล็ก",
+    "intro_th": "คุณคือนักสืบมือใหม่ที่เพิ่งย้ายมาประจำเมืองเล็กเงียบสงบ คืนหนึ่ง นาฬิกาโบราณล้ำค่าประจำพิพิธภัณฑ์เมืองหายไปอย่างไร้ร่องรอย ไม่มีร่องรอยงัดแงะ ไม่มีสัญญาณเตือนภัย ทุกคนเป็นผู้ต้องสงสัยได้หมด ถึงเวลาไขคดีด้วยภาษาอังกฤษ",
+    "chapters": [
+      {
+        "id": "d1", "icon": "🔦", "title_th": "ที่เกิดเหตุ",
+        "intro_th": "โทรศัพท์ดังกลางดึก มีคดีเข้าแล้ว — นาฬิกาโบราณหายจากพิพิธภัณฑ์",
+        "stages": [
+          {
+            "id": "d1_s1", "title_th": "รับแจ้งคดี",
+            "beat": { "narrator_th": "เสียงปลายสายเร่งร้อน คุณต้องฟังและตอบให้ชัดเจนก่อนรีบไปที่เกิดเหตุ", "npc": { "en": "Detective, the museum clock is gone. Come quickly!", "th": "นักสืบ นาฬิกาพิพิธภัณฑ์หายไปแล้ว มาเร็ว!" } },
+            "encounters": [ { "game": "dialogue", "label_th": "รับสายแจ้งเหตุ", "filter": { "g": "On the Phone" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 40, "card": { "w": "case", "mt": "คดี" }, "story_after_th": "คุณคว้าเสื้อโค้ต รีบมุ่งหน้าสู่พิพิธภัณฑ์กลางสายฝน" }
+          },
+          {
+            "id": "d1_s2", "title_th": "สำรวจที่เกิดเหตุ",
+            "beat": { "narrator_th": "ห้องจัดแสดงเงียบสงัด แท่นวางนาฬิกาว่างเปล่า จัดกลุ่มเบาะแสที่พบให้เป็นหมวดหมู่", "npc": { "en": "Nothing was forced. Whoever did this had a key.", "th": "ไม่มีร่องรอยงัดแงะ คนที่ทำต้องมีกุญแจ" } },
+            "encounters": [ { "game": "groups", "label_th": "จัดกลุ่มเบาะแส", "pass": { "minScore": 20 } } ],
+            "reward": { "xp": 40, "card": { "w": "clue", "mt": "เบาะแส" }, "story_after_th": "ไม่มีร่องรอยงัดแงะเลย... นี่ต้องเป็นฝีมือคนใน" }
+          },
+          {
+            "id": "d1_s3", "title_th": "จำรายละเอียด",
+            "beat": { "narrator_th": "นักสืบที่ดีต้องจำทุกอย่าง จับคู่รายละเอียดในห้องให้ครบก่อนหลักฐานถูกทำลาย", "npc": { "en": "Observe everything. Details solve cases.", "th": "สังเกตทุกอย่าง รายละเอียดคือกุญแจไขคดี" } },
+            "encounters": [ { "game": "memory", "label_th": "จับคู่รายละเอียด", "pass": { "minScore": 60 } } ],
+            "reward": { "xp": 40, "card": { "w": "detail", "mt": "รายละเอียด" }, "story_after_th": "คุณจดจำทุกมุมของห้องไว้ในหัวอย่างแม่นยำ" }
+          },
+          {
+            "id": "d1_s4", "title_th": "ฟังกล้องวงจรปิด",
+            "beat": { "narrator_th": "เทปกล้องมีเสียงพูดแว่วๆ ฟังให้ดีแล้วเติมคำที่ขาดหาย", "npc": { "en": "The camera caught a voice near the exit.", "th": "กล้องจับเสียงคนพูดใกล้ทางออกได้" } },
+            "encounters": [ { "game": "fillear", "label_th": "ฟังเทปเติมคำ", "pass": { "minScore": 3 } } ],
+            "reward": { "xp": 40, "card": { "w": "footage", "mt": "ภาพจากกล้อง" }, "story_after_th": "เสียงในเทปคุ้นหูอย่างประหลาด... เป็นใครกันนะ" }
+          },
+          {
+            "id": "d1_s5", "title_th": "บันทึกรายงานแรก", "boss": true,
+            "beat": { "narrator_th": "ด่านจบบท — เขียนรายงานคดีให้เป๊ะและเลือกคำให้เป็นทางการ", "npc": { "en": "File your first report, Detective.", "th": "ยื่นรายงานฉบับแรกของคุณสิ นักสืบ" } },
+            "encounters": [
+              { "game": "frame", "label_th": "เรียบเรียงรายงาน", "pass": { "minScore": 2 } },
+              { "game": "sharper", "label_th": "เลือกคำให้เป็นทางการ", "pass": { "minScore": 3 } }
+            ],
+            "reward": { "xp": 75, "card": { "w": "report", "mt": "รายงาน" }, "story_after_th": "รายงานฉบับแรกเสร็จสมบูรณ์ คดีเริ่มก่อตัวเป็นรูปเป็นร่าง บทที่ 1 จบ" }
+          }
+        ]
+      },
+      {
+        "id": "d2", "icon": "🧾", "title_th": "รวบรวมเบาะแส",
+        "intro_th": "หลักฐานกระจัดกระจายทั่วเมือง ต้องเก็บให้ครบก่อนคนร้ายลบร่องรอย",
+        "stages": [
+          {
+            "id": "d2_s1", "title_th": "ตรวจลายนิ้วมือ",
+            "beat": { "narrator_th": "บนแท่นวางมีรอยนิ้วมือจางๆ จับคู่ให้ตรงเจ้าของ", "npc": { "en": "Match these prints to our records.", "th": "จับคู่ลายนิ้วมือเหล่านี้กับฐานข้อมูล" } },
+            "encounters": [ { "game": "memory", "label_th": "จับคู่ลายนิ้วมือ", "pass": { "minScore": 60 } } ],
+            "reward": { "xp": 45, "card": { "w": "fingerprint", "mt": "ลายนิ้วมือ" }, "story_after_th": "ลายนิ้วมือหนึ่งชุดตรงกับพนักงานในพิพิธภัณฑ์เอง!" }
+          },
+          {
+            "id": "d2_s2", "title_th": "หาของกลาง",
+            "beat": { "narrator_th": "ของหลายชิ้นดูน่าสงสัย จัดกลุ่มหลักฐานให้เป็นระเบียบ", "npc": { "en": "Sort the evidence before it gets contaminated.", "th": "จัดหลักฐานให้เรียบร้อยก่อนมันปนเปื้อน" } },
+            "encounters": [ { "game": "groups", "label_th": "จัดกลุ่มหลักฐาน", "pass": { "minScore": 20 } } ],
+            "reward": { "xp": 45, "card": { "w": "evidence", "mt": "หลักฐาน" }, "story_after_th": "หลักฐานเริ่มชี้ไปทางเดียวกันอย่างน่าสงสัย" }
+          },
+          {
+            "id": "d2_s3", "title_th": "ถอดรหัสข้อความลับ",
+            "beat": { "narrator_th": "พบกระดาษโน้ตเขียนรหัสไว้ ฟังแล้วสะกดคำให้ถูกเพื่อไขรหัส", "npc": { "en": "This note is written in some kind of code.", "th": "โน้ตนี้เขียนเป็นรหัสอะไรสักอย่าง" } },
+            "encounters": [ { "game": "echo", "label_th": "ถอดรหัส (ฟัง+สะกด)", "pass": { "minScore": 3 } } ],
+            "reward": { "xp": 45, "card": { "w": "code", "mt": "รหัสลับ" }, "story_after_th": "รหัสถูกไข! มันคือเวลานัดพบ... ตีสองคืนนี้" }
+          },
+          {
+            "id": "d2_s4", "title_th": "ปะติดเส้นทาง",
+            "beat": { "narrator_th": "เรียงร่องรอยการเดินของคนร้ายให้เป็นลำดับที่ถูกต้อง", "npc": { "en": "Retrace the thief's steps in order.", "th": "ปะติดเส้นทางของขโมยตามลำดับ" } },
+            "encounters": [ { "game": "lineup", "label_th": "เรียงร่องรอย", "pass": { "minScore": 2 } } ],
+            "reward": { "xp": 45, "card": { "w": "trail", "mt": "ร่องรอย" }, "story_after_th": "เส้นทางนำไปสู่ประตูหลังที่มีแค่พนักงานเข้าได้" }
+          },
+          {
+            "id": "d2_s5", "title_th": "สรุปเบาะแส", "boss": true,
+            "beat": { "narrator_th": "ด่านจบบท — เลือกคำสรุปเบาะแสให้แม่นยำ และจำภาพรวมให้ครบ", "npc": { "en": "What does the evidence tell us so far?", "th": "หลักฐานบอกอะไรเราบ้างจนถึงตอนนี้?" } },
+            "encounters": [
+              { "game": "sharper", "label_th": "สรุปให้แม่นยำ", "pass": { "minScore": 3 } },
+              { "game": "memory", "label_th": "ทบทวนเบาะแส", "pass": { "minScore": 60 } }
+            ],
+            "reward": { "xp": 80, "card": { "w": "lead", "mt": "เบาะแสนำทาง" }, "story_after_th": "ทุกอย่างชี้ไปที่คนใน 3 คน ได้เวลาสอบปากคำ บทที่ 2 จบ" }
+          }
+        ]
+      },
+      {
+        "id": "d3", "icon": "🗣️", "title_th": "สอบปากคำ",
+        "intro_th": "ผู้ต้องสงสัยสามคน: ยามกลางคืน ภัณฑารักษ์ และนักสะสม ใครโกหกกันแน่?",
+        "stages": [
+          {
+            "id": "d3_s1", "title_th": "คุยกับยามกลางคืน",
+            "beat": { "narrator_th": "ยามดูประหม่า ลองคุยเล่นให้เขาผ่อนคลายก่อนจะได้ความจริง", "npc": { "en": "I—I didn't see anything, I swear.", "th": "ผม...ผมไม่เห็นอะไรเลย สาบานได้" } },
+            "encounters": [ { "game": "dialogue", "label_th": "คุยกับยาม", "filter": { "g": "Small Talk" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 45, "card": { "w": "guard", "mt": "ยาม / ผู้เฝ้า" }, "story_after_th": "ยามพูดจาลนลาน แต่ตาไม่กล้าสบตา... น่าสงสัย" }
+          },
+          {
+            "id": "d3_s2", "title_th": "สอบปากคำภัณฑารักษ์",
+            "beat": { "narrator_th": "ภัณฑารักษ์ดูสงบเกินไป ราวกับเตรียมคำตอบมาแล้ว", "npc": { "en": "The clock was insured, of course. A pity.", "th": "นาฬิกาทำประกันไว้แน่นอน น่าเสียดายจริง" } },
+            "encounters": [ { "game": "dialogue", "label_th": "สอบปากคำภัณฑารักษ์", "filter": { "g": "Complaints & Returns" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 45, "card": { "w": "curator", "mt": "ภัณฑารักษ์" }, "story_after_th": "\"ทำประกันไว้\"... เขาพูดคำนี้เร็วเกินไปหน่อยไหมนะ" }
+          },
+          {
+            "id": "d3_s3", "title_th": "จับพิรุธคำโกหก",
+            "beat": { "narrator_th": "คำให้การขัดแย้งกันเอง หาคู่คำที่ 'ตรงข้าม' กันเพื่อจับพิรุธ", "npc": { "en": "His story doesn't add up. Find the contradiction.", "th": "เรื่องเล่าของเขาไม่สมเหตุสมผล หาจุดขัดแย้งให้เจอ" } },
+            "encounters": [ { "game": "sameopp", "label_th": "จับคำที่ขัดกัน", "pass": { "minScore": 5 } } ],
+            "reward": { "xp": 50, "card": { "w": "alibi", "mt": "ข้ออ้างที่อยู่" }, "story_after_th": "เจอแล้ว! ข้ออ้างที่อยู่ของเขาขัดกับเวลาในกล้อง" }
+          },
+          {
+            "id": "d3_s4", "title_th": "เรียงคำให้การ",
+            "beat": { "narrator_th": "เรียงประโยคคำให้การให้ถูกลำดับ เพื่อเห็นภาพเหตุการณ์จริง", "npc": { "en": "Put the witness statement in order.", "th": "เรียงคำให้การของพยานให้ถูกลำดับ" } },
+            "encounters": [ { "game": "lineup", "label_th": "เรียงคำให้การ", "pass": { "minScore": 2 } } ],
+            "reward": { "xp": 50, "card": { "w": "testimony", "mt": "คำให้การ" }, "story_after_th": "เรื่องราวเริ่มชัดขึ้น แต่ยังขาดชิ้นส่วนสำคัญ" }
+          },
+          {
+            "id": "d3_s5", "title_th": "กดดันผู้ต้องสงสัย", "boss": true,
+            "beat": { "narrator_th": "ด่านจบบท — โทรกดดันผู้ต้องสงสัยให้พลาดคำพูด และจับคำโกหกให้ทัน", "npc": { "en": "Tell me again — where were you at 2 AM?", "th": "บอกอีกที — ตอนตีสองคุณอยู่ไหน?" } },
+            "encounters": [
+              { "game": "dialogue", "label_th": "โทรกดดัน", "filter": { "g": "On the Phone" }, "pass": { "minScore": 1, "oneScene": true } },
+              { "game": "sameopp", "label_th": "จับคำโกหก", "pass": { "minScore": 5 } }
+            ],
+            "reward": { "xp": 85, "card": { "w": "suspect", "mt": "ผู้ต้องสงสัย" }, "story_after_th": "ผู้ต้องสงสัยเริ่มพูดขัดกันเอง วงล้อมแคบลงแล้ว บทที่ 3 จบ" }
+          }
+        ]
+      },
+      {
+        "id": "d4", "icon": "🧩", "title_th": "ปะติดปะต่อ",
+        "intro_th": "เบาะแสครบมือ ถึงเวลาปะติดปะต่อทุกอย่างเข้าด้วยกัน",
+        "stages": [
+          {
+            "id": "d4_s1", "title_th": "เรียงไทม์ไลน์",
+            "beat": { "narrator_th": "ต่อเหตุการณ์ทั้งคืนให้เป็นลำดับเวลาที่สมเหตุสมผล", "npc": { "en": "Reconstruct that night, minute by minute.", "th": "ปะติดเหตุการณ์คืนนั้นทีละนาที" } },
+            "encounters": [ { "game": "frame", "label_th": "ต่อไทม์ไลน์", "pass": { "minScore": 2 } } ],
+            "reward": { "xp": 50, "card": { "w": "timeline", "mt": "ลำดับเวลา" }, "story_after_th": "ช่องโหว่เวลา 20 นาทีที่ไม่มีใครอธิบายได้ปรากฏขึ้น" }
+          },
+          {
+            "id": "d4_s2", "title_th": "หาแรงจูงใจ",
+            "beat": { "narrator_th": "ใครได้ประโยชน์มากสุด? เรียงระดับแรงจูงใจของผู้ต้องสงสัย", "npc": { "en": "Follow the money. Who profits most?", "th": "ตามเส้นทางเงิน ใครได้ประโยชน์มากสุด?" } },
+            "encounters": [ { "game": "worddial", "label_th": "เรียงระดับแรงจูงใจ", "pass": { "minScore": 2 } } ],
+            "reward": { "xp": 50, "card": { "w": "motive", "mt": "แรงจูงใจ" }, "story_after_th": "เงินประกันก้อนโต... ภัณฑารักษ์ได้ประโยชน์มากที่สุด" }
+          },
+          {
+            "id": "d4_s3", "title_th": "จัดกลุ่มผู้ต้องสงสัย",
+            "beat": { "narrator_th": "จัดกลุ่มข้อมูลผู้ต้องสงสัยแต่ละคนให้เป็นระเบียบ", "npc": { "en": "Build a profile for each suspect.", "th": "สร้างประวัติของผู้ต้องสงสัยแต่ละคน" } },
+            "encounters": [ { "game": "groups", "label_th": "จัดกลุ่มผู้ต้องสงสัย", "pass": { "minScore": 20 } } ],
+            "reward": { "xp": 50, "card": { "w": "profile", "mt": "ประวัติโดยย่อ" }, "story_after_th": "ภาพของคนร้ายเริ่มชัดเจนขึ้นเรื่อยๆ" }
+          },
+          {
+            "id": "d4_s4", "title_th": "ฟังเทปลับ",
+            "beat": { "narrator_th": "ได้เทปบันทึกลับมา ฟังให้ดีแล้วเติมคำที่ขาด อาจมีชื่อคนร้าย", "npc": { "en": "This recording could break the case open.", "th": "เทปนี้อาจทำให้คดีแตกได้" } },
+            "encounters": [ { "game": "fillear", "label_th": "ฟังเทปเติมคำ", "pass": { "minScore": 3 } } ],
+            "reward": { "xp": 50, "card": { "w": "recording", "mt": "เทปบันทึก" }, "story_after_th": "ในเทปมีเสียงภัณฑารักษ์คุยเรื่องเงินประกันกับใครบางคน!" }
+          },
+          {
+            "id": "d4_s5", "title_th": "ตั้งสมมติฐาน", "boss": true,
+            "beat": { "narrator_th": "ด่านจบบท — เลือกคำตั้งสมมติฐานให้คมและเรียบเรียงให้เป็นเหตุเป็นผล", "npc": { "en": "State your theory clearly, Detective.", "th": "กล่าวสมมติฐานของคุณให้ชัดเจน นักสืบ" } },
+            "encounters": [
+              { "game": "sharper", "label_th": "เลือกคำให้คม", "pass": { "minScore": 4 } },
+              { "game": "frame", "label_th": "เรียบเรียงสมมติฐาน", "pass": { "minScore": 2 } }
+            ],
+            "reward": { "xp": 90, "card": { "w": "theory", "mt": "สมมติฐาน" }, "story_after_th": "สมมติฐานชัดเจน: ภัณฑารักษ์จัดฉากขโมยเพื่อเงินประกัน เหลือแค่จับให้ได้คาหนังคาเขา บทที่ 4 จบ" }
+          }
+        ]
+      },
+      {
+        "id": "d5", "icon": "🌙", "title_th": "คืนไล่ล่า",
+        "intro_th": "คืนนัดพบตามรหัสมาถึง ถึงเวลาลงพื้นที่จริง อันตรายรออยู่ในความมืด",
+        "stages": [
+          {
+            "id": "d5_s1", "title_th": "สะกดรอยตาม",
+            "beat": { "narrator_th": "ตามเป้าหมายไปเงียบๆ จำเส้นทางและจุดสังเกตให้แม่น", "npc": { "en": "Stay close, but don't be seen.", "th": "ตามให้กระชั้น แต่อย่าให้เห็น" } },
+            "encounters": [ { "game": "memory", "label_th": "จำเส้นทางสะกดรอย", "pass": { "minScore": 60 } } ],
+            "reward": { "xp": 55, "card": { "w": "tail", "mt": "สะกดรอยตาม" }, "story_after_th": "เป้าหมายมุ่งหน้าไปโกดังเก่าริมเมือง" }
+          },
+          {
+            "id": "d5_s2", "title_th": "คิดเร็วตอนไล่ล่า",
+            "beat": { "narrator_th": "เป้าหมายรู้ตัว! วิ่งหนี — คิดคำให้ไว ตอบผิดพลาดหลุดมือ", "npc": { "en": "He's running! Don't lose him!", "th": "เขาวิ่งแล้ว! อย่าให้หลุด!" } },
+            "encounters": [ { "game": "tower", "label_th": "คิดเร็วไล่ล่า", "pass": { "minScore": 4 } } ],
+            "reward": { "xp": 55, "card": { "w": "chase", "mt": "การไล่ล่า" }, "story_after_th": "คุณตามทันจนถึงหน้าประตูโกดัง" }
+          },
+          {
+            "id": "d5_s3", "title_th": "เดิมพันกับสายข่าว",
+            "beat": { "narrator_th": "สายข่าวเสนอข้อมูลสำคัญ แต่ต้องแลกด้วยการเสี่ยง เดิมพันให้คุ้ม", "npc": { "en": "I know something. But it'll cost you.", "th": "ฉันรู้บางอย่าง แต่มันต้องแลกนะ" } },
+            "encounters": [ { "game": "gamble", "label_th": "เดิมพันข้อมูล", "pass": { "minScore": 3 } } ],
+            "reward": { "xp": 55, "card": { "w": "informant", "mt": "สายข่าว" }, "story_after_th": "สายข่าวบอกรหัสตู้เซฟที่ซ่อนนาฬิกา!" }
+          },
+          {
+            "id": "d5_s4", "title_th": "ถอดรหัสตู้เซฟ",
+            "beat": { "narrator_th": "ตู้เซฟล็อกแน่น ฟังเสียงล็อกแล้วสะกดรหัสให้ถูก", "npc": { "en": "Listen carefully to the lock.", "th": "ฟังเสียงกลอนล็อกให้ดี" } },
+            "encounters": [ { "game": "echo", "label_th": "ถอดรหัสตู้เซฟ", "pass": { "minScore": 4 } } ],
+            "reward": { "xp": 55, "card": { "w": "safe", "mt": "ตู้เซฟ" }, "story_after_th": "ตู้เซฟเปิดออก — นาฬิกาโบราณอยู่ในนั้นจริงๆ!" }
+          },
+          {
+            "id": "d5_s5", "title_th": "ดักจับกลางคัน", "boss": true,
+            "beat": { "narrator_th": "ด่านจบบท — คนร้ายพยายามหนีพร้อมของกลาง! คิดเร็วและตอบไวเพื่อสกัดไว้", "npc": { "en": "Freeze! You're not going anywhere.", "th": "หยุดนะ! คุณไปไหนไม่ได้แล้ว" } },
+            "encounters": [
+              { "game": "tower", "label_th": "สกัดคนร้าย", "pass": { "minScore": 4 } },
+              { "game": "sprint", "label_th": "ตอบให้ไว", "pass": { "minScore": 6 } }
+            ],
+            "reward": { "xp": 95, "card": { "w": "ambush", "mt": "ดักซุ่มจับ" }, "story_after_th": "จับได้คาหนังคาเขาพร้อมของกลาง! เหลือแค่ปิดคดีให้สมบูรณ์ บทที่ 5 จบ" }
+          }
+        ]
+      },
+      {
+        "id": "d6", "icon": "⚖️", "title_th": "เปิดโปงคนร้าย",
+        "intro_th": "หลักฐานครบ ตัวคนร้ายอยู่ในมือ ถึงเวลาปิดคดีต่อหน้าทุกคน — บททดสอบสุดท้าย",
+        "stages": [
+          {
+            "id": "d6_s1", "title_th": "ทบทวนหลักฐาน",
+            "beat": { "narrator_th": "ก่อนแถลง ต้องจำหลักฐานทุกชิ้นให้ขึ้นใจ ห้ามพลาดแม้จุดเดียว", "npc": { "en": "Every piece must line up. Review it all.", "th": "ทุกชิ้นต้องสอดคล้องกัน ทบทวนให้หมด" } },
+            "encounters": [ { "game": "memory", "label_th": "ทบทวนหลักฐาน", "pass": { "minScore": 70 } } ],
+            "reward": { "xp": 55, "card": { "w": "proof", "mt": "ข้อพิสูจน์" }, "story_after_th": "หลักฐานทุกชิ้นเรียงร้อยเป็นเรื่องเดียวกันอย่างไร้ที่ติ" }
+          },
+          {
+            "id": "d6_s2", "title_th": "เรียบเรียงข้อกล่าวหา",
+            "beat": { "narrator_th": "คำกล่าวหาต้องหนักแน่นและมีโครงสร้างชัด ต่อประโยคให้เป๊ะ", "npc": { "en": "State the charge, word by word.", "th": "กล่าวข้อกล่าวหา ทีละคำ" } },
+            "encounters": [ { "game": "frame", "label_th": "เรียบเรียงข้อกล่าวหา", "pass": { "minScore": 2 } } ],
+            "reward": { "xp": 55, "card": { "w": "accusation", "mt": "ข้อกล่าวหา" }, "story_after_th": "ข้อกล่าวหาแน่นหนา ไม่มีช่องให้ดิ้น" }
+          },
+          {
+            "id": "d6_s3", "title_th": "เลือกคำให้เฉียบ",
+            "beat": { "narrator_th": "ต่อหน้าทุกคน ทุกคำต้องเฉียบคม เลือกคำที่ตรงและหนักแน่นที่สุด", "npc": { "en": "Choose your words. There's no room for doubt.", "th": "เลือกคำพูดให้ดี ไม่มีที่ว่างให้สงสัย" } },
+            "encounters": [ { "game": "sharper", "label_th": "เลือกคำที่คมกว่า", "pass": { "minScore": 4 } } ],
+            "reward": { "xp": 55, "card": { "w": "precise", "mt": "เที่ยงตรง / แม่นยำ" }, "story_after_th": "คำพูดของคุณคมกริบ ทุกคนในห้องเงียบกริบ" }
+          },
+          {
+            "id": "d6_s4", "title_th": "หักล้างข้อแก้ตัว",
+            "beat": { "narrator_th": "คนร้ายดิ้นสุดฤทธิ์ หาคำที่ตรงข้ามเพื่อหักล้างทุกข้อแก้ตัว", "npc": { "en": "You have no proof! — Oh, but I do.", "th": "คุณไม่มีหลักฐาน! — โอ๊ะ แต่ผมมีนะ" } },
+            "encounters": [ { "game": "sameopp", "label_th": "หักล้างข้อแก้ตัว", "pass": { "minScore": 6 } } ],
+            "reward": { "xp": 60, "card": { "w": "rebut", "mt": "หักล้าง / โต้กลับ" }, "story_after_th": "ทุกข้อแก้ตัวถูกหักล้างจนหมดสิ้น เขาไม่เหลือทางหนี" }
+          },
+          {
+            "id": "d6_s5", "title_th": "เปิดโปงตัวการ", "boss": true,
+            "beat": { "narrator_th": "ด่านสุดท้าย! ประกาศชื่อคนร้ายต่อหน้าทุกคน — รวมทุกทักษะที่ฝึกมา ปิดคดีให้สมบูรณ์", "npc": { "en": "So, Detective... who did it?", "th": "แล้ว นักสืบ... ใครเป็นคนทำ?" } },
+            "encounters": [
+              { "game": "sharper", "label_th": "กล่าวสรุปให้คม", "pass": { "minScore": 4 } },
+              { "game": "dialogue", "label_th": "ประกาศปิดคดี", "filter": { "g": "On the Phone" }, "pass": { "minScore": 1, "oneScene": true } }
+            ],
+            "reward": { "xp": 150, "card": { "w": "culprit", "mt": "ตัวการ / คนร้าย" }, "story_after_th": "\"คนร้ายคือ... ภัณฑารักษ์เอง — เขาจัดฉากขโมยนาฬิกาของตัวเองเพื่อฮุบเงินประกัน\" ห้องแตกตื่น! ภัณฑารักษ์ก้มหน้ายอมรับ คุณไขคดีแรกสำเร็จ จากนักสืบมือใหม่ สู่นักสืบที่ทั้งเมืองไว้ใจ 🕵️ จบคดี 'เมืองเล็ก'!" }
+          }
+        ]
+      }
+    ]
+  }
+}
