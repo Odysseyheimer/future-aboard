@@ -1458,7 +1458,22 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 .g-pop-b { color: #d9534f; }
 @keyframes g-pop { 0% { opacity: 0; transform: translate(-50%, 8px) scale(.7); } 20% { opacity: 1; transform: translate(-50%, -4px) scale(1.1); } 100% { opacity: 0; transform: translate(-50%, -40px) scale(1); } }
 
+/* ---- study-buddy mascot (reacts to right/wrong) ---- */
+.g-mascot { font-size: 24px; line-height: 1; display: inline-block; pointer-events: none; animation: g-mascot-idle 2.6s ease-in-out infinite; will-change: transform; }
+@keyframes g-mascot-idle { 0%, 100% { transform: translateY(0) rotate(-3deg) } 50% { transform: translateY(-4px) rotate(3deg) } }
+.g-mascot-happy { animation: g-mascot-happy .6s ease; }
+@keyframes g-mascot-happy { 0% { transform: translateY(0) scale(1) } 30% { transform: translateY(-15px) scale(1.3) rotate(-12deg) } 60% { transform: translateY(0) scale(1.05) rotate(9deg) } 100% { transform: translateY(0) scale(1) } }
+.g-mascot-sad { animation: g-mascot-sad .5s ease; }
+@keyframes g-mascot-sad { 0%, 100% { transform: translateX(0) } 20% { transform: translateX(-6px) rotate(-9deg) } 60% { transform: translateX(6px) rotate(9deg) } }
+
 /* ---- end screen ---- */
+.g-end-hero .toon-face { font-size: 58px; }
+.g-end-hero .toon-shadow { width: 42px; }
+.g-newbest { display: inline-block; font-size: 14px; font-weight: 900; color: var(--accent-ink); background: var(--accent);
+  border-radius: 999px; padding: 4px 14px; margin: 4px 0 2px; animation: g-newbest-pop .5s cubic-bezier(.2, 1.4, .4, 1) both; }
+@keyframes g-newbest-pop { 0% { opacity: 0; transform: scale(.5) rotate(-8deg) } 100% { opacity: 1; transform: none } }
+@media (prefers-reduced-motion: reduce) { .g-mascot, .g-mascot-happy, .g-mascot-sad, .g-newbest { animation: none !important; } }
+
 .g-end { text-align: center; padding: 24px 16px; }
 .g-end-i { font-size: 46px; }
 .g-end-s { font-size: 46px; font-weight: 900; color: var(--accent); margin-top: 2px; }
@@ -8501,14 +8516,27 @@ PT.game = (function () {
   RUN.tick = function () { if (!this.running) return; this.t -= 100; this.bar(); if (this.t <= 0) { this.t = 0; this.finish(); } };
   RUN.bar = function () { var b = document.getElementById("g-bar"); if (b) { b.style.width = Math.max(0, Math.round(this.t / this.tmax * 100)) + "%"; b.style.background = this.t < this.tmax * 0.25 ? "#d9534f" : "var(--accent)"; } };
   RUN.hud = function () { var s = document.getElementById("g-score"); if (s) s.textContent = this.score; var c = document.getElementById("g-combo"); if (c) c.textContent = this.combo > 1 ? ("🔥x" + this.combo) : ""; };
-  RUN.good = function (add) { this.score++; this.combo++; if (this.combo > this.maxcombo) this.maxcombo = this.combo; this.t = Math.min(this.tmax, this.t + (add || 2000)); this.hud(); };
-  RUN.bad = function (pen) { this.combo = 0; this.t = Math.max(0, this.t - (pen || 3000)); this.hud(); };
+  RUN.good = function (add) {
+    this.score++; this.combo++; if (this.combo > this.maxcombo) this.maxcombo = this.combo;
+    this.t = Math.min(this.tmax, this.t + (add || 2000)); this.hud(); mascotReact(true);
+    if (this.combo === 5 || this.combo === 10 || (this.combo > 10 && this.combo % 10 === 0)) { popFx("🔥 คอมโบ x" + this.combo + "!", true); try { if (window.PT && PT.toon) PT.toon.confetti(12); } catch (e) {} }
+  };
+  RUN.bad = function (pen) { this.combo = 0; this.t = Math.max(0, this.t - (pen || 3000)); this.hud(); mascotReact(false); };
   RUN.stop = function () { this.running = false; if (timer) { clearInterval(timer); timer = null; } };
-  RUN.finish = function () { this.stop(); setBest(this.gid, this.score); if (this.onEnd) this.onEnd(); };
+  RUN.finish = function () { this.stop(); this.newBest = this.score > best(this.gid) && this.score > 0; setBest(this.gid, this.score); if (this.onEnd) this.onEnd(); };
+  // little study-buddy mascot in the top bar reacts to every right/wrong answer
+  function mascotReact(good) {
+    var m = document.getElementById("g-mascot"); if (!m) return;
+    m.className = "g-mascot " + (good ? "g-mascot-happy" : "g-mascot-sad");
+    clearTimeout(m._t); m._t = setTimeout(function () { if (m) m.className = "g-mascot"; }, good ? 620 : 520);
+  }
+  function toon(face, cls) { return (window.PT && PT.toon) ? PT.toon.char(face, cls) : ('<span class="toon"><span class="toon-face">' + face + '</span></span>'); }
+  var MASCOT = "🦊";
 
   function shell(stageId) {
     return '<div class="g-wrap"><div class="g-top">' +
       '<button class="g-back" data-g-back="1">‹ เมนู</button>' +
+      '<span class="g-mascot" id="g-mascot">' + MASCOT + '</span>' +
       '<div class="g-hud"><span class="g-combo" id="g-combo"></span><span class="g-score" id="g-score">0</span></div></div>' +
       '<div class="g-barwrap"><div class="g-bar" id="g-bar" style="width:100%"></div></div>' +
       '<div class="g-stage" id="' + stageId + '"></div></div>';
@@ -8522,7 +8550,10 @@ PT.game = (function () {
   }
   function endHtml(gid, label) {
     if (CAMP) return campReport(gid, RUN.score, label);
-    return '<div class="g-end"><div class="g-end-i">🏁</div>' +
+    var nb = RUN.newBest;
+    return '<div class="g-end">' +
+      '<div class="g-end-hero">' + toon(nb ? "🎉" : MASCOT, nb ? "toon-win" : "") + '</div>' +
+      (nb ? '<div class="g-newbest" data-conf="1">🏆 สถิติใหม่!</div>' : '') +
       '<div class="g-end-s">' + RUN.score + '</div>' +
       '<div class="g-end-l">' + esc(label || "คะแนน") + ' · สถิติสูงสุด ' + best(gid) + (RUN.maxcombo > 2 ? (" · คอมโบสูงสุด x" + RUN.maxcombo) : "") + '</div>' +
       '<button class="g-btn g-again" data-g-again="1">🔁 เล่นอีกรอบ</button>' +
@@ -8532,14 +8563,18 @@ PT.game = (function () {
   function shellLives(stageId, hud) {
     return '<div class="g-wrap"><div class="g-top">' +
       '<button class="g-back" data-g-back="1">‹ เมนู</button>' +
+      '<span class="g-mascot" id="g-mascot">' + MASCOT + '</span>' +
       '<div class="g-hud" id="g-hud">' + (hud || '') + '</div></div>' +
       '<div class="g-stage" id="' + stageId + '"></div></div>';
   }
   // end card for games that don't run the RUN timer (score passed in explicitly)
   function endCard(gid, scoreVal, label) {
+    var nb = scoreVal > best(gid) && scoreVal > 0;
     setBest(gid, scoreVal);
     if (CAMP) return campReport(gid, scoreVal, label);
-    return '<div class="g-end"><div class="g-end-i">🏁</div>' +
+    return '<div class="g-end">' +
+      '<div class="g-end-hero">' + toon(nb ? "🎉" : MASCOT, nb ? "toon-win" : "") + '</div>' +
+      (nb ? '<div class="g-newbest" data-conf="1">🏆 สถิติใหม่!</div>' : '') +
       '<div class="g-end-s">' + scoreVal + '</div>' +
       '<div class="g-end-l">' + esc(label || "คะแนน") + ' · สถิติสูงสุด ' + best(gid) + '</div>' +
       '<button class="g-btn g-again" data-g-again="1">🔁 เล่นอีกรอบ</button>' +
@@ -8554,6 +8589,7 @@ PT.game = (function () {
     }
     var b = v.querySelector("[data-g-back]"); if (b) b.onclick = function () { RUN.stop(); active = null; started = false; render(v); };
     var a = v.querySelector("[data-g-again]"); if (a) a.onclick = function () { started = false; startActive(v); };
+    if (v.querySelector("[data-conf]")) { try { if (window.PT && PT.toon) PT.toon.confetti(40); } catch (e) {} }
   }
 
   /* ---------- word pool from the current deck ---------- */
