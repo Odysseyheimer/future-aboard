@@ -118,7 +118,235 @@
               { "game": "gamble", "label_th": "ต่อราคา (เสี่ยงดวง)", "pass": { "minScore": 3 } },
               { "game": "dialogue", "label_th": "ปิดดีลเช่าห้อง", "filter": { "g": "Renting & Housing" }, "pass": { "minScore": 1, "oneScene": true } }
             ],
-            "reward": { "xp": 90, "card": { "w": "lease", "mt": "สัญญาเช่า" }, "story_after_th": "เซ็นสัญญาเรียบร้อย! คุณมีบ้านในเมืองใหม่แล้ว — จบเล่ม 'เมืองปลายทาง' บทเปิดตัว ตอนต่อไป: หางาน 💼 (เร็วๆ นี้)" }
+            "reward": { "xp": 90, "card": { "w": "lease", "mt": "สัญญาเช่า" }, "story_after_th": "เซ็นสัญญาเรียบร้อย! คุณมีบ้านในเมืองใหม่แล้ว วางกระเป๋าลง... แล้วท้องก็ร้องจ๊อกๆ ได้เวลาออกไปหาของกิน 🍜" }
+          }
+        ]
+      },
+      {
+        "id": "ch4", "icon": "🍜", "title_th": "กิน & จับจ่าย",
+        "intro_th": "ท้องเริ่มหิว ตู้เย็นว่างเปล่า ถึงเวลาออกไปเผชิญร้านอาหารและตลาดในเมืองใหม่",
+        "stages": [
+          {
+            "id": "ch4_s1", "title_th": "หาของกิน",
+            "beat": { "narrator_th": "ร้านอาหารเล็กๆ ข้างทางส่งกลิ่นหอม พนักงานยิ้มรับ ลองสั่งดูสิ", "npc": { "en": "Hi there! Have you decided what to order?", "th": "สวัสดีค่ะ เลือกได้หรือยังคะ?" } },
+            "encounters": [ { "game": "dialogue", "label_th": "สั่งอาหารในร้าน", "filter": { "g": "Eating Out" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 35, "card": { "w": "menu", "mt": "เมนู / รายการอาหาร" }, "story_after_th": "อาหารจานแรกในเมืองใหม่ อร่อยกว่าที่คิด!" }
+          },
+          {
+            "id": "ch4_s2", "title_th": "จับคู่คำอาหาร",
+            "beat": { "narrator_th": "อยากสั่งให้เหมือนเจ้าถิ่น ต้องจับคู่คำให้เป็นธรรมชาติ", "npc": { "en": "Would you like a side dish with that?", "th": "รับเครื่องเคียงด้วยไหม?" } },
+            "encounters": [ { "game": "chef", "label_th": "จับคู่คำที่ใช้คู่กัน", "pass": { "minScore": 4 } } ],
+            "reward": { "xp": 35, "card": { "w": "order", "mt": "การสั่ง / ออร์เดอร์" }, "story_after_th": "คุณสั่งได้ลื่นไหลจนพนักงานชม \"Your English is great!\"" }
+          },
+          {
+            "id": "ch4_s3", "title_th": "ต่อราคาที่ตลาด",
+            "beat": { "narrator_th": "ตลาดของมือสองมีของดีเพียบ แต่ต้องกล้าต่อราคา เสี่ยงมากได้มาก!", "npc": { "en": "For you, my friend, special price.", "th": "สำหรับคุณ ราคาพิเศษเลย" } },
+            "encounters": [ { "game": "gamble", "label_th": "ต่อราคา (เสี่ยงดวง)", "pass": { "minScore": 3 } } ],
+            "reward": { "xp": 40, "card": { "w": "discount", "mt": "ส่วนลด" }, "story_after_th": "ได้ของถูกใจในราคาที่พอใจ คุณเดินยิ้มออกจากตลาด" }
+          },
+          {
+            "id": "ch4_s4", "title_th": "ฟังราคาที่แคชเชียร์",
+            "beat": { "narrator_th": "แคชเชียร์พูดเร็วปรื๋อ ฟังยอดเงินให้ทันแล้วเติมคำที่ขาด", "npc": { "en": "That comes to twelve fifty, please.", "th": "รวมเป็น 12.50 นะคะ" } },
+            "encounters": [ { "game": "fillear", "label_th": "ฟังแล้วเติมคำ", "pass": { "minScore": 3 } } ],
+            "reward": { "xp": 35, "card": { "w": "receipt", "mt": "ใบเสร็จ" }, "story_after_th": "คุณเก็บใบเสร็จใส่กระเป๋า พร้อมของเต็มสองมือ" }
+          },
+          {
+            "id": "ch4_s5", "title_th": "ช้อปของเข้าบ้าน", "boss": true,
+            "beat": { "narrator_th": "ด่านท้ายบท — เข้าซูเปอร์ฯ ครั้งแรก ต้องถามหาของให้เจอ และเข้าใจคำใกล้เคียง", "npc": { "en": "Aisle 4, next to the dairy section.", "th": "ช่องที่ 4 ข้างๆ โซนนม" } },
+            "encounters": [
+              { "game": "dialogue", "label_th": "ถามหาของในร้าน", "filter": { "g": "Shopping" }, "pass": { "minScore": 1, "oneScene": true } },
+              { "game": "sameopp", "label_th": "เข้าใจคำใกล้/ตรงข้าม", "pass": { "minScore": 5 } }
+            ],
+            "reward": { "xp": 75, "card": { "w": "grocery", "mt": "ของชำ / ของกินของใช้" }, "story_after_th": "ตู้เย็นเต็มแล้ว! ชีวิตในเมืองใหม่เริ่มเข้าที่ บทที่ 4 จบ" }
+          }
+        ]
+      },
+      {
+        "id": "ch5", "icon": "🏦", "title_th": "ธนาคาร & เอกสาร",
+        "intro_th": "จะอยู่ยาวต้องมีบัญชีธนาคารและจัดการเอกสารให้เป็น — ภาษาทางการเริ่มเข้ามาแล้ว",
+        "stages": [
+          {
+            "id": "ch5_s1", "title_th": "เปิดบัญชีธนาคาร",
+            "beat": { "narrator_th": "พนักงานธนาคารทักทายอย่างสุภาพ ตอบเรื่องเอกสารให้ครบ", "npc": { "en": "Good morning. How may I help you today?", "th": "สวัสดีตอนเช้าค่ะ ให้ช่วยอะไรดีคะ?" } },
+            "encounters": [ { "game": "dialogue", "label_th": "คุยกับพนักงานธนาคาร", "filter": { "g": "Money & Bank" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 40, "card": { "w": "account", "mt": "บัญชี" }, "story_after_th": "\"Your account is all set.\" คุณมีบัญชีแรกในเมืองนี้แล้ว" }
+          },
+          {
+            "id": "ch5_s2", "title_th": "กรอกแบบฟอร์ม",
+            "beat": { "narrator_th": "ฟอร์มยาวเหยียด ต้องต่อประโยคให้ถูกโครงก่อนเซ็น", "npc": { "en": "Please fill in your full name and address.", "th": "กรุณากรอกชื่อเต็มและที่อยู่" } },
+            "encounters": [ { "game": "frame", "label_th": "ต่อประโยคตามโครง", "pass": { "minScore": 2 } } ],
+            "reward": { "xp": 40, "card": { "w": "form", "mt": "แบบฟอร์ม" }, "story_after_th": "กรอกครบทุกช่อง เรียบร้อยไร้ที่ติ" }
+          },
+          {
+            "id": "ch5_s3", "title_th": "พูดให้เป็นทางการ",
+            "beat": { "narrator_th": "งานเอกสารต้องใช้คำสุภาพ เลือกคำที่ 'คม/เป็นทางการ' ที่สุด", "npc": { "en": "Could you confirm your request in writing?", "th": "รบกวนยืนยันคำขอเป็นลายลักษณ์อักษรได้ไหมคะ?" } },
+            "encounters": [ { "game": "sharper", "label_th": "เลือกคำที่ตรง/ทางการ", "pass": { "minScore": 3 } } ],
+            "reward": { "xp": 40, "card": { "w": "formal", "mt": "เป็นทางการ" }, "story_after_th": "คุณเริ่มพูดแบบมืออาชีพขึ้นเรื่อยๆ" }
+          },
+          {
+            "id": "ch5_s4", "title_th": "รับพัสดุ",
+            "beat": { "narrator_th": "มีพัสดุมาส่ง แต่ต้องเซ็นและตอบคำถามคนส่งให้ถูก", "npc": { "en": "Sign here, please. Is this the right address?", "th": "เซ็นตรงนี้ค่ะ ที่อยู่ถูกไหมคะ?" } },
+            "encounters": [ { "game": "dialogue", "label_th": "รับของกับคนส่ง", "filter": { "g": "Delivery & Parcels" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 40, "card": { "w": "parcel", "mt": "พัสดุ" }, "story_after_th": "พัสดุถึงมือ ชีวิตในเมืองสะดวกขึ้นเรื่อยๆ" }
+          },
+          {
+            "id": "ch5_s5", "title_th": "ปัญหาเงินโอน", "boss": true,
+            "beat": { "narrator_th": "ด่านท้ายบท — เงินโอนหาย! ต้องอธิบายปัญหาให้ธนาคารเข้าใจ และเลือกคำให้แม่น", "npc": { "en": "I see. Let me look into this transfer for you.", "th": "เข้าใจแล้วค่ะ ขอตรวจสอบการโอนให้นะคะ" } },
+            "encounters": [
+              { "game": "dialogue", "label_th": "แจ้งปัญหากับธนาคาร", "filter": { "g": "Money & Bank" }, "pass": { "minScore": 1, "oneScene": true } },
+              { "game": "worddial", "label_th": "เรียงคำตามระดับ", "pass": { "minScore": 2 } }
+            ],
+            "reward": { "xp": 80, "card": { "w": "transfer", "mt": "การโอนเงิน" }, "story_after_th": "\"It's been resolved.\" ปัญหาคลี่คลาย เอกสารทุกอย่างเข้าที่แล้ว บทที่ 5 จบ" }
+          }
+        ]
+      },
+      {
+        "id": "ch6", "icon": "💼", "title_th": "หางาน",
+        "intro_th": "เงินเก็บเริ่มร่อยหรอ ถึงเวลาหางานพาร์ตไทม์ — ด่านที่ท้าทายที่สุดกำลังมา",
+        "stages": [
+          {
+            "id": "ch6_s1", "title_th": "โทรถามงาน",
+            "beat": { "narrator_th": "เห็นประกาศรับสมัคร ลองโทรไปถามรายละเอียด อย่ากลัวที่จะพูดทางโทรศัพท์", "npc": { "en": "Thanks for calling. Are you calling about the job ad?", "th": "ขอบคุณที่โทรมาค่ะ โทรมาเรื่องประกาศงานใช่ไหมคะ?" } },
+            "encounters": [ { "game": "dialogue", "label_th": "คุยงานทางโทรศัพท์", "filter": { "g": "On the Phone" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 45, "card": { "w": "vacancy", "mt": "ตำแหน่งงานว่าง" }, "story_after_th": "\"Come in for an interview on Monday.\" คุณได้นัดสัมภาษณ์แล้ว!" }
+          },
+          {
+            "id": "ch6_s2", "title_th": "เขียนใบสมัคร",
+            "beat": { "narrator_th": "เรซูเม่ต้องเรียงประโยคให้เป๊ะและดูเป็นมืออาชีพ", "npc": { "en": "I have three years of experience in sales.", "th": "ฉันมีประสบการณ์ด้านการขาย 3 ปี" } },
+            "encounters": [ { "game": "lineup", "label_th": "เรียงประโยคในเรซูเม่", "pass": { "minScore": 2 } } ],
+            "reward": { "xp": 45, "card": { "w": "resume", "mt": "เรซูเม่ / ประวัติย่อ" }, "story_after_th": "เรซูเม่ดูดีมีระดับ พร้อมยื่นแล้ว" }
+          },
+          {
+            "id": "ch6_s3", "title_th": "เลือกคำให้ดูโปร",
+            "beat": { "narrator_th": "ในใบสมัครต้องเลือกคำที่ฟังดูมั่นใจและเป็นทางการ เรียงตามระดับความแรง", "npc": { "en": "How would you describe your strengths?", "th": "คุณจะอธิบายจุดแข็งของตัวเองว่าอย่างไร?" } },
+            "encounters": [ { "game": "worddial", "label_th": "เรียงคำตามระดับ", "pass": { "minScore": 2 } } ],
+            "reward": { "xp": 45, "card": { "w": "skill", "mt": "ทักษะ" }, "story_after_th": "คำพูดของคุณเริ่มฟังดูมั่นใจขึ้นมาก" }
+          },
+          {
+            "id": "ch6_s4", "title_th": "จัดกลุ่มทักษะ",
+            "beat": { "narrator_th": "จัดระเบียบคำที่จะพูดในการสัมภาษณ์ ให้เป็นหมวดหมู่ที่ชัดเจน", "npc": { "en": "Tell me about your relevant skills.", "th": "เล่าเรื่องทักษะที่เกี่ยวข้องของคุณหน่อย" } },
+            "encounters": [ { "game": "groups", "label_th": "จับกลุ่มคำ", "pass": { "minScore": 20 } } ],
+            "reward": { "xp": 45, "card": { "w": "experience", "mt": "ประสบการณ์" }, "story_after_th": "คุณเรียบเรียงจุดขายของตัวเองได้ชัดเจนแล้ว" }
+          },
+          {
+            "id": "ch6_s5", "title_th": "สัมภาษณ์งานครั้งแรก", "boss": true,
+            "beat": { "narrator_th": "ด่านสำคัญ! การสัมภาษณ์งานจริง หายใจลึกๆ ตอบให้เต็มที่ — นี่คือการซ้อมสัมภาษณ์แบบ IELTS", "npc": { "en": "So, why should we hire you?", "th": "แล้วทำไมเราถึงควรรับคุณเข้าทำงาน?" } },
+            "encounters": [ { "game": "dialogue", "label_th": "สัมภาษณ์งาน", "filter": { "g": "Job Interview" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 95, "card": { "w": "interview", "mt": "การสัมภาษณ์" }, "story_after_th": "\"We'd love to have you on the team!\" คุณได้งานแล้ว!! บทที่ 6 จบ 🎉" }
+          }
+        ]
+      },
+      {
+        "id": "ch7", "icon": "🏢", "title_th": "วันแรกที่ทำงาน",
+        "intro_th": "ได้งานแล้ว! แต่ที่ทำงานมีภาษาและวัฒนธรรมใหม่ให้เรียนรู้ทุกวัน",
+        "stages": [
+          {
+            "id": "ch7_s1", "title_th": "แนะนำตัวกับเพื่อนร่วมงาน",
+            "beat": { "narrator_th": "วันแรก! เพื่อนร่วมงานเดินมาทักทาย ตอบให้เป็นมิตรและมั่นใจ", "npc": { "en": "Welcome aboard! I'm Sam, from the design team.", "th": "ยินดีต้อนรับ! ผมแซม จากทีมออกแบบ" } },
+            "encounters": [ { "game": "dialogue", "label_th": "ทักทายเพื่อนร่วมงาน", "filter": { "g": "At Work" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 45, "card": { "w": "colleague", "mt": "เพื่อนร่วมงาน" }, "story_after_th": "เพื่อนร่วมงานเป็นกันเอง คุณเริ่มรู้สึกเป็นส่วนหนึ่ง" }
+          },
+          {
+            "id": "ch7_s2", "title_th": "สำนวนในออฟฟิศ",
+            "beat": { "narrator_th": "ที่ทำงานเต็มไปด้วยสำนวน ต้องเติมให้ถูกถึงจะเข้าใจเพื่อน", "npc": { "en": "We need to wrap this up by the ___.", "th": "เราต้องทำให้เสร็จภายใน ___" } },
+            "encounters": [ { "game": "idiomfill", "label_th": "เติมสำนวน", "pass": { "minScore": 3 } } ],
+            "reward": { "xp": 45, "card": { "w": "deadline", "mt": "เส้นตาย / กำหนดส่ง" }, "story_after_th": "คุณเริ่มเข้าใจมุกและสำนวนของเพื่อนร่วมงานแล้ว" }
+          },
+          {
+            "id": "ch7_s3", "title_th": "จำงานที่ได้รับ",
+            "beat": { "narrator_th": "หัวหน้ามอบหมายหลายอย่าง จำให้แม่นก่อนลืม!", "npc": { "en": "Try to remember these tasks for today.", "th": "จำงานเหล่านี้สำหรับวันนี้ให้ได้นะ" } },
+            "encounters": [ { "game": "memory", "label_th": "จับคู่ความจำ", "pass": { "minScore": 60 } } ],
+            "reward": { "xp": 45, "card": { "w": "task", "mt": "งานที่ได้รับมอบหมาย" }, "story_after_th": "จำได้ครบ ทำงานได้ไม่มีตกหล่น" }
+          },
+          {
+            "id": "ch7_s4", "title_th": "ประชุมออนไลน์",
+            "beat": { "narrator_th": "ประชุมทางวิดีโอครั้งแรก ต้องพูดให้ชัดและตอบให้ตรงประเด็น", "npc": { "en": "Can everyone hear me okay?", "th": "ทุกคนได้ยินผมชัดไหมครับ?" } },
+            "encounters": [ { "game": "dialogue", "label_th": "ร่วมประชุมออนไลน์", "filter": { "g": "Meetings & Video Calls" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 45, "card": { "w": "meeting", "mt": "การประชุม" }, "story_after_th": "คุณพูดในที่ประชุมได้ราบรื่นกว่าที่กลัวไว้เยอะ" }
+          },
+          {
+            "id": "ch7_s5", "title_th": "เสนอไอเดียในที่ประชุม", "boss": true,
+            "beat": { "narrator_th": "ด่านท้ายบท — ถึงตาคุณเสนอไอเดีย! พูดให้เป็นทางการและเลือกคำให้คม", "npc": { "en": "You have the floor. What's your proposal?", "th": "เชิญคุณเลย ข้อเสนอของคุณคืออะไร?" } },
+            "encounters": [
+              { "game": "dialogue", "label_th": "เสนอไอเดีย", "filter": { "g": "Meetings & Video Calls" }, "pass": { "minScore": 1, "oneScene": true } },
+              { "game": "sharper", "label_th": "เลือกคำที่คมกว่า", "pass": { "minScore": 3 } }
+            ],
+            "reward": { "xp": 85, "card": { "w": "report", "mt": "รายงาน" }, "story_after_th": "\"Great idea!\" หัวหน้าพยักหน้าเห็นด้วย คุณภูมิใจในตัวเอง บทที่ 7 จบ" }
+          }
+        ]
+      },
+      {
+        "id": "ch8", "icon": "🏥", "title_th": "เพื่อน & เหตุฉุกเฉิน",
+        "intro_th": "ชีวิตเริ่มลงตัว มีเพื่อน มีงาน — แต่เมืองใหม่ก็มีเรื่องไม่คาดฝันรออยู่",
+        "stages": [
+          {
+            "id": "ch8_s1", "title_th": "คุยเล่นกับเพื่อน",
+            "beat": { "narrator_th": "เพื่อนชวนไปเที่ยวสุดสัปดาห์ คุยเล่นให้ลื่นไหลเข้าไว้", "npc": { "en": "Any plans for the weekend?", "th": "มีแผนอะไรช่วงสุดสัปดาห์ไหม?" } },
+            "encounters": [ { "game": "dialogue", "label_th": "คุยเล่นกับเพื่อน", "filter": { "g": "Small Talk" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 45, "card": { "w": "weekend", "mt": "สุดสัปดาห์" }, "story_after_th": "คุณมีนัดกับเพื่อนแล้ว ชีวิตในเมืองใหม่อบอุ่นขึ้นเยอะ" }
+          },
+          {
+            "id": "ch8_s2", "title_th": "ฟังเพื่อนชวน",
+            "beat": { "narrator_th": "เพื่อนพูดคำใหม่ๆ ฟังให้ดีแล้วสะกดตาม", "npc": { "en": "Let's grab a coffee later!", "th": "ไว้ไปกินกาแฟกันนะ!" } },
+            "encounters": [ { "game": "echo", "label_th": "ฟังเสียงแล้วสะกด", "pass": { "minScore": 3 } } ],
+            "reward": { "xp": 45, "card": { "w": "invite", "mt": "คำเชิญ / การชวน" }, "story_after_th": "คุณฟังสำเนียงเจ้าถิ่นออกมากขึ้นทุกวัน" }
+          },
+          {
+            "id": "ch8_s3", "title_th": "ไม่สบาย ไปหาหมอ",
+            "beat": { "narrator_th": "ตื่นมาไม่สบาย ต้องไปคลินิก อธิบายอาการให้หมอเข้าใจ", "npc": { "en": "What seems to be the problem today?", "th": "วันนี้มีอาการอะไรบ้างคะ?" } },
+            "encounters": [ { "game": "dialogue", "label_th": "อธิบายอาการกับหมอ", "filter": { "g": "Health & Doctor" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 50, "card": { "w": "symptom", "mt": "อาการ" }, "story_after_th": "\"Take this twice a day.\" คุณได้ยาและคำแนะนำครบถ้วน" }
+          },
+          {
+            "id": "ch8_s4", "title_th": "คิดเร็วตอนฉุกเฉิน",
+            "beat": { "narrator_th": "สถานการณ์ตึงเครียด! ต้องคิดคำให้ไว ตอบผิดจบเลย — ปีนหอคอยให้สูงที่สุด", "npc": { "en": "Stay calm and think fast!", "th": "ใจเย็นๆ แล้วคิดให้ไว!" } },
+            "encounters": [ { "game": "tower", "label_th": "คิดเร็วเอาชีวิตรอด", "pass": { "minScore": 3 } } ],
+            "reward": { "xp": 50, "card": { "w": "emergency", "mt": "เหตุฉุกเฉิน" }, "story_after_th": "คุณตั้งสติได้ทันเวลา" }
+          },
+          {
+            "id": "ch8_s5", "title_th": "โทรแจ้งเหตุฉุกเฉิน", "boss": true,
+            "beat": { "narrator_th": "ด่านท้ายบท — เพื่อนบาดเจ็บ! ต้องโทรแจ้งเหตุให้ชัดเจนและรวดเร็ว ทุกคำมีความหมาย", "npc": { "en": "Emergency services. What's your emergency?", "th": "ศูนย์ฉุกเฉินค่ะ เกิดเหตุอะไรคะ?" } },
+            "encounters": [ { "game": "dialogue", "label_th": "แจ้งเหตุฉุกเฉิน", "filter": { "g": "Emergencies" }, "pass": { "minScore": 1, "oneScene": true } } ],
+            "reward": { "xp": 90, "card": { "w": "ambulance", "mt": "รถพยาบาล" }, "story_after_th": "\"Help is on the way.\" คุณจัดการสถานการณ์ได้อย่างมืออาชีพ เพื่อนปลอดภัย บทที่ 8 จบ" }
+          }
+        ]
+      },
+      {
+        "id": "ch9", "icon": "🎓", "title_th": "บทสัมภาษณ์",
+        "intro_th": "วันที่รอคอยมาถึง — สัมภาษณ์เข้ามหาวิทยาลัย บททดสอบสุดท้ายของการเดินทางครั้งนี้",
+        "stages": [
+          {
+            "id": "ch9_s1", "title_th": "เตรียมตัว",
+            "beat": { "narrator_th": "คืนก่อนสัมภาษณ์ ซ้อมเลือกคำที่ทำให้คุณฟังดูมั่นใจและตรงประเด็น", "npc": { "en": "First impressions matter. Choose your words well.", "th": "ความประทับใจแรกสำคัญ เลือกคำพูดให้ดี" } },
+            "encounters": [ { "game": "sharper", "label_th": "เลือกคำที่คมกว่า", "pass": { "minScore": 3 } } ],
+            "reward": { "xp": 50, "card": { "w": "confident", "mt": "มั่นใจ" }, "story_after_th": "คุณซ้อมจนคำพูดคล่องปาก" }
+          },
+          {
+            "id": "ch9_s2", "title_th": "คำศัพท์วิชาการ",
+            "beat": { "narrator_th": "การสัมภาษณ์เข้ามหาลัยต้องใช้คำเชิงวิชาการ เรียงตามระดับความเป็นทางการ", "npc": { "en": "Why did you choose this field of study?", "th": "ทำไมถึงเลือกเรียนสาขานี้?" } },
+            "encounters": [ { "game": "worddial", "label_th": "เรียงคำตามระดับ", "pass": { "minScore": 2 } } ],
+            "reward": { "xp": 50, "card": { "w": "academic", "mt": "เชิงวิชาการ" }, "story_after_th": "คลังคำวิชาการของคุณพร้อมแล้ว" }
+          },
+          {
+            "id": "ch9_s3", "title_th": "เรียบเรียงคำตอบ",
+            "beat": { "narrator_th": "คำตอบที่ดีต้องมีโครงสร้างชัด ต่อประโยคให้ไหลลื่นแบบ Band 7+", "npc": { "en": "Tell me about a challenge you overcame.", "th": "เล่าถึงอุปสรรคที่คุณเคยฝ่าฟันมา" } },
+            "encounters": [ { "game": "frame", "label_th": "ต่อประโยคตามโครง", "pass": { "minScore": 2 } } ],
+            "reward": { "xp": 50, "card": { "w": "fluent", "mt": "คล่องแคล่ว / พูดคล่อง" }, "story_after_th": "คุณเรียบเรียงความคิดเป็นภาษาอังกฤษได้ลื่นไหล" }
+          },
+          {
+            "id": "ch9_s4", "title_th": "ตอบให้ไว",
+            "beat": { "narrator_th": "ในห้องสัมภาษณ์ต้องคิดและตอบให้ไว ไม่มีเวลาลังเล", "npc": { "en": "Quick — what's your greatest strength?", "th": "เร็วๆ — จุดแข็งที่สุดของคุณคืออะไร?" } },
+            "encounters": [ { "game": "sprint", "label_th": "ตอบให้ไว", "pass": { "minScore": 6 } } ],
+            "reward": { "xp": 55, "card": { "w": "impress", "mt": "สร้างความประทับใจ" }, "story_after_th": "คุณตอบได้ฉับไวจนกรรมการพยักหน้า" }
+          },
+          {
+            "id": "ch9_s5", "title_th": "สัมภาษณ์เข้ามหาวิทยาลัย", "boss": true,
+            "beat": { "narrator_th": "ด่านสุดท้ายของการเดินทาง! การสัมภาษณ์จริง — รวมทุกอย่างที่เรียนมา ตอบให้เต็มที่ นี่คือบททดสอบแบบ IELTS Speaking ตัวจริง", "npc": { "en": "Welcome. Are you ready to begin the interview?", "th": "ยินดีต้อนรับ พร้อมเริ่มสัมภาษณ์หรือยังคะ?" } },
+            "encounters": [
+              { "game": "sharper", "label_th": "เลือกคำให้คม", "pass": { "minScore": 4 } },
+              { "game": "dialogue", "label_th": "สัมภาษณ์รอบสุดท้าย", "filter": { "g": "Job Interview" }, "pass": { "minScore": 1, "oneScene": true } }
+            ],
+            "reward": { "xp": 150, "card": { "w": "admission", "mt": "การรับเข้าศึกษา" }, "story_after_th": "\"Congratulations — you're accepted!\" 🎓 คุณทำได้แล้ว! จากคนที่พูดอังกฤษกระท่อนกระแท่นในวันแรก สู่วันที่สอบผ่านสัมภาษณ์เข้ามหาวิทยาลัย นี่คือปลายทางของการเดินทาง 'เมืองปลายทาง' — แต่เป็นจุดเริ่มต้นของชีวิตใหม่ของคุณ 🌟" }
           }
         ]
       }
