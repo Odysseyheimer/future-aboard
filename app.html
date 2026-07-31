@@ -1800,6 +1800,58 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 .fm-sub { font-size: 13px; color: var(--text); margin: 0 2px 14px; line-height: 1.6; }
 .fm-sub b { color: var(--accent); }
 
+/* top tabs */
+.fm-tabs { display: flex; gap: 6px; margin: 8px 0 12px; background: var(--surface2); border-radius: 13px; padding: 4px; }
+.fm-tab { flex: 1; font-family: var(--font); font-size: 13px; font-weight: 800; color: var(--muted); background: none; border: none; border-radius: 10px; padding: 9px 4px; cursor: pointer; }
+.fm-tab.on { background: var(--accent); color: var(--accent-ink); box-shadow: var(--shadow); }
+
+/* word list (tab 2) */
+.fm-wlist { display: flex; flex-direction: column; gap: 9px; }
+.fm-wrow { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid #2563eb; border-radius: 13px; padding: 11px 13px; box-shadow: var(--shadow); }
+.fm-wrow-top { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.fm-wrow-w { font-size: 17px; font-weight: 900; color: #2563eb; }
+.fm-wrow-th { font-size: 13px; color: var(--text); }
+.fm-learned { font-size: 11px; font-weight: 800; color: var(--know); margin-left: auto; }
+.fm-wrow-base { font-size: 12px; color: var(--muted); margin: 3px 0; }
+.fm-wrow-base b { color: var(--text); }
+.fm-wrow-badges { display: flex; gap: 6px; margin: 5px 0; flex-wrap: wrap; }
+.fm-wrow-note { font-size: 12.5px; color: var(--text); line-height: 1.5; }
+.fm-wrow-eg { font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.5; font-style: italic; }
+.fm-wrow-egth { display: block; font-size: 12px; color: var(--muted); font-style: normal; margin-top: 2px; }
+
+/* flashcards (tab 3) */
+.fm-cd-lab { font-size: 12.5px; font-weight: 800; color: var(--muted); margin: 12px 2px 6px; }
+.fm-cd-count { font-size: 13px; color: var(--text); text-align: center; margin: 14px 2px 12px; }
+.fm-cd-count b { color: var(--accent); font-size: 16px; }
+.fm-cd-start { display: block; width: 100%; font-family: var(--font); font-size: 16px; font-weight: 800; color: var(--accent-ink);
+  background: var(--accent); border: none; border-radius: 15px; padding: 15px; cursor: pointer; box-shadow: var(--shadow); }
+.fm-cd-start:active { transform: scale(.99); }
+.fm-cd-exit { display: block; width: 100%; background: none; border: none; color: var(--muted); font-family: var(--font); font-size: 13px; font-weight: 700; padding: 12px; cursor: pointer; }
+.fm-cd-bar { height: 8px; background: var(--surface2); border-radius: 999px; overflow: hidden; margin: 4px 0; }
+.fm-cd-fill { height: 100%; background: var(--accent); border-radius: 999px; transition: width .25s; }
+.fm-cd-prog { font-size: 12px; color: var(--muted); text-align: center; margin-bottom: 12px; }
+.fm-card { background: var(--surface); border: 1.5px solid var(--border); border-radius: 20px; box-shadow: var(--shadow); padding: 26px 18px; text-align: center; min-height: 200px; }
+.fm-card-front { cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.fm-card-hint { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+.fm-card-w { font-size: 34px; font-weight: 900; color: #2563eb; word-break: break-word; }
+.fm-card-badges { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+.fm-card-w2 { font-size: 24px; font-weight: 900; color: #2563eb; }
+.fm-card-th { font-size: 18px; font-weight: 700; color: var(--text); margin: 6px 0 8px; }
+.fm-card-base { font-size: 13px; color: var(--muted); }
+.fm-card-base b { color: var(--text); }
+.fm-card-note { font-size: 13.5px; color: var(--text); line-height: 1.55; margin-top: 12px; text-align: left; }
+.fm-card-eg { font-size: 14px; color: var(--text); font-style: italic; margin-top: 12px; text-align: left; background: var(--surface2); border-radius: 12px; padding: 10px 12px; }
+.fm-card-egth { font-size: 12.5px; color: var(--muted); font-style: normal; margin-top: 3px; }
+.fm-cd-flipbtn { display: block; width: 100%; font-family: var(--font); font-size: 15px; font-weight: 800; color: var(--accent-ink); background: var(--accent); border: none; border-radius: 14px; padding: 14px; margin-top: 14px; cursor: pointer; box-shadow: var(--shadow); }
+.fm-cd-rate { display: flex; gap: 10px; margin-top: 14px; }
+.fm-cd-again2 { flex: 1; font-family: var(--font); font-size: 15px; font-weight: 800; color: var(--text); background: var(--surface2); border: 1.5px solid var(--border); border-radius: 14px; padding: 14px; cursor: pointer; }
+.fm-cd-got { flex: 1; font-family: var(--font); font-size: 15px; font-weight: 800; color: #fff; background: #16a34a; border: none; border-radius: 14px; padding: 14px; cursor: pointer; box-shadow: var(--shadow); }
+.fm-cd-rate button:active { transform: scale(.98); }
+.fm-cd-done { text-align: center; padding: 30px 16px; }
+.fm-cd-done-i { font-size: 46px; }
+.fm-cd-done-h { font-size: 22px; font-weight: 900; margin-top: 4px; }
+.fm-cd-done-s { font-size: 15px; color: var(--accent); font-weight: 800; margin: 6px 0 18px; }
+
 .fm-transbtn { display: block; width: 100%; font-family: var(--font); font-size: 14px; font-weight: 800; color: var(--accent-ink);
   background: var(--accent); border: none; border-radius: 14px; padding: 12px; margin-bottom: 12px; cursor: pointer; box-shadow: var(--shadow); }
 .fm-transbtn:active { transform: scale(.99); }
@@ -9989,21 +10041,26 @@ PT.campaign = (function () {
 })();
 
 /* ===== module: formal ===== */
-/* formal.js — "เขียนอังกฤษให้มืออาชีพ" (PT.formal): a normal -> formal English map.
-   Simple everyday verbs (give, ask, fix...) mapped to their formal business + technical
-   forms, with Thai glosses on every word, Thai translations under every example, and a
-   per-word "when to use this one" note. Hidden mode "formal" (like PT.structure). ES5.
-   Data: data/formal.json (lazy). Uses S, esc, store, speak, goMode. */
+/* formal.js — "เขียนอังกฤษให้มืออาชีพ" (PT.formal): normal -> formal English map.
+   3 tabs: MAP (verb -> formal family), LIST (all formal words + explanation),
+   FLASHCARDS (flip & drill). Plus a translate-to-formal helper. Hidden mode "formal"
+   (like PT.structure). ES5. Data: data/formal.json (lazy). Uses S, esc, store, speak, goMode. */
 PT.formal = (function () {
   "use strict";
   var DATA = null;        // loaded formal.json
-  var view = "list";      // list | detail | translate
-  var q = "";             // search query
-  var theme = "";         // active theme filter ("" = all)
+  var flat = null;        // flattened, deduped formal words (for list + cards)
+  var tab = "map";        // map | list | cards
+  var view = "";          // "" = tab shell ; detail ; translate
+  var q = "";             // map search
+  var lq = "";            // list search
+  var theme = "";         // map theme filter
+  var lctx = "";          // list context filter ("", business, technical)
   var cur = null;         // current entry (detail)
+  var CD = { on: false, queue: [], flip: false, learned: 0, total: 0, ctx: "", theme: "" };
 
   function V() { return document.getElementById("view"); }
-  function norm(s) { return String(s || "").toLowerCase(); }
+  function norm(s) { return String(s || "").toLowerCase().replace(/[^a-z]/g, ""); }
+  function low(s) { return String(s || "").toLowerCase(); }
 
   var THEMES = [
     { id: "", ic: "📚", th: "ทั้งหมด" },
@@ -10019,9 +10076,9 @@ PT.formal = (function () {
   ];
   var THEME_TH = {}; (function () { for (var i = 0; i < THEMES.length; i++) THEME_TH[THEMES[i].id] = THEMES[i].th; })();
   var USE = {
-    business: { th: "ธุรกิจ / อีเมล", cls: "fm-u-biz" },
-    technical: { th: "เทคนิค / โค้ด", cls: "fm-u-tech" },
-    both: { th: "ใช้ได้ทั้งคู่", cls: "fm-u-both" }
+    business: { th: "ธุรกิจ / อีเมล", cls: "fm-u-biz", ic: "💼" },
+    technical: { th: "เทคนิค / โค้ด", cls: "fm-u-tech", ic: "⚙️" },
+    both: { th: "ใช้ได้ทั้งคู่", cls: "fm-u-both", ic: "🔵" }
   };
   var LEVEL = {
     neutral: { th: "กลางๆ", cls: "fm-l-n" },
@@ -10031,8 +10088,32 @@ PT.formal = (function () {
 
   function fetchData(cb) {
     if (DATA) { cb(); return; }
-    fetch("data/formal.json").then(function (r) { return r.json(); }).then(function (j) { DATA = j || []; cb(); }).catch(function () { DATA = null; cb(); });
+    fetch("data/formal.json").then(function (r) { return r.json(); }).then(function (j) { DATA = j || []; buildFlat(); cb(); }).catch(function () { DATA = null; cb(); });
   }
+  // flatten every formal word (deduped by word) with its context + an example
+  function buildFlat() {
+    flat = []; var seen = {}, i, k;
+    for (i = 0; i < DATA.length; i++) {
+      var e = DATA[i], fam = e.family || [];
+      for (k = 0; k < fam.length; k++) {
+        var f = fam[k], key = norm(f.w);
+        if (!key || seen[key]) continue; seen[key] = 1;
+        var eg = "", egth = "";
+        var blocks = [e.biz, e.tech];
+        for (var b = 0; b < blocks.length; b++) {
+          var bl = blocks[b];
+          if (bl && bl.eg_formal && low(bl.eg_formal).indexOf(low(f.w)) >= 0) { eg = bl.eg_formal; egth = bl.eg_formal_th; break; }
+        }
+        if (!eg) { var any = e.biz || e.tech; if (any) { eg = any.eg_formal; egth = any.eg_formal_th; } }
+        flat.push({ key: key, w: f.w, th: f.th, use: f.use, level: f.level, note: f.note_en, base: e.base, base_th: e.base_th, theme: e.theme, eg: eg, egth: egth });
+      }
+    }
+  }
+
+  /* ---------- learned store ---------- */
+  function known() { try { return JSON.parse(store.get("pt_fvocab") || "{}"); } catch (e) { return {}; } }
+  function setKnown(k) { var o = known(); o[k] = 1; try { store.set("pt_fvocab", JSON.stringify(o)); } catch (e) {} }
+  function knownCount() { var o = known(), n = 0, x; for (x in o) if (o.hasOwnProperty(x)) n++; return n; }
 
   /* ---------- dispatch ---------- */
   function render(v) {
@@ -10042,59 +10123,179 @@ PT.formal = (function () {
   function paint(v) {
     if (view === "detail") return renderDetail(v);
     if (view === "translate") return renderTranslate(v);
-    return renderList(v);
+    return renderShell(v);
   }
-
-  /* ---------- list / browse ---------- */
-  function match(e) {
-    if (theme && e.theme !== theme) return false;
-    if (!q) return true;
-    var hay = norm(e.base) + " " + norm(e.base_th);
-    for (var i = 0; i < (e.family || []).length; i++) hay += " " + norm(e.family[i].w) + " " + norm(e.family[i].th);
-    return hay.indexOf(norm(q)) >= 0;
-  }
-  function renderList(v) {
-    var list = DATA.filter(match);
+  function renderShell(v) {
     var h = ['<div class="fm-wrap">'];
     h.push('<div class="fm-hero">✒️ เขียนอังกฤษให้มืออาชีพ</div>');
-    h.push('<div class="fm-sub">คำง่ายๆ กลายเป็นคำทางการยังไง ทั้งสาย <b>ธุรกิจ/อีเมล</b> และ <b>เทคนิค/โค้ด</b> — มีคำแปลไทยทุกคำ</div>');
+    h.push('<div class="fm-tabs">' +
+      '<button class="fm-tab' + (tab === "map" ? " on" : "") + '" data-tab="map">🗺️ แผนที่คำ</button>' +
+      '<button class="fm-tab' + (tab === "list" ? " on" : "") + '" data-tab="list">📋 รายการคำ</button>' +
+      '<button class="fm-tab' + (tab === "cards" ? " on" : "") + '" data-tab="cards">🎴 แฟลชการ์ด</button></div>');
+    h.push('<div id="fm-body"></div></div>');
+    v.innerHTML = h.join("");
+    [].forEach.call(v.querySelectorAll("[data-tab]"), function (b) { b.onclick = function () { tab = b.getAttribute("data-tab"); CD.on = false; renderShell(v); }; });
+    paintBody(v);
+  }
+  function paintBody(v) {
+    var body = v.querySelector("#fm-body"); if (!body) return;
+    if (tab === "list") return renderList(body, v);
+    if (tab === "cards") return renderCards(body, v);
+    return renderMap(body, v);
+  }
+
+  /* ============ TAB 1: MAP (verb -> family) ============ */
+  function matchMap(e) {
+    if (theme && e.theme !== theme) return false;
+    if (!q) return true;
+    var hay = low(e.base) + " " + low(e.base_th);
+    for (var i = 0; i < (e.family || []).length; i++) hay += " " + low(e.family[i].w) + " " + low(e.family[i].th);
+    return hay.indexOf(low(q)) >= 0;
+  }
+  function renderMap(body, v) {
+    var list = DATA.filter(matchMap);
+    var h = [];
+    h.push('<div class="fm-sub">คำง่ายๆ กลายเป็นคำทางการยังไง ทั้งสาย <b>ธุรกิจ</b> และ <b>เทคนิค</b> — แตะดูตระกูลคำ</div>');
     h.push('<button class="fm-transbtn" data-fm-trans="1">🪄 แปลประโยคของฉันให้เป็นทางการ</button>');
-    h.push('<input class="fm-search" id="fm-q" type="text" autocomplete="off" placeholder="ค้นหาคำ เช่น give, ask, fix, ขอ, แก้…" value="' + esc(q) + '">');
+    h.push('<input class="fm-search" id="fm-q" type="text" autocomplete="off" placeholder="ค้นหา เช่น give, ask, fix, ขอ, แก้…" value="' + esc(q) + '">');
     h.push('<div class="fm-chips">');
-    for (var i = 0; i < THEMES.length; i++) {
-      var t = THEMES[i];
-      h.push('<button class="fm-chip' + (theme === t.id ? " on" : "") + '" data-fm-theme="' + t.id + '">' + t.ic + ' ' + esc(t.th) + '</button>');
-    }
-    h.push('</div>');
-    h.push('<div class="fm-count">' + list.length + ' คำ</div>');
-    h.push('<div class="fm-list">');
+    for (var i = 0; i < THEMES.length; i++) h.push('<button class="fm-chip' + (theme === THEMES[i].id ? " on" : "") + '" data-fm-theme="' + THEMES[i].id + '">' + THEMES[i].ic + ' ' + esc(THEMES[i].th) + '</button>');
+    h.push('</div><div class="fm-count">' + list.length + ' คำหลัก</div><div class="fm-list">');
     for (i = 0; i < list.length; i++) {
-      var e = list[i];
-      var fam = (e.family || []).slice(0, 3).map(function (f) { return esc(f.w); }).join(" · ");
-      h.push('<button class="fm-item" data-fm-base="' + esc(e.base) + '">' +
-        '<div class="fm-item-top"><span class="fm-item-base">' + esc(e.base) + '</span><span class="fm-item-th">' + esc(e.base_th) + '</span></div>' +
-        '<div class="fm-item-fam">→ ' + fam + ((e.family || []).length > 3 ? ' …' : '') + '</div></button>');
+      var e = list[i], fam = (e.family || []).slice(0, 3).map(function (f) { return esc(f.w); }).join(" · ");
+      h.push('<button class="fm-item" data-fm-base="' + esc(e.base) + '"><div class="fm-item-top"><span class="fm-item-base">' + esc(e.base) + '</span><span class="fm-item-th">' + esc(e.base_th) + '</span></div><div class="fm-item-fam">→ ' + fam + ((e.family || []).length > 3 ? ' …' : '') + '</div></button>');
     }
     if (!list.length) h.push('<div class="fm-load">ไม่พบคำที่ค้นหา</div>');
-    h.push('</div></div>');
-    v.innerHTML = h.join("");
-    var qi = v.querySelector("#fm-q");
-    if (qi) qi.oninput = function () { q = qi.value; var pos = qi.selectionStart; renderList(v); var q2 = v.querySelector("#fm-q"); if (q2) { q2.focus(); try { q2.setSelectionRange(pos, pos); } catch (e) {} } };
-    [].forEach.call(v.querySelectorAll("[data-fm-theme]"), function (b) { b.onclick = function () { theme = b.getAttribute("data-fm-theme"); renderList(v); }; });
-    [].forEach.call(v.querySelectorAll("[data-fm-base]"), function (b) { b.onclick = function () { cur = find(b.getAttribute("data-fm-base")); view = "detail"; paint(v); }; });
-    var tb = v.querySelector("[data-fm-trans]"); if (tb) tb.onclick = function () { view = "translate"; paint(v); };
+    h.push('</div>');
+    body.innerHTML = h.join("");
+    var qi = body.querySelector("#fm-q");
+    if (qi) qi.oninput = function () { q = qi.value; var p = qi.selectionStart; renderMap(body, v); var q2 = body.querySelector("#fm-q"); if (q2) { q2.focus(); try { q2.setSelectionRange(p, p); } catch (e) {} } };
+    [].forEach.call(body.querySelectorAll("[data-fm-theme]"), function (b) { b.onclick = function () { theme = b.getAttribute("data-fm-theme"); renderMap(body, v); }; });
+    [].forEach.call(body.querySelectorAll("[data-fm-base]"), function (b) { b.onclick = function () { cur = find(b.getAttribute("data-fm-base")); view = "detail"; paint(v); }; });
+    var tb = body.querySelector("[data-fm-trans]"); if (tb) tb.onclick = function () { view = "translate"; paint(v); };
   }
   function find(base) { for (var i = 0; i < DATA.length; i++) if (DATA[i].base === base) return DATA[i]; return null; }
 
-  /* ---------- detail ---------- */
+  /* ============ TAB 2: LIST (all formal words) ============ */
+  function useBadge(u) { var x = USE[u] || USE.both; return '<span class="fm-badge ' + x.cls + '">' + x.ic + ' ' + x.th + '</span>'; }
+  function lvBadge(l) { var x = LEVEL[l] || LEVEL.formal; return '<span class="fm-badge ' + x.cls + '">' + x.th + '</span>'; }
+  function matchList(f) {
+    if (lctx && f.use !== lctx && f.use !== "both") return false;
+    if (!lq) return true;
+    return (low(f.w) + " " + low(f.th) + " " + low(f.base) + " " + low(f.base_th)).indexOf(low(lq)) >= 0;
+  }
+  function renderList(body, v) {
+    var list = flat.filter(matchList);
+    var h = [];
+    h.push('<div class="fm-sub">คำทางการทั้งหมด ' + flat.length + ' คำ — จำได้แล้ว ' + knownCount() + ' คำ</div>');
+    h.push('<input class="fm-search" id="fm-lq" type="text" autocomplete="off" placeholder="ค้นหาคำทางการ เช่น provide, resolve…" value="' + esc(lq) + '">');
+    h.push('<div class="fm-chips">' +
+      '<button class="fm-chip' + (lctx === "" ? " on" : "") + '" data-fm-ctx="">📚 ทั้งหมด</button>' +
+      '<button class="fm-chip' + (lctx === "business" ? " on" : "") + '" data-fm-ctx="business">💼 ธุรกิจ</button>' +
+      '<button class="fm-chip' + (lctx === "technical" ? " on" : "") + '" data-fm-ctx="technical">⚙️ เทคนิค</button></div>');
+    h.push('<div class="fm-count">' + list.length + ' คำ</div><div class="fm-wlist">');
+    for (var i = 0; i < list.length; i++) {
+      var f = list[i];
+      h.push('<div class="fm-wrow">' +
+        '<div class="fm-wrow-top"><span class="fm-wrow-w">' + esc(f.w) + '</span>' + sayBtn(f.w) + '<span class="fm-wrow-th">' + esc(f.th) + '</span>' + (known()[f.key] ? '<span class="fm-learned">✓ จำแล้ว</span>' : '') + '</div>' +
+        '<div class="fm-wrow-base">ทางการของ <b>' + esc(f.base) + '</b> (' + esc(f.base_th) + ')</div>' +
+        '<div class="fm-wrow-badges">' + useBadge(f.use) + lvBadge(f.level) + '</div>' +
+        '<div class="fm-wrow-note">' + esc(f.note) + '</div>' +
+        (f.eg ? '<div class="fm-wrow-eg">“' + esc(f.eg) + '” ' + sayBtn(f.eg) + '<span class="fm-wrow-egth">' + esc(f.egth) + '</span></div>' : '') +
+        '</div>');
+    }
+    if (!list.length) h.push('<div class="fm-load">ไม่พบคำที่ค้นหา</div>');
+    h.push('</div>');
+    body.innerHTML = h.join("");
+    var qi = body.querySelector("#fm-lq");
+    if (qi) qi.oninput = function () { lq = qi.value; var p = qi.selectionStart; renderList(body, v); var q2 = body.querySelector("#fm-lq"); if (q2) { q2.focus(); try { q2.setSelectionRange(p, p); } catch (e) {} } };
+    [].forEach.call(body.querySelectorAll("[data-fm-ctx]"), function (b) { b.onclick = function () { lctx = b.getAttribute("data-fm-ctx"); renderList(body, v); }; });
+    wireSay(body);
+  }
+
+  /* ============ TAB 3: FLASHCARDS ============ */
+  function cardScope() {
+    return flat.filter(function (f) {
+      if (CD.ctx && f.use !== CD.ctx && f.use !== "both") return false;
+      if (CD.theme && f.theme !== CD.theme) return false;
+      return true;
+    });
+  }
+  function renderCards(body, v) {
+    if (CD.on) return renderPlayer(body, v);
+    var pool = cardScope();
+    var h = [];
+    h.push('<div class="fm-sub">พลิกการ์ดท่องคำทางการ เลือกขอบเขตแล้วเริ่มเล่นได้เลย</div>');
+    h.push('<div class="fm-cd-lab">บริบท</div><div class="fm-chips">' +
+      '<button class="fm-chip' + (CD.ctx === "" ? " on" : "") + '" data-cd-ctx="">📚 ทั้งหมด</button>' +
+      '<button class="fm-chip' + (CD.ctx === "business" ? " on" : "") + '" data-cd-ctx="business">💼 ธุรกิจ</button>' +
+      '<button class="fm-chip' + (CD.ctx === "technical" ? " on" : "") + '" data-cd-ctx="technical">⚙️ เทคนิค</button></div>');
+    h.push('<div class="fm-cd-lab">หมวด</div><div class="fm-chips">');
+    for (var i = 0; i < THEMES.length; i++) h.push('<button class="fm-chip' + (CD.theme === THEMES[i].id ? " on" : "") + '" data-cd-theme="' + THEMES[i].id + '">' + THEMES[i].ic + ' ' + esc(THEMES[i].th) + '</button>');
+    h.push('</div>');
+    h.push('<div class="fm-cd-count">การ์ดในชุดนี้: <b>' + pool.length + '</b> คำ · จำได้แล้วรวม ' + knownCount() + ' คำ</div>');
+    h.push('<button class="fm-cd-start" data-cd-start="1">🎴 เริ่มเล่นแฟลชการ์ด</button>');
+    body.innerHTML = h.join("");
+    [].forEach.call(body.querySelectorAll("[data-cd-ctx]"), function (b) { b.onclick = function () { CD.ctx = b.getAttribute("data-cd-ctx"); renderCards(body, v); }; });
+    [].forEach.call(body.querySelectorAll("[data-cd-theme]"), function (b) { b.onclick = function () { CD.theme = b.getAttribute("data-cd-theme"); renderCards(body, v); }; });
+    var sb = body.querySelector("[data-cd-start]"); if (sb) sb.onclick = function () { startCards(pool, v); };
+  }
+  function startCards(pool, v) {
+    if (!pool.length) return;
+    CD.queue = shuffle(pool.slice()); CD.flip = false; CD.learned = 0; CD.total = CD.queue.length; CD.on = true;
+    renderShell(v);
+  }
+  function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function renderPlayer(body, v) {
+    if (!CD.queue.length) {
+      body.innerHTML = '<div class="fm-cd-done"><div class="fm-cd-done-i">🎉</div><div class="fm-cd-done-h">จบชุด!</div>' +
+        '<div class="fm-cd-done-s">จำได้ ' + CD.learned + ' / ' + CD.total + ' คำ</div>' +
+        '<button class="fm-cd-start" data-cd-again="1">เล่นอีกชุด</button><button class="fm-cd-exit" data-cd-exit="1">‹ กลับ</button></div>';
+      body.querySelector("[data-cd-again]").onclick = function () { CD.on = false; renderShell(v); };
+      body.querySelector("[data-cd-exit]").onclick = function () { CD.on = false; renderShell(v); };
+      return;
+    }
+    var f = CD.queue[0], done = CD.total - CD.queue.length;
+    var h = [];
+    h.push('<div class="fm-cd-bar"><div class="fm-cd-fill" style="width:' + Math.round(done / CD.total * 100) + '%"></div></div>');
+    h.push('<div class="fm-cd-prog">' + done + ' / ' + CD.total + ' · จำได้ ' + CD.learned + '</div>');
+    if (!CD.flip) {
+      h.push('<div class="fm-card fm-card-front" data-cd-flip="1">' +
+        '<div class="fm-card-hint">คำทางการ · แตะเพื่อดูความหมาย</div>' +
+        '<div class="fm-card-w">' + esc(f.w) + '</div>' + sayBtn(f.w) +
+        '<div class="fm-card-badges">' + useBadge(f.use) + lvBadge(f.level) + '</div></div>');
+    } else {
+      h.push('<div class="fm-card fm-card-back">' +
+        '<div class="fm-card-w2">' + esc(f.w) + '</div>' +
+        '<div class="fm-card-th">' + esc(f.th) + '</div>' +
+        '<div class="fm-card-base">ทางการของ <b>' + esc(f.base) + '</b> (' + esc(f.base_th) + ')</div>' +
+        '<div class="fm-card-badges">' + useBadge(f.use) + lvBadge(f.level) + '</div>' +
+        '<div class="fm-card-note">' + esc(f.note) + '</div>' +
+        (f.eg ? '<div class="fm-card-eg">“' + esc(f.eg) + '” ' + sayBtn(f.eg) + '<div class="fm-card-egth">' + esc(f.egth) + '</div></div>' : '') +
+        '</div>');
+    }
+    if (!CD.flip) h.push('<button class="fm-cd-flipbtn" data-cd-flip="1">พลิกการ์ด</button>');
+    else h.push('<div class="fm-cd-rate"><button class="fm-cd-again2" data-cd-rate="0">🔁 ทวนอีก</button><button class="fm-cd-got" data-cd-rate="1">✓ จำได้แล้ว</button></div>');
+    h.push('<button class="fm-cd-exit" data-cd-exit="1">‹ ออกจากการเล่น</button>');
+    body.innerHTML = h.join("");
+    [].forEach.call(body.querySelectorAll("[data-cd-flip]"), function (b) { b.onclick = function () { CD.flip = true; renderPlayer(body, v); }; });
+    [].forEach.call(body.querySelectorAll("[data-cd-rate]"), function (b) { b.onclick = function () { rate(b.getAttribute("data-cd-rate") === "1", body, v); }; });
+    body.querySelector("[data-cd-exit]").onclick = function () { CD.on = false; renderShell(v); };
+    wireSay(body);
+  }
+  function rate(good, body, v) {
+    var f = CD.queue.shift();
+    if (good) { setKnown(f.key); CD.learned++; }
+    else { CD.queue.splice(Math.min(4, CD.queue.length), 0, f); }  // repeat soon
+    CD.flip = false;
+    renderPlayer(body, v);
+  }
+
+  /* ---------- detail (from map) ---------- */
   function sayBtn(txt) { return '<button class="fm-say" data-say="' + esc(txt) + '">🔊</button>'; }
   function famRow(f) {
-    var u = USE[f.use] || USE.both, lv = LEVEL[f.level] || LEVEL.formal;
-    return '<div class="fm-fam">' +
-      '<div class="fm-fam-top"><span class="fm-fam-w">' + esc(f.w) + '</span> ' + sayBtn(f.w) +
-      '<span class="fm-fam-th">' + esc(f.th) + '</span></div>' +
-      '<div class="fm-badges"><span class="fm-badge ' + u.cls + '">' + esc(u.th) + '</span>' +
-      '<span class="fm-badge ' + lv.cls + '">' + esc(lv.th) + '</span></div>' +
+    return '<div class="fm-fam"><div class="fm-fam-top"><span class="fm-fam-w">' + esc(f.w) + '</span> ' + sayBtn(f.w) +
+      '<span class="fm-fam-th">' + esc(f.th) + '</span></div><div class="fm-badges">' + useBadge(f.use) + lvBadge(f.level) + '</div>' +
       '<div class="fm-fam-note">' + esc(f.note_en) + '</div></div>';
   }
   function egBlock(title, ic, b) {
@@ -10104,7 +10305,7 @@ PT.formal = (function () {
       '<div class="fm-eg-row fm-eg-f"><span class="fm-eg-lab">ทางการ</span>' + esc(b.eg_formal) + ' ' + sayBtn(b.eg_formal) + '<div class="fm-eg-th">' + esc(b.eg_formal_th) + '</div></div></div>';
   }
   function renderDetail(v) {
-    var e = cur; if (!e) { view = "list"; return renderList(v); }
+    var e = cur; if (!e) { view = ""; return renderShell(v); }
     var h = ['<div class="fm-wrap">'];
     h.push('<button class="fm-back" data-fm-back="1">‹ กลับ</button>');
     h.push('<div class="fm-d-base">' + esc(e.base) + ' ' + sayBtn(e.base) + '<span class="fm-d-th">' + esc(e.base_th) + '</span></div>');
@@ -10115,11 +10316,11 @@ PT.formal = (function () {
     h.push(egBlock("เทคนิค / เอกสาร", "⚙️", e.tech));
     h.push('</div>');
     v.innerHTML = h.join("");
-    v.querySelector("[data-fm-back]").onclick = function () { view = "list"; paint(v); };
+    v.querySelector("[data-fm-back]").onclick = function () { view = ""; paint(v); };
     wireSay(v);
   }
 
-  /* ---------- translate-to-formal helper (copy prompt for Claude) ---------- */
+  /* ---------- translate helper ---------- */
   function renderTranslate(v) {
     var h = ['<div class="fm-wrap">'];
     h.push('<button class="fm-back" data-fm-back="1">‹ กลับ</button>');
@@ -10132,7 +10333,7 @@ PT.formal = (function () {
     h.push('<div class="fm-tip">เปิดแชท Claude แล้ววาง (paste) — Claude จะเขียนให้ทั้งเวอร์ชัน <b>ธุรกิจ/อีเมล</b> และ <b>เทคนิค/เอกสาร</b> พร้อมบอกว่าใช้คำทางการคำไหนและทำไม</div>');
     h.push('</div>');
     v.innerHTML = h.join("");
-    v.querySelector("[data-fm-back]").onclick = function () { view = "list"; paint(v); };
+    v.querySelector("[data-fm-back]").onclick = function () { view = ""; paint(v); };
     v.querySelector("[data-fm-copy]").onclick = function () {
       var ta = v.querySelector("#fm-ta"), txt = (ta && ta.value || "").trim();
       if (!txt) { setMsg(v, "พิมพ์ประโยคก่อนนะ"); return; }
@@ -10142,33 +10343,26 @@ PT.formal = (function () {
         "Keep it modern and natural. Do not use old-fashioned words.\n\nMy sentence: " + txt;
       var outEl = v.querySelector("#fm-out");
       if (outEl) { outEl.value = prompt; outEl.style.display = "block"; try { outEl.focus(); outEl.setSelectionRange(0, prompt.length); } catch (e) {} }
-      copyText(prompt, function (ok) { setMsg(v, ok ? "✓ คัดลอกแล้ว! เปิด Claude แล้ววางได้เลย" : "คัดลอกอัตโนมัติไม่ได้ — กดค้างที่กล่องข้างล่าง เลือกทั้งหมด แล้ว Copy แล้วเอาไปวางใน Claude"); });
+      copyText(prompt, function (ok) { setMsg(v, ok ? "✓ คัดลอกแล้ว! เปิด Claude แล้ววางได้เลย" : "คัดลอกอัตโนมัติไม่ได้ — กดค้างที่กล่องข้างล่าง เลือกทั้งหมด แล้ว Copy ไปวางใน Claude"); });
     };
   }
   function setMsg(v, m) { var el = v.querySelector("#fm-copymsg"); if (el) el.textContent = m; }
   function copyText(t, cb) {
-    try {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(t).then(function () { cb(true); }, function () { cb(fallbackCopy(t)); });
-        return;
-      }
-    } catch (e) {}
+    try { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(t).then(function () { cb(true); }, function () { cb(fallbackCopy(t)); }); return; } } catch (e) {}
     cb(fallbackCopy(t));
   }
   function fallbackCopy(t) {
     try {
       var ta = document.createElement("textarea"); ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0";
-      document.body.appendChild(ta); ta.focus(); ta.select();
-      var ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
-      document.body.removeChild(ta); return ok;
+      document.body.appendChild(ta); ta.focus(); ta.select(); var ok = false; try { ok = document.execCommand("copy"); } catch (e) {} document.body.removeChild(ta); return ok;
     } catch (e) { return false; }
   }
 
-  function wireSay(v) { [].forEach.call(v.querySelectorAll("[data-say]"), function (b) { b.onclick = function () { try { speak(b.getAttribute("data-say")); } catch (e) {} }; }); }
+  function wireSay(root) { [].forEach.call(root.querySelectorAll("[data-say]"), function (b) { b.onclick = function (ev) { ev.stopPropagation(); try { speak(b.getAttribute("data-say")); } catch (e) {} }; }); }
 
   return {
     render: render,
-    open: function () { view = "list"; goMode("formal"); },
+    open: function () { view = ""; goMode("formal"); },
     leave: function () {}
   };
 })();
