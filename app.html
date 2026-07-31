@@ -1244,6 +1244,7 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 .ph-game em { color: var(--accent-ink); opacity: .85; }
 .ph-camp { background: linear-gradient(135deg, var(--accent-soft), var(--surface)); border-color: var(--accent); }
 .ph-camp .ph-wic { background: var(--accent); color: var(--accent-ink); }
+.ph-formal .ph-wic { background: #2563eb; color: #fff; }
 
 /* structure.css */
 /* structure.css — โครงสร้างประโยค (sentence-structure resource) */
@@ -1790,6 +1791,81 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 .cm-alb-card { text-align: left; background: var(--surface); border: 1px solid var(--border); border-radius: 13px; padding: 13px; cursor: pointer; color: var(--text); font-family: var(--font); box-shadow: var(--shadow); }
 .cm-alb-card b { display: block; font-size: 15px; font-weight: 800; color: var(--accent); }
 .cm-alb-card em { font-style: normal; font-size: 12px; color: var(--muted); }
+
+/* formal.css */
+/* formal.css — "เขียนอังกฤษให้มืออาชีพ" (PT.formal). Prefix .fm- */
+.fm-wrap { padding: 6px 2px 20px; }
+.fm-load { text-align: center; color: var(--muted); padding: 40px 16px; font-size: 14px; }
+.fm-hero { font-size: 22px; font-weight: 900; margin: 6px 2px 4px; }
+.fm-sub { font-size: 13px; color: var(--text); margin: 0 2px 14px; line-height: 1.6; }
+.fm-sub b { color: var(--accent); }
+
+.fm-transbtn { display: block; width: 100%; font-family: var(--font); font-size: 14px; font-weight: 800; color: var(--accent-ink);
+  background: var(--accent); border: none; border-radius: 14px; padding: 12px; margin-bottom: 12px; cursor: pointer; box-shadow: var(--shadow); }
+.fm-transbtn:active { transform: scale(.99); }
+
+.fm-search { width: 100%; font-family: var(--font); font-size: 15px; padding: 12px 14px; border-radius: 13px;
+  border: 1.5px solid var(--border); background: var(--surface); color: var(--text); margin-bottom: 10px; }
+.fm-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.fm-chip { font-family: var(--font); font-size: 12px; font-weight: 700; color: var(--text); background: var(--surface);
+  border: 1px solid var(--border); border-radius: 999px; padding: 6px 11px; cursor: pointer; }
+.fm-chip.on { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.fm-count { font-size: 12px; color: var(--muted); margin: 2px 2px 8px; }
+
+.fm-list { display: flex; flex-direction: column; gap: 8px; }
+.fm-item { text-align: left; width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+  padding: 12px 14px; cursor: pointer; color: var(--text); font-family: var(--font); box-shadow: var(--shadow); }
+.fm-item:active { transform: scale(.99); }
+.fm-item-top { display: flex; align-items: baseline; gap: 10px; }
+.fm-item-base { font-size: 16px; font-weight: 900; }
+.fm-item-th { font-size: 12.5px; color: var(--muted); }
+.fm-item-fam { font-size: 12.5px; color: var(--accent); margin-top: 3px; }
+
+/* detail */
+.fm-back { background: none; border: none; color: var(--accent); font-family: var(--font); font-size: 14px; font-weight: 800; cursor: pointer; padding: 6px 2px; margin-bottom: 4px; }
+.fm-d-base { font-size: 26px; font-weight: 900; color: var(--text); margin: 2px 2px 2px; }
+.fm-d-th { font-size: 15px; font-weight: 600; color: var(--muted); margin-left: 10px; }
+.fm-d-theme { font-size: 12.5px; color: var(--muted); margin: 0 2px 12px; }
+.fm-d-lead { font-size: 13.5px; font-weight: 700; color: var(--text); margin: 0 2px 10px; }
+
+.fm-fam { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 12px;
+  padding: 11px 13px; margin-bottom: 9px; box-shadow: var(--shadow); }
+.fm-fam-top { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.fm-fam-w { font-size: 17px; font-weight: 900; color: var(--accent); }
+.fm-fam-th { font-size: 13px; color: var(--text); }
+.fm-badges { display: flex; gap: 6px; margin: 6px 0 5px; flex-wrap: wrap; }
+.fm-badge { font-size: 11px; font-weight: 800; border-radius: 999px; padding: 2px 9px; }
+.fm-u-biz { background: rgba(37,99,235,.14); color: #2563eb; }
+.fm-u-tech { background: rgba(13,148,136,.15); color: #0d9488; }
+.fm-u-both { background: rgba(124,58,237,.14); color: #7c3aed; }
+.fm-l-n { background: var(--surface2); color: var(--muted); }
+.fm-l-f { background: rgba(224,148,47,.16); color: #b8860b; }
+.fm-l-vf { background: rgba(217,83,79,.14); color: #d9534f; }
+.fm-fam-note { font-size: 12.5px; color: var(--text); line-height: 1.5; }
+
+.fm-eg { background: var(--surface2); border-radius: 14px; padding: 12px 14px; margin: 14px 0 4px; }
+.fm-eg-h { font-size: 14px; font-weight: 900; color: var(--text); margin-bottom: 8px; }
+.fm-eg-row { font-size: 14.5px; color: var(--text); line-height: 1.5; padding: 8px 0; }
+.fm-eg-row + .fm-eg-row { border-top: 1px dashed var(--border); }
+.fm-eg-n { color: var(--muted); }
+.fm-eg-f { font-weight: 700; }
+.fm-eg-lab { display: inline-block; font-size: 10.5px; font-weight: 800; color: var(--accent-ink); background: var(--accent-soft); border-radius: 6px; padding: 1px 7px; margin-right: 7px; vertical-align: middle; }
+.fm-eg-f .fm-eg-lab { background: var(--accent); color: var(--accent-ink); }
+.fm-eg-th { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+
+.fm-say { font-family: var(--font); font-size: 12px; background: var(--accent-soft); border: none; border-radius: 999px; padding: 2px 8px; cursor: pointer; vertical-align: middle; }
+
+/* translate helper */
+.fm-ta { width: 100%; font-family: var(--font); font-size: 15px; padding: 12px 14px; border-radius: 13px; border: 1.5px solid var(--border);
+  background: var(--surface); color: var(--text); resize: vertical; margin-bottom: 10px; line-height: 1.5; }
+.fm-copy { display: block; width: 100%; font-family: var(--font); font-size: 15px; font-weight: 800; color: var(--accent-ink);
+  background: var(--accent); border: none; border-radius: 14px; padding: 14px; cursor: pointer; box-shadow: var(--shadow); }
+.fm-copy:active { transform: scale(.99); }
+.fm-copymsg { text-align: center; font-size: 13px; font-weight: 700; color: var(--know); min-height: 18px; margin: 10px 0; }
+.fm-out { width: 100%; font-family: var(--font); font-size: 12.5px; padding: 11px 13px; border-radius: 12px; border: 1.5px dashed var(--accent);
+  background: var(--surface2); color: var(--text); resize: vertical; min-height: 96px; margin-bottom: 10px; line-height: 1.5; }
+.fm-tip { font-size: 12.5px; color: var(--muted); line-height: 1.6; background: var(--surface2); border-radius: 12px; padding: 12px; }
+.fm-tip b { color: var(--accent); }
 
 /* plan.css */
 /* plan.css — "แผนเรียน 540 วัน" section inside Stats */
@@ -3870,7 +3946,8 @@ function render(){applySize();
  if(S.mode!=="examprep"&&PT.examprep&&PT.examprep.leave)PT.examprep.leave();
  if(S.mode!=="game"&&PT.game&&PT.game.leave)PT.game.leave();
  if(S.mode!=="campaign"&&PT.campaign&&PT.campaign.leave)PT.campaign.leave();
- var noFilter=(S.mode==="talk"||S.mode==="wordchoice"||S.mode==="examprep"||S.mode==="daily"||S.mode==="todayhub"||S.mode==="prachub"||S.mode==="stats"||S.mode==="structure"||S.mode==="game"||S.mode==="campaign");
+ if(S.mode!=="formal"&&PT.formal&&PT.formal.leave)PT.formal.leave();
+ var noFilter=(S.mode==="talk"||S.mode==="wordchoice"||S.mode==="examprep"||S.mode==="daily"||S.mode==="todayhub"||S.mode==="prachub"||S.mode==="stats"||S.mode==="structure"||S.mode==="game"||S.mode==="campaign"||S.mode==="formal");
  var fh=document.getElementById("filters");if(fh&&PT.filtersUI&&!noFilter)PT.filtersUI.render(fh);
  if(window.PT&&PT.hub&&PT.hub.syncPill)try{PT.hub.syncPill();}catch(e){}
  var v=document.getElementById("view");if(!v)return;
@@ -3885,12 +3962,13 @@ function render(){applySize();
  else if(S.mode==="prachub"&&PT.prachub)PT.prachub.render(v);
  else if(S.mode==="game"&&PT.game)PT.game.render(v);
  else if(S.mode==="campaign"&&PT.campaign)PT.campaign.render(v);
+ else if(S.mode==="formal"&&PT.formal)PT.formal.render(v);
  else if(S.mode==="structure"&&PT.structure)PT.structure.render(v);
  else if(S.mode==="stats")PT.stats.render(v);
  if(PT.a11y&&PT.a11y.enhance)try{PT.a11y.enhance(document.getElementById("app"));}catch(e){}}
 window.render=render;
 /* --- switch tab programmatically (keeps tabbar highlight in sync) --- */
-function goMode(m){S.mode=m;var par={browse:"browse",cards:"browse",structure:"browse",quiz:"prachub",wordchoice:"prachub",prachub:"prachub",game:"prachub",campaign:"prachub",talk:"examprep",examprep:"examprep",todayhub:"todayhub",daily:"todayhub"}[m]||"";var tb=document.querySelectorAll(".tabbar button");[].forEach.call(tb,function(x){x.className=(x.getAttribute("data-mode")===par?"on":"");});if(m==="cards")S.session=null;render();}
+function goMode(m){S.mode=m;var par={browse:"browse",cards:"browse",structure:"browse",quiz:"prachub",wordchoice:"prachub",prachub:"prachub",game:"prachub",campaign:"prachub",formal:"prachub",talk:"examprep",examprep:"examprep",todayhub:"todayhub",daily:"todayhub"}[m]||"";var tb=document.querySelectorAll(".tabbar button");[].forEach.call(tb,function(x){x.className=(x.getAttribute("data-mode")===par?"on":"");});if(m==="cards")S.session=null;render();}
 window.goMode=goMode;
 /* --- "วันนี้" (Today) summary panel, shown atop Browse --- */
 PT.today={
@@ -8116,6 +8194,9 @@ PT.prachub = (function () {
       '<em>16 เกมเร็วๆ — สายฟ้าความหมาย · จับกลุ่มลับ · เดิมพันคำ · บทสนทนา ฯลฯ</em></span></button>');
     h.push('<button class="ph-wide ph-camp" data-ph-camp="1"><span class="ph-wic">🗺️</span><span><b>โหมดผจญภัย</b>' +
       '<em>เกมมีเนื้อเรื่อง เล่นข้ามวัน — เดินทางเป็นด่านๆ เก็บดาว เก็บคำศัพท์</em></span></button>');
+    h.push('<div class="ph-sec">เขียนอังกฤษให้มืออาชีพ</div>');
+    h.push('<button class="ph-wide ph-formal" data-ph-formal="1"><span class="ph-wic">✒️</span><span><b>คำง่าย → คำทางการ</b>' +
+      '<em>give→provide, fix→resolve — สายธุรกิจ/อีเมล และ เทคนิค/โค้ด พร้อมแปลไทย + แปลงประโยคของคุณให้ทางการ</em></span></button>');
     h.push('</div>');
     v.innerHTML = h.join("");
     [].forEach.call(v.querySelectorAll("[data-ph-sub]"), function (b) { b.onclick = function () { go("quiz", b.getAttribute("data-ph-sub")); }; });
@@ -8123,6 +8204,7 @@ PT.prachub = (function () {
     var stb = v.querySelector("[data-ph-struct]"); if (stb) stb.onclick = function () { if (PT.structure) PT.structure.open(); };
     var gm = v.querySelector("[data-ph-game]"); if (gm) gm.onclick = function () { if (PT.game) PT.game.open(); };
     var cm = v.querySelector("[data-ph-camp]"); if (cm) cm.onclick = function () { if (PT.campaign) PT.campaign.open(); };
+    var fm = v.querySelector("[data-ph-formal]"); if (fm) fm.onclick = function () { if (PT.formal) PT.formal.open(); };
     var wk = v.querySelector("[data-ph-weak]"); if (wk) wk.onclick = weak;
   }
   return { render: render };
@@ -9903,6 +9985,191 @@ PT.campaign = (function () {
     render: render,
     open: function () { if (!camp) camp = load(); curBook = camp.cur || "landing"; var b = camp.books && camp.books[curBook]; view = (b && b.cleared > 0) ? "map" : "books"; goMode("campaign"); },
     leave: function () { try { PT.game.leave(); } catch (e) {} }
+  };
+})();
+
+/* ===== module: formal ===== */
+/* formal.js — "เขียนอังกฤษให้มืออาชีพ" (PT.formal): a normal -> formal English map.
+   Simple everyday verbs (give, ask, fix...) mapped to their formal business + technical
+   forms, with Thai glosses on every word, Thai translations under every example, and a
+   per-word "when to use this one" note. Hidden mode "formal" (like PT.structure). ES5.
+   Data: data/formal.json (lazy). Uses S, esc, store, speak, goMode. */
+PT.formal = (function () {
+  "use strict";
+  var DATA = null;        // loaded formal.json
+  var view = "list";      // list | detail | translate
+  var q = "";             // search query
+  var theme = "";         // active theme filter ("" = all)
+  var cur = null;         // current entry (detail)
+
+  function V() { return document.getElementById("view"); }
+  function norm(s) { return String(s || "").toLowerCase(); }
+
+  var THEMES = [
+    { id: "", ic: "📚", th: "ทั้งหมด" },
+    { id: "requests", ic: "🙋", th: "ขอ / ร้องขอ" },
+    { id: "giving-info", ic: "💬", th: "ให้ข้อมูล / อธิบาย" },
+    { id: "confirming", ic: "✅", th: "ยืนยัน / ตอบรับ" },
+    { id: "errors-fixing", ic: "🛠️", th: "แก้ปัญหา / บั๊ก" },
+    { id: "time-delays", ic: "⏰", th: "เวลา / เลื่อนนัด" },
+    { id: "money-refunds", ic: "💳", th: "เงิน / คืนเงิน" },
+    { id: "access-security", ic: "🔐", th: "สิทธิ์ / ความปลอดภัย" },
+    { id: "system-actions", ic: "⚙️", th: "สั่งงานระบบ" },
+    { id: "data-actions", ic: "🗄️", th: "จัดการข้อมูล" }
+  ];
+  var THEME_TH = {}; (function () { for (var i = 0; i < THEMES.length; i++) THEME_TH[THEMES[i].id] = THEMES[i].th; })();
+  var USE = {
+    business: { th: "ธุรกิจ / อีเมล", cls: "fm-u-biz" },
+    technical: { th: "เทคนิค / โค้ด", cls: "fm-u-tech" },
+    both: { th: "ใช้ได้ทั้งคู่", cls: "fm-u-both" }
+  };
+  var LEVEL = {
+    neutral: { th: "กลางๆ", cls: "fm-l-n" },
+    formal: { th: "ทางการ", cls: "fm-l-f" },
+    "very formal": { th: "ทางการมาก", cls: "fm-l-vf" }
+  };
+
+  function fetchData(cb) {
+    if (DATA) { cb(); return; }
+    fetch("data/formal.json").then(function (r) { return r.json(); }).then(function (j) { DATA = j || []; cb(); }).catch(function () { DATA = null; cb(); });
+  }
+
+  /* ---------- dispatch ---------- */
+  function render(v) {
+    if (!DATA) { v.innerHTML = '<div class="fm-load">กำลังโหลด…</div>'; fetchData(function () { if (!DATA) { v.innerHTML = '<div class="fm-load">โหลดข้อมูลไม่สำเร็จ ลองใหม่</div>'; return; } paint(v); }); return; }
+    paint(v);
+  }
+  function paint(v) {
+    if (view === "detail") return renderDetail(v);
+    if (view === "translate") return renderTranslate(v);
+    return renderList(v);
+  }
+
+  /* ---------- list / browse ---------- */
+  function match(e) {
+    if (theme && e.theme !== theme) return false;
+    if (!q) return true;
+    var hay = norm(e.base) + " " + norm(e.base_th);
+    for (var i = 0; i < (e.family || []).length; i++) hay += " " + norm(e.family[i].w) + " " + norm(e.family[i].th);
+    return hay.indexOf(norm(q)) >= 0;
+  }
+  function renderList(v) {
+    var list = DATA.filter(match);
+    var h = ['<div class="fm-wrap">'];
+    h.push('<div class="fm-hero">✒️ เขียนอังกฤษให้มืออาชีพ</div>');
+    h.push('<div class="fm-sub">คำง่ายๆ กลายเป็นคำทางการยังไง ทั้งสาย <b>ธุรกิจ/อีเมล</b> และ <b>เทคนิค/โค้ด</b> — มีคำแปลไทยทุกคำ</div>');
+    h.push('<button class="fm-transbtn" data-fm-trans="1">🪄 แปลประโยคของฉันให้เป็นทางการ</button>');
+    h.push('<input class="fm-search" id="fm-q" type="text" autocomplete="off" placeholder="ค้นหาคำ เช่น give, ask, fix, ขอ, แก้…" value="' + esc(q) + '">');
+    h.push('<div class="fm-chips">');
+    for (var i = 0; i < THEMES.length; i++) {
+      var t = THEMES[i];
+      h.push('<button class="fm-chip' + (theme === t.id ? " on" : "") + '" data-fm-theme="' + t.id + '">' + t.ic + ' ' + esc(t.th) + '</button>');
+    }
+    h.push('</div>');
+    h.push('<div class="fm-count">' + list.length + ' คำ</div>');
+    h.push('<div class="fm-list">');
+    for (i = 0; i < list.length; i++) {
+      var e = list[i];
+      var fam = (e.family || []).slice(0, 3).map(function (f) { return esc(f.w); }).join(" · ");
+      h.push('<button class="fm-item" data-fm-base="' + esc(e.base) + '">' +
+        '<div class="fm-item-top"><span class="fm-item-base">' + esc(e.base) + '</span><span class="fm-item-th">' + esc(e.base_th) + '</span></div>' +
+        '<div class="fm-item-fam">→ ' + fam + ((e.family || []).length > 3 ? ' …' : '') + '</div></button>');
+    }
+    if (!list.length) h.push('<div class="fm-load">ไม่พบคำที่ค้นหา</div>');
+    h.push('</div></div>');
+    v.innerHTML = h.join("");
+    var qi = v.querySelector("#fm-q");
+    if (qi) qi.oninput = function () { q = qi.value; var pos = qi.selectionStart; renderList(v); var q2 = v.querySelector("#fm-q"); if (q2) { q2.focus(); try { q2.setSelectionRange(pos, pos); } catch (e) {} } };
+    [].forEach.call(v.querySelectorAll("[data-fm-theme]"), function (b) { b.onclick = function () { theme = b.getAttribute("data-fm-theme"); renderList(v); }; });
+    [].forEach.call(v.querySelectorAll("[data-fm-base]"), function (b) { b.onclick = function () { cur = find(b.getAttribute("data-fm-base")); view = "detail"; paint(v); }; });
+    var tb = v.querySelector("[data-fm-trans]"); if (tb) tb.onclick = function () { view = "translate"; paint(v); };
+  }
+  function find(base) { for (var i = 0; i < DATA.length; i++) if (DATA[i].base === base) return DATA[i]; return null; }
+
+  /* ---------- detail ---------- */
+  function sayBtn(txt) { return '<button class="fm-say" data-say="' + esc(txt) + '">🔊</button>'; }
+  function famRow(f) {
+    var u = USE[f.use] || USE.both, lv = LEVEL[f.level] || LEVEL.formal;
+    return '<div class="fm-fam">' +
+      '<div class="fm-fam-top"><span class="fm-fam-w">' + esc(f.w) + '</span> ' + sayBtn(f.w) +
+      '<span class="fm-fam-th">' + esc(f.th) + '</span></div>' +
+      '<div class="fm-badges"><span class="fm-badge ' + u.cls + '">' + esc(u.th) + '</span>' +
+      '<span class="fm-badge ' + lv.cls + '">' + esc(lv.th) + '</span></div>' +
+      '<div class="fm-fam-note">' + esc(f.note_en) + '</div></div>';
+  }
+  function egBlock(title, ic, b) {
+    if (!b || !b.eg_formal) return "";
+    return '<div class="fm-eg"><div class="fm-eg-h">' + ic + ' ' + title + '</div>' +
+      '<div class="fm-eg-row fm-eg-n"><span class="fm-eg-lab">ธรรมดา</span>' + esc(b.eg_normal) + ' ' + sayBtn(b.eg_normal) + '<div class="fm-eg-th">' + esc(b.eg_normal_th) + '</div></div>' +
+      '<div class="fm-eg-row fm-eg-f"><span class="fm-eg-lab">ทางการ</span>' + esc(b.eg_formal) + ' ' + sayBtn(b.eg_formal) + '<div class="fm-eg-th">' + esc(b.eg_formal_th) + '</div></div></div>';
+  }
+  function renderDetail(v) {
+    var e = cur; if (!e) { view = "list"; return renderList(v); }
+    var h = ['<div class="fm-wrap">'];
+    h.push('<button class="fm-back" data-fm-back="1">‹ กลับ</button>');
+    h.push('<div class="fm-d-base">' + esc(e.base) + ' ' + sayBtn(e.base) + '<span class="fm-d-th">' + esc(e.base_th) + '</span></div>');
+    h.push('<div class="fm-d-theme">' + esc(THEME_TH[e.theme] || e.theme || "") + (e.freq ? ' · ' + esc(e.freq) : '') + '</div>');
+    h.push('<div class="fm-d-lead">ทำไมถึงมีหลายคำ? แต่ละคำใช้ต่างกัน 👇</div>');
+    for (var i = 0; i < (e.family || []).length; i++) h.push(famRow(e.family[i]));
+    h.push(egBlock("ธุรกิจ / อีเมล", "💼", e.biz));
+    h.push(egBlock("เทคนิค / เอกสาร", "⚙️", e.tech));
+    h.push('</div>');
+    v.innerHTML = h.join("");
+    v.querySelector("[data-fm-back]").onclick = function () { view = "list"; paint(v); };
+    wireSay(v);
+  }
+
+  /* ---------- translate-to-formal helper (copy prompt for Claude) ---------- */
+  function renderTranslate(v) {
+    var h = ['<div class="fm-wrap">'];
+    h.push('<button class="fm-back" data-fm-back="1">‹ กลับ</button>');
+    h.push('<div class="fm-hero">🪄 แปลให้เป็นทางการ</div>');
+    h.push('<div class="fm-sub">พิมพ์ประโยคง่ายๆ ของคุณ แล้วกดปุ่ม จะได้คำสั่งไปวางใน Claude ให้ช่วยเขียนเวอร์ชันทางการ ทั้งแบบธุรกิจและเทคนิค</div>');
+    h.push('<textarea class="fm-ta" id="fm-ta" rows="4" placeholder="เช่น can you give me the file? / โปรเจกต์จะช้าไปหน่อยนะ"></textarea>');
+    h.push('<button class="fm-copy" data-fm-copy="1">📋 คัดลอกคำสั่งไปให้ Claude เขียนให้ทางการ</button>');
+    h.push('<div class="fm-copymsg" id="fm-copymsg"></div>');
+    h.push('<textarea class="fm-out" id="fm-out" readonly style="display:none"></textarea>');
+    h.push('<div class="fm-tip">เปิดแชท Claude แล้ววาง (paste) — Claude จะเขียนให้ทั้งเวอร์ชัน <b>ธุรกิจ/อีเมล</b> และ <b>เทคนิค/เอกสาร</b> พร้อมบอกว่าใช้คำทางการคำไหนและทำไม</div>');
+    h.push('</div>');
+    v.innerHTML = h.join("");
+    v.querySelector("[data-fm-back]").onclick = function () { view = "list"; paint(v); };
+    v.querySelector("[data-fm-copy]").onclick = function () {
+      var ta = v.querySelector("#fm-ta"), txt = (ta && ta.value || "").trim();
+      if (!txt) { setMsg(v, "พิมพ์ประโยคก่อนนะ"); return; }
+      var prompt = "You are an English writing coach for a Thai professional. Rewrite my sentence in professional English.\n" +
+        "Give me:\n1) a formal BUSINESS / email version,\n2) a formal TECHNICAL / documentation version (only if it fits),\n" +
+        "3) a short note on which formal verbs you used and why (simple English).\n" +
+        "Keep it modern and natural. Do not use old-fashioned words.\n\nMy sentence: " + txt;
+      var outEl = v.querySelector("#fm-out");
+      if (outEl) { outEl.value = prompt; outEl.style.display = "block"; try { outEl.focus(); outEl.setSelectionRange(0, prompt.length); } catch (e) {} }
+      copyText(prompt, function (ok) { setMsg(v, ok ? "✓ คัดลอกแล้ว! เปิด Claude แล้ววางได้เลย" : "คัดลอกอัตโนมัติไม่ได้ — กดค้างที่กล่องข้างล่าง เลือกทั้งหมด แล้ว Copy แล้วเอาไปวางใน Claude"); });
+    };
+  }
+  function setMsg(v, m) { var el = v.querySelector("#fm-copymsg"); if (el) el.textContent = m; }
+  function copyText(t, cb) {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(t).then(function () { cb(true); }, function () { cb(fallbackCopy(t)); });
+        return;
+      }
+    } catch (e) {}
+    cb(fallbackCopy(t));
+  }
+  function fallbackCopy(t) {
+    try {
+      var ta = document.createElement("textarea"); ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.focus(); ta.select();
+      var ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
+      document.body.removeChild(ta); return ok;
+    } catch (e) { return false; }
+  }
+
+  function wireSay(v) { [].forEach.call(v.querySelectorAll("[data-say]"), function (b) { b.onclick = function () { try { speak(b.getAttribute("data-say")); } catch (e) {} }; }); }
+
+  return {
+    render: render,
+    open: function () { view = "list"; goMode("formal"); },
+    leave: function () {}
   };
 })();
 
