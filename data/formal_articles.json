@@ -1,0 +1,2032 @@
+[
+ {
+  "title": "Fix: users logged out too early",
+  "title_th": "แก้บั๊กผู้ใช้ถูกล็อกเอาต์เร็วเกินไป",
+  "type": "pr-description",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "เขียนคำอธิบาย PR ที่แก้บั๊กเรื่องผู้ใช้หลุดออกจากระบบเร็วเกินไป",
+  "normal": "This PR fixes the bug that logs users out too fast. I found out the token time was set wrong, so I changed it. I also added a test to check it. Can you look at it when you have time?",
+  "normal_th": "PR นี้แก้บั๊กที่ทำให้ผู้ใช้ถูกล็อกเอาต์เร็วเกินไป ผมเจอว่าเวลาของโทเคนถูกตั้งค่าไว้ผิด เลยแก้ให้ถูก แล้วก็เพิ่มเทสต์ไว้ตรวจสอบด้วย ถ้าว่างช่วยดูให้หน่อยนะครับ",
+  "formal": "This PR resolves the issue where users are logged out prematurely. The root cause was an incorrect token expiry value, which has now been corrected. I also added a test to verify the behavior. Please review it when you have time.",
+  "formal_th": "PR นี้แก้ไขปัญหาที่ผู้ใช้ถูกล็อกเอาต์ก่อนเวลาอันควร สาเหตุหลักคือค่าเวลาหมดอายุของโทเคนที่ตั้งไว้ไม่ถูกต้อง ซึ่งตอนนี้ได้แก้ไขให้ถูกต้องแล้ว ผมได้เพิ่มเทสต์เพื่อยืนยันการทำงานด้วย รบกวนช่วยรีวิวเมื่อสะดวกครับ",
+  "swaps": [
+   {
+    "from": "fixes",
+    "to": "resolves",
+    "note_th": "resolve เป็นทางการกว่า fix นิยมใช้เขียนอธิบายการแก้ปัญหาในงาน"
+   },
+   {
+    "from": "bug",
+    "to": "issue",
+    "note_th": "issue สุภาพและเป็นกลางกว่า bug ในบริบทงาน"
+   },
+   {
+    "from": "logs users out too fast",
+    "to": "users are logged out prematurely",
+    "note_th": "prematurely = ก่อนเวลาอันควร ฟังดูเป็นทางการกว่า too fast"
+   },
+   {
+    "from": "I found out ... was set wrong",
+    "to": "The root cause was an incorrect ... value",
+    "note_th": "root cause = สาเหตุหลัก เป็นศัพท์มาตรฐานในการอธิบายบั๊ก"
+   },
+   {
+    "from": "so I changed it",
+    "to": "which has now been corrected",
+    "note_th": "corrected ทางการกว่า changed และสื่อว่าแก้ให้ถูกต้อง"
+   },
+   {
+    "from": "check it",
+    "to": "verify the behavior",
+    "note_th": "verify = ตรวจสอบยืนยัน เป็นทางการกว่า check"
+   },
+   {
+    "from": "Can you look at it",
+    "to": "Please review it",
+    "note_th": "review เป็นคำมาตรฐานของการตรวจโค้ด สุภาพกว่า look at it"
+   }
+  ],
+  "id": "fix-users-logged-out-too-early"
+ },
+ {
+  "title": "Add API endpoint for user orders",
+  "title_th": "เพิ่ม API สำหรับดึงคำสั่งซื้อของผู้ใช้",
+  "type": "pr-description",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "เขียนคำอธิบาย PR ที่เพิ่มฟีเจอร์ API ใหม่และอัปเดตเอกสาร",
+  "normal": "This change adds a new API to get user orders. It lets the app ask for orders by date. I also updated the docs so people know how to use it. Let me know if you want changes.",
+  "normal_th": "การเปลี่ยนแปลงนี้เพิ่ม API ใหม่สำหรับดึงคำสั่งซื้อของผู้ใช้ มันทำให้แอปขอคำสั่งซื้อตามวันที่ได้ ผมอัปเดตเอกสารด้วยเพื่อให้คนอื่นรู้วิธีใช้ ถ้าอยากให้แก้ตรงไหนบอกได้เลยครับ",
+  "formal": "This change adds a new API endpoint to retrieve user orders. It allows the app to request orders by date. I have also updated the documentation accordingly. Please let me know if any changes are required.",
+  "formal_th": "การเปลี่ยนแปลงนี้เพิ่ม API endpoint ใหม่สำหรับดึงคำสั่งซื้อของผู้ใช้ ช่วยให้แอปสามารถร้องขอคำสั่งซื้อตามวันที่ได้ ผมได้อัปเดตเอกสารประกอบให้สอดคล้องกันแล้ว หากต้องการให้แก้ไขส่วนใด รบกวนแจ้งได้ครับ",
+  "swaps": [
+   {
+    "from": "get",
+    "to": "retrieve",
+    "note_th": "retrieve = ดึงข้อมูล เป็นศัพท์เทคนิคที่เป็นทางการกว่า get"
+   },
+   {
+    "from": "a new API",
+    "to": "a new API endpoint",
+    "note_th": "endpoint ระบุชัดเจนกว่าว่าเป็นจุดเรียกใช้ API"
+   },
+   {
+    "from": "It lets the app",
+    "to": "It allows the app",
+    "note_th": "allow เป็นทางการกว่า let ในการเขียนงาน"
+   },
+   {
+    "from": "ask for",
+    "to": "request",
+    "note_th": "request = ร้องขอ เป็นทางการกว่า ask for"
+   },
+   {
+    "from": "the docs",
+    "to": "the documentation",
+    "note_th": "documentation เต็มคำ ดูเป็นทางการกว่าคำย่อ docs"
+   },
+   {
+    "from": "so people know how to use it",
+    "to": "accordingly",
+    "note_th": "accordingly = ให้สอดคล้องกัน กระชับและมืออาชีพกว่า"
+   },
+   {
+    "from": "Let me know if you want changes",
+    "to": "Please let me know if any changes are required",
+    "note_th": "รูปประโยคสุภาพและเป็นกลางกว่า เหมาะกับงาน"
+   }
+  ],
+  "id": "add-api-endpoint-for-user-orders"
+ },
+ {
+  "title": "Refactor the payment module",
+  "title_th": "ปรับโครงสร้างโค้ดส่วนการชำระเงิน",
+  "type": "pr-description",
+  "context": "technical",
+  "level": "moderate",
+  "scenario_th": "เขียนคำอธิบาย PR ที่จัดระเบียบโค้ดใหม่โดยไม่เปลี่ยนการทำงาน",
+  "normal": "This PR cleans up the payment code to make it easier to read. I took out the old code we don't use anymore. Nothing changes for the user. I ran all the tests and they pass.",
+  "normal_th": "PR นี้จัดระเบียบโค้ดส่วนการชำระเงินให้อ่านง่ายขึ้น ผมเอาโค้ดเก่าที่ไม่ได้ใช้แล้วออกไป การใช้งานของผู้ใช้ไม่มีอะไรเปลี่ยน ผมรันเทสต์ทั้งหมดแล้วผ่านหมด",
+  "formal": "This PR refactors the payment module to improve readability. I removed the legacy code that is no longer used. There is no change in behavior for the user. All tests were executed and passed successfully.",
+  "formal_th": "PR นี้ปรับโครงสร้างโมดูลการชำระเงินเพื่อให้อ่านง่ายขึ้น ผมได้ลบโค้ดเดิมที่ไม่ได้ใช้งานแล้วออก พฤติกรรมการทำงานสำหรับผู้ใช้ไม่มีการเปลี่ยนแปลง เทสต์ทั้งหมดได้รับการรันและผ่านเรียบร้อยแล้ว",
+  "swaps": [
+   {
+    "from": "cleans up",
+    "to": "refactors",
+    "note_th": "refactor เป็นศัพท์มาตรฐานสำหรับการปรับโครงสร้างโค้ด"
+   },
+   {
+    "from": "the payment code",
+    "to": "the payment module",
+    "note_th": "module ระบุขอบเขตชัดเจนและเป็นทางการกว่า code"
+   },
+   {
+    "from": "make it easier to read",
+    "to": "improve readability",
+    "note_th": "improve readability กระชับและเป็นทางการกว่า"
+   },
+   {
+    "from": "took out",
+    "to": "removed",
+    "note_th": "removed สุภาพและเป็นมาตรฐานกว่า took out"
+   },
+   {
+    "from": "the old code we don't use anymore",
+    "to": "the legacy code that is no longer used",
+    "note_th": "legacy code = โค้ดเดิม/เก่า เป็นศัพท์เทคนิคที่เป็นทางการ"
+   },
+   {
+    "from": "Nothing changes for the user",
+    "to": "There is no change in behavior for the user",
+    "note_th": "no change in behavior เป็นสำนวนมาตรฐานในการอธิบาย PR"
+   },
+   {
+    "from": "I ran all the tests and they pass",
+    "to": "All tests were executed and passed successfully",
+    "note_th": "รูป passive ดูเป็นทางการและเป็นกลางกว่าในรายงานงาน"
+   }
+  ],
+  "id": "refactor-the-payment-module"
+ },
+ {
+  "title": "Installing the SDK",
+  "title_th": "การติดตั้ง SDK",
+  "type": "sdk-readme",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "เขียน README บอกวิธีติดตั้งไลบรารีให้นักพัฒนาคนอื่น",
+  "normal": "To get started, run npm install to add the package to your project. It needs Node 18 or higher, so check your version first. After it's done, you can bring in the client and use it right away. If you hit an error, look at the setup guide.",
+  "normal_th": "เริ่มต้นด้วยการรัน npm install เพื่อเพิ่มแพ็กเกจเข้าโปรเจกต์ของคุณ ต้องใช้ Node เวอร์ชัน 18 ขึ้นไป ดังนั้นเช็กเวอร์ชันก่อน เมื่อเสร็จแล้วคุณสามารถ import client มาใช้ได้เลย ถ้าเจอ error ให้ดูที่คู่มือการตั้งค่า",
+  "formal": "To begin, run npm install to add the package to your project. It requires Node 18 or higher, so please verify your version first. Once installation is complete, you can import the client and start using it immediately. If you encounter an error, refer to the setup guide.",
+  "formal_th": "ในการเริ่มต้น ให้รัน npm install เพื่อเพิ่มแพ็กเกจเข้าสู่โปรเจกต์ของคุณ ไลบรารีนี้จำเป็นต้องใช้ Node เวอร์ชัน 18 ขึ้นไป กรุณาตรวจสอบเวอร์ชันของคุณก่อน เมื่อการติดตั้งเสร็จสมบูรณ์ คุณสามารถ import client และเริ่มใช้งานได้ทันที หากคุณพบข้อผิดพลาด โปรดดูที่คู่มือการตั้งค่า",
+  "swaps": [
+   {
+    "from": "get started",
+    "to": "begin",
+    "note_th": "begin เป็นทางการกว่าและกระชับกว่าในเอกสาร"
+   },
+   {
+    "from": "needs",
+    "to": "requires",
+    "note_th": "requires ใช้บอกข้อกำหนดของระบบอย่างเป็นทางการ"
+   },
+   {
+    "from": "check",
+    "to": "verify",
+    "note_th": "verify แปลว่าตรวจสอบให้แน่ใจ ดูมืออาชีพกว่า check"
+   },
+   {
+    "from": "After it's done",
+    "to": "Once installation is complete",
+    "note_th": "ประโยคเต็มชัดเจนกว่า ไม่ใช้คำย่อ it's"
+   },
+   {
+    "from": "bring in",
+    "to": "import",
+    "note_th": "import เป็นคำศัพท์เทคนิคที่ถูกต้อง ไม่ใช้ bring in"
+   },
+   {
+    "from": "right away",
+    "to": "immediately",
+    "note_th": "immediately เป็นทางการกว่า right away"
+   },
+   {
+    "from": "hit an error",
+    "to": "encounter an error",
+    "note_th": "encounter สุภาพและเป็นทางการกว่า hit"
+   },
+   {
+    "from": "look at",
+    "to": "refer to",
+    "note_th": "refer to ใช้ชี้ไปยังเอกสารอ้างอิงอย่างมืออาชีพ"
+   }
+  ],
+  "id": "installing-the-sdk"
+ },
+ {
+  "title": "Configuring Your API Key",
+  "title_th": "การตั้งค่า API Key",
+  "type": "sdk-readme",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "อธิบายวิธีใส่ API key ก่อนเรียกใช้ SDK",
+  "normal": "Before you use the SDK, you have to set your API key. Put it in a .env file so you don't hard-code it. The client will pick it up on its own when it starts. If you want, you can also pass the key straight to the function.",
+  "normal_th": "ก่อนใช้ SDK คุณต้องตั้งค่า API key ของคุณ ใส่ไว้ในไฟล์ .env เพื่อไม่ต้องเขียน key ลงในโค้ดตรงๆ client จะดึงค่ามาใช้เองตอนเริ่มทำงาน ถ้าต้องการ คุณสามารถส่ง key เข้าฟังก์ชันโดยตรงก็ได้",
+  "formal": "Before using the SDK, you must configure your API key. Store it in a .env file to avoid hard-coding it. The client will load it automatically on startup. Alternatively, you may provide the key directly to the function.",
+  "formal_th": "ก่อนใช้งาน SDK คุณต้องตั้งค่า API key ของคุณ จัดเก็บไว้ในไฟล์ .env เพื่อหลีกเลี่ยงการเขียน key ลงในโค้ดโดยตรง client จะโหลดค่าโดยอัตโนมัติเมื่อเริ่มทำงาน หรืออีกทางเลือกหนึ่ง คุณสามารถส่ง key ให้ฟังก์ชันได้โดยตรง",
+  "swaps": [
+   {
+    "from": "have to",
+    "to": "must",
+    "note_th": "must เป็นทางการกว่าและหนักแน่นกว่า have to"
+   },
+   {
+    "from": "set",
+    "to": "configure",
+    "note_th": "configure เป็นศัพท์เทคนิคสำหรับการตั้งค่า"
+   },
+   {
+    "from": "Put it in",
+    "to": "Store it in",
+    "note_th": "store ดูเป็นทางการกว่า put สำหรับการจัดเก็บข้อมูล"
+   },
+   {
+    "from": "pick it up on its own",
+    "to": "load it automatically",
+    "note_th": "load automatically เป็นภาษาเทคนิคที่ชัดเจน ไม่ใช้สำนวน pick up"
+   },
+   {
+    "from": "when it starts",
+    "to": "on startup",
+    "note_th": "on startup เป็นวลีเทคนิคที่กระชับ"
+   },
+   {
+    "from": "If you want",
+    "to": "Alternatively",
+    "note_th": "Alternatively ใช้เชื่อมทางเลือกอื่นอย่างมืออาชีพ"
+   },
+   {
+    "from": "pass the key straight to",
+    "to": "provide the key directly to",
+    "note_th": "provide directly เป็นทางการกว่า pass straight"
+   }
+  ],
+  "id": "configuring-your-api-key"
+ },
+ {
+  "title": "Using the Fetch Function",
+  "title_th": "การใช้ฟังก์ชัน Fetch",
+  "type": "sdk-readme",
+  "context": "technical",
+  "level": "moderate",
+  "scenario_th": "อธิบายวิธีเรียกฟังก์ชันเพื่อดึงข้อมูลผู้ใช้",
+  "normal": "The getUser function asks the server for a user by their ID. You give it an ID, and it gives back the user data. It returns a promise, so use await to get the result. If the user isn't there, it throws an error you should catch.",
+  "normal_th": "ฟังก์ชัน getUser จะขอข้อมูลผู้ใช้จากเซิร์ฟเวอร์ตาม ID คุณให้ ID ไป แล้วมันจะคืนข้อมูลผู้ใช้กลับมา ฟังก์ชันคืนค่าเป็น promise ดังนั้นใช้ await เพื่อรับผลลัพธ์ ถ้าไม่มีผู้ใช้คนนั้น มันจะโยน error ที่คุณควรดักจับ",
+  "formal": "The getUser function requests a user from the server by their ID. You supply an ID, and it returns the user data. It returns a promise, so use await to obtain the result. If the user does not exist, it throws an error that you should handle.",
+  "formal_th": "ฟังก์ชัน getUser จะร้องขอข้อมูลผู้ใช้จากเซิร์ฟเวอร์ตาม ID คุณระบุ ID เข้าไป แล้วฟังก์ชันจะคืนข้อมูลผู้ใช้กลับมา ฟังก์ชันคืนค่าเป็น promise ดังนั้นใช้ await เพื่อรับผลลัพธ์ หากไม่พบผู้ใช้ ฟังก์ชันจะโยนข้อผิดพลาดที่คุณควรจัดการ",
+  "swaps": [
+   {
+    "from": "asks the server for",
+    "to": "requests ... from the server",
+    "note_th": "request เป็นทางการกว่า ask เมื่อพูดถึงการเรียกข้อมูล"
+   },
+   {
+    "from": "give it",
+    "to": "supply",
+    "note_th": "supply แปลว่าจัดหา/ระบุ ดูเป็นทางการกว่า give"
+   },
+   {
+    "from": "gives back",
+    "to": "returns",
+    "note_th": "return เป็นศัพท์มาตรฐานสำหรับค่าที่ฟังก์ชันคืนมา"
+   },
+   {
+    "from": "get the result",
+    "to": "obtain the result",
+    "note_th": "obtain เป็นทางการกว่า get"
+   },
+   {
+    "from": "isn't there",
+    "to": "does not exist",
+    "note_th": "does not exist ชัดเจนและเป็นทางการกว่า isn't there"
+   },
+   {
+    "from": "catch",
+    "to": "handle",
+    "note_th": "handle an error เป็นสำนวนมืออาชีพในการจัดการข้อผิดพลาด"
+   }
+  ],
+  "id": "using-the-fetch-function"
+ },
+ {
+  "title": "Reporting a Bug",
+  "title_th": "การรายงานบั๊ก",
+  "type": "sdk-readme",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "ส่วน README ที่บอกวิธีแจ้งปัญหาให้ทีมผู้ดูแล",
+  "normal": "Found a bug? Please tell us by opening an issue on GitHub. Add the steps to make it happen again and your SDK version. We'll look at it as fast as we can. Thanks for helping us make the library better.",
+  "normal_th": "เจอบั๊กใช่ไหม? กรุณาบอกเราโดยเปิด issue บน GitHub ใส่ขั้นตอนที่ทำให้เกิดปัญหาซ้ำและเวอร์ชัน SDK ของคุณ เราจะดูให้เร็วที่สุดเท่าที่ทำได้ ขอบคุณที่ช่วยให้ไลบรารีดีขึ้น",
+  "formal": "If you find a bug, please report it by opening an issue on GitHub. Include the steps to reproduce it and your SDK version. We will review it as soon as possible. Thank you for helping us improve the library.",
+  "formal_th": "หากคุณพบบั๊ก กรุณารายงานโดยเปิด issue บน GitHub โปรดระบุขั้นตอนในการทำให้เกิดปัญหาซ้ำและเวอร์ชัน SDK ของคุณ เราจะตรวจสอบโดยเร็วที่สุด ขอบคุณที่ช่วยเราปรับปรุงไลบรารีให้ดีขึ้น",
+  "swaps": [
+   {
+    "from": "tell us",
+    "to": "report it",
+    "note_th": "report เป็นทางการและตรงประเด็นกว่า tell us"
+   },
+   {
+    "from": "Add",
+    "to": "Include",
+    "note_th": "include เป็นทางการกว่า add เมื่อขอให้แนบข้อมูล"
+   },
+   {
+    "from": "make it happen again",
+    "to": "reproduce it",
+    "note_th": "reproduce เป็นศัพท์เทคนิคมาตรฐานสำหรับการทำให้บั๊กเกิดซ้ำ"
+   },
+   {
+    "from": "look at it",
+    "to": "review it",
+    "note_th": "review เป็นทางการกว่า look at"
+   },
+   {
+    "from": "as fast as we can",
+    "to": "as soon as possible",
+    "note_th": "as soon as possible เป็นวลีมาตรฐานในงานมืออาชีพ"
+   },
+   {
+    "from": "make the library better",
+    "to": "improve the library",
+    "note_th": "improve เป็นทางการกว่าและกระชับกว่า make better"
+   }
+  ],
+  "id": "reporting-a-bug"
+ },
+ {
+  "title": "Turn On Two-Factor Login",
+  "title_th": "เปิดใช้การยืนยันตัวตนสองขั้นตอน",
+  "type": "config-guide",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "เขียนคู่มือสั้นๆ ให้เพื่อนร่วมงานเปิดใช้การล็อกอินแบบสองขั้นตอน",
+  "normal": "To turn on two-factor login, first go to Settings and click Security. Then ask IT to give you the setup code. Put the code in the app to get a QR image. Scan it with your phone and save the backup numbers. If it does not work, tell the helpdesk and they will fix it.",
+  "normal_th": "ในการเปิดใช้งานการล็อกอินแบบสองขั้นตอน ก่อนอื่นให้ไปที่การตั้งค่าแล้วคลิก Security จากนั้นขอให้ทีมไอทีให้รหัสตั้งค่ากับคุณ ใส่รหัสในแอปเพื่อรับภาพ QR สแกนด้วยโทรศัพท์แล้วเก็บเลขสำรองไว้ ถ้าใช้ไม่ได้ให้บอกทีมช่วยเหลือแล้วเขาจะแก้ให้",
+  "formal": "To enable two-factor authentication, first open Settings and select Security. Then request the setup code from the IT team. Enter the code in the app to generate a QR image. Scan it with your phone and store the backup numbers safely. If any issue occurs, contact the helpdesk and they will resolve it.",
+  "formal_th": "ในการเปิดใช้งานการยืนยันตัวตนแบบสองขั้นตอน ก่อนอื่นให้เปิดการตั้งค่าแล้วเลือก Security จากนั้นขอรหัสตั้งค่าจากทีมไอที กรอกรหัสในแอปเพื่อสร้างภาพ QR สแกนด้วยโทรศัพท์แล้วจัดเก็บเลขสำรองไว้อย่างปลอดภัย หากเกิดปัญหาใดๆ ให้ติดต่อทีมช่วยเหลือแล้วเขาจะแก้ไขให้",
+  "swaps": [
+   {
+    "from": "turn on",
+    "to": "enable",
+    "note_th": "enable เป็นคำมาตรฐานทางเทคนิคสำหรับการ 'เปิดใช้งาน' ฟังก์ชัน ดูมืออาชีพกว่า turn on"
+   },
+   {
+    "from": "ask IT to give you",
+    "to": "request ... from the IT team",
+    "note_th": "request แปลว่า 'ขอ' อย่างเป็นทางการ ใช้แทน ask...to give ในบริบทงาน"
+   },
+   {
+    "from": "put the code in",
+    "to": "enter the code",
+    "note_th": "enter คือคำที่ใช้กับการ 'กรอก/ป้อน' ข้อมูลในระบบ สุภาพกว่า put in"
+   },
+   {
+    "from": "get a QR image",
+    "to": "generate a QR image",
+    "note_th": "generate = 'สร้างขึ้นโดยระบบ' ตรงความหมายทางเทคนิคมากกว่า get"
+   },
+   {
+    "from": "save",
+    "to": "store ... safely",
+    "note_th": "store สื่อถึงการจัดเก็บอย่างเป็นระบบ เหมาะกับข้อมูลสำคัญ"
+   },
+   {
+    "from": "tell the helpdesk",
+    "to": "contact the helpdesk",
+    "note_th": "contact สุภาพและเป็นทางการกว่า tell เมื่อพูดถึงการติดต่อทีมงาน"
+   },
+   {
+    "from": "fix",
+    "to": "resolve",
+    "note_th": "resolve เป็นคำมืออาชีพสำหรับการ 'แก้ไขปัญหา' ในงานเทคนิค"
+   }
+  ],
+  "id": "turn-on-two-factor-login"
+ },
+ {
+  "title": "Set Up Email Notifications",
+  "title_th": "ตั้งค่าการแจ้งเตือนทางอีเมล",
+  "type": "config-guide",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "เขียนคำแนะนำสั้นๆ ให้ผู้ใช้ปรับการแจ้งเตือนอีเมลในระบบ",
+  "normal": "You can change your email alerts in the Notifications tab. First, open your account and go to Preferences. Turn on the alerts you want and turn off the ones you do not need. Click Save to keep your changes. If you want more help, send us a message.",
+  "normal_th": "คุณสามารถเปลี่ยนการแจ้งเตือนทางอีเมลได้ในแท็บ Notifications ก่อนอื่นเปิดบัญชีของคุณแล้วไปที่ Preferences เปิดการแจ้งเตือนที่คุณต้องการและปิดอันที่ไม่ต้องการ คลิก Save เพื่อเก็บการเปลี่ยนแปลงไว้ ถ้าต้องการความช่วยเหลือเพิ่ม ส่งข้อความมาหาเรา",
+  "formal": "You can adjust your email alerts in the Notifications tab. First, open your account and go to Preferences. Enable the alerts you want and disable the ones you do not need. Select Save to apply your changes. If you require further assistance, submit a request to our team.",
+  "formal_th": "คุณสามารถปรับการแจ้งเตือนทางอีเมลได้ในแท็บ Notifications ก่อนอื่นเปิดบัญชีของคุณแล้วไปที่ Preferences เปิดใช้งานการแจ้งเตือนที่คุณต้องการและปิดใช้งานอันที่ไม่ต้องการ เลือก Save เพื่อบันทึกการเปลี่ยนแปลง หากต้องการความช่วยเหลือเพิ่มเติม โปรดส่งคำขอมายังทีมของเรา",
+  "swaps": [
+   {
+    "from": "change",
+    "to": "adjust",
+    "note_th": "adjust = 'ปรับ' ฟังดูควบคุมได้และมืออาชีพกว่า change"
+   },
+   {
+    "from": "turn on",
+    "to": "enable",
+    "note_th": "enable เป็นคำมาตรฐานสำหรับ 'เปิดใช้งาน' ตัวเลือกในระบบ"
+   },
+   {
+    "from": "turn off",
+    "to": "disable",
+    "note_th": "disable คู่กับ enable ใช้กับการ 'ปิดใช้งาน' อย่างเป็นทางการ"
+   },
+   {
+    "from": "click",
+    "to": "select",
+    "note_th": "select สุภาพและเป็นกลางกว่า click ในคู่มือทางการ"
+   },
+   {
+    "from": "keep your changes",
+    "to": "apply your changes",
+    "note_th": "apply your changes = 'นำการเปลี่ยนแปลงไปใช้' เป็นสำนวนมาตรฐานทางเทคนิค"
+   },
+   {
+    "from": "want more help",
+    "to": "require further assistance",
+    "note_th": "require further assistance เป็นวลีสุภาพทางการที่ใช้ในงานบริการลูกค้า"
+   },
+   {
+    "from": "send us a message",
+    "to": "submit a request",
+    "note_th": "submit a request = 'ส่งคำขอ' อย่างเป็นทางการ ผ่านช่องทางที่กำหนด"
+   }
+  ],
+  "id": "set-up-email-notifications"
+ },
+ {
+  "title": "Connect to the Company VPN",
+  "title_th": "เชื่อมต่อ VPN ของบริษัท",
+  "type": "config-guide",
+  "context": "technical",
+  "level": "moderate",
+  "scenario_th": "เขียนคู่มือให้พนักงานใหม่ตั้งค่าและเชื่อมต่อ VPN ของบริษัท",
+  "normal": "To use the company VPN, first get the app from the IT portal. Set it up and put in the server address they gave you. Ask your manager to okay your access. When it is ready, log in with your work account. If the link drops, restart the app and try again.",
+  "normal_th": "ในการใช้ VPN ของบริษัท ก่อนอื่นให้ไปเอาแอปจากพอร์ทัลไอที ติดตั้งแล้วใส่ที่อยู่เซิร์ฟเวอร์ที่เขาให้มา ขอให้หัวหน้าอนุมัติการเข้าใช้งานของคุณ เมื่อพร้อมแล้วให้ล็อกอินด้วยบัญชีงานของคุณ ถ้าการเชื่อมต่อหลุด ให้รีสตาร์ทแอปแล้วลองใหม่",
+  "formal": "To connect to the company VPN, first download the application from the IT portal. Install it and enter the server address provided to you. Request approval for your access from your manager. Once it is ready, sign in with your work account. If the connection drops, restart the application and try again.",
+  "formal_th": "ในการเชื่อมต่อ VPN ของบริษัท ก่อนอื่นให้ดาวน์โหลดแอปพลิเคชันจากพอร์ทัลไอที ติดตั้งแล้วกรอกที่อยู่เซิร์ฟเวอร์ที่ได้รับมา ขออนุมัติการเข้าใช้งานจากหัวหน้าของคุณ เมื่อพร้อมแล้วให้ลงชื่อเข้าใช้ด้วยบัญชีงานของคุณ หากการเชื่อมต่อหลุด ให้รีสตาร์ทแอปพลิเคชันแล้วลองใหม่",
+  "swaps": [
+   {
+    "from": "get the app",
+    "to": "download the application",
+    "note_th": "download ตรงความหมาย และ application เป็นทางการกว่า app"
+   },
+   {
+    "from": "set it up",
+    "to": "install it",
+    "note_th": "install เป็นคำเฉพาะสำหรับการ 'ติดตั้ง' โปรแกรม ชัดเจนกว่า set up"
+   },
+   {
+    "from": "put in the server address",
+    "to": "enter the server address",
+    "note_th": "enter ใช้กับการกรอกข้อมูลในช่อง สุภาพกว่า put in"
+   },
+   {
+    "from": "they gave you",
+    "to": "provided to you",
+    "note_th": "provided = 'จัดหา/ให้มา' อย่างเป็นทางการ ไม่ต้องระบุว่าใคร"
+   },
+   {
+    "from": "ask your manager to okay",
+    "to": "request approval ... from your manager",
+    "note_th": "request approval = 'ขออนุมัติ' เป็นสำนวนมาตรฐานในที่ทำงาน แทน okay ที่ไม่เป็นทางการ"
+   },
+   {
+    "from": "log in",
+    "to": "sign in",
+    "note_th": "sign in เป็นทางการและนิยมกว่า log in ในเอกสารบริษัท"
+   },
+   {
+    "from": "the link drops",
+    "to": "the connection drops",
+    "note_th": "connection เป็นศัพท์ทางเทคนิคที่ถูกต้องสำหรับ 'การเชื่อมต่อ' ส่วน link คลุมเครือ"
+   }
+  ],
+  "id": "connect-to-the-company-vpn"
+ },
+ {
+  "title": "Answering a Customer's Question",
+  "title_th": "ตอบคำถามลูกค้า",
+  "type": "support-email",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "ลูกค้าถามว่าจะเปลี่ยนแพ็กเกจได้ไหม เราตอบวิธีทำให้",
+  "normal": "Hi Anna, thanks for your message. Yes, you can change your plan anytime in your account settings. Just go to \"Billing\" and pick the new plan you want. If you need help, let me know and I can do it for you. Have a nice day!",
+  "normal_th": "สวัสดีค่ะแอนนา ขอบคุณสำหรับข้อความนะคะ ใช่ค่ะ คุณสามารถเปลี่ยนแพ็กเกจได้ตลอดเวลาในหน้าตั้งค่าบัญชี แค่ไปที่ \"Billing\" แล้วเลือกแพ็กเกจใหม่ที่คุณต้องการ ถ้าต้องการความช่วยเหลือ บอกได้เลยนะคะ เดี๋ยวจัดการให้ ขอให้เป็นวันที่ดีนะคะ",
+  "formal": "Dear Anna, thank you for reaching out. Yes, you can update your plan at any time through your account settings. Simply go to \"Billing\" and select the plan you'd like. If you'd prefer, I'd be happy to make the change on your behalf. Please let me know how I can assist.",
+  "formal_th": "เรียนคุณแอนนา ขอบคุณที่ติดต่อเข้ามาค่ะ ใช่ค่ะ คุณสามารถอัปเดตแพ็กเกจได้ตลอดเวลาผ่านหน้าตั้งค่าบัญชี เพียงไปที่ \"Billing\" แล้วเลือกแพ็กเกจที่คุณต้องการ หากสะดวก ยินดีที่จะดำเนินการเปลี่ยนให้แทนคุณค่ะ กรุณาแจ้งได้เลยว่าให้ช่วยเหลืออย่างไร",
+  "swaps": [
+   {
+    "from": "thanks for your message",
+    "to": "thank you for reaching out",
+    "note_th": "\"reaching out\" สุภาพและเป็นทางการกว่าในอีเมลงาน"
+   },
+   {
+    "from": "change your plan",
+    "to": "update your plan",
+    "note_th": "\"update\" ฟังดูเป็นมืออาชีพกว่า \"change\""
+   },
+   {
+    "from": "Just go to",
+    "to": "Simply go to",
+    "note_th": "\"Simply\" นุ่มนวลและเป็นทางการกว่า \"Just\""
+   },
+   {
+    "from": "pick the new plan you want",
+    "to": "select the plan you'd like",
+    "note_th": "\"select\" ทางการกว่า \"pick\"; \"you'd like\" สุภาพกว่า \"you want\""
+   },
+   {
+    "from": "I can do it for you",
+    "to": "I'd be happy to make the change on your behalf",
+    "note_th": "\"on your behalf\" = แทนคุณ ใช้ในงานบริการ ดูใส่ใจ"
+   },
+   {
+    "from": "let me know and I can do it",
+    "to": "Please let me know how I can assist",
+    "note_th": "\"assist\" ทางการกว่า \"help\"; เติม \"Please\" ให้สุภาพ"
+   }
+  ],
+  "id": "answering-a-customer-s-question"
+ },
+ {
+  "title": "Guiding a User Through a Setup",
+  "title_th": "แนะนำวิธีตั้งค่าให้ผู้ใช้",
+  "type": "support-email",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "ลูกค้าล็อกอินไม่ได้ เราแนะนำวิธีรีเซ็ตรหัสผ่าน",
+  "normal": "Hi, sorry you're having trouble logging in. First, click \"Forgot password\" on the login page. We'll send you an email with a link to make a new password. Open the link and type your new password twice. If the email doesn't come, check your spam folder.",
+  "normal_th": "สวัสดีค่ะ ขอโทษที่คุณล็อกอินไม่ได้นะคะ อันดับแรก คลิก \"Forgot password\" ที่หน้าล็อกอิน เราจะส่งอีเมลพร้อมลิงก์ให้คุณตั้งรหัสผ่านใหม่ เปิดลิงก์แล้วพิมพ์รหัสผ่านใหม่สองครั้ง ถ้าอีเมลไม่มา ลองเช็กในโฟลเดอร์สแปมนะคะ",
+  "formal": "Hello, I'm sorry to hear you're having trouble signing in. First, please click \"Forgot password\" on the login page. We'll send you an email containing a link to reset your password. Open the link and enter your new password twice to confirm it. If the email doesn't arrive, please check your spam folder.",
+  "formal_th": "สวัสดีค่ะ ขออภัยที่ทราบว่าคุณเข้าสู่ระบบไม่ได้ อันดับแรก กรุณาคลิก \"Forgot password\" ที่หน้าล็อกอิน เราจะส่งอีเมลที่มีลิงก์สำหรับรีเซ็ตรหัสผ่านให้คุณ เปิดลิงก์แล้วกรอกรหัสผ่านใหม่สองครั้งเพื่อยืนยัน หากอีเมลไม่มาถึง กรุณาตรวจสอบในโฟลเดอร์สแปม",
+  "swaps": [
+   {
+    "from": "sorry you're having trouble",
+    "to": "I'm sorry to hear you're having trouble",
+    "note_th": "ประโยคเต็มดูใส่ใจและทางการกว่าวลีสั้น"
+   },
+   {
+    "from": "logging in",
+    "to": "signing in",
+    "note_th": "\"signing in\" ทางการกว่าเล็กน้อยในบริบทงาน"
+   },
+   {
+    "from": "click",
+    "to": "please click",
+    "note_th": "เติม \"please\" เมื่อสั่งให้ทำ ทำให้สุภาพขึ้น"
+   },
+   {
+    "from": "an email with a link",
+    "to": "an email containing a link",
+    "note_th": "\"containing\" ทางการกว่า \"with\""
+   },
+   {
+    "from": "make a new password",
+    "to": "reset your password",
+    "note_th": "\"reset\" เป็นคำมาตรฐานในงานเทคนิค/บริการ"
+   },
+   {
+    "from": "type your new password",
+    "to": "enter your new password",
+    "note_th": "\"enter\" ทางการกว่า \"type\" ในคำแนะนำ"
+   },
+   {
+    "from": "the email doesn't come",
+    "to": "the email doesn't arrive",
+    "note_th": "\"arrive\" เป็นทางการและเป็นธรรมชาติกว่า \"come\""
+   }
+  ],
+  "id": "guiding-a-user-through-a-setup"
+ },
+ {
+  "title": "Saying You Will Look Into an Issue",
+  "title_th": "แจ้งว่าจะตรวจสอบปัญหาให้",
+  "type": "support-email",
+  "context": "business",
+  "level": "moderate",
+  "scenario_th": "ลูกค้าแจ้งว่าระบบมีบั๊ก เราบอกว่าจะรีบตรวจสอบ",
+  "normal": "Hi David, thanks for telling us about this problem. Sorry for the trouble. I've asked our tech team to look into it right now. I'll get back to you as soon as we know more. Thanks for waiting.",
+  "normal_th": "สวัสดีค่ะเดวิด ขอบคุณที่แจ้งปัญหานี้เข้ามานะคะ ขอโทษสำหรับความไม่สะดวกด้วยค่ะ ฉันได้ให้ทีมเทคนิคของเราตรวจสอบเรื่องนี้ทันทีแล้ว จะติดต่อกลับไปทันทีที่เราทราบข้อมูลเพิ่มเติม ขอบคุณที่รอนะคะ",
+  "formal": "Dear David, thank you for reporting this issue to us. We apologize for the inconvenience. I've asked our technical team to investigate it right away. I'll follow up with you as soon as we have an update. We appreciate your patience.",
+  "formal_th": "เรียนคุณเดวิด ขอบคุณที่รายงานปัญหานี้เข้ามาค่ะ เราต้องขออภัยในความไม่สะดวก ฉันได้ให้ทีมเทคนิคของเราตรวจสอบเรื่องนี้ทันทีแล้ว จะติดต่อกลับไปทันทีที่เรามีข้อมูลอัปเดต ขอบคุณสำหรับความอดทนรอค่ะ",
+  "swaps": [
+   {
+    "from": "telling us about this problem",
+    "to": "reporting this issue to us",
+    "note_th": "\"reporting\" และ \"issue\" เป็นคำมาตรฐานในงานบริการ"
+   },
+   {
+    "from": "Sorry for the trouble",
+    "to": "We apologize for the inconvenience",
+    "note_th": "\"apologize for the inconvenience\" เป็นวลีขอโทษมาตรฐานในอีเมลงาน"
+   },
+   {
+    "from": "look into it",
+    "to": "investigate it",
+    "note_th": "\"investigate\" เป็นทางการกว่า \"look into\""
+   },
+   {
+    "from": "I'll get back to you",
+    "to": "I'll follow up with you",
+    "note_th": "\"follow up\" เป็นมืออาชีพกว่า \"get back to you\""
+   },
+   {
+    "from": "as soon as we know more",
+    "to": "as soon as we have an update",
+    "note_th": "\"have an update\" เป็นภาษาธุรกิจที่ชัดเจนกว่า"
+   },
+   {
+    "from": "Thanks for waiting",
+    "to": "We appreciate your patience",
+    "note_th": "\"appreciate your patience\" สุภาพและเป็นทางการกว่า"
+   }
+  ],
+  "id": "saying-you-will-look-into-an-issue"
+ },
+ {
+  "title": "Following Up on a Ticket",
+  "title_th": "ติดตามผลเรื่องที่แจ้งไว้",
+  "type": "support-email",
+  "context": "business",
+  "level": "moderate",
+  "scenario_th": "ตามงานเดิมที่เคยแจ้งไว้ แจ้งลูกค้าว่าแก้เสร็จแล้ว",
+  "normal": "Hi Mira, I'm writing about the problem you told us about last week. Good news, our team has fixed it. Please try again and tell me if it works now. If there's still a problem, just send me a reply. Thanks a lot for your patience.",
+  "normal_th": "สวัสดีค่ะมิร่า ฉันเขียนมาเรื่องปัญหาที่คุณแจ้งเราไว้เมื่อสัปดาห์ที่แล้วนะคะ ข่าวดีค่ะ ทีมของเราแก้ไขเรียบร้อยแล้ว รบกวนลองใหม่อีกครั้งแล้วบอกฉันด้วยว่าใช้งานได้แล้วไหม ถ้ายังมีปัญหาอยู่ ก็ตอบกลับมาได้เลยค่ะ ขอบคุณมากสำหรับความอดทนรอนะคะ",
+  "formal": "Dear Mira, I'm following up regarding the issue you reported last week. I'm pleased to let you know our team has resolved it. Please try again and confirm whether it's now working on your end. If the problem persists, feel free to reply to this email. Thank you for your patience.",
+  "formal_th": "เรียนคุณมิร่า ฉันติดต่อมาเพื่อติดตามผลเรื่องปัญหาที่คุณแจ้งไว้เมื่อสัปดาห์ที่แล้วค่ะ ยินดีที่จะแจ้งให้ทราบว่าทีมของเราได้แก้ไขเรียบร้อยแล้ว รบกวนลองใหม่อีกครั้งและยืนยันด้วยว่าใช้งานได้แล้วหรือไม่ หากยังพบปัญหาอยู่ สามารถตอบกลับอีเมลนี้ได้เลยค่ะ ขอบคุณสำหรับความอดทนรอค่ะ",
+  "swaps": [
+   {
+    "from": "I'm writing about",
+    "to": "I'm following up regarding",
+    "note_th": "\"following up regarding\" เป็นวลีมาตรฐานสำหรับการตามงาน"
+   },
+   {
+    "from": "you told us about",
+    "to": "you reported",
+    "note_th": "\"reported\" กระชับและเป็นทางการกว่า"
+   },
+   {
+    "from": "Good news, our team has fixed it",
+    "to": "I'm pleased to let you know our team has resolved it",
+    "note_th": "\"pleased to let you know\" และ \"resolved\" ดูมืออาชีพกว่า \"fixed\""
+   },
+   {
+    "from": "tell me if it works now",
+    "to": "confirm whether it's now working on your end",
+    "note_th": "\"confirm\" และ \"on your end\" เป็นภาษาธุรกิจ ชัดเจนกว่า"
+   },
+   {
+    "from": "If there's still a problem",
+    "to": "If the problem persists",
+    "note_th": "\"persists\" เป็นทางการและกระชับกว่า"
+   },
+   {
+    "from": "just send me a reply",
+    "to": "feel free to reply to this email",
+    "note_th": "\"feel free to reply\" สุภาพและเป็นมิตรแบบมืออาชีพ"
+   },
+   {
+    "from": "Thanks a lot",
+    "to": "Thank you",
+    "note_th": "\"Thank you\" ทางการกว่า \"Thanks a lot\" ในอีเมลงาน"
+   }
+  ],
+  "id": "following-up-on-a-ticket"
+ },
+ {
+  "title": "Replying About a Refund",
+  "title_th": "ตอบเรื่องการคืนเงิน",
+  "type": "support-email",
+  "context": "business",
+  "level": "moderate",
+  "scenario_th": "ลูกค้าขอเงินคืน เราแจ้งว่าดำเนินการให้แล้ว",
+  "normal": "Hi Tom, thanks for getting in touch about your order. Sorry the product didn't work for you. I've started your refund, and you'll get the money back in 5 to 7 days. It will go back to the same card you paid with. Please tell me if you have any more questions.",
+  "normal_th": "สวัสดีค่ะทอม ขอบคุณที่ติดต่อเข้ามาเรื่องคำสั่งซื้อของคุณนะคะ ขอโทษที่สินค้าไม่ตรงกับที่คุณต้องการค่ะ ฉันได้เริ่มดำเนินการคืนเงินให้คุณแล้ว และคุณจะได้รับเงินคืนภายใน 5 ถึง 7 วัน เงินจะคืนเข้าบัตรใบเดิมที่คุณใช้จ่าย หากมีคำถามเพิ่มเติม บอกฉันได้เลยนะคะ",
+  "formal": "Dear Tom, thank you for contacting us regarding your order. I'm sorry the product didn't meet your expectations. I've processed your refund, and you should receive it within 5 to 7 business days. It will be returned to the original card used for payment. Please don't hesitate to let me know if you have any further questions.",
+  "formal_th": "เรียนคุณทอม ขอบคุณที่ติดต่อเราเข้ามาเรื่องคำสั่งซื้อของคุณค่ะ ต้องขออภัยที่สินค้าไม่ตรงกับความคาดหวังของคุณ ฉันได้ดำเนินการคืนเงินให้คุณเรียบร้อยแล้ว และคุณจะได้รับเงินคืนภายใน 5 ถึง 7 วันทำการ เงินจะถูกคืนเข้าบัตรใบเดิมที่ใช้ชำระเงิน หากมีคำถามเพิ่มเติม กรุณาแจ้งได้เลยค่ะ",
+  "swaps": [
+   {
+    "from": "getting in touch",
+    "to": "contacting us",
+    "note_th": "\"contacting us\" ทางการกว่า \"getting in touch\""
+   },
+   {
+    "from": "didn't work for you",
+    "to": "didn't meet your expectations",
+    "note_th": "\"meet your expectations\" เป็นวลีสุภาพมาตรฐานในงานบริการ"
+   },
+   {
+    "from": "I've started your refund",
+    "to": "I've processed your refund",
+    "note_th": "\"processed\" เป็นคำมาตรฐานสำหรับการดำเนินการคืนเงิน"
+   },
+   {
+    "from": "you'll get the money back",
+    "to": "you should receive it",
+    "note_th": "\"receive\" ทางการกว่า \"get the money back\""
+   },
+   {
+    "from": "5 to 7 days",
+    "to": "5 to 7 business days",
+    "note_th": "\"business days\" ชัดเจนกว่าในบริบทการเงิน"
+   },
+   {
+    "from": "the same card you paid with",
+    "to": "the original card used for payment",
+    "note_th": "สำนวนเป็นทางการและชัดเจนกว่าในเรื่องการเงิน"
+   },
+   {
+    "from": "Please tell me if you have any more questions",
+    "to": "Please don't hesitate to let me know if you have any further questions",
+    "note_th": "\"don't hesitate\" และ \"further\" เป็นวลีปิดท้ายอีเมลที่สุภาพ"
+   }
+  ],
+  "id": "replying-about-a-refund"
+ },
+ {
+  "title": "Short Cover Note",
+  "title_th": "โน้ตสมัครงานสั้น ๆ",
+  "type": "job-application",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "เขียนโน้ตสั้น ๆ แนบไปกับใบสมัครงานตำแหน่งการตลาด",
+  "normal": "Hi, I saw your job ad for the Marketing Assistant role and I want to apply. I have two years of experience and I'm good at social media and writing emails. I've put my CV below so you can look at it. Please tell me if you need anything else. Thanks a lot!",
+  "normal_th": "สวัสดีค่ะ ฉันเห็นประกาศรับสมัครงานตำแหน่งผู้ช่วยการตลาดและอยากสมัครค่ะ ฉันมีประสบการณ์สองปีและถนัดเรื่องโซเชียลมีเดียกับการเขียนอีเมล ฉันแนบซีวีไว้ด้านล่างแล้วเพื่อให้คุณดูได้เลย ถ้าต้องการข้อมูลอื่นเพิ่มบอกได้เลยนะคะ ขอบคุณมากค่ะ!",
+  "formal": "Dear Hiring Manager, I am writing to apply for the Marketing Assistant position. I have two years of experience and strong skills in social media management and email communication. I have attached my CV for your review. Please let me know if you require any further information. Thank you for your consideration.",
+  "formal_th": "เรียน ผู้จัดการฝ่ายสรรหาบุคลากร ดิฉันเขียนมาเพื่อสมัครตำแหน่งผู้ช่วยการตลาด ดิฉันมีประสบการณ์สองปีและมีทักษะที่แข็งแกร่งด้านการบริหารโซเชียลมีเดียและการสื่อสารทางอีเมล ดิฉันได้แนบซีวีมาเพื่อให้ท่านพิจารณา หากท่านต้องการข้อมูลเพิ่มเติมโปรดแจ้งให้ดิฉันทราบ ขอบคุณสำหรับการพิจารณาค่ะ",
+  "swaps": [
+   {
+    "from": "I want to apply",
+    "to": "I am writing to apply for",
+    "note_th": "วลีเปิดที่เป็นมาตรฐานในจดหมายสมัครงาน ดูเป็นทางการและสุภาพกว่า"
+   },
+   {
+    "from": "I'm good at",
+    "to": "strong skills in",
+    "note_th": "\"strong skills in\" ฟังดูเป็นมืออาชีพกว่าการบอกว่าเก่ง"
+   },
+   {
+    "from": "I've put my CV below",
+    "to": "I have attached my CV",
+    "note_th": "\"attached\" เป็นคำมาตรฐานเวลาแนบไฟล์ในอีเมลงาน"
+   },
+   {
+    "from": "so you can look at it",
+    "to": "for your review",
+    "note_th": "\"for your review\" กระชับและเป็นทางการกว่า"
+   },
+   {
+    "from": "Please tell me if you need anything else",
+    "to": "Please let me know if you require any further information",
+    "note_th": "\"require\" และ \"further information\" สุภาพและเป็นทางการกว่า \"need anything\""
+   },
+   {
+    "from": "Thanks a lot!",
+    "to": "Thank you for your consideration",
+    "note_th": "วลีปิดมาตรฐานในใบสมัครงาน แทนคำขอบคุณแบบลำลอง"
+   },
+   {
+    "from": "Hi",
+    "to": "Dear Hiring Manager",
+    "note_th": "ใช้คำทักทายที่เป็นทางการเมื่อไม่รู้จักชื่อผู้รับ"
+   }
+  ],
+  "id": "short-cover-note"
+ },
+ {
+  "title": "Follow-Up After an Interview",
+  "title_th": "อีเมลติดตามผลหลังสัมภาษณ์",
+  "type": "job-application",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "ส่งอีเมลขอบคุณและติดตามผลหลังจากไปสัมภาษณ์งานมา",
+  "normal": "Hi Khun Ploy, thanks for meeting me yesterday to talk about the Sales job. I really liked hearing about the team and what they do. I think I can help a lot with your new project because I've done the same kind of work before. Just let me know if you want more info from me. Hope to hear back soon!",
+  "normal_th": "สวัสดีค่ะคุณพลอย ขอบคุณที่สละเวลาพบกันเมื่อวานเพื่อคุยเรื่องงานฝ่ายขายค่ะ ฉันชอบมากที่ได้ฟังเรื่องทีมและสิ่งที่ทีมทำ ฉันคิดว่าฉันช่วยโปรเจกต์ใหม่ของคุณได้เยอะเพราะฉันเคยทำงานแบบเดียวกันมาก่อน ถ้าอยากได้ข้อมูลเพิ่มจากฉันบอกได้เลยนะคะ หวังว่าจะได้รับข่าวเร็ว ๆ นี้ค่ะ!",
+  "formal": "Dear Khun Ploy, thank you for taking the time to meet with me yesterday regarding the Sales position. I enjoyed learning more about the team and its work. I am confident that I can contribute to your new project, as I have handled similar work in the past. Please let me know if you would like any additional information from me. I look forward to hearing from you.",
+  "formal_th": "เรียน คุณพลอย ขอบคุณที่สละเวลาพบกับดิฉันเมื่อวานเกี่ยวกับตำแหน่งฝ่ายขายค่ะ ดิฉันรู้สึกยินดีที่ได้เรียนรู้เกี่ยวกับทีมและงานของทีมมากขึ้น ดิฉันมั่นใจว่าดิฉันสามารถมีส่วนช่วยโปรเจกต์ใหม่ของท่านได้ เพราะดิฉันเคยรับผิดชอบงานลักษณะเดียวกันมาก่อน หากท่านต้องการข้อมูลเพิ่มเติมจากดิฉันโปรดแจ้งให้ทราบ ดิฉันรอคอยที่จะได้รับข่าวจากท่านค่ะ",
+  "swaps": [
+   {
+    "from": "thanks for meeting me",
+    "to": "thank you for taking the time to meet with me",
+    "note_th": "\"taking the time\" แสดงความสุภาพและให้เกียรติเวลาของผู้รับ"
+   },
+   {
+    "from": "to talk about",
+    "to": "regarding",
+    "note_th": "\"regarding\" เป็นคำเชื่อมทางการที่ใช้บ่อยในอีเมลงาน"
+   },
+   {
+    "from": "I really liked hearing about",
+    "to": "I enjoyed learning more about",
+    "note_th": "\"enjoyed learning\" ฟังดูเป็นผู้ใหญ่และมืออาชีพกว่า \"really liked\""
+   },
+   {
+    "from": "I think I can help a lot with",
+    "to": "I am confident that I can contribute to",
+    "note_th": "\"contribute to\" และ \"confident\" ฟังดูมั่นใจและเป็นทางการกว่า \"help a lot\""
+   },
+   {
+    "from": "I've done the same kind of work before",
+    "to": "I have handled similar work in the past",
+    "note_th": "\"handled\" และ \"similar work\" เป็นภาษาการทำงานที่สุภาพกว่า"
+   },
+   {
+    "from": "if you want more info from me",
+    "to": "if you would like any additional information",
+    "note_th": "\"would like\" และ \"additional information\" สุภาพและเป็นทางการกว่า"
+   },
+   {
+    "from": "Hope to hear back soon!",
+    "to": "I look forward to hearing from you",
+    "note_th": "วลีปิดมาตรฐานในอีเมลงาน ดูเป็นมืออาชีพ"
+   }
+  ],
+  "id": "follow-up-after-an-interview"
+ },
+ {
+  "title": "LinkedIn Networking Message",
+  "title_th": "ข้อความขอเชื่อมต่อบน LinkedIn",
+  "type": "job-application",
+  "context": "business",
+  "level": "moderate",
+  "scenario_th": "ส่งข้อความบน LinkedIn เพื่อขอเชื่อมต่อกับคนในสายงานเดียวกัน",
+  "normal": "Hi Khun Nattapong, I found your profile and I really like the work you do in data analytics. I'm trying to move into this field and I'd love to ask you a few questions. Could we set up a quick call sometime? Thanks and hope we can connect!",
+  "normal_th": "สวัสดีค่ะคุณณัฐพงษ์ ฉันเจอโปรไฟล์ของคุณและชอบงานด้านการวิเคราะห์ข้อมูลที่คุณทำมากค่ะ ฉันกำลังพยายามเปลี่ยนสายมาทำงานด้านนี้และอยากขอถามคำถามสักสองสามข้อค่ะ เรานัดคุยกันสั้น ๆ สักครั้งได้ไหมคะ ขอบคุณค่ะ หวังว่าเราจะได้เชื่อมต่อกันนะคะ!",
+  "formal": "Dear Khun Nattapong, I came across your profile and am impressed by your work in data analytics. I am currently looking to transition into this field and would appreciate the chance to ask you a few questions. Would you be available for a brief call at your convenience? Thank you, and I hope to connect with you.",
+  "formal_th": "เรียน คุณณัฐพงษ์ ดิฉันได้พบโปรไฟล์ของท่านและรู้สึกประทับใจในงานด้านการวิเคราะห์ข้อมูลของท่านค่ะ ปัจจุบันดิฉันกำลังมองหาโอกาสเปลี่ยนสายมาทำงานด้านนี้ และจะขอบคุณมากหากได้มีโอกาสถามคำถามสักสองสามข้อ ไม่ทราบว่าท่านพอจะสะดวกคุยสั้น ๆ ในเวลาที่ท่านสะดวกไหมคะ ขอบคุณค่ะ และดิฉันหวังว่าจะได้เชื่อมต่อกับท่าน",
+  "swaps": [
+   {
+    "from": "I found your profile",
+    "to": "I came across your profile",
+    "note_th": "\"came across\" ฟังดูเป็นธรรมชาติและสุภาพกว่าในบริบทมืออาชีพ"
+   },
+   {
+    "from": "I really like",
+    "to": "am impressed by",
+    "note_th": "\"impressed by\" ให้ความรู้สึกจริงจังและให้เกียรติมากกว่า \"really like\""
+   },
+   {
+    "from": "I'm trying to move into this field",
+    "to": "I am currently looking to transition into this field",
+    "note_th": "\"transition into\" เป็นคำที่ใช้พูดเรื่องเปลี่ยนสายงานแบบมืออาชีพ"
+   },
+   {
+    "from": "I'd love to ask you",
+    "to": "would appreciate the chance to ask you",
+    "note_th": "\"would appreciate\" สุภาพและเป็นทางการกว่า \"I'd love to\""
+   },
+   {
+    "from": "Could we set up a quick call sometime?",
+    "to": "Would you be available for a brief call at your convenience?",
+    "note_th": "\"at your convenience\" ให้เกียรติผู้รับในการเลือกเวลาเอง ดูเป็นมืออาชีพ"
+   },
+   {
+    "from": "hope we can connect",
+    "to": "I hope to connect with you",
+    "note_th": "เขียนเป็นประโยคเต็มดูเรียบร้อยและเป็นทางการกว่า"
+   }
+  ],
+  "id": "linkedin-networking-message"
+ },
+ {
+  "title": "Introducing Yourself to a New Team",
+  "title_th": "อีเมลแนะนำตัวกับทีมใหม่",
+  "type": "job-application",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "ส่งอีเมลแนะนำตัวในวันแรกที่เริ่มงานกับทีมใหม่",
+  "normal": "Hi everyone, I'm Mai and I just started as the new Accountant this week. I'll be doing the monthly reports and helping fix any money problems. I'm still learning how things work here, so please tell me if I get something wrong. Feel free to come and say hi anytime!",
+  "normal_th": "สวัสดีค่ะทุกคน ฉันชื่อใหม่นะคะ เพิ่งเริ่มงานตำแหน่งนักบัญชีคนใหม่ในสัปดาห์นี้ ฉันจะดูแลรายงานประจำเดือนและช่วยแก้ปัญหาเรื่องการเงินต่าง ๆ ฉันยังเรียนรู้ว่าที่นี่ทำงานกันยังไงอยู่ ถ้าฉันทำอะไรผิดพลาดบอกได้เลยนะคะ แวะมาทักทายกันได้ตลอดเลยค่ะ!",
+  "formal": "Hello everyone, my name is Mai, and I have just joined the team this week as the new Accountant. I will be responsible for the monthly reports and helping to resolve any financial issues. As I am still getting familiar with how things work here, please do let me know if I get anything wrong. Please feel free to reach out and introduce yourselves anytime.",
+  "formal_th": "สวัสดีค่ะทุกท่าน ดิฉันชื่อใหม่ค่ะ เพิ่งเข้าร่วมทีมในสัปดาห์นี้ในตำแหน่งนักบัญชีคนใหม่ ดิฉันจะรับผิดชอบรายงานประจำเดือนและช่วยแก้ไขปัญหาด้านการเงินต่าง ๆ เนื่องจากดิฉันยังอยู่ในช่วงทำความคุ้นเคยกับการทำงานที่นี่ หากดิฉันทำสิ่งใดผิดพลาดโปรดแจ้งให้ทราบได้เลยนะคะ หากสะดวกก็แวะมาแนะนำตัวกันได้ตลอดเวลาค่ะ",
+  "swaps": [
+   {
+    "from": "I just started as",
+    "to": "I have just joined the team this week as",
+    "note_th": "\"joined the team\" ฟังดูเป็นทางการและอบอุ่นกว่าในอีเมลแนะนำตัว"
+   },
+   {
+    "from": "I'll be doing",
+    "to": "I will be responsible for",
+    "note_th": "\"responsible for\" เป็นภาษาการทำงานที่บอกหน้าที่อย่างชัดเจนและมืออาชีพ"
+   },
+   {
+    "from": "helping fix any money problems",
+    "to": "helping to resolve any financial issues",
+    "note_th": "\"resolve\" และ \"financial issues\" เป็นคำทางการแทน \"fix\" และ \"money problems\""
+   },
+   {
+    "from": "I'm still learning how things work here",
+    "to": "As I am still getting familiar with how things work here",
+    "note_th": "\"getting familiar with\" ฟังดูสุภาพและเป็นผู้ใหญ่กว่า"
+   },
+   {
+    "from": "please tell me if I get something wrong",
+    "to": "please do let me know if I get anything wrong",
+    "note_th": "\"please do let me know\" สุภาพและเป็นทางการกว่า แต่ความหมายเหมือนเดิม"
+   },
+   {
+    "from": "come and say hi",
+    "to": "reach out and introduce yourselves",
+    "note_th": "\"reach out\" เป็นวลีที่ใช้บ่อยในที่ทำงาน สุภาพกว่า \"say hi\""
+   }
+  ],
+  "id": "introducing-yourself-to-a-new-team"
+ },
+ {
+  "title": "Login Page Outage",
+  "title_th": "หน้าล็อกอินล่ม",
+  "type": "incident-report",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "รายงานเหตุระบบล็อกอินล่มให้ทีมและผู้ใช้ทราบ",
+  "normal": "Last night the login page stopped working. A lot of users could not get into their accounts for about 30 minutes. We found out a bad code change caused it, so we rolled it back. Sorry for the trouble. We will add more checks so this does not happen again.",
+  "normal_th": "เมื่อคืนหน้าล็อกอินใช้งานไม่ได้ ผู้ใช้จำนวนมากเข้าบัญชีตัวเองไม่ได้ประมาณ 30 นาที เราพบว่าเกิดจากการแก้โค้ดที่มีปัญหา เลยย้อนโค้ดกลับไปเวอร์ชันเดิม ขอโทษสำหรับความไม่สะดวกนะครับ เราจะเพิ่มการตรวจสอบเพื่อไม่ให้เกิดขึ้นอีก",
+  "formal": "Last night, the login page experienced an outage. Approximately 30 minutes of downtime prevented many users from accessing their accounts. We identified that a faulty code change was the root cause, so we rolled it back to mitigate the issue. We apologize for the inconvenience. We will implement additional checks to prevent a recurrence.",
+  "formal_th": "เมื่อคืนหน้าล็อกอินเกิดปัญหาขัดข้อง ระบบล่มประมาณ 30 นาที ทำให้ผู้ใช้จำนวนมากไม่สามารถเข้าถึงบัญชีได้ เราตรวจพบว่าสาเหตุหลักมาจากการเปลี่ยนแปลงโค้ดที่ผิดพลาด จึงย้อนกลับเพื่อบรรเทาปัญหา เราขออภัยในความไม่สะดวก และจะดำเนินการเพิ่มการตรวจสอบเพื่อป้องกันไม่ให้เกิดซ้ำ",
+  "swaps": [
+   {
+    "from": "stopped working",
+    "to": "experienced an outage",
+    "note_th": "\"experienced an outage\" เป็นศัพท์ทางเทคนิคที่ใช้ในรายงาน ฟังดูเป็นทางการกว่า"
+   },
+   {
+    "from": "could not get into",
+    "to": "were unable to access",
+    "note_th": "\"access\" สุภาพและเป็นทางการกว่า \"get into\" ที่เป็นภาษาพูด"
+   },
+   {
+    "from": "found out",
+    "to": "identified",
+    "note_th": "\"identified\" ใช้เมื่อระบุสาเหตุอย่างเป็นทางการในรายงาน"
+   },
+   {
+    "from": "bad code change",
+    "to": "faulty code change",
+    "note_th": "\"faulty\" (บกพร่อง) เป็นทางการกว่าคำว่า \"bad\""
+   },
+   {
+    "from": "caused it",
+    "to": "was the root cause",
+    "note_th": "\"root cause\" (สาเหตุที่แท้จริง) เป็นคำมาตรฐานใน postmortem"
+   },
+   {
+    "from": "Sorry for the trouble",
+    "to": "We apologize for the inconvenience",
+    "note_th": "วลีขอโทษมาตรฐานในงาน สุภาพกว่า \"sorry\""
+   },
+   {
+    "from": "add more checks",
+    "to": "implement additional checks",
+    "note_th": "\"implement\" (ดำเนินการติดตั้ง) เป็นทางการกว่า \"add\""
+   },
+   {
+    "from": "so this does not happen again",
+    "to": "to prevent a recurrence",
+    "note_th": "\"prevent a recurrence\" กระชับและเป็นทางการกว่า"
+   }
+  ],
+  "id": "login-page-outage"
+ },
+ {
+  "title": "Payment Failures Incident",
+  "title_th": "เหตุจ่ายเงินล้มเหลว",
+  "type": "incident-report",
+  "context": "technical",
+  "level": "moderate",
+  "scenario_th": "รายงานเหตุลูกค้าจ่ายเงินไม่ได้เพราะฐานข้อมูลช้า",
+  "normal": "This morning some customers could not pay on our app. The problem started around 9 AM and lasted about one hour. The database was too slow, so payments kept failing. We fixed it by restarting the server and moving to a backup. Everything is working now.",
+  "normal_th": "เช้านี้ลูกค้าบางคนจ่ายเงินในแอปไม่ได้ ปัญหาเริ่มประมาณ 9 โมงเช้า และกินเวลาราวหนึ่งชั่วโมง ฐานข้อมูลช้าเกินไป ทำให้การจ่ายเงินล้มเหลวเรื่อยๆ เราแก้โดยรีสตาร์ทเซิร์ฟเวอร์แล้วสลับไปใช้ตัวสำรอง ตอนนี้ทุกอย่างใช้งานได้แล้ว",
+  "formal": "This morning, some customers were unable to complete payments on our app. The issue began at approximately 9 AM and lasted about one hour. Database performance had degraded, which caused payments to fail repeatedly. We resolved it by restarting the server and failing over to a backup. All services have now been restored.",
+  "formal_th": "เช้านี้ลูกค้าบางรายไม่สามารถชำระเงินในแอปได้ ปัญหาเริ่มขึ้นเวลาประมาณ 9 โมงเช้า และกินเวลาราวหนึ่งชั่วโมง ประสิทธิภาพของฐานข้อมูลลดลง ส่งผลให้การชำระเงินล้มเหลวซ้ำๆ เราแก้ไขด้วยการรีสตาร์ทเซิร์ฟเวอร์และสลับไปใช้ระบบสำรอง ขณะนี้บริการทั้งหมดกลับมาใช้งานได้ตามปกติแล้ว",
+  "swaps": [
+   {
+    "from": "could not pay",
+    "to": "were unable to complete payments",
+    "note_th": "\"complete payments\" ชัดเจนและเป็นทางการกว่า \"pay\""
+   },
+   {
+    "from": "The problem started",
+    "to": "The issue began",
+    "note_th": "\"issue\" กับ \"began\" ดูเป็นทางการกว่า \"problem/started\""
+   },
+   {
+    "from": "around",
+    "to": "at approximately",
+    "note_th": "\"approximately\" ใช้บอกเวลาโดยประมาณแบบเป็นทางการ"
+   },
+   {
+    "from": "was too slow",
+    "to": "performance had degraded",
+    "note_th": "\"performance degraded\" เป็นศัพท์เทคนิคในรายงานเหตุ"
+   },
+   {
+    "from": "kept failing",
+    "to": "to fail repeatedly",
+    "note_th": "\"repeatedly\" เป็นทางการกว่า \"kept ...ing\" ที่เป็นภาษาพูด"
+   },
+   {
+    "from": "We fixed it",
+    "to": "We resolved it",
+    "note_th": "\"resolve\" เป็นคำมาตรฐานสำหรับ \"แก้ปัญหา\" ในงาน"
+   },
+   {
+    "from": "moving to a backup",
+    "to": "failing over to a backup",
+    "note_th": "\"fail over\" เป็นศัพท์ระบบเมื่อสลับไปใช้ตัวสำรอง"
+   },
+   {
+    "from": "Everything is working now",
+    "to": "All services have now been restored",
+    "note_th": "\"services restored\" เป็นภาษามาตรฐานเมื่อระบบกลับมาปกติ"
+   }
+  ],
+  "id": "payment-failures-incident"
+ },
+ {
+  "title": "Bad Deploy Broke the Site",
+  "title_th": "อัปเดตทำเว็บพัง",
+  "type": "incident-report",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "รายงานว่าปล่อยอัปเดตแล้วเว็บล่ม ต้องย้อนกลับ",
+  "normal": "We put out a new update yesterday and it broke the website. Users saw an error page for about 15 minutes. As soon as we saw it, we rolled back the update. The site came back up right away. We are looking into why our tests did not catch this.",
+  "normal_th": "เมื่อวานเราปล่อยอัปเดตใหม่ แล้วมันทำให้เว็บไซต์พัง ผู้ใช้เห็นหน้า error ประมาณ 15 นาที พอเราเห็นปัญหา เราก็ย้อนอัปเดตกลับทันที เว็บกลับมาใช้งานได้เลย ตอนนี้เรากำลังหาสาเหตุว่าทำไมการทดสอบถึงไม่เจอปัญหานี้",
+  "formal": "We deployed a new update yesterday, which caused the website to fail. Users encountered an error page for approximately 15 minutes. As soon as we detected the issue, we rolled back the update. The site was restored immediately. We are currently investigating why our tests did not catch this.",
+  "formal_th": "เมื่อวานเราได้ deploy อัปเดตใหม่ ซึ่งทำให้เว็บไซต์ขัดข้อง ผู้ใช้พบหน้า error ประมาณ 15 นาที ทันทีที่เราตรวจพบปัญหา เราได้ย้อนอัปเดตกลับ เว็บไซต์กลับมาใช้งานได้ทันที ขณะนี้เรากำลังตรวจสอบว่าเหตุใดการทดสอบจึงไม่พบปัญหานี้",
+  "swaps": [
+   {
+    "from": "put out",
+    "to": "deployed",
+    "note_th": "\"deploy\" เป็นคำมาตรฐานสำหรับปล่อยโค้ด/อัปเดตขึ้นระบบ"
+   },
+   {
+    "from": "broke the website",
+    "to": "caused the website to fail",
+    "note_th": "\"caused ... to fail\" สุภาพและเป็นทางการกว่า \"broke\""
+   },
+   {
+    "from": "saw an error page",
+    "to": "encountered an error page",
+    "note_th": "\"encounter\" เป็นทางการกว่า \"see\" เมื่อพูดถึงผู้ใช้เจอปัญหา"
+   },
+   {
+    "from": "we saw it",
+    "to": "we detected the issue",
+    "note_th": "\"detect\" ใช้กับการตรวจจับปัญหาในระบบ ดูมืออาชีพกว่า"
+   },
+   {
+    "from": "came back up right away",
+    "to": "was restored immediately",
+    "note_th": "\"restored immediately\" เป็นภาษ ามาตรฐานในรายงาน"
+   },
+   {
+    "from": "looking into",
+    "to": "investigating",
+    "note_th": "\"investigate\" เป็นทางการกว่า \"look into\" ที่เป็นภาษาพูด"
+   }
+  ],
+  "id": "bad-deploy-broke-the-site"
+ },
+ {
+  "title": "Order Emails Not Sent",
+  "title_th": "อีเมลคำสั่งซื้อไม่ถูกส่ง",
+  "type": "incident-report",
+  "context": "technical",
+  "level": "moderate",
+  "scenario_th": "รายงานเหตุระบบไม่ได้ส่งอีเมลยืนยันคำสั่งซื้อ",
+  "normal": "Yesterday our system did not send order emails to customers. About 200 people did not get their order confirmation. The email service had a problem on their side. We sent all the missing emails again this morning. We will set up an alert so we know faster next time.",
+  "normal_th": "เมื่อวานระบบของเราไม่ได้ส่งอีเมลคำสั่งซื้อให้ลูกค้า มีคนประมาณ 200 คนที่ไม่ได้รับอีเมลยืนยันคำสั่งซื้อ ผู้ให้บริการอีเมลมีปัญหาทางฝั่งเขา เราส่งอีเมลที่ตกหล่นทั้งหมดใหม่อีกครั้งเมื่อเช้านี้ เราจะตั้งการแจ้งเตือนเพื่อให้รู้เร็วขึ้นในครั้งหน้า",
+  "formal": "Yesterday, our system failed to send order emails to customers. Approximately 200 recipients did not receive their order confirmation. The issue originated with our email provider. We resent all affected emails this morning. We will configure an alert so we can be notified more quickly next time.",
+  "formal_th": "เมื่อวานระบบของเราไม่สามารถส่งอีเมลคำสั่งซื้อให้ลูกค้าได้ ผู้รับประมาณ 200 รายไม่ได้รับอีเมลยืนยันคำสั่งซื้อ ปัญหาเกิดจากผู้ให้บริการอีเมลของเรา เราได้ส่งอีเมลที่ได้รับผลกระทบทั้งหมดอีกครั้งเมื่อเช้านี้ เราจะตั้งค่าการแจ้งเตือนเพื่อให้ได้รับแจ้งเร็วขึ้นในครั้งถัดไป",
+  "swaps": [
+   {
+    "from": "did not send",
+    "to": "failed to send",
+    "note_th": "\"failed to\" เป็นภาษามาตรฐานในรายงานเหตุขัดข้อง"
+   },
+   {
+    "from": "About",
+    "to": "Approximately",
+    "note_th": "\"approximately\" เป็นทางการกว่า \"about\" เมื่อบอกจำนวน"
+   },
+   {
+    "from": "people",
+    "to": "recipients",
+    "note_th": "\"recipients\" (ผู้รับ) ตรงและเป็นทางการกว่า \"people\""
+   },
+   {
+    "from": "did not get",
+    "to": "did not receive",
+    "note_th": "\"receive\" เป็นทางการกว่า \"get\" ในบริบทงาน"
+   },
+   {
+    "from": "had a problem on their side",
+    "to": "The issue originated with our email provider",
+    "note_th": "\"originated with\" ระบุต้นตอปัญหาอย่างเป็นทางการ"
+   },
+   {
+    "from": "sent the missing emails again",
+    "to": "resent all affected emails",
+    "note_th": "\"resent\" และ \"affected\" กระชับและเป็นทางการกว่า"
+   },
+   {
+    "from": "set up an alert",
+    "to": "configure an alert",
+    "note_th": "\"configure\" เป็นศัพท์เทคนิคสำหรับตั้งค่าระบบ"
+   },
+   {
+    "from": "so we know faster",
+    "to": "so we can be notified more quickly",
+    "note_th": "\"be notified\" (ได้รับแจ้ง) สุภาพและเป็นทางการกว่า"
+   }
+  ],
+  "id": "order-emails-not-sent"
+ },
+ {
+  "title": "Get a user by ID",
+  "title_th": "ดึงข้อมูลผู้ใช้ด้วย ID",
+  "type": "api-docs",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "เขียนคู่มือ API อธิบาย endpoint ที่ใช้ดึงข้อมูลผู้ใช้",
+  "normal": "This endpoint gets a user by their ID. You need to send the user ID in the URL. If the user is there, it gives back their name and email. If not, you get a 404 error.",
+  "normal_th": "endpoint นี้ใช้ดึงข้อมูลผู้ใช้จาก ID ของเขา คุณต้องส่ง user ID มาใน URL ถ้ามีผู้ใช้คนนั้นอยู่ ระบบจะส่งชื่อและอีเมลกลับมา ถ้าไม่มี คุณจะได้ error 404",
+  "formal": "This endpoint retrieves a user by their ID. You must provide the user ID in the URL path. If the user exists, it returns their name and email address. Otherwise, it returns a 404 error.",
+  "formal_th": "endpoint นี้ใช้เรียกดูข้อมูลผู้ใช้จาก ID ของเขา คุณต้องระบุ user ID ไว้ใน path ของ URL ถ้าผู้ใช้มีอยู่ ระบบจะส่งคืนชื่อและที่อยู่อีเมล มิฉะนั้นจะส่งคืน error 404",
+  "swaps": [
+   {
+    "from": "gets",
+    "to": "retrieves",
+    "note_th": "retrieve เป็นศัพท์ทางเทคนิคที่ใช้ในเอกสาร API เพื่อหมายถึง ดึง/เรียกดูข้อมูล ดูมืออาชีพกว่า get"
+   },
+   {
+    "from": "you need to send",
+    "to": "you must provide",
+    "note_th": "provide สุภาพและชัดเจนกว่า send และ must ฟังเป็นข้อกำหนดที่เป็นทางการ"
+   },
+   {
+    "from": "in the URL",
+    "to": "in the URL path",
+    "note_th": "เติม path ทำให้ระบุตำแหน่งชัดเจนขึ้น เป็นคำที่ใช้จริงในเอกสาร API"
+   },
+   {
+    "from": "is there",
+    "to": "exists",
+    "note_th": "exists เป็นคำมาตรฐานในงานเทคนิคเมื่อพูดว่าข้อมูลมีอยู่จริง"
+   },
+   {
+    "from": "gives back",
+    "to": "returns",
+    "note_th": "return คือคำมาตรฐานสำหรับ ค่าที่ส่งกลับ ในเอกสาร API"
+   },
+   {
+    "from": "If not, you get",
+    "to": "Otherwise, it returns",
+    "note_th": "Otherwise เป็นทางการกว่า If not และ it returns เน้นที่ระบบไม่ใช่ตัวผู้อ่าน"
+   }
+  ],
+  "id": "get-a-user-by-id"
+ },
+ {
+  "title": "Validate the fields before saving",
+  "title_th": "ตรวจสอบฟิลด์ก่อนบันทึก",
+  "type": "api-docs",
+  "context": "technical",
+  "level": "moderate",
+  "scenario_th": "อธิบาย endpoint ที่ตรวจสอบข้อมูลฟอร์มก่อนบันทึกลงฐานข้อมูล",
+  "normal": "Before you save the data, this endpoint checks the fields you send. It makes sure the email is real and the password is long enough. If something is wrong, it tells you which field to fix. If everything is ok, it sends back a success message.",
+  "normal_th": "ก่อนที่คุณจะบันทึกข้อมูล endpoint นี้จะตรวจสอบฟิลด์ที่คุณส่งมา มันจะเช็คว่าอีเมลใช้ได้จริงและรหัสผ่านยาวพอ ถ้ามีอะไรผิด มันจะบอกว่าต้องแก้ฟิลด์ไหน ถ้าทุกอย่างโอเค มันจะส่งข้อความว่าสำเร็จกลับมา",
+  "formal": "Before saving the data, this endpoint validates the fields you submit. It verifies that the email is valid and the password meets the length requirement. If an error occurs, it indicates which field to correct. If all fields are valid, it returns a success message.",
+  "formal_th": "ก่อนบันทึกข้อมูล endpoint นี้จะตรวจสอบความถูกต้องของฟิลด์ที่คุณส่งเข้ามา ระบบจะยืนยันว่าอีเมลถูกต้องและรหัสผ่านมีความยาวตามที่กำหนด หากเกิดข้อผิดพลาด ระบบจะระบุว่าต้องแก้ไขฟิลด์ใด หากทุกฟิลด์ถูกต้อง ระบบจะส่งคืนข้อความแจ้งว่าสำเร็จ",
+  "swaps": [
+   {
+    "from": "checks",
+    "to": "validates",
+    "note_th": "validate เป็นศัพท์เฉพาะทางที่หมายถึง ตรวจสอบความถูกต้องของข้อมูล ใช้ในเอกสาร API เสมอ"
+   },
+   {
+    "from": "you send",
+    "to": "you submit",
+    "note_th": "submit ใช้กับการส่งข้อมูลเข้าระบบ ดูเป็นทางการกว่า send"
+   },
+   {
+    "from": "makes sure",
+    "to": "verifies",
+    "note_th": "verify เป็นคำเดียวที่สุภาพและกระชับกว่าวลี makes sure"
+   },
+   {
+    "from": "is real",
+    "to": "is valid",
+    "note_th": "valid เป็นคำมาตรฐานเมื่อพูดว่าข้อมูลถูกต้องตามรูปแบบ ไม่ใช่ real"
+   },
+   {
+    "from": "is long enough",
+    "to": "meets the length requirement",
+    "note_th": "meets the requirement เป็นวิธีพูดแบบมืออาชีพว่า เป็นไปตามเงื่อนไขที่กำหนด"
+   },
+   {
+    "from": "if something is wrong",
+    "to": "if an error occurs",
+    "note_th": "an error occurs เป็นสำนวนมาตรฐานในงานเทคนิค ฟังเป็นกลางและมืออาชีพ"
+   },
+   {
+    "from": "tells you",
+    "to": "indicates",
+    "note_th": "indicate สุภาพและเป็นทางการกว่า tells you"
+   },
+   {
+    "from": "to fix",
+    "to": "to correct",
+    "note_th": "correct เป็นทางการกว่า fix ในบริบทเอกสาร"
+   }
+  ],
+  "id": "validate-the-fields-before-saving"
+ },
+ {
+  "title": "Search products with parameters",
+  "title_th": "ค้นหาสินค้าด้วยพารามิเตอร์",
+  "type": "api-docs",
+  "context": "technical",
+  "level": "moderate",
+  "scenario_th": "อธิบาย endpoint ค้นหาสินค้าและพารามิเตอร์ที่ใส่ได้",
+  "normal": "This endpoint lets you search for products. You can add a keyword and a price limit to narrow the results. If you don't give a limit, it uses 20 by default. It gives you back a list of products that match.",
+  "normal_th": "endpoint นี้ให้คุณค้นหาสินค้าได้ คุณสามารถใส่คำค้นและราคาสูงสุดเพื่อจำกัดผลลัพธ์ ถ้าคุณไม่ใส่ค่าจำกัด ระบบจะใช้ 20 เป็นค่าเริ่มต้น มันจะส่งรายการสินค้าที่ตรงกันกลับมาให้",
+  "formal": "This endpoint allows you to search for products. You may provide a keyword and a price limit to refine the results. If no limit is provided, it defaults to 20. It returns a list of matching products.",
+  "formal_th": "endpoint นี้อนุญาตให้คุณค้นหาสินค้า คุณสามารถระบุคำค้นและราคาสูงสุดเพื่อปรับผลลัพธ์ให้แคบลง หากไม่ได้ระบุค่าจำกัด ระบบจะใช้ค่าเริ่มต้นเป็น 20 ระบบจะส่งคืนรายการสินค้าที่ตรงกัน",
+  "swaps": [
+   {
+    "from": "lets you",
+    "to": "allows you to",
+    "note_th": "allows you to เป็นทางการกว่า lets you ซึ่งฟังลำลอง"
+   },
+   {
+    "from": "add",
+    "to": "provide",
+    "note_th": "provide เป็นคำมาตรฐานสำหรับ ใส่/ระบุ พารามิเตอร์ในเอกสาร API"
+   },
+   {
+    "from": "narrow",
+    "to": "refine",
+    "note_th": "refine เป็นทางการและตรงความหมาย ปรับผลลัพธ์ให้ละเอียดขึ้น"
+   },
+   {
+    "from": "if you don't give a limit",
+    "to": "if no limit is provided",
+    "note_th": "รูปประโยค passive is provided เป็นกลางและมืออาชีพกว่า you don't give"
+   },
+   {
+    "from": "it uses 20 by default",
+    "to": "it defaults to 20",
+    "note_th": "defaults to เป็นสำนวนมาตรฐานในเอกสาร API สำหรับค่าเริ่มต้น"
+   },
+   {
+    "from": "gives you back",
+    "to": "returns",
+    "note_th": "return คือคำมาตรฐานสำหรับค่าที่ส่งกลับ"
+   },
+   {
+    "from": "that match",
+    "to": "matching",
+    "note_th": "matching กระชับและเป็นทางการกว่าอนุประโยค that match"
+   }
+  ],
+  "id": "search-products-with-parameters"
+ },
+ {
+  "title": "How the API handles errors",
+  "title_th": "API จัดการข้อผิดพลาดอย่างไร",
+  "type": "api-docs",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "เขียนส่วนอธิบายการจัดการ error ในเอกสาร API",
+  "normal": "If your request is bad, the API will send an error with a code and a message. A 400 means you forgot something or sent wrong data. A 401 means your key is not right. Please read the message to see what went wrong and try again.",
+  "normal_th": "ถ้าคำขอของคุณผิด API จะส่ง error พร้อมโค้ดและข้อความกลับมา รหัส 400 หมายความว่าคุณลืมอะไรบางอย่างหรือส่งข้อมูลผิด รหัส 401 หมายความว่าคีย์ของคุณไม่ถูกต้อง กรุณาอ่านข้อความเพื่อดูว่าผิดตรงไหนแล้วลองใหม่",
+  "formal": "If your request is invalid, the API returns an error containing a status code and a message. A 400 indicates a missing or incorrect field. A 401 indicates that your key is invalid. Please review the message to identify the issue and retry the request.",
+  "formal_th": "หากคำขอของคุณไม่ถูกต้อง API จะส่งคืน error ที่มีรหัสสถานะและข้อความ รหัส 400 บ่งบอกว่ามีฟิลด์ที่ขาดหายหรือไม่ถูกต้อง รหัส 401 บ่งบอกว่าคีย์ของคุณไม่ถูกต้อง กรุณาตรวจสอบข้อความเพื่อระบุปัญหาแล้วส่งคำขออีกครั้ง",
+  "swaps": [
+   {
+    "from": "is bad",
+    "to": "is invalid",
+    "note_th": "invalid เป็นคำมาตรฐานเมื่อคำขอไม่ถูกต้องตามรูปแบบ ไม่ใช่ bad ซึ่งลำลอง"
+   },
+   {
+    "from": "will send",
+    "to": "returns",
+    "note_th": "return เป็นคำมาตรฐานในเอกสาร API สำหรับสิ่งที่ระบบส่งกลับ"
+   },
+   {
+    "from": "you forgot something or sent wrong data",
+    "to": "a missing or incorrect field",
+    "note_th": "ใช้คำนามกระชับ a missing or incorrect field แทนประโยคยาว ดูเป็นทางการ"
+   },
+   {
+    "from": "means",
+    "to": "indicates",
+    "note_th": "indicate เป็นทางการกว่า means ในการอธิบายความหมายของโค้ด"
+   },
+   {
+    "from": "is not right",
+    "to": "is invalid",
+    "note_th": "invalid ชัดเจนและเป็นมาตรฐานกว่า not right"
+   },
+   {
+    "from": "read",
+    "to": "review",
+    "note_th": "review สื่อถึงการตรวจสอบอย่างตั้งใจ ดูมืออาชีพกว่า read"
+   },
+   {
+    "from": "see what went wrong",
+    "to": "identify the issue",
+    "note_th": "identify the issue เป็นวลีมืออาชีพที่แปลว่า ระบุปัญหา"
+   },
+   {
+    "from": "try again",
+    "to": "retry the request",
+    "note_th": "retry the request เจาะจงและเป็นทางการกว่า try again"
+   }
+  ],
+  "id": "how-the-api-handles-errors"
+ },
+ {
+  "title": "Get an access token",
+  "title_th": "ขอ access token",
+  "type": "api-docs",
+  "context": "technical",
+  "level": "moderate",
+  "scenario_th": "อธิบายขั้นตอนการขอ token เพื่อยืนยันตัวตนก่อนใช้ API",
+  "normal": "To use this API, you need to get a token first. Send your key to the /auth endpoint and it will give you a token. Put this token in the header of every request. The token stops working after one hour, so you have to get a new one.",
+  "normal_th": "ในการใช้ API นี้ คุณต้องได้ token ก่อน ส่งคีย์ของคุณไปที่ endpoint /auth แล้วมันจะให้ token กับคุณ ใส่ token นี้ไว้ใน header ของทุกคำขอ token จะหยุดทำงานหลังจากหนึ่งชั่วโมง คุณเลยต้องขอใหม่",
+  "formal": "To use this API, you must first obtain a token. Submit your key to the /auth endpoint and it will provide a token. Include this token in the header of every request. The token expires after one hour, so you will need to request a new one.",
+  "formal_th": "ในการใช้ API นี้ คุณต้องขอรับ token ก่อน ส่งคีย์ของคุณไปที่ endpoint /auth แล้วระบบจะให้ token ใส่ token นี้ไว้ใน header ของทุกคำขอ token จะหมดอายุหลังจากหนึ่งชั่วโมง ดังนั้นคุณจะต้องขอใหม่",
+  "swaps": [
+   {
+    "from": "get a token",
+    "to": "obtain a token",
+    "note_th": "obtain เป็นทางการกว่า get เมื่อพูดถึงการขอรับ token หรือสิทธิ์"
+   },
+   {
+    "from": "Send",
+    "to": "Submit",
+    "note_th": "submit ใช้กับการส่งข้อมูลเข้าระบบ เป็นทางการกว่า send"
+   },
+   {
+    "from": "give you",
+    "to": "provide",
+    "note_th": "provide เป็นคำมาตรฐานและสุภาพกว่า give"
+   },
+   {
+    "from": "Put",
+    "to": "Include",
+    "note_th": "include เป็นทางการกว่า put เมื่อพูดถึงการใส่ค่าใน header"
+   },
+   {
+    "from": "stops working",
+    "to": "expires",
+    "note_th": "expire เป็นศัพท์เฉพาะที่หมายถึง หมดอายุ ใช้กับ token เสมอ"
+   },
+   {
+    "from": "you have to get a new one",
+    "to": "you will need to request a new one",
+    "note_th": "request เป็นทางการกว่า get และ will need to ฟังสุภาพกว่า have to"
+   }
+  ],
+  "id": "get-an-access-token"
+ },
+ {
+  "title": "Weekly Team Update",
+  "title_th": "อัปเดตทีมประจำสัปดาห์",
+  "type": "internal-update",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "ส่งอัปเดตงานประจำสัปดาห์ให้ทีม",
+  "normal": "Hi team, here's my update for this week. I finished the new login page and sent it to QA for testing. I also fixed two bugs that users told us about. Next week I want to start on the payment part. Let me know if you have questions.",
+  "normal_th": "สวัสดีทีม นี่คืออัปเดตของสัปดาห์นี้นะ ผมทำหน้าล็อกอินใหม่เสร็จแล้วและส่งให้ทีม QA ทดสอบ ผมยังแก้บั๊กสองตัวที่ผู้ใช้บอกมาด้วย สัปดาห์หน้าอยากเริ่มทำส่วนการชำระเงิน มีคำถามอะไรบอกได้เลย",
+  "formal": "Hi team, here is my weekly update. I have completed the new login page and submitted it to QA for testing. I also resolved two bugs reported by users. Next week, I plan to begin work on the payment module. Please let me know if you have any questions.",
+  "formal_th": "สวัสดีทีม นี่คืออัปเดตประจำสัปดาห์ของผม ผมได้ทำหน้าล็อกอินใหม่เสร็จเรียบร้อยและส่งให้ทีม QA ทดสอบแล้ว ผมยังได้แก้ไขบั๊กสองตัวที่ผู้ใช้รายงานเข้ามาด้วย สัปดาห์หน้าผมวางแผนจะเริ่มทำโมดูลการชำระเงิน หากมีคำถามใดๆ แจ้งผมได้เลยครับ",
+  "swaps": [
+   {
+    "from": "finished",
+    "to": "completed",
+    "note_th": "completed ทางการกว่า finished ใช้รายงานงานที่เสร็จแล้ว"
+   },
+   {
+    "from": "sent it to QA",
+    "to": "submitted it to QA",
+    "note_th": "submit = ส่งงานให้อย่างเป็นทางการ ดูมืออาชีพกว่า sent"
+   },
+   {
+    "from": "fixed",
+    "to": "resolved",
+    "note_th": "resolved ใช้กับปัญหา/บั๊ก ฟังดูเป็นทางการกว่า fixed"
+   },
+   {
+    "from": "users told us about",
+    "to": "reported by users",
+    "note_th": "reported = แจ้งเข้ามาอย่างเป็นทางการ กระชับกว่า told us about"
+   },
+   {
+    "from": "I want to start on",
+    "to": "I plan to begin work on",
+    "note_th": "plan to begin สุภาพและดูมีการวางแผน มากกว่า want to start"
+   },
+   {
+    "from": "the payment part",
+    "to": "the payment module",
+    "note_th": "module เป็นคำศัพท์งานจริง เจาะจงกว่า part"
+   }
+  ],
+  "id": "weekly-team-update"
+ },
+ {
+  "title": "Project Progress Report",
+  "title_th": "รายงานความคืบหน้าโปรเจกต์",
+  "type": "internal-update",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "รายงานความคืบหน้าโปรเจกต์ให้หัวหน้า",
+  "normal": "The project is going well and we are on track. We got the data from the client last Friday. My team is now checking it and will give you a full report by Wednesday. If we find any problems, I will tell you right away.",
+  "normal_th": "โปรเจกต์ไปได้ดีและยังเป็นไปตามแผน เราได้ข้อมูลจากลูกค้ามาเมื่อวันศุกร์ที่แล้ว ตอนนี้ทีมผมกำลังตรวจอยู่และจะส่งรายงานฉบับเต็มให้ภายในวันพุธ ถ้าเจอปัญหาอะไร ผมจะบอกทันที",
+  "formal": "The project is progressing well and remains on schedule. We obtained the data from the client last Friday. My team is currently reviewing it and will provide a full report by Wednesday. If we identify any issues, I will inform you immediately.",
+  "formal_th": "โปรเจกต์มีความคืบหน้าที่ดีและยังเป็นไปตามกำหนดการ เราได้รับข้อมูลจากลูกค้ามาเมื่อวันศุกร์ที่แล้ว ขณะนี้ทีมผมกำลังตรวจสอบอยู่และจะจัดส่งรายงานฉบับเต็มให้ภายในวันพุธ หากพบประเด็นปัญหาใดๆ ผมจะแจ้งให้ทราบทันที",
+  "swaps": [
+   {
+    "from": "going well",
+    "to": "progressing well",
+    "note_th": "progressing well เป็นภาษาธุรกิจ ใช้กับโปรเจกต์โดยเฉพาะ"
+   },
+   {
+    "from": "on track",
+    "to": "on schedule",
+    "note_th": "on schedule เป็นทางการกว่า สื่อว่าตรงตามกำหนดการ"
+   },
+   {
+    "from": "got",
+    "to": "obtained",
+    "note_th": "obtained = ได้รับมา ทางการกว่า got มาก"
+   },
+   {
+    "from": "checking",
+    "to": "reviewing",
+    "note_th": "reviewing ฟังดูรอบคอบและมืออาชีพกว่า checking"
+   },
+   {
+    "from": "give you",
+    "to": "provide",
+    "note_th": "provide เป็นคำมาตรฐานในการส่งมอบงาน/รายงาน"
+   },
+   {
+    "from": "find",
+    "to": "identify",
+    "note_th": "identify = ระบุ/พบ ใช้ในบริบทงานดูเป็นทางการกว่า find"
+   },
+   {
+    "from": "problems",
+    "to": "issues",
+    "note_th": "issues สุภาพและนุ่มกว่า problems ในที่ทำงาน"
+   },
+   {
+    "from": "tell you right away",
+    "to": "inform you immediately",
+    "note_th": "inform...immediately เป็นสำนวนทางการของ tell right away"
+   }
+  ],
+  "id": "project-progress-report"
+ },
+ {
+  "title": "Flagging a Blocker",
+  "title_th": "แจ้งปัญหาที่ติดขัด",
+  "type": "internal-update",
+  "context": "business",
+  "level": "moderate",
+  "scenario_th": "แจ้งหัวหน้าว่ามีปัญหาทำให้งานติดขัด",
+  "normal": "I want to flag a problem that is slowing us down. We can't finish the report because we are still waiting for the numbers from Finance. I asked them on Monday but they haven't answered yet. Can you help me get this sorted? I think we will be late if we don't fix it soon.",
+  "normal_th": "ผมอยากแจ้งปัญหาที่ทำให้เราช้าลง เราทำรายงานให้เสร็จไม่ได้เพราะยังรอตัวเลขจากฝ่ายการเงินอยู่ ผมถามไปตั้งแต่วันจันทร์แต่ยังไม่ตอบกลับมาเลย ช่วยจัดการเรื่องนี้ให้หน่อยได้ไหม ผมว่าเราจะช้าถ้าไม่รีบแก้",
+  "formal": "I would like to raise an issue that is delaying our progress. We are unable to complete the report because we are still awaiting the figures from Finance. I requested them on Monday, but I have not received a response yet. Could you help me resolve this? I am concerned we may fall behind if it is not addressed soon.",
+  "formal_th": "ผมขอแจ้งประเด็นปัญหาที่กำลังทำให้งานของเราล่าช้า เราไม่สามารถทำรายงานให้เสร็จได้เพราะยังรอตัวเลขจากฝ่ายการเงินอยู่ ผมได้ขอไปตั้งแต่วันจันทร์แต่ยังไม่ได้รับการตอบกลับ รบกวนช่วยแก้ไขเรื่องนี้ได้ไหมครับ ผมกังวลว่าเราอาจล่าช้าหากไม่ได้รับการแก้ไขในเร็วๆ นี้",
+  "swaps": [
+   {
+    "from": "flag a problem",
+    "to": "raise an issue",
+    "note_th": "raise an issue เป็นสำนวนมาตรฐานเวลาแจ้งปัญหาในที่ทำงาน"
+   },
+   {
+    "from": "slowing us down",
+    "to": "delaying our progress",
+    "note_th": "delaying our progress ทางการและชัดเจนกว่า"
+   },
+   {
+    "from": "can't",
+    "to": "are unable to",
+    "note_th": "are unable to เป็นทางการ หลีกเลี่ยงคำย่อ can't"
+   },
+   {
+    "from": "waiting for",
+    "to": "awaiting",
+    "note_th": "awaiting เป็นคำเดียวที่ทางการกว่า waiting for"
+   },
+   {
+    "from": "numbers",
+    "to": "figures",
+    "note_th": "figures = ตัวเลขทางธุรกิจ ดูมืออาชีพกว่า numbers"
+   },
+   {
+    "from": "asked",
+    "to": "requested",
+    "note_th": "requested เป็นทางการกว่า asked เวลาขอสิ่งต่างๆ"
+   },
+   {
+    "from": "haven't answered yet",
+    "to": "have not received a response yet",
+    "note_th": "โฟกัสที่ยังไม่ได้รับการตอบกลับ สุภาพและเป็นกลางกว่า"
+   },
+   {
+    "from": "get this sorted",
+    "to": "resolve this",
+    "note_th": "resolve เป็นทางการ ส่วน get sorted เป็นภาษาพูด"
+   }
+  ],
+  "id": "flagging-a-blocker"
+ },
+ {
+  "title": "Handover Notes",
+  "title_th": "โน้ตส่งมอบงาน",
+  "type": "internal-update",
+  "context": "business",
+  "level": "moderate",
+  "scenario_th": "เขียนโน้ตส่งมอบงานก่อนลาหยุด",
+  "normal": "I will be off next week, so here are my handover notes. Please look after the client emails and answer them within one day. All the files are in the shared folder. If something urgent comes up, ask Nina to help. I have told her about the main tasks already.",
+  "normal_th": "สัปดาห์หน้าผมจะหยุด นี่คือโน้ตส่งมอบงานนะ ช่วยดูแลอีเมลลูกค้าและตอบภายในหนึ่งวัน ไฟล์ทั้งหมดอยู่ในโฟลเดอร์ที่แชร์ไว้ ถ้ามีเรื่องด่วนให้ขอนีน่าช่วย ผมบอกงานหลักๆ กับเธอไว้แล้ว",
+  "formal": "I will be on leave next week, so here are my handover notes. Please manage the client emails and respond to them within one business day. All the files are located in the shared folder. If anything urgent arises, please contact Nina for assistance. I have already briefed her on the main tasks.",
+  "formal_th": "สัปดาห์หน้าผมจะลาหยุด นี่คือโน้ตส่งมอบงานครับ รบกวนช่วยดูแลอีเมลลูกค้าและตอบกลับภายในหนึ่งวันทำการ ไฟล์ทั้งหมดอยู่ในโฟลเดอร์ที่แชร์ไว้ หากมีเรื่องด่วนเกิดขึ้น กรุณาติดต่อนีน่าเพื่อขอความช่วยเหลือ ผมได้ชี้แจงงานหลักๆ ให้เธอทราบแล้ว",
+  "swaps": [
+   {
+    "from": "off",
+    "to": "on leave",
+    "note_th": "on leave เป็นคำทางการของการลาหยุด ส่วน off เป็นภาษาพูด"
+   },
+   {
+    "from": "look after",
+    "to": "manage",
+    "note_th": "manage ดูเป็นมืออาชีพกว่า look after เวลาพูดถึงงาน"
+   },
+   {
+    "from": "answer",
+    "to": "respond to",
+    "note_th": "respond to เป็นทางการกว่า answer สำหรับอีเมล"
+   },
+   {
+    "from": "one day",
+    "to": "one business day",
+    "note_th": "business day = วันทำการ ชัดเจนกว่าในบริบทงาน"
+   },
+   {
+    "from": "are in",
+    "to": "are located in",
+    "note_th": "located in ทางการกว่าเวลาบอกที่อยู่ของไฟล์"
+   },
+   {
+    "from": "comes up",
+    "to": "arises",
+    "note_th": "arises เป็นทางการ ส่วน comes up เป็นภาษาพูด"
+   },
+   {
+    "from": "ask Nina to help",
+    "to": "contact Nina for assistance",
+    "note_th": "contact...for assistance เป็นสำนวนทางการของการขอความช่วยเหลือ"
+   },
+   {
+    "from": "told her about",
+    "to": "briefed her on",
+    "note_th": "briefed = ชี้แจงงานให้ทราบ เป็นศัพท์งานที่มืออาชีพ"
+   }
+  ],
+  "id": "handover-notes"
+ },
+ {
+  "title": "Quick Status Update",
+  "title_th": "อัปเดตสถานะสั้นๆ",
+  "type": "internal-update",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "อัปเดตงานสั้นๆ ให้หัวหน้าเรื่องสัญญาซัพพลายเออร์",
+  "normal": "Quick update on my tasks. I sent the contract to the supplier and they said yes to the new price. I still need to check the delivery dates before we sign. I should be done by Thursday. Let me know if you need anything more.",
+  "normal_th": "อัปเดตงานสั้นๆ นะครับ ผมส่งสัญญาให้ซัพพลายเออร์แล้วและเขาตกลงราคาใหม่ ผมยังต้องเช็กวันส่งของก่อนเซ็น น่าจะเสร็จภายในวันพฤหัส ถ้าต้องการอะไรเพิ่มบอกได้",
+  "formal": "A quick update on my tasks. I sent the contract to the supplier, and they agreed to the new price. I still need to confirm the delivery dates before we sign. I expect to finish by Thursday. Please let me know if you require anything further.",
+  "formal_th": "ขออัปเดตงานสั้นๆ ครับ ผมส่งสัญญาให้ซัพพลายเออร์แล้วและเขาตกลงราคาใหม่ ผมยังต้องยืนยันวันจัดส่งก่อนเซ็นสัญญา คาดว่าจะเสร็จภายในวันพฤหัส หากต้องการข้อมูลเพิ่มเติม แจ้งผมได้ครับ",
+  "swaps": [
+   {
+    "from": "said yes to",
+    "to": "agreed to",
+    "note_th": "agreed to เป็นทางการ ส่วน said yes to เป็นภาษาพูด"
+   },
+   {
+    "from": "check",
+    "to": "confirm",
+    "note_th": "confirm = ยืนยัน หนักแน่นและมืออาชีพกว่า check"
+   },
+   {
+    "from": "should be done",
+    "to": "expect to finish",
+    "note_th": "expect to finish ฟังดูมั่นใจและเป็นทางการกว่า"
+   },
+   {
+    "from": "need anything more",
+    "to": "require anything further",
+    "note_th": "require...further เป็นสำนวนทางการมาตรฐานในอีเมลงาน"
+   },
+   {
+    "from": "Let me know",
+    "to": "Please let me know",
+    "note_th": "เติม Please ทำให้สุภาพขึ้นในการติดต่อกับหัวหน้า"
+   }
+  ],
+  "id": "quick-status-update"
+ },
+ {
+  "title": "Issuing a Refund",
+  "title_th": "แจ้งคืนเงินให้ลูกค้า",
+  "type": "refund-billing-email",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "ตอบลูกค้าที่ขอเงินคืน และแจ้งว่าคืนเงินให้แล้ว",
+  "normal": "Hi Anna, thanks for waiting. We got your request and we've sent your refund of $45 back to your card. You should get the money in 3 to 5 days. Sorry again for the mix-up. Let me know if you don't see it.",
+  "normal_th": "สวัสดีค่ะแอนนา ขอบคุณที่รอนะคะ เราได้รับคำขอของคุณแล้ว และได้คืนเงิน 45 ดอลลาร์กลับเข้าบัตรของคุณเรียบร้อยแล้ว คุณน่าจะได้รับเงินภายใน 3 ถึง 5 วัน ขอโทษอีกครั้งสำหรับความผิดพลาดนะคะ ถ้ายังไม่เห็นเงินเข้า บอกเราได้เลยค่ะ",
+  "formal": "Dear Anna, thank you for your patience. We have received your request and processed a refund of $45 to your card. Please allow 3 to 5 business days for the amount to appear. We apologize once more for the inconvenience. Please contact us if it does not arrive.",
+  "formal_th": "เรียนคุณแอนนา ขอบคุณสำหรับความอดทนรอคอยค่ะ เราได้รับคำขอของคุณแล้ว และได้ดำเนินการคืนเงินจำนวน 45 ดอลลาร์เข้าบัตรของคุณเรียบร้อยแล้ว กรุณารอ 3 ถึง 5 วันทำการเพื่อให้ยอดเงินปรากฏ เราต้องขออภัยอีกครั้งสำหรับความไม่สะดวกที่เกิดขึ้น หากยอดเงินยังไม่เข้า กรุณาติดต่อเราค่ะ",
+  "swaps": [
+   {
+    "from": "thanks for waiting",
+    "to": "thank you for your patience",
+    "note_th": "สุภาพและเป็นทางการกว่า ใช้กับลูกค้าได้ดี"
+   },
+   {
+    "from": "got your request",
+    "to": "received your request",
+    "note_th": "received ทางการกว่า got ในอีเมลงาน"
+   },
+   {
+    "from": "we've sent your refund",
+    "to": "we have processed a refund",
+    "note_th": "processed a refund เป็นศัพท์ธุรกิจ ดูมืออาชีพ"
+   },
+   {
+    "from": "you should get the money in 3 to 5 days",
+    "to": "please allow 3 to 5 business days for the amount to appear",
+    "note_th": "business days ชัดเจนกว่า และ allow...to appear สุภาพ"
+   },
+   {
+    "from": "the mix-up",
+    "to": "the inconvenience",
+    "note_th": "inconvenience เป็นคำมาตรฐานเวลาขอโทษลูกค้า"
+   },
+   {
+    "from": "Let me know if you don't see it",
+    "to": "Please contact us if it does not arrive",
+    "note_th": "Please contact us เป็นทางการกว่า Let me know"
+   }
+  ],
+  "id": "issuing-a-refund"
+ },
+ {
+  "title": "Explaining a Charge",
+  "title_th": "อธิบายค่าใช้จ่ายในบิล",
+  "type": "refund-billing-email",
+  "context": "business",
+  "level": "moderate",
+  "scenario_th": "ตอบลูกค้าที่สงสัยว่าทำไมมีค่าใช้จ่ายเพิ่มในบิล",
+  "normal": "Hi, thanks for asking about the extra $12 on your bill. That charge is for the delivery fee on your last order. It wasn't a mistake — it's shown in our pricing. If you still have questions, just reply here and I'll help.",
+  "normal_th": "สวัสดีค่ะ ขอบคุณที่สอบถามเรื่องค่าใช้จ่ายเพิ่ม 12 ดอลลาร์ในบิลของคุณนะคะ ยอดนี้เป็นค่าจัดส่งของออเดอร์ล่าสุดค่ะ ไม่ได้คิดผิดนะคะ มันแสดงอยู่ในราคาของเราอยู่แล้ว ถ้ายังมีคำถาม ตอบกลับมาตรงนี้ได้เลย เดี๋ยวช่วยดูให้ค่ะ",
+  "formal": "Hello, thank you for your question about the additional $12 on your invoice. This charge covers the delivery fee for your recent order. It was applied correctly and is listed in our pricing. If you have any further questions, please reply and I will be glad to assist.",
+  "formal_th": "สวัสดีค่ะ ขอบคุณสำหรับคำถามเกี่ยวกับค่าใช้จ่ายเพิ่มเติม 12 ดอลลาร์ในใบแจ้งหนี้ของคุณค่ะ ยอดนี้เป็นค่าจัดส่งสำหรับออเดอร์ล่าสุดของคุณ ซึ่งคิดถูกต้องและแสดงอยู่ในรายการราคาของเราแล้ว หากคุณมีคำถามเพิ่มเติม กรุณาตอบกลับมา ยินดีช่วยเหลือค่ะ",
+  "swaps": [
+   {
+    "from": "thanks for asking",
+    "to": "thank you for your question",
+    "note_th": "เต็มรูปและสุภาพกว่าในบริบทงาน"
+   },
+   {
+    "from": "the extra $12",
+    "to": "the additional $12",
+    "note_th": "additional เป็นทางการกว่า extra"
+   },
+   {
+    "from": "your bill",
+    "to": "your invoice",
+    "note_th": "invoice เป็นคำธุรกิจสำหรับใบแจ้งหนี้"
+   },
+   {
+    "from": "That charge is for",
+    "to": "This charge covers",
+    "note_th": "covers ฟังดูมืออาชีพกว่า is for"
+   },
+   {
+    "from": "your last order",
+    "to": "your recent order",
+    "note_th": "recent สุภาพและชัดเจนกว่า last"
+   },
+   {
+    "from": "It wasn't a mistake",
+    "to": "It was applied correctly",
+    "note_th": "พูดเชิงบวก ดูน่าเชื่อถือกว่าปฏิเสธตรง ๆ"
+   },
+   {
+    "from": "just reply here and I'll help",
+    "to": "please reply and I will be glad to assist",
+    "note_th": "assist ทางการกว่า help และ be glad to สุภาพ"
+   }
+  ],
+  "id": "explaining-a-charge"
+ },
+ {
+  "title": "Apologizing for a Billing Error",
+  "title_th": "ขอโทษที่คิดเงินผิด",
+  "type": "refund-billing-email",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "ขอโทษลูกค้าที่ถูกคิดเงินซ้ำ และแจ้งว่าคืนเงินแล้ว",
+  "normal": "Hi Mr. Lee, sorry — we made a mistake and charged you twice for the same order. We've fixed it and put the extra $30 back on your card. Thanks for telling us about this. It won't happen again.",
+  "normal_th": "สวัสดีค่ะคุณลี ขอโทษด้วยนะคะ เราคิดเงินคุณซ้ำสองครั้งสำหรับออเดอร์เดียวกัน เราแก้ไขให้แล้ว และคืนเงินส่วนเกิน 30 ดอลลาร์กลับเข้าบัตรของคุณแล้วค่ะ ขอบคุณที่แจ้งเรื่องนี้นะคะ จะไม่ให้เกิดขึ้นอีกค่ะ",
+  "formal": "Dear Mr. Lee, please accept our apologies — we charged you twice for the same order in error. We have corrected this and refunded the extra $30 to your card. Thank you for bringing this to our attention. We will make sure it does not happen again.",
+  "formal_th": "เรียนคุณลี เราต้องขออภัยเป็นอย่างยิ่งค่ะ เราคิดเงินคุณซ้ำสองครั้งสำหรับออเดอร์เดียวกันโดยผิดพลาด เราได้แก้ไขเรียบร้อยแล้ว และคืนเงินส่วนเกิน 30 ดอลลาร์เข้าบัตรของคุณแล้วค่ะ ขอบคุณที่แจ้งเรื่องนี้ให้เราทราบ เราจะดูแลไม่ให้เกิดขึ้นอีกค่ะ",
+  "swaps": [
+   {
+    "from": "sorry",
+    "to": "please accept our apologies",
+    "note_th": "วลีขอโทษแบบทางการที่ใช้กับลูกค้า"
+   },
+   {
+    "from": "we made a mistake and charged you",
+    "to": "we charged you ... in error",
+    "note_th": "in error กระชับและมืออาชีพกว่า made a mistake"
+   },
+   {
+    "from": "We've fixed it",
+    "to": "We have corrected this",
+    "note_th": "correct เป็นทางการกว่า fix ในอีเมลงาน"
+   },
+   {
+    "from": "put the extra $30 back on your card",
+    "to": "refunded the extra $30 to your card",
+    "note_th": "refunded เป็นคำมาตรฐานเรื่องคืนเงิน"
+   },
+   {
+    "from": "Thanks for telling us about this",
+    "to": "Thank you for bringing this to our attention",
+    "note_th": "วลีสุภาพมาตรฐานเมื่อลูกค้าแจ้งปัญหา"
+   },
+   {
+    "from": "It won't happen again",
+    "to": "We will make sure it does not happen again",
+    "note_th": "แสดงความรับผิดชอบชัดกว่าและสุภาพกว่า"
+   }
+  ],
+  "id": "apologizing-for-a-billing-error"
+ },
+ {
+  "title": "Declining a Refund Politely",
+  "title_th": "ปฏิเสธการคืนเงินอย่างสุภาพ",
+  "type": "refund-billing-email",
+  "context": "business",
+  "level": "moderate",
+  "scenario_th": "ปฏิเสธคำขอคืนเงินเพราะเลยกำหนด แต่ยังช่วยเหลือลูกค้า",
+  "normal": "Hi Sara, thanks for reaching out. I looked into your refund request, but the item is past our 30-day return time, so we can't give a refund this time. I'm sorry about that. If you need help using the product, I'm happy to help.",
+  "normal_th": "สวัสดีค่ะซาร่า ขอบคุณที่ติดต่อเข้ามานะคะ เราตรวจสอบคำขอคืนเงินของคุณแล้ว แต่สินค้าเลยกำหนดคืนสินค้า 30 วันของเราไปแล้ว เลยไม่สามารถคืนเงินให้ได้ในครั้งนี้ ต้องขอโทษด้วยค่ะ ถ้าต้องการความช่วยเหลือเรื่องการใช้สินค้า ยินดีช่วยนะคะ",
+  "formal": "Dear Sara, thank you for reaching out. I have reviewed your refund request; however, the item is outside our 30-day return period, so we are unable to provide a refund on this occasion. I apologize for the disappointment. If you need assistance using the product, I would be glad to help.",
+  "formal_th": "เรียนคุณซาร่า ขอบคุณที่ติดต่อเข้ามาค่ะ เราได้ตรวจสอบคำขอคืนเงินของคุณแล้ว อย่างไรก็ตาม สินค้าอยู่นอกระยะเวลาคืนสินค้า 30 วันของเรา เราจึงไม่สามารถคืนเงินให้ได้ในครั้งนี้ ต้องขออภัยในความผิดหวังที่เกิดขึ้นค่ะ หากคุณต้องการความช่วยเหลือในการใช้งานสินค้า เรายินดีช่วยเหลือค่ะ",
+  "swaps": [
+   {
+    "from": "I looked into",
+    "to": "I have reviewed",
+    "note_th": "reviewed ทางการและน่าเชื่อถือกว่า looked into"
+   },
+   {
+    "from": "but",
+    "to": "however",
+    "note_th": "however เป็นทางการกว่า but ใช้ขึ้นประโยคใหม่ได้"
+   },
+   {
+    "from": "past our 30-day return time",
+    "to": "outside our 30-day return period",
+    "note_th": "return period เป็นศัพท์นโยบายที่ถูกต้องกว่า"
+   },
+   {
+    "from": "we can't give a refund",
+    "to": "we are unable to provide a refund",
+    "note_th": "unable to provide สุภาพกว่า can't give เวลาปฏิเสธ"
+   },
+   {
+    "from": "this time",
+    "to": "on this occasion",
+    "note_th": "on this occasion ฟังดูเป็นทางการและนุ่มนวลกว่า"
+   },
+   {
+    "from": "I'm sorry about that",
+    "to": "I apologize for the disappointment",
+    "note_th": "วลีขอโทษแบบมืออาชีพ ยอมรับความรู้สึกลูกค้า"
+   },
+   {
+    "from": "I'm happy to help",
+    "to": "I would be glad to help",
+    "note_th": "would be glad สุภาพและเป็นทางการกว่าเล็กน้อย"
+   }
+  ],
+  "id": "declining-a-refund-politely"
+ },
+ {
+  "title": "Weekly Team Meeting Notes",
+  "title_th": "โน้ตประชุมทีมประจำสัปดาห์",
+  "type": "meeting-notes",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "ส่งสรุปโน้ตประชุมทีมให้เพื่อนร่วมงานหลังประชุมเสร็จ",
+  "normal": "Hi team, here are the notes from today's meeting. We talked about the new website and decided to launch it next month. Ann will get the photos from the design team by Friday. Please tell me if you have any problems. Thanks!",
+  "normal_th": "สวัสดีทีมงาน นี่คือโน้ตจากการประชุมวันนี้ค่ะ เราคุยกันเรื่องเว็บไซต์ใหม่ และตัดสินใจว่าจะเปิดตัวเดือนหน้า แอนจะไปเอารูปจากทีมออกแบบมาให้ภายในวันศุกร์ ถ้ามีปัญหาอะไรบอกได้เลยนะคะ ขอบคุณค่ะ",
+  "formal": "Hi team, please find the notes from today's meeting below. We discussed the new website and decided to launch it next month. Ann will obtain the photos from the design team by Friday. Please let me know if you have any concerns. Thank you.",
+  "formal_th": "สวัสดีทีมงาน รบกวนดูโน้ตจากการประชุมวันนี้ด้านล่างนะคะ เราได้หารือกันเรื่องเว็บไซต์ใหม่ และตัดสินใจว่าจะเปิดตัวเดือนหน้า แอนจะขอรูปจากทีมออกแบบมาให้ภายในวันศุกร์ หากมีข้อกังวลใดๆ แจ้งให้ทราบได้เลยค่ะ ขอบคุณค่ะ",
+  "swaps": [
+   {
+    "from": "here are the notes",
+    "to": "please find the notes below",
+    "note_th": "\"please find ... below\" เป็นวลีทางการที่ใช้บอกว่าแนบข้อมูลไว้ด้านล่าง ดูมืออาชีพกว่า"
+   },
+   {
+    "from": "talked about",
+    "to": "discussed",
+    "note_th": "\"discussed\" เป็นทางการกว่า \"talked about\" ใช้ได้ดีในอีเมลงาน"
+   },
+   {
+    "from": "get",
+    "to": "obtain",
+    "note_th": "\"obtain\" = ได้มา/ขอมา เป็นคำทางการของ \"get\""
+   },
+   {
+    "from": "tell me",
+    "to": "let me know",
+    "note_th": "\"let me know\" สุภาพและมืออาชีพกว่า \"tell me\" ที่ฟังดูสั่ง"
+   },
+   {
+    "from": "problems",
+    "to": "concerns",
+    "note_th": "\"concerns\" (ข้อกังวล) นุ่มนวลและเป็นทางการกว่า \"problems\""
+   },
+   {
+    "from": "Thanks!",
+    "to": "Thank you.",
+    "note_th": "\"Thank you.\" เป็นทางการกว่า \"Thanks!\" ที่ใช้กับเพื่อนสนิท"
+   }
+  ],
+  "id": "weekly-team-meeting-notes"
+ },
+ {
+  "title": "Action Items After Meeting",
+  "title_th": "รายการสิ่งที่ต้องทำหลังประชุม",
+  "type": "meeting-notes",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "ส่งอีเมลสรุปว่าใครต้องทำอะไรต่อหลังประชุม",
+  "normal": "Hi everyone, thanks for coming to the meeting. Here are the things we need to do. John will fix the payment bug by Wednesday. Mary will send the report to the client. I will ask the manager about the budget. Let's meet again next week.",
+  "normal_th": "สวัสดีทุกคน ขอบคุณที่มาประชุมนะคะ นี่คือสิ่งที่เราต้องทำ จอห์นจะแก้บั๊กระบบจ่ายเงินให้เสร็จภายในวันพุธ แมรี่จะส่งรายงานให้ลูกค้า ส่วนฉันจะไปถามผู้จัดการเรื่องงบประมาณ เดี๋ยวเรามาประชุมกันอีกครั้งสัปดาห์หน้านะคะ",
+  "formal": "Hi everyone, thank you for attending the meeting. Below are the action items we need to complete. John will resolve the payment issue by Wednesday. Mary will submit the report to the client. I will request approval for the budget from the manager. Let's reconvene next week.",
+  "formal_th": "สวัสดีทุกคน ขอบคุณที่เข้าร่วมประชุมค่ะ ด้านล่างคือรายการสิ่งที่ต้องดำเนินการ จอห์นจะแก้ไขปัญหาระบบชำระเงินให้เสร็จภายในวันพุธ แมรี่จะส่งรายงานให้ลูกค้า ส่วนฉันจะขออนุมัติงบประมาณจากผู้จัดการ เราจะประชุมร่วมกันอีกครั้งในสัปดาห์หน้าค่ะ",
+  "swaps": [
+   {
+    "from": "thanks for coming to",
+    "to": "thank you for attending",
+    "note_th": "\"attend\" = เข้าร่วม เป็นคำทางการของ \"come to\" (การประชุม/งาน)"
+   },
+   {
+    "from": "the things we need to do",
+    "to": "the action items we need to complete",
+    "note_th": "\"action items\" เป็นศัพท์ธุรกิจมาตรฐานสำหรับ \"สิ่งที่ต้องทำ\" หลังประชุม"
+   },
+   {
+    "from": "fix",
+    "to": "resolve",
+    "note_th": "\"resolve\" (แก้ไขให้จบ) เป็นทางการกว่า \"fix\" ใช้กับปัญหา/เคส"
+   },
+   {
+    "from": "bug",
+    "to": "issue",
+    "note_th": "\"issue\" ทางการและกว้างกว่า \"bug\" ที่เป็นภาษาพูดสายเทค"
+   },
+   {
+    "from": "send",
+    "to": "submit",
+    "note_th": "\"submit\" = ส่ง (เอกสาร/รายงาน) อย่างเป็นทางการ"
+   },
+   {
+    "from": "ask the manager about the budget",
+    "to": "request approval for the budget from the manager",
+    "note_th": "\"request approval\" ชัดเจนและมืออาชีพกว่า \"ask about\""
+   },
+   {
+    "from": "meet again",
+    "to": "reconvene",
+    "note_th": "\"reconvene\" = กลับมาประชุมกันอีก เป็นคำทางการที่ใช้ในบันทึกประชุม"
+   }
+  ],
+  "id": "action-items-after-meeting"
+ },
+ {
+  "title": "Proposal Summary After Client Meeting",
+  "title_th": "สรุปข้อเสนอหลังประชุมลูกค้า",
+  "type": "meeting-notes",
+  "context": "business",
+  "level": "moderate",
+  "scenario_th": "ส่งสรุปข้อเสนอให้ลูกค้าหลังประชุมนำเสนองาน",
+  "normal": "Hi Khun Somchai, thanks for meeting with us today. Here is a short summary of what we offer. We will build your app in three months and give you a free trial. The price is 150,000 baht. If this looks good, please tell me and I will send the full plan.",
+  "normal_th": "สวัสดีคุณสมชาย ขอบคุณที่สละเวลามาประชุมกับเราวันนี้นะคะ นี่คือสรุปสั้นๆ ว่าเรามีอะไรเสนอบ้าง เราจะสร้างแอปให้ภายในสามเดือนและให้ทดลองใช้ฟรี ราคาอยู่ที่ 150,000 บาท ถ้าสนใจ บอกฉันได้เลย แล้วฉันจะส่งแผนฉบับเต็มไปให้ค่ะ",
+  "formal": "Dear Khun Somchai, thank you for meeting with us today. Please find a brief summary of our proposal below. We will develop your app within three months and provide a free trial. The total cost is 150,000 baht. If this meets your needs, please let me know and I will send the full proposal.",
+  "formal_th": "เรียนคุณสมชาย ขอบคุณที่สละเวลาประชุมกับเราวันนี้ค่ะ รบกวนดูสรุปข้อเสนอโดยย่อด้านล่างนะคะ เราจะพัฒนาแอปให้เสร็จภายในสามเดือนพร้อมให้ทดลองใช้ฟรี ค่าใช้จ่ายทั้งหมดอยู่ที่ 150,000 บาท หากตรงกับความต้องการของท่าน แจ้งให้ทราบได้เลยค่ะ แล้วเราจะส่งข้อเสนอฉบับเต็มไปให้",
+  "swaps": [
+   {
+    "from": "Hi",
+    "to": "Dear",
+    "note_th": "\"Dear\" เป็นคำขึ้นต้นทางการ ใช้กับลูกค้า ส่วน \"Hi\" ใช้กับคนคุ้นเคย"
+   },
+   {
+    "from": "thanks for",
+    "to": "thank you for",
+    "note_th": "\"thank you\" เต็มรูปทางการกว่า \"thanks\" ที่เป็นภาษาพูด"
+   },
+   {
+    "from": "Here is a short summary of what we offer",
+    "to": "Please find a brief summary of our proposal below",
+    "note_th": "\"proposal\" และ \"brief\" ทางการกว่า \"what we offer\" และ \"short\""
+   },
+   {
+    "from": "build",
+    "to": "develop",
+    "note_th": "\"develop\" เป็นคำทางการสำหรับการสร้างซอฟต์แวร์/ระบบ"
+   },
+   {
+    "from": "give you",
+    "to": "provide",
+    "note_th": "\"provide\" = จัดให้ เป็นทางการกว่า \"give\""
+   },
+   {
+    "from": "price",
+    "to": "total cost",
+    "note_th": "\"total cost\" ชัดเจนและมืออาชีพกว่า \"price\" ในข้อเสนอราคา"
+   },
+   {
+    "from": "looks good",
+    "to": "meets your needs",
+    "note_th": "\"meets your needs\" สุภาพและเป็นทางการกว่า \"looks good\""
+   },
+   {
+    "from": "plan",
+    "to": "proposal",
+    "note_th": "\"proposal\" (ข้อเสนอ) เป็นศัพท์ธุรกิจที่ถูกต้องกว่า \"plan\""
+   }
+  ],
+  "id": "proposal-summary-after-client-meeting"
+ },
+ {
+  "title": "Update on Changed Deadline",
+  "title_th": "แจ้งเลื่อนกำหนดส่งงาน",
+  "type": "meeting-notes",
+  "context": "business",
+  "level": "moderate",
+  "scenario_th": "แจ้งทีมว่าที่ประชุมตกลงเลื่อนวันส่งงาน",
+  "normal": "Hi all, quick update from this morning's meeting. We agreed to change the delivery date to March 15. The client wants more time to check the design. Please update your schedule. Sorry for the change, but this is better for everyone. Let me know if you have questions.",
+  "normal_th": "สวัสดีทุกคน อัปเดตสั้นๆ จากการประชุมเมื่อเช้านะคะ เราตกลงกันว่าจะเลื่อนวันส่งงานเป็นวันที่ 15 มีนาคม ลูกค้าอยากได้เวลาเพิ่มเพื่อตรวจดูงานออกแบบ รบกวนอัปเดตตารางงานของทุกคนด้วยนะคะ ขอโทษที่มีการเปลี่ยนแปลง แต่แบบนี้ดีกับทุกคนมากกว่า มีคำถามอะไรบอกได้เลยค่ะ",
+  "formal": "Hi all, here is a brief update from this morning's meeting. We agreed to move the delivery date to March 15. The client requires additional time to review the design. Please update your schedules accordingly. We apologize for the change; however, this benefits everyone. Please let me know if you have any questions.",
+  "formal_th": "สวัสดีทุกคน นี่คืออัปเดตโดยย่อจากการประชุมเมื่อเช้าค่ะ เราตกลงกันว่าจะเลื่อนวันส่งมอบงานเป็นวันที่ 15 มีนาคม ลูกค้าต้องการเวลาเพิ่มเติมเพื่อตรวจสอบงานออกแบบ รบกวนอัปเดตตารางงานให้สอดคล้องกันด้วยค่ะ เราต้องขออภัยในการเปลี่ยนแปลงครั้งนี้ อย่างไรก็ตาม การเปลี่ยนแปลงนี้เป็นผลดีต่อทุกฝ่าย หากมีคำถามใดๆ แจ้งให้ทราบได้เลยค่ะ",
+  "swaps": [
+   {
+    "from": "quick update",
+    "to": "brief update",
+    "note_th": "\"brief\" เป็นทางการกว่า \"quick\" เมื่อพูดถึงการสรุปสั้นๆ"
+   },
+   {
+    "from": "change the delivery date",
+    "to": "move the delivery date",
+    "note_th": "\"move\" ใช้กับการเลื่อนกำหนดวันได้ชัดเจนและดูมืออาชีพในบริบทนี้"
+   },
+   {
+    "from": "wants more time",
+    "to": "requires additional time",
+    "note_th": "\"requires additional\" เป็นทางการกว่า \"wants more\""
+   },
+   {
+    "from": "check",
+    "to": "review",
+    "note_th": "\"review\" = ตรวจสอบ/พิจารณา เป็นทางการกว่า \"check\""
+   },
+   {
+    "from": "update your schedule",
+    "to": "update your schedules accordingly",
+    "note_th": "\"accordingly\" = ให้สอดคล้องกัน เพิ่มความเป็นทางการและชัดเจน"
+   },
+   {
+    "from": "Sorry for",
+    "to": "We apologize for",
+    "note_th": "\"We apologize for\" เป็นคำขอโทษทางการที่ใช้ในงาน"
+   },
+   {
+    "from": "but",
+    "to": "however",
+    "note_th": "\"however\" เป็นตัวเชื่อมที่ทางการกว่า \"but\" ในการเขียน"
+   },
+   {
+    "from": "Let me know",
+    "to": "Please let me know",
+    "note_th": "เติม \"Please\" ให้สุภาพและเป็นมืออาชีพมากขึ้น"
+   }
+  ],
+  "id": "update-on-changed-deadline"
+ }
+]

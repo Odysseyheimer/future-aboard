@@ -1801,9 +1801,33 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 .fm-sub b { color: var(--accent); }
 
 /* top tabs */
-.fm-tabs { display: flex; gap: 6px; margin: 8px 0 12px; background: var(--surface2); border-radius: 13px; padding: 4px; }
-.fm-tab { flex: 1; font-family: var(--font); font-size: 13px; font-weight: 800; color: var(--muted); background: none; border: none; border-radius: 10px; padding: 9px 4px; cursor: pointer; }
+.fm-tabs { display: flex; gap: 4px; margin: 8px 0 12px; background: var(--surface2); border-radius: 13px; padding: 4px; overflow-x: auto; }
+.fm-tab { flex: 1 0 auto; white-space: nowrap; font-family: var(--font); font-size: 12px; font-weight: 800; color: var(--muted); background: none; border: none; border-radius: 10px; padding: 9px 8px; cursor: pointer; }
 .fm-tab.on { background: var(--accent); color: var(--accent-ink); box-shadow: var(--shadow); }
+
+/* articles (tab 5) */
+.fm-art-item { text-align: left; width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 12px 14px; cursor: pointer; color: var(--text); font-family: var(--font); box-shadow: var(--shadow); }
+.fm-art-item:active { transform: scale(.99); }
+.fm-art-item-t { font-size: 15px; font-weight: 800; }
+.fm-art-item-s { font-size: 12px; color: var(--muted); margin-top: 3px; line-height: 1.4; }
+.fm-art-title { font-size: 20px; font-weight: 900; margin: 4px 2px 1px; line-height: 1.3; }
+.fm-art-th { font-size: 13px; color: var(--muted); margin: 0 2px 8px; }
+.fm-art-scn { font-size: 12.5px; color: var(--text); margin: 0 2px 14px; }
+.fm-art-block { border-radius: 15px; padding: 14px; margin-bottom: 4px; }
+.fm-art-normal { background: var(--surface2); }
+.fm-art-formal { background: var(--accent-soft); border: 1px solid var(--accent); }
+.fm-art-h { font-size: 13px; font-weight: 900; color: var(--text); margin-bottom: 8px; }
+.fm-art-en { font-size: 15px; color: var(--text); line-height: 1.7; }
+.fm-art-formal .fm-art-en { font-weight: 500; }
+.fm-art-hi { background: var(--accent); color: var(--accent-ink); border-radius: 5px; padding: 0 4px; font-weight: 800; }
+.fm-art-tha { font-size: 12.5px; color: var(--muted); line-height: 1.6; margin-top: 8px; border-top: 1px dashed var(--border); padding-top: 8px; }
+.fm-art-arrow { text-align: center; font-size: 12px; font-weight: 800; color: var(--accent); margin: 8px 0; }
+.fm-art-swaps { background: var(--surface); border: 1px solid var(--border); border-radius: 15px; padding: 14px; margin-top: 12px; box-shadow: var(--shadow); }
+.fm-art-swap { padding: 8px 0; }
+.fm-art-swap + .fm-art-swap { border-top: 1px dashed var(--border); }
+.fm-art-from { font-size: 15px; color: var(--muted); text-decoration: line-through; }
+.fm-art-to { font-size: 16px; font-weight: 900; color: var(--accent); }
+.fm-art-note { font-size: 12.5px; color: var(--text); line-height: 1.5; margin-top: 3px; }
 
 /* word list (tab 2) */
 .fm-wlist { display: flex; flex-direction: column; gap: 9px; }
@@ -10076,6 +10100,9 @@ PT.formal = (function () {
   var view = "";          // "" = tab shell ; detail ; translate
   var quizPool = null;    // [{eg, egth, egf, egfth, ctx, ans, base, base_th, family}]
   var QZ = { ctx: "", cur: null, answered: false, chosen: "", score: 0, total: 0 };
+  var articles = null;    // loaded formal_articles.json
+  var artCur = null;      // current article (detail)
+  var actx = "";          // article context filter
   var q = "";             // map search
   var lq = "";            // list search
   var theme = "";         // map theme filter
@@ -10148,6 +10175,7 @@ PT.formal = (function () {
   function paint(v) {
     if (view === "detail") return renderDetail(v);
     if (view === "translate") return renderTranslate(v);
+    if (view === "article") return renderArticle(v);
     return renderShell(v);
   }
   function renderShell(v) {
@@ -10157,7 +10185,8 @@ PT.formal = (function () {
       '<button class="fm-tab' + (tab === "map" ? " on" : "") + '" data-tab="map">🗺️ แผนที่</button>' +
       '<button class="fm-tab' + (tab === "list" ? " on" : "") + '" data-tab="list">📋 รายการ</button>' +
       '<button class="fm-tab' + (tab === "cards" ? " on" : "") + '" data-tab="cards">🎴 การ์ด</button>' +
-      '<button class="fm-tab' + (tab === "quiz" ? " on" : "") + '" data-tab="quiz">🎯 ควิซ</button></div>');
+      '<button class="fm-tab' + (tab === "quiz" ? " on" : "") + '" data-tab="quiz">🎯 ควิซ</button>' +
+      '<button class="fm-tab' + (tab === "articles" ? " on" : "") + '" data-tab="articles">📄 บทความ</button></div>');
     h.push('<div id="fm-body"></div></div>');
     v.innerHTML = h.join("");
     [].forEach.call(v.querySelectorAll("[data-tab]"), function (b) { b.onclick = function () { tab = b.getAttribute("data-tab"); CD.on = false; renderShell(v); }; });
@@ -10168,6 +10197,7 @@ PT.formal = (function () {
     if (tab === "list") return renderList(body, v);
     if (tab === "cards") return renderCards(body, v);
     if (tab === "quiz") return renderQuiz(body, v);
+    if (tab === "articles") return renderArticles(body, v);
     return renderMap(body, v);
   }
 
@@ -10394,6 +10424,76 @@ PT.formal = (function () {
     QZ.answered = true; QZ.chosen = o; QZ.total++;
     if (norm(o) === norm(QZ.cur.ans.w)) QZ.score++;
     renderQuiz(body, v);
+  }
+
+  /* ============ TAB 5: ARTICLES (casual vs formal side by side) ============ */
+  function fetchArticles(cb) {
+    if (articles) { cb(); return; }
+    fetch("data/formal_articles.json").then(function (r) { return r.json(); }).then(function (j) { articles = j || []; cb(); }).catch(function () { articles = []; cb(); });
+  }
+  var TYPE_TH = {
+    "support-email": "อีเมลซัพพอร์ต", "refund-billing-email": "อีเมลเงิน/คืนเงิน", "internal-update": "อัปเดตงานในทีม",
+    "job-application": "สมัครงาน/แนะนำตัว", "meeting-notes": "สรุปประชุม", "api-docs": "เอกสาร API",
+    "sdk-readme": "คู่มือไลบรารี", "incident-report": "รายงานเหตุขัดข้อง", "pr-description": "อธิบาย Pull Request", "config-guide": "คู่มือตั้งค่า"
+  };
+  function renderArticles(body, v) {
+    if (!articles) { body.innerHTML = '<div class="fm-load">กำลังโหลดบทความ…</div>'; fetchArticles(function () { renderArticles(body, v); }); return; }
+    var list = articles.filter(function (a) { return !actx || a.context === actx; });
+    var h = [];
+    h.push('<div class="fm-sub">อ่านบทความจริง เทียบ <b>ธรรมดา ↔ ทางการ</b> — เห็นเลยว่าประโยคแบบนี้ควรใช้คำทางการคำไหน</div>');
+    h.push('<div class="fm-chips">' +
+      '<button class="fm-chip' + (actx === "" ? " on" : "") + '" data-fm-actx="">📚 ทั้งหมด</button>' +
+      '<button class="fm-chip' + (actx === "business" ? " on" : "") + '" data-fm-actx="business">💼 ธุรกิจ</button>' +
+      '<button class="fm-chip' + (actx === "technical" ? " on" : "") + '" data-fm-actx="technical">⚙️ เทคนิค</button></div>');
+    h.push('<div class="fm-count">' + list.length + ' บทความ</div><div class="fm-list">');
+    for (var i = 0; i < list.length; i++) {
+      var a = list[i], cb = a.context === "business" ? "💼" : "⚙️";
+      h.push('<button class="fm-art-item" data-fm-art="' + i + '">' +
+        '<div class="fm-art-item-t">' + cb + ' ' + esc(a.title) + '</div>' +
+        '<div class="fm-art-item-s">' + esc(TYPE_TH[a.type] || a.type) + ' · ' + esc(a.scenario_th) + '</div></button>');
+    }
+    if (!list.length) h.push('<div class="fm-load">ยังไม่มีบทความในบริบทนี้</div>');
+    h.push('</div>');
+    body.innerHTML = h.join("");
+    [].forEach.call(body.querySelectorAll("[data-fm-actx]"), function (b) { b.onclick = function () { actx = b.getAttribute("data-fm-actx"); renderArticles(body, v); }; });
+    [].forEach.call(body.querySelectorAll("[data-fm-art]"), function (b) { b.onclick = function () { artCur = list[parseInt(b.getAttribute("data-fm-art"), 10)]; view = "article"; paint(v); }; });
+  }
+  function reEsc(s) { return String(s).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+  function hiText(text, swaps) {
+    var t = esc(text);
+    for (var i = 0; i < (swaps || []).length; i++) {
+      var to = swaps[i].to; if (!to) continue;
+      var re = new RegExp("(" + reEsc(esc(to)) + ")", "i");
+      t = t.replace(re, '<mark class="fm-art-hi">$1</mark>');
+    }
+    return t.replace(/\n/g, "<br>");
+  }
+  function plainText(text) { return esc(text).replace(/\n/g, "<br>"); }
+  function renderArticle(v) {
+    var a = artCur; if (!a) { view = ""; return renderShell(v); }
+    var cb = a.context === "business" ? '<span class="fm-badge fm-u-biz">💼 ธุรกิจ / อีเมล</span>' : '<span class="fm-badge fm-u-tech">⚙️ เทคนิค / โค้ด</span>';
+    var h = ['<div class="fm-wrap">'];
+    h.push('<button class="fm-back" data-fm-back="1">‹ กลับ</button>');
+    h.push('<div class="fm-art-title">' + esc(a.title) + '</div>');
+    h.push('<div class="fm-art-th">' + esc(a.title_th) + '</div>');
+    h.push('<div class="fm-art-scn">' + cb + ' ' + esc(a.scenario_th) + '</div>');
+    h.push('<div class="fm-art-block fm-art-normal"><div class="fm-art-h">🙂 แบบธรรมดา</div>' +
+      '<div class="fm-art-en">' + plainText(a.normal) + '</div><div class="fm-art-tha">' + plainText(a.normal_th) + '</div></div>');
+    h.push('<div class="fm-art-arrow">↓ เขียนใหม่ให้ทางการ ↓</div>');
+    h.push('<div class="fm-art-block fm-art-formal"><div class="fm-art-h">👔 แบบทางการ ' + sayBtn(a.formal) + '</div>' +
+      '<div class="fm-art-en">' + hiText(a.formal, a.swaps) + '</div><div class="fm-art-tha">' + plainText(a.formal_th) + '</div></div>');
+    if (a.swaps && a.swaps.length) {
+      h.push('<div class="fm-art-swaps"><div class="fm-art-h">🔑 คำที่เปลี่ยน</div>');
+      for (var i = 0; i < a.swaps.length; i++) {
+        var s = a.swaps[i];
+        h.push('<div class="fm-art-swap"><span class="fm-art-from">' + esc(s.from) + '</span> → <span class="fm-art-to">' + esc(s.to) + '</span> ' + sayBtn(s.to) + '<div class="fm-art-note">' + esc(s.note_th) + '</div></div>');
+      }
+      h.push('</div>');
+    }
+    h.push('</div>');
+    v.innerHTML = h.join("");
+    v.querySelector("[data-fm-back]").onclick = function () { view = ""; paint(v); };
+    wireSay(v);
   }
 
   /* ---------- detail (from map) ---------- */
