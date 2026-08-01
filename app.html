@@ -10489,11 +10489,17 @@ PT.formal = (function () {
     complaint: "😤 ร้องเรียน", escalation: "⏫ ยกระดับเรื่อง", agreement: "👍 เห็นด้วย", confirmation: "✅ ยืนยัน",
     acknowledgement: "📨 รับทราบ", thanks: "🙏 ขอบคุณ", contrast: "🔀 แต่ / ขัดแย้ง", cause: "➡️ เหตุ-ผล",
     addition: "➕ เพิ่มเติม", condition: "❓ เงื่อนไข", sequence: "🔢 ลำดับ", example: "💡 ยกตัวอย่าง",
-    conclusion: "🏁 สรุป", emphasis: "❗ เน้นย้ำ", hedging: "🤔 พูดกันชน"
+    conclusion: "🏁 สรุป", emphasis: "❗ เน้นย้ำ", hedging: "🤔 พูดกันชน",
+    meeting: "👥 ประชุม", presenting: "📊 นำเสนอ", phone: "📞 โทร / วิดีโอคอล", feedback: "📝 ให้/รับ ฟีดแบ็ก",
+    praise: "🌟 ชม", negotiation: "🤝 ต่อรอง", disagreement: "🙅 แย้งอย่างสุภาพ", smalltalk: "💬 คุยเล่น",
+    networking: "🔗 เข้าสังคม / รู้จักคน", "code-review": "👨‍💻 รีวิวโค้ด / PR", status: "📶 อัปเดตงาน",
+    incident: "🚨 เหตุขัดข้อง", standup: "🗒️ standup ประจำวัน"
   };
-  var FN_ORDER = ["opening", "greeting", "request", "offer", "instruction", "permission", "confirmation", "agreement",
-    "acknowledgement", "thanks", "follow-up", "closing", "sign-off", "apology", "bad-news", "problem", "complaint",
-    "escalation", "contrast", "cause", "condition", "addition", "emphasis", "sequence", "example", "conclusion", "hedging"];
+  var FN_ORDER = ["opening", "greeting", "smalltalk", "networking", "request", "offer", "instruction", "permission",
+    "confirmation", "agreement", "acknowledgement", "thanks", "praise", "feedback", "follow-up", "closing", "sign-off",
+    "meeting", "presenting", "phone", "negotiation", "disagreement", "apology", "bad-news", "problem", "complaint",
+    "escalation", "status", "incident", "standup", "code-review", "contrast", "cause", "condition", "addition",
+    "emphasis", "sequence", "example", "conclusion", "hedging"];
   var PFREQ = { common: { th: "ใช้บ่อยมาก", cls: "fm-f4" }, occasional: { th: "ใช้บ้าง", cls: "fm-f2" }, specialized: { th: "เฉพาะทาง", cls: "fm-f1" } };
   var KIND_TH = { phrase: "🧩 วลี", linker: "🔗 คำเชื่อม" };
   function fnTh(f) { return FN_TH[f] || ("• " + (f || "")); }
