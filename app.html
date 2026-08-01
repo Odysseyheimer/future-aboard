@@ -1911,6 +1911,13 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 .fm-chip.on { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
 .fm-count { font-size: 12px; color: var(--muted); margin: 2px 2px 8px; }
 
+/* pagination */
+.fm-pager { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 8px 0; }
+.fm-pg { font-family: var(--font); font-size: 13px; font-weight: 800; color: var(--accent-ink); background: var(--accent); border: none; border-radius: 11px; padding: 9px 14px; cursor: pointer; box-shadow: var(--shadow); }
+.fm-pg:active { transform: scale(.97); }
+.fm-pg:disabled { opacity: .4; cursor: default; background: var(--surface2); color: var(--muted); box-shadow: none; }
+.fm-pg-info { font-size: 13px; font-weight: 800; color: var(--text); }
+
 .fm-list { display: flex; flex-direction: column; gap: 8px; }
 .fm-item { text-align: left; width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
   padding: 12px 14px; cursor: pointer; color: var(--text); font-family: var(--font); box-shadow: var(--shadow); }
@@ -10103,6 +10110,17 @@ PT.formal = (function () {
   var articles = null;    // loaded formal_articles.json
   var artCur = null;      // current article (detail)
   var actx = "";          // article context filter
+  var mapPage = 0, listPage = 0, artPage = 0;   // pagination
+  var PER_MAP = 20, PER_LIST = 12, PER_ART = 12;
+
+  function pgTop() { try { window.scrollTo(0, 0); } catch (e) {} var vv = document.getElementById("view"); if (vv) vv.scrollTop = 0; var ap = document.getElementById("app"); if (ap) ap.scrollTop = 0; }
+  function pagerHtml(page, pages) {
+    if (pages <= 1) return "";
+    return '<div class="fm-pager">' +
+      '<button class="fm-pg" data-pg="' + (page - 1) + '"' + (page <= 0 ? ' disabled' : '') + '>‹ ก่อนหน้า</button>' +
+      '<span class="fm-pg-info">' + (page + 1) + ' / ' + pages + '</span>' +
+      '<button class="fm-pg" data-pg="' + (page + 1) + '"' + (page >= pages - 1 ? ' disabled' : '') + '>ถัดไป ›</button></div>';
+  }
   var q = "";             // map search
   var lq = "";            // list search
   var theme = "";         // map theme filter
@@ -10217,17 +10235,20 @@ PT.formal = (function () {
     h.push('<input class="fm-search" id="fm-q" type="text" autocomplete="off" placeholder="ค้นหา เช่น give, ask, fix, ขอ, แก้…" value="' + esc(q) + '">');
     h.push('<div class="fm-chips">');
     for (var i = 0; i < THEMES.length; i++) h.push('<button class="fm-chip' + (theme === THEMES[i].id ? " on" : "") + '" data-fm-theme="' + THEMES[i].id + '">' + THEMES[i].ic + ' ' + esc(THEMES[i].th) + '</button>');
-    h.push('</div><div class="fm-count">' + list.length + ' คำหลัก</div><div class="fm-list">');
-    for (i = 0; i < list.length; i++) {
-      var e = list[i], fam = (e.family || []).slice(0, 3).map(function (f) { return esc(f.w); }).join(" · ");
+    var pages = Math.max(1, Math.ceil(list.length / PER_MAP)); if (mapPage >= pages) mapPage = pages - 1; if (mapPage < 0) mapPage = 0;
+    var slice = list.slice(mapPage * PER_MAP, mapPage * PER_MAP + PER_MAP);
+    h.push('</div><div class="fm-count">' + list.length + ' คำหลัก</div>' + pagerHtml(mapPage, pages) + '<div class="fm-list">');
+    for (i = 0; i < slice.length; i++) {
+      var e = slice[i], fam = (e.family || []).slice(0, 3).map(function (f) { return esc(f.w); }).join(" · ");
       h.push('<button class="fm-item" data-fm-base="' + esc(e.base) + '"><div class="fm-item-top"><span class="fm-item-base">' + esc(e.base) + '</span><span class="fm-item-th">' + esc(e.base_th) + '</span></div><div class="fm-item-fam">→ ' + fam + ((e.family || []).length > 3 ? ' …' : '') + '</div></button>');
     }
     if (!list.length) h.push('<div class="fm-load">ไม่พบคำที่ค้นหา</div>');
-    h.push('</div>');
+    h.push('</div>' + pagerHtml(mapPage, pages));
     body.innerHTML = h.join("");
     var qi = body.querySelector("#fm-q");
-    if (qi) qi.oninput = function () { q = qi.value; var p = qi.selectionStart; renderMap(body, v); var q2 = body.querySelector("#fm-q"); if (q2) { q2.focus(); try { q2.setSelectionRange(p, p); } catch (e) {} } };
-    [].forEach.call(body.querySelectorAll("[data-fm-theme]"), function (b) { b.onclick = function () { theme = b.getAttribute("data-fm-theme"); renderMap(body, v); }; });
+    if (qi) qi.oninput = function () { q = qi.value; mapPage = 0; var p = qi.selectionStart; renderMap(body, v); var q2 = body.querySelector("#fm-q"); if (q2) { q2.focus(); try { q2.setSelectionRange(p, p); } catch (e) {} } };
+    [].forEach.call(body.querySelectorAll("[data-fm-theme]"), function (b) { b.onclick = function () { theme = b.getAttribute("data-fm-theme"); mapPage = 0; renderMap(body, v); }; });
+    [].forEach.call(body.querySelectorAll("[data-pg]"), function (b) { b.onclick = function () { mapPage = parseInt(b.getAttribute("data-pg"), 10); renderMap(body, v); pgTop(); }; });
     [].forEach.call(body.querySelectorAll("[data-fm-base]"), function (b) { b.onclick = function () { cur = find(b.getAttribute("data-fm-base")); view = "detail"; paint(v); }; });
     var tb = body.querySelector("[data-fm-trans]"); if (tb) tb.onclick = function () { view = "translate"; paint(v); };
   }
@@ -10250,9 +10271,11 @@ PT.formal = (function () {
       '<button class="fm-chip' + (lctx === "" ? " on" : "") + '" data-fm-ctx="">📚 ทั้งหมด</button>' +
       '<button class="fm-chip' + (lctx === "business" ? " on" : "") + '" data-fm-ctx="business">💼 ธุรกิจ</button>' +
       '<button class="fm-chip' + (lctx === "technical" ? " on" : "") + '" data-fm-ctx="technical">⚙️ เทคนิค</button></div>');
-    h.push('<div class="fm-count">' + list.length + ' คำ</div><div class="fm-wlist">');
-    for (var i = 0; i < list.length; i++) {
-      var f = list[i];
+    var pages = Math.max(1, Math.ceil(list.length / PER_LIST)); if (listPage >= pages) listPage = pages - 1; if (listPage < 0) listPage = 0;
+    var slice = list.slice(listPage * PER_LIST, listPage * PER_LIST + PER_LIST);
+    h.push('<div class="fm-count">' + list.length + ' คำ</div>' + pagerHtml(listPage, pages) + '<div class="fm-wlist">');
+    for (var i = 0; i < slice.length; i++) {
+      var f = slice[i];
       h.push('<div class="fm-wrow">' +
         '<div class="fm-wrow-top"><span class="fm-wrow-w">' + esc(f.w) + '</span>' + sayBtn(f.w) + '<span class="fm-wrow-th">' + esc(f.th) + '</span>' + (known()[f.key] ? '<span class="fm-learned">✓ จำแล้ว</span>' : '') + '</div>' +
         '<div class="fm-wrow-base">ทางการของ <b>' + esc(f.base) + '</b> (' + esc(f.base_th) + ')</div>' +
@@ -10262,11 +10285,12 @@ PT.formal = (function () {
         '</div>');
     }
     if (!list.length) h.push('<div class="fm-load">ไม่พบคำที่ค้นหา</div>');
-    h.push('</div>');
+    h.push('</div>' + pagerHtml(listPage, pages));
     body.innerHTML = h.join("");
     var qi = body.querySelector("#fm-lq");
-    if (qi) qi.oninput = function () { lq = qi.value; var p = qi.selectionStart; renderList(body, v); var q2 = body.querySelector("#fm-lq"); if (q2) { q2.focus(); try { q2.setSelectionRange(p, p); } catch (e) {} } };
-    [].forEach.call(body.querySelectorAll("[data-fm-ctx]"), function (b) { b.onclick = function () { lctx = b.getAttribute("data-fm-ctx"); renderList(body, v); }; });
+    if (qi) qi.oninput = function () { lq = qi.value; listPage = 0; var p = qi.selectionStart; renderList(body, v); var q2 = body.querySelector("#fm-lq"); if (q2) { q2.focus(); try { q2.setSelectionRange(p, p); } catch (e) {} } };
+    [].forEach.call(body.querySelectorAll("[data-fm-ctx]"), function (b) { b.onclick = function () { lctx = b.getAttribute("data-fm-ctx"); listPage = 0; renderList(body, v); }; });
+    [].forEach.call(body.querySelectorAll("[data-pg]"), function (b) { b.onclick = function () { listPage = parseInt(b.getAttribute("data-pg"), 10); renderList(body, v); pgTop(); }; });
     wireSay(body);
   }
 
@@ -10445,17 +10469,20 @@ PT.formal = (function () {
       '<button class="fm-chip' + (actx === "" ? " on" : "") + '" data-fm-actx="">📚 ทั้งหมด</button>' +
       '<button class="fm-chip' + (actx === "business" ? " on" : "") + '" data-fm-actx="business">💼 ธุรกิจ</button>' +
       '<button class="fm-chip' + (actx === "technical" ? " on" : "") + '" data-fm-actx="technical">⚙️ เทคนิค</button></div>');
-    h.push('<div class="fm-count">' + list.length + ' บทความ</div><div class="fm-list">');
-    for (var i = 0; i < list.length; i++) {
-      var a = list[i], cb = a.context === "business" ? "💼" : "⚙️";
-      h.push('<button class="fm-art-item" data-fm-art="' + i + '">' +
+    var pages = Math.max(1, Math.ceil(list.length / PER_ART)); if (artPage >= pages) artPage = pages - 1; if (artPage < 0) artPage = 0;
+    var base = artPage * PER_ART, slice = list.slice(base, base + PER_ART);
+    h.push('<div class="fm-count">' + list.length + ' บทความ</div>' + pagerHtml(artPage, pages) + '<div class="fm-list">');
+    for (var i = 0; i < slice.length; i++) {
+      var a = slice[i], cb = a.context === "business" ? "💼" : "⚙️";
+      h.push('<button class="fm-art-item" data-fm-art="' + (base + i) + '">' +
         '<div class="fm-art-item-t">' + cb + ' ' + esc(a.title) + '</div>' +
         '<div class="fm-art-item-s">' + esc(TYPE_TH[a.type] || a.type) + ' · ' + esc(a.scenario_th) + '</div></button>');
     }
     if (!list.length) h.push('<div class="fm-load">ยังไม่มีบทความในบริบทนี้</div>');
-    h.push('</div>');
+    h.push('</div>' + pagerHtml(artPage, pages));
     body.innerHTML = h.join("");
-    [].forEach.call(body.querySelectorAll("[data-fm-actx]"), function (b) { b.onclick = function () { actx = b.getAttribute("data-fm-actx"); renderArticles(body, v); }; });
+    [].forEach.call(body.querySelectorAll("[data-fm-actx]"), function (b) { b.onclick = function () { actx = b.getAttribute("data-fm-actx"); artPage = 0; renderArticles(body, v); }; });
+    [].forEach.call(body.querySelectorAll("[data-pg]"), function (b) { b.onclick = function () { artPage = parseInt(b.getAttribute("data-pg"), 10); renderArticles(body, v); pgTop(); }; });
     [].forEach.call(body.querySelectorAll("[data-fm-art]"), function (b) { b.onclick = function () { artCur = list[parseInt(b.getAttribute("data-fm-art"), 10)]; view = "article"; paint(v); }; });
   }
   function reEsc(s) { return String(s).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
