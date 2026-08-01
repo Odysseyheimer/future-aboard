@@ -1492,6 +1492,16 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
   border: 1.5px solid var(--border); border-radius: 16px; padding: 22px 12px; cursor: pointer; box-shadow: var(--shadow); line-height: 1.4; }
 .g-sp-opt:active { transform: scale(.97); border-color: var(--accent); }
 
+/* ---- upform (formal upgrade) ---- */
+.g-uf-cue { text-align: center; font-size: 13px; font-weight: 800; color: #6366f1; margin: 16px 0 4px; }
+.g-uf-base { text-align: center; font-size: 30px; font-weight: 900; color: var(--text); margin: 2px 0 2px; word-break: break-word; }
+.g-uf-th { display: block; font-size: 14px; font-weight: 700; color: var(--muted); margin-top: 2px; }
+.g-uf-hint { text-align: center; font-size: 12.5px; color: var(--muted); margin: 8px 0 16px; }
+.g-uf-opts { display: flex; flex-direction: column; gap: 11px; }
+.g-uf-opt { font-family: var(--font); font-size: 17px; font-weight: 800; color: #6366f1; background: var(--surface);
+  border: 1.5px solid var(--border); border-radius: 15px; padding: 16px 12px; cursor: pointer; box-shadow: var(--shadow); }
+.g-uf-opt:active { transform: scale(.98); border-color: #6366f1; }
+
 /* ---- chef ---- */
 .g-chef-order { text-align: center; font-size: 22px; font-weight: 800; color: var(--text); margin: 14px 0 4px; }
 .g-chef-order b { color: var(--accent); }
@@ -1842,6 +1852,45 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 .fm-wrow-note { font-size: 12.5px; color: var(--text); line-height: 1.5; }
 .fm-wrow-eg { font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.5; font-style: italic; }
 .fm-wrow-egth { display: block; font-size: 12px; color: var(--muted); font-style: normal; margin-top: 2px; }
+
+/* discovery chip in the word-deck bottom sheet (browse.js) */
+.pg-sh-formal { display: block; width: 100%; margin-top: 10px; font-family: var(--font); font-size: 14px;
+  font-weight: 800; color: #fff; background: #2563eb; border: 1px solid #2563eb;
+  border-radius: 12px; padding: 11px; cursor: pointer; text-align: center; }
+.pg-sh-formal:active { transform: scale(.99); }
+
+/* word of the day (map home) */
+.fm-wod { background: linear-gradient(135deg, rgba(37,99,235,.10), var(--surface)); border: 1px solid var(--border);
+  border-left: 4px solid #2563eb; border-radius: 15px; padding: 13px 14px; margin: 2px 0 12px; box-shadow: var(--shadow); }
+.fm-wod-lab { font-size: 12px; font-weight: 900; color: #2563eb; margin-bottom: 6px; }
+.fm-wod-top { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.fm-wod-w { font-size: 22px; font-weight: 900; color: #2563eb; }
+.fm-wod-th { font-size: 13px; color: var(--text); }
+.fm-wod-base { font-size: 12px; color: var(--muted); margin: 4px 0; }
+.fm-wod-base b { color: var(--text); }
+.fm-wod-badges { display: flex; gap: 6px; margin: 6px 0; flex-wrap: wrap; }
+.fm-wod-eg { font-size: 13px; color: var(--muted); line-height: 1.5; font-style: italic; margin: 4px 0 8px; }
+.fm-wod-egth { display: block; font-size: 12px; font-style: normal; margin-top: 2px; }
+.fm-wod-btn { font-family: var(--font); font-size: 13px; font-weight: 800; color: var(--accent-ink); background: var(--accent);
+  border: none; border-radius: 999px; padding: 8px 16px; cursor: pointer; }
+.fm-wod-btn:active { transform: scale(.98); }
+.fm-wod-done { font-size: 13px; font-weight: 800; color: var(--know); }
+
+/* phrases tab (วลี) */
+.fm-chips-fn { margin-top: 8px; }
+.fm-chip-sep { width: 1px; align-self: stretch; background: var(--border); margin: 3px 2px; flex: 0 0 auto; }
+.fm-plist { display: flex; flex-direction: column; gap: 9px; }
+.fm-prow { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid #7c3aed; border-radius: 13px; padding: 11px 13px; box-shadow: var(--shadow); }
+.fm-prow-top { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.fm-prow-en { font-size: 16px; font-weight: 900; color: #7c3aed; line-height: 1.35; }
+.fm-prow-th { font-size: 13px; color: var(--text); margin: 3px 0 1px; }
+.fm-prow-casual { font-size: 12px; color: var(--muted); margin: 2px 0; }
+.fm-prow-casual s { color: var(--text); opacity: .7; }
+.fm-prow-badges { display: flex; gap: 6px; margin: 6px 0 2px; flex-wrap: wrap; }
+.fm-b-fn { background: rgba(124,58,237,.12); color: #7c3aed; }
+.fm-b-kind { background: var(--surface2); color: var(--muted); }
+.fm-prow-eg { font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.5; font-style: italic; }
+.fm-prow-egth { display: block; font-size: 12px; color: var(--muted); font-style: normal; margin-top: 2px; }
 
 /* flashcards (tab 3) */
 .fm-cd-lab { font-size: 12.5px; font-weight: 800; color: var(--muted); margin: 12px 2px 6px; }
@@ -5131,6 +5180,10 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
     if (item.w && def.type !== "sentence" && window.PT && PT.wmap) {
       h.push('<button class="pg-sh-map" type="button">🗺️ แผนที่คำ — คำเหมือน · ตรงข้าม · ใช้คู่กัน</button>');
     }
+    // Formal-English discovery chip (filled async if this word has a formal family).
+    if (item.w && def.type !== "sentence" && window.PT && PT.formal && PT.formal.hasBase) {
+      h.push('<div id="fm-chip-slot"></div>');
+    }
     // Retrieval question.
     if (item.rq) {
       h.push('<div class="pg-sh-rq"><span class="pg-sh-lab">Retrieval</span> ' +
@@ -5159,6 +5212,19 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
     }
     var mapBtn = sheet.querySelector(".pg-sh-map");
     if (mapBtn) mapBtn.onclick = function () { if (PT.wmap && PT.wmap.openFor) PT.wmap.openFor(item, deckKey); };
+    // Reveal the formal chip only if this headword maps to a formal family.
+    if (item.w && def.type !== "sentence" && window.PT && PT.formal && PT.formal.hasBase) {
+      (function (w) {
+        PT.formal.hasBase(w, function (yes) {
+          var slot = document.getElementById("fm-chip-slot");
+          if (!slot || !yes) return;
+          var fam = (PT.formal.familyOf && PT.formal.familyOf(w)) || "";
+          slot.innerHTML = '<button class="pg-sh-formal" type="button">👔 พูดให้ทางการ: ' + esc(fam) + ' →</button>';
+          var fb = slot.querySelector(".pg-sh-formal");
+          if (fb) fb.onclick = function () { closeSheet(); PT.formal.openBase(w); };
+        });
+      })(item.w);
+    }
   }
 
   // --- list + pager rendering ---------------------------------------------
@@ -9717,6 +9783,67 @@ PT.game = (function () {
   };
 
   /* ---------- pool-not-available helper (for deck-dependent games) ---------- */
+  /* ==================== FORMAL UPGRADE (คำทางการ) ==================== */
+  // deck-independent: fetches data/formal.json. show a casual base word -> pick the formal upgrade.
+  var upform = {};
+  var upformPool = null;   // { items:[{base, base_th, formals:[w..]}], all:[w..] }
+  function loadUpform(cb) {
+    if (upformPool) { cb(); return; }
+    fetch("data/formal.json").then(function (r) { return r.json(); }).then(function (rows) {
+      var items = [], all = [], seen = {}, i, k;
+      for (i = 0; i < rows.length; i++) {
+        var e = rows[i], fam = e.family || [];
+        if (!e.base || !fam.length) continue;
+        var fs = [];
+        for (k = 0; k < fam.length; k++) {
+          var w = fam[k] && fam[k].w; if (!w || String(w).indexOf(" ") >= 0) continue;   // single-word formals only (clean tiles)
+          fs.push(w); if (!seen[norm(w)]) { seen[norm(w)] = 1; all.push(w); }
+        }
+        if (fs.length) items.push({ base: e.base, base_th: e.base_th || "", formals: fs });
+      }
+      upformPool = { items: items, all: all };
+      cb();
+    }).catch(function () { cb(); });
+  }
+  upform.render = function (v) {
+    v.innerHTML = '<div class="g-load">กำลังโหลดคำทางการ…</div>';
+    loadUpform(function () {
+      if (!upformPool || upformPool.items.length < 6 || upformPool.all.length < 8) { v.innerHTML = '<div class="g-load">โหลดข้อมูลไม่สำเร็จ ลองใหม่</div>'; return; }
+      v.innerHTML = shell("g-stage");
+      RUN.begin("upform", 22000, function () { document.getElementById("g-stage").innerHTML = endHtml("upform", "อัปคำถูก (คำ)"); wireChrome(v); });
+      wireChrome(v);
+      upform.next();
+    });
+  };
+  upform.next = function () {
+    var st = document.getElementById("g-stage"); if (!st) return;
+    var P = upformPool, it = P.items[randn(P.items.length)];
+    var correct = it.formals[randn(it.formals.length)];
+    var itset = {}; for (var z = 0; z < it.formals.length; z++) itset[norm(it.formals[z])] = 1;
+    var opts = [{ w: correct, ok: true }], guard = 0;
+    while (opts.length < 3 && guard++ < 50) {
+      var d = P.all[randn(P.all.length)];
+      if (itset[norm(d)]) continue;
+      var dup = false; for (var y = 0; y < opts.length; y++) if (norm(opts[y].w) === norm(d)) { dup = true; break; }
+      if (!dup) opts.push({ w: d, ok: false });
+    }
+    opts = shuffle(opts);
+    var html = '<div class="g-uf-cue">👔 พูดแบบทางการว่า?</div>' +
+      '<div class="g-uf-base">' + esc(it.base) + (it.base_th ? ' <span class="g-uf-th">' + esc(it.base_th) + '</span>' : '') + '</div>' +
+      '<div class="g-uf-hint">แตะคำทางการที่ใช้แทนได้</div><div class="g-uf-opts">';
+    for (var i = 0; i < opts.length; i++) html += '<button class="g-uf-opt" data-ok="' + (opts[i].ok ? 1 : 0) + '" data-w="' + esc(opts[i].w) + '">' + esc(opts[i].w) + '</button>';
+    html += '</div>';
+    st.innerHTML = html;
+    [].forEach.call(st.querySelectorAll(".g-uf-opt"), function (b) {
+      b.onclick = function () {
+        if (!RUN.running) return;
+        if (b.getAttribute("data-ok") === "1") { RUN.good(2000); popFx("+1", true); try { say(b.getAttribute("data-w")); } catch (e) {} }
+        else { RUN.bad(3000); popFx("✗", false); }
+        upform.next();
+      };
+    });
+  };
+
   function poolWarn() {
     return '<div class="g-load">เกมนี้ต้องใช้คลัง<b>คำศัพท์</b> — เปิดจากคลังคำ (เช่น Oxford)<br>' +
       '<button class="g-btn g-goword" data-g-goword="1">ไปคลัง Oxford</button>' +
@@ -9744,9 +9871,10 @@ PT.game = (function () {
     dialogue: { icon: "🎭", th: "บทสนทนาพลิกเกม", d: "เดินบทสนทนา เลือกประโยคตอบ", r: dialogue.render, color: "#c026d3" },
     gamble: { icon: "🎲", th: "เดิมพันคำ", d: "สะสมพอต เก็บหรือลุยต่อ", r: gamble.render, color: "#ea580c" },
     groups: { icon: "🧩", th: "จับกลุ่มลับ", d: "หา 4 กลุ่มซ่อนใน 16 คำ", r: groups.render, color: "#4f46e5" },
-    frame: { icon: "🏛️", th: "สถาปนิกประโยค", d: "ต่อคำตามโครงประโยค", r: frame.render, color: "#0369a1" }
+    frame: { icon: "🏛️", th: "สถาปนิกประโยค", d: "ต่อคำตามโครงประโยค", r: frame.render, color: "#0369a1" },
+    upform: { icon: "👔", th: "อัปคำให้ทางการ", d: "เลือกคำทางการแทนคำง่ายๆ", r: upform.render, color: "#6366f1" }
   };
-  var GORDER = ["sprint", "sameopp", "tower", "fillear", "chef", "idiomfill", "sharper", "echo", "lineup", "ladder",
+  var GORDER = ["sprint", "upform", "sameopp", "tower", "fillear", "chef", "idiomfill", "sharper", "echo", "lineup", "ladder",
     "memory", "worddial", "gamble", "dialogue", "groups", "frame"];
 
   function renderHub(v) {
@@ -10125,8 +10253,13 @@ PT.formal = (function () {
   var articles = null;    // loaded formal_articles.json
   var artCur = null;      // current article (detail)
   var actx = "";          // article context filter
-  var mapPage = 0, listPage = 0, artPage = 0;   // pagination
-  var PER_MAP = 20, PER_LIST = 12, PER_ART = 12;
+  var mapPage = 0, listPage = 0, artPage = 0, phrPage = 0;   // pagination
+  var PER_MAP = 20, PER_LIST = 12, PER_ART = 12, PER_PHR = 12;
+  var PHR = null;         // loaded formal_phrases.json
+  var phq = "";           // phrases search
+  var pfn = "";           // phrases function filter
+  var pctx = "";          // phrases context filter ("", business, technical)
+  var pkind = "";         // phrases kind filter ("", phrase, linker)
 
   function pgTop() { try { window.scrollTo(0, 0); } catch (e) {} var vv = document.getElementById("view"); if (vv) vv.scrollTop = 0; var ap = document.getElementById("app"); if (ap) ap.scrollTop = 0; }
   function pagerHtml(page, pages) {
@@ -10224,6 +10357,7 @@ PT.formal = (function () {
     h.push('<div class="fm-tabs">' +
       '<button class="fm-tab' + (tab === "map" ? " on" : "") + '" data-tab="map">🗺️ แผนที่</button>' +
       '<button class="fm-tab' + (tab === "list" ? " on" : "") + '" data-tab="list">📋 รายการ</button>' +
+      '<button class="fm-tab' + (tab === "phrases" ? " on" : "") + '" data-tab="phrases">📇 วลี</button>' +
       '<button class="fm-tab' + (tab === "cards" ? " on" : "") + '" data-tab="cards">🎴 การ์ด</button>' +
       '<button class="fm-tab' + (tab === "quiz" ? " on" : "") + '" data-tab="quiz">🎯 ควิซ</button>' +
       '<button class="fm-tab' + (tab === "articles" ? " on" : "") + '" data-tab="articles">📄 บทความ</button></div>');
@@ -10235,6 +10369,7 @@ PT.formal = (function () {
   function paintBody(v) {
     var body = v.querySelector("#fm-body"); if (!body) return;
     if (tab === "list") return renderList(body, v);
+    if (tab === "phrases") return renderPhrases(body, v);
     if (tab === "cards") return renderCards(body, v);
     if (tab === "quiz") return renderQuiz(body, v);
     if (tab === "articles") return renderArticles(body, v);
@@ -10253,6 +10388,7 @@ PT.formal = (function () {
     var list = DATA.filter(matchMap);
     var h = [];
     h.push('<div class="fm-sub">คำง่ายๆ กลายเป็นคำทางการยังไง ทั้งสาย <b>ธุรกิจ</b> และ <b>เทคนิค</b> — แตะดูตระกูลคำ</div>');
+    if (mapPage === 0 && !q && !theme) h.push(wodHtml());
     h.push('<button class="fm-transbtn" data-fm-trans="1">🪄 แปลประโยคของฉันให้เป็นทางการ</button>');
     h.push('<input class="fm-search" id="fm-q" type="text" autocomplete="off" placeholder="ค้นหา เช่น give, ask, fix, ขอ, แก้…" value="' + esc(q) + '">');
     h.push('<div class="fm-chips">');
@@ -10273,8 +10409,31 @@ PT.formal = (function () {
     [].forEach.call(body.querySelectorAll("[data-pg]"), function (b) { b.onclick = function () { mapPage = parseInt(b.getAttribute("data-pg"), 10); renderMap(body, v); pgTop(); }; });
     [].forEach.call(body.querySelectorAll("[data-fm-base]"), function (b) { b.onclick = function () { cur = find(b.getAttribute("data-fm-base")); view = "detail"; paint(v); }; });
     var tb = body.querySelector("[data-fm-trans]"); if (tb) tb.onclick = function () { view = "translate"; paint(v); };
+    var wb = body.querySelector("[data-fm-wod]"); if (wb) wb.onclick = function () { setKnown(wb.getAttribute("data-fm-wod")); renderMap(body, v); };
+    wireSay(body);
   }
   function find(base) { for (var i = 0; i < DATA.length; i++) if (DATA[i].base === base) return DATA[i]; return null; }
+  function findCI(base) { var b = low(base); for (var i = 0; i < DATA.length; i++) if (low(DATA[i].base) === b) return DATA[i]; return null; }
+
+  /* word of the day — a deterministic formal word per calendar day */
+  function wordOfDay() {
+    if (!flat || !flat.length) return null;
+    var dn = 0; try { dn = PT.srs.dayNum(); } catch (e) {}
+    return flat[((dn % flat.length) + flat.length) % flat.length];
+  }
+  function wodHtml() {
+    var f = wordOfDay(); if (!f) return "";
+    var learned = !!known()[f.key];
+    return '<div class="fm-wod">' +
+      '<div class="fm-wod-lab">🌟 คำทางการประจำวัน</div>' +
+      '<div class="fm-wod-top"><span class="fm-wod-w">' + esc(f.w) + '</span>' + sayBtn(f.w) + '<span class="fm-wod-th">' + esc(f.th) + '</span></div>' +
+      '<div class="fm-wod-base">ทางการของ <b>' + esc(f.base) + '</b> (' + esc(f.base_th) + ')</div>' +
+      '<div class="fm-wod-badges">' + freqBadge(f.rank) + useBadge(f.use) + lvBadge(f.level) + '</div>' +
+      (f.eg ? '<div class="fm-wod-eg">“' + esc(f.eg) + '” ' + sayBtn(f.eg) + '<span class="fm-wod-egth">' + esc(f.egth) + '</span></div>' : '') +
+      (learned ? '<div class="fm-wod-done">✓ จำคำนี้แล้ว</div>'
+        : '<button class="fm-wod-btn" data-fm-wod="' + esc(f.key) + '">จำคำนี้แล้ว ✓</button>') +
+      '</div>';
+  }
 
   /* ============ TAB 2: LIST (all formal words) ============ */
   function useBadge(u) { var x = USE[u] || USE.both; return '<span class="fm-badge ' + x.cls + '">' + x.ic + ' ' + x.th + '</span>'; }
@@ -10319,6 +10478,86 @@ PT.formal = (function () {
     [].forEach.call(body.querySelectorAll("[data-fm-ctx]"), function (b) { b.onclick = function () { lctx = b.getAttribute("data-fm-ctx"); listPage = 0; renderList(body, v); }; });
     [].forEach.call(body.querySelectorAll("[data-fm-sort]"), function (b) { b.onclick = function () { lsort = b.getAttribute("data-fm-sort"); listPage = 0; renderList(body, v); }; });
     [].forEach.call(body.querySelectorAll("[data-pg]"), function (b) { b.onclick = function () { listPage = parseInt(b.getAttribute("data-pg"), 10); renderList(body, v); pgTop(); }; });
+    wireSay(body);
+  }
+
+  /* ============ TAB: PHRASES (วลี) — set-phrases + connectors ============ */
+  var FN_TH = {
+    opening: "👋 เปิดอีเมล", greeting: "👋 ทักทาย", closing: "🔚 ปิดอีเมล", "sign-off": "✍️ ลงท้าย",
+    "follow-up": "🔁 ตามเรื่อง", request: "🙏 ขอ / ร้องขอ", offer: "🤝 เสนอช่วย", instruction: "📋 สั่ง / บอกวิธี",
+    permission: "🔓 ขออนุญาต", apology: "🙇 ขอโทษ", "bad-news": "📉 แจ้งข่าวร้าย", problem: "⚠️ แจ้งปัญหา",
+    complaint: "😤 ร้องเรียน", escalation: "⏫ ยกระดับเรื่อง", agreement: "👍 เห็นด้วย", confirmation: "✅ ยืนยัน",
+    acknowledgement: "📨 รับทราบ", thanks: "🙏 ขอบคุณ", contrast: "🔀 แต่ / ขัดแย้ง", cause: "➡️ เหตุ-ผล",
+    addition: "➕ เพิ่มเติม", condition: "❓ เงื่อนไข", sequence: "🔢 ลำดับ", example: "💡 ยกตัวอย่าง",
+    conclusion: "🏁 สรุป", emphasis: "❗ เน้นย้ำ", hedging: "🤔 พูดกันชน"
+  };
+  var FN_ORDER = ["opening", "greeting", "request", "offer", "instruction", "permission", "confirmation", "agreement",
+    "acknowledgement", "thanks", "follow-up", "closing", "sign-off", "apology", "bad-news", "problem", "complaint",
+    "escalation", "contrast", "cause", "condition", "addition", "emphasis", "sequence", "example", "conclusion", "hedging"];
+  var PFREQ = { common: { th: "ใช้บ่อยมาก", cls: "fm-f4" }, occasional: { th: "ใช้บ้าง", cls: "fm-f2" }, specialized: { th: "เฉพาะทาง", cls: "fm-f1" } };
+  var KIND_TH = { phrase: "🧩 วลี", linker: "🔗 คำเชื่อม" };
+  function fnTh(f) { return FN_TH[f] || ("• " + (f || "")); }
+  function fnBadge(f) { return '<span class="fm-badge fm-b-fn">' + esc(fnTh(f)) + '</span>'; }
+  function kindBadge(k) { return '<span class="fm-badge fm-b-kind">' + esc(KIND_TH[k] || k || "") + '</span>'; }
+  function pfreqBadge(fr) { var x = PFREQ[fr] || PFREQ.occasional; return '<span class="fm-freq ' + x.cls + '">' + esc(x.th) + '</span>'; }
+
+  function fetchPhr(cb) {
+    if (PHR) { cb(); return; }
+    fetch("data/formal_phrases.json").then(function (r) { return r.json(); }).then(function (j) { PHR = j || []; cb(); }).catch(function () { PHR = null; cb(); });
+  }
+  function phrFns() {
+    var seen = {}, i; for (i = 0; i < PHR.length; i++) seen[PHR[i].fn] = 1;
+    var out = []; for (i = 0; i < FN_ORDER.length; i++) if (seen[FN_ORDER[i]]) out.push(FN_ORDER[i]);
+    for (var k in seen) if (seen.hasOwnProperty(k) && FN_ORDER.indexOf(k) < 0) out.push(k);
+    return out;
+  }
+  function matchPhr(p) {
+    if (pkind && p.kind !== pkind) return false;
+    if (pctx && p.use !== pctx && p.use !== "both") return false;
+    if (pfn && p.fn !== pfn) return false;
+    if (!phq) return true;
+    return (low(p.en) + " " + low(p.th) + " " + low(p.casual)).indexOf(low(phq)) >= 0;
+  }
+  function renderPhrases(body, v) {
+    if (!PHR) { body.innerHTML = '<div class="fm-load">กำลังโหลด…</div>'; fetchPhr(function () { if (!PHR) { body.innerHTML = '<div class="fm-load">โหลดข้อมูลไม่สำเร็จ ลองใหม่</div>'; return; } renderPhrases(body, v); }); return; }
+    var list = PHR.filter(matchPhr);
+    var h = [];
+    h.push('<div class="fm-sub">วลีและคำเชื่อมทางการ — พูดแบบไหนให้ดูมืออาชีพ ทั้ง <b>อีเมล/ธุรกิจ</b> และ <b>เทคนิค</b> รวม ' + PHR.length + ' สำนวน</div>');
+    h.push('<input class="fm-search" id="fm-pq" type="text" autocomplete="off" placeholder="ค้นหา เช่น attached, however, ขอโทษ…" value="' + esc(phq) + '">');
+    h.push('<div class="fm-chips">' +
+      '<button class="fm-chip' + (pkind === "" ? " on" : "") + '" data-fm-pkind="">📚 ทั้งหมด</button>' +
+      '<button class="fm-chip' + (pkind === "phrase" ? " on" : "") + '" data-fm-pkind="phrase">🧩 วลี</button>' +
+      '<button class="fm-chip' + (pkind === "linker" ? " on" : "") + '" data-fm-pkind="linker">🔗 คำเชื่อม</button>' +
+      '<span class="fm-chip-sep"></span>' +
+      '<button class="fm-chip' + (pctx === "" ? " on" : "") + '" data-fm-pctx="">ทุกสาย</button>' +
+      '<button class="fm-chip' + (pctx === "business" ? " on" : "") + '" data-fm-pctx="business">💼 ธุรกิจ</button>' +
+      '<button class="fm-chip' + (pctx === "technical" ? " on" : "") + '" data-fm-pctx="technical">⚙️ เทคนิค</button></div>');
+    var fns = phrFns();
+    h.push('<div class="fm-chips fm-chips-fn"><button class="fm-chip' + (pfn === "" ? " on" : "") + '" data-fm-pfn="">🗂️ ทุกหน้าที่</button>');
+    for (var j = 0; j < fns.length; j++) h.push('<button class="fm-chip' + (pfn === fns[j] ? " on" : "") + '" data-fm-pfn="' + esc(fns[j]) + '">' + esc(fnTh(fns[j])) + '</button>');
+    h.push('</div>');
+    var pages = Math.max(1, Math.ceil(list.length / PER_PHR)); if (phrPage >= pages) phrPage = pages - 1; if (phrPage < 0) phrPage = 0;
+    var slice = list.slice(phrPage * PER_PHR, phrPage * PER_PHR + PER_PHR);
+    h.push('<div class="fm-count">' + list.length + ' สำนวน</div>' + pagerHtml(phrPage, pages) + '<div class="fm-plist">');
+    for (var i = 0; i < slice.length; i++) {
+      var p = slice[i];
+      h.push('<div class="fm-prow">' +
+        '<div class="fm-prow-top"><span class="fm-prow-en">' + esc(p.en) + '</span>' + sayBtn(p.en) + '</div>' +
+        '<div class="fm-prow-th">' + esc(p.th) + '</div>' +
+        (p.casual ? '<div class="fm-prow-casual">แทนที่จะพูด <s>' + esc(p.casual) + '</s></div>' : '') +
+        '<div class="fm-prow-badges">' + kindBadge(p.kind) + fnBadge(p.fn) + useBadge(p.use) + lvBadge(p.level) + pfreqBadge(p.freq) + '</div>' +
+        (p.eg ? '<div class="fm-prow-eg">“' + esc(p.eg) + '” ' + sayBtn(p.eg) + (p.eg_th ? '<span class="fm-prow-egth">' + esc(p.eg_th) + '</span>' : '') + '</div>' : '') +
+        '</div>');
+    }
+    if (!list.length) h.push('<div class="fm-load">ไม่พบสำนวนที่ค้นหา</div>');
+    h.push('</div>' + pagerHtml(phrPage, pages));
+    body.innerHTML = h.join("");
+    var qi = body.querySelector("#fm-pq");
+    if (qi) qi.oninput = function () { phq = qi.value; phrPage = 0; var pp = qi.selectionStart; renderPhrases(body, v); var q2 = body.querySelector("#fm-pq"); if (q2) { q2.focus(); try { q2.setSelectionRange(pp, pp); } catch (e) {} } };
+    [].forEach.call(body.querySelectorAll("[data-fm-pkind]"), function (b) { b.onclick = function () { pkind = b.getAttribute("data-fm-pkind"); phrPage = 0; renderPhrases(body, v); }; });
+    [].forEach.call(body.querySelectorAll("[data-fm-pctx]"), function (b) { b.onclick = function () { pctx = b.getAttribute("data-fm-pctx"); phrPage = 0; renderPhrases(body, v); }; });
+    [].forEach.call(body.querySelectorAll("[data-fm-pfn]"), function (b) { b.onclick = function () { pfn = b.getAttribute("data-fm-pfn"); phrPage = 0; renderPhrases(body, v); }; });
+    [].forEach.call(body.querySelectorAll("[data-pg]"), function (b) { b.onclick = function () { phrPage = parseInt(b.getAttribute("data-pg"), 10); renderPhrases(body, v); pgTop(); }; });
     wireSay(body);
   }
 
@@ -10624,10 +10863,28 @@ PT.formal = (function () {
 
   function wireSay(root) { [].forEach.call(root.querySelectorAll("[data-say]"), function (b) { b.onclick = function (ev) { ev.stopPropagation(); try { speak(b.getAttribute("data-say")); } catch (e) {} }; }); }
 
+  // build a base -> entry index (lazy); used by the discovery chip in the word deck
+  function hasBase(base, cb) {
+    fetchData(function () { cb(!!(DATA && findCI(base))); });
+  }
+  function baseFamilyStr(base) {
+    if (!DATA) return "";
+    var e = findCI(base); if (!e || !e.family) return "";
+    return e.family.slice(0, 3).map(function (f) { return f.w; }).join(" · ");
+  }
   return {
     render: render,
     open: function () { view = ""; goMode("formal"); },
-    leave: function () {}
+    leave: function () {},
+    hasBase: hasBase,          // hasBase(word, cb) -> cb(bool)
+    familyOf: baseFamilyStr,   // familyOf(word) -> "provide · supply · offer" (after data loaded)
+    openBase: function (base) {
+      fetchData(function () {
+        var e = DATA && findCI(base);
+        if (e) { cur = e; view = "detail"; tab = "map"; } else { view = ""; }
+        goMode("formal");
+      });
+    }
   };
 })();
 
