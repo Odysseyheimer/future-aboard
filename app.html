@@ -10486,7 +10486,11 @@ PT.formal = (function () {
   var TYPE_TH = {
     "support-email": "อีเมลซัพพอร์ต", "refund-billing-email": "อีเมลเงิน/คืนเงิน", "internal-update": "อัปเดตงานในทีม",
     "job-application": "สมัครงาน/แนะนำตัว", "meeting-notes": "สรุปประชุม", "api-docs": "เอกสาร API",
-    "sdk-readme": "คู่มือไลบรารี", "incident-report": "รายงานเหตุขัดข้อง", "pr-description": "อธิบาย Pull Request", "config-guide": "คู่มือตั้งค่า"
+    "sdk-readme": "คู่มือไลบรารี", "incident-report": "รายงานเหตุขัดข้อง", "pr-description": "อธิบาย Pull Request", "config-guide": "คู่มือตั้งค่า",
+    "announcement-email": "ประกาศ / แจ้งข่าว", "apology-escalation": "ขอโทษ / ยกระดับปัญหา", "vendor-partner-email": "อีเมลคู่ค้า / ผู้ขาย",
+    "onboarding-welcome": "ต้อนรับ / เริ่มใช้งาน", "slack-chat": "แชทงาน (Slack)", "standup-review": "สรุปงาน / รีวิว",
+    "release-notes": "บันทึกอัปเดตเวอร์ชัน", "deprecation-notice": "ประกาศเลิกใช้", "error-message": "ข้อความแจ้งข้อผิดพลาด",
+    "commit-pr": "คอมมิต / Pull Request", "troubleshooting-guide": "คู่มือแก้ปัญหา", "security-advisory": "ประกาศความปลอดภัย"
   };
   function renderArticles(body, v) {
     if (!articles) { body.innerHTML = '<div class="fm-load">กำลังโหลดบทความ…</div>'; fetchArticles(function () { renderArticles(body, v); }); return; }

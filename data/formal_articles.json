@@ -2028,5 +2028,1705 @@
    }
   ],
   "id": "update-on-changed-deadline"
+ },
+ {
+  "title": "Payment Declined",
+  "title_th": "การชำระเงินไม่สำเร็จ",
+  "type": "error-message",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "ผู้ใช้กดจ่ายเงินในแอป แต่บัตรถูกปฏิเสธ ระบบขึ้นข้อความแจ้งเตือน",
+  "normal": "Sorry, your payment didn't go through. Please check your card details and try again. If it keeps happening, contact your bank.",
+  "normal_th": "ขออภัย การชำระเงินของคุณไม่สำเร็จ กรุณาตรวจสอบข้อมูลบัตรของคุณแล้วลองอีกครั้ง หากยังเกิดปัญหาอยู่ กรุณาติดต่อธนาคารของคุณ",
+  "formal": "We were unable to process your payment. Please verify your card details and try again. If the issue persists, please contact your bank.",
+  "formal_th": "เราไม่สามารถดำเนินการชำระเงินของคุณได้ กรุณาตรวจสอบยืนยันข้อมูลบัตรของคุณแล้วลองอีกครั้ง หากปัญหายังคงอยู่ กรุณาติดต่อธนาคารของคุณ",
+  "swaps": [
+   {
+    "from": "Sorry",
+    "to": "We were unable to",
+    "note_th": "เลี่ยงคำขอโทษลอยๆ ใช้ประโยคทางการที่บอกผลลัพธ์"
+   },
+   {
+    "from": "didn't go through",
+    "to": "unable to process",
+    "note_th": "process = ดำเนินการ ทางการกว่า go through"
+   },
+   {
+    "from": "check",
+    "to": "verify",
+    "note_th": "verify = ตรวจสอบยืนยัน ทางการกว่า check"
+   },
+   {
+    "from": "If it keeps happening",
+    "to": "If the issue persists",
+    "note_th": "persist = ยังคงอยู่ต่อเนื่อง เป็นภาษาทางการ"
+   },
+   {
+    "from": "contact your bank",
+    "to": "please contact your bank",
+    "note_th": "เติม please ให้สุภาพขึ้น"
+   }
+  ],
+  "id": "payment-declined"
+ },
+ {
+  "title": "Login Failed",
+  "title_th": "เข้าสู่ระบบไม่สำเร็จ",
+  "type": "error-message",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "ผู้ใช้ใส่รหัสผ่านผิด ระบบไม่ให้เข้าและแจ้งเตือนความปลอดภัย",
+  "normal": "That username or password is wrong. Please try again. After 5 tries, we'll lock your account for a bit to keep it safe.",
+  "normal_th": "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง กรุณาลองอีกครั้ง หลังจากพยายาม 5 ครั้ง เราจะล็อกบัญชีของคุณชั่วคราวเพื่อความปลอดภัย",
+  "formal": "The username or password you entered is incorrect. Please try again. After five failed attempts, your account will be temporarily locked for security reasons.",
+  "formal_th": "ชื่อผู้ใช้หรือรหัสผ่านที่คุณกรอกไม่ถูกต้อง กรุณาลองอีกครั้ง หลังจากพยายามไม่สำเร็จห้าครั้ง บัญชีของคุณจะถูกล็อกชั่วคราวด้วยเหตุผลด้านความปลอดภัย",
+  "swaps": [
+   {
+    "from": "is wrong",
+    "to": "is incorrect",
+    "note_th": "incorrect = ไม่ถูกต้อง ทางการกว่า wrong"
+   },
+   {
+    "from": "5 tries",
+    "to": "five failed attempts",
+    "note_th": "attempt = การพยายาม ทางการกว่า try และเขียนเลขเป็นตัวหนังสือ"
+   },
+   {
+    "from": "for a bit",
+    "to": "temporarily",
+    "note_th": "temporarily = ชั่วคราว เป็นทางการ เลี่ยงคำพูดเล่นๆ"
+   },
+   {
+    "from": "to keep it safe",
+    "to": "for security reasons",
+    "note_th": "for security reasons = ด้วยเหตุผลด้านความปลอดภัย เป็นสำนวนทางการ"
+   },
+   {
+    "from": "we'll lock",
+    "to": "your account will be locked",
+    "note_th": "ใช้ passive voice ทำให้เป็นทางการและเป็นกลางขึ้น"
+   }
+  ],
+  "id": "login-failed"
+ },
+ {
+  "title": "Upload Error",
+  "title_th": "อัปโหลดผิดพลาด",
+  "type": "error-message",
+  "context": "technical",
+  "level": "moderate",
+  "scenario_th": "ผู้ใช้อัปโหลดไฟล์ที่ใหญ่เกินกำหนด ระบบไม่รับไฟล์",
+  "normal": "Your file is too big to upload. The most we can take is 10 MB. Please make the file smaller and try uploading it again.",
+  "normal_th": "ไฟล์ของคุณใหญ่เกินไปที่จะอัปโหลด ขนาดสูงสุดที่เรารับได้คือ 10 MB กรุณาลดขนาดไฟล์แล้วลองอัปโหลดใหม่อีกครั้ง",
+  "formal": "The file you selected exceeds the maximum upload size. The limit is 10 MB. Please reduce the file size and upload it again.",
+  "formal_th": "ไฟล์ที่คุณเลือกมีขนาดเกินขีดจำกัดการอัปโหลดสูงสุด ขีดจำกัดอยู่ที่ 10 MB กรุณาลดขนาดไฟล์แล้วอัปโหลดอีกครั้ง",
+  "swaps": [
+   {
+    "from": "is too big",
+    "to": "exceeds the maximum size",
+    "note_th": "exceed = เกินกว่า ทางการกว่า too big"
+   },
+   {
+    "from": "The most we can take",
+    "to": "The limit is",
+    "note_th": "limit = ขีดจำกัด เป็นคำทางการและกระชับ"
+   },
+   {
+    "from": "make the file smaller",
+    "to": "reduce the file size",
+    "note_th": "reduce = ลด ทางการกว่า make smaller"
+   },
+   {
+    "from": "Your file",
+    "to": "The file you selected",
+    "note_th": "ระบุให้ชัดเจนและเป็นกลางขึ้น"
+   },
+   {
+    "from": "try uploading it again",
+    "to": "upload it again",
+    "note_th": "ตัดคำฟุ่มเฟือย ให้กระชับเป็นทางการ"
+   }
+  ],
+  "id": "upload-error"
+ },
+ {
+  "title": "Service Unavailable",
+  "title_th": "ระบบใช้งานไม่ได้ชั่วคราว",
+  "type": "error-message",
+  "context": "technical",
+  "level": "moderate",
+  "scenario_th": "เว็บไซต์ล่มเพราะกำลังปรับปรุงระบบ ผู้ใช้เข้าใช้งานไม่ได้",
+  "normal": "Sorry, the site is down right now. We're fixing it and it should be back soon. Thanks for waiting and please try again later.",
+  "normal_th": "ขออภัย ขณะนี้เว็บไซต์ใช้งานไม่ได้ เรากำลังแก้ไขอยู่และน่าจะกลับมาใช้ได้เร็วๆ นี้ ขอบคุณที่รอ กรุณาลองใหม่อีกครั้งในภายหลัง",
+  "formal": "We apologize, but the service is currently unavailable. Our team is working to restore it as soon as possible. Thank you for your patience. Please try again later.",
+  "formal_th": "เราขออภัย ขณะนี้ระบบไม่สามารถใช้งานได้ ทีมงานของเรากำลังดำเนินการกู้คืนระบบโดยเร็วที่สุด ขอบคุณสำหรับความอดทนรอคอย กรุณาลองใหม่อีกครั้งในภายหลัง",
+  "swaps": [
+   {
+    "from": "Sorry",
+    "to": "We apologize",
+    "note_th": "We apologize = เราขออภัย ทางการกว่า sorry"
+   },
+   {
+    "from": "is down",
+    "to": "is currently unavailable",
+    "note_th": "unavailable = ใช้งานไม่ได้ ทางการกว่า down"
+   },
+   {
+    "from": "We're fixing it",
+    "to": "Our team is working to restore it",
+    "note_th": "restore = กู้คืน ทางการกว่า fix"
+   },
+   {
+    "from": "Thanks for waiting",
+    "to": "Thank you for your patience",
+    "note_th": "Thank you for your patience เป็นสำนวนสุภาพมาตรฐาน"
+   },
+   {
+    "from": "back soon",
+    "to": "as soon as possible",
+    "note_th": "as soon as possible = โดยเร็วที่สุด เป็นทางการ"
+   }
+  ],
+  "id": "service-unavailable"
+ },
+ {
+  "title": "Fix empty search crash",
+  "title_th": "แก้บั๊กแอปแครชตอนค้นหาแบบว่าง",
+  "type": "commit-pr",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "คุณแก้บั๊กที่แอปแครชเวลากดค้นหาโดยไม่พิมพ์อะไร แล้วเขียนข้อความ commit/PR",
+  "normal": "Fix crash when the search box is empty. Before, the app blew up if you hit search with nothing typed. Now it just shows all the results. I also added a test so it doesn't happen again.",
+  "normal_th": "แก้อาการแครชตอนช่องค้นหาว่าง เมื่อก่อนแอปพังถ้ากดค้นหาโดยไม่พิมพ์อะไร ตอนนี้มันจะโชว์ผลลัพธ์ทั้งหมดแทน ผมเพิ่มเทสต์ไว้ด้วยกันไม่ให้เกิดซ้ำ",
+  "formal": "Resolve application crash on empty search input. Previously, the application failed when a search was submitted without a query. It now returns all results by default. A test has been added to prevent this regression.",
+  "formal_th": "แก้ไขอาการแอปพลิเคชันแครชเมื่อช่องค้นหาว่างเปล่า ก่อนหน้านี้แอปพลิเคชันล้มเหลวเมื่อมีการส่งคำค้นหาโดยไม่มีคำค้น ตอนนี้ระบบจะคืนผลลัพธ์ทั้งหมดเป็นค่าเริ่มต้น และได้เพิ่มเทสต์เพื่อป้องกันไม่ให้ปัญหานี้กลับมาเกิดซ้ำ",
+  "swaps": [
+   {
+    "from": "Fix",
+    "to": "Resolve",
+    "note_th": "resolve เป็นทางการกว่า fix"
+   },
+   {
+    "from": "blew up",
+    "to": "failed",
+    "note_th": "failed สุภาพ ไม่ใช่แสลง"
+   },
+   {
+    "from": "hit search",
+    "to": "a search was submitted",
+    "note_th": "submit เป็นศัพท์ทางการของ 'กด/ส่ง'"
+   },
+   {
+    "from": "just shows",
+    "to": "returns",
+    "note_th": "return เป็นคำมาตรฐานทางเทคนิค"
+   },
+   {
+    "from": "so it doesn't happen again",
+    "to": "to prevent this regression",
+    "note_th": "regression = บั๊กเดิมกลับมา (ศัพท์เฉพาะ)"
+   }
+  ],
+  "id": "fix-empty-search-crash"
+ },
+ {
+  "title": "Add user orders endpoint",
+  "title_th": "เพิ่ม API ดึงประวัติคำสั่งซื้อ",
+  "type": "commit-pr",
+  "context": "technical",
+  "level": "moderate",
+  "scenario_th": "คุณเพิ่ม endpoint ใหม่สำหรับดึงประวัติออเดอร์ของผู้ใช้ แล้วเขียนคำอธิบาย PR",
+  "normal": "Add an endpoint to get a user's orders. This lets the app pull past orders in one call. It cuts down the number of requests the front end has to make. I updated the docs too.",
+  "normal_th": "เพิ่ม endpoint สำหรับดึงออเดอร์ของผู้ใช้ อันนี้ทำให้แอปดึงออเดอร์เก่าได้ในการเรียกครั้งเดียว ช่วยลดจำนวนรีเควสต์ที่ฝั่งหน้าเว็บต้องยิง ผมอัปเดตเอกสารให้ด้วยแล้ว",
+  "formal": "Add an endpoint to retrieve a user's order history. This enables the client to fetch previous orders in a single request. It reduces the number of requests required by the front end. The documentation has been updated accordingly.",
+  "formal_th": "เพิ่ม endpoint สำหรับดึงประวัติคำสั่งซื้อของผู้ใช้ สิ่งนี้ช่วยให้ไคลเอนต์เรียกออเดอร์ก่อนหน้าได้ในรีเควสต์เดียว ช่วยลดจำนวนรีเควสต์ที่ฝั่งหน้าเว็บต้องใช้ และได้อัปเดตเอกสารประกอบให้เรียบร้อยแล้ว",
+  "swaps": [
+   {
+    "from": "get",
+    "to": "retrieve",
+    "note_th": "retrieve เป็นศัพท์ทางการของ 'ดึงข้อมูล'"
+   },
+   {
+    "from": "lets the app",
+    "to": "enables the client",
+    "note_th": "enable สุภาพกว่า let"
+   },
+   {
+    "from": "pull",
+    "to": "fetch",
+    "note_th": "fetch เป็นศัพท์มาตรฐานสำหรับดึงข้อมูล"
+   },
+   {
+    "from": "past orders",
+    "to": "previous orders",
+    "note_th": "previous เป็นทางการกว่า past"
+   },
+   {
+    "from": "cuts down",
+    "to": "reduces",
+    "note_th": "reduce เป็นคำเป็นทางการ"
+   },
+   {
+    "from": "too",
+    "to": "accordingly",
+    "note_th": "accordingly = ตามนั้น ใช้ในงานเขียนทางการ"
+   }
+  ],
+  "id": "add-user-orders-endpoint"
+ },
+ {
+  "title": "Upgrade React to v19",
+  "title_th": "อัปเกรด React เป็นเวอร์ชัน 19",
+  "type": "commit-pr",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "คุณอัปเกรดไลบรารีเพราะเวอร์ชันเก่ามีช่องโหว่ด้านความปลอดภัย แล้วเขียน PR",
+  "normal": "Bump React to v19. The old version had a security hole, so we need to move up. I checked the app and everything still works. Let me know if anything looks off.",
+  "normal_th": "อัปเวอร์ชัน React เป็น v19 เวอร์ชันเก่ามีช่องโหว่ด้านความปลอดภัย เลยต้องอัปขึ้น ผมเช็กแอปแล้วทุกอย่างยังทำงานปกติ ถ้ามีตรงไหนดูแปลกบอกได้เลย",
+  "formal": "Upgrade React to version 19. The previous version contained a security vulnerability that must be addressed. I have verified that the application functions correctly. Please advise if any issues arise.",
+  "formal_th": "อัปเกรด React เป็นเวอร์ชัน 19 เวอร์ชันก่อนหน้ามีช่องโหว่ด้านความปลอดภัยที่ต้องได้รับการแก้ไข ผมได้ตรวจสอบแล้วว่าแอปพลิเคชันทำงานได้อย่างถูกต้อง หากพบปัญหาใดโปรดแจ้งให้ทราบ",
+  "swaps": [
+   {
+    "from": "Bump",
+    "to": "Upgrade",
+    "note_th": "upgrade เป็นทางการกว่า bump (แสลง)"
+   },
+   {
+    "from": "old",
+    "to": "previous",
+    "note_th": "previous สุภาพกว่า old"
+   },
+   {
+    "from": "security hole",
+    "to": "security vulnerability",
+    "note_th": "vulnerability เป็นศัพท์ทางการด้านความปลอดภัย"
+   },
+   {
+    "from": "move up",
+    "to": "must be addressed",
+    "note_th": "address = จัดการ/แก้ไข เป็นทางการ"
+   },
+   {
+    "from": "checked",
+    "to": "have verified",
+    "note_th": "verify เป็นทางการกว่า check"
+   },
+   {
+    "from": "everything still works",
+    "to": "functions correctly",
+    "note_th": "function correctly เป็นภาษาทางการ"
+   },
+   {
+    "from": "Let me know if anything looks off",
+    "to": "Please advise if any issues arise",
+    "note_th": "please advise สุภาพเป็นทางการมาก"
+   }
+  ],
+  "id": "upgrade-react-to-v19"
+ },
+ {
+  "title": "Speed up dashboard loading",
+  "title_th": "ทำให้แดชบอร์ดโหลดเร็วขึ้น",
+  "type": "commit-pr",
+  "context": "technical",
+  "level": "moderate",
+  "scenario_th": "คุณปรับให้หน้าแดชบอร์ดโหลดเร็วขึ้นด้วยการแบ่งโหลดข้อมูลทีละหน้า แล้วเขียน PR",
+  "normal": "Make the dashboard load faster. The page was slow because it loaded all the data at once. Now it loads the data page by page. This should make it feel a lot snappier.",
+  "normal_th": "ทำให้แดชบอร์ดโหลดเร็วขึ้น หน้านี้ช้าเพราะมันโหลดข้อมูลทั้งหมดในทีเดียว ตอนนี้มันโหลดข้อมูลทีละหน้า น่าจะทำให้รู้สึกลื่นขึ้นเยอะ",
+  "formal": "Improve dashboard loading performance. The page was slow because it loaded all data simultaneously. It now loads data using pagination. This should significantly improve responsiveness.",
+  "formal_th": "ปรับปรุงประสิทธิภาพการโหลดของแดชบอร์ด หน้านี้ช้าเพราะโหลดข้อมูลทั้งหมดพร้อมกันในครั้งเดียว ตอนนี้ระบบโหลดข้อมูลแบบแบ่งหน้า ซึ่งควรจะช่วยปรับปรุงการตอบสนองได้อย่างมีนัยสำคัญ",
+  "swaps": [
+   {
+    "from": "Make ... load faster",
+    "to": "Improve loading performance",
+    "note_th": "improve performance เป็นสำนวนทางการ"
+   },
+   {
+    "from": "at once",
+    "to": "simultaneously",
+    "note_th": "simultaneously = พร้อมกัน เป็นทางการ"
+   },
+   {
+    "from": "page by page",
+    "to": "using pagination",
+    "note_th": "pagination เป็นศัพท์เทคนิคของ 'แบ่งหน้า'"
+   },
+   {
+    "from": "feel a lot snappier",
+    "to": "significantly improve responsiveness",
+    "note_th": "responsiveness/significantly เป็นภาษาทางการ"
+   }
+  ],
+  "id": "speed-up-dashboard-loading"
+ },
+ {
+  "title": "Mobile App v3.2 Update",
+  "title_th": "อัปเดตแอปมือถือเวอร์ชัน 3.2",
+  "type": "release-notes",
+  "context": "technical",
+  "scenario_th": "ทีมพัฒนาแอปประกาศอัปเดตใหม่ให้ผู้ใช้ทราบว่ามีอะไรเปลี่ยนบ้าง",
+  "level": "common",
+  "normal": "Version 3.2 is out now. We made the app start up faster and we fixed the bug that made it crash when you open big files. We also added a dark mode so it's easier on your eyes at night. Please update your app to get these changes.",
+  "normal_th": "เวอร์ชัน 3.2 ออกแล้ววันนี้ เราทำให้แอปเปิดเร็วขึ้น และแก้บั๊กที่ทำให้แอปค้างเวลาเปิดไฟล์ใหญ่ นอกจากนี้ยังเพิ่มโหมดมืดเพื่อให้สบายตาเวลาใช้ตอนกลางคืน กรุณาอัปเดตแอปเพื่อรับการเปลี่ยนแปลงเหล่านี้",
+  "formal": "Version 3.2 is now available. We have improved startup performance and resolved the issue that caused the app to crash when opening large files. We have also introduced a dark mode to reduce eye strain during nighttime use. Please update your app to receive these changes.",
+  "formal_th": "เวอร์ชัน 3.2 พร้อมให้ใช้งานแล้ว เราได้ปรับปรุงประสิทธิภาพการเปิดใช้งานให้เร็วขึ้น และแก้ไขปัญหาที่ทำให้แอปหยุดทำงานเมื่อเปิดไฟล์ขนาดใหญ่ อีกทั้งยังได้เพิ่มโหมดมืดเพื่อลดอาการล้าของดวงตาเมื่อใช้งานในเวลากลางคืน กรุณาอัปเดตแอปเพื่อรับการเปลี่ยนแปลงเหล่านี้",
+  "swaps": [
+   {
+    "from": "is out now",
+    "to": "is now available",
+    "note_th": "\"พร้อมให้ใช้งานแล้ว\" เป็นทางการกว่า \"ออกแล้ว\""
+   },
+   {
+    "from": "made the app start up faster",
+    "to": "improved startup performance",
+    "note_th": "ใช้คำนาม \"ประสิทธิภาพ\" ดูเป็นมืออาชีพ"
+   },
+   {
+    "from": "fixed the bug",
+    "to": "resolved the issue",
+    "note_th": "resolve/issue เป็นทางการกว่า fix/bug"
+   },
+   {
+    "from": "made it crash",
+    "to": "caused the app to crash",
+    "note_th": "\"caused...to\" เป็นโครงสร้างที่เป็นทางการ"
+   },
+   {
+    "from": "added",
+    "to": "introduced",
+    "note_th": "introduce = เพิ่ม/เปิดตัว แบบทางการ"
+   },
+   {
+    "from": "easier on your eyes",
+    "to": "reduce eye strain",
+    "note_th": "ใช้ศัพท์เฉพาะ \"eye strain\" (อาการล้าตา)"
+   }
+  ],
+  "id": "mobile-app-v3-2-update"
+ },
+ {
+  "title": "API v2 Release Notes",
+  "title_th": "บันทึกการอัปเดต API เวอร์ชัน 2",
+  "type": "release-notes",
+  "context": "technical",
+  "scenario_th": "ทีมหลังบ้านแจ้งนักพัฒนาว่า API เวอร์ชันใหม่มีการเปลี่ยนแปลงอะไร",
+  "level": "moderate",
+  "normal": "We just shipped API v2. We got rid of the old login endpoint, so please switch to the new one before March. We also sped up search and fixed a problem where some data came back wrong. Let us know if you run into any trouble.",
+  "normal_th": "เราเพิ่งปล่อย API เวอร์ชัน 2 เราเอา endpoint สำหรับล็อกอินแบบเก่าออก ดังนั้นกรุณาเปลี่ยนไปใช้อันใหม่ก่อนเดือนมีนาคม เรายังทำให้การค้นหาเร็วขึ้นและแก้ปัญหาที่ข้อมูลบางส่วนส่งกลับมาผิด แจ้งเราได้เลยถ้าเจอปัญหา",
+  "formal": "We have released API v2. We have removed the legacy login endpoint, so please migrate to the new one before March. We have also optimized search performance and fixed an issue where some data was returned incorrectly. Please contact us if you encounter any problems.",
+  "formal_th": "เราได้เปิดตัว API เวอร์ชัน 2 แล้ว เราได้นำ endpoint สำหรับล็อกอินแบบเดิมออก ดังนั้นกรุณาย้ายไปใช้อันใหม่ก่อนเดือนมีนาคม เรายังได้ปรับปรุงประสิทธิภาพการค้นหาและแก้ไขปัญหาที่ข้อมูลบางส่วนถูกส่งกลับมาไม่ถูกต้อง กรุณาติดต่อเราหากคุณพบปัญหาใดๆ",
+  "swaps": [
+   {
+    "from": "just shipped",
+    "to": "have released",
+    "note_th": "release เป็นทางการกว่า ship (แสลงในวงการ)"
+   },
+   {
+    "from": "got rid of",
+    "to": "removed",
+    "note_th": "remove เป็นทางการกว่า got rid of"
+   },
+   {
+    "from": "old",
+    "to": "legacy",
+    "note_th": "legacy = ของเดิม/รุ่นเก่า ศัพท์เทคนิคที่สุภาพ"
+   },
+   {
+    "from": "switch to",
+    "to": "migrate to",
+    "note_th": "migrate = ย้ายไปใช้ (ศัพท์เทคนิคทางการ)"
+   },
+   {
+    "from": "sped up search",
+    "to": "optimized search performance",
+    "note_th": "optimize เป็นทางการกว่า speed up"
+   },
+   {
+    "from": "run into any trouble",
+    "to": "encounter any problems",
+    "note_th": "encounter เป็นทางการกว่า run into"
+   }
+  ],
+  "id": "api-v2-release-notes"
+ },
+ {
+  "title": "Dashboard Hotfix 1.4.3",
+  "title_th": "แพตช์แก้ด่วนแดชบอร์ด 1.4.3",
+  "type": "release-notes",
+  "context": "technical",
+  "scenario_th": "ทีมออกแพตช์แก้ปัญหาเร่งด่วนหลังลูกค้าเจอบั๊กเรื่องรายงาน",
+  "level": "common",
+  "normal": "This is a quick fix for a bug some users saw. Reports were showing the wrong totals when you picked a custom date range. We fixed it and the numbers are correct now. Sorry for the trouble, and thanks for telling us about it.",
+  "normal_th": "นี่คือการแก้ไขด่วนสำหรับบั๊กที่ผู้ใช้บางคนเจอ รายงานแสดงยอดรวมผิดเมื่อคุณเลือกช่วงวันที่เอง เราแก้ไขแล้วและตอนนี้ตัวเลขถูกต้องแล้ว ขอโทษสำหรับความไม่สะดวก และขอบคุณที่แจ้งให้เราทราบ",
+  "formal": "This is a hotfix for an issue affecting some users. Reports were displaying incorrect totals when a custom date range was selected. We have resolved this, and the figures are now accurate. We apologize for the inconvenience and thank you for reporting it.",
+  "formal_th": "นี่คือแพตช์แก้ไขด่วนสำหรับปัญหาที่ส่งผลกระทบต่อผู้ใช้บางราย รายงานแสดงยอดรวมไม่ถูกต้องเมื่อมีการเลือกช่วงวันที่แบบกำหนดเอง เราได้แก้ไขเรียบร้อยแล้ว และตัวเลขถูกต้องแล้วในขณะนี้ เราขออภัยในความไม่สะดวก และขอบคุณที่แจ้งปัญหาให้เราทราบ",
+  "swaps": [
+   {
+    "from": "quick fix",
+    "to": "hotfix",
+    "note_th": "hotfix = ศัพท์เทคนิคของการแก้ด่วน"
+   },
+   {
+    "from": "a bug some users saw",
+    "to": "an issue affecting some users",
+    "note_th": "affecting เป็นทางการกว่า saw"
+   },
+   {
+    "from": "showing",
+    "to": "displaying",
+    "note_th": "display เป็นทางการกว่า show"
+   },
+   {
+    "from": "the numbers",
+    "to": "the figures",
+    "note_th": "figures เป็นทางการกว่า numbers"
+   },
+   {
+    "from": "Sorry for the trouble",
+    "to": "We apologize for the inconvenience",
+    "note_th": "วลีมาตรฐานที่สุภาพในงาน"
+   },
+   {
+    "from": "telling us about it",
+    "to": "reporting it",
+    "note_th": "report เป็นทางการกว่า tell us"
+   }
+  ],
+  "id": "dashboard-hotfix-1-4-3"
+ },
+ {
+  "title": "Cloud Storage v5 Release",
+  "title_th": "การอัปเดตคลาวด์สตอเรจ เวอร์ชัน 5",
+  "type": "release-notes",
+  "context": "technical",
+  "scenario_th": "ผู้ให้บริการคลาวด์แจ้งฟีเจอร์ใหม่และการเปลี่ยนแปลงในเวอร์ชันใหญ่",
+  "level": "moderate",
+  "normal": "Version 5 brings some big changes. You can now share files with a link that has a password, which makes sharing safer. We turned on auto-backup by default, so you won't lose your work. We also cleaned up the settings page to make it easier to use. Check the guide to learn more.",
+  "normal_th": "เวอร์ชัน 5 มาพร้อมการเปลี่ยนแปลงครั้งใหญ่ ตอนนี้คุณสามารถแชร์ไฟล์ด้วยลิงก์ที่ตั้งรหัสผ่านได้ ทำให้การแชร์ปลอดภัยขึ้น เราเปิดใช้การสำรองข้อมูลอัตโนมัติเป็นค่าเริ่มต้น คุณจึงจะไม่สูญเสียงานของคุณ เรายังจัดระเบียบหน้าตั้งค่าใหม่ให้ใช้ง่ายขึ้น ดูคู่มือเพื่อเรียนรู้เพิ่มเติม",
+  "formal": "Version 5 introduces several major changes. You can now share files via a password-protected link, which enhances sharing security. We have enabled automatic backup by default, ensuring your work is not lost. We have also reorganized the settings page to improve usability. Please refer to the guide for further details.",
+  "formal_th": "เวอร์ชัน 5 นำเสนอการเปลี่ยนแปลงสำคัญหลายอย่าง ตอนนี้คุณสามารถแชร์ไฟล์ผ่านลิงก์ที่มีการป้องกันด้วยรหัสผ่านได้ ซึ่งช่วยเพิ่มความปลอดภัยในการแชร์ เราได้เปิดใช้งานการสำรองข้อมูลอัตโนมัติเป็นค่าเริ่มต้น เพื่อให้มั่นใจว่างานของคุณจะไม่สูญหาย เรายังได้จัดระเบียบหน้าตั้งค่าใหม่เพื่อปรับปรุงการใช้งานให้ดีขึ้น กรุณาดูคู่มือเพื่อดูรายละเอียดเพิ่มเติม",
+  "swaps": [
+   {
+    "from": "brings some big changes",
+    "to": "introduces several major changes",
+    "note_th": "introduce/major เป็นทางการกว่า bring/big"
+   },
+   {
+    "from": "makes sharing safer",
+    "to": "enhances sharing security",
+    "note_th": "enhance = เพิ่ม/ยกระดับ (ทางการ)"
+   },
+   {
+    "from": "turned on",
+    "to": "enabled",
+    "note_th": "enable เป็นทางการกว่า turn on"
+   },
+   {
+    "from": "so you won't lose your work",
+    "to": "ensuring your work is not lost",
+    "note_th": "ensuring = เพื่อให้มั่นใจ (ภาษาทางการ)"
+   },
+   {
+    "from": "cleaned up",
+    "to": "reorganized",
+    "note_th": "reorganize เป็นทางการกว่า clean up"
+   },
+   {
+    "from": "Check the guide",
+    "to": "Please refer to the guide",
+    "note_th": "refer to เป็นทางการกว่า check"
+   }
+  ],
+  "id": "cloud-storage-v5-release"
+ },
+ {
+  "title": "Welcome to the Team",
+  "title_th": "ยินดีต้อนรับสู่ทีม",
+  "type": "onboarding-welcome",
+  "context": "business",
+  "scenario_th": "หัวหน้าทีมส่งข้อความต้อนรับพนักงานใหม่ในวันแรกและบอกขั้นตอนถัดไป",
+  "level": "common",
+  "normal": "Hi Somchai, welcome to the team! We're really happy to have you here. Your laptop is ready, and I've set up your email too. Let's meet at 10 AM so I can show you around. If you need anything, just ask me.",
+  "normal_th": "สวัสดีคุณสมชาย ยินดีต้อนรับสู่ทีม! เราดีใจมากที่คุณมาร่วมงาน แล็ปท็อปของคุณพร้อมแล้ว และฉันตั้งค่าอีเมลให้คุณด้วย มาเจอกันตอน 10 โมงเช้านะ ฉันจะพาไปดูรอบๆ ถ้าต้องการอะไรก็ถามฉันได้เลย",
+  "formal": "Dear Somchai, welcome to the team. We are delighted to have you join us. Your laptop has been prepared, and your email account has been set up. Let us meet at 10 AM so I can give you an introduction to the office. Please do not hesitate to contact me if you require any assistance.",
+  "formal_th": "เรียนคุณสมชาย ยินดีต้อนรับสู่ทีม เรารู้สึกยินดีเป็นอย่างยิ่งที่คุณมาร่วมงานกับเรา แล็ปท็อปของคุณได้จัดเตรียมไว้เรียบร้อยแล้ว และบัญชีอีเมลของคุณได้ตั้งค่าไว้แล้ว ขอเชิญพบกันเวลา 10 โมงเช้าเพื่อที่ผมจะได้แนะนำสำนักงานให้คุณ หากคุณต้องการความช่วยเหลือใดๆ โปรดอย่าลังเลที่จะติดต่อผม",
+  "swaps": [
+   {
+    "from": "Hi",
+    "to": "Dear",
+    "note_th": "คำขึ้นต้นแบบทางการใช้ Dear"
+   },
+   {
+    "from": "We're really happy",
+    "to": "We are delighted",
+    "note_th": "delighted สุภาพและเป็นทางการกว่า happy"
+   },
+   {
+    "from": "is ready",
+    "to": "has been prepared",
+    "note_th": "ใช้ passive voice ให้ดูเป็นทางการ"
+   },
+   {
+    "from": "show you around",
+    "to": "give you an introduction to the office",
+    "note_th": "วลีทางการแทนสำนวนลำลอง"
+   },
+   {
+    "from": "just ask me",
+    "to": "please do not hesitate to contact me",
+    "note_th": "วลีสุภาพมาตรฐานในอีเมลงาน"
+   },
+   {
+    "from": "If you need anything",
+    "to": "if you require any assistance",
+    "note_th": "require/assistance เป็นทางการกว่า need/anything"
+   }
+  ],
+  "id": "welcome-to-the-team"
+ },
+ {
+  "title": "Welcome, New Customer",
+  "title_th": "ยินดีต้อนรับลูกค้าใหม่",
+  "type": "onboarding-welcome",
+  "context": "business",
+  "scenario_th": "บริษัทซอฟต์แวร์ส่งอีเมลต้อนรับลูกค้าใหม่หลังสมัครใช้บริการ พร้อมบอกวิธีเริ่มใช้งาน",
+  "level": "common",
+  "normal": "Hi and welcome! Thanks for signing up with us. Your account is now live, so you can log in and start right away. We've also put together a short guide to help you get going. Reach out anytime if you get stuck.",
+  "normal_th": "สวัสดีและยินดีต้อนรับ! ขอบคุณที่สมัครใช้บริการกับเรา บัญชีของคุณเปิดใช้งานแล้ว คุณสามารถเข้าสู่ระบบและเริ่มใช้งานได้ทันที เราได้จัดทำคู่มือสั้นๆ ไว้ช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ติดต่อเราได้ทุกเมื่อหากติดปัญหา",
+  "formal": "Welcome, and thank you for choosing our service. We appreciate you signing up with us. Your account is now active, so you may log in and begin immediately. We have also prepared a short guide to help you get started. Please contact us at any time should you encounter any difficulties.",
+  "formal_th": "ยินดีต้อนรับ และขอบคุณที่เลือกใช้บริการของเรา เราขอขอบคุณที่คุณสมัครใช้บริการกับเรา บัญชีของคุณพร้อมใช้งานแล้ว คุณสามารถเข้าสู่ระบบและเริ่มใช้งานได้ทันที เราได้จัดทำคู่มือสั้นๆ ไว้เพื่อช่วยให้คุณเริ่มต้นใช้งาน หากคุณพบปัญหาใดๆ โปรดติดต่อเราได้ทุกเมื่อ",
+  "swaps": [
+   {
+    "from": "Thanks for",
+    "to": "thank you for",
+    "note_th": "Thanks ลำลอง, thank you เป็นทางการ"
+   },
+   {
+    "from": "is now live",
+    "to": "is now active",
+    "note_th": "active เป็นคำทางการกว่า live"
+   },
+   {
+    "from": "start right away",
+    "to": "begin immediately",
+    "note_th": "begin/immediately ทางการกว่า start/right away"
+   },
+   {
+    "from": "We've put together",
+    "to": "We have prepared",
+    "note_th": "prepared เป็นทางการ, เลี่ยงตัวย่อ We've"
+   },
+   {
+    "from": "help you get going",
+    "to": "help you get started",
+    "note_th": "get started เป็นกลางและสุภาพกว่า get going"
+   },
+   {
+    "from": "if you get stuck",
+    "to": "should you encounter any difficulties",
+    "note_th": "วลีทางการแทนสำนวนลำลอง get stuck"
+   }
+  ],
+  "id": "welcome-new-customer"
+ },
+ {
+  "title": "Access to the Shared Files",
+  "title_th": "การเข้าถึงไฟล์ที่แชร์",
+  "type": "onboarding-welcome",
+  "context": "business",
+  "scenario_th": "เพื่อนร่วมงานส่งข้อความบอกพนักงานใหม่ว่าให้สิทธิ์เข้าถึงโฟลเดอร์และเครื่องมือของทีมแล้ว",
+  "level": "moderate",
+  "normal": "Hey Nok, I've just given you access to our shared folder. You should be able to open it now. I also added you to the team chat and the project board. Take a look when you have time, and tell me if anything doesn't work. Glad to have you on board!",
+  "normal_th": "สวัสดีน้องนก พี่เพิ่งให้สิทธิ์เข้าถึงโฟลเดอร์ที่แชร์ของเราแล้ว ตอนนี้น่าจะเปิดได้แล้วนะ พี่เพิ่มชื่อเข้าแชทของทีมและบอร์ดโปรเจกต์ให้ด้วย ลองดูตอนที่ว่างนะ แล้วบอกพี่ถ้ามีอะไรใช้ไม่ได้ ดีใจที่ได้ทำงานด้วยกัน!",
+  "formal": "Hello Nok, I have just granted you access to our shared folder. You should now be able to open it. I have also added you to the team chat and the project board. Please review them when you have time, and let me know if anything does not work as expected. We are pleased to welcome you to the team.",
+  "formal_th": "สวัสดีคุณนก ผมได้ให้สิทธิ์คุณเข้าถึงโฟลเดอร์ที่แชร์ของเราแล้ว ขณะนี้คุณน่าจะสามารถเปิดได้แล้ว ผมได้เพิ่มคุณเข้าแชทของทีมและบอร์ดโปรเจกต์ด้วย โปรดตรวจดูเมื่อคุณมีเวลา และแจ้งผมหากมีสิ่งใดทำงานไม่เป็นไปตามที่ควรจะเป็น เรายินดีต้อนรับคุณเข้าสู่ทีม",
+  "swaps": [
+   {
+    "from": "Hey",
+    "to": "Hello",
+    "note_th": "Hey ลำลองมาก, Hello สุภาพกลางๆ"
+   },
+   {
+    "from": "I've just given you access",
+    "to": "I have just granted you access",
+    "note_th": "grant access เป็นวลีทางการสำหรับการให้สิทธิ์"
+   },
+   {
+    "from": "Take a look",
+    "to": "Please review",
+    "note_th": "review เป็นทางการกว่า take a look"
+   },
+   {
+    "from": "tell me",
+    "to": "let me know",
+    "note_th": "let me know สุภาพกว่า tell me ในงาน"
+   },
+   {
+    "from": "doesn't work",
+    "to": "does not work as expected",
+    "note_th": "เลี่ยงตัวย่อ และเพิ่ม as expected ให้ชัดเจน"
+   },
+   {
+    "from": "Glad to have you on board!",
+    "to": "We are pleased to welcome you to the team.",
+    "note_th": "ประโยคเต็มทางการแทนสำนวนลำลอง on board"
+   }
+  ],
+  "id": "access-to-the-shared-files"
+ },
+ {
+  "title": "Your First Week Plan",
+  "title_th": "แผนสัปดาห์แรกของคุณ",
+  "type": "onboarding-welcome",
+  "context": "business",
+  "scenario_th": "ฝ่ายบุคคลส่งอีเมลอธิบายกำหนดการและขั้นตอนสำหรับสัปดาห์แรกของพนักงานใหม่",
+  "level": "moderate",
+  "normal": "Hi Ploy, welcome aboard! Here's the plan for your first week. On Monday, we'll go over the basics and fill out some paperwork. The rest of the week, you'll meet the team and learn the tools. I'll send the details soon. Let me know if you have any questions.",
+  "normal_th": "สวัสดีคุณพลอย ยินดีต้อนรับ! นี่คือแผนสำหรับสัปดาห์แรกของคุณ วันจันทร์เราจะทบทวนเรื่องพื้นฐานและกรอกเอกสารบางส่วน ช่วงที่เหลือของสัปดาห์ คุณจะได้พบทีมและเรียนรู้เครื่องมือต่างๆ ฉันจะส่งรายละเอียดให้เร็วๆ นี้ แจ้งฉันได้เลยถ้ามีคำถาม",
+  "formal": "Dear Ploy, welcome to the company. Please find below the plan for your first week. On Monday, we will review the essentials and complete some documentation. For the remainder of the week, you will meet the team and become familiar with our tools. I will provide the details shortly. Please let me know should you have any questions.",
+  "formal_th": "เรียนคุณพลอย ยินดีต้อนรับสู่บริษัท รายละเอียดแผนสำหรับสัปดาห์แรกของคุณมีดังนี้ วันจันทร์เราจะทบทวนเรื่องพื้นฐานและกรอกเอกสารบางส่วน ในช่วงที่เหลือของสัปดาห์ คุณจะได้พบทีมและทำความคุ้นเคยกับเครื่องมือของเรา ผมจะส่งรายละเอียดให้ในเร็วๆ นี้ หากคุณมีคำถามใดๆ โปรดแจ้งผม",
+  "swaps": [
+   {
+    "from": "welcome aboard",
+    "to": "welcome to the company",
+    "note_th": "welcome aboard ลำลอง, ใช้วลีเต็มเป็นทางการ"
+   },
+   {
+    "from": "Here's the plan",
+    "to": "Please find below the plan",
+    "note_th": "วลีมาตรฐานในอีเมลทางการ"
+   },
+   {
+    "from": "go over the basics",
+    "to": "review the essentials",
+    "note_th": "review/essentials ทางการกว่า go over/basics"
+   },
+   {
+    "from": "fill out some paperwork",
+    "to": "complete some documentation",
+    "note_th": "complete documentation เป็นทางการกว่า fill out paperwork"
+   },
+   {
+    "from": "learn the tools",
+    "to": "become familiar with our tools",
+    "note_th": "become familiar with ฟังดูเป็นมืออาชีพ"
+   },
+   {
+    "from": "soon",
+    "to": "shortly",
+    "note_th": "shortly เป็นทางการกว่า soon"
+   }
+  ],
+  "id": "your-first-week-plan"
+ },
+ {
+  "title": "Wi-Fi Keeps Dropping",
+  "title_th": "Wi-Fi หลุดบ่อย",
+  "type": "troubleshooting-guide",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "อินเทอร์เน็ตที่โต๊ะทำงานหลุดบ่อย ต้องแก้ก่อนแจ้งทีม IT",
+  "normal": "If your Wi-Fi keeps cutting out, try these steps first. Turn the router off, wait 30 seconds, then turn it back on. Move closer to the router and see if it gets better. If it still doesn't work, check if other devices have the same problem. When nothing helps, tell the IT team.",
+  "normal_th": "ถ้า Wi-Fi ของคุณหลุดบ่อย ให้ลองทำตามขั้นตอนเหล่านี้ก่อน ปิดเราเตอร์ รอ 30 วินาที แล้วเปิดใหม่ ขยับเข้าใกล้เราเตอร์แล้วดูว่าดีขึ้นไหม ถ้ายังใช้ไม่ได้ ให้เช็กว่าอุปกรณ์อื่นมีปัญหาเดียวกันหรือไม่ ถ้าไม่มีอะไรช่วยได้ ให้แจ้งทีม IT",
+  "formal": "If your Wi-Fi connection is unstable, please follow these steps before escalating. Restart the router, wait 30 seconds, and power it on again. Move closer to the router to determine whether the signal improves. If the issue persists, verify whether other devices are affected. Should the problem remain, please contact the IT team.",
+  "formal_th": "หากการเชื่อมต่อ Wi-Fi ของคุณไม่เสถียร โปรดทำตามขั้นตอนเหล่านี้ก่อนส่งเรื่องต่อ รีสตาร์ตเราเตอร์ รอ 30 วินาที แล้วเปิดเครื่องอีกครั้ง ขยับเข้าใกล้เราเตอร์เพื่อดูว่าสัญญาณดีขึ้นหรือไม่ หากปัญหายังคงอยู่ โปรดตรวจสอบว่าอุปกรณ์อื่นได้รับผลกระทบด้วยหรือไม่ หากปัญหายังไม่หาย โปรดติดต่อทีม IT",
+  "swaps": [
+   {
+    "from": "keeps cutting out",
+    "to": "is unstable",
+    "note_th": "\"ไม่เสถียร\" เป็นทางการกว่า \"หลุดบ่อย\""
+   },
+   {
+    "from": "try these steps",
+    "to": "please follow these steps",
+    "note_th": "เติม please และใช้ follow ดูสุภาพขึ้น"
+   },
+   {
+    "from": "turn the router off / turn it back on",
+    "to": "restart the router / power it on again",
+    "note_th": "restart, power on เป็นศัพท์เทคนิคทางการ"
+   },
+   {
+    "from": "see if it gets better",
+    "to": "determine whether the signal improves",
+    "note_th": "determine whether เป็นภาษาทางการ"
+   },
+   {
+    "from": "if it still doesn't work",
+    "to": "if the issue persists",
+    "note_th": "the issue persists = ปัญหายังคงอยู่ ใช้ในงาน"
+   },
+   {
+    "from": "check if",
+    "to": "verify whether",
+    "note_th": "verify สุภาพและชัดเจนกว่า check"
+   },
+   {
+    "from": "tell the IT team",
+    "to": "contact the IT team",
+    "note_th": "contact ทางการกว่า tell"
+   },
+   {
+    "from": "When nothing helps",
+    "to": "Should the problem remain",
+    "note_th": "Should... เป็นโครงสร้างเงื่อนไขทางการ"
+   }
+  ],
+  "id": "wi-fi-keeps-dropping"
+ },
+ {
+  "title": "Printer Won't Print",
+  "title_th": "เครื่องพิมพ์ไม่พิมพ์",
+  "type": "troubleshooting-guide",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "กดพิมพ์เอกสารแล้วเครื่องพิมพ์ไม่ทำงาน ต้องแก้เอง",
+  "normal": "If the printer won't print, don't worry, it's usually easy to fix. First, check that the printer is on and has paper. Next, make sure your computer is connected to the right printer. If a document is stuck, cancel it and try again. Still not working? Restart the printer and send the file one more time.",
+  "normal_th": "ถ้าเครื่องพิมพ์ไม่พิมพ์ ไม่ต้องกังวล ปกติแก้ได้ง่าย อย่างแรก เช็กว่าเครื่องพิมพ์เปิดอยู่และมีกระดาษ ต่อไป ตรวจให้แน่ใจว่าคอมพิวเตอร์เชื่อมต่อกับเครื่องพิมพ์ที่ถูกต้อง ถ้ามีเอกสารค้างอยู่ ให้ยกเลิกแล้วลองใหม่ ยังไม่ได้อีก? รีสตาร์ตเครื่องพิมพ์แล้วส่งไฟล์อีกครั้ง",
+  "formal": "If the printer fails to print, this can usually be resolved quickly. First, confirm that the printer is powered on and has paper. Next, ensure your computer is connected to the correct printer. If a document is stuck in the queue, cancel it and try again. If the problem continues, restart the printer and resubmit the file.",
+  "formal_th": "หากเครื่องพิมพ์ไม่สามารถพิมพ์ได้ โดยทั่วไปสามารถแก้ไขได้อย่างรวดเร็ว อย่างแรก โปรดยืนยันว่าเครื่องพิมพ์เปิดอยู่และมีกระดาษ ต่อไป โปรดตรวจสอบให้แน่ใจว่าคอมพิวเตอร์เชื่อมต่อกับเครื่องพิมพ์ที่ถูกต้อง หากมีเอกสารค้างอยู่ในคิว ให้ยกเลิกแล้วลองอีกครั้ง หากปัญหายังคงอยู่ ให้รีสตาร์ตเครื่องพิมพ์และส่งไฟล์อีกครั้ง",
+  "swaps": [
+   {
+    "from": "won't print",
+    "to": "fails to print",
+    "note_th": "fails to เป็นทางการกว่า won't"
+   },
+   {
+    "from": "don't worry, it's usually easy to fix",
+    "to": "this can usually be resolved quickly",
+    "note_th": "เลี่ยงคำพูดปลอบใจ ใช้ resolved ทางการ"
+   },
+   {
+    "from": "check that",
+    "to": "confirm that",
+    "note_th": "confirm ชัดเจนและทางการกว่า check"
+   },
+   {
+    "from": "the printer is on",
+    "to": "the printer is powered on",
+    "note_th": "powered on เป็นศัพท์ทางการ"
+   },
+   {
+    "from": "make sure",
+    "to": "ensure",
+    "note_th": "ensure คือรูปทางการของ make sure"
+   },
+   {
+    "from": "the right printer",
+    "to": "the correct printer",
+    "note_th": "correct ทางการกว่า right"
+   },
+   {
+    "from": "Still not working?",
+    "to": "If the problem continues,",
+    "note_th": "เลี่ยงประโยคคำถามแบบพูดเล่น"
+   },
+   {
+    "from": "send the file one more time",
+    "to": "resubmit the file",
+    "note_th": "resubmit กระชับและเป็นทางการ"
+   }
+  ],
+  "id": "printer-won-t-print"
+ },
+ {
+  "title": "Laptop Running Slow",
+  "title_th": "แล็ปท็อปช้า",
+  "type": "troubleshooting-guide",
+  "context": "technical",
+  "level": "moderate",
+  "scenario_th": "แล็ปท็อปทำงานอืด เปิดโปรแกรมช้า ต้องแก้เบื้องต้น",
+  "normal": "Is your laptop getting really slow? Here are a few things to try. Close the apps you're not using, especially heavy ones like browsers with many tabs. Then restart the laptop to clear things up. Check if any updates are running in the background and slowing it down. If it's still slow after that, let IT take a look.",
+  "normal_th": "แล็ปท็อปของคุณช้ามากใช่ไหม? นี่คือสิ่งที่ควรลอง ปิดแอปที่ไม่ได้ใช้ โดยเฉพาะแอปหนักๆ อย่างเบราว์เซอร์ที่เปิดหลายแท็บ จากนั้นรีสตาร์ตแล็ปท็อปเพื่อล้างระบบ เช็กว่ามีการอัปเดตทำงานอยู่เบื้องหลังและทำให้เครื่องช้าหรือไม่ ถ้ายังช้าอยู่ ให้ IT ช่วยดู",
+  "formal": "If your laptop is performing slowly, please try the following steps. Close any applications you are not using, particularly resource-heavy ones such as browsers with multiple tabs open. Then restart the laptop to free up memory. Check whether any updates are running in the background and affecting performance. If the issue remains, please ask IT to review it.",
+  "formal_th": "หากแล็ปท็อปของคุณทำงานช้า โปรดลองทำตามขั้นตอนต่อไปนี้ ปิดแอปพลิเคชันที่คุณไม่ได้ใช้งาน โดยเฉพาะแอปที่ใช้ทรัพยากรมาก เช่น เบราว์เซอร์ที่เปิดหลายแท็บ จากนั้นรีสตาร์ตแล็ปท็อปเพื่อคืนหน่วยความจำ ตรวจสอบว่ามีการอัปเดตทำงานอยู่เบื้องหลังและส่งผลต่อประสิทธิภาพหรือไม่ หากปัญหายังคงอยู่ โปรดขอให้ IT ตรวจสอบ",
+  "swaps": [
+   {
+    "from": "getting really slow",
+    "to": "performing slowly",
+    "note_th": "performing slowly เป็นทางการ เลี่ยง really"
+   },
+   {
+    "from": "the apps",
+    "to": "the applications",
+    "note_th": "applications เต็มคำ ทางการกว่า apps"
+   },
+   {
+    "from": "heavy ones",
+    "to": "resource-heavy ones",
+    "note_th": "resource-heavy เป็นศัพท์เทคนิคชัดเจน"
+   },
+   {
+    "from": "clear things up",
+    "to": "free up memory",
+    "note_th": "free up memory เจาะจงและเป็นทางการ"
+   },
+   {
+    "from": "check if",
+    "to": "check whether",
+    "note_th": "whether ถูกต้องและทางการกว่า if"
+   },
+   {
+    "from": "slowing it down",
+    "to": "affecting performance",
+    "note_th": "affecting performance เป็นสำนวนงาน"
+   },
+   {
+    "from": "let IT take a look",
+    "to": "please ask IT to review it",
+    "note_th": "review it สุภาพกว่า take a look"
+   }
+  ],
+  "id": "laptop-running-slow"
+ },
+ {
+  "title": "Can't Log In to Account",
+  "title_th": "เข้าสู่ระบบไม่ได้",
+  "type": "troubleshooting-guide",
+  "context": "technical",
+  "level": "moderate",
+  "scenario_th": "พนักงานล็อกอินเข้าระบบบริษัทไม่ได้ ต้องแก้ทีละขั้น",
+  "normal": "Can't log in to your account? Let's fix it step by step. First, double-check that your username and password are typed correctly, and make sure Caps Lock is off. If you forgot your password, click \"Reset password\" and follow the email. If you get locked out after too many tries, wait 15 minutes before trying again. If none of this helps, reach out to support.",
+  "normal_th": "เข้าสู่ระบบบัญชีไม่ได้ใช่ไหม? มาแก้ไปทีละขั้นกัน อย่างแรก เช็กให้ดีว่าพิมพ์ชื่อผู้ใช้และรหัสผ่านถูกต้อง และดูว่า Caps Lock ปิดอยู่ ถ้าลืมรหัสผ่าน ให้คลิก \"รีเซ็ตรหัสผ่าน\" แล้วทำตามอีเมล ถ้าถูกล็อกเพราะลองหลายครั้งเกินไป ให้รอ 15 นาทีก่อนลองใหม่ ถ้าทั้งหมดนี้ไม่ช่วย ให้ติดต่อฝ่ายสนับสนุน",
+  "formal": "If you are unable to log in to your account, please follow these steps. First, verify that your username and password are entered correctly, and ensure Caps Lock is off. If you have forgotten your password, select \"Reset password\" and follow the instructions in the email. If your account is locked after multiple attempts, please wait 15 minutes before trying again. If none of these steps resolve the issue, please contact support.",
+  "formal_th": "หากคุณไม่สามารถเข้าสู่ระบบบัญชีของคุณได้ โปรดทำตามขั้นตอนเหล่านี้ อย่างแรก โปรดตรวจสอบว่าชื่อผู้ใช้และรหัสผ่านถูกป้อนอย่างถูกต้อง และตรวจให้แน่ใจว่า Caps Lock ปิดอยู่ หากคุณลืมรหัสผ่าน ให้เลือก \"รีเซ็ตรหัสผ่าน\" แล้วทำตามคำแนะนำในอีเมล หากบัญชีของคุณถูกล็อกหลังจากพยายามหลายครั้ง โปรดรอ 15 นาทีก่อนลองอีกครั้ง หากขั้นตอนเหล่านี้ไม่สามารถแก้ปัญหาได้ โปรดติดต่อฝ่ายสนับสนุน",
+  "swaps": [
+   {
+    "from": "Can't log in?",
+    "to": "If you are unable to log in",
+    "note_th": "เลี่ยงประโยคคำถามสั้นๆ ใช้ประโยคเงื่อนไขเต็ม"
+   },
+   {
+    "from": "double-check",
+    "to": "verify",
+    "note_th": "verify เป็นทางการกว่า double-check"
+   },
+   {
+    "from": "typed correctly",
+    "to": "entered correctly",
+    "note_th": "entered ทางการกว่า typed"
+   },
+   {
+    "from": "make sure",
+    "to": "ensure",
+    "note_th": "ensure คือรูปทางการของ make sure"
+   },
+   {
+    "from": "click",
+    "to": "select",
+    "note_th": "select สุภาพกว่า click ในคู่มือ"
+   },
+   {
+    "from": "follow the email",
+    "to": "follow the instructions in the email",
+    "note_th": "เขียนให้ครบและชัดเจน"
+   },
+   {
+    "from": "get locked out",
+    "to": "your account is locked",
+    "note_th": "เลี่ยงสำนวนพูด ใช้ประโยคเต็ม"
+   },
+   {
+    "from": "reach out to support",
+    "to": "please contact support",
+    "note_th": "contact ทางการกว่า reach out"
+   }
+  ],
+  "id": "can-t-log-in-to-account"
+ },
+ {
+  "title": "New Dark Mode Feature",
+  "title_th": "ฟีเจอร์ใหม่: โหมดมืด",
+  "type": "announcement-email",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "แอปมือถือปล่อยฟีเจอร์ใหม่ \"โหมดมืด\" และส่งอีเมลแจ้งผู้ใช้",
+  "normal": "Hi everyone,\n\nWe just added a new dark mode to the app! You can turn it on in Settings. It's easier on your eyes at night. We hope you like it. Let us know what you think.\n\nThanks,\nThe Team",
+  "normal_th": "สวัสดีทุกคน\n\nเราเพิ่งเพิ่มโหมดมืดใหม่ในแอป! คุณเปิดใช้งานได้ในหน้าตั้งค่า มันสบายตากว่าเวลากลางคืน เราหวังว่าคุณจะชอบนะ บอกเราด้วยว่าคิดยังไง\n\nขอบคุณ\nทีมงาน",
+  "formal": "Dear valued users,\n\nWe are pleased to announce a new dark mode feature in the app. You can enable it in the Settings menu. This feature reduces eye strain in low-light conditions. We hope you find it helpful and welcome any feedback.\n\nBest regards,\nThe Product Team",
+  "formal_th": "เรียนผู้ใช้งานทุกท่าน\n\nเรายินดีที่จะประกาศเปิดตัวฟีเจอร์โหมดมืดใหม่ในแอปพลิเคชัน ท่านสามารถเปิดใช้งานได้ในเมนูตั้งค่า ฟีเจอร์นี้ช่วยลดอาการเมื่อยล้าของดวงตาในสภาพแสงน้อย เราหวังว่าท่านจะพบว่ามีประโยชน์และยินดีรับฟังข้อเสนอแนะ\n\nด้วยความเคารพ\nทีมผลิตภัณฑ์",
+  "swaps": [
+   {
+    "from": "Hi everyone",
+    "to": "Dear valued users",
+    "note_th": "คำขึ้นต้นทางการกว่า ใช้กับลูกค้า"
+   },
+   {
+    "from": "We just added",
+    "to": "We are pleased to announce",
+    "note_th": "ประกาศแบบมืออาชีพ ฟังดูสุภาพ"
+   },
+   {
+    "from": "turn it on",
+    "to": "enable",
+    "note_th": "คำกริยาทางการแทน turn on"
+   },
+   {
+    "from": "easier on your eyes",
+    "to": "reduces eye strain",
+    "note_th": "ใช้คำอธิบายแบบทางการ"
+   },
+   {
+    "from": "We hope you like it",
+    "to": "We hope you find it helpful",
+    "note_th": "สุภาพและเป็นกลางกว่า"
+   },
+   {
+    "from": "Let us know what you think",
+    "to": "welcome any feedback",
+    "note_th": "ขอความเห็นแบบทางการ"
+   },
+   {
+    "from": "Thanks",
+    "to": "Best regards",
+    "note_th": "คำลงท้ายทางการ"
+   }
+  ],
+  "id": "new-dark-mode-feature"
+ },
+ {
+  "title": "Subscription Price Change",
+  "title_th": "การเปลี่ยนแปลงราคาสมาชิก",
+  "type": "announcement-email",
+  "context": "business",
+  "level": "moderate",
+  "scenario_th": "บริษัทซอฟต์แวร์แจ้งลูกค้าว่าค่าสมาชิกรายเดือนจะขึ้นราคา",
+  "normal": "Hello,\n\nWe want to tell you that our monthly plan price will go up from $9 to $12 starting September 1. This is because we added new tools and better support. Your current price stays the same until then. Sorry for any trouble and thanks for staying with us.\n\nBest,\nCustomer Team",
+  "normal_th": "สวัสดีค่ะ\n\nเราอยากบอกว่าราคาแพ็กเกจรายเดือนจะขึ้นจาก 9 ดอลลาร์เป็น 12 ดอลลาร์ เริ่ม 1 กันยายน เพราะเราเพิ่มเครื่องมือใหม่และบริการที่ดีขึ้น ราคาปัจจุบันของคุณจะเท่าเดิมจนถึงตอนนั้น ขออภัยในความไม่สะดวกและขอบคุณที่อยู่กับเรา\n\nด้วยความนับถือ\nทีมลูกค้าสัมพันธ์",
+  "formal": "Dear Customer,\n\nWe are writing to inform you that our monthly plan price will increase from $9 to $12, effective September 1. This adjustment reflects new tools and improved support we have introduced. Your current rate will remain unchanged until that date. We apologize for any inconvenience and appreciate your continued support.\n\nSincerely,\nThe Customer Success Team",
+  "formal_th": "เรียนลูกค้าผู้มีอุปการคุณ\n\nเราขอแจ้งให้ทราบว่าราคาแพ็กเกจรายเดือนจะปรับเพิ่มขึ้นจาก 9 ดอลลาร์เป็น 12 ดอลลาร์ มีผลตั้งแต่วันที่ 1 กันยายน การปรับครั้งนี้สะท้อนถึงเครื่องมือใหม่และบริการที่ดีขึ้นที่เราได้นำเสนอ อัตราปัจจุบันของท่านจะคงเดิมจนถึงวันดังกล่าว เราต้องขออภัยในความไม่สะดวกและขอบคุณสำหรับการสนับสนุนอย่างต่อเนื่อง\n\nด้วยความจริงใจ\nทีมดูแลความสำเร็จของลูกค้า",
+  "swaps": [
+   {
+    "from": "We want to tell you",
+    "to": "We are writing to inform you",
+    "note_th": "วลีแจ้งข่าวแบบทางการในอีเมล"
+   },
+   {
+    "from": "go up",
+    "to": "increase",
+    "note_th": "คำกริยาทางการแทน go up"
+   },
+   {
+    "from": "starting September 1",
+    "to": "effective September 1",
+    "note_th": "\"มีผลตั้งแต่\" แบบทางการ"
+   },
+   {
+    "from": "This is because",
+    "to": "This adjustment reflects",
+    "note_th": "อธิบายเหตุผลแบบมืออาชีพ"
+   },
+   {
+    "from": "stays the same",
+    "to": "will remain unchanged",
+    "note_th": "ทางการกว่า"
+   },
+   {
+    "from": "Sorry for any trouble",
+    "to": "We apologize for any inconvenience",
+    "note_th": "ขอโทษแบบทางการ"
+   },
+   {
+    "from": "thanks for staying with us",
+    "to": "appreciate your continued support",
+    "note_th": "ขอบคุณแบบมืออาชีพ"
+   },
+   {
+    "from": "Best",
+    "to": "Sincerely",
+    "note_th": "คำลงท้ายทางการ"
+   }
+  ],
+  "id": "subscription-price-change"
+ },
+ {
+  "title": "Updated Refund Policy",
+  "title_th": "อัปเดตนโยบายการคืนเงิน",
+  "type": "announcement-email",
+  "context": "business",
+  "level": "moderate",
+  "scenario_th": "ร้านค้าออนไลน์แจ้งลูกค้าว่ามีการเปลี่ยนนโยบายการคืนเงิน",
+  "normal": "Hi there,\n\nWe changed our refund policy, and we want you to know. From now on, you can ask for a refund within 30 days instead of 14. You also need to keep your receipt. Please read the full rules on our website. Get in touch if you have questions.\n\nCheers,\nSupport",
+  "normal_th": "สวัสดีค่ะ\n\nเราเปลี่ยนนโยบายการคืนเงิน และอยากให้คุณทราบ ต่อจากนี้คุณสามารถขอคืนเงินได้ภายใน 30 วันแทนที่จะเป็น 14 วัน คุณต้องเก็บใบเสร็จไว้ด้วย กรุณาอ่านกฎทั้งหมดในเว็บไซต์ของเรา ติดต่อเราได้ถ้ามีคำถาม\n\nแล้วเจอกัน\nฝ่ายสนับสนุน",
+  "formal": "Dear Customer,\n\nWe would like to notify you of an update to our refund policy. Effective immediately, refunds may be requested within 30 days rather than 14. Please note that a valid receipt is required. We kindly ask you to review the complete terms on our website. Should you have any questions, please do not hesitate to contact us.\n\nKind regards,\nThe Support Team",
+  "formal_th": "เรียนลูกค้าผู้มีอุปการคุณ\n\nเราขอแจ้งให้ทราบถึงการอัปเดตนโยบายการคืนเงิน โดยมีผลทันที ท่านสามารถขอคืนเงินได้ภายใน 30 วันแทนที่จะเป็น 14 วัน โปรดทราบว่าต้องมีใบเสร็จที่ถูกต้อง เราขอความกรุณาให้ท่านตรวจสอบเงื่อนไขทั้งหมดบนเว็บไซต์ของเรา หากท่านมีคำถามใด ๆ โปรดอย่าลังเลที่จะติดต่อเรา\n\nด้วยความเคารพ\nทีมสนับสนุน",
+  "swaps": [
+   {
+    "from": "we want you to know",
+    "to": "We would like to notify you",
+    "note_th": "แจ้งข่าวแบบทางการ"
+   },
+   {
+    "from": "From now on",
+    "to": "Effective immediately",
+    "note_th": "\"มีผลทันที\" แบบทางการ"
+   },
+   {
+    "from": "you need to keep your receipt",
+    "to": "a valid receipt is required",
+    "note_th": "ใช้รูปประโยคทางการ ไม่ชี้ตัวบุคคล"
+   },
+   {
+    "from": "Please read",
+    "to": "We kindly ask you to review",
+    "note_th": "ขอร้องแบบสุภาพทางการ"
+   },
+   {
+    "from": "the full rules",
+    "to": "the complete terms",
+    "note_th": "คำศัพท์ทางการกว่า rules"
+   },
+   {
+    "from": "Get in touch if you have questions",
+    "to": "Should you have any questions, please do not hesitate to contact us",
+    "note_th": "วลีปิดท้ายมาตรฐานในอีเมลทางการ"
+   },
+   {
+    "from": "Cheers",
+    "to": "Kind regards",
+    "note_th": "คำลงท้ายทางการ"
+   }
+  ],
+  "id": "updated-refund-policy"
+ },
+ {
+  "title": "Scheduled System Maintenance",
+  "title_th": "แจ้งปิดปรับปรุงระบบ",
+  "type": "announcement-email",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "ทีมไอทีแจ้งผู้ใช้ว่าระบบจะปิดปรับปรุงในคืนวันเสาร์",
+  "normal": "Hi all,\n\nJust a heads up: our system will be down for maintenance this Saturday from 11 PM to 2 AM. During this time, you won't be able to log in. We're doing this to make things faster and safer. Sorry for the trouble, and thanks for your patience.\n\nThanks,\nIT Team",
+  "normal_th": "สวัสดีทุกคน\n\nแจ้งให้ทราบล่วงหน้า: ระบบของเราจะปิดปรับปรุงคืนวันเสาร์นี้ตั้งแต่ 23.00 ถึง 02.00 น. ในช่วงนี้คุณจะเข้าสู่ระบบไม่ได้ เราทำแบบนี้เพื่อให้ระบบเร็วขึ้นและปลอดภัยขึ้น ขออภัยในความไม่สะดวก และขอบคุณสำหรับความอดทน\n\nขอบคุณ\nทีมไอที",
+  "formal": "Dear Users,\n\nPlease be advised that our system will undergo scheduled maintenance this Saturday from 11 PM to 2 AM. During this period, you will be unable to log in. This maintenance is intended to improve system speed and security. We apologize for any inconvenience and thank you for your patience.\n\nBest regards,\nThe IT Department",
+  "formal_th": "เรียนผู้ใช้งานทุกท่าน\n\nโปรดทราบว่าระบบของเราจะเข้ารับการปิดปรับปรุงตามกำหนดในคืนวันเสาร์นี้ตั้งแต่เวลา 23.00 ถึง 02.00 น. ในช่วงเวลาดังกล่าว ท่านจะไม่สามารถเข้าสู่ระบบได้ การปรับปรุงครั้งนี้มีจุดประสงค์เพื่อเพิ่มความเร็วและความปลอดภัยของระบบ เราขออภัยในความไม่สะดวกและขอบคุณสำหรับความอดทนของท่าน\n\nด้วยความเคารพ\nฝ่ายเทคโนโลยีสารสนเทศ",
+  "swaps": [
+   {
+    "from": "Just a heads up",
+    "to": "Please be advised",
+    "note_th": "\"โปรดทราบ\" แบบทางการแทนคำเตือนแบบลำลอง"
+   },
+   {
+    "from": "will be down for maintenance",
+    "to": "will undergo scheduled maintenance",
+    "note_th": "วลีทางการสำหรับการปิดปรับปรุง"
+   },
+   {
+    "from": "During this time",
+    "to": "During this period",
+    "note_th": "คำทางการกว่า time"
+   },
+   {
+    "from": "you won't be able to",
+    "to": "you will be unable to",
+    "note_th": "เลี่ยงคำย่อ ใช้รูปเต็มแบบทางการ"
+   },
+   {
+    "from": "to make things faster and safer",
+    "to": "to improve system speed and security",
+    "note_th": "อธิบายแบบมืออาชีพ"
+   },
+   {
+    "from": "Sorry for the trouble",
+    "to": "We apologize for any inconvenience",
+    "note_th": "ขอโทษแบบทางการ"
+   },
+   {
+    "from": "Thanks",
+    "to": "Best regards",
+    "note_th": "คำลงท้ายทางการ"
+   }
+  ],
+  "id": "scheduled-system-maintenance"
+ },
+ {
+  "title": "Login Bypass Fixed in v2.4.1",
+  "title_th": "แก้ช่องโหว่ล็อกอินใน v2.4.1",
+  "type": "security-advisory",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "ทีมความปลอดภัยแจ้งผู้ใช้ว่าพบช่องโหว่ที่ทำให้คนล็อกอินได้โดยไม่ต้องใส่รหัสผ่าน และได้ออกแพตช์แก้แล้ว",
+  "normal": "We found a bug that lets attackers log in without a password. It hits versions 2.3.0 to 2.4.0. We fixed it in version 2.4.1, so please update as soon as you can. If you can't update now, turn off remote login for now. Sorry for the trouble.",
+  "normal_th": "เราพบบั๊กที่ทำให้ผู้โจมตีล็อกอินได้โดยไม่ต้องใส่รหัสผ่าน ปัญหานี้เกิดกับเวอร์ชัน 2.3.0 ถึง 2.4.0 เราแก้ไขแล้วในเวอร์ชัน 2.4.1 กรุณาอัปเดตให้เร็วที่สุด ถ้ายังอัปเดตไม่ได้ ให้ปิดการล็อกอินระยะไกลไว้ก่อน ขออภัยในความไม่สะดวก",
+  "formal": "We have identified a vulnerability that allows attackers to authenticate without a password. It affects versions 2.3.0 through 2.4.0. This issue has been resolved in version 2.4.1, and we strongly recommend upgrading at your earliest convenience. If an immediate upgrade is not possible, please disable remote login as a temporary mitigation. We apologize for any inconvenience.",
+  "formal_th": "เราตรวจพบช่องโหว่ที่ทำให้ผู้โจมตีสามารถยืนยันตัวตนได้โดยไม่ต้องใส่รหัสผ่าน ช่องโหว่นี้ส่งผลกระทบต่อเวอร์ชัน 2.3.0 ถึง 2.4.0 ปัญหาดังกล่าวได้รับการแก้ไขแล้วในเวอร์ชัน 2.4.1 และเราขอแนะนำอย่างยิ่งให้ทำการอัปเกรดโดยเร็วที่สุด หากไม่สามารถอัปเกรดได้ทันที กรุณาปิดการใช้งานการล็อกอินระยะไกลเป็นมาตรการชั่วคราว เราต้องขออภัยในความไม่สะดวกที่เกิดขึ้น",
+  "swaps": [
+   {
+    "from": "We found a bug",
+    "to": "We have identified a vulnerability",
+    "note_th": "\"identified a vulnerability\" เป็นทางการกว่า \"found a bug\""
+   },
+   {
+    "from": "lets attackers log in",
+    "to": "allows attackers to authenticate",
+    "note_th": "\"authenticate\" เป็นศัพท์เทคนิคที่ทางการกว่า \"log in\""
+   },
+   {
+    "from": "It hits versions",
+    "to": "It affects versions",
+    "note_th": "\"affects\" สุภาพและเป็นทางการกว่า \"hits\""
+   },
+   {
+    "from": "We fixed it",
+    "to": "This issue has been resolved",
+    "note_th": "รูปถูกกระทำ (passive) ฟังดูเป็นทางการในงานเขียน"
+   },
+   {
+    "from": "please update as soon as you can",
+    "to": "we strongly recommend upgrading at your earliest convenience",
+    "note_th": "\"at your earliest convenience\" เป็นสำนวนสุภาพในงาน"
+   },
+   {
+    "from": "for now",
+    "to": "as a temporary mitigation",
+    "note_th": "\"mitigation\" เป็นศัพท์ความปลอดภัยที่เป็นทางการ"
+   },
+   {
+    "from": "Sorry for the trouble",
+    "to": "We apologize for any inconvenience",
+    "note_th": "วลีขอโทษมาตรฐานในอีเมลงาน"
+   }
+  ],
+  "id": "login-bypass-fixed-in-v2-4-1"
+ },
+ {
+  "title": "Storage Bucket Left Public",
+  "title_th": "ที่เก็บข้อมูลถูกตั้งค่าเป็นสาธารณะ",
+  "type": "security-advisory",
+  "context": "technical",
+  "level": "moderate",
+  "scenario_th": "บริษัทแจ้งลูกค้าว่าที่เก็บไฟล์บนคลาวด์ถูกตั้งค่าผิดจนคนนอกเข้าถึงได้ และได้ปิดและกำลังตรวจสอบ",
+  "normal": "One of our cloud storage buckets was set to public by mistake. Because of this, some customer files may have been open to outside access between June 3 and June 9. We closed the bucket and checked who touched the data. We don't think any data was taken, but we're still looking into it. We'll let you know if anything changes.",
+  "normal_th": "ที่เก็บข้อมูลบนคลาวด์ของเราหนึ่งจุดถูกตั้งค่าเป็นสาธารณะโดยไม่ตั้งใจ เพราะเหตุนี้ ไฟล์ของลูกค้าบางส่วนอาจถูกเข้าถึงจากภายนอกได้ระหว่างวันที่ 3 ถึง 9 มิถุนายน เราได้ปิดที่เก็บข้อมูลและตรวจสอบว่าใครเข้าถึงข้อมูลบ้าง เราไม่คิดว่ามีข้อมูลถูกนำออกไป แต่เรายังตรวจสอบอยู่ เราจะแจ้งให้ทราบหากมีอะไรเปลี่ยนแปลง",
+  "formal": "One of our cloud storage buckets was inadvertently configured as public. As a result, some customer files may have been exposed to external access between June 3 and June 9. We have since restricted the bucket and reviewed all access to the data. We have found no evidence that any data was exfiltrated, but our investigation is ongoing. We will notify you should the situation change.",
+  "formal_th": "ที่เก็บข้อมูลบนคลาวด์ของเราหนึ่งจุดถูกตั้งค่าเป็นสาธารณะโดยไม่ได้ตั้งใจ ด้วยเหตุนี้ ไฟล์ของลูกค้าบางส่วนอาจถูกเปิดเผยต่อการเข้าถึงจากภายนอกระหว่างวันที่ 3 ถึง 9 มิถุนายน เราได้จำกัดการเข้าถึงที่เก็บข้อมูลและตรวจสอบการเข้าถึงข้อมูลทั้งหมดแล้ว เราไม่พบหลักฐานว่ามีข้อมูลถูกนำออกไป แต่การสอบสวนของเรายังคงดำเนินอยู่ เราจะแจ้งให้ท่านทราบหากสถานการณ์มีการเปลี่ยนแปลง",
+  "swaps": [
+   {
+    "from": "by mistake",
+    "to": "inadvertently",
+    "note_th": "\"inadvertently\" เป็นคำเดียวที่ทางการแทน \"by mistake\""
+   },
+   {
+    "from": "set to public",
+    "to": "configured as public",
+    "note_th": "\"configured\" เป็นศัพท์เทคนิคที่ทางการกว่า \"set\""
+   },
+   {
+    "from": "open to outside access",
+    "to": "exposed to external access",
+    "note_th": "\"exposed / external\" เป็นทางการกว่า \"open / outside\""
+   },
+   {
+    "from": "We closed the bucket",
+    "to": "We have restricted the bucket",
+    "note_th": "\"restricted\" แม่นยำและเป็นทางการกว่า \"closed\""
+   },
+   {
+    "from": "We don't think any data was taken",
+    "to": "We have found no evidence that any data was exfiltrated",
+    "note_th": "\"exfiltrated\" เป็นศัพท์ความปลอดภัยของข้อมูลรั่ว"
+   },
+   {
+    "from": "we're still looking into it",
+    "to": "our investigation is ongoing",
+    "note_th": "\"investigation is ongoing\" เป็นสำนวนทางการ"
+   },
+   {
+    "from": "We'll let you know",
+    "to": "We will notify you",
+    "note_th": "\"notify\" เป็นทางการกว่า \"let you know\""
+   }
+  ],
+  "id": "storage-bucket-left-public"
+ },
+ {
+  "title": "XSS in Comment Feature",
+  "title_th": "ช่องโหว่ XSS ในระบบคอมเมนต์",
+  "type": "security-advisory",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "นักวิจัยแจ้งว่าช่องคอมเมนต์รันสคริปต์อันตรายได้ ทีมออกแพตช์และแนะนำให้อัปเดต",
+  "normal": "A security researcher told us the comment box can run harmful scripts. This lets a bad actor steal a user's session if they open a bad comment. We put out a patch in build 5.8.2 that cleans up the input. Please update your servers today. Big thanks to the researcher who told us about this.",
+  "normal_th": "นักวิจัยด้านความปลอดภัยแจ้งเราว่าช่องคอมเมนต์สามารถรันสคริปต์อันตรายได้ ช่องโหว่นี้ทำให้ผู้ไม่หวังดีขโมยเซสชันของผู้ใช้ได้หากเปิดคอมเมนต์ที่เป็นอันตราย เราได้ออกแพตช์ในบิลด์ 5.8.2 ที่ทำความสะอาดข้อมูลที่รับเข้ามา กรุณาอัปเดตเซิร์ฟเวอร์ของคุณวันนี้ ขอขอบคุณนักวิจัยที่แจ้งเรื่องนี้ให้เราทราบ",
+  "formal": "A security researcher reported that the comment field can execute malicious scripts. This vulnerability could allow a threat actor to hijack a user's session when a crafted comment is opened. We have released a patch in build 5.8.2 that sanitizes the input. We advise you to update your servers today. We would like to thank the researcher for responsibly disclosing this issue.",
+  "formal_th": "นักวิจัยด้านความปลอดภัยได้รายงานว่าช่องคอมเมนต์สามารถประมวลผลสคริปต์ที่เป็นอันตรายได้ ช่องโหว่นี้อาจทำให้ผู้ประสงค์ร้ายเข้าควบคุมเซสชันของผู้ใช้ได้เมื่อเปิดคอมเมนต์ที่ถูกดัดแปลง เราได้ปล่อยแพตช์ในบิลด์ 5.8.2 ที่ทำการกรองข้อมูลนำเข้า เราขอแนะนำให้ท่านอัปเดตเซิร์ฟเวอร์ในวันนี้ เราขอขอบคุณนักวิจัยที่เปิดเผยปัญหานี้อย่างมีความรับผิดชอบ",
+  "swaps": [
+   {
+    "from": "told us",
+    "to": "reported",
+    "note_th": "\"reported\" เป็นทางการกว่า \"told us\""
+   },
+   {
+    "from": "harmful scripts",
+    "to": "malicious scripts",
+    "note_th": "\"malicious\" เป็นศัพท์ความปลอดภัยมาตรฐาน"
+   },
+   {
+    "from": "can run",
+    "to": "can execute",
+    "note_th": "\"execute\" เป็นศัพท์เทคนิคแทน \"run\""
+   },
+   {
+    "from": "a bad actor",
+    "to": "a threat actor",
+    "note_th": "\"threat actor\" เป็นคำทางการเรียกผู้โจมตี"
+   },
+   {
+    "from": "steal a user's session",
+    "to": "hijack a user's session",
+    "note_th": "\"hijack\" เป็นศัพท์เฉพาะเรื่องเซสชัน"
+   },
+   {
+    "from": "put out a patch",
+    "to": "released a patch",
+    "note_th": "\"released\" เป็นทางการกว่า \"put out\""
+   },
+   {
+    "from": "cleans up the input",
+    "to": "sanitizes the input",
+    "note_th": "\"sanitize\" เป็นศัพท์เทคนิคเรื่องกรองข้อมูล"
+   },
+   {
+    "from": "Big thanks to",
+    "to": "We would like to thank",
+    "note_th": "รูปประโยคขอบคุณที่เป็นทางการในงาน"
+   }
+  ],
+  "id": "xss-in-comment-feature"
+ },
+ {
+  "title": "Update Your VPN Client Now",
+  "title_th": "อัปเดตโปรแกรม VPN ทันที",
+  "type": "security-advisory",
+  "context": "technical",
+  "level": "moderate",
+  "scenario_th": "ฝ่ายไอทีแจ้งพนักงานว่าโปรแกรม VPN เวอร์ชันเก่ามีช่องโหว่ ต้องอัปเดตด่วน",
+  "normal": "Our VPN client has a known flaw in versions below 7.1. An attacker on the same network could read your traffic. The vendor sent out a fix in version 7.1.3. Please update your VPN app before Friday. If you need help, reach out to the IT team.",
+  "normal_th": "โปรแกรม VPN ของเรามีช่องโหว่ที่ทราบแล้วในเวอร์ชันต่ำกว่า 7.1 ผู้โจมตีที่อยู่บนเครือข่ายเดียวกันอาจอ่านข้อมูลการรับส่งของคุณได้ ผู้ผลิตได้ส่งการแก้ไขออกมาในเวอร์ชัน 7.1.3 กรุณาอัปเดตแอป VPN ของคุณก่อนวันศุกร์ หากต้องการความช่วยเหลือ ติดต่อทีมไอที",
+  "formal": "Our VPN client contains a known vulnerability in versions prior to 7.1. An attacker on the same network could intercept your traffic. The vendor has issued a fix in version 7.1.3. Please update your VPN application before Friday. Should you require assistance, please contact the IT team.",
+  "formal_th": "โปรแกรม VPN ของเรามีช่องโหว่ที่ทราบแล้วในเวอร์ชันก่อนหน้า 7.1 ผู้โจมตีที่อยู่บนเครือข่ายเดียวกันอาจดักจับข้อมูลการรับส่งของท่านได้ ผู้จำหน่ายได้ออกการแก้ไขในเวอร์ชัน 7.1.3 กรุณาอัปเดตแอปพลิเคชัน VPN ของท่านก่อนวันศุกร์ หากท่านต้องการความช่วยเหลือ กรุณาติดต่อทีมไอที",
+  "swaps": [
+   {
+    "from": "has a known flaw",
+    "to": "contains a known vulnerability",
+    "note_th": "\"contains a vulnerability\" เป็นทางการกว่า \"has a flaw\""
+   },
+   {
+    "from": "in versions below 7.1",
+    "to": "in versions prior to 7.1",
+    "note_th": "\"prior to\" เป็นทางการกว่า \"below\""
+   },
+   {
+    "from": "read your traffic",
+    "to": "intercept your traffic",
+    "note_th": "\"intercept\" เป็นศัพท์เทคนิคเรื่องดักข้อมูล"
+   },
+   {
+    "from": "sent out a fix",
+    "to": "has issued a fix",
+    "note_th": "\"issued\" เป็นทางการกว่า \"sent out\""
+   },
+   {
+    "from": "VPN app",
+    "to": "VPN application",
+    "note_th": "\"application\" เป็นทางการกว่าคำย่อ \"app\""
+   },
+   {
+    "from": "If you need help",
+    "to": "Should you require assistance",
+    "note_th": "\"Should you require assistance\" เป็นวลีสุภาพมาก"
+   },
+   {
+    "from": "reach out to",
+    "to": "please contact",
+    "note_th": "\"contact\" เป็นทางการกว่า \"reach out to\""
+   }
+  ],
+  "id": "update-your-vpn-client-now"
+ },
+ {
+  "title": "Daily Standup Update",
+  "title_th": "อัปเดตประชุมยืนประจำวัน",
+  "type": "standup-review",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "นักพัฒนารายงานความคืบหน้าในที่ประชุมทีมตอนเช้า",
+  "normal": "Yesterday I finished the login page and fixed two bugs. Today I'm going to work on the sign-up form. I don't have any blockers right now. I'll ask the design team if I have questions.",
+  "normal_th": "เมื่อวานผมทำหน้า login เสร็จและแก้บั๊กไปสองตัว วันนี้ผมจะทำต่อที่ฟอร์มสมัครสมาชิก ตอนนี้ยังไม่มีอะไรติดขัด ถ้ามีคำถามผมจะถามทีมดีไซน์",
+  "formal": "Yesterday I completed the login page and resolved two bugs. Today I will focus on the sign-up form. I currently have no blockers. I will consult the design team if any questions arise.",
+  "formal_th": "เมื่อวานผมทำหน้า login เสร็จเรียบร้อยและแก้ไขบั๊กไปสองตัว วันนี้ผมจะโฟกัสที่ฟอร์มสมัครสมาชิก ขณะนี้ยังไม่มีอุปสรรคใด ๆ หากมีคำถามผมจะปรึกษาทีมดีไซน์",
+  "swaps": [
+   {
+    "from": "finished",
+    "to": "completed",
+    "note_th": "\"ทำเสร็จ\" แบบทางการใช้ completed"
+   },
+   {
+    "from": "fixed",
+    "to": "resolved",
+    "note_th": "\"แก้ไข\" ปัญหา/บั๊ก ใช้ resolved ดูมืออาชีพกว่า"
+   },
+   {
+    "from": "work on",
+    "to": "focus on",
+    "note_th": "\"มุ่งเน้นทำ\" ฟังดูตั้งใจและเป็นทางการ"
+   },
+   {
+    "from": "right now",
+    "to": "currently",
+    "note_th": "\"ในขณะนี้\" currently สุภาพกว่า right now"
+   },
+   {
+    "from": "ask",
+    "to": "consult",
+    "note_th": "\"ปรึกษา\" consult เป็นทางการกว่า ask"
+   },
+   {
+    "from": "if I have questions",
+    "to": "if any questions arise",
+    "note_th": "\"หากมีคำถามเกิดขึ้น\" สำนวนทางการ"
+   }
+  ],
+  "id": "daily-standup-update"
+ },
+ {
+  "title": "1:1 Recap Note",
+  "title_th": "โน้ตสรุปการคุยตัวต่อตัว",
+  "type": "standup-review",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "พนักงานสรุปสิ่งที่คุยกับหัวหน้าหลังประชุม 1:1",
+  "normal": "Thanks for the chat today. We talked about my goals for this quarter. You said my work is good but I need to speak up more in meetings. I'll try to share my ideas more often. Let's check in again next month.",
+  "normal_th": "ขอบคุณสำหรับการพูดคุยวันนี้นะครับ เราคุยกันเรื่องเป้าหมายของผมในไตรมาสนี้ คุณบอกว่างานผมโอเคดี แต่ผมต้องพูดในที่ประชุมให้มากขึ้น ผมจะพยายามแชร์ไอเดียบ่อยขึ้น เดือนหน้ามาคุยกันอีกครั้งนะครับ",
+  "formal": "Thank you for the discussion today. We reviewed my goals for this quarter. You noted that my performance is strong, but I should contribute more in meetings. I will aim to share my ideas more frequently. Let us schedule a follow-up next month.",
+  "formal_th": "ขอบคุณสำหรับการพูดคุยในวันนี้ครับ เราได้ทบทวนเป้าหมายของผมในไตรมาสนี้ คุณได้ให้ความเห็นว่าผลงานของผมอยู่ในเกณฑ์ดี แต่ผมควรมีส่วนร่วมในที่ประชุมให้มากขึ้น ผมจะตั้งใจแชร์ไอเดียให้บ่อยขึ้น ขอนัดพูดคุยติดตามผลอีกครั้งในเดือนหน้าครับ",
+  "swaps": [
+   {
+    "from": "chat",
+    "to": "discussion",
+    "note_th": "\"การพูดคุย/หารือ\" discussion เป็นทางการกว่า chat"
+   },
+   {
+    "from": "talked about",
+    "to": "reviewed",
+    "note_th": "\"ทบทวน\" reviewed ฟังดูเป็นระบบกว่า"
+   },
+   {
+    "from": "said",
+    "to": "noted",
+    "note_th": "\"ให้ความเห็น/ระบุ\" noted สุภาพกว่า said"
+   },
+   {
+    "from": "my work is good",
+    "to": "my performance is strong",
+    "note_th": "\"ผลงานอยู่ในเกณฑ์ดี\" performance ใช้ในที่ทำงาน"
+   },
+   {
+    "from": "speak up",
+    "to": "contribute",
+    "note_th": "\"มีส่วนร่วม\" contribute เป็นทางการกว่า speak up"
+   },
+   {
+    "from": "try",
+    "to": "aim",
+    "note_th": "\"ตั้งใจ/มุ่ง\" aim ฟังดูมุ่งมั่นกว่า try"
+   },
+   {
+    "from": "check in again",
+    "to": "schedule a follow-up",
+    "note_th": "\"นัดติดตามผล\" สำนวนทางการในที่ทำงาน"
+   }
+  ],
+  "id": "1-1-recap-note"
+ },
+ {
+  "title": "Progress Summary With Blockers",
+  "title_th": "สรุปความคืบหน้าและอุปสรรค",
+  "type": "standup-review",
+  "context": "business",
+  "level": "moderate",
+  "scenario_th": "หัวหน้าโปรเจกต์อัปเดตสถานะงานที่ยังติดขัดให้ทีม",
+  "normal": "The project is about 70% done. We finished the backend, but the payment part is stuck because we're waiting for the API keys from the vendor. I've told the vendor and they said they'll send them by Friday. If they're late, the launch might get pushed back.",
+  "normal_th": "โปรเจกต์เสร็จไปประมาณ 70% แล้ว เราทำส่วน backend เสร็จแล้ว แต่ส่วนการชำระเงินยังติดอยู่เพราะรอ API keys จากผู้ให้บริการ ผมแจ้งทางผู้ให้บริการไปแล้ว เขาบอกว่าจะส่งให้ภายในวันศุกร์ ถ้าช้ากว่านั้น การเปิดตัวอาจต้องเลื่อนออกไป",
+  "formal": "The project is approximately 70% complete. We have finished the backend; however, the payment module is blocked as we are awaiting the API keys from the vendor. I have contacted the vendor, and they confirmed delivery by Friday. If there is a delay, the launch may be postponed.",
+  "formal_th": "โปรเจกต์เสร็จไปประมาณ 70% เราดำเนินการส่วน backend เสร็จแล้ว อย่างไรก็ตาม ส่วนการชำระเงินยังถูกบล็อกอยู่เนื่องจากกำลังรอ API keys จากผู้ให้บริการ ผมได้ติดต่อผู้ให้บริการแล้ว และเขายืนยันว่าจะส่งภายในวันศุกร์ หากเกิดความล่าช้า การเปิดตัวอาจต้องเลื่อนออกไป",
+  "swaps": [
+   {
+    "from": "about",
+    "to": "approximately",
+    "note_th": "\"ประมาณ\" approximately เป็นทางการกว่า about"
+   },
+   {
+    "from": "done",
+    "to": "complete",
+    "note_th": "\"เสร็จสมบูรณ์\" complete เหมาะกับรายงาน"
+   },
+   {
+    "from": "but",
+    "to": "however",
+    "note_th": "\"อย่างไรก็ตาม\" however เชื่อมประโยคแบบทางการ"
+   },
+   {
+    "from": "stuck",
+    "to": "blocked",
+    "note_th": "\"ถูกบล็อก/ติดขัด\" blocked เป็นศัพท์งานทางการ"
+   },
+   {
+    "from": "waiting for",
+    "to": "awaiting",
+    "note_th": "\"กำลังรอ\" awaiting เป็นทางการกว่า waiting for"
+   },
+   {
+    "from": "told",
+    "to": "contacted",
+    "note_th": "\"ติดต่อ\" contacted สุภาพกว่า told"
+   },
+   {
+    "from": "said they'll send",
+    "to": "confirmed delivery",
+    "note_th": "\"ยืนยันการจัดส่ง\" ฟังดูหนักแน่นกว่า"
+   },
+   {
+    "from": "pushed back",
+    "to": "postponed",
+    "note_th": "\"เลื่อนออกไป\" postponed เป็นทางการกว่า pushed back"
+   }
+  ],
+  "id": "progress-summary-with-blockers"
+ },
+ {
+  "title": "Weekly Status Update",
+  "title_th": "อัปเดตสถานะประจำสัปดาห์",
+  "type": "standup-review",
+  "context": "business",
+  "level": "moderate",
+  "scenario_th": "พนักงานส่งสรุปงานสัปดาห์นี้ให้หัวหน้าทางแชต",
+  "normal": "This week I closed 8 tickets and helped test the new feature. Things are going well and we're on track for the deadline. One small problem: the test server keeps crashing, so I'll look into it tomorrow. Let me know if you need anything else.",
+  "normal_th": "สัปดาห์นี้ผมปิดงานไป 8 ใบและช่วยเทสฟีเจอร์ใหม่ ทุกอย่างไปได้ดีและเราทันกำหนดส่งแน่นอน มีปัญหาเล็กน้อยอย่างหนึ่งคือเซิร์ฟเวอร์เทสมันล่มบ่อย ผมจะลองไปดูพรุ่งนี้ ถ้าต้องการอะไรเพิ่มบอกได้เลยนะครับ",
+  "formal": "This week I resolved 8 tickets and assisted with testing the new feature. Progress is going smoothly, and we remain on track for the deadline. One minor issue: the test server keeps crashing, so I will investigate it tomorrow. Please let me know if you require anything further.",
+  "formal_th": "สัปดาห์นี้ผมแก้ไขงานเสร็จไป 8 ใบและช่วยทดสอบฟีเจอร์ใหม่ ความคืบหน้าเป็นไปด้วยดีและเรายังทันกำหนดส่ง มีปัญหาเล็กน้อยหนึ่งเรื่องคือเซิร์ฟเวอร์ทดสอบล่มบ่อย ผมจะตรวจสอบในวันพรุ่งนี้ หากต้องการสิ่งใดเพิ่มเติมโปรดแจ้งให้ผมทราบครับ",
+  "swaps": [
+   {
+    "from": "closed",
+    "to": "resolved",
+    "note_th": "\"แก้ไขเสร็จ\" resolved เป็นทางการกว่า closed"
+   },
+   {
+    "from": "helped",
+    "to": "assisted with",
+    "note_th": "\"ช่วยเหลือ\" assisted เป็นทางการกว่า helped"
+   },
+   {
+    "from": "going well",
+    "to": "going smoothly",
+    "note_th": "\"เป็นไปด้วยดี/ราบรื่น\" ฟังดูมืออาชีพ"
+   },
+   {
+    "from": "small problem",
+    "to": "minor issue",
+    "note_th": "\"ปัญหาเล็กน้อย\" minor issue สุภาพกว่า"
+   },
+   {
+    "from": "look into",
+    "to": "investigate",
+    "note_th": "\"ตรวจสอบ\" investigate เป็นทางการกว่า look into"
+   },
+   {
+    "from": "need",
+    "to": "require",
+    "note_th": "\"ต้องการ\" require สุภาพและทางการกว่า need"
+   },
+   {
+    "from": "anything else",
+    "to": "anything further",
+    "note_th": "\"สิ่งใดเพิ่มเติม\" ฟังดูสุภาพกว่า"
+   }
+  ],
+  "id": "weekly-status-update"
+ },
+ {
+  "title": "Reaching out to a new vendor",
+  "title_th": "ติดต่อซัพพลายเออร์รายใหม่",
+  "type": "vendor-partner-email",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "เขียนอีเมลหาซัพพลายเออร์รายใหม่ที่เพื่อนร่วมงานแนะนำมา เพื่อถามว่ารับพิมพ์โบรชัวร์ไหม",
+  "normal": "Hi, I got your name from a colleague. We're looking for a company to print our brochures. Can you tell me if you do this kind of work? If so, I'd love to set up a quick call. Thanks!",
+  "normal_th": "สวัสดีค่ะ ดิฉันได้ชื่อบริษัทของคุณมาจากเพื่อนร่วมงาน เรากำลังมองหาบริษัทที่รับพิมพ์โบรชัวร์ให้เรา คุณช่วยบอกได้ไหมคะว่ารับงานแบบนี้หรือเปล่า ถ้ารับ ดิฉันอยากนัดคุยกันสั้น ๆ สักหน่อยค่ะ ขอบคุณค่ะ",
+  "formal": "Dear Khun Somsak, Your company was recommended to us by a colleague. We are currently seeking a supplier to produce our brochures. Could you please let us know whether you offer this service? If so, we would be glad to arrange a brief call. Kind regards,",
+  "formal_th": "เรียนคุณสมศักดิ์ บริษัทของท่านได้รับการแนะนำมายังเราโดยเพื่อนร่วมงานท่านหนึ่ง ขณะนี้เรากำลังมองหาซัพพลายเออร์เพื่อผลิตโบรชัวร์ของเรา รบกวนท่านช่วยแจ้งให้ทราบด้วยว่าท่านให้บริการงานประเภทนี้หรือไม่ หากใช่ เรายินดีเป็นอย่างยิ่งที่จะนัดหมายพูดคุยกันสั้น ๆ ขอแสดงความนับถือ",
+  "swaps": [
+   {
+    "from": "I got your name from",
+    "to": "was recommended to us by",
+    "note_th": "'ได้รับการแนะนำ' ฟังดูสุภาพและเป็นทางการกว่า"
+   },
+   {
+    "from": "looking for",
+    "to": "seeking",
+    "note_th": "seeking เป็นทางการกว่า looking for"
+   },
+   {
+    "from": "do this kind of work",
+    "to": "offer this service",
+    "note_th": "ใช้คำว่า service ในงานธุรกิจดูมืออาชีพ"
+   },
+   {
+    "from": "set up a quick call",
+    "to": "arrange a brief call",
+    "note_th": "arrange/brief สุภาพกว่า set up/quick"
+   },
+   {
+    "from": "I'd love to",
+    "to": "we would be glad to",
+    "note_th": "เลี่ยงคำสนิทสนม ใช้รูปทางการ"
+   },
+   {
+    "from": "Thanks!",
+    "to": "Kind regards,",
+    "note_th": "คำลงท้ายอีเมลแบบทางการ"
+   }
+  ],
+  "id": "reaching-out-to-a-new-vendor"
+ },
+ {
+  "title": "Following up on a contract",
+  "title_th": "ติดตามสัญญา",
+  "type": "vendor-partner-email",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "ติดตามสัญญาที่ส่งให้คู่ค้าไปแล้วเมื่อสัปดาห์ก่อน แต่ยังไม่ได้รับคำตอบ",
+  "normal": "Hi John, Just checking in on the contract we sent last week. Have you had a chance to look at it? Let me know if anything needs changing. We're happy to go over it together if that helps. Thanks!",
+  "normal_th": "สวัสดีค่ะคุณจอห์น ขอเช็กเรื่องสัญญาที่เราส่งไปเมื่อสัปดาห์ที่แล้วหน่อยนะคะ คุณได้ลองดูหรือยังคะ ถ้าตรงไหนต้องแก้ก็บอกได้เลยค่ะ เรายินดีนั่งดูไปด้วยกันถ้ามันช่วยได้ค่ะ ขอบคุณค่ะ",
+  "formal": "Dear John, I am writing to follow up on the contract we sent last week. Have you had an opportunity to review it? Please let us know if any amendments are required. We would be happy to discuss it with you if that would be helpful. Best regards,",
+  "formal_th": "เรียนคุณจอห์น ดิฉันเขียนมาเพื่อติดตามเรื่องสัญญาที่เราส่งให้เมื่อสัปดาห์ที่แล้ว ไม่ทราบว่าท่านได้มีโอกาสตรวจสอบแล้วหรือยัง หากมีข้อใดต้องแก้ไข กรุณาแจ้งให้เราทราบ เรายินดีที่จะหารือร่วมกับท่านหากจะเป็นประโยชน์ ขอแสดงความนับถือ",
+  "swaps": [
+   {
+    "from": "Just checking in on",
+    "to": "I am writing to follow up on",
+    "note_th": "วลีมาตรฐานสำหรับติดตามงานทางอีเมล"
+   },
+   {
+    "from": "had a chance to look at",
+    "to": "had an opportunity to review",
+    "note_th": "review เป็นทางการกว่า look at"
+   },
+   {
+    "from": "anything needs changing",
+    "to": "any amendments are required",
+    "note_th": "amendment = การแก้ไข ใช้กับเอกสารสัญญา"
+   },
+   {
+    "from": "go over it together",
+    "to": "discuss it with you",
+    "note_th": "discuss ฟังดูมืออาชีพกว่า"
+   },
+   {
+    "from": "if that helps",
+    "to": "if that would be helpful",
+    "note_th": "รูปประโยคเต็มสุภาพกว่า"
+   },
+   {
+    "from": "Thanks!",
+    "to": "Best regards,",
+    "note_th": "คำลงท้ายแบบทางการ"
+   }
+  ],
+  "id": "following-up-on-a-contract"
+ },
+ {
+  "title": "Requesting a quote",
+  "title_th": "ขอใบเสนอราคา",
+  "type": "vendor-partner-email",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "ขอใบเสนอราคาเก้าอี้สำนักงานจำนวนมากจากผู้ขายสำหรับสาขาใหม่",
+  "normal": "Hi, We need 500 office chairs for our new branch. Could you send us a price? We'd also like to know how long delivery takes. Please get back to me by Friday if you can. Thanks a lot!",
+  "normal_th": "สวัสดีค่ะ เราต้องการเก้าอี้สำนักงาน 500 ตัวสำหรับสาขาใหม่ของเรา ช่วยส่งราคามาให้หน่อยได้ไหมคะ แล้วก็อยากรู้ด้วยว่าจัดส่งใช้เวลานานแค่ไหน ถ้าได้ ช่วยตอบกลับภายในวันศุกร์นะคะ ขอบคุณมากค่ะ",
+  "formal": "Dear Sir or Madam, We require 500 office chairs for our new branch. Could you please provide us with a quotation? We would also like to know the estimated delivery time. We would appreciate a response by Friday. Thank you.",
+  "formal_th": "เรียน ท่านผู้เกี่ยวข้อง เราต้องการเก้าอี้สำนักงานจำนวน 500 ตัวสำหรับสาขาใหม่ของเรา รบกวนท่านช่วยจัดทำใบเสนอราคาให้เราด้วย อีกทั้งเราอยากทราบระยะเวลาการจัดส่งโดยประมาณ เราจะขอบคุณมากหากได้รับการตอบกลับภายในวันศุกร์ ขอบคุณค่ะ",
+  "swaps": [
+   {
+    "from": "Hi,",
+    "to": "Dear Sir or Madam,",
+    "note_th": "ใช้เมื่อไม่ทราบชื่อผู้รับ"
+   },
+   {
+    "from": "need",
+    "to": "require",
+    "note_th": "require เป็นทางการกว่า need"
+   },
+   {
+    "from": "send us a price",
+    "to": "provide us with a quotation",
+    "note_th": "quotation = ใบเสนอราคา ศัพท์ธุรกิจ"
+   },
+   {
+    "from": "how long delivery takes",
+    "to": "the estimated delivery time",
+    "note_th": "ฟังดูเป็นทางการและชัดเจนกว่า"
+   },
+   {
+    "from": "get back to me",
+    "to": "a response",
+    "note_th": "ใช้ response ดูมืออาชีพกว่า"
+   },
+   {
+    "from": "Thanks a lot!",
+    "to": "Thank you.",
+    "note_th": "สุภาพและเรียบร้อยกว่า"
+   }
+  ],
+  "id": "requesting-a-quote"
+ },
+ {
+  "title": "Chasing a late deliverable",
+  "title_th": "ทวงสินค้าที่ส่งช้า",
+  "type": "vendor-partner-email",
+  "context": "business",
+  "level": "moderate",
+  "scenario_th": "ทวงชิ้นส่วนที่เลยกำหนดส่งจากซัพพลายเออร์ เพราะทำให้การผลิตติดขัด",
+  "normal": "Hi Anna, The parts were supposed to arrive on Monday but we still haven't got them. This is holding up our production. Can you check what's going on and let me know a new date? We really need them soon. Thanks!",
+  "normal_th": "สวัสดีค่ะคุณแอนนา ชิ้นส่วนควรจะมาถึงตั้งแต่วันจันทร์ แต่ตอนนี้เรายังไม่ได้รับเลยค่ะ เรื่องนี้ทำให้การผลิตของเราติดขัด ช่วยเช็กหน่อยได้ไหมคะว่าเกิดอะไรขึ้น แล้วแจ้งวันใหม่ให้ด้วย เราต้องใช้ด่วนจริง ๆ ค่ะ ขอบคุณค่ะ",
+  "formal": "Dear Anna, The parts were scheduled to arrive on Monday, but we have not yet received them. This delay is affecting our production schedule. Could you please look into the matter and confirm a revised delivery date? We would appreciate your urgent attention to this. Best regards,",
+  "formal_th": "เรียนคุณแอนนา ชิ้นส่วนมีกำหนดจัดส่งถึงในวันจันทร์ แต่จนถึงขณะนี้เรายังไม่ได้รับ ความล่าช้านี้ส่งผลกระทบต่อกำหนดการผลิตของเรา รบกวนท่านช่วยตรวจสอบเรื่องนี้และยืนยันวันจัดส่งใหม่ให้ด้วย เราจะขอบคุณมากหากท่านช่วยเร่งดำเนินการโดยด่วน ขอแสดงความนับถือ",
+  "swaps": [
+   {
+    "from": "were supposed to arrive",
+    "to": "were scheduled to arrive",
+    "note_th": "scheduled = มีกำหนด ทางการกว่า"
+   },
+   {
+    "from": "still haven't got them",
+    "to": "have not yet received them",
+    "note_th": "received สุภาพกว่า got"
+   },
+   {
+    "from": "is holding up",
+    "to": "is affecting",
+    "note_th": "affecting ดูเป็นมืออาชีพกว่า holding up"
+   },
+   {
+    "from": "check what's going on",
+    "to": "look into the matter",
+    "note_th": "วลีทางการสำหรับ 'ตรวจสอบเรื่องนี้'"
+   },
+   {
+    "from": "let me know a new date",
+    "to": "confirm a revised delivery date",
+    "note_th": "revised = ที่ปรับใหม่ ศัพท์ทางการ"
+   },
+   {
+    "from": "We really need them soon",
+    "to": "We would appreciate your urgent attention to this",
+    "note_th": "เลี่ยงน้ำเสียงเร่งรัดตรง ๆ ให้ดูสุภาพ"
+   },
+   {
+    "from": "Thanks!",
+    "to": "Best regards,",
+    "note_th": "คำลงท้ายแบบทางการ"
+   }
+  ],
+  "id": "chasing-a-late-deliverable"
  }
 ]
