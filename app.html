@@ -1949,6 +1949,21 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 .fm-l-vf { background: rgba(217,83,79,.14); color: #d9534f; }
 .fm-fam-note { font-size: 12.5px; color: var(--text); line-height: 1.5; }
 
+/* frequency badge (how often you'll see this word) */
+.fm-freq { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 800; border-radius: 999px; padding: 2px 9px 2px 6px; }
+.fm-fdots { display: inline-flex; gap: 2px; }
+.fm-fdot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; opacity: .25; }
+.fm-fdot.on { opacity: 1; }
+.fm-f4 { background: rgba(22,163,74,.16); color: #16a34a; }
+.fm-f3 { background: rgba(13,148,136,.15); color: #0d9488; }
+.fm-f2 { background: rgba(224,148,47,.16); color: #b8860b; }
+.fm-f1 { background: var(--surface2); color: var(--muted); }
+
+/* list sort toggle */
+.fm-sortrow { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); margin: 2px 2px 8px; }
+.fm-sortbtn { font-family: var(--font); font-size: 12px; font-weight: 800; color: var(--text); background: var(--surface2); border: 1px solid var(--border); border-radius: 999px; padding: 5px 11px; cursor: pointer; }
+.fm-sortbtn.on { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+
 .fm-eg { background: var(--surface2); border-radius: 14px; padding: 12px 14px; margin: 14px 0 4px; }
 .fm-eg-h { font-size: 14px; font-weight: 900; color: var(--text); margin-bottom: 8px; }
 .fm-eg-row { font-size: 14.5px; color: var(--text); line-height: 1.5; padding: 8px 0; }
@@ -10155,6 +10170,13 @@ PT.formal = (function () {
     formal: { th: "ทางการ", cls: "fm-l-f" },
     "very formal": { th: "ทางการมาก", cls: "fm-l-vf" }
   };
+  var FREQ = { 4: { th: "เจอบ่อยมาก", cls: "fm-f4" }, 3: { th: "เจอบ่อย", cls: "fm-f3" }, 2: { th: "เจอบ้าง", cls: "fm-f2" }, 1: { th: "นานๆ ที", cls: "fm-f1" } };
+  var lsort = "az";       // list sort: az | freq
+  function freqBadge(r) {
+    r = r || 1; var f = FREQ[r] || FREQ[1], dots = "";
+    for (var i = 1; i <= 4; i++) dots += '<span class="fm-fdot' + (i <= r ? " on" : "") + '"></span>';
+    return '<span class="fm-freq ' + f.cls + '"><span class="fm-fdots">' + dots + '</span>' + f.th + '</span>';
+  }
 
   function fetchData(cb) {
     if (DATA) { cb(); return; }
@@ -10175,7 +10197,7 @@ PT.formal = (function () {
           if (bl && bl.eg_formal && low(bl.eg_formal).indexOf(low(f.w)) >= 0) { eg = bl.eg_formal; egth = bl.eg_formal_th; break; }
         }
         if (!eg) { var any = e.biz || e.tech; if (any) { eg = any.eg_formal; egth = any.eg_formal_th; } }
-        flat.push({ key: key, w: f.w, th: f.th, use: f.use, level: f.level, note: f.note_en, base: e.base, base_th: e.base_th, theme: e.theme, eg: eg, egth: egth });
+        flat.push({ key: key, w: f.w, th: f.th, use: f.use, level: f.level, note: f.note_en, rank: f.rank || 1, base: e.base, base_th: e.base_th, theme: e.theme, eg: eg, egth: egth });
       }
     }
   }
@@ -10264,6 +10286,8 @@ PT.formal = (function () {
   }
   function renderList(body, v) {
     var list = flat.filter(matchList);
+    if (lsort === "freq") list = list.slice().sort(function (a, b) { return (b.rank - a.rank) || (a.w < b.w ? -1 : 1); });
+    else list = list.slice().sort(function (a, b) { return a.w < b.w ? -1 : (a.w > b.w ? 1 : 0); });
     var h = [];
     h.push('<div class="fm-sub">คำทางการทั้งหมด ' + flat.length + ' คำ — จำได้แล้ว ' + knownCount() + ' คำ</div>');
     h.push('<input class="fm-search" id="fm-lq" type="text" autocomplete="off" placeholder="ค้นหาคำทางการ เช่น provide, resolve…" value="' + esc(lq) + '">');
@@ -10271,6 +10295,9 @@ PT.formal = (function () {
       '<button class="fm-chip' + (lctx === "" ? " on" : "") + '" data-fm-ctx="">📚 ทั้งหมด</button>' +
       '<button class="fm-chip' + (lctx === "business" ? " on" : "") + '" data-fm-ctx="business">💼 ธุรกิจ</button>' +
       '<button class="fm-chip' + (lctx === "technical" ? " on" : "") + '" data-fm-ctx="technical">⚙️ เทคนิค</button></div>');
+    h.push('<div class="fm-sortrow">เรียง: ' +
+      '<button class="fm-sortbtn' + (lsort === "az" ? " on" : "") + '" data-fm-sort="az">ก-Z</button>' +
+      '<button class="fm-sortbtn' + (lsort === "freq" ? " on" : "") + '" data-fm-sort="freq">🔥 เจอบ่อยสุดก่อน</button></div>');
     var pages = Math.max(1, Math.ceil(list.length / PER_LIST)); if (listPage >= pages) listPage = pages - 1; if (listPage < 0) listPage = 0;
     var slice = list.slice(listPage * PER_LIST, listPage * PER_LIST + PER_LIST);
     h.push('<div class="fm-count">' + list.length + ' คำ</div>' + pagerHtml(listPage, pages) + '<div class="fm-wlist">');
@@ -10279,7 +10306,7 @@ PT.formal = (function () {
       h.push('<div class="fm-wrow">' +
         '<div class="fm-wrow-top"><span class="fm-wrow-w">' + esc(f.w) + '</span>' + sayBtn(f.w) + '<span class="fm-wrow-th">' + esc(f.th) + '</span>' + (known()[f.key] ? '<span class="fm-learned">✓ จำแล้ว</span>' : '') + '</div>' +
         '<div class="fm-wrow-base">ทางการของ <b>' + esc(f.base) + '</b> (' + esc(f.base_th) + ')</div>' +
-        '<div class="fm-wrow-badges">' + useBadge(f.use) + lvBadge(f.level) + '</div>' +
+        '<div class="fm-wrow-badges">' + freqBadge(f.rank) + useBadge(f.use) + lvBadge(f.level) + '</div>' +
         '<div class="fm-wrow-note">' + esc(f.note) + '</div>' +
         (f.eg ? '<div class="fm-wrow-eg">“' + esc(f.eg) + '” ' + sayBtn(f.eg) + '<span class="fm-wrow-egth">' + esc(f.egth) + '</span></div>' : '') +
         '</div>');
@@ -10290,6 +10317,7 @@ PT.formal = (function () {
     var qi = body.querySelector("#fm-lq");
     if (qi) qi.oninput = function () { lq = qi.value; listPage = 0; var p = qi.selectionStart; renderList(body, v); var q2 = body.querySelector("#fm-lq"); if (q2) { q2.focus(); try { q2.setSelectionRange(p, p); } catch (e) {} } };
     [].forEach.call(body.querySelectorAll("[data-fm-ctx]"), function (b) { b.onclick = function () { lctx = b.getAttribute("data-fm-ctx"); listPage = 0; renderList(body, v); }; });
+    [].forEach.call(body.querySelectorAll("[data-fm-sort]"), function (b) { b.onclick = function () { lsort = b.getAttribute("data-fm-sort"); listPage = 0; renderList(body, v); }; });
     [].forEach.call(body.querySelectorAll("[data-pg]"), function (b) { b.onclick = function () { listPage = parseInt(b.getAttribute("data-pg"), 10); renderList(body, v); pgTop(); }; });
     wireSay(body);
   }
@@ -10350,7 +10378,7 @@ PT.formal = (function () {
         '<div class="fm-card-w2">' + esc(f.w) + '</div>' +
         '<div class="fm-card-th">' + esc(f.th) + '</div>' +
         '<div class="fm-card-base">ทางการของ <b>' + esc(f.base) + '</b> (' + esc(f.base_th) + ')</div>' +
-        '<div class="fm-card-badges">' + useBadge(f.use) + lvBadge(f.level) + '</div>' +
+        '<div class="fm-card-badges">' + freqBadge(f.rank) + useBadge(f.use) + lvBadge(f.level) + '</div>' +
         '<div class="fm-card-note">' + esc(f.note) + '</div>' +
         (f.eg ? '<div class="fm-card-eg">“' + esc(f.eg) + '” ' + sayBtn(f.eg) + '<div class="fm-card-egth">' + esc(f.egth) + '</div></div>' : '') +
         '</div>');
@@ -10527,7 +10555,7 @@ PT.formal = (function () {
   function sayBtn(txt) { return '<button class="fm-say" data-say="' + esc(txt) + '">🔊</button>'; }
   function famRow(f) {
     return '<div class="fm-fam"><div class="fm-fam-top"><span class="fm-fam-w">' + esc(f.w) + '</span> ' + sayBtn(f.w) +
-      '<span class="fm-fam-th">' + esc(f.th) + '</span></div><div class="fm-badges">' + useBadge(f.use) + lvBadge(f.level) + '</div>' +
+      '<span class="fm-fam-th">' + esc(f.th) + '</span></div><div class="fm-badges">' + freqBadge(f.rank) + useBadge(f.use) + lvBadge(f.level) + '</div>' +
       '<div class="fm-fam-note">' + esc(f.note_en) + '</div></div>';
   }
   function egBlock(title, ic, b) {
