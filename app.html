@@ -1852,6 +1852,29 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 .fm-cd-done-h { font-size: 22px; font-weight: 900; margin-top: 4px; }
 .fm-cd-done-s { font-size: 15px; color: var(--accent); font-weight: 800; margin: 6px 0 18px; }
 
+/* quiz (tab 4) */
+.fm-qz-score { text-align: center; font-size: 14px; color: var(--muted); margin: 4px 0 10px; }
+.fm-qz-score b { color: var(--accent); font-size: 18px; }
+.fm-qz-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 15px; box-shadow: var(--shadow); margin-top: 4px; }
+.fm-qz-ctx { margin-bottom: 10px; }
+.fm-qz-lab { font-size: 11px; font-weight: 800; color: var(--muted); letter-spacing: .04em; }
+.fm-qz-q { font-size: 18px; font-weight: 700; color: var(--text); line-height: 1.5; margin: 3px 0 2px; }
+.fm-qz-qth { font-size: 12.5px; color: var(--muted); margin-bottom: 14px; }
+.fm-qz-ask { font-size: 13px; font-weight: 800; color: var(--accent); margin-bottom: 10px; }
+.fm-qz-opts { display: flex; flex-direction: column; gap: 9px; }
+.fm-qz-opt { font-family: var(--font); font-size: 16px; font-weight: 800; color: var(--text); background: var(--surface2); border: 1.5px solid var(--border); border-radius: 13px; padding: 14px; cursor: pointer; }
+.fm-qz-opt:active { transform: scale(.98); }
+.fm-qz-opt.ok { background: rgba(22,163,74,.16); border-color: #16a34a; color: #16a34a; }
+.fm-qz-opt.no { background: rgba(217,83,79,.14); border-color: #d9534f; color: #d9534f; }
+.fm-qz-reveal { background: var(--surface2); border-radius: 13px; padding: 12px 14px; margin-top: 14px; }
+.fm-qz-r-f { font-size: 15px; font-weight: 700; color: #16a34a; line-height: 1.5; }
+.fm-qz-r-th { font-size: 12.5px; color: var(--muted); font-weight: 400; margin-top: 2px; }
+.fm-qz-r-note { font-size: 13px; color: var(--text); line-height: 1.5; margin-top: 8px; }
+.fm-qz-r-note b { color: var(--accent); }
+.fm-qz-r-ctx { font-size: 12.5px; font-weight: 800; color: var(--accent-ink); background: var(--accent-soft); border-radius: 8px; padding: 6px 10px; margin-top: 8px; display: inline-block; }
+.fm-qz-next { display: block; width: 100%; font-family: var(--font); font-size: 15px; font-weight: 800; color: var(--accent-ink); background: var(--accent); border: none; border-radius: 14px; padding: 14px; margin-top: 14px; cursor: pointer; box-shadow: var(--shadow); }
+.fm-qz-next:active { transform: scale(.99); }
+
 .fm-transbtn { display: block; width: 100%; font-family: var(--font); font-size: 14px; font-weight: 800; color: var(--accent-ink);
   background: var(--accent); border: none; border-radius: 14px; padding: 12px; margin-bottom: 12px; cursor: pointer; box-shadow: var(--shadow); }
 .fm-transbtn:active { transform: scale(.99); }
@@ -10049,8 +10072,10 @@ PT.formal = (function () {
   "use strict";
   var DATA = null;        // loaded formal.json
   var flat = null;        // flattened, deduped formal words (for list + cards)
-  var tab = "map";        // map | list | cards
+  var tab = "map";        // map | list | cards | quiz
   var view = "";          // "" = tab shell ; detail ; translate
+  var quizPool = null;    // [{eg, egth, egf, egfth, ctx, ans, base, base_th, family}]
+  var QZ = { ctx: "", cur: null, answered: false, chosen: "", score: 0, total: 0 };
   var q = "";             // map search
   var lq = "";            // list search
   var theme = "";         // map theme filter
@@ -10129,9 +10154,10 @@ PT.formal = (function () {
     var h = ['<div class="fm-wrap">'];
     h.push('<div class="fm-hero">✒️ เขียนอังกฤษให้มืออาชีพ</div>');
     h.push('<div class="fm-tabs">' +
-      '<button class="fm-tab' + (tab === "map" ? " on" : "") + '" data-tab="map">🗺️ แผนที่คำ</button>' +
-      '<button class="fm-tab' + (tab === "list" ? " on" : "") + '" data-tab="list">📋 รายการคำ</button>' +
-      '<button class="fm-tab' + (tab === "cards" ? " on" : "") + '" data-tab="cards">🎴 แฟลชการ์ด</button></div>');
+      '<button class="fm-tab' + (tab === "map" ? " on" : "") + '" data-tab="map">🗺️ แผนที่</button>' +
+      '<button class="fm-tab' + (tab === "list" ? " on" : "") + '" data-tab="list">📋 รายการ</button>' +
+      '<button class="fm-tab' + (tab === "cards" ? " on" : "") + '" data-tab="cards">🎴 การ์ด</button>' +
+      '<button class="fm-tab' + (tab === "quiz" ? " on" : "") + '" data-tab="quiz">🎯 ควิซ</button></div>');
     h.push('<div id="fm-body"></div></div>');
     v.innerHTML = h.join("");
     [].forEach.call(v.querySelectorAll("[data-tab]"), function (b) { b.onclick = function () { tab = b.getAttribute("data-tab"); CD.on = false; renderShell(v); }; });
@@ -10141,6 +10167,7 @@ PT.formal = (function () {
     var body = v.querySelector("#fm-body"); if (!body) return;
     if (tab === "list") return renderList(body, v);
     if (tab === "cards") return renderCards(body, v);
+    if (tab === "quiz") return renderQuiz(body, v);
     return renderMap(body, v);
   }
 
@@ -10289,6 +10316,84 @@ PT.formal = (function () {
     else { CD.queue.splice(Math.min(4, CD.queue.length), 0, f); }  // repeat soon
     CD.flip = false;
     renderPlayer(body, v);
+  }
+
+  /* ============ TAB 4: QUIZ (normal sentence -> pick the formal word) ============ */
+  function firstTok(s) { return low(s).split(" ")[0]; }
+  function buildQuiz() {
+    quizPool = [];
+    for (var i = 0; i < DATA.length; i++) {
+      var e = DATA[i], blocks = [[e.biz, "business"], [e.tech, "technical"]];
+      for (var b = 0; b < blocks.length; b++) {
+        var bl = blocks[b][0], ctx = blocks[b][1];
+        if (!bl || !bl.eg_normal || !bl.eg_formal) continue;
+        // which family word appears in the formal sentence = the answer
+        var ans = null, bestLen = 0, egf = low(bl.eg_formal);
+        for (var k = 0; k < (e.family || []).length; k++) {
+          var f = e.family[k], w = low(f.w);
+          var hit = egf.indexOf(w) >= 0 ? w.length : (egf.indexOf(firstTok(f.w)) >= 0 ? 1 : 0);
+          if (hit > bestLen) { bestLen = hit; ans = f; }
+        }
+        if (!ans) continue;
+        quizPool.push({ eg: bl.eg_normal, egth: bl.eg_normal_th, egf: bl.eg_formal, egfth: bl.eg_formal_th, ctx: ctx, ans: ans, base: e.base, base_th: e.base_th });
+      }
+    }
+  }
+  function quizOpts(qi) {
+    var opts = [qi.ans.w], seen = {}, g = 0; seen[norm(qi.ans.w)] = 1;
+    while (opts.length < 4 && g++ < 100) {
+      var r = flat[Math.floor(Math.random() * flat.length)];
+      if (norm(r.base) === norm(qi.base) || seen[norm(r.w)]) continue;
+      seen[norm(r.w)] = 1; opts.push(r.w);
+    }
+    return shuffle(opts);
+  }
+  function quizPick() {
+    var pool = quizPool.filter(function (x) { return !QZ.ctx || x.ctx === QZ.ctx; });
+    if (!pool.length) { QZ.cur = null; return; }
+    QZ.cur = pool[Math.floor(Math.random() * pool.length)];
+    QZ.cur._opts = quizOpts(QZ.cur);
+    QZ.answered = false; QZ.chosen = "";
+  }
+  function renderQuiz(body, v) {
+    if (!quizPool) buildQuiz();
+    if (!QZ.cur) quizPick();
+    var q = QZ.cur, h = [];
+    h.push('<div class="fm-qz-score">คะแนน <b>' + QZ.score + '</b> / ' + QZ.total + '</div>');
+    h.push('<div class="fm-chips"><button class="fm-chip' + (QZ.ctx === "" ? " on" : "") + '" data-qz-ctx="">📚 ทั้งหมด</button>' +
+      '<button class="fm-chip' + (QZ.ctx === "business" ? " on" : "") + '" data-qz-ctx="business">💼 อีเมล/ธุรกิจ</button>' +
+      '<button class="fm-chip' + (QZ.ctx === "technical" ? " on" : "") + '" data-qz-ctx="technical">⚙️ เทคนิค</button></div>');
+    if (!q) { h.push('<div class="fm-load">ไม่มีคำถามในบริบทนี้</div>'); body.innerHTML = h.join(""); wireCtx(body, v); return; }
+    var cb = q.ctx === "business" ? '<span class="fm-badge fm-u-biz">💼 อีเมล / ธุรกิจ</span>' : '<span class="fm-badge fm-u-tech">⚙️ เทคนิค / โค้ด</span>';
+    h.push('<div class="fm-qz-card"><div class="fm-qz-ctx">' + cb + '</div>');
+    h.push('<div class="fm-qz-lab">ประโยคธรรมดา</div><div class="fm-qz-q">' + esc(q.eg) + ' ' + sayBtn(q.eg) + '</div><div class="fm-qz-qth">' + esc(q.egth) + '</div>');
+    h.push('<div class="fm-qz-ask">ควรใช้คำทางการคำไหน?</div><div class="fm-qz-opts">');
+    for (var i = 0; i < q._opts.length; i++) {
+      var o = q._opts[i], cls = "";
+      if (QZ.answered) { if (norm(o) === norm(q.ans.w)) cls = " ok"; else if (norm(o) === norm(QZ.chosen)) cls = " no"; }
+      h.push('<button class="fm-qz-opt' + cls + '" data-qz-opt="' + esc(o) + '"' + (QZ.answered ? " disabled" : "") + '>' + esc(o) + '</button>');
+    }
+    h.push('</div>');
+    if (QZ.answered) {
+      h.push('<div class="fm-qz-reveal">' +
+        '<div class="fm-qz-r-f">✓ ' + esc(q.egf) + ' ' + sayBtn(q.egf) + '<div class="fm-qz-r-th">' + esc(q.egfth) + '</div></div>' +
+        '<div class="fm-qz-r-note"><b>' + esc(q.ans.w) + '</b> (' + esc(q.ans.th) + ') — ' + esc(q.ans.note_en) + '</div>' +
+        '<div class="fm-qz-r-ctx">' + (q.ctx === "business" ? "💼 คำนี้ใช้ตอนเขียนอีเมล / งานธุรกิจ" : "⚙️ คำนี้ใช้ในงานเทคนิค / เอกสารโค้ด") + '</div></div>');
+      h.push('<button class="fm-qz-next" data-qz-next="1">ถัดไป ▶</button>');
+    }
+    h.push('</div>');
+    body.innerHTML = h.join("");
+    wireCtx(body, v);
+    [].forEach.call(body.querySelectorAll("[data-qz-opt]"), function (bt) { bt.onclick = function () { quizAnswer(bt.getAttribute("data-qz-opt"), body, v); }; });
+    var nx = body.querySelector("[data-qz-next]"); if (nx) nx.onclick = function () { quizPick(); renderQuiz(body, v); };
+    wireSay(body);
+  }
+  function wireCtx(body, v) { [].forEach.call(body.querySelectorAll("[data-qz-ctx]"), function (b) { b.onclick = function () { QZ.ctx = b.getAttribute("data-qz-ctx"); QZ.cur = null; renderQuiz(body, v); }; }); }
+  function quizAnswer(o, body, v) {
+    if (QZ.answered) return;
+    QZ.answered = true; QZ.chosen = o; QZ.total++;
+    if (norm(o) === norm(QZ.cur.ans.w)) QZ.score++;
+    renderQuiz(body, v);
   }
 
   /* ---------- detail (from map) ---------- */
