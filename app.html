@@ -1859,6 +1859,30 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
   border-radius: 12px; padding: 11px; cursor: pointer; text-align: center; }
 .pg-sh-formal:active { transform: scale(.99); }
 
+/* "ฟังแล้วพูดตาม" shadowing player */
+.fm-sh-scope { display: flex; gap: 8px; justify-content: center; margin: 6px 0 4px; }
+.fm-sh-prog { text-align: center; font-size: 13px; font-weight: 800; color: var(--muted); margin: 8px 0; font-variant-numeric: tabular-nums; }
+.fm-sh-card { background: linear-gradient(135deg, rgba(37,99,235,.10), var(--surface)); border: 1.5px solid var(--border);
+  border-radius: 20px; box-shadow: var(--shadow); padding: 26px 18px; text-align: center; }
+.fm-sh-en { font-size: 26px; font-weight: 900; color: #2563eb; line-height: 1.35; word-break: break-word; }
+.fm-sh-th { font-size: 15px; color: var(--text); margin-top: 8px; }
+.fm-sh-plays { display: flex; gap: 10px; justify-content: center; margin-top: 18px; }
+.fm-sh-play, .fm-sh-slow { font-family: var(--font); font-size: 16px; font-weight: 800; border: none; border-radius: 999px;
+  padding: 12px 22px; cursor: pointer; box-shadow: var(--shadow); }
+.fm-sh-play { color: #fff; background: #2563eb; }
+.fm-sh-slow { color: var(--text); background: var(--surface2); border: 1px solid var(--border); }
+.fm-sh-play:active, .fm-sh-slow:active { transform: scale(.97); }
+.fm-sh-eg { font-size: 13.5px; color: var(--muted); line-height: 1.55; margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--border); font-style: italic; }
+.fm-sh-egth { display: block; font-size: 12.5px; font-style: normal; margin-top: 4px; }
+.fm-sh-nav { display: flex; gap: 10px; margin-top: 16px; }
+.fm-sh-prev { flex: 0 0 auto; font-family: var(--font); font-size: 14px; font-weight: 800; color: var(--text); background: var(--surface2);
+  border: 1px solid var(--border); border-radius: 14px; padding: 13px 16px; cursor: pointer; }
+.fm-sh-next { flex: 1 1 auto; font-family: var(--font); font-size: 15px; font-weight: 800; color: var(--accent-ink); background: var(--accent);
+  border: none; border-radius: 14px; padding: 13px; cursor: pointer; box-shadow: var(--shadow); }
+.fm-sh-prev:active, .fm-sh-next:active { transform: scale(.98); }
+.fm-sh-shuffle { display: block; width: 100%; margin-top: 10px; background: none; border: none; color: var(--muted);
+  font-family: var(--font); font-size: 13px; font-weight: 700; padding: 10px; cursor: pointer; }
+
 /* word of the day (map home) */
 .fm-wod { background: linear-gradient(135deg, rgba(37,99,235,.10), var(--surface)); border: 1px solid var(--border);
   border-left: 4px solid #2563eb; border-radius: 15px; padding: 13px 14px; margin: 2px 0 12px; box-shadow: var(--shadow); }
@@ -10260,6 +10284,7 @@ PT.formal = (function () {
   var pfn = "";           // phrases function filter
   var pctx = "";          // phrases context filter ("", business, technical)
   var pkind = "";         // phrases kind filter ("", phrase, linker)
+  var SH = { list: null, idx: 0, scope: "phrase" };  // "ฟังแล้วพูดตาม" shadowing player
 
   function pgTop() { try { window.scrollTo(0, 0); } catch (e) {} var vv = document.getElementById("view"); if (vv) vv.scrollTop = 0; var ap = document.getElementById("app"); if (ap) ap.scrollTop = 0; }
   function pagerHtml(page, pages) {
@@ -10347,7 +10372,7 @@ PT.formal = (function () {
   }
   function paint(v) {
     if (view === "detail") return renderDetail(v);
-    if (view === "translate") return renderTranslate(v);
+    if (view === "shadow") return renderShadow(v);
     if (view === "article") return renderArticle(v);
     return renderShell(v);
   }
@@ -10389,7 +10414,7 @@ PT.formal = (function () {
     var h = [];
     h.push('<div class="fm-sub">คำง่ายๆ กลายเป็นคำทางการยังไง ทั้งสาย <b>ธุรกิจ</b> และ <b>เทคนิค</b> — แตะดูตระกูลคำ</div>');
     if (mapPage === 0 && !q && !theme) h.push(wodHtml());
-    h.push('<button class="fm-transbtn" data-fm-trans="1">🪄 แปลประโยคของฉันให้เป็นทางการ</button>');
+    h.push('<button class="fm-transbtn" data-fm-shadow="1">🗣️ ฟังแล้วพูดตาม — ฝึกออกเสียงวลีทางการ</button>');
     h.push('<input class="fm-search" id="fm-q" type="text" autocomplete="off" placeholder="ค้นหา เช่น give, ask, fix, ขอ, แก้…" value="' + esc(q) + '">');
     h.push('<div class="fm-chips">');
     for (var i = 0; i < THEMES.length; i++) h.push('<button class="fm-chip' + (theme === THEMES[i].id ? " on" : "") + '" data-fm-theme="' + THEMES[i].id + '">' + THEMES[i].ic + ' ' + esc(THEMES[i].th) + '</button>');
@@ -10408,7 +10433,7 @@ PT.formal = (function () {
     [].forEach.call(body.querySelectorAll("[data-fm-theme]"), function (b) { b.onclick = function () { theme = b.getAttribute("data-fm-theme"); mapPage = 0; renderMap(body, v); }; });
     [].forEach.call(body.querySelectorAll("[data-pg]"), function (b) { b.onclick = function () { mapPage = parseInt(b.getAttribute("data-pg"), 10); renderMap(body, v); pgTop(); }; });
     [].forEach.call(body.querySelectorAll("[data-fm-base]"), function (b) { b.onclick = function () { cur = find(b.getAttribute("data-fm-base")); view = "detail"; paint(v); }; });
-    var tb = body.querySelector("[data-fm-trans]"); if (tb) tb.onclick = function () { view = "translate"; paint(v); };
+    var tb = body.querySelector("[data-fm-shadow]"); if (tb) tb.onclick = function () { view = "shadow"; SH.list = null; SH.idx = 0; paint(v); };
     var wb = body.querySelector("[data-fm-wod]"); if (wb) wb.onclick = function () { setKnown(wb.getAttribute("data-fm-wod")); renderMap(body, v); };
     wireSay(body);
   }
@@ -10829,42 +10854,46 @@ PT.formal = (function () {
     wireSay(v);
   }
 
-  /* ---------- translate helper ---------- */
-  function renderTranslate(v) {
-    var h = ['<div class="fm-wrap">'];
+  /* ---------- "ฟังแล้วพูดตาม" (shadowing) — listen then repeat aloud, no Claude ---------- */
+  function shuffleArr(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function shScope() {
+    // shadow the phrases; "phrase" = full set-phrases (best to say), "all" = phrases + connectors
+    if (!PHR) return [];
+    return SH.scope === "all" ? PHR.slice() : PHR.filter(function (p) { return p.kind === "phrase"; });
+  }
+  function renderShadow(v) {
+    if (!PHR) { v.innerHTML = '<div class="fm-wrap"><button class="fm-back" data-fm-back="1">‹ กลับ</button><div class="fm-load">กำลังโหลด…</div></div>';
+      var bb = v.querySelector("[data-fm-back]"); if (bb) bb.onclick = function () { view = ""; paint(v); };
+      fetchPhr(function () { if (!PHR) { v.querySelector(".fm-load").textContent = "โหลดข้อมูลไม่สำเร็จ ลองใหม่"; return; } renderShadow(v); }); return; }
+    if (!SH.list || !SH.list.length) { SH.list = shuffleArr(shScope()); SH.idx = 0; }
+    if (SH.idx >= SH.list.length) SH.idx = 0;
+    var it = SH.list[SH.idx];
+    var h = ['<div class="fm-wrap fm-sh-wrap">'];
     h.push('<button class="fm-back" data-fm-back="1">‹ กลับ</button>');
-    h.push('<div class="fm-hero">🪄 แปลให้เป็นทางการ</div>');
-    h.push('<div class="fm-sub">พิมพ์ประโยคง่ายๆ ของคุณ แล้วกดปุ่ม จะได้คำสั่งไปวางใน Claude ให้ช่วยเขียนเวอร์ชันทางการ ทั้งแบบธุรกิจและเทคนิค</div>');
-    h.push('<textarea class="fm-ta" id="fm-ta" rows="4" placeholder="เช่น can you give me the file? / โปรเจกต์จะช้าไปหน่อยนะ"></textarea>');
-    h.push('<button class="fm-copy" data-fm-copy="1">📋 คัดลอกคำสั่งไปให้ Claude เขียนให้ทางการ</button>');
-    h.push('<div class="fm-copymsg" id="fm-copymsg"></div>');
-    h.push('<textarea class="fm-out" id="fm-out" readonly style="display:none"></textarea>');
-    h.push('<div class="fm-tip">เปิดแชท Claude แล้ววาง (paste) — Claude จะเขียนให้ทั้งเวอร์ชัน <b>ธุรกิจ/อีเมล</b> และ <b>เทคนิค/เอกสาร</b> พร้อมบอกว่าใช้คำทางการคำไหนและทำไม</div>');
+    h.push('<div class="fm-hero">🗣️ ฟังแล้วพูดตาม</div>');
+    h.push('<div class="fm-sub">กด <b>ฟัง</b> แล้วพูดออกเสียงตามให้เหมือน ฝึกออกเสียงวลีทางการ พูดซ้ำได้เรื่อยๆ จนคล่อง</div>');
+    h.push('<div class="fm-sh-scope"><button class="fm-sortbtn' + (SH.scope === "phrase" ? " on" : "") + '" data-sh-scope="phrase">🧩 เฉพาะวลี</button>' +
+      '<button class="fm-sortbtn' + (SH.scope === "all" ? " on" : "") + '" data-sh-scope="all">➕ รวมคำเชื่อม</button></div>');
+    h.push('<div class="fm-sh-prog">' + (SH.idx + 1) + ' / ' + SH.list.length + '</div>');
+    h.push('<div class="fm-sh-card">');
+    h.push('<div class="fm-sh-en">' + esc(it.en) + '</div>');
+    h.push('<div class="fm-sh-th">' + esc(it.th) + '</div>');
+    h.push('<div class="fm-sh-plays"><button class="fm-sh-play" data-say="' + esc(it.en) + '">🔊 ฟัง</button>' +
+      '<button class="fm-sh-slow" data-slow="' + esc(it.en) + '">🐢 ช้าๆ</button></div>');
+    if (it.eg) h.push('<div class="fm-sh-eg">ประโยคตัวอย่าง:<br>“' + esc(it.eg) + '” <button class="fm-say" data-say="' + esc(it.eg) + '">🔊</button>' +
+      '<button class="fm-say" data-slow="' + esc(it.eg) + '">🐢</button><div class="fm-sh-egth">' + esc(it.eg_th) + '</div></div>');
+    h.push('</div>');
+    h.push('<div class="fm-sh-nav"><button class="fm-sh-prev" data-sh-nav="-1">‹ ก่อนหน้า</button>' +
+      '<button class="fm-sh-next" data-sh-nav="1">พูดตามแล้ว ถัดไป ›</button></div>');
+    h.push('<button class="fm-sh-shuffle" data-sh-shuffle="1">🔀 สลับลำดับใหม่</button>');
     h.push('</div>');
     v.innerHTML = h.join("");
     v.querySelector("[data-fm-back]").onclick = function () { view = ""; paint(v); };
-    v.querySelector("[data-fm-copy]").onclick = function () {
-      var ta = v.querySelector("#fm-ta"), txt = (ta && ta.value || "").trim();
-      if (!txt) { setMsg(v, "พิมพ์ประโยคก่อนนะ"); return; }
-      var prompt = "You are an English writing coach for a Thai professional. Rewrite my sentence in professional English.\n" +
-        "Give me:\n1) a formal BUSINESS / email version,\n2) a formal TECHNICAL / documentation version (only if it fits),\n" +
-        "3) a short note on which formal verbs you used and why (simple English).\n" +
-        "Keep it modern and natural. Do not use old-fashioned words.\n\nMy sentence: " + txt;
-      var outEl = v.querySelector("#fm-out");
-      if (outEl) { outEl.value = prompt; outEl.style.display = "block"; try { outEl.focus(); outEl.setSelectionRange(0, prompt.length); } catch (e) {} }
-      copyText(prompt, function (ok) { setMsg(v, ok ? "✓ คัดลอกแล้ว! เปิด Claude แล้ววางได้เลย" : "คัดลอกอัตโนมัติไม่ได้ — กดค้างที่กล่องข้างล่าง เลือกทั้งหมด แล้ว Copy ไปวางใน Claude"); });
-    };
-  }
-  function setMsg(v, m) { var el = v.querySelector("#fm-copymsg"); if (el) el.textContent = m; }
-  function copyText(t, cb) {
-    try { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(t).then(function () { cb(true); }, function () { cb(fallbackCopy(t)); }); return; } } catch (e) {}
-    cb(fallbackCopy(t));
-  }
-  function fallbackCopy(t) {
-    try {
-      var ta = document.createElement("textarea"); ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0";
-      document.body.appendChild(ta); ta.focus(); ta.select(); var ok = false; try { ok = document.execCommand("copy"); } catch (e) {} document.body.removeChild(ta); return ok;
-    } catch (e) { return false; }
+    try { speak(it.en); } catch (e) {}   // auto-play on show (within the tap gesture, so iOS allows it)
+    [].forEach.call(v.querySelectorAll("[data-sh-scope]"), function (b) { b.onclick = function () { SH.scope = b.getAttribute("data-sh-scope"); SH.list = null; SH.idx = 0; renderShadow(v); }; });
+    [].forEach.call(v.querySelectorAll("[data-sh-nav]"), function (b) { b.onclick = function () { var d = parseInt(b.getAttribute("data-sh-nav"), 10); SH.idx = (SH.idx + d + SH.list.length) % SH.list.length; renderShadow(v); }; });
+    var shb = v.querySelector("[data-sh-shuffle]"); if (shb) shb.onclick = function () { SH.list = shuffleArr(shScope()); SH.idx = 0; renderShadow(v); };
+    wireSay(v);
   }
 
   function wireSay(root) { [].forEach.call(root.querySelectorAll("[data-say]"), function (b) { b.onclick = function (ev) { ev.stopPropagation(); try { speak(b.getAttribute("data-say")); } catch (e) {} }; }); }
