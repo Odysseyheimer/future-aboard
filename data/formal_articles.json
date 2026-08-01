@@ -3728,5 +3728,635 @@
    }
   ],
   "id": "chasing-a-late-deliverable"
+ },
+ {
+  "title": "App Was Down This Morning",
+  "title_th": "แอปล่มเมื่อเช้านี้",
+  "type": "apology-escalation",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "แอปของบริษัทล่มไปสองชั่วโมง ต้องแจ้งขอโทษลูกค้าทุกคน",
+  "normal": "Hi everyone, sorry our app was down this morning. It broke for about two hours, and we know that was a pain. We've fixed the problem now, and it won't happen again. Thanks for waiting.",
+  "normal_th": "สวัสดีทุกคนครับ ขอโทษที่แอปของเราล่มเมื่อเช้านี้ มันใช้ไม่ได้ประมาณสองชั่วโมง และเรารู้ว่ามันน่าหงุดหงิด ตอนนี้เราแก้ปัญหาเรียบร้อยแล้ว และจะไม่ให้เกิดขึ้นอีก ขอบคุณที่รอนะครับ",
+  "formal": "Dear customers, we apologize for the service outage this morning. Our app was unavailable for approximately two hours, and we understand this caused inconvenience. The issue has now been resolved, and we have taken steps to prevent it from recurring. Thank you for your patience.",
+  "formal_th": "เรียนลูกค้าทุกท่าน เราขออภัยสำหรับเหตุขัดข้องของบริการเมื่อเช้านี้ แอปของเราไม่สามารถใช้งานได้ประมาณสองชั่วโมง และเราเข้าใจว่าสิ่งนี้สร้างความไม่สะดวก ขณะนี้ปัญหาได้รับการแก้ไขแล้ว และเราได้ดำเนินการเพื่อป้องกันไม่ให้เกิดขึ้นอีก ขอบคุณสำหรับความอดทนของท่าน",
+  "swaps": [
+   {
+    "from": "sorry",
+    "to": "we apologize",
+    "note_th": "\"we apologize\" เป็นทางการและสุภาพกว่า \"sorry\""
+   },
+   {
+    "from": "our app was down",
+    "to": "the service outage",
+    "note_th": "\"outage\" เป็นคำทางการที่แปลว่าเหตุระบบขัดข้อง"
+   },
+   {
+    "from": "was a pain",
+    "to": "caused inconvenience",
+    "note_th": "\"caused inconvenience\" สุภาพ เลี่ยงคำพูดลำลอง"
+   },
+   {
+    "from": "we've fixed the problem",
+    "to": "the issue has now been resolved",
+    "note_th": "ใช้ passive voice ดูเป็นทางการและเป็นมืออาชีพ"
+   },
+   {
+    "from": "it won't happen again",
+    "to": "we have taken steps to prevent it from recurring",
+    "note_th": "แสดงความรับผิดชอบชัดเจนว่าได้ลงมือแก้แล้ว"
+   },
+   {
+    "from": "Thanks for waiting",
+    "to": "Thank you for your patience",
+    "note_th": "วลีมาตรฐานสำหรับปิดท้ายอย่างสุภาพ"
+   }
+  ],
+  "id": "app-was-down-this-morning"
+ },
+ {
+  "title": "Passing Your Case to My Manager",
+  "title_th": "ส่งเรื่องต่อให้ผู้จัดการ",
+  "type": "apology-escalation",
+  "context": "business",
+  "level": "moderate",
+  "scenario_th": "ลูกค้าโกรธเรื่องออเดอร์ ต้องขอโทษและส่งเรื่องต่อให้หัวหน้า",
+  "normal": "Hi Khun Somchai, I'm really sorry about the trouble with your order. I want to make this right, so I've passed your case to my manager. She'll call you today to sort it out. Again, sorry for the hassle.",
+  "normal_th": "สวัสดีครับคุณสมชาย ผมขอโทษจริง ๆ เรื่องปัญหาออเดอร์ของคุณ ผมอยากแก้ไขให้ถูกต้อง เลยส่งเรื่องของคุณต่อให้ผู้จัดการแล้ว เขาจะโทรหาคุณวันนี้เพื่อจัดการเรื่องนี้ ต้องขอโทษอีกครั้งที่ทำให้ยุ่งยากครับ",
+  "formal": "Dear Khun Somchai, I sincerely apologize for the difficulty with your order. I would like to resolve this properly, so I have escalated your case to my manager. She will contact you today to address it. Once again, I apologize for the inconvenience.",
+  "formal_th": "เรียนคุณสมชาย ผมขออภัยอย่างจริงใจสำหรับปัญหาที่เกิดขึ้นกับออเดอร์ของท่าน ผมต้องการแก้ไขเรื่องนี้ให้เรียบร้อย จึงได้ส่งเรื่องของท่านต่อไปยังผู้จัดการแล้ว เขาจะติดต่อท่านในวันนี้เพื่อดำเนินการแก้ไข ต้องขออภัยอีกครั้งสำหรับความไม่สะดวกครับ",
+  "swaps": [
+   {
+    "from": "I'm really sorry",
+    "to": "I sincerely apologize",
+    "note_th": "\"sincerely apologize\" ทางการและจริงใจกว่า"
+   },
+   {
+    "from": "trouble",
+    "to": "difficulty",
+    "note_th": "\"difficulty\" ฟังดูสุภาพเป็นทางการมากกว่า \"trouble\""
+   },
+   {
+    "from": "make this right",
+    "to": "resolve this properly",
+    "note_th": "\"resolve\" เป็นกริยาทางการที่แปลว่าแก้ไข"
+   },
+   {
+    "from": "passed your case",
+    "to": "escalated your case",
+    "note_th": "\"escalate\" คือคำศัพท์ธุรกิจสำหรับส่งเรื่องต่อขึ้นไป"
+   },
+   {
+    "from": "call you",
+    "to": "contact you",
+    "note_th": "\"contact\" ครอบคลุมและเป็นทางการกว่า \"call\""
+   },
+   {
+    "from": "sort it out",
+    "to": "address it",
+    "note_th": "\"address\" เป็นกริยาทางการแปลว่าจัดการปัญหา"
+   },
+   {
+    "from": "sorry for the hassle",
+    "to": "I apologize for the inconvenience",
+    "note_th": "\"the inconvenience\" เป็นวลีสุภาพมาตรฐาน"
+   }
+  ],
+  "id": "passing-your-case-to-my-manager"
+ },
+ {
+  "title": "We Charged You Twice",
+  "title_th": "เราเก็บเงินซ้ำ",
+  "type": "apology-escalation",
+  "context": "business",
+  "level": "moderate",
+  "scenario_th": "ระบบเรียกเก็บเงินลูกค้าซ้ำสองครั้ง ต้องคืนเงินและชดเชย",
+  "normal": "Hi Khun Nid, sorry — we charged you twice by mistake this month. That was our fault, and we've put the extra money back. We've also added a small credit to your account to say sorry. Thanks for letting us know.",
+  "normal_th": "สวัสดีครับคุณนิด ขอโทษด้วยครับ เดือนนี้เราเผลอเก็บเงินคุณซ้ำสองครั้ง เป็นความผิดของเราเอง และเราคืนเงินส่วนที่เกินให้แล้ว เราเติมเครดิตเล็ก ๆ น้อย ๆ เข้าบัญชีคุณเป็นการขอโทษด้วย ขอบคุณที่แจ้งให้เราทราบครับ",
+  "formal": "Dear Khun Nid, we apologize for charging your account twice this month in error. This was our mistake, and we have refunded the extra amount. We have also applied a service credit to your account as a gesture of goodwill. Thank you for bringing this to our attention.",
+  "formal_th": "เรียนคุณนิด เราขออภัยที่ได้เรียกเก็บเงินจากบัญชีของท่านซ้ำสองครั้งในเดือนนี้โดยผิดพลาด นี่เป็นความผิดพลาดของเราเอง และเราได้คืนเงินส่วนที่เกินให้แล้ว เรายังได้เพิ่มเครดิตค่าบริการเข้าบัญชีของท่านเพื่อเป็นการแสดงความรับผิดชอบ ขอบคุณที่แจ้งเรื่องนี้ให้เราทราบครับ",
+  "swaps": [
+   {
+    "from": "sorry",
+    "to": "we apologize",
+    "note_th": "\"we apologize\" เป็นทางการกว่าและใช้แทนบริษัท"
+   },
+   {
+    "from": "by mistake",
+    "to": "in error",
+    "note_th": "\"in error\" เป็นสำนวนทางการแปลว่าโดยผิดพลาด"
+   },
+   {
+    "from": "our fault",
+    "to": "our mistake",
+    "note_th": "\"mistake\" ฟังดูสุภาพเป็นมืออาชีพกว่า \"fault\""
+   },
+   {
+    "from": "put the extra money back",
+    "to": "refunded the extra amount",
+    "note_th": "\"refund\" เป็นกริยาทางการสำหรับการคืนเงิน"
+   },
+   {
+    "from": "a small credit",
+    "to": "a service credit",
+    "note_th": "\"service credit\" เป็นคำศัพท์ธุรกิจที่ชัดเจน"
+   },
+   {
+    "from": "to say sorry",
+    "to": "as a gesture of goodwill",
+    "note_th": "วลีทางการที่แปลว่าเป็นการแสดงน้ำใจ/ขอโทษ"
+   },
+   {
+    "from": "Thanks for letting us know",
+    "to": "Thank you for bringing this to our attention",
+    "note_th": "วลีทางการมาตรฐานสำหรับขอบคุณที่แจ้งปัญหา"
+   }
+  ],
+  "id": "we-charged-you-twice"
+ },
+ {
+  "title": "Your Order Is Late",
+  "title_th": "ออเดอร์ของคุณล่าช้า",
+  "type": "apology-escalation",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "สินค้าส่งช้าเพราะปัญหาที่คลังสินค้า ต้องขอโทษและออกค่าส่งให้",
+  "normal": "Hi Khun Ann, sorry your order is late. There was a delay at our warehouse, and that's on us. It should arrive by Friday, and we'll pay for the shipping. Thanks for being patient.",
+  "normal_th": "สวัสดีครับคุณแอน ขอโทษที่ออเดอร์ของคุณมาช้า มีความล่าช้าที่คลังสินค้าของเรา และเป็นความผิดของเราเอง ของน่าจะถึงภายในวันศุกร์ และเราจะออกค่าจัดส่งให้ ขอบคุณที่ใจเย็นรอครับ",
+  "formal": "Dear Khun Ann, we apologize for the delay with your order. There was a hold-up at our warehouse, and we take full responsibility. It is expected to arrive by Friday, and we will cover the shipping cost. Thank you for your patience.",
+  "formal_th": "เรียนคุณแอน เราขออภัยสำหรับความล่าช้าของออเดอร์ของท่าน เกิดความติดขัดขึ้นที่คลังสินค้าของเรา และเราขอรับผิดชอบอย่างเต็มที่ สินค้าคาดว่าจะถึงภายในวันศุกร์ และเราจะเป็นผู้รับผิดชอบค่าจัดส่งให้ ขอบคุณสำหรับความอดทนของท่าน",
+  "swaps": [
+   {
+    "from": "sorry",
+    "to": "we apologize",
+    "note_th": "\"we apologize\" เป็นทางการและใช้ในนามบริษัท"
+   },
+   {
+    "from": "there was a delay",
+    "to": "there was a hold-up",
+    "note_th": "\"hold-up\" หมายถึงความติดขัด ใช้ได้ในบริบทมืออาชีพ"
+   },
+   {
+    "from": "that's on us",
+    "to": "we take full responsibility",
+    "note_th": "\"take full responsibility\" แสดงการรับผิดชอบอย่างชัดเจน"
+   },
+   {
+    "from": "it should arrive",
+    "to": "it is expected to arrive",
+    "note_th": "\"is expected to\" ฟังดูสุภาพและเป็นทางการกว่า"
+   },
+   {
+    "from": "we'll pay for the shipping",
+    "to": "we will cover the shipping cost",
+    "note_th": "\"cover the cost\" เป็นสำนวนทางการแปลว่าออกค่าใช้จ่าย"
+   },
+   {
+    "from": "Thanks for being patient",
+    "to": "Thank you for your patience",
+    "note_th": "รูปประโยคเต็มดูเป็นทางการกว่าแบบย่อ"
+   }
+  ],
+  "id": "your-order-is-late"
+ },
+ {
+  "title": "We Sent the Wrong Item",
+  "title_th": "เราส่งของผิด",
+  "type": "apology-escalation",
+  "context": "business",
+  "level": "common",
+  "scenario_th": "ส่งสินค้าผิดชิ้นให้ลูกค้า ต้องรับผิดและส่งของที่ถูกต้องให้ฟรี",
+  "normal": "Hi Khun Ploy, sorry we sent you the wrong item. This was a mix-up on our side, and we own it. We're sending the right one today with fast shipping, free of charge. You can keep the wrong item too. Sorry again for the mess-up.",
+  "normal_th": "สวัสดีครับคุณพลอย ขอโทษที่เราส่งของผิดชิ้นให้คุณ มันเป็นความผิดพลาดจากฝั่งเราเอง และเรายอมรับผิด เราจะส่งชิ้นที่ถูกต้องให้วันนี้แบบส่งด่วนโดยไม่คิดเงิน ของที่ผิดคุณเก็บไว้ได้เลยครับ ขอโทษอีกครั้งที่ทำพลาดครับ",
+  "formal": "Dear Khun Ploy, we apologize for sending you the incorrect item. This was an error on our part, and we take responsibility. We are dispatching the correct item today via express shipping at no cost. You are welcome to keep the incorrect item as well. Once again, we apologize for the mistake.",
+  "formal_th": "เรียนคุณพลอย เราขออภัยที่ได้จัดส่งสินค้าผิดชิ้นให้ท่าน นี่เป็นความผิดพลาดจากทางเรา และเราขอรับผิดชอบ เราจะจัดส่งสินค้าที่ถูกต้องให้ท่านในวันนี้แบบด่วนพิเศษโดยไม่มีค่าใช้จ่าย ท่านสามารถเก็บสินค้าที่ผิดไว้ได้เช่นกัน ต้องขออภัยอีกครั้งสำหรับความผิดพลาดครั้งนี้",
+  "swaps": [
+   {
+    "from": "the wrong item",
+    "to": "the incorrect item",
+    "note_th": "\"incorrect\" เป็นทางการกว่า \"wrong\""
+   },
+   {
+    "from": "a mix-up on our side",
+    "to": "an error on our part",
+    "note_th": "\"error on our part\" เป็นสำนวนทางการที่รับผิด"
+   },
+   {
+    "from": "we own it",
+    "to": "we take responsibility",
+    "note_th": "\"take responsibility\" เป็นวลีมาตรฐานสำหรับรับผิดชอบ"
+   },
+   {
+    "from": "we're sending",
+    "to": "we are dispatching",
+    "note_th": "\"dispatch\" เป็นกริยาทางการสำหรับการจัดส่ง"
+   },
+   {
+    "from": "fast shipping",
+    "to": "express shipping",
+    "note_th": "\"express shipping\" เป็นคำศัพท์ที่ใช้จริงในธุรกิจ"
+   },
+   {
+    "from": "free of charge",
+    "to": "at no cost",
+    "note_th": "ทั้งคู่แปลว่าฟรี แต่ \"at no cost\" ทางการกว่าเล็กน้อย"
+   },
+   {
+    "from": "the mess-up",
+    "to": "the mistake",
+    "note_th": "\"mess-up\" เป็นคำลำลอง ควรใช้ \"mistake\" ในงาน"
+   }
+  ],
+  "id": "we-sent-the-wrong-item"
+ },
+ {
+  "title": "Old API Endpoint Retiring",
+  "title_th": "ปิดตัว API endpoint เก่า",
+  "type": "deprecation-notice",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "ทีมแจ้งลูกค้าที่ใช้ API ว่าจะปิด endpoint เวอร์ชันเก่าและให้ย้ายไปเวอร์ชันใหม่",
+  "normal": "Heads up — we're turning off the old /v1/orders endpoint on March 31, 2026. We've got a faster one now, so please switch to /v2/orders before then. It works almost the same, just quicker. Ping us if you get stuck.",
+  "normal_th": "แจ้งให้ทราบนะ เราจะปิด endpoint เก่า /v1/orders วันที่ 31 มีนาคม 2026 ตอนนี้เรามีตัวที่เร็วกว่าแล้ว ช่วยย้ายไปใช้ /v2/orders ก่อนถึงวันนั้นด้วยนะ มันทำงานเกือบเหมือนเดิม แค่เร็วขึ้น ถ้าติดตรงไหนทักมาได้เลย",
+  "formal": "Please be advised that the /v1/orders endpoint will be retired on March 31, 2026. It has been superseded by a faster, more reliable version. We recommend migrating to /v2/orders before this date. The new endpoint offers equivalent functionality with improved performance. Please contact our support team if you require assistance.",
+  "formal_th": "ขอเรียนแจ้งว่า endpoint /v1/orders จะถูกยกเลิกในวันที่ 31 มีนาคม 2026 โดยมีเวอร์ชันที่เร็วและเสถียรกว่ามาทดแทน เราขอแนะนำให้ย้ายไปใช้ /v2/orders ก่อนวันดังกล่าว endpoint ใหม่มีฟังก์ชันการทำงานเทียบเท่าเดิมแต่ประสิทธิภาพดีขึ้น หากต้องการความช่วยเหลือ กรุณาติดต่อทีมสนับสนุนของเรา",
+  "swaps": [
+   {
+    "from": "Heads up",
+    "to": "Please be advised",
+    "note_th": "\"บอกให้รู้ไว้\" เป็น \"ขอเรียนแจ้งว่า\" ทางการขึ้นมาก"
+   },
+   {
+    "from": "turning off",
+    "to": "will be retired",
+    "note_th": "\"ปิด\" เป็น \"จะถูกยกเลิก\" เป็นศัพท์ทางเทคนิคที่สุภาพ"
+   },
+   {
+    "from": "we've got a faster one now",
+    "to": "It has been superseded by a faster version",
+    "note_th": "\"เรามีตัวที่เร็วกว่าแล้ว\" เป็น \"มีเวอร์ชันที่เร็วกว่ามาทดแทน\""
+   },
+   {
+    "from": "please switch to",
+    "to": "We recommend migrating to",
+    "note_th": "\"ช่วยย้ายไป\" เป็น \"เราขอแนะนำให้ย้ายไป\" (migrate ใช้ในงานเทคนิค)"
+   },
+   {
+    "from": "Ping us",
+    "to": "Please contact our support team",
+    "note_th": "\"ทักมา\" เป็น \"กรุณาติดต่อทีมสนับสนุน\""
+   },
+   {
+    "from": "if you get stuck",
+    "to": "if you require assistance",
+    "note_th": "\"ถ้าติดตรงไหน\" เป็น \"หากต้องการความช่วยเหลือ\""
+   }
+  ],
+  "id": "old-api-endpoint-retiring"
+ },
+ {
+  "title": "SDK Method Deprecated",
+  "title_th": "เลิกใช้เมธอดใน SDK",
+  "type": "deprecation-notice",
+  "context": "technical",
+  "level": "moderate",
+  "scenario_th": "แจ้งนักพัฒนาว่าเมธอดเก่าใน SDK จะถูกแทนที่ด้วยเมธอดใหม่",
+  "normal": "Quick note for devs — the getUserInfo() method is going away in the next release. We're swapping it for fetchUserProfile(), which returns more data. The old one will stop working after version 5.0. Try to update your code soon. Thanks!",
+  "normal_th": "แจ้งเร็ว ๆ สำหรับนักพัฒนา เมธอด getUserInfo() จะถูกเอาออกในรีลีสหน้า เราเปลี่ยนไปใช้ fetchUserProfile() แทน ซึ่งคืนข้อมูลมากกว่า ตัวเก่าจะใช้ไม่ได้หลังเวอร์ชัน 5.0 พยายามอัปเดตโค้ดเร็ว ๆ นะ ขอบคุณ!",
+  "formal": "This is a notice for developers regarding the getUserInfo() method, which will be deprecated in the upcoming release. It will be replaced by fetchUserProfile(), which returns a more complete data set. Support for the previous method will end after version 5.0. We advise updating your integration at your earliest convenience.",
+  "formal_th": "ขอแจ้งนักพัฒนาเกี่ยวกับเมธอด getUserInfo() ซึ่งจะถูกยกเลิกการใช้งานในรีลีสถัดไป โดยจะมี fetchUserProfile() มาแทน ซึ่งคืนชุดข้อมูลที่ครบถ้วนกว่า การรองรับเมธอดเดิมจะสิ้นสุดหลังเวอร์ชัน 5.0 เราขอแนะนำให้อัปเดตการเชื่อมต่อของท่านโดยเร็วที่สุด",
+  "swaps": [
+   {
+    "from": "Quick note",
+    "to": "This is a notice",
+    "note_th": "\"แจ้งเร็ว ๆ\" เป็น \"ขอแจ้ง\" ดูเป็นทางการ"
+   },
+   {
+    "from": "going away",
+    "to": "will be deprecated",
+    "note_th": "\"จะถูกเอาออก\" เป็น \"จะถูกยกเลิกการใช้งาน\" (deprecated เป็นศัพท์มาตรฐาน)"
+   },
+   {
+    "from": "We're swapping it for",
+    "to": "It will be replaced by",
+    "note_th": "\"เราเปลี่ยนไปใช้...แทน\" เป็น \"จะมี...มาแทน\" (passive สุภาพขึ้น)"
+   },
+   {
+    "from": "stop working",
+    "to": "Support will end",
+    "note_th": "\"จะใช้ไม่ได้\" เป็น \"การรองรับจะสิ้นสุด\""
+   },
+   {
+    "from": "Try to update your code soon",
+    "to": "We advise updating your integration at your earliest convenience",
+    "note_th": "\"พยายามอัปเดตเร็ว ๆ\" เป็น \"ขอแนะนำให้อัปเดตโดยเร็วที่สุด\""
+   },
+   {
+    "from": "Thanks!",
+    "to": "(ตัดออก)",
+    "note_th": "ในภาษาทางการมักไม่ปิดท้ายด้วย \"ขอบคุณ!\" แบบลำลอง"
+   }
+  ],
+  "id": "sdk-method-deprecated"
+ },
+ {
+  "title": "Config Option Removed",
+  "title_th": "ลบตัวเลือกในไฟล์ตั้งค่า",
+  "type": "deprecation-notice",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "แจ้งผู้ใช้ว่าตัวเลือกเก่าในไฟล์ config จะไม่มีผลอีกต่อไป",
+  "normal": "FYI — the enableLegacyMode setting won't do anything after the next update. We cleaned it up because nobody really uses it anymore. If it's in your config file, just delete that line. Everything else stays the same.",
+  "normal_th": "บอกไว้ก่อนนะ ค่า enableLegacyMode จะไม่มีผลอะไรหลังอัปเดตครั้งหน้า เราเก็บกวาดมันออกเพราะแทบไม่มีใครใช้แล้ว ถ้ามันอยู่ในไฟล์ config ของคุณ ก็แค่ลบบรรทัดนั้นทิ้งไป อย่างอื่นเหมือนเดิมหมด",
+  "formal": "Please note that the enableLegacyMode configuration option will no longer take effect following the next update. It has been removed as it is no longer widely used. If this option appears in your configuration file, kindly remove the corresponding line. All other settings will remain unchanged.",
+  "formal_th": "โปรดทราบว่าตัวเลือกการตั้งค่า enableLegacyMode จะไม่มีผลอีกต่อไปหลังการอัปเดตครั้งถัดไป ตัวเลือกนี้ถูกนำออกเนื่องจากไม่ได้ถูกใช้งานอย่างแพร่หลายแล้ว หากตัวเลือกนี้ปรากฏในไฟล์การตั้งค่าของท่าน กรุณาลบบรรทัดที่เกี่ยวข้องออก การตั้งค่าอื่น ๆ ทั้งหมดจะยังคงเดิม",
+  "swaps": [
+   {
+    "from": "FYI",
+    "to": "Please note",
+    "note_th": "\"บอกไว้ก่อน\" เป็น \"โปรดทราบ\""
+   },
+   {
+    "from": "won't do anything",
+    "to": "will no longer take effect",
+    "note_th": "\"จะไม่มีผลอะไร\" เป็น \"จะไม่มีผลอีกต่อไป\""
+   },
+   {
+    "from": "We cleaned it up",
+    "to": "It has been removed",
+    "note_th": "\"เราเก็บกวาดออก\" เป็น \"ถูกนำออก\" (passive สุภาพ)"
+   },
+   {
+    "from": "nobody really uses it anymore",
+    "to": "it is no longer widely used",
+    "note_th": "\"แทบไม่มีใครใช้แล้ว\" เป็น \"ไม่ได้ถูกใช้งานอย่างแพร่หลายแล้ว\""
+   },
+   {
+    "from": "just delete that line",
+    "to": "kindly remove the corresponding line",
+    "note_th": "\"แค่ลบบรรทัดนั้นทิ้ง\" เป็น \"กรุณาลบบรรทัดที่เกี่ยวข้อง\""
+   },
+   {
+    "from": "Everything else stays the same",
+    "to": "All other settings will remain unchanged",
+    "note_th": "\"อย่างอื่นเหมือนเดิมหมด\" เป็น \"การตั้งค่าอื่นทั้งหมดจะยังคงเดิม\""
+   }
+  ],
+  "id": "config-option-removed"
+ },
+ {
+  "title": "Old Dashboard Shutting Down",
+  "title_th": "ปิดแดชบอร์ดเก่า",
+  "type": "deprecation-notice",
+  "context": "technical",
+  "level": "common",
+  "scenario_th": "แจ้งผู้ใช้ว่าแดชบอร์ดรายงานเก่าจะปิดและย้ายไปหน้าใหม่",
+  "normal": "Hey everyone — the old Reports dashboard is closing down on June 1. We built a new Analytics page that does way more. Your old data is already there, so you won't lose anything. Take a look and let us know what you think.",
+  "normal_th": "ทุกคน แดชบอร์ด Reports เก่าจะปิดวันที่ 1 มิถุนายน เราทำหน้า Analytics ใหม่ที่ทำอะไรได้เยอะกว่าเดิมมาก ข้อมูลเก่าของคุณย้ายมาอยู่ในนั้นแล้ว เพราะฉะนั้นไม่มีอะไรหายแน่นอน ลองเข้าไปดูแล้วบอกเราด้วยว่าคิดยังไง",
+  "formal": "We would like to inform you that the legacy Reports dashboard will be discontinued on June 1. It has been replaced by a new Analytics page with expanded capabilities. Your existing data has already been migrated, so no information will be lost. We invite you to explore it and share your feedback.",
+  "formal_th": "เราขอเรียนแจ้งว่าแดชบอร์ด Reports เดิมจะถูกยกเลิกการให้บริการในวันที่ 1 มิถุนายน โดยมีหน้า Analytics ใหม่ที่มีความสามารถเพิ่มขึ้นมาทดแทน ข้อมูลเดิมของท่านได้ถูกย้ายเรียบร้อยแล้ว จึงจะไม่มีข้อมูลใดสูญหาย เราขอเชิญท่านเข้าไปทดลองใช้และแบ่งปันความคิดเห็นกับเรา",
+  "swaps": [
+   {
+    "from": "Hey everyone",
+    "to": "We would like to inform you",
+    "note_th": "\"ทุกคน\" (ทักทายลำลอง) เป็น \"เราขอเรียนแจ้ง\""
+   },
+   {
+    "from": "old",
+    "to": "legacy",
+    "note_th": "\"เก่า\" เป็น \"legacy\" (คำเทคนิคที่หมายถึงระบบเดิม)"
+   },
+   {
+    "from": "closing down",
+    "to": "will be discontinued",
+    "note_th": "\"จะปิด\" เป็น \"จะถูกยกเลิกการให้บริการ\""
+   },
+   {
+    "from": "does way more",
+    "to": "with expanded capabilities",
+    "note_th": "\"ทำอะไรได้เยอะกว่า\" เป็น \"มีความสามารถเพิ่มขึ้น\""
+   },
+   {
+    "from": "you won't lose anything",
+    "to": "no information will be lost",
+    "note_th": "\"ไม่มีอะไรหาย\" เป็น \"จะไม่มีข้อมูลใดสูญหาย\""
+   },
+   {
+    "from": "Take a look",
+    "to": "We invite you to explore it",
+    "note_th": "\"ลองเข้าไปดู\" เป็น \"เราขอเชิญท่านเข้าไปทดลองใช้\""
+   },
+   {
+    "from": "let us know what you think",
+    "to": "share your feedback",
+    "note_th": "\"บอกเราว่าคิดยังไง\" เป็น \"แบ่งปันความคิดเห็น\""
+   }
+  ],
+  "id": "old-dashboard-shutting-down"
+ },
+ {
+  "title": "API Keys Being Phased Out",
+  "title_th": "เลิกใช้ API key แบบเดิม",
+  "type": "deprecation-notice",
+  "context": "technical",
+  "level": "moderate",
+  "scenario_th": "แจ้งว่าจะเลิกใช้ API key แบบคงที่และเปลี่ยนไปใช้ OAuth เพื่อความปลอดภัย",
+  "normal": "Important — we're phasing out static API keys by December 15. They're not secure enough anymore, so we're moving to OAuth tokens instead. You'll need to update how your app logs in before the deadline. After that, old keys will stop working. Let us know if you need a hand.",
+  "normal_th": "สำคัญนะ เราจะเลิกใช้ API key แบบคงที่ภายในวันที่ 15 ธันวาคม มันไม่ปลอดภัยพอแล้ว เลยจะเปลี่ยนไปใช้ OAuth token แทน คุณต้องอัปเดตวิธีล็อกอินของแอปก่อนถึงกำหนด หลังจากนั้น key เก่าจะใช้ไม่ได้ ถ้าต้องการความช่วยเหลือบอกเราได้",
+  "formal": "This is an important notice regarding the phase-out of static API keys, effective December 15. Due to security concerns, they will be replaced by OAuth tokens. Please update your application's authentication method before the deadline. After this date, existing keys will no longer be accepted. Please reach out if you require support.",
+  "formal_th": "ขอเรียนแจ้งประกาศสำคัญเกี่ยวกับการยกเลิกการใช้ API key แบบคงที่ ซึ่งจะมีผลในวันที่ 15 ธันวาคม เนื่องด้วยเหตุผลด้านความปลอดภัย จะมีการใช้ OAuth token มาทดแทน กรุณาอัปเดตวิธีการยืนยันตัวตนของแอปพลิเคชันของท่านก่อนถึงกำหนด หลังจากวันดังกล่าว key เดิมจะไม่ได้รับการยอมรับอีกต่อไป หากท่านต้องการการสนับสนุน กรุณาติดต่อเรา",
+  "swaps": [
+   {
+    "from": "Important",
+    "to": "This is an important notice",
+    "note_th": "\"สำคัญนะ\" เป็น \"ขอเรียนแจ้งประกาศสำคัญ\""
+   },
+   {
+    "from": "not secure enough anymore",
+    "to": "Due to security concerns",
+    "note_th": "\"ไม่ปลอดภัยพอแล้ว\" เป็น \"เนื่องด้วยเหตุผลด้านความปลอดภัย\""
+   },
+   {
+    "from": "we're moving to it instead",
+    "to": "they will be replaced by",
+    "note_th": "\"จะเปลี่ยนไปใช้...แทน\" เป็น \"จะมี...มาทดแทน\""
+   },
+   {
+    "from": "update how your app logs in",
+    "to": "update your application's authentication method",
+    "note_th": "\"อัปเดตวิธีล็อกอินของแอป\" เป็น \"อัปเดตวิธีการยืนยันตัวตนของแอปพลิเคชัน\""
+   },
+   {
+    "from": "stop working",
+    "to": "will no longer be accepted",
+    "note_th": "\"จะใช้ไม่ได้\" เป็น \"จะไม่ได้รับการยอมรับอีกต่อไป\""
+   },
+   {
+    "from": "Let us know if you need a hand",
+    "to": "Please reach out if you require support",
+    "note_th": "\"ถ้าต้องการความช่วยเหลือบอกเราได้\" เป็น \"หากท่านต้องการการสนับสนุน กรุณาติดต่อเรา\""
+   }
+  ],
+  "id": "api-keys-being-phased-out"
+ },
+ {
+  "title": "Asking a colleague for help",
+  "title_th": "ขอให้เพื่อนร่วมงานช่วย",
+  "type": "slack-chat",
+  "context": "business",
+  "scenario_th": "คุณติดปัญหากับรายงานยอดขาย เลยทักเพื่อนร่วมงานให้ช่วยดูให้หน่อยก่อนพักเที่ยง",
+  "level": "common",
+  "normal": "Hey, got a sec? I'm kinda stuck on the sales report. Could you take a quick look when you're free? No rush, but ideally before lunch. Thanks a ton!",
+  "normal_th": "เฮ้ ว่างแป๊บไหม? เราติดๆ อยู่กับรายงานยอดขาย ช่วยดูให้หน่อยได้ไหมตอนว่าง ไม่รีบมาก แต่ถ้าได้ก่อนพักเที่ยงจะดีมาก ขอบคุณมากๆ เลย!",
+  "formal": "Hi, do you have a moment? I'm having some trouble with the sales report. Could you review it when you get a chance? Ideally before lunch, if possible. Thank you so much.",
+  "formal_th": "สวัสดีครับ/ค่ะ พอมีเวลาสักครู่ไหม? ผมกำลังมีปัญหากับรายงานยอดขายอยู่ รบกวนช่วยตรวจดูให้หน่อยได้ไหมตอนที่สะดวก ถ้าเป็นไปได้ก่อนพักเที่ยงจะขอบคุณมาก ขอบคุณมากครับ/ค่ะ",
+  "swaps": [
+   {
+    "from": "got a sec?",
+    "to": "do you have a moment?",
+    "note_th": "\"ว่างแป๊บไหม\" แบบกันเอง เปลี่ยนเป็น \"พอมีเวลาสักครู่ไหม\" ที่สุภาพกว่า"
+   },
+   {
+    "from": "kinda stuck on",
+    "to": "having some trouble with",
+    "note_th": "\"ติดๆ อยู่\" เปลี่ยนเป็น \"กำลังมีปัญหากับ\" ที่เป็นทางการกว่า"
+   },
+   {
+    "from": "take a quick look",
+    "to": "review it",
+    "note_th": "\"ดูให้แป๊บ\" เปลี่ยนเป็น \"ตรวจดู/review\" ที่ดูมืออาชีพ"
+   },
+   {
+    "from": "when you're free",
+    "to": "when you get a chance",
+    "note_th": "ทั้งคู่แปลว่า \"ตอนว่าง\" แต่ get a chance สุภาพและนุ่มนวลกว่า"
+   },
+   {
+    "from": "Thanks a ton!",
+    "to": "Thank you so much.",
+    "note_th": "\"ขอบคุณมากๆ\" แบบเพื่อน เปลี่ยนเป็นรูปเต็มที่สุภาพกว่า"
+   }
+  ],
+  "id": "asking-a-colleague-for-help"
+ },
+ {
+  "title": "Heads up: running late",
+  "title_th": "แจ้งล่วงหน้าว่าจะไปสาย",
+  "type": "slack-chat",
+  "context": "business",
+  "scenario_th": "รถติด คุณจะไปประชุม standup สาย เลยทักบอกทีมให้เริ่มก่อน",
+  "level": "common",
+  "normal": "Heads up, I'm gonna be like 10 mins late to the standup. Traffic is crazy this morning. Go ahead and start without me. I'll catch up on Slack. Sorry!",
+  "normal_th": "บอกไว้ก่อนนะ เดี๋ยวเราจะไปสาย standup ประมาณ 10 นาที เช้านี้รถติดหนักมาก เริ่มไปก่อนได้เลยไม่ต้องรอ เดี๋ยวเราตามอ่านใน Slack เอา ขอโทษนะ!",
+  "formal": "Just a heads up, I'll be about 10 minutes late to the standup. There's heavy traffic this morning. Please go ahead and start without me. I'll catch up via Slack. Apologies for this.",
+  "formal_th": "ขอแจ้งให้ทราบล่วงหน้านะครับ/ค่ะ ผมจะไปสาย standup ประมาณ 10 นาที เช้านี้รถติดหนักมาก รบกวนเริ่มประชุมไปก่อนได้เลยไม่ต้องรอ เดี๋ยวผมจะตามอ่านทาง Slack ต้องขออภัยด้วยครับ/ค่ะ",
+  "swaps": [
+   {
+    "from": "Heads up,",
+    "to": "Just a heads up,",
+    "note_th": "เติม Just a ทำให้ประโยคนุ่มและสุภาพขึ้นเล็กน้อย"
+   },
+   {
+    "from": "gonna be like 10 mins late",
+    "to": "I'll be about 10 minutes late",
+    "note_th": "gonna/mins แบบพูด เปลี่ยนเป็น I'll be about...minutes ที่เป็นทางการ"
+   },
+   {
+    "from": "Traffic is crazy",
+    "to": "There's heavy traffic",
+    "note_th": "\"รถติดจนบ้า\" เปลี่ยนเป็น \"รถติดหนัก\" ที่สุภาพกว่า"
+   },
+   {
+    "from": "catch up on Slack",
+    "to": "catch up via Slack",
+    "note_th": "via เป็นทางการกว่า on เมื่อพูดถึงช่องทาง"
+   },
+   {
+    "from": "Sorry!",
+    "to": "Apologies for this.",
+    "note_th": "\"ขอโทษ\" แบบสั้น เปลี่ยนเป็น \"ต้องขออภัย\" ที่เป็นทางการ"
+   }
+  ],
+  "id": "heads-up-running-late"
+ },
+ {
+  "title": "Replying to a request",
+  "title_th": "ตอบกลับเมื่อมีคนขอไฟล์",
+  "type": "slack-chat",
+  "context": "business",
+  "scenario_th": "เพื่อนร่วมงานขอไฟล์ คุณส่งให้พร้อมบอกว่าใส่ตัวเลขล่าสุดมาด้วย",
+  "level": "common",
+  "normal": "Sure thing! Here's the file you asked for. I added the latest numbers too. Let me know if you need anything else. Happy to help!",
+  "normal_th": "ได้เลย! นี่ไฟล์ที่ขอมานะ เราใส่ตัวเลขล่าสุดเพิ่มให้ด้วย ถ้าต้องการอะไรอีกบอกได้เลย ยินดีช่วยเสมอ!",
+  "formal": "Of course. Please find the file you requested attached. I've also included the latest figures. Please let me know if you need anything further. I'm glad to help.",
+  "formal_th": "ได้เลยครับ/ค่ะ แนบไฟล์ที่ขอมาให้แล้วนะครับ/ค่ะ ผมได้ใส่ตัวเลขล่าสุดเพิ่มให้ด้วย หากต้องการอะไรเพิ่มเติม แจ้งได้เลยครับ/ค่ะ ยินดีช่วยเหลือครับ/ค่ะ",
+  "swaps": [
+   {
+    "from": "Sure thing!",
+    "to": "Of course.",
+    "note_th": "\"ได้เลย\" แบบเพื่อน เปลี่ยนเป็น Of course ที่สุภาพเป็นกลาง"
+   },
+   {
+    "from": "Here's the file you asked for",
+    "to": "Please find the file you requested attached",
+    "note_th": "สำนวนทางการในงาน: Please find...attached = แนบมาให้แล้ว"
+   },
+   {
+    "from": "the latest numbers",
+    "to": "the latest figures",
+    "note_th": "figures เป็นทางการกว่า numbers เมื่อพูดถึงตัวเลขในเอกสาร"
+   },
+   {
+    "from": "Let me know if you need anything else",
+    "to": "Please let me know if you need anything further",
+    "note_th": "เติม Please และใช้ further แทน else ให้สุภาพขึ้น"
+   },
+   {
+    "from": "Happy to help!",
+    "to": "I'm glad to help.",
+    "note_th": "รูปเต็ม I'm glad to help ดูเป็นทางการกว่าแบบตัดประธาน"
+   }
+  ],
+  "id": "replying-to-a-request"
+ },
+ {
+  "title": "Asking to reschedule a call",
+  "title_th": "ขอเลื่อนนัดคอล",
+  "type": "slack-chat",
+  "context": "business",
+  "scenario_th": "มีเรื่องด่วนแทรก คุณขอเลื่อนคอลตอนบ่าย 2 ไปเป็นพรุ่งนี้",
+  "level": "moderate",
+  "normal": "Hey, something came up on my end. Can we push our 2pm call to tomorrow? Same time works for me if that's okay. Really sorry for the short notice. Thanks!",
+  "normal_th": "เฮ้ พอดีมีเรื่องด่วนแทรกเข้ามา ขอเลื่อนคอลบ่าย 2 เป็นพรุ่งนี้ได้ไหม? เวลาเดิมโอเคสำหรับเรานะถ้าสะดวก ขอโทษจริงๆ ที่บอกกระชั้นชิด ขอบคุณนะ!",
+  "formal": "Hi, something urgent has come up on my end. Would it be possible to move our 2 PM call to tomorrow? The same time works for me, if that suits you. I apologize for the short notice. Thank you.",
+  "formal_th": "สวัสดีครับ/ค่ะ พอดีมีเรื่องด่วนแทรกเข้ามา ไม่ทราบว่าพอจะเลื่อนคอลตอนบ่าย 2 ไปเป็นพรุ่งนี้ได้ไหมครับ/ค่ะ? เวลาเดิมสะดวกสำหรับผม หากท่านสะดวกด้วย ต้องขออภัยที่แจ้งกระชั้นชิด ขอบคุณครับ/ค่ะ",
+  "swaps": [
+   {
+    "from": "something came up",
+    "to": "something urgent has come up",
+    "note_th": "เติม urgent และรูป present perfect ให้ฟังดูจริงจังและสุภาพขึ้น"
+   },
+   {
+    "from": "Can we push ... to tomorrow?",
+    "to": "Would it be possible to move ... to tomorrow?",
+    "note_th": "Would it be possible...? สุภาพกว่า Can we...? มาก และ move ทางการกว่า push"
+   },
+   {
+    "from": "if that's okay",
+    "to": "if that suits you",
+    "note_th": "\"ถ้าโอเค\" เปลี่ยนเป็น \"หากท่านสะดวก\" ที่นุ่มนวลและเป็นทางการ"
+   },
+   {
+    "from": "Really sorry for the short notice",
+    "to": "I apologize for the short notice",
+    "note_th": "\"ขอโทษจริงๆ\" เปลี่ยนเป็น \"ต้องขออภัย\" (I apologize) ที่เป็นทางการ"
+   },
+   {
+    "from": "Thanks!",
+    "to": "Thank you.",
+    "note_th": "\"ขอบคุณนะ\" แบบสั้น เปลี่ยนเป็นรูปเต็ม Thank you"
+   }
+  ],
+  "id": "asking-to-reschedule-a-call"
  }
 ]
