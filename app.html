@@ -10523,15 +10523,17 @@ PT.formal = (function () {
     "help-request": "🆘 ขอความช่วยเหลือ", opinion: "💭 แสดงความเห็น", discussion: "💬 ถกประเด็น", dining: "🍽️ ร้านอาหาร",
     shopping: "🛍️ ช้อปปิ้ง", directions: "🧭 ถามทาง", travel: "✈️ เดินทาง / โรงแรม", invitation: "🎉 ชวน / เชิญ",
     plans: "📅 นัดหมาย / วางแผน", compliment: "😊 ชมเชย", deadline: "⏳ เดดไลน์", priority: "🔺 จัดลำดับความสำคัญ",
-    logistics: "📧 จัดการอีเมล (cc / loop in)"
+    logistics: "📧 จัดการอีเมล (cc / loop in)",
+    idiom: "🎭 สำนวนออฟฟิศ", phrasal: "🔗 phrasal verb งาน", softening: "🕊️ พูดนุ่มนวล", money: "💰 เงิน / งบ",
+    delegating: "🧑‍💼 มอบหมาย / รับงาน", async: "🌐 async / รีโมต"
   };
   var FN_ORDER = ["opening", "greeting", "smalltalk", "networking", "invitation", "plans", "compliment", "request",
     "offer", "instruction", "permission", "help-request", "clarify", "confirmation", "agreement", "acknowledgement",
     "thanks", "praise", "feedback", "opinion", "discussion", "follow-up", "closing", "sign-off", "meeting", "presenting",
     "phone", "interview", "support", "customer", "negotiation", "disagreement", "apology", "bad-news", "problem",
-    "complaint", "escalation", "deadline", "priority", "logistics", "status", "incident", "standup", "code-review",
-    "dining", "shopping", "directions", "travel", "contrast", "cause", "condition", "addition", "emphasis", "sequence",
-    "example", "conclusion", "hedging"];
+    "complaint", "escalation", "deadline", "priority", "logistics", "delegating", "status", "incident", "standup",
+    "code-review", "async", "dining", "shopping", "directions", "travel", "idiom", "phrasal", "softening", "money",
+    "contrast", "cause", "condition", "addition", "emphasis", "sequence", "example", "conclusion", "hedging"];
   var PFREQ = { common: { th: "ใช้บ่อยมาก", cls: "fm-f4" }, occasional: { th: "ใช้บ้าง", cls: "fm-f2" }, specialized: { th: "เฉพาะทาง", cls: "fm-f1" } };
   var KIND_TH = { phrase: "🧩 วลี", linker: "🔗 คำเชื่อม" };
   function fnTh(f) { return FN_TH[f] || ("• " + (f || "")); }
