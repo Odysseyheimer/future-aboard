@@ -1424,6 +1424,50 @@ main{flex:1;padding:12px 14px calc(env(safe-area-inset-bottom) + 82px);font-size
 .lib-feat b { font-size: 15px; font-weight: 900; }
 .lib-feat em { display: block; font-style: normal; font-size: 12px; opacity: .85; margin-top: 2px; }
 
+/* shapes.css */
+/* shapes.css — listening drill tab. Big tappable targets, high contrast on the
+   fast form, because that is the only line the learner has to work from. */
+.sh-wrap { padding: 10px 12px 90px; }
+.sh-hero { font-size: 20px; font-weight: 700; margin: 4px 0 6px; }
+.sh-note { font-size: 13px; opacity: .75; line-height: 1.6; margin-bottom: 14px; }
+.sh-empty { padding: 30px 14px; text-align: center; opacity: .7; }
+
+.sh-card {
+  display: block; width: 100%; text-align: left; margin: 0 0 8px;
+  padding: 13px 14px; border-radius: 12px; border: 1px solid var(--line, #d7dee8);
+  background: var(--card, #fff); cursor: pointer;
+}
+.sh-card:active { transform: scale(.995); }
+.sh-c-t { font-size: 15.5px; font-weight: 700; }
+.sh-c-d { font-size: 12.5px; opacity: .65; margin-top: 3px; }
+
+.sh-back { background: none; border: 0; font-size: 15px; padding: 4px 0 10px; cursor: pointer; color: inherit; }
+.sh-part { font-size: 13px; opacity: .7; }
+.sh-prog { font-size: 12px; opacity: .55; margin-bottom: 12px; }
+.sh-label { font-size: 13.5px; font-weight: 700; opacity: .8; margin-bottom: 10px; }
+
+.sh-fast {
+  font-size: 25px; font-weight: 700; line-height: 1.35; margin: 6px 0 14px;
+  letter-spacing: .2px;
+}
+.sh-slow {
+  font-size: 17px; line-height: 1.5; opacity: .8; padding: 11px 13px;
+  border-radius: 10px; background: var(--band, #eef2f7); margin-bottom: 14px;
+}
+.sh-reveal {
+  display: block; width: 100%; padding: 13px; margin-bottom: 14px;
+  border-radius: 10px; border: 1px dashed var(--line, #b9c4d4);
+  background: none; font-size: 15px; cursor: pointer; color: inherit;
+}
+
+.sh-btns, .sh-nav { display: flex; gap: 8px; margin-bottom: 10px; }
+.sh-b {
+  flex: 1; padding: 12px 8px; border-radius: 10px; font-size: 14px;
+  border: 1px solid var(--line, #d7dee8); background: var(--card, #fff);
+  cursor: pointer; color: inherit;
+}
+.sh-next { font-weight: 700; }
+
 /* game.css */
 /* game.css — เกมคำศัพท์ (PT.game). Prefix .g- */
 
@@ -4136,12 +4180,13 @@ PT.stats={render:function(v){var now=Date.now(),know=0,learn=0,k;
 function render(){applySize();
  var app=document.getElementById("app");if(app){app.classList.toggle("mode-talk",S.mode==="talk");app.classList.toggle("mode-wordchoice",S.mode==="wordchoice");app.classList.toggle("mode-examprep",S.mode==="examprep");app.classList.toggle("mode-daily",S.mode==="daily");app.classList.toggle("mode-todayhub",S.mode==="todayhub");app.classList.toggle("mode-prachub",S.mode==="prachub");app.classList.toggle("mode-nodeck",!(S.mode==="browse"||S.mode==="cards"||S.mode==="quiz"));}
  if(S.mode!=="talk"&&PT.talk&&PT.talk.leave)PT.talk.leave();
+ if(S.mode!=="shapes"&&PT.shapes&&PT.shapes.leave)PT.shapes.leave();
  if(S.mode!=="wordchoice"&&PT.wordchoice&&PT.wordchoice.leave)PT.wordchoice.leave();
  if(S.mode!=="examprep"&&PT.examprep&&PT.examprep.leave)PT.examprep.leave();
  if(S.mode!=="game"&&PT.game&&PT.game.leave)PT.game.leave();
  if(S.mode!=="campaign"&&PT.campaign&&PT.campaign.leave)PT.campaign.leave();
  if(S.mode!=="formal"&&PT.formal&&PT.formal.leave)PT.formal.leave();
- var noFilter=(S.mode==="talk"||S.mode==="wordchoice"||S.mode==="examprep"||S.mode==="daily"||S.mode==="todayhub"||S.mode==="prachub"||S.mode==="stats"||S.mode==="structure"||S.mode==="game"||S.mode==="campaign"||S.mode==="formal");
+ var noFilter=(S.mode==="talk"||S.mode==="wordchoice"||S.mode==="examprep"||S.mode==="daily"||S.mode==="todayhub"||S.mode==="prachub"||S.mode==="stats"||S.mode==="structure"||S.mode==="shapes"||S.mode==="game"||S.mode==="campaign"||S.mode==="formal");
  var fh=document.getElementById("filters");if(fh&&PT.filtersUI&&!noFilter)PT.filtersUI.render(fh);
  if(window.PT&&PT.hub&&PT.hub.syncPill)try{PT.hub.syncPill();}catch(e){}
  var v=document.getElementById("view");if(!v)return;
@@ -4158,11 +4203,12 @@ function render(){applySize();
  else if(S.mode==="campaign"&&PT.campaign)PT.campaign.render(v);
  else if(S.mode==="formal"&&PT.formal)PT.formal.render(v);
  else if(S.mode==="structure"&&PT.structure)PT.structure.render(v);
+ else if(S.mode==="shapes"&&PT.shapes)PT.shapes.render(v);
  else if(S.mode==="stats")PT.stats.render(v);
  if(PT.a11y&&PT.a11y.enhance)try{PT.a11y.enhance(document.getElementById("app"));}catch(e){}}
 window.render=render;
 /* --- switch tab programmatically (keeps tabbar highlight in sync) --- */
-function goMode(m){S.mode=m;var par={browse:"browse",cards:"browse",structure:"browse",quiz:"prachub",wordchoice:"prachub",prachub:"prachub",game:"prachub",campaign:"prachub",formal:"prachub",talk:"examprep",examprep:"examprep",todayhub:"todayhub",daily:"todayhub"}[m]||"";var tb=document.querySelectorAll(".tabbar button");[].forEach.call(tb,function(x){x.className=(x.getAttribute("data-mode")===par?"on":"");});if(m==="cards")S.session=null;render();}
+function goMode(m){S.mode=m;var par={browse:"browse",cards:"browse",structure:"browse",quiz:"prachub",wordchoice:"prachub",prachub:"prachub",game:"prachub",campaign:"prachub",formal:"prachub",talk:"examprep",shapes:"examprep",examprep:"examprep",todayhub:"todayhub",daily:"todayhub"}[m]||"";var tb=document.querySelectorAll(".tabbar button");[].forEach.call(tb,function(x){x.className=(x.getAttribute("data-mode")===par?"on":"");});if(m==="cards")S.session=null;render();}
 window.goMode=goMode;
 /* --- "วันนี้" (Today) summary panel, shown atop Browse --- */
 PT.today={
@@ -7927,6 +7973,8 @@ PT.reader = (function () {
       '<div class="ex-hc-d">500 บทบาทสมมติ — ฟังแล้วพูดตาม · ฝึกจริงในชีวิต</div></div></button>');
     h.push('<button class="ex-home-card" data-go2="talk-story"><div class="ex-hc-i">📖</div><div><div class="ex-hc-t">เรื่องสั้น</div>' +
       '<div class="ex-hc-d">80 เรื่อง A2–C1 — อ่าน · แตะดูคำแปล · ตอบคำถาม</div></div></button>');
+    h.push('<button class="ex-home-card" data-go2="shapes"><div class="ex-hc-i">🎧</div><div><div class="ex-hc-t">โครงเสียง</div>' +
+      '<div class="ex-hc-d">623 ประโยค — ฟังเสียงพูดเร็วแล้วทายว่าเขาถามอะไร · ทุกโครงสร้าง ทุกสรรพนาม</div></div></button>');
     h.push('<div class="ex-sec-h">🎓 ติวสอบ IELTS / TOEFL</div>');
     h.push('<button class="ex-home-card" data-go="sp"><div class="ex-hc-i">🗣️</div><div><div class="ex-hc-t">Speaking</div>' +
       '<div class="ex-hc-d">Part 1 · Part 2 (พูด 2 นาที) · Part 3 + ตัวอย่างแบนด์สูง</div></div></button>');
@@ -7939,6 +7987,7 @@ PT.reader = (function () {
     [].forEach.call(v.querySelectorAll(".ex-home-card"), function (b) {
       b.onclick = function () {
         var g2 = b.getAttribute("data-go2");
+        if (g2 === "shapes") { goMode("shapes"); return; }
         if (g2 === "talk-conv") { if (PT.talk && PT.talk.setMode) PT.talk.setMode("conv"); goMode("talk"); return; }
         if (g2 === "talk-story") { goMode("talk"); if (PT.talk && PT.talk.setMode) PT.talk.setMode("story"); return; }
         view = b.getAttribute("data-go"); spSel = -1; render(v);
@@ -8765,6 +8814,144 @@ PT.structure = (function () {
     dayNo: function (day) { return count() ? (((Math.max(1, day | 0) - 1) % count()) + 1) : 0; },
     reset: function () { pmode = null; cat = -1; pat = -1; }
   };
+})();
+
+/* ===== module: shapes ===== */
+/* shapes.js — "โครงเสียง" listening drill from book 44. Hear the fast form, decide,
+   then reveal the careful form. Own data/shapes.json. ES5.
+   Uses globals: esc, speak, speakU, goMode, PT.srs, PT.miss. */
+PT.shapes = (function () {
+  "use strict";
+  var POOL = null, loading = false, host = null, recs = null;
+  var part = null, idx = 0, shown = false, auto = false, timer = null;
+
+  function keyS(it) { return (it && it.id ? it.id : "") + "|shape"; }
+  function recsLoad() { if (!recs) recs = (PT.srs && PT.srs.load) ? PT.srs.load("shapes") : {}; return recs; }
+
+  function load(cb) {
+    if (POOL) { cb(); return; }
+    if (loading) return;
+    loading = true;
+    fetch("data/shapes.json").then(function (r) { return r.json(); })
+      .then(function (d) { POOL = d; loading = false; cb(); })
+      .catch(function () {
+        loading = false;
+        if (host) host.innerHTML = '<div class="sh-empty">โหลดไม่สำเร็จ — เช็คเน็ตแล้วลองใหม่</div>';
+      });
+  }
+
+  function parts() {
+    var seen = {}, out = [], i;
+    for (i = 0; i < POOL.length; i++) if (!seen[POOL[i].p]) { seen[POOL[i].p] = 1; out.push(POOL[i].p); }
+    return out;
+  }
+  function items() {
+    var out = [], i;
+    for (i = 0; i < POOL.length; i++) if (POOL[i].p === part) out.push(POOL[i]);
+    return out;
+  }
+
+  function stopAuto() { auto = false; if (timer) { clearTimeout(timer); timer = null; } }
+
+  function say(t, rate, done) {
+    if (typeof speakU === "function") speakU(t, rate, done);
+    else { speak(t); if (done) setTimeout(done, 1400); }
+  }
+
+  /* fast twice, then the careful form — the same shape the printed book uses */
+  function playPair(it, done) {
+    say(it.f, 0.95, function () {
+      timer = setTimeout(function () {
+        say(it.f, 0.95, function () {
+          timer = setTimeout(function () {
+            shown = true; render(host);
+            say(it.s, 0.72, function () { if (done) timer = setTimeout(done, 700); });
+          }, 380);
+        });
+      }, 380);
+    });
+  }
+
+  function renderHome(v) {
+    var ps = parts(), h = ['<div class="sh-wrap">'];
+    h.push('<div class="sh-hero">🎧 โครงเสียง — ฟังให้ออกว่าเขาถามอะไร</div>');
+    h.push('<div class="sh-note">แต่ละข้อจะพูดเร็ว 2 ครั้ง แล้วค่อยพูดช้า 1 ครั้ง ลองทายก่อนเฉลย</div>');
+    for (var i = 0; i < ps.length; i++) {
+      var n = 0, j;
+      for (j = 0; j < POOL.length; j++) if (POOL[j].p === ps[i]) n++;
+      h.push('<button class="sh-card" data-p="' + esc(ps[i]) + '"><div class="sh-c-t">' + esc(ps[i]) +
+        '</div><div class="sh-c-d">' + n + ' ประโยค</div></button>');
+    }
+    h.push('</div>');
+    v.innerHTML = h.join("");
+    [].forEach.call(v.querySelectorAll("[data-p]"), function (b) {
+      b.onclick = function () { part = b.getAttribute("data-p"); idx = 0; shown = false; render(v); };
+    });
+  }
+
+  function renderDrill(v) {
+    var list = items(), it = list[idx];
+    if (!it) { part = null; render(v); return; }
+    var h = ['<div class="sh-wrap">'];
+    h.push('<button class="sh-back" id="sh-back">‹ กลับ</button>');
+    h.push('<div class="sh-part">' + esc(part) + '</div>');
+    h.push('<div class="sh-prog">' + (idx + 1) + ' / ' + list.length + '</div>');
+    h.push('<div class="sh-label">' + esc(it.l) + '</div>');
+    h.push('<div class="sh-fast">' + esc(it.f) + '</div>');
+    h.push(shown
+      ? '<div class="sh-slow">' + esc(it.s) + '</div>'
+      : '<button class="sh-reveal" id="sh-reveal">เฉลย</button>');
+    h.push('<div class="sh-btns">');
+    h.push('<button class="sh-b" id="sh-play">🔊 เร็ว</button>');
+    h.push('<button class="sh-b" id="sh-slow">🐢 ช้า</button>');
+    h.push('<button class="sh-b" id="sh-auto">' + (auto ? "⏸ หยุด" : "▶ เล่นต่อเนื่อง") + '</button>');
+    h.push('</div>');
+    h.push('<div class="sh-nav"><button class="sh-b" id="sh-prev">‹ ก่อนหน้า</button>' +
+      '<button class="sh-b sh-next" id="sh-next">ถัดไป ›</button></div>');
+    h.push('</div>');
+    v.innerHTML = h.join("");
+
+    document.getElementById("sh-back").onclick = function () { stopAuto(); part = null; render(v); };
+    document.getElementById("sh-play").onclick = function () { say(it.f, 0.95); };
+    document.getElementById("sh-slow").onclick = function () { shown = true; render(v); say(it.s, 0.7); };
+    var rv = document.getElementById("sh-reveal");
+    if (rv) rv.onclick = function () { shown = true; render(v); say(it.s, 0.72); };
+    document.getElementById("sh-prev").onclick = function () {
+      stopAuto(); idx = Math.max(0, idx - 1); shown = false; render(v);
+    };
+    document.getElementById("sh-next").onclick = function () {
+      stopAuto();
+      if (PT.srs && PT.srs.grade) { try { PT.srs.grade(recsLoad(), keyS(it), 3, "shapes"); } catch (e) {} }
+      idx = (idx + 1) % list.length; shown = false; render(v);
+    };
+    document.getElementById("sh-auto").onclick = function () {
+      if (auto) { stopAuto(); render(v); return; }
+      auto = true; render(v); step();
+    };
+    if (auto && !shown) { /* autoplay drives itself from step() */ }
+  }
+
+  function step() {
+    if (!auto) return;
+    var list = items(), it = list[idx];
+    if (!it) { stopAuto(); return; }
+    playPair(it, function () {
+      if (!auto) return;
+      idx = idx + 1;
+      if (idx >= list.length) { idx = 0; stopAuto(); render(host); return; }
+      shown = false; render(host); step();
+    });
+  }
+
+  function render(v) {
+    host = v;
+    if (!POOL) { v.innerHTML = '<div class="sh-empty">กำลังโหลด…</div>'; load(function () { render(v); }); return; }
+    if (!part) renderHome(v); else renderDrill(v);
+  }
+
+  function leave() { stopAuto(); try { window.speechSynthesis.cancel(); } catch (e) {} }
+
+  return { render: render, leave: leave };
 })();
 
 /* ===== module: game ===== */
