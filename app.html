@@ -2510,6 +2510,72 @@ button[class*="close"] {
   pointer-events: auto;
 }
 
+/* ja.css */
+/* Japanese layer. Sizes in em so A / A+ scale it. Class prefix jx- (a11y.js pattern-matches -w/-ee/-mt/-et). */
+:root{--ja:#3d5a8a;--ja-soft:#e6ecf5}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--ja:#9db4dd;--ja-soft:#1f2838}}
+:root[data-theme=light]{--ja:#3d5a8a;--ja-soft:#e6ecf5}
+:root[data-theme=dark]{--ja:#9db4dd;--ja-soft:#1f2838}
+:lang(ja){font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",YuGothic,"Meiryo","Noto Sans JP",sans-serif}
+.jx,.jx *{font-style:normal}
+.jx{line-height:2;word-break:normal;overflow-wrap:anywhere}
+.jx.nf{line-height:1.55}
+.jx ruby{ruby-position:over}
+.jx rt{font-size:.52em;color:var(--muted);font-weight:500;user-select:none;-webkit-user-select:none;letter-spacing:0}
+.jx rp{display:none}
+.jx-ro{font-family:var(--font);font-size:.8em;color:var(--muted);line-height:1.4;margin-top:1px;letter-spacing:.01em}
+.jx-line{display:inline}
+.jx-say{border:1px solid var(--border);background:var(--ja-soft);color:var(--ja);border-radius:8px;font-size:.72em;font-weight:800;
+ padding:2px 7px;margin-left:4px;vertical-align:.15em;line-height:1.5;cursor:pointer;position:relative;font-family:var(--font)}
+.jx-say{min-width:0;min-height:0}
+.jx-say::after{content:"";position:absolute;inset:-12px -8px}
+/* the stack: ไทย -> English -> 日本語, always in that order */
+.jx-stack{display:flex;flex-direction:column;gap:5px;margin:4px 0}
+.jx-r{display:flex;gap:8px;align-items:baseline;min-width:0}
+.jx-lab{flex:0 0 auto;width:22px;font-size:.62em;font-weight:800;letter-spacing:.06em;color:var(--muted);font-family:var(--font);
+ text-align:center;border-radius:5px;padding:1px 0;background:var(--surface2)}
+.jx-r-ja .jx-lab{color:var(--ja);background:var(--ja-soft)}
+.jx-tx{flex:1;min-width:0}
+.jx-r-ja .jx-tx{color:var(--text)}
+.jx-r-ja{align-items:flex-start}
+.jx-r-ja .jx-lab{margin-top:.55em}
+.jx-pre{font-size:.9em;color:var(--muted);margin-bottom:4px}
+/* browse list row: headword's Japanese under the Thai meaning */
+.pg-jl{font-size:.86em;color:var(--ja);margin-top:1px;line-height:1.5;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pg-jl .jx{line-height:1.9}
+/* talk + reader */
+.tk-ja,.rd2-ja{margin-top:6px;padding-top:6px;border-top:1px dashed var(--border)}
+.tk-ja .jx,.rd2-ja .jx{font-size:1em}
+/* header toggle */
+button.dot{border:0;padding:0;cursor:pointer;font-family:inherit;position:relative;transition:background .15s,color .15s}
+button.dot::after{content:"";position:absolute;inset:-11px}
+button.dot.ja-off{background:transparent;color:var(--accent);box-shadow:inset 0 0 0 1.5px var(--accent)}
+.jx-toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom) + 86px);transform:translateX(-50%);z-index:60;max-width:min(92vw,440px);
+ background:var(--text);color:var(--bg);border-radius:12px;padding:10px 14px;font-size:13.5px;line-height:1.45;box-shadow:var(--shadow)}
+.jx-sticky{padding-right:38px}
+.jx-x{position:absolute;right:6px;top:6px;border:0;background:none;color:inherit;font-size:15px;width:28px;height:28px;cursor:pointer}
+/* settings block */
+.st2-ja .st2-jrow{display:flex;align-items:center;gap:10px;padding:7px 0;font-size:14px}
+.st2-ja .st2-jrow input{width:20px;height:20px;accent-color:var(--ja)}
+.st2-ja .st2-jrow.dis{opacity:.45}
+.st2-ja .st2-jv{font-size:12.5px;color:var(--muted);line-height:1.5;margin:4px 0 8px}
+.st2-ja .st2-jdl{width:100%;padding:11px;border-radius:11px;border:1px solid var(--border);background:var(--ja-soft);color:var(--ja);font-weight:800;font-size:14px;cursor:pointer}
+.tk-tja{font-size:.78em;font-weight:500;color:var(--muted);margin-top:2px}
+.tk-title .tk-tja span{background:none;border:0;padding:0;margin:0;font-size:inherit;font-weight:inherit;color:inherit;border-radius:0;letter-spacing:0;vertical-align:baseline}
+.tk-ja{font-size:.92em}
+.rd2-tja{font-size:1.05em;margin:0 2px 6px;color:var(--text)}
+.rd2-th-top{margin:0 0 6px}
+/* daily intro card: the stack is left-aligned and readable on the tinted meaning box */
+.dl-intro .jx-stack{text-align:left}
+.dl-mean .jx-tx{color:var(--text)}
+.dl-mean .jx-r-th .jx-tx,.dl-mean .jx-r-en .jx-tx{font-weight:700}
+.dl-ex .jx-r-th .jx-tx{color:var(--muted)}
+.dl-ex .jx-stack span{display:inline;font-size:inherit;color:inherit}
+.dl-ex .jx-stack .jx-tx{display:block}
+.dl-ex .jx-stack .jx-lab{display:block;font-size:.62em;color:var(--muted)}
+.dl-ex .jx-stack .jx-r-ja .jx-lab{color:var(--ja)}
+.dl-ex .jx-stack .jx-r-th .jx-tx{color:var(--muted)}
+
 /* theme.css */
 /* =========================================================================
    POCKET TUTOR v2 — theme.css
@@ -3943,7 +4009,7 @@ select,
 <body>
 <div id="app">
   <div class="top">
-    <div class="hrow"><div class="mark"><span class="dot">あ</span><span class="apptitle" id="apptitle">Pocket Tutor</span><span id="deckwrap" style="flex:1;min-width:0"></span></div>
+    <div class="hrow"><div class="mark"><button type="button" class="dot ja-off" id="jatog" aria-pressed="false" aria-label="แสดงภาษาญี่ปุ่น">あ</button><span class="apptitle" id="apptitle">Pocket Tutor</span><span id="deckwrap" style="flex:1;min-width:0"></span></div>
       <button class="icon" id="profile" aria-label="ของฉัน">☰</button>
       <button class="icon" id="theme" aria-label="Toggle theme">◐</button></div>
     <div class="row2">
@@ -3967,6 +4033,7 @@ select,
 
 "use strict";
 window.PT=window.PT||{};
+var JA_INDEX={"cov":{"conversations":[52,5698],"oxford":[100,9958],"oxford.x.A1":[450,8100],"sentences":[191,1744],"stories":[12,480]},"files":{"conversations":"conversations.ca258e58.json","oxford":"oxford.5727953a.json","oxford.x.A1":"oxford.x.A1.72972457.json","sentences":"sentences.e1291c63.json","stories":"stories.fbce57c0.json"},"pilot":1,"rev":"20260928.1247","v":1};
 /* --- event bus --- */
 PT.bus=(function(){var m={};return{on:function(e,f){(m[e]=m[e]||[]).push(f);},emit:function(e){var a=m[e]||[],i;for(i=0;i<a.length;i++){try{a[i]();}catch(x){}}}};})();
 /* --- frozen helpers --- */
@@ -4059,7 +4126,30 @@ function pickEnVoice(){
   }
   return best;
 }
-try{if(typeof speechSynthesis!=="undefined"){speechSynthesis.getVoices();_enVoice=pickEnVoice();speechSynthesis.onvoiceschanged=function(){_enVoice=pickEnVoice();};}}catch(e){}
+/* Japanese voice: iOS Kyoko/Otoya, macOS/Windows/Chrome ja-JP voices */
+var _jaVoice=null;
+function pickJaVoice(){
+  var vs; try{vs=speechSynthesis.getVoices()||[];}catch(e){return null;}
+  var best=null,bs=-999,i;
+  for(i=0;i<vs.length;i++){var lc=(vs[i].lang||"").replace(/_/g,"-").toLowerCase();if(lc.indexOf("ja")!==0)continue;
+    var nm=(vs[i].name||"").toLowerCase(),sc=2;
+    if(/kyoko|otoya|hattori|o-ren|nanami|keita|ayumi|haruka|google/.test(nm))sc+=4;
+    if(nm.indexOf("enhanced")!==-1||nm.indexOf("premium")!==-1||nm.indexOf("siri")!==-1)sc+=2;
+    if(nm.indexOf("compact")!==-1||nm.indexOf("eloquence")!==-1)sc-=3;
+    if(sc>bs){bs=sc;best=vs[i];}}
+  return best;
+}
+/* the only onvoiceschanged assignment: re-pick both voices */
+function _repick(){_enVoice=pickEnVoice();_jaVoice=pickJaVoice();}
+try{if(typeof speechSynthesis!=="undefined"){speechSynthesis.getVoices();_repick();speechSynthesis.onvoiceschanged=_repick;}}catch(e){}
+function jaHint(){if(document.getElementById("jx-vhint"))return;var d=document.createElement("div");d.id="jx-vhint";d.className="jx-toast jx-sticky";
+ d.innerHTML='ยังไม่มีเสียงภาษาญี่ปุ่นในเครื่อง — iPhone: ตั้งค่า › การช่วยการเข้าถึง › เนื้อหาที่พูด › เสียง › ภาษาญี่ปุ่น › Kyoko หรือ Otoya <button type="button" class="jx-x" aria-label="ปิด">✕</button>';
+ d.querySelector("button").onclick=function(){d.parentNode.removeChild(d);};document.body.appendChild(d);}
+function speakJa(t){t=String(t||"");if(!/[\u3040-\u30ff\u3400-\u9fff]/.test(t))return;   // never speak romaji
+ try{if(!_jaVoice)_jaVoice=pickJaVoice();var n=(speechSynthesis.getVoices()||[]).length;
+  if(!_jaVoice&&n>0){jaHint();return;}
+  speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(t);u.lang="ja-JP";u.rate=.85;if(_jaVoice)u.voice=_jaVoice;speechSynthesis.speak(u);}catch(e){}}
+window.speakJa=speakJa;
 function speak(t){try{speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=.9;if(!_enVoice)_enVoice=pickEnVoice();if(_enVoice)u.voice=_enVoice;speechSynthesis.speak(u);}catch(e){}}
 function speakU(t,rate,onend){try{speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=rate;if(!_enVoice)_enVoice=pickEnVoice();if(_enVoice)u.voice=_enVoice;if(onend)u.onend=onend;speechSynthesis.speak(u);}catch(e){}}
 /* spell a word letter-by-letter (A, P, P, L, E) then say it; long text falls back to slow reading */
@@ -4078,6 +4168,7 @@ window.spellOut=spellOut;window.speakSlow=speakSlow;
 /* global handler: any element with data-spell / data-slow works everywhere (capture beats row/flip handlers) */
 document.addEventListener("click",function(e){var el=e.target;
  while(el&&el!==document.body&&el.getAttribute){
+  var sj=el.getAttribute("data-say-ja");if(sj!==null){e.stopPropagation();e.preventDefault();speakJa(sj);return;}
   var sp=el.getAttribute("data-spell"),sl=el.getAttribute("data-slow");
   if(sp!==null){e.stopPropagation();e.preventDefault();spellOut(sp);return;}
   if(sl!==null&&el.getAttribute("data-say")===null){e.stopPropagation();e.preventDefault();speakSlow(sl);return;}
@@ -4117,7 +4208,7 @@ var DORDER=["oxford","awl","colloc","syn","pv","idiom","topic","knowledge","sent
 function gcolor(i){return "var(--g"+Math.min(4,i)+")";}
 var S={deck:"oxford",data:[],rec:{},filter:{groups:{},status:{},pos:{},q:"",sort:"az",fav:false,miss:false},
  working:null,workingDirty:true,page:1,mode:"todayhub",dir:"en",size:"n",
- settings:{newPerDay:20,revPerDay:120,learnSteps:[1,10],graduate:1,easyIv:4,dailyGoal:30,dirSplit:false},session:null};
+ settings:{newPerDay:20,revPerDay:120,learnSteps:[1,10],graduate:1,easyIv:4,dailyGoal:30,dirSplit:false,showJa:false,showFuri:true,showRomaji:true},session:null};
 /* a few settings (currently just dirSplit) are user-toggleable and persisted; merge any saved overrides onto the defaults above */
 try{var _sv=JSON.parse(store.get("pt_settings")||"{}");for(var _sk in _sv)if(hasK(_sv,_sk))S.settings[_sk]=_sv[_sk];}catch(e){}
 window.S=S;window.esc=esc;window.store=store;window.speak=speak;window.keyOf=keyOf;window.gcolor=gcolor;window.hasK=hasK;window.DECKS=DECKS;window.DORDER=DORDER;
@@ -4243,6 +4334,7 @@ function loadDeck(id){S.deck=id;S.filter.groups={};S.filter.status={};S.filter.p
   var i,cnt={};for(i=0;i<rows.length;i++){var it=rows[i];if(PT.pos&&PT.pos.precompute)PT.pos.precompute(it);
    var gk=(id==="oxford")?(it.g||""):"*";cnt[gk]=(cnt[gk]||0)+1;it._no=cnt[gk];} // running number (oxford: per level, matches the daily plan)
   S.data=rows;S.rec=(PT.srs&&PT.srs.load)?PT.srs.load(id):{};S.workingDirty=true;render();
+  if(PT.ja&&PT.ja.on())PT.ja.ensure(id,function(ok){if(!ok||S.deck!==id)return;PT.ja.attach(id);S.workingDirty=true;if(/^(browse|cards|daily)$/.test(S.mode))render();});
  }).catch(function(){document.getElementById("view").innerHTML='<div class="empty">โหลดข้อมูลไม่สำเร็จ — เช็คเน็ตแล้วลองใหม่</div>';});}
 window.loadDeck=loadDeck;
 /* --- bus wiring --- */
@@ -4334,12 +4426,16 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
 
   /* ------------------------------------------------------------- SEARCH */
   var search = {};
-  var SFIELDS = ["w", "mt", "me", "ee", "et", "x", "p"];
+  var SFIELDS = ["w", "mt", "me", "ee", "et", "x", "p", "_ja", "_jk"];   /* _ja/_jk: transient Japanese (PT.ja.attach) */
 
   /* true if qLower is a substring of any searchable field (lowercased) */
   search.match = function (item, qLower) {
     if (!qLower) return true;      /* empty query matches everything */
     if (!item) return false;
+    if (qLower.indexOf("jp:") === 0) {  /* romaji search: jp:hashiru */
+      var rq = qLower.slice(3).replace(/[^a-z]/g, "");
+      return !!(rq && item._jr && item._jr.indexOf(rq) !== -1);
+    }
     for (var i = 0; i < SFIELDS.length; i++) {
       var v = item[SFIELDS[i]];
       if (v && String(v).toLowerCase().indexOf(qLower) !== -1) return true;
@@ -4701,6 +4797,204 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
     activityLog: actLog,
     DAY: DAY,
     ROLL: ROLL
+  };
+})();
+
+/* ===== module: ja ===== */
+/* ja.js — the Japanese layer (PT.ja). ES5.
+   Japanese lives in separate sidecar files output/data/ja/<file>.<sha8>.json, listed in
+   JA_INDEX (inlined by assemble_app.py). Nothing here touches keyOf/SRS/favourites.
+   Lookups are by CONTENT: key = fnv1a32([salt\n] + scope + "\n" + norm(en)) base36 —
+   must stay identical to scripts/pedagogy/ja/ja_common.py (ja_parity.js checks it).
+   A sidecar value is J = [furi, romaji]; furi uses {漢字|かんじ} ruby markup. */
+PT.ja = (function () {
+  "use strict";
+  var IDX = (typeof JA_INDEX !== "undefined" && JA_INDEX) ? JA_INDEX : { v: 1, files: {} };
+  var F = {};           // file -> {st:"ok"|"pend"|"fail", t:ms, cbs:[], d:data}
+
+  /* ---------- contract: norm + fnv (parity with Python) ---------- */
+  function norm(s) {
+    return String(s == null ? "" : s)
+      .replace(/[‘’]/g, "'").replace(/[“”]/g, '"')
+      .replace(/[ \t\r\n ]+/g, " ").replace(/^ +| +$/g, "");
+  }
+  function fnv(s) {
+    var h = 0x811c9dc5, i;
+    for (i = 0; i < s.length; i++) {
+      h ^= s.charCodeAt(i);
+      h = (h + (h << 1) + (h << 4) + (h << 7) + (h << 8) + (h << 24)) >>> 0;
+    }
+    return (h >>> 0).toString(36);
+  }
+  function mkKey(scope, en, salt) { return fnv((salt ? salt + "\n" : "") + scope + "\n" + norm(en)); }
+  function kOf(it) { return it.w + "|" + it.g; }                 // == keyOf(it)
+  function glossSrc(it) { return "#" + (it.w || "") + "|" + (it.p || "") + "|" + (it.me || it.mt || ""); }
+
+  /* ---------- settings ---------- */
+  function st() { return (window.S && S.settings) || {}; }
+  function on() { return !!st().showJa; }
+  function save() { try { store.set("pt_settings", JSON.stringify(S.settings)); } catch (e) {} }
+
+  /* ---------- loading ---------- */
+  function has(file) { return !!(IDX.files && IDX.files[file]); }
+  function ensure(file, cb) {
+    if (!has(file)) { if (cb) cb(false); return false; }
+    var f = F[file];
+    if (f && f.st === "ok") { if (cb) cb(true); return true; }
+    if (f && f.st === "pend") { if (cb) f.cbs.push(cb); return false; }
+    if (f && f.st === "fail" && Date.now() - f.t < 30000 && !cb) return false;
+    f = F[file] = { st: "pend", t: Date.now(), cbs: cb ? [cb] : [], d: null };
+    fetch("data/ja/" + IDX.files[file]).then(function (r) {
+      if (!r.ok) throw new Error("http " + r.status);
+      return r.json();
+    }).then(function (d) {
+      if (!d || !d.t || (d.v || 1) > 1) throw new Error("bad sidecar");
+      f.d = d; f.st = "ok";
+      keep();
+      var c = f.cbs; f.cbs = [];
+      for (var i = 0; i < c.length; i++) { try { c[i](true); } catch (e) {} }
+    }).catch(function () {
+      f.st = "fail"; f.t = Date.now();
+      var c = f.cbs; f.cbs = [];
+      for (var i = 0; i < c.length; i++) { try { c[i](false); } catch (e) {} }
+    });
+    return false;
+  }
+  function keep() {   // let the SW drop sidecars no longer in the index
+    try {
+      if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+        var names = []; for (var k in IDX.files) if (IDX.files.hasOwnProperty(k)) names.push(IDX.files[k]);
+        navigator.serviceWorker.controller.postMessage({ type: "JA_KEEP", files: names });
+      }
+    } catch (e) {}
+  }
+  function get(file, scope, en) {
+    var f = F[file];
+    if (!f || f.st !== "ok" || en == null || en === "") return null;
+    return f.d.t[mkKey(scope, en, f.d.salt || 0)] || null;
+  }
+  function xName(deck, it) {
+    if (deck === "oxford" && it && it.g && has("oxford.x." + it.g)) return "oxford.x." + it.g;
+    return deck + ".x";
+  }
+
+  /* ---------- lookups ---------- */
+  function gloss(deck, it) { return get(deck, kOf(it), glossSrc(it)); }
+  function ex(deck, it, en) { return get(deck, kOf(it), en); }
+  function xs(deck, it, en) { return get(xName(deck, it), kOf(it), en); }
+  function conv(id, en) { return get("conversations", id, en); }
+  function story(id, en) { return get("stories", id, en); }
+  /* the item's own Japanese: a sentence's translation, or a headword's gloss */
+  function head(deck, it) { var D = window.DECKS || {}; return (D[deck] && D[deck].type === "sentence") ? ex(deck, it, it.w) : gloss(deck, it); }
+
+  /* ---------- rendering ---------- */
+  var FR = /\{([^{}|]+)\|([^{}|]+)\}/g;
+  function h(s) { return esc(s); }
+  function ruby(f) {
+    var out = "", last = 0, m;
+    f = String(f || ""); FR.lastIndex = 0;
+    while ((m = FR.exec(f))) {
+      out += h(f.slice(last, m.index)) +
+        "<ruby>" + h(m[1]) + "<rp>(</rp><rt>" + h(m[2]) + "</rt><rp>)</rp></ruby>";
+      last = FR.lastIndex;
+    }
+    return out + h(f.slice(last));
+  }
+  function plain(f) { return String(f || "").replace(FR, "$1"); }
+  function kana(f) { return String(f || "").replace(FR, "$2"); }
+  function sayText(J, isGloss) {
+    var t = isGloss ? kana(J[0]) : plain(J[0]);
+    if (isGloss) t = t.replace(/（[^）]*）|\([^)]*\)/g, "").replace(/〜|～/g, "");
+    return t;
+  }
+  function line(J, o) {
+    if (!J) return "";
+    var furi = st().showFuri !== false && !(o && o.nofuri);
+    return '<span class="jx' + (furi ? "" : " nf") + '" lang="ja">' + (furi ? ruby(J[0]) : h(plain(J[0]))) + "</span>";
+  }
+  function block(J, o) {
+    if (!J) return "";
+    o = o || {};
+    var s = '<span class="jx-line">' + line(J, o);
+    if (o.say !== false) s += ' <button type="button" class="jx-say" data-say-ja="' + h(sayText(J, o.kind === "w")) + '" aria-label="ฟังภาษาญี่ปุ่น">🔊JP</button>';
+    s += "</span>";
+    if (o.rom !== false && st().showRomaji !== false && J[1]) s += '<div class="jx-ro" lang="ja-Latn">' + h(J[1]) + "</div>";
+    return s;
+  }
+  /* The one layout rule the user asked for: ไทย -> English -> 日本語, always in that order.
+     th = raw Thai text (escaped here); enHtml = ready HTML; J may be null (row omitted). */
+  function stack(th, enHtml, J, o) {
+    o = o || {};
+    var s = '<div class="jx-stack' + (o.cls ? " " + o.cls : "") + '">';
+    if (th) s += '<div class="jx-r jx-r-th" lang="th"><span class="jx-lab">TH</span><span class="jx-tx">' + h(th) + "</span></div>";
+    if (enHtml) s += '<div class="jx-r jx-r-en" lang="en"><span class="jx-lab">EN</span><span class="jx-tx">' + enHtml + "</span></div>";
+    if (J) s += '<div class="jx-r jx-r-ja"><span class="jx-lab">JP</span><span class="jx-tx">' + block(J, o) + "</span></div>";
+    return s + "</div>";
+  }
+
+  /* ---------- search: transient fields on in-memory rows only ---------- */
+  function attach(deck) {
+    if (!window.S || !S.data || !F[deck] || F[deck].st !== "ok") return;
+    for (var i = 0; i < S.data.length; i++) {
+      var it = S.data[i], J = head(deck, it);
+      if (!J) continue;
+      it._ja = plain(J[0]); it._jk = kana(J[0]); it._jr = String(J[1] || "").toLowerCase().replace(/[^a-z]/g, "");
+    }
+  }
+
+  /* ---------- toggle ---------- */
+  function syncDot() {
+    var b = document.getElementById("jatog"); if (!b) return;
+    b.setAttribute("aria-pressed", on() ? "true" : "false");
+    b.className = "dot" + (on() ? "" : " ja-off");
+  }
+  function toggle(v) {
+    S.settings.showJa = !!v; save(); syncDot();
+    if (v) {
+      try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) {}
+      if (!store.get("pt_ja_hint")) { store.set("pt_ja_hint", "1"); try { toast("กดปุ่ม あ เพื่อเปิด/ปิดภาษาญี่ปุ่น"); } catch (e) {} }
+      if (S.deck) ensure(S.deck, function (ok) { if (ok) { attach(S.deck); if (typeof render === "function") render(); } });
+    }
+    if (typeof render === "function") render();
+  }
+  function toast(msg) {
+    var t = document.createElement("div"); t.className = "jx-toast"; t.textContent = msg;
+    document.body.appendChild(t); setTimeout(function () { if (t.parentNode) t.parentNode.removeChild(t); }, 3200);
+  }
+
+  /* ---------- flag a wrong line (exported via backup, imported by ja_human.py) ---------- */
+  function flag(file, k) {
+    var a; try { a = JSON.parse(store.get("pt_jaflag") || "[]"); } catch (e) { a = []; }
+    a.push({ f: file, k: k, ts: Date.now() }); store.set("pt_jaflag", JSON.stringify(a));
+  }
+
+  /* ---------- download everything for offline ---------- */
+  function downloadAll(progress) {
+    var names = []; for (var k in IDX.files) if (IDX.files.hasOwnProperty(k)) names.push(k);
+    var i = 0;
+    (function next() {
+      if (i >= names.length) { if (progress) progress(i, names.length, true); return; }
+      if (progress) progress(i, names.length, false);
+      ensure(names[i++], function () { next(); });
+    })();
+  }
+  function coverage(deck) { return (IDX.cov && IDX.cov[deck]) || null; }
+  function voiceStatus() {
+    try {
+      var vs = speechSynthesis.getVoices() || [];
+      for (var i = 0; i < vs.length; i++) if (/^ja/i.test(vs[i].lang)) return vs[i].name;
+    } catch (e) {}
+    return "";
+  }
+
+  return {
+    on: on, has: has, ensure: ensure, get: get, xName: xName,
+    gloss: gloss, ex: ex, xs: xs, conv: conv, story: story, head: head,
+    ruby: ruby, plain: plain, kana: kana, line: line, block: block, stack: stack,
+    attach: attach, toggle: toggle, syncDot: syncDot, flag: flag,
+    downloadAll: downloadAll, coverage: coverage, voiceStatus: voiceStatus,
+    files: function () { return IDX.files || {}; },
+    _norm: norm, _fnv: fnv, _key: mkKey, _glossSrc: glossSrc
   };
 })();
 
@@ -5129,7 +5423,9 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
     sheetBound = true;
   }
 
+  var openKey = null;   // which item's sheet is open (JA late-load re-render guard)
   function closeSheet() {
+    openKey = null;
     var sheet = document.getElementById("sheet");
     var bg = document.getElementById("sheetbg");
     if (sheet) { sheet.classList.remove("open"); sheet.style.transform = ""; sheet.style.display = "none"; sheet.innerHTML = ""; }
@@ -5143,10 +5439,13 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
     bindSheet();
 
     var def = DECKS[deckKey] || {};
+    var JM = !!(window.PT && PT.ja && PT.ja.on());
+    var JH = JM ? PT.ja.head(deckKey, item) : null;
     var h = [];
     h.push('<div class="pg-sheet">');
     h.push('<button class="pg-close" type="button" aria-label="Close">✕</button>');
 
+    if (JM && def.type === "sentence" && item.mt) h.push('<div class="jx-pre" lang="th">' + esc(item.mt) + "</div>");
     // Header: word + speak button + pos.
     h.push('<div class="pg-sh-head">');
     h.push('<div class="pg-sh-word">' + (item.em ? esc(item.em) + " " : "") + esc(item.w || "") +
@@ -5178,14 +5477,25 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
     }
 
     // Meanings.
+    if (JM && def.type === "sentence") {
+      if (JH) h.push('<div class="pg-sh-mt">' + PT.ja.stack("", "", JH) + "</div>");
+    } else if (JM) {
+      h.push('<div class="pg-sh-mt">' + PT.ja.stack(item.mt, item.me ? esc(item.me) : "", JH, { kind: "w" }) + "</div>");
+    } else {
     if (item.me) h.push('<div class="pg-sh-me">' + esc(item.me) + "</div>");
     if (item.mt) h.push('<div class="pg-sh-mt">' + esc(item.mt) + "</div>");
+    }
 
     // Knowledge explainer ("what it is") — Knowledge deck enrichment.
     if (item.kn && (item.kn.th || item.kn.en)) {
       h.push('<div class="pg-sh-know"><div class="pg-sh-know-h">📖 มันคืออะไร</div>');
+      if (JM) {
+        h.push(PT.ja.stack(item.kn.th, item.kn.en ? '<span class="pg-sh-know-en">' + esc(item.kn.en) + "</span>" : "",
+          PT.ja.ex(deckKey, item, item.kn.en)));
+      } else {
       if (item.kn.en) h.push('<div class="pg-sh-know-en">' + esc(item.kn.en) + "</div>");
       if (item.kn.th) h.push('<div class="pg-sh-know-th">' + esc(item.kn.th) + "</div>");
+      }
       h.push("</div>");
     }
 
@@ -5201,15 +5511,22 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
 
     // Example EN + speak + TH (plus any enrichment examples in item.xs).
     var exList = [];
-    if (item.ee) exList.push({ en: item.ee, th: item.et });
+    if (item.ee) exList.push({ en: item.ee, th: item.et, x: 0 });
     if (item.xs && item.xs.length) {
       for (var xi = 0; xi < item.xs.length; xi++) {
-        exList.push({ en: item.xs[xi].en || "", th: item.xs[xi].th || "" });
+        exList.push({ en: item.xs[xi].en || "", th: item.xs[xi].th || "", x: 1 });
       }
     }
     for (var ei = 0; ei < exList.length; ei++) {
       var ex = exList[ei];
       if (!ex.en) continue;
+      if (JM) {
+        h.push('<div class="pg-sh-ex">' + PT.ja.stack(ex.th, '<span class="pg-sh-ee">' + esc(ex.en) + "</span> " +
+          '<button class="pg-spk" type="button" data-say="' + esc(ex.en) + '" aria-label="Speak">🔊</button>' +
+          '<button class="pg-spk" type="button" data-slow="' + esc(ex.en) + '" aria-label="อ่านช้า">🐢</button>',
+          ex.x ? PT.ja.xs(deckKey, item, ex.en) : PT.ja.ex(deckKey, item, ex.en)) + "</div>");
+        continue;
+      }
       h.push('<div class="pg-sh-ex"><span class="pg-sh-ee">' + esc(ex.en) + "</span> " +
         '<button class="pg-spk" type="button" data-say="' + esc(ex.en) + '" aria-label="Speak">🔊</button>' +
         '<button class="pg-spk" type="button" data-slow="' + esc(ex.en) + '" aria-label="อ่านช้า">🐢</button>');
@@ -5223,6 +5540,12 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
       for (var ai = 0; ai < item.au.length; ai++) {
         var a = item.au[ai];
         if (!a.en) continue;
+        if (JM) {
+          h.push('<div class="pg-sh-ex">' + PT.ja.stack(a.th, '<span class="pg-sh-ee">' + esc(a.en) + "</span> " +
+            '<button class="pg-spk" type="button" data-say="' + esc(a.en) + '" aria-label="Speak">🔊</button>',
+            PT.ja.xs(deckKey, item, a.en)) + "</div>");
+          continue;
+        }
         h.push('<div class="pg-sh-ex"><span class="pg-sh-ee">' + esc(a.en) + "</span> " +
           '<button class="pg-spk" type="button" data-say="' + esc(a.en) + '" aria-label="Speak">🔊</button>');
         if (a.th) h.push('<div class="pg-sh-et">' + esc(a.th) + "</div>");
@@ -5280,6 +5603,17 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
         btn.onclick = function () { speak(btn.getAttribute("data-say") || item.w || ""); };
       })(spks[si]);
     }
+    openKey = deckKey + "|" + keyOf(item);
+    if (JM) {
+      (function (k, xf) {
+        var again = function (ok) {
+          if (!ok || openKey !== k || !sheet.querySelector(".pg-sheet")) return;
+          var y = sheet.scrollTop; openSheet(item, deckKey); sheet.scrollTop = y;
+        };
+        if (!PT.ja.ensure(deckKey)) PT.ja.ensure(deckKey, again);
+        if (xf && PT.ja.has(xf) && !PT.ja.ensure(xf)) PT.ja.ensure(xf, again);
+      })(openKey, (item.xs && item.xs.length) || (item.au && item.au.length) ? PT.ja.xName(deckKey, item) : "");
+    }
     var mapBtn = sheet.querySelector(".pg-sh-map");
     if (mapBtn) mapBtn.onclick = function () { if (PT.wmap && PT.wmap.openFor) PT.wmap.openFor(item, deckKey); };
     // Reveal the formal chip only if this headword maps to a formal family.
@@ -5301,6 +5635,7 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
 
   // Render only the list rows + pager into the host (keeps header intact).
   function renderListInto(host, list, deckKey, now) {
+    var JM = !!(window.PT && PT.ja && PT.ja.on());
     var total = Math.ceil(list.length / PAGE_SIZE);
     if (total < 1) total = 1;
     // Clamp page.
@@ -5326,6 +5661,7 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
       if (item.p) h.push(' <span class="pg-pos">' + esc(item.p) + "</span>");
       h.push("</div>");
       h.push('<div class="pg-mt">' + esc(trunc(item.mt, 60)) + "</div>");
+      if (JM) { var jl = PT.ja.head(deckKey, item); if (jl) h.push('<div class="pg-jl">' + PT.ja.line(jl) + "</div>"); }
       h.push("</div>"); // .pg-main
       h.push('<span class="pg-dot" style="background:' + statusColor(st) +
         '"></span>');
@@ -5738,6 +6074,7 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
 
     wire(viewEl, item);
     bindKeyboard(viewEl);
+    if (window.PT && PT.ja && PT.ja.on()) fitCard(viewEl);
     if (PT.a11y && typeof PT.a11y.enhance === "function") PT.a11y.enhance(viewEl);
 
     // listening mode: auto-play the word once when a NEW card appears (not on
@@ -5763,6 +6100,15 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
     return badge + '<div class="c-word' + lc + '">' + esc(main || "") + '</div>' +
            (p ? '<div class="c-pos">' + esc(p) + '</div>' : '') +
            '<div class="c-hint">' + hint + '</div>';
+  }
+
+  /* Japanese makes the back taller: grow the card instead of scrolling inside the flip */
+  function fitCard(viewEl) {
+    var c = viewEl.querySelector(".c-card"), inn = viewEl.querySelector(".c-inner");
+    var f = viewEl.querySelector(".c-front"), b = viewEl.querySelector(".c-back");
+    if (!c || !inn || !f || !b) return;
+    var hgt = Math.max(260, f.scrollHeight, b.scrollHeight) + 2;   // + the face border
+    c.style.minHeight = hgt + "px"; inn.style.minHeight = hgt + "px";
   }
 
   function frontHtmlListen() {
@@ -5798,10 +6144,19 @@ PT.bus.on("recchange",function(){S.workingDirty=true;render();});
         (item.vf.ir ? '<span class="c-vf-ir">ไม่ปกติ</span>' : '') +
         '</div>';
     }
+    if (window.PT && PT.ja && PT.ja.on()) {
+      // ไทย -> English -> 日本語 (the front stays a single-language prompt)
+      var isSent = !!(window.DECKS && DECKS[S.deck] && DECKS[S.deck].type === "sentence");
+      var JH = PT.ja.head(S.deck, item);
+      if (isSent) { if (item.mt || JH) h += '<div class="c-b-row c-b-jx">' + PT.ja.stack(item.mt, "", JH) + '</div>'; }
+      else if (item.me || item.mt || JH) h += '<div class="c-b-row c-b-jx">' + PT.ja.stack(item.mt, item.me ? esc(item.me) : "", JH, { kind: "w" }) + '</div>';
+      if (item.ee) h += '<div class="c-b-ex">' + PT.ja.stack(item.et, esc(item.ee), PT.ja.ex(S.deck, item, item.ee)) + '</div>';
+    } else {
     if (item.me) h += '<div class="c-b-row"><span class="c-b-lab">EN</span>' + esc(item.me) + '</div>';
     if (item.mt) h += '<div class="c-b-row"><span class="c-b-lab">TH</span>' + esc(item.mt) + '</div>';
     if (item.ee) h += '<div class="c-b-ex">' + esc(item.ee) + '</div>';
     if (item.et) h += '<div class="c-b-ex c-b-ex-th">' + esc(item.et) + '</div>';
+    }
     if (item.x) h += '<div class="c-b-x">' + esc(item.x) + '</div>';
     if (item.sy && item.sy.length) h += '<div class="c-b-syn">≈ ' + esc(item.sy.join(", ")) + '</div>';
     if (item.an && item.an.length) h += '<div class="c-b-syn c-b-ant">↔ ' + esc(item.an.join(", ")) + '</div>';
@@ -6979,8 +7334,14 @@ PT.daily = (function () {
       h += '<div class="qz-card dl-intro"><div class="qz-plabel">🆕 คำใหม่วันนี้ — อ่านแล้วจำ</div>' +
         '<div class="qz-prompt">' + esc(it.w) + ' <button type="button" class="qz-say" data-dl-say="1">🔊</button></div>';
       if (it.p) h += '<div class="dl-pos">' + esc(it.p) + '</div>';
+      if (window.PT && PT.ja && PT.ja.on()) {
+        var JH = PT.ja.head(S.deck, it);
+        if (it.mt || it.me || JH) h += '<div class="dl-mean">' + PT.ja.stack(it.mt, it.me ? esc(it.me) : "", JH, { kind: "w" }) + '</div>';
+        if (it.ee) h += '<div class="dl-ex">' + PT.ja.stack(it.et, esc(it.ee), PT.ja.ex(S.deck, it, it.ee)) + '</div>';
+      } else {
       if (it.mt || it.me) h += '<div class="dl-mean">' + esc(it.mt || it.me) + '</div>';
       if (it.ee) h += '<div class="dl-ex">' + esc(it.ee) + (it.et ? '<span>' + esc(it.et) + '</span>' : '') + '</div>';
+      }
       h += '</div>';
       h += '<button type="button" class="qz-next" data-dl-intro="1">จำได้แล้ว → ต่อ</button>';
     } else {
@@ -7234,6 +7595,7 @@ PT.wmap = (function () {
   var cat = null;        // selected situation (null = category grid)
   var q = "";            // search text
   var showTh = true;     // show Thai translations
+  var showJaT = true;    // show Japanese lines (only when the global Japanese layer is on)
   var shadow = false;    // shadowing: hide English until tapped
   var revealed = {};     // per-turn reveal flags in shadow mode
   var playing = false, playStop = null;
@@ -7348,14 +7710,23 @@ PT.wmap = (function () {
   }
 
   function renderDialogue(v, d) {
+    var JM = !!(window.PT && PT.ja && PT.ja.on());
+    if (JM && !PT.ja.ensure("conversations")) {
+      PT.ja.ensure("conversations", function (ok) {
+        if (ok && S.mode === "talk" && mode === "conv" && sel >= 0 && DATA[sel] === d && !playing) render(v);
+      });
+    }
+    var JT = JM && showJaT;
     var h = ['<div class="tk-wrap tk-dlg">'];
     h.push('<div class="tk-bar">');
     h.push('<button class="tk-back" id="tk-back">‹ กลับ</button>');
-    h.push('<div class="tk-title">' + esc(d.title || "") + ' <span>' + esc(d.level || "") + '</span></div>');
+    h.push('<div class="tk-title">' + esc(d.title || "") + ' <span>' + esc(d.level || "") + '</span>' +
+      (JT && PT.ja.conv(d.id, d.title) ? '<div class="tk-tja">' + PT.ja.line(PT.ja.conv(d.id, d.title)) + '</div>' : '') + '</div>');
     h.push('</div>');
     h.push('<div class="tk-roles"><b>A</b> ' + esc(d.roleA) + '  ·  <b>B</b> ' + esc(d.roleB) + '</div>');
     h.push('<div class="tk-ctrls">');
     h.push('<button class="tk-ctrl' + (showTh ? ' on' : '') + '" id="tk-th">ไทย</button>');
+    if (JM) h.push('<button class="tk-ctrl' + (showJaT ? ' on' : '') + '" id="tk-ja" lang="ja">日本語</button>');
     h.push('<button class="tk-ctrl' + (shadow ? ' on' : '') + '" id="tk-shadow">ฝึกพูด</button>');
     h.push('<button class="tk-play" id="tk-play">▶ เล่นทั้งหมด</button>');
     h.push('</div>');
@@ -7366,12 +7737,21 @@ PT.wmap = (function () {
       var hideEn = shadow && !revealed[i];
       h.push('<div class="tk-turn ' + side + '" data-i="' + i + '">');
       h.push('<div class="tk-bub">');
+      if (JM) {
+        // ไทย -> English -> 日本語
+        if (showTh) { h.push('<div class="tk-thl">' + esc(t.th) + '</div>'); }
+        if (hideEn) h.push('<div class="tk-en tk-hidden" data-rev="' + i + '">แตะเพื่อดูประโยค</div>');
+        else h.push('<div class="tk-en">' + esc(t.en) + '</div>');
+        var Jt = JT ? PT.ja.conv(d.id, t.en) : null;
+        if (Jt) h.push('<div class="tk-ja">' + PT.ja.block(Jt) + '</div>');
+      } else {
       if (hideEn) {
         h.push('<div class="tk-en tk-hidden" data-rev="' + i + '">แตะเพื่อดูประโยค</div>');
       } else {
         h.push('<div class="tk-en">' + esc(t.en) + '</div>');
       }
       if (showTh) { h.push('<div class="tk-thl">' + esc(t.th) + '</div>'); }
+      }
       h.push('<button class="tk-spk" data-ti="' + i + '" aria-label="ฟัง">🔊</button>');
       h.push('<button class="tk-spk tk-slow2" data-slow="' + esc(t.en) + '" aria-label="อ่านช้า">🐢</button>');
       h.push('</div></div>');
@@ -7381,6 +7761,13 @@ PT.wmap = (function () {
       h.push('<div class="tk-keys"><div class="tk-keys-h">วลีสำคัญ</div>');
       for (i = 0; i < d.keyphrases.length; i++) {
         var k = d.keyphrases[i];
+        if (JM) {
+          h.push('<div class="tk-key"><div class="tk-key-tx">' + PT.ja.stack(k.th, '<span class="tk-key-en">' + esc(k.en) + '</span>',
+            JT ? PT.ja.conv(d.id, k.en) : null) + '</div>' +
+            '<button class="tk-spk sm" data-ki="' + i + '" aria-label="ฟัง">🔊</button>' +
+            '<button class="tk-spk sm" data-slow="' + esc(k.en) + '" aria-label="อ่านช้า">🐢</button></div>');
+          continue;
+        }
         h.push('<div class="tk-key"><div class="tk-key-tx"><span class="tk-key-en">' + esc(k.en) +
           '</span><span class="tk-key-th">' + esc(k.th) + '</span></div>' +
           '<button class="tk-spk sm" data-ki="' + i + '" aria-label="ฟัง">🔊</button>' +
@@ -7393,6 +7780,8 @@ PT.wmap = (function () {
 
     document.getElementById("tk-back").onclick = function () { stopPlay(); sel = -1; render(v); };
     document.getElementById("tk-th").onclick = function () { showTh = !showTh; render(v); };
+    var jb = document.getElementById("tk-ja");
+    if (jb) jb.onclick = function () { showJaT = !showJaT; render(v); };
     document.getElementById("tk-shadow").onclick = function () { shadow = !shadow; revealed = {}; render(v); };
     document.getElementById("tk-play").onclick = function () {
       if (playing) { stopPlay(); render(v); } else { playAll(d, v); }
@@ -7521,15 +7910,39 @@ PT.reader = (function () {
   }
 
   function renderStory(v, st) {
+    var JM = !!(window.PT && PT.ja && PT.ja.on());
+    if (JM && !PT.ja.ensure("stories")) {
+      var cur = sel;
+      PT.ja.ensure("stories", function (ok) { if (ok && sel === cur && document.querySelector(".rd2-story")) render(v); });
+    }
     var h = ['<div class="tk-wrap rd2-story">'], i;
     h.push('<div class="tk-bar"><button class="tk-back" id="rd2-back">‹ เรื่องอื่น</button>' +
       '<div class="tk-title">' + esc(st.lvl) + ' · ' + esc(GEN_TH[st.genre] || st.genre) + '</div></div>');
+    if (JM) {
+      // ไทย -> English -> 日本語
+      if (st.title_th) h.push('<div class="rd2-tt">' + esc(st.title_th) + '</div>');
+      h.push('<div class="rd2-t">' + esc(st.title) + '</div>');
+      var Jtt = PT.ja.story(st.id, st.title);
+      if (Jtt) h.push('<div class="rd2-tja">' + PT.ja.line(Jtt) + '</div>');
+      h.push('<div class="rd2-hintline">แตะย่อหน้าเพื่อดูคำแปลไทย + ญี่ปุ่น · แตะ 🔊 เพื่อฟัง</div>');
+    } else {
     h.push('<div class="rd2-t">' + esc(st.title) + '</div>');
     if (st.title_th) h.push('<div class="rd2-tt">' + esc(st.title_th) + '</div>');
     h.push('<div class="rd2-hintline">แตะย่อหน้าเพื่อดูคำแปลไทย · แตะ 🔊 เพื่อฟัง</div>');
+    }
 
     for (i = 0; i < st.paras.length; i++) {
       var p = st.paras[i];
+      if (JM) {
+        var Jp = thOn[i] ? PT.ja.story(st.id, p.en) : null;
+        h.push('<div class="rd2-para" data-rd2-p="' + i + '">' +
+          (thOn[i] && p.th ? '<div class="rd2-th rd2-th-top">' + esc(p.th) + '</div>' : '') +
+          '<div class="rd2-en">' + esc(p.en) + '</div>' +
+          (Jp ? '<div class="rd2-ja">' + PT.ja.block(Jp) + '</div>' : '') +
+          '<button type="button" class="rd2-say" data-rd2-say="' + i + '">🔊</button>' +
+          '<button type="button" class="rd2-say rd2-slow" data-slow="' + esc(p.en) + '">🐢</button></div>');
+        continue;
+      }
       h.push('<div class="rd2-para" data-rd2-p="' + i + '">' +
         '<div class="rd2-en">' + esc(p.en) + '</div>' +
         (thOn[i] && p.th ? '<div class="rd2-th">' + esc(p.th) + '</div>' : '') +
@@ -11598,11 +12011,56 @@ PT.stats2 = (function () {
       '<label class="st2d-adv-row"><input type="checkbox" id="st2d-dirsplit"> ' +
       '<span>แยกคะแนนความจำสองทิศทาง (EN→TH กับ TH→EN นับคนละสกอร์) — เปิดแล้วจะมีการ์ดใหม่เพิ่มขึ้นตอนสลับทิศทางครั้งแรก</span></label></div>';
 
+    if (window.PT && PT.ja) {
+      h += '<div class="st2d-adv st2-ja"><div class="st2d-adv-h">ภาษาญี่ปุ่น <span lang="ja">日本語</span></div>' +
+        '<label class="st2-jrow"><input type="checkbox" id="st2d-ja"> <span>แสดงภาษาญี่ปุ่น (เรียง ไทย → English → 日本語)</span></label>' +
+        '<label class="st2-jrow" id="st2d-furi-r"><input type="checkbox" id="st2d-furi"> <span>ฟุริงานะ (คำอ่านบนตัวคันจิ)</span></label>' +
+        '<label class="st2-jrow" id="st2d-rom-r"><input type="checkbox" id="st2d-rom"> <span>โรมาจิ (คำอ่านเขียนด้วยตัวอักษรอังกฤษ)</span></label>' +
+        '<div class="st2d-jv" id="st2d-ja-v"></div>' +
+        '<button type="button" class="st2-jdl" id="st2d-ja-dl">ดาวน์โหลดญี่ปุ่นทั้งหมด (ใช้ออฟไลน์)</button></div>';
+    }
+
     h += '</div>';
     return h;
   }
 
+  function wireJa() {
+    var m = document.getElementById("st2d-ja");
+    if (!m || !window.S || !PT.ja) return;
+    var f = document.getElementById("st2d-furi"), r = document.getElementById("st2d-rom");
+    var vl = document.getElementById("st2d-ja-v"), dl = document.getElementById("st2d-ja-dl");
+    function sync() {
+      var on = !!S.settings.showJa;
+      m.checked = on; f.checked = S.settings.showFuri !== false; r.checked = S.settings.showRomaji !== false;
+      f.disabled = r.disabled = !on;
+      document.getElementById("st2d-furi-r").className = "st2-jrow" + (on ? "" : " dis");
+      document.getElementById("st2d-rom-r").className = "st2-jrow" + (on ? "" : " dis");
+      var voice = PT.ja.voiceStatus(), c = PT.ja.coverage(S.deck), n = 0, k, fs = PT.ja.files();
+      for (k in fs) if (Object.prototype.hasOwnProperty.call(fs, k)) n++;
+      vl.innerHTML = (voice ? "เสียงญี่ปุ่น: " + esc(voice) : "ยังไม่พบเสียงญี่ปุ่นในเครื่อง (iPhone: ตั้งค่า › การช่วยการเข้าถึง › เนื้อหาที่พูด › เสียง › ภาษาญี่ปุ่น)") +
+        "<br>ชุดนี้มีภาษาญี่ปุ่น " + (c ? c[0] + " / " + c[1] + " รายการ" : "— ยังไม่มี") + " · ไฟล์ทั้งหมด " + n + " ไฟล์";
+      dl.style.display = on && n ? "" : "none";
+    }
+    m.onchange = function () { PT.ja.toggle(m.checked); };
+    f.onchange = function () { S.settings.showFuri = f.checked; try { store.set("pt_settings", JSON.stringify(S.settings)); } catch (e) {} sync(); };
+    r.onchange = function () { S.settings.showRomaji = r.checked; try { store.set("pt_settings", JSON.stringify(S.settings)); } catch (e) {} sync(); };
+    dl.onclick = function () {
+      dl.disabled = true;
+      PT.ja.downloadAll(function (i, n, done) {
+        dl.textContent = done ? "ดาวน์โหลดครบแล้ว ✓ (" + n + " ไฟล์)" : "กำลังดาวน์โหลด " + (i + 1) + " / " + n + "…";
+        if (done) {
+          dl.disabled = false;
+          try { if (navigator.storage && navigator.storage.estimate) navigator.storage.estimate().then(function (e) {
+            vl.innerHTML += "<br>พื้นที่ที่แอปใช้: " + Math.round((e.usage || 0) / 1048576) + " MB";
+          }); } catch (e) {}
+        }
+      });
+    };
+    sync();
+  }
+
   function wire(v) {
+    wireJa();
     var cb = document.getElementById("st2d-dirsplit");
     if (!cb || !window.S) return;
     cb.checked = !!(S.settings && S.settings.dirSplit);
@@ -11980,16 +12438,21 @@ PT.hub = (function () {
   // left untouched.
   var THAI_RE = /[฀-๿]/;
   var LATIN_RE = /[A-Za-z]/;
+  var JA_RE = /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]/;
 
   function setLangFor(el) {
     if (!el) return;
     try {
+      // an author-set lang (e.g. the Japanese layer's lang="ja") always wins; only re-tag our own
+      if (el.hasAttribute("lang") && el.getAttribute("data-al") !== "1") return;
       var t = el.textContent || "";
       if (!t || !t.replace(/\s+/g, "")) return;
       if (THAI_RE.test(t)) {
-        el.setAttribute("lang", "th");
+        el.setAttribute("lang", "th"); el.setAttribute("data-al", "1");
+      } else if (JA_RE.test(t)) {
+        el.setAttribute("lang", "ja"); el.setAttribute("data-al", "1");
       } else if (LATIN_RE.test(t)) {
-        el.setAttribute("lang", "en");
+        el.setAttribute("lang", "en"); el.setAttribute("data-al", "1");
       }
     } catch (e) { /* no-op: defensive */ }
   }
@@ -12311,6 +12774,8 @@ var dseg=document.querySelectorAll("#dirseg button");[].forEach.call(dseg,functi
 var sz=store.get("pt_sz");if(sz==="l")S.size="l";
 var zseg=document.querySelectorAll("#szseg button");[].forEach.call(zseg,function(b){b.classList.toggle("on",b.getAttribute("data-sz")===S.size);b.onclick=function(){S.size=b.getAttribute("data-sz");store.set("pt_sz",S.size);[].forEach.call(zseg,function(x){x.classList.toggle("on",x===b);});applySize();};});
 if(PT.pwa&&PT.pwa.register)try{PT.pwa.register();}catch(e){}
+document.getElementById("jatog").onclick=function(){if(PT.ja)PT.ja.toggle(!S.settings.showJa);};
+if(PT.ja)PT.ja.syncDot();
 /* gate the app behind the passcode on every load */
 function startApp(){try{onboard();}catch(e){}loadDeck("oxford");}
 try{showLock(startApp);}catch(e){startApp();}

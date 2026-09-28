@@ -13,7 +13,10 @@
 */
 
 /* eslint-disable no-var */
-var CACHE = "pocket-tutor-v121";
+var CACHE = "pocket-tutor-v122";
+// Japanese sidecars (data/ja/<file>.<sha8>.json) are content-addressed, so they live in their own
+// cache that is NEVER bumped: a deploy does not make phones re-download them. JA_KEEP prunes old ones.
+var JA_CACHE = "pocket-tutor-ja";
 
 // tiny, must-always-work shell — safe to precache atomically
 var SHELL_URLS = [
@@ -31,7 +34,7 @@ var DATA_URLS = [
   "./data/pv.json", "./data/idiom.json", "./data/topic.json", "./data/knowledge.json",
   "./data/sentences.json", "./data/conversations.json", "./data/wordchoice.json",
   "./data/exam.json", "./data/reading.json", "./data/bank.json", "./data/fix.json",
-  "./data/stories.json", "./data/structure.json", "./data/campaign_landing.json", "./data/campaign_detective.json", "./data/campaign_fantasy.json", "./data/formal.json", "./data/formal_articles.json"
+  "./data/stories.json", "./data/structure.json", "./data/campaign_landing.json", "./data/campaign_detective.json", "./data/campaign_fantasy.json", "./data/formal.json", "./data/formal_articles.json", "./data/shapes.json", "./data/grammar.json"
 ];
 
 // ---- install: precache ONLY the shell (small + reliable). Do NOT skipWaiting
@@ -46,7 +49,7 @@ self.addEventListener("install", function (event) {
 self.addEventListener("activate", function (event) {
   event.waitUntil(
     caches.keys().then(function (names) {
-      return Promise.all(names.map(function (name) { return name !== CACHE ? caches.delete(name) : undefined; }));
+      return Promise.all(names.map(function (name) { return (name !== CACHE && name !== JA_CACHE) ? caches.delete(name) : undefined; }));
     }).then(function () {
       return self.clients.claim();
     }).then(function () {
@@ -67,6 +70,18 @@ function warmData() {
 // ---- let the page trigger an immediate takeover (the "tap to update" banner) ----
 self.addEventListener("message", function (event) {
   if (event.data && event.data.type === "SKIP_WAITING") { self.skipWaiting(); }
+  if (event.data && event.data.type === "JA_KEEP" && event.data.files) {
+    var keep = {};
+    for (var i = 0; i < event.data.files.length; i++) keep[event.data.files[i]] = 1;
+    caches.open(JA_CACHE).then(function (cache) {
+      return cache.keys().then(function (reqs) {
+        reqs.forEach(function (rq) {
+          var name = rq.url.split("/").pop();
+          if (name !== "index.json" && !keep[name]) cache.delete(rq);
+        });
+      });
+    }).catch(function () {});
+  }
   if (event.data && event.data.type === "GET_VERSION" && event.source) {
     event.source.postMessage({ type: "VERSION", version: CACHE });
   }
@@ -114,6 +129,19 @@ function cacheFirst(request) {
   });
 }
 
+// cache-first in the never-bumped Japanese cache
+function jaFirst(request) {
+  return caches.open(JA_CACHE).then(function (cache) {
+    return cache.match(request).then(function (cached) {
+      if (cached) return cached;
+      return fetch(request).then(function (resp) {
+        if (resp && resp.ok) cache.put(request, resp.clone());
+        return resp;
+      });
+    });
+  });
+}
+
 // ---- fetch ----
 self.addEventListener("fetch", function (event) {
   var request = event.request;
@@ -122,6 +150,7 @@ self.addEventListener("fetch", function (event) {
   if (url.origin !== self.location.origin) return;
 
   if (isNavigationRequest(request)) { event.respondWith(networkFirst(request)); return; }
+  if (url.pathname.indexOf("/data/ja/") !== -1) { event.respondWith(jaFirst(request)); return; }
   if (isCacheFirstAsset(url)) { event.respondWith(cacheFirst(request)); return; }
 
   event.respondWith(
